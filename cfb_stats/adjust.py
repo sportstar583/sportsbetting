@@ -10,7 +10,7 @@ intercept + offense[X]: what it would average against an average defense at a ne
 site. Adjusted defense is intercept + defense[Y] (EPA allowed, lower is better).
 
 Players are adjusted game by game: if a running back faces a run defense that allows
-0.10 EPA/rush less than average, 0.10 is added to his EPA/rush for that game.
+0.10 EPA/rush less than average, 0.10 is added to their EPA/rush for that game.
 """
 
 from collections import defaultdict

@@ -49,9 +49,9 @@ default 150 plays) pulls teams with few games toward average. That matters early
 the season. Raise it for more shrinkage.
 
 Players are adjusted game by game. If a running back faces a run defense that allows
-0.10 EPA/rush less than average, 0.10 is added to his EPA/rush for that game. Pass EPA is
+0.10 EPA/rush less than average, 0.10 is added to their EPA/rush for that game. Pass EPA is
 adjusted by the opponent's pass defense the same way. `*_opp_adjustment` shows the net
-effect: positive means he faced a tougher schedule than average.
+effect: positive means they faced a tougher schedule than average.
 
 Early in the season, teams have played few common opponents, so treat adjusted
 numbers as rough until about week 5-6.
