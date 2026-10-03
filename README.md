@@ -61,6 +61,23 @@ Notes:
 - Advanced stats leave out garbage time by default. Pass `--include-garbage-time` to keep it.
 - Points and W/L come from completed regular-season and postseason games, including games against FCS opponents.
 
+### Over/under board
+
+`cfb_stats/totals.py` projects each game's total from adjusted EPA/play and pace, then
+compares it to the market total (median across books from the CFBD `/lines` endpoint):
+
+```bash
+python -m cfb_stats.totals                     # this week -> data/<year>/totals_week<N>.csv
+python -m cfb_stats.totals --week 6 --min-edge 5
+python -m cfb_stats.totals --year 2025 --backtest
+```
+
+**Read the backtest before betting.** On 2025 (walk-forward from week 4, 1,113 games),
+the edges did not beat closing totals: about 50% at every edge threshold, and worse at
+the biggest edges. They did predict line movement. Totals moved about 0.5-1 point toward
+the model between open and close, but betting the opening number only broke even. Treat
+the board as a screen for early-week numbers worth a closer look, not as a list of picks.
+
 ### Tests
 
 ```bash

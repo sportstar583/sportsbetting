@@ -1,0 +1,13 @@
+game_id,week,start,away,home,neutral,p4_game,market_total,market_open,books,proj_away,proj_home,proj_total,edge,pick,games_home,games_away,enough_data,actual_total
+401858481,6,2026-10-10T16:00:00.000Z,Indiana,Nebraska,False,True,50.5,50.5,DraftKings,20.1,39.7,59.8,9.3,OVER,4,4,True,
+401858487,6,2026-10-10T01:00:00.000Z,Iowa,Washington,False,True,41.5,41.5,DraftKings,17.0,33.0,50.0,8.5,OVER,4,4,True,
+401871051,6,2026-10-07T23:00:00.000Z,Jacksonville State,Kennesaw State,False,False,48.5,48.5,DraftKings,21.1,35.3,56.4,7.9,OVER,4,5,True,
+401858484,6,2026-10-10T19:30:00.000Z,UCLA,Oregon,False,True,60.5,60.5,DraftKings,18.2,37.1,55.3,-5.2,UNDER,4,4,True,
+401871090,6,2026-10-07T00:00:00.000Z,Southern Miss,Troy,False,False,48.5,48.5,DraftKings,15.9,37.4,53.3,4.8,OVER,4,4,True,
+401856826,6,2026-10-10T02:15:00.000Z,Iowa State,BYU,False,True,50.5,50.5,DraftKings,16.9,38.1,55.0,4.5,OVER,3,4,True,
+401856714,6,2026-10-10T04:00:00.000Z,South Carolina,Florida,False,True,57.5,57.5,DraftKings,17.4,42.0,59.5,2.0,OVER,4,4,True,
+401856717,6,2026-10-10T19:30:00.000Z,Texas,Oklahoma,True,True,41.5,48.5,DraftKings,21.1,21.7,42.8,1.3,OVER,4,4,True,
+401856716,6,2026-10-10T04:00:00.000Z,Texas A&M,Missouri,False,True,50.5,50.5,DraftKings,10.8,38.5,49.3,-1.2,UNDER,4,4,True,
+401856715,6,2026-10-10T23:00:00.000Z,LSU,Kentucky,False,True,50.5,49.5,DraftKings,18.0,33.7,51.6,1.1,OVER,4,4,True,
+401858485,6,2026-10-10T23:30:00.000Z,USC,Penn State,False,True,58.5,56.5,DraftKings,20.4,38.5,59.0,0.5,OVER,4,5,True,
+401856712,6,2026-10-10T23:30:00.000Z,Georgia,Alabama,False,True,54.5,50.5,DraftKings,20.0,34.9,55.0,0.5,OVER,4,4,True,
