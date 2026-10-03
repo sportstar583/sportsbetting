@@ -112,6 +112,45 @@ def run_shares(obs, prior_plays=100):
     return shrink(off), shrink(dfn), lg
 
 
+TURNOVER_RESULTS = {"INT", "INT TD", "FUMBLE", "FUMBLE TD", "FUMBLE RETURN TD"}
+CLOCK_RESULTS = {"END OF HALF", "END OF GAME", "END OF 4TH QUARTER", "END OF HALF TD", "END OF GAME TD"}
+
+
+def finishing_rates(drives, rz_prior=20, to_prior=60):
+    """Red zone points per trip and turnovers per drive, for each offense and defense allowed.
+
+    A red zone trip is a drive that starts or ends inside the opponent's 20 (TD = 7, FG = 3).
+    Rates are shrunk toward the league rate by rz_prior trips / to_prior drives, since both are
+    noisy over a few games. Returns ({team: {rz_off, rz_def, to_off, to_def}}, league rz, league to).
+    """
+    rz = {"off": defaultdict(lambda: [0.0, 0]), "def": defaultdict(lambda: [0.0, 0])}
+    to = {"off": defaultdict(lambda: [0, 0]), "def": defaultdict(lambda: [0, 0])}
+    for d in drives:
+        res = d.get("driveResult") or ""
+        if res in CLOCK_RESULTS or res == "Uncategorized":
+            continue
+        o, df = d["offense"], d["defense"]
+        lost = int(res in TURNOVER_RESULTS)
+        for side, team in (("off", o), ("def", df)):
+            to[side][team][0] += lost
+            to[side][team][1] += 1
+        start, end = d.get("startYardsToGoal"), d.get("endYardsToGoal")
+        if res == "TD" or (start is not None and start <= 20) or (end is not None and end <= 20):
+            pts = 7.0 if res == "TD" else 3.0 if res == "FG" else 0.0
+            for side, team in (("off", o), ("def", df)):
+                rz[side][team][0] += pts
+                rz[side][team][1] += 1
+    lg_rz = sum(v[0] for v in rz["off"].values()) / max(sum(v[1] for v in rz["off"].values()), 1)
+    lg_to = sum(v[0] for v in to["off"].values()) / max(sum(v[1] for v in to["off"].values()), 1)
+    out = defaultdict(dict)
+    for side in ("off", "def"):
+        for t, (p, n) in rz[side].items():
+            out[t][f"rz_{side}"] = (p + lg_rz * rz_prior) / (n + rz_prior)
+        for t, (k, n) in to[side].items():
+            out[t][f"to_{side}"] = (k + lg_to * to_prior) / (n + to_prior)
+    return dict(out), lg_rz, lg_to
+
+
 def _secs(t):
     if not isinstance(t, dict):
         return None
@@ -157,7 +196,8 @@ def tempo(drives):
 
 class TotalsModel:
     def __init__(self, game_rows, games, alpha=TOTALS_ALPHA, drives=None,
-                 fcs_weight=1.0, huber_k=None, off_offsets=None, def_offsets=None, matchup=0.0, priors=None):
+                 fcs_weight=1.0, huber_k=None, off_offsets=None, def_offsets=None, matchup=0.0, priors=None,
+                 finishing=False):
         self.fbs = fbs_teams(games)
         self.fcs_weight = fcs_weight
         weight = self._weight if fcs_weight != 1.0 and self.fbs else None
@@ -172,6 +212,8 @@ class TotalsModel:
         all_plays = [o["stats"]["plays"] for o in self.obs if o["stats"].get("plays")]
         self.avg_plays = statistics.mean(all_plays)
         self.tempo, self.lg_secs, self.clock = tempo(drives) if drives else ({}, None, GAME_SECONDS)
+        self.finishing = bool(finishing and drives)
+        self.finish, self.lg_rz, self.lg_to = finishing_rates(drives) if self.finishing else ({}, 0.0, 0.0)
         self.off_offsets = off_offsets or {}
         self.def_offsets = def_offsets or {}
         self.games_played = defaultdict(set)
@@ -218,6 +260,15 @@ class TotalsModel:
             exp_epa += self.off_offsets.get(off, 0.0) + self.def_offsets.get(dfn, 0.0)
         return exp_epa, self._plays(off, dfn)
 
+    def _finish_terms(self, off, dfn, exp_plays):
+        """Extra regression columns: red zone and turnover matchup, scaled by volume."""
+        if not self.finishing:
+            return ()
+        a, b = self.finish.get(off, {}), self.finish.get(dfn, {})
+        rz = a.get("rz_off", self.lg_rz) + b.get("rz_def", self.lg_rz) - 2 * self.lg_rz
+        to = a.get("to_off", self.lg_to) + b.get("to_def", self.lg_to) - 2 * self.lg_to
+        return (exp_plays * rz, exp_plays * to)
+
     def _fit_points(self, games):
         by_id = {g["id"]: g for g in games}
         X, y, w = [], [], []
@@ -226,7 +277,7 @@ class TotalsModel:
             if pts is None:
                 continue
             exp_epa, exp_plays = self.features(o["offense"], o["defense"], o["home"])
-            X.append((1.0, exp_plays, exp_plays * exp_epa))
+            X.append((1.0, exp_plays, exp_plays * exp_epa) + self._finish_terms(o["offense"], o["defense"], exp_plays))
             y.append(pts)
             w.append(o.get("weight", 1.0))
         sw = np.sqrt(np.array(w))
@@ -234,7 +285,8 @@ class TotalsModel:
 
     def team_points(self, off, dfn, home, injuries=True, use_matchup=True):
         exp_epa, exp_plays = self.features(off, dfn, home, injuries, use_matchup)
-        return float(self.coef @ (1.0, exp_plays, exp_plays * exp_epa))
+        x = (1.0, exp_plays, exp_plays * exp_epa) + self._finish_terms(off, dfn, exp_plays)
+        return float(self.coef @ np.array(x))
 
     def project(self, game, injuries=True, use_matchup=True):
         home, away = game["homeTeam"], game["awayTeam"]
@@ -406,12 +458,12 @@ def _before(data, key, week):
 
 
 def build_model(data, week, alpha=TOTALS_ALPHA, tempo=False, fcs_weight=1.0, huber_k=None, matchup=0.0,
-                use_priors=False, **offsets):
+                use_priors=False, finishing=False, **offsets):
     done = [g for g in data["games"] if g.get("week", 99) < week]
     return TotalsModel(_before(data, "rows", week), done, alpha,
                        drives=_before(data, "drives", week) if tempo else None,
                        fcs_weight=fcs_weight, huber_k=huber_k, matchup=matchup,
-                       priors=data.get("priors") if use_priors else None, **offsets)
+                       priors=data.get("priors") if use_priors else None, finishing=finishing, **offsets)
 
 
 def backtest(data, first_week=4, min_games=3, variants=VARIANTS):

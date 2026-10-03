@@ -202,6 +202,21 @@ Priors make totals slightly worse (totals do best with every team shrunk hard to
 and spreads more accurate in every season, most in weeks 4-6, still with no edge against the
 spread. So only the spread model uses them. Source: `data/priors_backtest.csv` (totals).
 
+## Red zone and turnover rates
+
+Red zone points per trip (drives starting or ending inside the 20; TD = 7, FG = 3) and turnovers
+per drive, for each offense and each defense allowed, shrunk toward league rates (20 trips / 60
+drives), added to the points model as extra matchup terms (`finishing=True`).
+
+| | 2023 | 2024 | 2025 | P4 card, all three |
+| --- | --- | --- | --- | --- |
+| RMSE, current | 16.38 | 17.03 | 15.46 | 114-88 (56.4%) |
+| RMSE, with red zone + turnovers | 16.73 | 17.49 | 16.17 | 103-96 (51.8%) |
+
+Worse in every season. Red zone and turnover rates swing on a handful of plays, and the part
+that's real is already in EPA (which counts TDs vs FGs and turnovers), so the extra terms mostly
+add noise. Off by default.
+
 ## Not backtested
 
 - Defensive-player injury estimates and the Big Ten availability report import. There is no
