@@ -371,6 +371,7 @@ def summarize_backtest(results, thresholds=(0, 2, 3, 4, 5, 7, 10)):
         print(f"{t:>9} {n + p:>5} {f'{w}-{l}-{p}':>10} {win:>6.1%} {roi:>+9.1%}")
         out.append({"min_edge": t, "bets": n + p, "wins": w, "losses": l, "pushes": p,
                     "win_pct": round(win, 3), "roi_110": round(roi, 3)})
+    open_rows = []
     opened = [r for r in results if r["market_open"] is not None]
     if opened:
         e = np.array([r["proj_total"] - r["market_open"] for r in opened])
@@ -378,16 +379,22 @@ def summarize_backtest(results, thresholds=(0, 2, 3, 4, 5, 7, 10)):
         cl = np.array([r["market_total"] for r in opened])
         act = np.array([r["actual_total"] for r in opened])
         print(f"\n{len(opened)} games with an opening total")
-        print(f"corr(model - open, close - open) = {np.corrcoef(e, cl - op)[0, 1]:+.3f}  (predicts line movement?)")
-        print(f"corr(model - open, actual - open) = {np.corrcoef(e, act - op)[0, 1]:+.3f}  (predicts results?)")
+        corr_move, corr_result = np.corrcoef(e, cl - op)[0, 1], np.corrcoef(e, act - op)[0, 1]
+        print(f"corr(model - open, close - open) = {corr_move:+.3f}  (predicts line movement?)")
+        print(f"corr(model - open, actual - open) = {corr_result:+.3f}  (predicts results?)")
         for t in (0, 3, 5, 7):
             m = (abs(e) >= t) & (act != op) & (e != 0)
             n, w = int(m.sum()), int(((act - op > 0) == (e > 0))[m].sum())
             if n:
                 move = float(((cl - op) * np.sign(e))[abs(e) >= t].mean())
-                print(f"  vs open |edge|>={t}: {n} bets, {w / n:.1%} win, ROI {(w * 100 / 110 - (n - w)) / n:+.1%}, "
+                roi = (w * 100 / 110 - (n - w)) / n
+                print(f"  vs open |edge|>={t}: {n} bets, {w / n:.1%} win, ROI {roi:+.1%}, "
                       f"line moved {move:+.2f} toward model")
-    return out
+                open_rows.append({"min_edge": t, "bets": n, "wins": w, "losses": n - w, "win_pct": round(w / n, 3),
+                                  "roi_110": round(roi, 3), "avg_line_move_toward_model": round(move, 2),
+                                  "corr_edge_vs_line_move": round(corr_move, 3),
+                                  "corr_edge_vs_result": round(corr_result, 3)})
+    return out, open_rows
 
 
 def _qb_season(passing):
@@ -465,7 +472,7 @@ def qb_out_backtest(data, first_week=4, min_games=3, model_kw=None):
 def summarize_qb_backtest(rows):
     if not rows:
         print("no games where a starting QB sat")
-        return
+        return []
     a = np.array([r["actual_total"] for r in rows])
     with_adj = np.array([r["proj_total"] for r in rows])
     without = np.array([r["proj_no_injury"] for r in rows])
@@ -475,11 +482,18 @@ def summarize_qb_backtest(rows):
     print(f"  avg injury adjustment {np.mean(with_adj - without):+.1f} pts")
     print(f"  RMSE without adjustment {rm(without):.1f}, with {rm(with_adj):.1f}, market {rm(m):.1f}")
     print(f"  bias without {np.mean(a - without):+.1f}, with {np.mean(a - with_adj):+.1f}, market {np.mean(a - m):+.1f}")
+    out = []
     for label, proj in (("without", without), ("with", with_adj)):
         e, d = proj - m, a - m
         k = (e != 0) & (d != 0)
         win = ((e > 0) == (d > 0))[k].mean()
         print(f"  picking every game {label} adjustment: {win:.1%} of {int(k.sum())}")
+        out.append({"qb_adjustment": label, "games": len(rows), "rmse": round(rm(proj), 2),
+                    "bias": round(float(np.mean(a - proj)), 2), "pick_win_pct": round(float(win), 3),
+                    "picks": int(k.sum()), "avg_adjustment": round(float(np.mean(proj - without)), 2)})
+    out.append({"qb_adjustment": "market", "games": len(rows), "rmse": round(rm(m), 2),
+                "bias": round(float(np.mean(a - m)), 2)})
+    return out
 
 
 # ---------------------------------------------------------------- CLI
@@ -517,9 +531,12 @@ def main(argv=None):
         results = backtest(data, min_games=args.min_games, variants=variants)
         comparison = compare_variants(results)
         print("\nchosen settings:", chosen)
-        summary = summarize_backtest(results["chosen"])
+        summary, open_summary = summarize_backtest(results["chosen"])
         qb = qb_out_backtest(data, min_games=args.min_games, model_kw=chosen)
-        summarize_qb_backtest(qb)
+        qb_summary = summarize_qb_backtest(qb)
+        write_csv(os.path.join(out_dir, "totals_backtest_open.csv"), open_summary)
+        if qb_summary:
+            write_csv(os.path.join(out_dir, "totals_backtest_qb_summary.csv"), qb_summary)
         write_csv(os.path.join(out_dir, "totals_backtest_games.csv"), results["chosen"])
         write_csv(os.path.join(out_dir, "totals_backtest_summary.csv"), summary)
         write_csv(os.path.join(out_dir, "totals_backtest_variants.csv"), comparison)

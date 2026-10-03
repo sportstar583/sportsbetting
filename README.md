@@ -124,11 +124,11 @@ an edge. Tempo is the one addition that improved accuracy in both seasons.
 The injury estimate was checked on games where a team's season-to-date starting QB didn't
 play (who actually played stands in for an injury report). The raw estimate overshot by about
 3x, so it is scaled by 0.35, which was fit on 2025. On 2024, out of sample, it left accuracy
-unchanged (RMSE 17.8 either way) and nudged pick rate from 54.2% to 54.9%. Markets already
+slightly worsened accuracy (RMSE 17.77 to 17.85) and nudged pick rate from 54.2% to 54.9%. Markets already
 move on QB news.
 
-Treat the board as a screen for numbers worth a closer look, not as a list of picks. Per-variant
-results are in `data/<year>/totals_backtest_variants.csv`.
+Treat the board as a screen for numbers worth a closer look, not as a list of picks. Full
+results, including opening-line and QB-absence checks, are in [BACKTEST.md](BACKTEST.md).
 
 ### Tests
 
