@@ -159,8 +159,10 @@ def derived_offense(s, sc, games):
 def derived_defense(s, sc, games):
     o = lambda k: s.get(k + OPPONENT_SUFFIX)  # noqa: E731
     opp_plays = (o("rushingAttempts") or 0) + (o("passAttempts") or 0)
-    takeaways = None
-    if "passesIntercepted" in s or "fumblesRecovered" in s:
+    # turnoversOpponent is the API's own takeaway count; passesIntercepted + fumblesRecovered
+    # can undercount it, so only fall back to that sum when it is missing.
+    takeaways = o("turnovers")
+    if takeaways is None and ("passesIntercepted" in s or "fumblesRecovered" in s):
         takeaways = (s.get("passesIntercepted") or 0) + (s.get("fumblesRecovered") or 0)
     return {
         "points_allowed_per_game": _div(sc.get("points_against"), sc.get("games_played"), 1),

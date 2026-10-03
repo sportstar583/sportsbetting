@@ -80,6 +80,11 @@ class CollectTests(unittest.TestCase):
         self.assertIsNone(off["Ohio State"]["points_per_game"])
         self.assertNotIn("Boise State", off)
 
+    def test_takeaways_prefer_turnovers_opponent(self):
+        season = SEASON + [{"team": "Georgia", "statName": "turnoversOpponent", "statValue": 8}]
+        d = {r["team"]: r for r in build_tables(p4_teams(FBS), season, ADVANCED, GAMES)["defense"]}["Georgia"]
+        self.assertEqual((d["takeaways"], d["turnover_margin"]), (8, 5))
+
 
 if __name__ == "__main__":
     unittest.main()

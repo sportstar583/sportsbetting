@@ -1,0 +1,926 @@
+player,position,team,conference,games,all_epa_raw,all_epa_adj,all_opp_adjustment,rush_epa_raw,rush_epa_adj,rush_opp_adjustment,pass_epa_raw,pass_epa_adj,pass_opp_adjustment
+Vernon Allen III,WR,Rutgers,Big Ten,1,4.93,4.875,-0.055,,,,4.93,4.805,-0.125
+Jesse Watson,WR,Purdue,Big Ten,1,4.317,4.216,-0.101,,,,4.317,4.173,-0.144
+Brock Schott,TE,Indiana,Big Ten,1,3.594,3.595,0.001,,,,3.594,3.489,-0.105
+Ja'Kyrian Turner,RB,Pittsburgh,ACC,1,3.477,3.491,0.014,,,,3.477,3.458,-0.019
+Kyion Grayes,WR,California,ACC,2,3.276,3.277,0.001,,,,3.276,3.327,0.05
+Prince Jean,WR,Kentucky,SEC,1,3.191,3.141,-0.05,,,,3.191,3.184,-0.007
+Tyler Powell,TE,Arizona,Big 12,1,2.916,2.892,-0.024,,,,2.916,2.872,-0.044
+Justin Cook,RB,Pittsburgh,ACC,2,2.833,2.873,0.04,4.043,4.026,-0.017,0.525,0.506,-0.019
+AJ Ia,TE,Arizona State,Big 12,1,2.779,2.673,-0.106,,,,2.779,2.698,-0.081
+Manny Choice,WR,Oklahoma,SEC,1,2.548,2.671,0.123,,,,2.548,2.592,0.044
+Quayd Hendryx,WR,Minnesota,Big Ten,1,2.558,2.62,0.062,,,,2.558,2.564,0.006
+Reece Vander Zee,WR,Iowa,Big Ten,1,2.569,2.619,0.05,,,,2.569,2.63,0.061
+Debron Gatling,WR,Georgia Tech,ACC,1,2.586,2.593,0.007,,,,2.586,2.614,0.028
+Cederian Morgan,WR,Alabama,SEC,1,2.632,2.531,-0.101,,,,2.632,2.53,-0.102
+Roman Voss,TE,Minnesota,Big Ten,2,2.503,2.498,-0.006,,,,2.503,2.443,-0.061
+Noah Rogers,WR,Alabama,SEC,1,2.49,2.453,-0.037,,,,2.49,2.373,-0.117
+Xavier Gayten,RB,Mississippi State,SEC,1,2.548,2.452,-0.096,2.548,2.45,-0.098,,,
+Nahzae Cox,WR,Kansas,Big 12,3,2.417,2.448,0.03,,,,2.417,2.428,0.011
+Charles Taplin,WR,Michigan State,Big Ten,1,2.456,2.417,-0.039,,,,2.456,2.428,-0.028
+DeJuan Williams,RB,Maryland,Big Ten,1,2.438,2.405,-0.033,3.193,3.218,0.025,1.306,1.229,-0.077
+Deshonne Redeaux,RB,USC,Big Ten,1,2.363,2.394,0.031,2.363,2.351,-0.012,,,
+Joshua Moore,WR,Miami,ACC,3,2.416,2.375,-0.041,,,,2.416,2.373,-0.043
+Agyeman Addae,RB,UCF,Big 12,1,2.245,2.347,0.102,,,,2.245,2.254,0.009
+Jaivon Solomon,WR,Duke,ACC,2,2.394,2.276,-0.118,,,,2.394,2.318,-0.077
+Kahleil Jackson,WR,Florida,SEC,2,2.177,2.192,0.015,,,,2.177,2.12,-0.057
+Tucker Ashcraft,TE,USC,Big Ten,1,1.998,2.153,0.155,,,,1.998,2.021,0.023
+Ty Robinson,WR,Illinois,Big Ten,4,2.046,2.093,0.048,,,,2.046,2.095,0.05
+Davion Chandler,WR,Indiana,Big Ten,4,2.125,2.085,-0.041,,,,2.125,2.083,-0.042
+Malachi Henry,WR,Cincinnati,Big 12,4,2.01,2.025,0.015,,,,2.01,2.028,0.018
+Elijah Lagg,TE,Pittsburgh,ACC,1,1.884,1.898,0.014,,,,1.884,1.865,-0.019
+Gracen Harris,WR,Mississippi State,SEC,2,1.964,1.897,-0.067,,,,1.964,1.889,-0.075
+Cole Spence,TE,Vanderbilt,SEC,1,1.832,1.877,0.045,,,,1.832,1.809,-0.023
+Walter Taylor,TE,Vanderbilt,SEC,2,1.82,1.847,0.027,,,,1.82,1.782,-0.038
+Tawaski Abrams,WR,Florida,SEC,3,1.875,1.836,-0.039,,,,1.875,1.824,-0.051
+Landen Clark,QB,LSU,SEC,1,1.774,1.772,-0.002,1.774,1.846,0.072,,,
+Jayden McGowan,WR,Baylor,Big 12,3,1.721,1.768,0.047,-0.353,-0.229,0.124,1.777,1.791,0.015
+Baron Naone,TE,Washington,Big Ten,4,1.728,1.752,0.023,,,,1.728,1.751,0.023
+Brandon Phelps,WR,Arizona,Big 12,4,1.721,1.743,0.022,,,,1.721,1.744,0.023
+Dashawn Martin,WR,Virginia,ACC,4,1.741,1.734,-0.007,,,,1.741,1.717,-0.024
+Charlie Becker,WR,Indiana,Big Ten,4,1.766,1.726,-0.041,,,,1.766,1.724,-0.042
+Reggie Frischknecht,WR,BYU,Big 12,2,1.75,1.72,-0.029,,,,1.75,1.745,-0.004
+Henry Boyer,TE,Kentucky,SEC,4,1.694,1.689,-0.006,-0.019,0.062,0.081,1.792,1.785,-0.008
+Ethan Davis,TE,Tennessee,SEC,2,1.617,1.656,0.038,,,,1.617,1.632,0.015
+Talyn Taylor,WR,Georgia,SEC,3,1.559,1.578,0.019,1.106,1.033,-0.073,1.571,1.608,0.037
+Jaiven Plummer,WR,Georgia Tech,ACC,2,1.629,1.572,-0.057,,,,1.629,1.581,-0.047
+Alex Honig,TE,Northwestern,Big Ten,2,1.478,1.556,0.079,,,,1.478,1.5,0.022
+Jaden Reddell,TE,Georgia,SEC,2,1.484,1.547,0.063,0.931,1.006,0.075,1.006,1.063,0.057
+Bryce Yates,WR,Pittsburgh,ACC,3,1.504,1.542,0.038,,,,1.504,1.539,0.035
+Kendre Harrison,TE,Oregon,Big Ten,1,1.634,1.529,-0.105,,,,1.634,1.522,-0.112
+Shane Carr,WR,Kentucky,SEC,1,1.602,1.521,-0.081,,,,1.602,1.593,-0.009
+Nedrick Boldin Jr.,WR,Boston College,ACC,1,1.581,1.52,-0.061,,,,1.581,1.531,-0.05
+David Clement,TE,Syracuse,ACC,2,1.517,1.5,-0.017,,,,1.517,1.546,0.029
+Brock Boyd,WR,Ohio State,Big Ten,2,1.542,1.49,-0.052,,,,1.542,1.501,-0.041
+Nate Roberts,TE,Ohio State,Big Ten,4,1.488,1.479,-0.009,,,,1.488,1.48,-0.008
+DJ Epps,WR,West Virginia,Big 12,4,1.452,1.476,0.024,0.685,0.703,0.018,1.908,1.897,-0.011
+Trey'Dez Green,TE,LSU,SEC,3,1.43,1.473,0.042,1.401,1.431,0.03,1.482,1.54,0.058
+Cole Rusk,TE,Arizona,Big 12,3,1.446,1.465,0.019,,,,1.446,1.46,0.014
+Elija Lofton,TE,Miami,ACC,4,1.495,1.458,-0.037,,,,1.495,1.471,-0.024
+George Burhenn,TE,Purdue,Big Ten,3,1.424,1.447,0.023,,,,1.424,1.425,0.001
+Taniela Tupou,TE,USC,Big Ten,1,1.397,1.428,0.031,,,,1.397,1.431,0.034
+Legend Glasker,WR,BYU,Big 12,3,1.455,1.42,-0.035,1.015,0.957,-0.058,1.701,1.674,-0.027
+Shaun Terry II,WR,Missouri,SEC,3,1.395,1.42,0.025,,,,1.395,1.375,-0.02
+Bryce Kania,WR,Wake Forest,ACC,2,1.502,1.404,-0.099,,,,1.502,1.399,-0.103
+Khamari Anderson,TE,Arizona State,Big 12,1,1.398,1.396,-0.002,,,,1.398,1.313,-0.085
+Zay Robinson,WR,Penn State,Big Ten,3,1.443,1.394,-0.048,,,,1.443,1.401,-0.042
+Koby Howard,WR,Penn State,Big Ten,3,1.463,1.375,-0.088,1.285,1.261,-0.024,1.449,1.364,-0.085
+Tyler Brown,WR,Clemson,ACC,4,1.313,1.365,0.052,3.669,3.63,-0.039,0.935,0.995,0.059
+Jamal Polite Jr.,WR,Iowa State,Big 12,3,1.316,1.361,0.045,,,,1.316,1.351,0.035
+Trent Mosley,WR,USC,Big Ten,3,1.274,1.353,0.079,,,,1.274,1.308,0.034
+AJ Surace,QB,Rutgers,Big Ten,2,1.246,1.352,0.106,-0.966,-0.946,0.02,1.465,1.501,0.037
+Ben Black,WR,Rutgers,Big Ten,4,1.338,1.345,0.007,,,,1.338,1.294,-0.044
+Carter Pabst,WR,Iowa State,Big 12,1,1.271,1.345,0.074,,,,1.271,1.259,-0.012
+Lyviel Waters,TE,Cincinnati,Big 12,2,1.339,1.336,-0.003,,,,1.339,1.388,0.049
+Jaden Platt,TE,Arkansas,SEC,3,1.219,1.318,0.099,,,,1.219,1.236,0.018
+Ja'Ricous Hairston,TE,Virginia Tech,ACC,2,1.247,1.308,0.061,,,,1.247,1.255,0.008
+Hayden Hansen,TE,Oklahoma,SEC,3,1.276,1.302,0.026,,,,1.276,1.267,-0.009
+Langdon Horace,WR,Stanford,ACC,1,1.381,1.301,-0.08,,,,1.381,1.411,0.03
+Chase Loftin,TE,Florida State,ACC,1,1.191,1.301,0.11,,,,1.191,1.261,0.07
+Chris Brooks Jr.,WR,Wisconsin,Big Ten,4,1.226,1.299,0.073,,,,1.226,1.291,0.065
+Koby Young,WR,Houston,Big 12,4,1.269,1.293,0.024,0.716,0.731,0.015,1.217,1.249,0.032
+Yannick Smith,WR,SMU,ACC,2,1.313,1.287,-0.026,,,,1.313,1.227,-0.087
+Jalen Moss,WR,Arizona State,Big 12,2,1.284,1.265,-0.019,,,,1.284,1.231,-0.053
+Shazz Preston,WR,Indiana,Big Ten,4,1.301,1.26,-0.041,,,,1.301,1.259,-0.042
+Griffin Wilde,WR,Northwestern,Big Ten,3,1.171,1.254,0.083,,,,1.171,1.177,0.006
+Samaj Jones,QB,Cincinnati,Big 12,2,1.244,1.251,0.007,1.244,1.227,-0.017,,,
+KJ Duff,WR,Rutgers,Big Ten,4,1.233,1.239,0.007,,,,1.233,1.189,-0.044
+Rocky Beers,TE,Oklahoma,SEC,4,1.187,1.238,0.05,-4.85,-4.677,0.173,1.409,1.414,0.004
+Winston Watkins,WR,LSU,SEC,4,1.204,1.236,0.031,0.176,0.192,0.016,1.292,1.314,0.022
+Trent Thomas,TE,Tennessee,SEC,2,1.18,1.233,0.053,,,,1.18,1.213,0.033
+Gavin Grover,TE,Cincinnati,Big 12,3,1.214,1.223,0.01,,,,1.214,1.218,0.004
+Joseph Williams,WR,Colorado,Big 12,4,1.208,1.2,-0.008,0.168,0.141,-0.027,1.216,1.211,-0.005
+Kelshaun Johnson,WR,Texas A&M,SEC,2,1.193,1.199,0.006,,,,1.193,1.216,0.023
+Isaiah Mizell,WR,Arizona,Big 12,3,1.201,1.197,-0.005,,,,1.201,1.207,0.006
+Jayden Warren,WR,Texas A&M,SEC,1,1.136,1.196,0.06,,,,1.136,1.229,0.093
+Jabree Coleman,RB,South Carolina,SEC,4,1.154,1.188,0.034,1.106,1.111,0.005,0.412,0.466,0.054
+Brandon Inniss,WR,Ohio State,Big Ten,4,1.183,1.174,-0.009,,,,1.183,1.175,-0.008
+Donovan Murph,WR,South Carolina,SEC,4,1.111,1.145,0.034,,,,1.111,1.156,0.045
+Chauncey Magwood,WR,Purdue,Big Ten,4,1.08,1.137,0.057,1.276,1.317,0.041,1.071,1.1,0.029
+Malachi Toney,WR,Miami,ACC,4,1.164,1.127,-0.037,,,,1.164,1.14,-0.024
+KK Smith,WR,Michigan State,Big Ten,1,1.071,1.117,0.046,,,,1.071,1.049,-0.022
+Preston Douglas,TE,NC State,ACC,4,1.081,1.113,0.033,,,,1.081,1.117,0.036
+Jordan Scott,WR,Maryland,Big Ten,1,1.094,1.1,0.006,,,,1.094,1.094,0.0
+Jamari Johnson,TE,Oregon,Big Ten,2,1.075,1.096,0.021,,,,1.075,1.039,-0.036
+Mikey Matthews,WR,UCLA,Big Ten,1,1.101,1.093,-0.008,,,,1.101,1.174,0.073
+Carlos Hernandez,WR,Wake Forest,ACC,4,1.124,1.092,-0.032,,,,1.124,1.076,-0.049
+Wyatt Young,WR,Oklahoma State,Big 12,4,1.089,1.091,0.001,-0.105,-0.102,0.004,1.411,1.405,-0.007
+Chase Sowell,WR,Penn State,Big Ten,4,1.135,1.09,-0.045,,,,1.135,1.095,-0.04
+Sacovie White,WR,Georgia,SEC,4,1.084,1.089,0.005,0.446,0.382,-0.064,1.835,1.862,0.026
+Collin Dixon,WR,Illinois,Big Ten,4,1.041,1.088,0.048,,,,1.041,1.09,0.05
+Tron Baker,WR,USC,Big Ten,5,1.029,1.087,0.058,,,,1.029,1.066,0.037
+Cam Coleman,WR,Texas,SEC,4,1.029,1.079,0.05,,,,1.029,1.091,0.061
+Nate Frazier,RB,Georgia,SEC,3,1.128,1.075,-0.053,1.128,1.062,-0.066,,,
+Cole Tabb,RB,Cincinnati,Big 12,4,1.049,1.064,0.015,1.029,1.01,-0.019,1.304,1.285,-0.019
+Maurice Brown II,TE,South Carolina,SEC,2,0.969,1.064,0.096,,,,0.969,1.048,0.08
+Rashid Williams,WR,Washington,Big Ten,4,1.028,1.052,0.023,,,,1.028,1.051,0.023
+Armoni Weaver-Bomar,WR,West Virginia,Big 12,3,1.036,1.05,0.014,0.359,0.402,0.043,2.466,2.363,-0.102
+Terrell Anderson,WR,USC,Big Ten,1,0.94,1.048,0.108,,,,0.94,1.076,0.136
+Kaleb Edwards,TE,Alabama,SEC,3,1.064,1.037,-0.026,,,,1.064,1.015,-0.049
+Marcellous Hawkins,RB,Virginia Tech,ACC,2,0.97,1.031,0.061,,,,0.97,0.978,0.008
+JJ Buchanan,WR,Michigan,Big Ten,4,0.982,1.028,0.046,,,,0.982,0.989,0.007
+Tre Spivey,WR,Arizona,Big 12,4,1.003,1.025,0.022,-0.043,-0.039,0.004,1.106,1.129,0.023
+Brennan Parachek,TE,Michigan State,Big Ten,3,0.927,1.024,0.097,,,,0.927,0.991,0.064
+Deuce Alexander,WR,Ole Miss,SEC,4,0.983,1.023,0.041,-0.114,-0.036,0.078,0.992,1.004,0.012
+Kayden Dixon-Wyatt,WR,USC,Big Ten,5,0.954,1.012,0.058,,,,0.954,0.991,0.037
+Zach Williams,WR,USC,Big Ten,5,0.948,1.006,0.058,-2.357,-2.214,0.143,1.773,1.81,0.037
+Kari Ashley,TE,TCU,Big 12,4,0.983,1.005,0.023,,,,0.983,0.984,0.001
+Demetrice McCray,WR,Pittsburgh,ACC,2,0.998,0.997,-0.001,,,,0.998,1.022,0.024
+Kenny Darby,WR,Kentucky,SEC,4,1.001,0.995,-0.006,0.82,0.759,-0.061,1.065,1.057,-0.008
+Caden High,WR,Stanford,ACC,3,0.951,0.981,0.03,-1.706,-1.613,0.093,1.013,1.022,0.009
+Creed Whittemore,WR,Utah,Big 12,4,0.982,0.977,-0.005,,,,0.982,0.995,0.013
+Jalen Dupree,RB,Kansas,Big 12,1,1.073,0.977,-0.096,1.073,1.025,-0.048,,,
+Jeremiah McClellan,WR,Oregon,Big Ten,2,0.873,0.976,0.103,,,,0.873,0.964,0.092
+Cooper Barkate,WR,Miami,ACC,4,1.006,0.969,-0.037,,,,1.006,0.982,-0.024
+Ethan Barbour,TE,Georgia,SEC,3,0.925,0.945,0.019,,,,0.925,0.963,0.037
+Jett Carpenter,TE,Texas Tech,Big 12,3,0.929,0.944,0.015,3.287,3.215,-0.072,0.353,0.384,0.031
+Jalen Hale,WR,SMU,ACC,3,0.978,0.944,-0.034,-0.474,-0.481,-0.006,1.149,1.075,-0.073
+Censere Lee,WR,Pittsburgh,ACC,4,0.91,0.943,0.032,,,,0.91,0.932,0.022
+Richie Anderson,TE,Texas A&M,SEC,1,0.892,0.942,0.05,,,,0.892,0.929,0.037
+Larry Simmons,WR,Utah,Big 12,3,0.963,0.939,-0.024,,,,0.963,0.969,0.006
+Trez Davis,WR,Washington,Big Ten,1,0.878,0.939,0.061,,,,0.878,0.962,0.084
+Luke Harpring,TE,Florida,SEC,4,0.956,0.938,-0.018,,,,0.956,0.912,-0.044
+Jeremiah Smith,WR,Ohio State,Big Ten,4,0.946,0.937,-0.009,0.077,0.041,-0.036,0.989,0.981,-0.008
+Jarriett Buie,WR,Iowa,Big Ten,2,0.971,0.936,-0.035,,,,0.971,0.962,-0.009
+Traylon Ray,WR,Ole Miss,SEC,4,0.884,0.925,0.041,,,,0.884,0.897,0.012
+Ka'Morreun Pimpton,TE,TCU,Big 12,4,0.898,0.921,0.023,,,,0.898,0.899,0.001
+Shane King,TE,Arizona,Big 12,1,0.818,0.921,0.103,,,,0.818,0.892,0.074
+Quinn Clark,WR,Nebraska,Big Ten,3,0.93,0.92,-0.01,,,,0.93,0.896,-0.034
+Tre Richardson,WR,Louisville,ACC,4,0.911,0.92,0.009,1.316,1.335,0.019,0.873,0.867,-0.006
+Somourian Wingo,WR,Miami,ACC,1,0.945,0.919,-0.026,,,,0.945,0.979,0.034
+Dallas Wilson,WR,Florida,SEC,4,0.93,0.913,-0.018,2.529,2.483,-0.046,0.77,0.727,-0.044
+Zach Atkins,TE,Colorado,Big 12,1,1.01,0.912,-0.098,,,,1.01,0.962,-0.048
+Dalen Penson,WR,Georgia Tech,ACC,4,0.883,0.907,0.023,,,,0.883,0.889,0.005
+Josh Hoover,QB,Indiana,Big Ten,4,0.947,0.907,-0.041,1.01,0.97,-0.04,0.912,0.87,-0.042
+Tylik Hill,RB,Syracuse,ACC,2,0.954,0.906,-0.047,0.977,0.891,-0.086,0.067,0.066,-0.001
+Reed Harris,WR,Arizona State,Big 12,3,0.917,0.904,-0.014,,,,0.917,0.854,-0.064
+Lawson Luckie,TE,Georgia,SEC,3,0.878,0.902,0.024,,,,0.878,0.916,0.037
+JaVonnie Gibson,WR,Cincinnati,Big 12,4,0.886,0.901,0.015,,,,0.886,0.904,0.018
+Jordan Dwyer,WR,TCU,Big 12,1,0.782,0.9,0.118,,,,0.782,0.84,0.058
+Chris Marshall,WR,Arkansas,SEC,4,0.806,0.899,0.092,,,,0.806,0.846,0.04
+Ryan Williams,WR,Alabama,SEC,4,0.901,0.896,-0.005,0.161,0.183,0.022,0.875,0.862,-0.013
+Vernell Brown III,WR,Florida,SEC,4,0.909,0.891,-0.018,0.331,0.316,-0.015,0.986,0.942,-0.044
+Landen Thomas,TE,Florida State,ACC,3,0.831,0.889,0.058,,,,0.831,0.884,0.054
+Louis Brown,WR,Baylor,Big 12,4,0.84,0.887,0.047,,,,0.84,0.846,0.005
+Darian Mensah,QB,Miami,ACC,4,0.918,0.881,-0.037,0.58,0.561,-0.019,0.93,0.906,-0.024
+Preston Rex,RB,BYU,Big 12,3,0.914,0.879,-0.035,0.898,0.84,-0.058,1.03,1.075,0.045
+Randy Pittman,TE,SMU,ACC,4,0.925,0.874,-0.051,,,,0.925,0.844,-0.081
+Dylan Raiola,QB,Oregon,Big Ten,1,0.923,0.868,-0.055,,,,0.923,0.798,-0.125
+Will Anciaux,TE,Kansas State,Big 12,3,0.893,0.867,-0.026,,,,0.893,0.857,-0.036
+Ayden Greene,WR,Virginia Tech,ACC,3,0.865,0.867,0.002,,,,0.865,0.842,-0.023
+Donovan Olugbode,WR,Missouri,SEC,4,0.839,0.866,0.027,-3.949,-3.924,0.025,1.013,1.01,-0.003
+Caleb Smith,WR,Arizona,Big 12,2,0.799,0.866,0.067,,,,0.799,0.861,0.062
+Kamrean Johnson,TE,Wake Forest,ACC,3,0.862,0.861,-0.001,,,,0.862,0.824,-0.039
+Xavier Townsend,WR,Purdue,Big Ten,4,0.804,0.861,0.057,,,,0.804,0.833,0.029
+Decker DeGraaf,TE,Washington,Big Ten,4,0.837,0.861,0.023,,,,0.837,0.86,0.023
+Mekhi Dodd,RB,Boston College,ACC,1,0.851,0.857,0.006,0.851,0.839,-0.012,,,
+Chris Barnes,WR,Oklahoma State,Big 12,3,0.803,0.852,0.049,,,,0.803,0.822,0.019
+Asaad Waseem,WR,Purdue,Big Ten,4,0.795,0.852,0.057,,,,0.795,0.824,0.029
+Kenny Johnson,WR,Texas Tech,Big 12,4,0.825,0.851,0.027,,,,0.825,0.861,0.036
+Ethan Feaster,WR,USC,Big Ten,2,0.824,0.851,0.027,,,,0.824,0.865,0.041
+Rodney Bullard Jr.,WR,Michigan State,Big Ten,4,0.786,0.849,0.063,,,,0.786,0.827,0.041
+Lawayne McCoy,WR,Louisville,ACC,4,0.838,0.847,0.009,,,,0.838,0.832,-0.006
+Amare Thomas,WR,Houston,Big 12,4,0.818,0.841,0.024,,,,0.818,0.85,0.032
+Luke Dehnicke,TE,Northwestern,Big Ten,3,0.752,0.835,0.083,,,,0.752,0.758,0.006
+Nik McMillan,WR,Kansas,Big 12,3,0.795,0.825,0.03,,,,0.795,0.805,0.011
+Jackson Harris,WR,LSU,SEC,4,0.791,0.823,0.031,,,,0.791,0.814,0.022
+Pierce Walsh,TE,Minnesota,Big Ten,2,0.824,0.812,-0.012,,,,0.824,0.827,0.003
+Tylyric Coleman,WR,Virginia,ACC,4,0.819,0.811,-0.007,,,,0.819,0.795,-0.024
+Evan Stewart,WR,Oregon,Big Ten,4,0.8,0.811,0.011,-1.515,-1.474,0.041,0.837,0.824,-0.014
+Xay Davis,RB,Virginia,ACC,4,0.809,0.801,-0.007,0.622,0.624,0.002,0.364,0.29,-0.075
+Justin Bowick,WR,Oklahoma State,Big 12,4,0.799,0.8,0.001,,,,0.799,0.792,-0.007
+Eric Singleton Jr.,WR,Florida,SEC,1,0.851,0.799,-0.052,,,,0.851,0.808,-0.043
+Leland Smith,WR,UCLA,Big Ten,2,0.843,0.797,-0.046,,,,0.843,0.791,-0.052
+Landon Wright,WR,Boston College,ACC,3,0.81,0.796,-0.014,-0.779,-0.791,-0.012,1.027,1.028,0.001
+Isaiah Sategna,WR,Oklahoma,SEC,4,0.744,0.794,0.05,0.143,0.249,0.106,0.718,0.722,0.004
+Tra'Mar Harris,WR,Purdue,Big Ten,2,0.783,0.793,0.01,,,,0.783,0.77,-0.013
+Terrence Lewis,WR,Oklahoma State,Big 12,4,0.788,0.789,0.001,,,,0.788,0.781,-0.007
+Isaiah Fuhrmann,WR,Georgia Tech,ACC,3,0.716,0.787,0.072,,,,0.716,0.764,0.048
+Dawson Pough,WR,Boston College,ACC,3,0.801,0.787,-0.014,,,,0.801,0.802,0.001
+Noah Meyers,TE,Syracuse,ACC,2,0.802,0.785,-0.017,,,,0.802,0.831,0.029
+Olsen Patt-Henry,TE,Clemson,ACC,4,0.731,0.783,0.052,,,,0.731,0.791,0.059
+Jawarn Howell,RB,South Carolina,SEC,2,0.752,0.781,0.029,0.752,0.75,-0.002,,,
+Terrance Carter,TE,Texas Tech,Big 12,2,0.774,0.78,0.006,,,,0.774,0.762,-0.012
+Jayvan Boggs,WR,Florida State,ACC,3,0.758,0.776,0.018,,,,0.758,0.775,0.017
+Jalen Cooper,WR,SMU,ACC,3,0.809,0.775,-0.034,,,,0.809,0.735,-0.073
+CharMar Brown,RB,Miami,ACC,3,0.815,0.774,-0.041,0.689,0.674,-0.016,1.194,1.191,-0.003
+Caleb Odom,TE,Ole Miss,SEC,3,0.711,0.773,0.062,,,,0.711,0.735,0.025
+Junior Sherrill,WR,Vanderbilt,SEC,4,0.748,0.772,0.024,-0.284,-0.252,0.032,0.79,0.775,-0.016
+Keenan Jackson,WR,NC State,ACC,4,0.738,0.771,0.033,-4.828,-4.792,0.036,0.87,0.907,0.036
+Cooper Perry,WR,California,ACC,4,0.713,0.771,0.058,,,,0.713,0.809,0.096
+Marshall Pritchett,TE,Alabama,SEC,4,0.772,0.768,-0.005,-0.747,-0.78,-0.033,1.301,1.288,-0.013
+John Rogers,TE,Virginia,ACC,1,0.824,0.763,-0.061,1.686,1.7,0.014,0.392,0.295,-0.097
+Daylyn Upshaw,WR,Miami,ACC,4,0.796,0.759,-0.037,,,,0.796,0.772,-0.024
+Jordan Clay,WR,Washington,Big Ten,2,0.74,0.759,0.018,,,,0.74,0.763,0.023
+Dyzier Carter,WR,Rutgers,Big Ten,2,0.744,0.758,0.014,,,,0.744,0.722,-0.022
+Jourdin Houston,WR,Rutgers,Big Ten,4,0.75,0.757,0.007,0.523,0.543,0.02,0.745,0.701,-0.044
+Ryan Wingo,WR,Texas,SEC,4,0.706,0.756,0.05,-1.952,-1.961,-0.009,0.789,0.85,0.061
+Antwan Roberts,RB,Arizona,Big 12,3,0.759,0.755,-0.005,0.759,0.75,-0.01,,,
+Jonanthony Hall,WR,Stanford,ACC,4,0.746,0.749,0.003,,,,0.746,0.761,0.014
+Sanfrisco Magee,WR,Mississippi State,SEC,4,0.741,0.748,0.007,,,,0.741,0.724,-0.017
+Chris Lawson,WR,Washington,Big Ten,4,0.725,0.748,0.023,-0.754,-0.777,-0.023,0.814,0.836,0.023
+Tanook Hines,WR,USC,Big Ten,4,0.681,0.746,0.065,,,,0.681,0.719,0.037
+Drelon Miller,WR,Baylor,Big 12,3,0.707,0.746,0.039,,,,0.707,0.696,-0.01
+Coy Eakin,WR,Texas Tech,Big 12,4,0.717,0.744,0.027,,,,0.717,0.753,0.036
+Charlie Williams,TE,Colorado,Big 12,3,0.785,0.743,-0.042,,,,0.785,0.761,-0.024
+Jeremiah Koger,WR,Auburn,SEC,4,0.677,0.741,0.063,,,,0.677,0.716,0.038
+Emmett Mosley V,WR,Texas,SEC,4,0.686,0.736,0.05,1.054,1.045,-0.009,0.68,0.741,0.061
+Trelain Maddox,RB,Georgia Tech,ACC,3,0.727,0.728,0.001,0.624,0.592,-0.032,0.547,0.563,0.016
+Wayne Knight,RB,UCLA,Big Ten,4,0.75,0.727,-0.023,0.795,0.779,-0.016,0.6,0.59,-0.01
+Conner Weigman,QB,Houston,Big 12,4,0.7,0.724,0.024,0.504,0.498,-0.006,0.722,0.754,0.032
+Bryce Cain,WR,Auburn,SEC,1,0.631,0.724,0.093,0.631,0.742,0.111,,,
+Marlion Jackson,WR,Virginia Tech,ACC,2,0.65,0.722,0.072,,,,0.65,0.667,0.017
+Brayden Loftin,TE,UCLA,Big Ten,2,0.768,0.721,-0.046,,,,0.768,0.716,-0.052
+Cayden Lee,WR,Missouri,SEC,4,0.693,0.72,0.027,,,,0.693,0.691,-0.003
+Mackenzie Alleyne,WR,Oklahoma,SEC,3,0.62,0.719,0.1,,,,0.62,0.668,0.049
+Justyn Reid,TE,Louisville,ACC,2,0.706,0.718,0.012,,,,0.706,0.721,0.015
+Yamir Knight,WR,SMU,ACC,4,0.76,0.709,-0.051,-4.267,-4.281,-0.014,0.883,0.802,-0.081
+Raiden Vines-Bright,WR,Arizona State,Big 12,2,0.763,0.708,-0.054,,,,0.763,0.68,-0.083
+Cole Ballard,QB,Kansas,Big 12,1,0.571,0.707,0.136,,,,0.571,0.659,0.088
+Miles Coleman,WR,Oklahoma State,Big 12,4,0.705,0.706,0.001,,,,0.705,0.699,-0.007
+Anthony Evans III,WR,Mississippi State,SEC,4,0.699,0.706,0.007,-0.354,-0.33,0.024,0.745,0.728,-0.017
+Corey Simms,WR,USC,Big Ten,4,0.658,0.704,0.046,,,,0.658,0.67,0.012
+Christian Neptune,WR,Auburn,SEC,2,0.649,0.697,0.048,,,,0.649,0.686,0.037
+Jonah Burton,WR,Duke,ACC,4,0.785,0.696,-0.09,,,,0.785,0.713,-0.073
+Jelani Watkins,WR,Arkansas,SEC,3,0.606,0.696,0.089,0.988,1.134,0.146,0.41,0.457,0.047
+Gunner Stockton,QB,Georgia,SEC,4,0.691,0.696,0.005,0.42,0.403,-0.017,0.631,0.657,0.026
+Umari Hatcher,WR,Syracuse,ACC,3,0.709,0.694,-0.014,1.624,1.597,-0.028,0.635,0.679,0.044
+Vince Benetti,TE,Iowa State,Big 12,3,0.65,0.692,0.042,0.036,-0.025,-0.061,0.429,0.452,0.023
+Radarious Jackson,WR,Tennessee,SEC,4,0.643,0.689,0.046,,,,0.643,0.664,0.021
+Zion Robinson,WR,Stanford,ACC,4,0.685,0.688,0.003,,,,0.685,0.699,0.014
+Jonas Williams,QB,USC,Big Ten,1,0.531,0.686,0.155,,,,0.531,0.554,0.023
+Luke Reynolds,TE,Virginia Tech,ACC,4,0.67,0.685,0.015,-0.525,-0.475,0.05,0.737,0.718,-0.019
+Michael Hawkins Jr.,QB,West Virginia,Big 12,4,0.658,0.682,0.024,0.741,0.762,0.022,0.604,0.593,-0.011
+Ed Small,WR,TCU,Big 12,4,0.655,0.678,0.023,-3.79,-3.699,0.091,0.872,0.873,0.001
+Nick Marsh,WR,Indiana,Big Ten,4,0.718,0.678,-0.041,0.747,0.683,-0.064,0.7,0.658,-0.042
+Ric'Darious Farmer,WR,UCF,Big 12,4,0.621,0.674,0.052,0.396,0.301,-0.095,0.603,0.68,0.077
+Mason Mini,TE,California,ACC,3,0.575,0.673,0.099,0.398,0.345,-0.053,0.522,0.659,0.136
+Christian Bentancur,TE,Clemson,ACC,4,0.618,0.67,0.052,,,,0.618,0.677,0.059
+Bear Bachmeier,QB,BYU,Big 12,3,0.705,0.67,-0.035,0.57,0.512,-0.058,0.674,0.647,-0.027
+Chris Durr Jr.,WR,Maryland,Big Ten,4,0.632,0.67,0.038,0.975,1.0,0.025,0.613,0.636,0.023
+Jayden Maiava,QB,USC,Big Ten,5,0.61,0.669,0.058,-0.546,-0.552,-0.006,0.739,0.776,0.037
+Traville Frederick Jr.,TE,Houston,Big 12,1,0.651,0.664,0.013,,,,0.651,0.618,-0.033
+Patrick Overmyer,TE,Houston,Big 12,4,0.639,0.663,0.024,,,,0.639,0.671,0.032
+EJ Crowell,RB,Alabama,SEC,4,0.668,0.663,-0.005,0.626,0.62,-0.006,1.923,1.821,-0.102
+Samari Reed,WR,Ole Miss,SEC,1,0.599,0.663,0.064,,,,0.599,0.623,0.024
+Chauncey Bowens,RB,Georgia,SEC,4,0.648,0.653,0.005,0.27,0.239,-0.031,1.35,1.344,-0.006
+Micah Riley-Ducker,TE,Texas A&M,SEC,3,0.632,0.653,0.021,1.407,1.374,-0.033,0.804,0.832,0.028
+Jeffrey Overton Jr.,RB,Virginia Tech,ACC,3,0.592,0.651,0.058,,,,0.592,0.596,0.003
+John Montague,WR,Boston College,ACC,3,0.665,0.649,-0.016,,,,0.665,0.667,0.002
+Jeremy Scott,WR,TCU,Big 12,4,0.625,0.648,0.023,,,,0.625,0.626,0.001
+Braden Pegan,WR,Utah,Big 12,4,0.649,0.645,-0.005,2.53,2.458,-0.072,0.581,0.594,0.013
+Riley Williams,TE,Mississippi State,SEC,1,0.681,0.644,-0.037,,,,0.681,0.564,-0.117
+Joshisa Trader,WR,NC State,ACC,4,0.61,0.643,0.033,,,,0.485,0.521,0.036
+DaMarion Fowlkes,WR,Missouri,SEC,2,0.583,0.641,0.057,,,,0.583,0.653,0.07
+Javon Tracy,WR,Minnesota,Big Ten,4,0.649,0.64,-0.009,,,,0.649,0.62,-0.029
+Jacobe Hayes,WR,TCU,Big 12,4,0.618,0.64,0.023,,,,0.618,0.619,0.001
+Waden Charles,WR,UCF,Big 12,3,0.578,0.639,0.061,,,,0.578,0.628,0.05
+C.J. Sadler,WR,North Carolina,ACC,2,0.651,0.638,-0.013,,,,0.651,0.615,-0.036
+Tyren Hornes,WR,UCF,Big 12,4,0.583,0.635,0.052,,,,0.583,0.659,0.077
+Jacory Barney Jr.,WR,Nebraska,Big Ten,4,0.641,0.63,-0.01,1.056,1.064,0.009,0.478,0.456,-0.022
+Kavon Simmons,WR,Duke,ACC,4,0.719,0.629,-0.09,2.458,2.4,-0.058,0.501,0.429,-0.073
+Ricky Ahumaraeze,WR,Northwestern,Big Ten,3,0.545,0.627,0.083,,,,0.545,0.55,0.006
+Jordan Anderson,RB,Illinois,Big Ten,3,0.587,0.626,0.039,0.587,0.607,0.02,,,
+Jamal Rule,RB,Nebraska,Big Ten,4,0.636,0.626,-0.01,0.554,0.545,-0.009,2.098,2.052,-0.046
+Aidan Laughery,RB,Illinois,Big Ten,4,0.577,0.625,0.048,0.75,0.788,0.038,-0.075,-0.026,0.05
+Drayden Dickmann,WR,Wake Forest,ACC,3,0.625,0.624,-0.001,,,,0.625,0.586,-0.039
+Mark Bowman,TE,USC,Big Ten,5,0.564,0.622,0.058,,,,0.564,0.601,0.037
+Hayden Moore,WR,Minnesota,Big Ten,1,0.539,0.621,0.082,,,,0.539,0.629,0.09
+Mason Williams,TE,Ohio State,Big Ten,2,0.585,0.619,0.034,,,,0.585,0.61,0.025
+Aidan Chiles,QB,Northwestern,Big Ten,3,0.536,0.619,0.083,0.322,0.406,0.084,0.643,0.649,0.006
+Dakorien Moore,WR,Oregon,Big Ten,4,0.604,0.615,0.011,,,,0.604,0.59,-0.014
+Byrd Ficklin,QB,Utah,Big 12,4,0.618,0.614,-0.005,0.397,0.374,-0.023,0.715,0.681,-0.033
+Terry Bussey,WR,Texas A&M,SEC,2,0.613,0.613,0.001,0.267,0.278,0.011,0.751,0.746,-0.005
+Julian Sayin,QB,Ohio State,Big Ten,4,0.617,0.608,-0.009,0.815,0.806,-0.008,0.613,0.605,-0.008
+Davin Stoffel,TE,Illinois,Big Ten,3,0.556,0.608,0.052,,,,0.556,0.603,0.047
+Messiah Hampton,WR,Oregon,Big Ten,3,0.624,0.607,-0.017,,,,0.624,0.588,-0.036
+Kameron Courtney,WR,Virginia,ACC,4,0.61,0.603,-0.007,,,,0.61,0.586,-0.024
+Bailey Stockton,WR,Florida,SEC,4,0.62,0.602,-0.018,-0.382,-0.341,0.041,0.634,0.59,-0.044
+Joseph Himon II,RB,Northwestern,Big Ten,3,0.518,0.601,0.083,0.378,0.463,0.084,1.135,1.128,-0.007
+Duce Robinson,WR,Florida State,ACC,4,0.567,0.6,0.032,,,,0.567,0.599,0.031
+Riley Wormley,RB,USC,Big Ten,4,0.54,0.6,0.06,0.6,0.624,0.025,0.628,0.663,0.035
+Connor Cox,TE,Virginia,ACC,1,0.619,0.598,-0.021,,,,0.619,0.576,-0.043
+Ryan Ward,TE,West Virginia,Big 12,4,0.574,0.598,0.024,,,,0.574,0.563,-0.011
+Jay Harris,RB,Kansas State,Big 12,2,0.649,0.595,-0.054,0.649,0.642,-0.007,,,
+Anthony Colandrea,QB,Nebraska,Big Ten,4,0.605,0.595,-0.01,0.789,0.78,-0.009,0.587,0.564,-0.022
+Jalen Jones,WR,Texas Tech,Big 12,4,0.564,0.59,0.027,,,,0.564,0.599,0.036
+Brett Norfleet,TE,Missouri,SEC,3,0.564,0.589,0.025,,,,0.564,0.544,-0.02
+Derek Zammit,QB,Washington,Big Ten,1,0.525,0.586,0.061,0.525,0.541,0.016,,,
+Katin Houser,QB,Illinois,Big Ten,4,0.537,0.585,0.048,0.91,0.948,0.038,0.497,0.547,0.05
+Justus Ross-Simmons,WR,Syracuse,ACC,2,0.563,0.585,0.022,,,,0.563,0.629,0.066
+Nick Townsend,TE,Texas,SEC,1,0.628,0.58,-0.048,,,,0.628,0.535,-0.093
+Braxton Jennings,RB,Louisville,ACC,2,0.569,0.574,0.006,0.569,0.612,0.044,,,
+Kevin Jennings,QB,SMU,ACC,4,0.623,0.573,-0.051,0.051,0.054,0.003,0.767,0.687,-0.081
+Keyjuan Brown,RB,Louisville,ACC,4,0.558,0.567,0.009,0.595,0.613,0.019,-0.062,-0.048,0.015
+Jacquon Gibson,WR,Virginia,ACC,4,0.572,0.565,-0.007,,,,0.572,0.549,-0.024
+Samuel Singleton,RB,Florida State,ACC,3,0.505,0.563,0.058,-0.063,-0.032,0.031,1.863,1.917,0.054
+Amante Martin,RB,TCU,Big 12,1,0.432,0.55,0.118,0.432,0.523,0.091,,,
+Aaron Philo,QB,Florida,SEC,4,0.567,0.549,-0.018,0.74,0.76,0.019,0.531,0.487,-0.044
+Horatio Fields,WR,Ole Miss,SEC,4,0.504,0.544,0.041,,,,0.504,0.516,0.012
+Keelon Russell,QB,Alabama,SEC,4,0.544,0.54,-0.005,1.326,1.32,-0.006,0.454,0.441,-0.013
+Will Wilson,QB,NC State,ACC,4,0.505,0.538,0.033,0.624,0.632,0.008,-1.133,-1.065,0.068
+Micahi Danzy,WR,Florida State,ACC,4,0.504,0.536,0.032,0.672,0.64,-0.032,0.463,0.495,0.031
+Tristen Brown,WR,Vanderbilt,SEC,4,0.512,0.536,0.024,,,,0.512,0.496,-0.016
+Ryan Browne,QB,Purdue,Big Ten,4,0.475,0.532,0.057,0.736,0.791,0.054,0.443,0.472,0.029
+Jordan Allen,WR,Georgia Tech,ACC,4,0.507,0.53,0.023,-3.94,-3.998,-0.058,0.767,0.772,0.005
+Antonio Harris,RB,Purdue,Big Ten,2,0.391,0.53,0.139,-3.695,-3.589,0.106,4.477,4.594,0.117
+Lincoln Kienholz,QB,Louisville,ACC,4,0.52,0.529,0.009,0.48,0.499,0.019,0.557,0.552,-0.006
+Dylan Lonergan,QB,Rutgers,Big Ten,3,0.537,0.528,-0.009,-0.355,-0.328,0.028,0.665,0.608,-0.057
+Jake Johnson,TE,Auburn,SEC,3,0.439,0.524,0.085,,,,0.439,0.49,0.051
+Jonathan Bibbs,WR,UCF,Big 12,3,0.486,0.522,0.036,,,,0.486,0.586,0.1
+Phillip Bell,WR,Ohio State,Big Ten,4,0.527,0.518,-0.009,,,,0.527,0.519,-0.008
+Gatlin Bair,WR,Oregon,Big Ten,1,0.621,0.516,-0.105,,,,0.621,0.509,-0.112
+Tyler Claiborne,WR,Iowa State,Big 12,3,0.47,0.515,0.045,,,,0.47,0.504,0.035
+Abu Sama III,RB,Wisconsin,Big Ten,3,0.404,0.514,0.11,0.405,0.45,0.045,0.492,0.579,0.087
+Jaden Bray,WR,West Virginia,Big 12,4,0.489,0.513,0.024,-0.016,-0.03,-0.014,0.658,0.682,0.024
+Keshaun Singleton,WR,Auburn,SEC,4,0.448,0.511,0.063,,,,0.448,0.486,0.038
+Zeke Moore,TE,Boston College,ACC,4,0.535,0.51,-0.025,,,,0.535,0.523,-0.012
+Caden Piening,TE,UCF,Big 12,4,0.455,0.507,0.052,,,,0.455,0.531,0.077
+Jadan Baugh,RB,Florida,SEC,4,0.524,0.507,-0.018,0.524,0.543,0.019,0.336,0.303,-0.033
+Donovan Faupel,WR,Arkansas,SEC,4,0.414,0.506,0.092,,,,0.414,0.453,0.04
+Kamario Taylor,QB,Mississippi State,SEC,4,0.499,0.506,0.007,0.736,0.735,-0.001,0.524,0.508,-0.017
+Chrishon Mccray,WR,Michigan State,Big Ten,4,0.441,0.504,0.063,-0.287,-0.242,0.045,0.556,0.598,0.041
+Ismael Cisse,WR,Arkansas,SEC,3,0.422,0.504,0.082,-1.232,-1.145,0.087,0.531,0.569,0.038
+Dorian Thomas,TE,California,ACC,1,0.394,0.504,0.11,,,,0.394,0.559,0.165
+Mario Craver,WR,Texas A&M,SEC,4,0.454,0.502,0.048,0.785,0.863,0.078,0.441,0.493,0.052
+Beau Pribula,QB,Virginia,ACC,4,0.509,0.501,-0.007,0.241,0.246,0.005,0.613,0.589,-0.024
+Ricky Johnson,WR,Utah,Big 12,4,0.501,0.497,-0.005,,,,0.501,0.514,0.013
+Drew Mestemaker,QB,Oklahoma State,Big 12,4,0.496,0.497,0.001,-0.216,-0.21,0.006,0.556,0.549,-0.007
+Luca Puccinelli,TE,Purdue,Big Ten,1,0.447,0.497,0.05,,,,0.447,0.475,0.028
+Davion Gause,RB,NC State,ACC,3,0.469,0.494,0.025,0.266,0.272,0.006,0.985,1.023,0.038
+Ryelan Morris,RB,Baylor,Big 12,2,0.413,0.492,0.079,0.65,0.727,0.077,-0.434,-0.422,0.012
+CJ Bailey,QB,NC State,ACC,4,0.457,0.49,0.033,0.291,0.299,0.008,0.552,0.589,0.036
+Re'Shaun Sanford II,RB,Houston,Big 12,4,0.466,0.49,0.024,0.21,0.203,-0.006,1.883,1.937,0.054
+Austin Simmons,QB,Missouri,SEC,4,0.464,0.49,0.027,-0.53,-0.494,0.036,0.566,0.563,-0.003
+Craig Dandridge,WR,Georgia,SEC,4,0.484,0.489,0.005,,,,0.484,0.51,0.026
+Zion Ragins,WR,Mississippi State,SEC,4,0.481,0.488,0.007,,,,0.481,0.464,-0.017
+Kevin Roche Jr.,TE,Georgia Tech,ACC,4,0.464,0.487,0.023,,,,0.464,0.469,0.005
+Devon Dampier,QB,Utah,Big 12,4,0.49,0.485,-0.005,0.246,0.223,-0.023,0.545,0.558,0.013
+Chas Nimrod,WR,Auburn,SEC,4,0.422,0.485,0.063,,,,0.422,0.46,0.038
+Rocco Becht,QB,Penn State,Big Ten,4,0.528,0.483,-0.045,-0.528,-0.544,-0.015,0.562,0.522,-0.04
+Marquis Johnson,WR,Mississippi State,SEC,4,0.474,0.481,0.007,,,,0.474,0.457,-0.017
+Dante Moore,QB,Oregon,Big Ten,4,0.465,0.477,0.011,-0.117,-0.079,0.037,0.472,0.459,-0.014
+Jared Richardson,WR,Duke,ACC,3,0.563,0.476,-0.087,,,,0.563,0.495,-0.069
+Anthony Woods,RB,UCLA,Big Ten,4,0.497,0.474,-0.023,0.567,0.551,-0.016,-0.088,-0.098,-0.01
+Atticus Joseph,WR,Stanford,ACC,4,0.469,0.472,0.003,,,,0.469,0.484,0.014
+Avery Johnson,QB,Kansas State,Big 12,4,0.506,0.472,-0.034,0.612,0.587,-0.024,0.454,0.415,-0.04
+Quentin Gibson,WR,Colorado,Big 12,3,0.457,0.467,0.009,0.258,0.188,-0.069,0.547,0.55,0.003
+Demon June,RB,North Carolina,ACC,3,0.437,0.465,0.028,0.457,0.463,0.006,-0.55,-0.541,0.009
+Mason Heintschel,QB,Pittsburgh,ACC,4,0.428,0.461,0.032,0.516,0.539,0.023,0.389,0.41,0.022
+Giovanni Lopez,QB,Wake Forest,ACC,4,0.492,0.46,-0.032,0.516,0.509,-0.007,0.48,0.432,-0.049
+Jaron Tibbs,WR,Kansas State,Big 12,4,0.495,0.46,-0.034,,,,0.495,0.455,-0.04
+Noah Fifita,QB,Arizona,Big 12,4,0.437,0.459,0.022,0.146,0.141,-0.005,0.455,0.478,0.023
+Trent Walker,WR,Houston,Big 12,3,0.41,0.459,0.05,,,,0.41,0.444,0.035
+Trinidad Chambliss,QB,Ole Miss,SEC,4,0.418,0.459,0.041,0.16,0.18,0.02,0.446,0.458,0.012
+Jason Patterson,RB,Kentucky,SEC,4,0.462,0.457,-0.006,0.511,0.509,-0.002,-0.334,-0.342,-0.008
+Jayden Savoury,TE,Michigan State,Big Ten,4,0.393,0.456,0.063,,,,0.393,0.434,0.041
+Noah Jennings,WR,Minnesota,Big Ten,4,0.461,0.453,-0.009,,,,0.461,0.433,-0.029
+Gavin Freeman,WR,Baylor,Big 12,4,0.405,0.452,0.047,,,,0.405,0.411,0.005
+Kaleb Webb,WR,Maryland,Big Ten,4,0.414,0.452,0.038,,,,0.414,0.436,0.023
+Landon Roldan,WR,Georgia,SEC,2,0.497,0.452,-0.046,0.506,0.439,-0.067,0.242,0.235,-0.007
+Jadon Porter,WR,Baylor,Big 12,2,0.383,0.451,0.068,,,,0.383,0.358,-0.025
+Hank Brown,QB,Iowa,Big Ten,4,0.439,0.447,0.009,0.431,0.455,0.023,0.42,0.44,0.02
+Liam Thorpe,WR,Stanford,ACC,1,0.523,0.443,-0.08,,,,0.523,0.553,0.03
+Jaylen McGill,RB,North Carolina,ACC,3,0.414,0.442,0.028,0.471,0.477,0.006,-0.145,-0.103,0.042
+Mikkel Skinner,TE,Kentucky,SEC,3,0.486,0.442,-0.044,0.119,0.191,0.072,0.437,0.404,-0.034
+Matt Adcock,TE,Arkansas,SEC,2,0.34,0.437,0.098,,,,0.34,0.357,0.018
+Sam Leavitt,QB,LSU,SEC,4,0.405,0.436,0.031,0.508,0.509,0.001,0.425,0.447,0.022
+JC French,QB,Cincinnati,Big 12,4,0.421,0.436,0.015,0.335,0.315,-0.019,0.429,0.447,0.018
+Jeremiah Hasley,TE,Duke,ACC,4,0.526,0.436,-0.09,,,,0.526,0.453,-0.073
+Nate Bennett,QB,Baylor,Big 12,2,0.406,0.431,0.025,2.189,2.173,-0.017,0.302,0.338,0.036
+Ethan Grunkemeyer,QB,Virginia Tech,ACC,4,0.415,0.43,0.015,0.678,0.704,0.026,0.391,0.372,-0.019
+Landon Ellis,WR,UCLA,Big Ten,3,0.464,0.43,-0.034,,,,0.464,0.454,-0.01
+Joshua Derry,WR,UCF,Big 12,4,0.375,0.428,0.052,,,,0.375,0.452,0.077
+Hunter Andrews,TE,Utah,Big 12,3,0.42,0.427,0.007,0.605,0.582,-0.023,0.311,0.331,0.02
+Wayshawn Parker,RB,Utah,Big 12,4,0.43,0.425,-0.005,0.269,0.246,-0.023,0.945,0.958,0.013
+Hudson Clement,WR,Illinois,Big Ten,4,0.377,0.425,0.048,,,,0.377,0.427,0.05
+Treyshun Hurry,WR,Louisville,ACC,4,0.415,0.424,0.009,,,,0.415,0.41,-0.006
+Dorian Fleming,TE,Maryland,Big Ten,4,0.385,0.423,0.038,,,,0.385,0.408,0.023
+Jacob Harris,TE,Wisconsin,Big Ten,4,0.346,0.418,0.073,,,,0.346,0.41,0.065
+Addison Ostrenga,TE,Iowa,Big Ten,4,0.408,0.417,0.009,,,,0.408,0.428,0.02
+Aiden Flora,RB,Iowa State,Big 12,4,0.367,0.416,0.05,0.372,0.395,0.024,0.017,0.052,0.035
+Duke Watson,RB,UCF,Big 12,4,0.358,0.411,0.052,0.402,0.413,0.011,-0.795,-0.745,0.05
+Shahn Alston,RB,USC,Big Ten,2,0.317,0.41,0.093,0.317,0.382,0.066,,,
+Kyler Kasper,WR,BYU,Big 12,3,0.444,0.408,-0.035,,,,0.444,0.417,-0.027
+Peyton Lewis,RB,Virginia,ACC,2,0.393,0.405,0.011,0.393,0.375,-0.019,,,
+Joe Pitchford,RB,TCU,Big 12,2,0.455,0.405,-0.05,0.468,0.46,-0.009,-0.218,-0.316,-0.098
+Nate Sheppard,RB,Duke,ACC,4,0.492,0.403,-0.09,0.434,0.37,-0.064,1.071,0.999,-0.073
+Fluff Bothwell,RB,Mississippi State,SEC,4,0.396,0.403,0.007,0.313,0.312,-0.001,1.122,1.105,-0.017
+Carson Sneed,TE,North Carolina,ACC,1,0.527,0.399,-0.128,,,,0.527,0.446,-0.081
+Tyler Morris,WR,Indiana,Big Ten,4,0.438,0.398,-0.041,,,,0.438,0.396,-0.042
+Kamari Moulton,RB,Iowa,Big Ten,3,0.371,0.397,0.027,0.371,0.394,0.023,-0.207,-0.159,0.049
+Trell Harris,WR,Oklahoma,SEC,2,0.42,0.397,-0.023,,,,0.42,0.386,-0.034
+Dezmen Roebuck,WR,Washington,Big Ten,4,0.373,0.397,0.023,,,,0.373,0.396,0.023
+Hawkins Polley,TE,Baylor,Big 12,4,0.348,0.395,0.047,,,,0.348,0.354,0.005
+J'Koby Williams,RB,Texas Tech,Big 12,4,0.363,0.389,0.027,0.32,0.315,-0.005,0.602,0.638,0.036
+Faizon Brandon,QB,Tennessee,SEC,4,0.341,0.387,0.046,0.769,0.803,0.034,0.215,0.236,0.021
+Ashton Daniels,QB,Florida State,ACC,4,0.354,0.386,0.032,0.519,0.532,0.012,0.435,0.466,0.031
+DJ Vonnahme,TE,Iowa,Big Ten,3,0.359,0.386,0.027,-0.095,-0.07,0.025,0.387,0.405,0.018
+Keaton Kubecka,WR,Kansas,Big 12,3,0.354,0.385,0.03,,,,0.354,0.365,0.011
+Jared Curtis,QB,Vanderbilt,SEC,4,0.36,0.384,0.024,0.866,0.894,0.028,0.281,0.265,-0.016
+John Neider,WR,West Virginia,Big 12,4,0.36,0.384,0.024,,,,0.36,0.349,-0.011
+Antonio Meeks,WR,Wake Forest,ACC,3,0.423,0.383,-0.04,,,,0.423,0.383,-0.04
+Fredrick Moore,WR,Michigan State,Big Ten,4,0.318,0.381,0.063,,,,0.318,0.359,0.041
+Alberto Mendoza,QB,Georgia Tech,ACC,4,0.357,0.381,0.023,0.379,0.347,-0.032,0.373,0.378,0.005
+Isaiah Horton,WR,Texas A&M,SEC,4,0.331,0.379,0.048,-1.421,-1.435,-0.014,0.384,0.436,0.052
+Kenneth Williams,RB,Michigan State,Big Ten,2,0.32,0.379,0.059,1.016,0.999,-0.017,-0.376,-0.264,0.112
+Jordan Shipp,WR,North Carolina,ACC,2,0.391,0.378,-0.013,,,,0.391,0.355,-0.036
+Omari Hayes,WR,Iowa State,Big 12,4,0.326,0.376,0.05,0.448,0.471,0.023,0.221,0.264,0.043
+Devin Mccuin,WR,Ohio State,Big Ten,4,0.383,0.374,-0.009,,,,0.383,0.375,-0.008
+Kolin Wilson,RB,Mississippi State,SEC,4,0.367,0.374,0.007,0.315,0.314,-0.001,0.743,0.722,-0.021
+John Mateer,QB,Oklahoma,SEC,4,0.321,0.371,0.05,-0.119,-0.061,0.058,0.459,0.464,0.004
+Matthew Fuller,RB,South Carolina,SEC,4,0.335,0.368,0.034,0.25,0.255,0.005,0.627,0.686,0.059
+Isaiah Marshall,QB,Kansas,Big 12,3,0.334,0.365,0.03,0.125,0.144,0.02,0.415,0.426,0.011
+Brayden Trimble,WR,Illinois,Big Ten,4,0.316,0.364,0.048,,,,0.316,0.366,0.05
+Jojo Phillips,WR,BYU,Big 12,3,0.398,0.363,-0.035,,,,0.398,0.371,-0.027
+Adam Mohammed,RB,California,ACC,4,0.305,0.363,0.058,0.159,0.153,-0.005,1.13,1.226,0.096
+Braylon Staley,WR,Tennessee,SEC,4,0.316,0.361,0.046,,,,0.316,0.337,0.021
+Cutter Boley,QB,Arizona State,Big 12,3,0.374,0.361,-0.014,-0.052,-0.014,0.037,0.381,0.318,-0.064
+Javian Mallory,RB,Miami,ACC,2,0.349,0.361,0.012,0.347,0.353,0.006,0.72,0.754,0.034
+Andrew Olesh,TE,Oregon,Big Ten,2,0.358,0.36,0.002,,,,0.358,0.367,0.009
+Walker Lyons,TE,BYU,Big 12,3,0.393,0.357,-0.035,,,,0.393,0.366,-0.027
+Caleb Cunningham,WR,Ole Miss,SEC,2,0.333,0.353,0.02,,,,0.333,0.333,-0.0
+Ian Strong,WR,California,ACC,4,0.294,0.352,0.058,,,,0.294,0.39,0.096
+DeSean Bishop,RB,Tennessee,SEC,4,0.304,0.35,0.046,0.261,0.295,0.034,0.977,0.965,-0.012
+Drake Lindsey,QB,Minnesota,Big Ten,4,0.358,0.349,-0.009,0.744,0.742,-0.003,0.381,0.352,-0.029
+LJ Martin,RB,BYU,Big 12,3,0.385,0.349,-0.035,0.395,0.337,-0.058,0.38,0.353,-0.027
+Aaron Gregory,WR,Texas A&M,SEC,3,0.301,0.349,0.047,,,,0.301,0.358,0.057
+Dasaahn Brame,TE,Tennessee,SEC,2,0.308,0.347,0.039,,,,0.308,0.317,0.009
+Ansu Sanoe,RB,Washington,Big Ten,2,0.328,0.346,0.018,0.328,0.326,-0.002,,,
+Demond Williams Jr.,QB,Washington,Big Ten,4,0.32,0.343,0.023,0.584,0.572,-0.012,0.302,0.325,0.023
+Dierre Hill Jr.,RB,Oregon,Big Ten,4,0.331,0.342,0.011,0.38,0.379,-0.001,0.366,0.353,-0.014
+Will Hammond,QB,Texas Tech,Big 12,4,0.312,0.339,0.027,1.053,1.06,0.008,0.371,0.407,0.036
+Daylan Smothers,RB,Texas,SEC,3,0.312,0.339,0.027,0.177,0.171,-0.006,0.758,0.791,0.034
+Bryce Underwood,QB,Michigan,Big Ten,4,0.287,0.333,0.046,-0.023,0.011,0.034,0.416,0.423,0.007
+Lanorris Sellers,QB,South Carolina,SEC,4,0.299,0.332,0.034,1.025,1.029,0.005,0.153,0.198,0.045
+Davis Warren,QB,Stanford,ACC,4,0.327,0.33,0.003,-0.216,-0.227,-0.011,0.354,0.369,0.014
+CJ Baxter Jr.,RB,Kentucky,SEC,4,0.336,0.33,-0.006,0.306,0.304,-0.002,0.795,0.787,-0.008
+Walker Eget,QB,Duke,ACC,4,0.416,0.327,-0.09,-0.981,-1.016,-0.035,0.477,0.404,-0.073
+Andrew Marsh,WR,Michigan,Big Ten,4,0.28,0.327,0.046,2.75,2.825,0.075,0.164,0.171,0.007
+Larenzo Fenner,WR,Cincinnati,Big 12,4,0.309,0.325,0.015,,,,0.309,0.328,0.018
+Colton Joseph,QB,Wisconsin,Big Ten,4,0.253,0.325,0.073,0.455,0.484,0.03,0.292,0.357,0.065
+Chris Hunter,WR,Arizona,Big 12,4,0.302,0.324,0.022,0.047,0.068,0.021,0.303,0.327,0.023
+Kai Rios,TE,Michigan State,Big Ten,3,0.255,0.324,0.068,,,,0.255,0.318,0.062
+Mazeo Bennett,WR,South Carolina,SEC,4,0.288,0.322,0.034,-0.296,-0.257,0.039,0.339,0.385,0.045
+London Humphreys,WR,Georgia,SEC,2,0.266,0.322,0.056,,,,0.266,0.326,0.06
+King Miller,RB,USC,Big Ten,5,0.262,0.321,0.058,0.26,0.284,0.024,0.375,0.454,0.079
+Carson Kolb,TE,Oklahoma State,Big 12,4,0.32,0.321,0.001,,,,0.32,0.313,-0.007
+Marquise Davis,RB,Louisville,ACC,2,0.314,0.32,0.006,0.314,0.358,0.044,,,
+Rico Scott,WR,Alabama,SEC,4,0.322,0.318,-0.005,,,,0.322,0.309,-0.013
+T.J. Moore,WR,Clemson,ACC,4,0.266,0.317,0.052,,,,0.266,0.325,0.059
+Jalen Smith,WR,Minnesota,Big Ten,4,0.326,0.317,-0.009,,,,0.326,0.297,-0.029
+Jaylen Raynor,QB,Iowa State,Big 12,4,0.267,0.317,0.05,0.591,0.615,0.024,0.24,0.284,0.043
+Semaj Morgan,WR,UCLA,Big Ten,4,0.339,0.316,-0.023,,,,0.339,0.316,-0.022
+Caleb Rollerson,WR,UCF,Big 12,3,0.252,0.312,0.06,,,,0.252,0.326,0.075
+Dan Mahan,QB,Duke,ACC,4,0.397,0.308,-0.09,0.478,0.41,-0.068,0.311,0.255,-0.056
+Hayden Eligon Ii,WR,Northwestern,Big Ten,1,0.229,0.308,0.079,,,,0.229,0.243,0.014
+Antwan Raymond,RB,Rutgers,Big Ten,4,0.3,0.307,0.007,0.263,0.289,0.026,0.734,0.717,-0.017
+Shavane Anderson Jr.,RB,Syracuse,ACC,3,0.32,0.305,-0.014,0.26,0.215,-0.045,0.833,0.891,0.058
+Mark Fletcher Jr.,RB,Miami,ACC,3,0.343,0.303,-0.041,0.42,0.405,-0.016,-0.283,-0.326,-0.043
+Tyrell Henry,WR,Wisconsin,Big Ten,4,0.23,0.303,0.073,-0.597,-0.538,0.059,0.261,0.325,0.065
+Noah Vaughn,RB,Virginia,ACC,4,0.309,0.302,-0.007,0.348,0.354,0.005,-0.192,-0.191,0.001
+Antonio Jordan,WR,Arkansas,SEC,4,0.21,0.302,0.092,,,,0.21,0.249,0.04
+Ernest Campbell,WR,Colorado,Big 12,2,0.305,0.302,-0.003,,,,0.305,0.308,0.003
+Jelani Thurman,TE,North Carolina,ACC,3,0.272,0.3,0.028,,,,0.272,0.303,0.031
+Chase Hendricks,WR,California,ACC,4,0.242,0.3,0.058,-0.903,-0.931,-0.028,0.272,0.367,0.096
+Byrum Brown,QB,Auburn,SEC,4,0.236,0.299,0.063,0.551,0.576,0.025,0.151,0.189,0.038
+Jasen Lopez,WR,Florida State,ACC,1,0.345,0.299,-0.046,,,,0.345,0.309,-0.036
+Benjamin Brahmer,TE,Penn State,Big Ten,4,0.343,0.298,-0.045,,,,0.319,0.278,-0.04
+Dominic Overby,WR,Iowa State,Big 12,3,0.254,0.295,0.042,,,,0.254,0.316,0.062
+Preston Howard,TE,Maryland,Big Ten,3,0.284,0.295,0.011,,,,0.284,0.275,-0.009
+Kiotti Armstrong,TE,Texas A&M,SEC,1,0.235,0.295,0.06,,,,0.235,0.328,0.093
+Travis Johnson,WR,Michigan,Big Ten,1,0.392,0.295,-0.097,,,,0.392,0.263,-0.129
+Brock Coffman,WR,Kentucky,SEC,1,0.376,0.295,-0.081,,,,0.376,0.367,-0.009
+Ousmane Kromah,RB,Florida State,ACC,4,0.26,0.292,0.032,0.293,0.305,0.012,0.188,0.206,0.017
+Eugene Hilton Jr.,WR,Wisconsin,Big Ten,4,0.22,0.292,0.073,-0.672,-0.689,-0.017,0.268,0.333,0.065
+Drew Wagner,WR,Northwestern,Big Ten,3,0.207,0.29,0.083,0.563,0.687,0.124,0.179,0.185,0.006
+Darrion Dupree,RB,Wisconsin,Big Ten,4,0.216,0.289,0.073,0.195,0.224,0.03,0.558,0.61,0.052
+Arch Manning,QB,Texas,SEC,4,0.239,0.289,0.05,0.367,0.361,-0.006,0.253,0.314,0.061
+Jaden Craig,QB,TCU,Big 12,4,0.265,0.287,0.023,-0.585,-0.567,0.018,0.371,0.372,0.001
+Davion Dozier,WR,NC State,ACC,3,0.245,0.284,0.038,,,,0.245,0.271,0.026
+Ja'Kobi Jackson,RB,Ohio State,Big Ten,4,0.291,0.282,-0.009,0.31,0.301,-0.008,-0.821,-0.713,0.108
+Daune Morris,RB,Tennessee,SEC,4,0.236,0.281,0.046,0.273,0.307,0.034,-0.272,-0.244,0.028
+Savion Hiter,RB,Michigan,Big Ten,4,0.233,0.279,0.046,0.047,0.08,0.034,1.002,1.054,0.052
+Jaziun Patterson,RB,Michigan State,Big Ten,3,0.244,0.276,0.031,0.244,0.268,0.024,0.094,0.196,0.102
+Xavier Williams,RB,Iowa,Big Ten,4,0.266,0.275,0.009,0.209,0.209,-0.0,1.268,1.26,-0.009
+Quanell Farrakhan Jr.,WR,Colorado,Big 12,2,0.212,0.275,0.063,,,,0.212,0.271,0.059
+Jordon Davison,RB,Oregon,Big Ten,4,0.261,0.272,0.011,0.312,0.311,-0.001,-0.28,-0.294,-0.014
+KJ Jackson,QB,Arkansas,SEC,4,0.179,0.272,0.092,0.345,0.446,0.101,0.229,0.269,0.04
+Tyshawn Russell,WR,Syracuse,ACC,2,0.317,0.27,-0.047,,,,0.317,0.353,0.036
+Turbo Richard,RB,Indiana,Big Ten,4,0.31,0.27,-0.041,0.271,0.255,-0.015,1.756,1.641,-0.115
+Jaivian Thomas,RB,UCLA,Big Ten,4,0.293,0.27,-0.023,0.266,0.25,-0.016,0.756,0.687,-0.069
+Brian Rowe Jr.,WR,UCLA,Big Ten,4,0.293,0.27,-0.023,1.519,1.441,-0.078,0.247,0.224,-0.022
+Taimane Purcell,TE,California,ACC,3,0.228,0.269,0.041,,,,0.228,0.301,0.073
+Giyahni Kontosis,WR,Cincinnati,Big 12,4,0.25,0.266,0.015,,,,0.25,0.269,0.018
+Daniel Bray,RB,Utah,Big 12,4,0.268,0.263,-0.005,0.185,0.162,-0.023,0.304,0.341,0.037
+Cameron Dickey,RB,Texas Tech,Big 12,4,0.236,0.263,0.027,0.266,0.261,-0.005,0.024,0.06,0.036
+Benjamin Hall,RB,North Carolina,ACC,3,0.233,0.261,0.028,0.158,0.164,0.006,0.574,0.605,0.031
+Landen Chambers,RB,UCF,Big 12,4,0.208,0.26,0.052,0.29,0.292,0.002,-0.423,-0.316,0.108
+Nyck Harbor,WR,South Carolina,SEC,4,0.224,0.258,0.034,,,,0.224,0.269,0.045
+Kaden Helms,TE,Minnesota,Big Ten,1,0.175,0.257,0.082,,,,0.175,0.265,0.09
+Xavier Brown,RB,Virginia,ACC,4,0.262,0.255,-0.007,0.185,0.191,0.005,0.593,0.579,-0.014
+Johntay Cook II,WR,Ole Miss,SEC,4,0.214,0.255,0.041,-0.754,-0.758,-0.004,0.38,0.392,0.012
+Morgan McPhaul,TE,Oklahoma State,Big 12,1,0.147,0.255,0.108,,,,0.147,0.283,0.136
+Quincy Craig,RB,Arizona,Big 12,4,0.232,0.254,0.022,0.24,0.238,-0.002,0.191,0.214,0.023
+DeShawn Spencer,WR,Auburn,SEC,3,0.198,0.252,0.054,,,,0.198,0.231,0.033
+Jovantae Barnes,RB,Kentucky,SEC,2,0.234,0.249,0.014,0.156,0.147,-0.009,-0.062,0.008,0.07
+Jalen Hoffman,TE,Michigan,Big Ten,3,0.153,0.247,0.094,,,,0.153,0.205,0.052
+Gi'Bran Payne,RB,Cincinnati,Big 12,4,0.231,0.246,0.015,0.282,0.263,-0.019,-0.209,-0.182,0.027
+Hunter Barnes,RB,Tennessee,SEC,1,0.277,0.245,-0.032,0.277,0.284,0.007,,,
+Jordan Onovughe,WR,Stanford,ACC,4,0.241,0.244,0.003,,,,0.241,0.255,0.014
+Fame Ijeboi,RB,Purdue,Big Ten,4,0.187,0.244,0.057,0.191,0.245,0.054,0.242,0.241,-0.001
+Matt Ludwig,TE,Texas Tech,Big 12,2,0.195,0.242,0.047,,,,0.195,0.278,0.083
+Lotzeir Brooks,WR,Alabama,SEC,4,0.245,0.241,-0.005,-0.591,-0.607,-0.017,0.755,0.713,-0.042
+Billy Edwards,QB,North Carolina,ACC,3,0.206,0.234,0.028,0.139,0.145,0.006,0.212,0.243,0.031
+Joe Jackson,RB,Kansas State,Big 12,4,0.269,0.234,-0.034,0.017,-0.007,-0.024,1.032,0.997,-0.035
+AJ Szymanski,TE,Maryland,Big Ten,1,0.263,0.23,-0.033,,,,0.263,0.186,-0.077
+Girard Pringle Jr.,RB,Miami,ACC,3,0.239,0.23,-0.009,0.206,0.2,-0.006,0.569,0.565,-0.003
+Gio Richardson,WR,Arizona,Big 12,2,0.188,0.229,0.041,-1.411,-1.424,-0.013,0.379,0.422,0.043
+Hunter Provience,TE,NC State,ACC,3,0.173,0.229,0.056,,,,0.173,0.231,0.058
+Sam West,TE,Mississippi State,SEC,3,0.228,0.229,0.001,,,,0.228,0.207,-0.021
+Kendrick Raphael,RB,SMU,ACC,4,0.279,0.228,-0.051,0.162,0.165,0.003,0.486,0.405,-0.081
+Trech Kekahuna,WR,North Carolina,ACC,3,0.198,0.226,0.028,-2.723,-2.576,0.147,0.644,0.675,0.031
+Kenny Minchey,QB,Kentucky,SEC,4,0.232,0.226,-0.006,-1.15,-1.152,-0.002,0.329,0.321,-0.008
+Grant Stec,TE,Wisconsin,Big Ten,2,0.094,0.219,0.126,,,,0.094,0.216,0.123
+Makhi Hughes,RB,Houston,Big 12,4,0.194,0.218,0.024,0.194,0.188,-0.006,0.203,0.238,0.035
+Amari Odom,QB,Syracuse,ACC,1,0.167,0.218,0.051,-0.315,-0.277,0.038,0.235,0.293,0.058
+Daniel Hill,RB,Alabama,SEC,4,0.222,0.217,-0.005,0.199,0.193,-0.006,0.459,0.417,-0.042
+Tony Diaz,WR,Iowa,Big Ten,4,0.208,0.216,0.009,0.465,0.393,-0.072,0.218,0.238,0.02
+Major Everhart,WR,TCU,Big 12,3,0.179,0.215,0.036,0.179,0.194,0.014,,,
+Dawson Pendergrass,RB,Baylor,Big 12,4,0.166,0.213,0.047,0.068,0.101,0.033,0.432,0.437,0.005
+Bryant Wesco Jr.,WR,Clemson,ACC,4,0.16,0.212,0.052,,,,0.16,0.219,0.059
+Sedrick Irvin,RB,Stanford,ACC,4,0.208,0.21,0.003,0.209,0.209,0.0,0.083,0.073,-0.01
+Brandon White,WR,Kansas State,Big 12,4,0.244,0.21,-0.034,0.529,0.504,-0.024,0.188,0.149,-0.04
+Gavin Sawchuk,RB,Northwestern,Big Ten,3,0.127,0.21,0.083,0.127,0.211,0.084,,,
+Benjamin Blackburn,TE,Stanford,ACC,4,0.206,0.209,0.003,,,,0.206,0.22,0.014
+Brett Eskildsen,WR,Penn State,Big Ten,4,0.254,0.209,-0.045,,,,0.254,0.214,-0.04
+Ryan Manning,WR,Maryland,Big Ten,2,0.174,0.207,0.033,,,,0.174,0.199,0.025
+Braeden Jackson,RB,Iowa,Big Ten,2,0.205,0.207,0.002,-0.034,-0.05,-0.016,2.603,2.63,0.027
+Malik Elzy,WR,LSU,SEC,1,0.258,0.206,-0.052,,,,0.258,0.215,-0.043
+Malae Fonoti,RB,Missouri,SEC,1,0.279,0.204,-0.075,0.279,0.304,0.025,,,
+Luke Hasz,TE,Ole Miss,SEC,4,0.163,0.204,0.041,,,,0.163,0.175,0.012
+Jaron-Keawe Sagapolutele,QB,California,ACC,4,0.146,0.204,0.058,-1.25,-1.239,0.011,0.225,0.321,0.096
+Brady Hunt,TE,South Carolina,SEC,4,0.169,0.202,0.034,-4.161,-4.08,0.081,0.388,0.433,0.045
+Zach Ortwerth,TE,Iowa,Big Ten,2,0.189,0.201,0.013,,,,0.189,0.197,0.008
+Justice Haynes,RB,Georgia Tech,ACC,4,0.177,0.2,0.023,0.153,0.163,0.01,0.18,0.186,0.005
+Camryn Edwards,RB,Michigan State,Big Ten,4,0.136,0.199,0.063,0.032,0.076,0.045,0.38,0.421,0.041
+Jordan Marshall,RB,Michigan,Big Ten,4,0.151,0.197,0.046,0.107,0.14,0.034,1.053,1.012,-0.041
+Carson Bruhn,TE,Kansas,Big 12,2,0.176,0.196,0.02,,,,0.176,0.173,-0.002
+Carson Tabaracci,TE,USC,Big Ten,3,0.097,0.195,0.098,,,,0.097,0.161,0.064
+Jeremiah Cobb,RB,Auburn,SEC,4,0.131,0.194,0.063,0.149,0.174,0.025,0.231,0.269,0.038
+Nico Brown,WR,Stanford,ACC,2,0.186,0.193,0.007,,,,0.186,0.157,-0.029
+Yasin Willis,RB,Kansas,Big 12,3,0.161,0.192,0.03,0.141,0.161,0.02,-0.104,-0.041,0.062
+Malik Washington,QB,Maryland,Big Ten,4,0.154,0.192,0.038,-0.464,-0.425,0.039,0.164,0.187,0.023
+Jayden Scott,RB,NC State,ACC,4,0.157,0.189,0.033,0.18,0.188,0.008,-0.331,-0.259,0.072
+Derrick Salley Jr.,WR,Kansas State,Big 12,1,0.249,0.188,-0.061,-4.48,-4.542,-0.062,0.679,0.629,-0.05
+Willie Rodriguez,TE,Kentucky,SEC,4,0.191,0.185,-0.006,,,,0.177,0.169,-0.008
+Jeremy Hecklinski,QB,Iowa,Big Ten,2,0.22,0.184,-0.035,,,,0.22,0.211,-0.009
+Que'Sean Brown,WR,Virginia Tech,ACC,4,0.168,0.183,0.015,,,,0.168,0.149,-0.019
+Jekail Middlebrook,RB,Virginia,ACC,4,0.188,0.181,-0.007,0.168,0.173,0.005,0.473,0.456,-0.017
+Kyson Brown,RB,Arizona State,Big 12,3,0.194,0.18,-0.014,0.194,0.231,0.037,0.164,0.1,-0.064
+Kewan Lacy,RB,Ole Miss,SEC,3,0.147,0.18,0.033,0.334,0.359,0.025,-0.55,-0.542,0.008
+Noah Bennee,TE,Utah,Big 12,3,0.147,0.173,0.026,,,,0.147,0.184,0.037
+Donte Lee Jr,WR,Texas Tech,Big 12,2,0.113,0.17,0.057,,,,0.113,0.135,0.022
+Tate Nagy,WR,Kansas,Big 12,2,0.076,0.169,0.093,-0.257,-0.186,0.071,0.117,0.179,0.062
+Nathan Mcneil,RB,Iowa,Big Ten,3,0.173,0.168,-0.005,0.207,0.194,-0.014,0.839,0.866,0.027
+Alonza Barnett,QB,UCF,Big 12,2,0.128,0.167,0.039,0.388,0.359,-0.029,0.119,0.227,0.108
+Bo Jackson,RB,Ohio State,Big Ten,4,0.176,0.167,-0.009,0.182,0.174,-0.008,-0.113,-0.12,-0.008
+CJ Brown,WR,Arkansas,SEC,4,0.075,0.167,0.092,,,,0.075,0.114,0.04
+Prince Strachan,WR,West Virginia,Big 12,1,0.057,0.166,0.109,,,,0.057,0.187,0.13
+Elijah Washington-Baker,TE,Syracuse,ACC,1,0.251,0.165,-0.086,,,,0.251,0.25,-0.001
+Kameran Shanks,WR,Wake Forest,ACC,4,0.196,0.164,-0.032,,,,0.196,0.147,-0.049
+Keayen Nead,TE,BYU,Big 12,1,0.211,0.163,-0.048,,,,0.211,0.139,-0.072
+Eugene Wilson,WR,LSU,SEC,4,0.129,0.16,0.031,-0.719,-0.668,0.051,0.253,0.276,0.022
+Caden Knighten,RB,Baylor,Big 12,4,0.114,0.16,0.047,0.101,0.134,0.033,0.326,0.342,0.016
+D.J. Lagway,QB,Baylor,Big 12,2,0.09,0.158,0.068,-1.011,-0.929,0.082,0.19,0.165,-0.025
+Julian Lewis,QB,Colorado,Big 12,4,0.163,0.155,-0.008,0.23,0.217,-0.014,0.16,0.155,-0.005
+Xavier Ford,RB,Minnesota,Big Ten,1,0.093,0.155,0.062,0.093,0.159,0.066,,,
+Ca'Lil Valentine,RB,Illinois,Big Ten,4,0.105,0.153,0.048,0.025,0.063,0.038,0.813,0.862,0.05
+Cataurus Hicks,WR,Pittsburgh,ACC,4,0.121,0.153,0.032,,,,0.121,0.143,0.022
+DeAndre Moore Jr.,WR,Colorado,Big 12,4,0.16,0.152,-0.008,,,,0.16,0.155,-0.005
+Christian Clark,RB,South Carolina,SEC,3,0.143,0.151,0.008,-0.009,-0.029,-0.021,0.336,0.426,0.09
+Mason McKenzie,QB,Boston College,ACC,4,0.176,0.151,-0.025,0.315,0.291,-0.023,0.11,0.098,-0.012
+Roger Saleapaga,TE,BYU,Big 12,2,0.18,0.151,-0.029,,,,0.18,0.176,-0.004
+Marcel Reed,QB,Texas A&M,SEC,4,0.103,0.151,0.048,0.128,0.144,0.017,0.128,0.18,0.052
+Ayo Adeyi,RB,Oklahoma State,Big 12,4,0.149,0.15,0.001,0.139,0.145,0.006,0.225,0.244,0.019
+Ty Lockwood,TE,Arkansas,SEC,4,0.057,0.15,0.092,,,,0.057,0.097,0.04
+AJ Hill,QB,Arkansas,SEC,1,0.025,0.148,0.123,-0.172,0.001,0.173,0.039,0.083,0.044
+Jayvian Tanelus,RB,Duke,ACC,1,0.268,0.147,-0.121,0.268,0.21,-0.058,,,
+Ty Clark III,RB,Wake Forest,ACC,4,0.176,0.144,-0.032,0.03,0.023,-0.007,0.679,0.684,0.006
+Elyiss Williams,TE,Georgia,SEC,2,0.081,0.144,0.063,,,,0.081,0.138,0.057
+Makhilyn Young,RB,Vanderbilt,SEC,4,0.119,0.143,0.024,0.145,0.173,0.028,0.539,0.523,-0.016
+Isaac Wilson,QB,Colorado,Big 12,1,0.05,0.143,0.093,-0.065,0.046,0.111,0.063,0.116,0.053
+Jordan King,WR,California,ACC,4,0.083,0.141,0.058,,,,0.083,0.179,0.096
+Marquis Gillis,RB,Arizona State,Big 12,3,0.153,0.14,-0.014,0.202,0.239,0.037,-0.736,-0.791,-0.055
+Alessio Milivojevic,QB,Michigan State,Big Ten,4,0.073,0.136,0.063,-0.595,-0.55,0.045,0.144,0.185,0.041
+Josh Ford,TE,Alabama,SEC,1,0.173,0.136,-0.037,,,,0.173,0.056,-0.117
+Thomas Meyer,TE,Iowa,Big Ten,1,0.08,0.135,0.055,,,,0.08,0.116,0.036
+Ja'Kayden Ferguson,WR,Kentucky,SEC,1,0.214,0.133,-0.081,,,,0.214,0.205,-0.009
+Xai'Shaun Edwards,RB,Missouri,SEC,4,0.105,0.132,0.027,0.121,0.157,0.036,0.311,0.186,-0.125
+Kayleb Barnett,WR,Vanderbilt,SEC,4,0.104,0.128,0.024,-0.387,-0.342,0.045,0.084,0.068,-0.016
+Spencer Shannon,TE,Texas,SEC,3,0.1,0.127,0.027,,,,0.1,0.134,0.034
+Bryson Washington,RB,Auburn,SEC,4,0.061,0.125,0.063,-0.142,-0.117,0.025,0.463,0.501,0.039
+Jamal Roberts,RB,Missouri,SEC,4,0.098,0.124,0.027,0.094,0.13,0.036,-0.282,-0.244,0.038
+Omarion Miller,WR,Arizona State,Big 12,3,0.136,0.123,-0.014,-0.908,-0.836,0.072,0.149,0.085,-0.064
+Rodney Fields Jr.,RB,Kansas State,Big 12,4,0.154,0.12,-0.034,0.204,0.179,-0.024,-0.682,-0.733,-0.051
+Jaylin Brown,RB,Pittsburgh,ACC,1,0.188,0.12,-0.068,-0.029,0.008,0.037,0.406,0.326,-0.08
+Jamarion Morrow,RB,Texas A&M,SEC,2,0.114,0.115,0.001,0.01,0.021,0.011,0.533,0.528,-0.005
+Javarius Green,WR,Boston College,ACC,4,0.14,0.114,-0.025,-0.09,-0.136,-0.046,0.153,0.141,-0.012
+Cooper McCutchan,TE,Purdue,Big Ten,1,-0.043,0.114,0.157,,,,-0.043,0.069,0.112
+Sedrick Alexander,RB,Vanderbilt,SEC,4,0.086,0.11,0.024,0.198,0.226,0.028,-0.013,-0.029,-0.016
+Lloyd Avant,RB,Oklahoma,SEC,4,0.056,0.107,0.05,-0.019,0.04,0.058,0.461,0.453,-0.008
+Brian Bonner Jr.,RB,Washington,Big Ten,3,0.085,0.106,0.021,0.085,0.077,-0.009,,,
+Eli Owens,TE,Michigan,Big Ten,1,0.031,0.105,0.074,,,,0.031,0.019,-0.012
+Nitro Tuggle,WR,South Carolina,SEC,4,0.07,0.104,0.034,-0.114,-0.075,0.039,0.097,0.142,0.045
+Vandrevious Jacobs,WR,Miami,ACC,1,0.13,0.104,-0.026,,,,0.13,0.164,0.034
+Darius Taylor,RB,Minnesota,Big Ten,3,0.091,0.103,0.013,0.002,0.023,0.021,0.456,0.46,0.004
+Chris Corbo,TE,Georgia Tech,ACC,3,0.101,0.102,0.001,,,,0.101,0.118,0.016
+Cardae Mack,RB,Arizona State,Big 12,2,0.152,0.098,-0.054,0.584,0.617,0.032,-0.778,-0.859,-0.081
+De'Nylon Morrissette,WR,Purdue,Big Ten,3,0.073,0.096,0.023,,,,0.073,0.074,0.001
+Rueben Owens,RB,Texas A&M,SEC,4,0.046,0.094,0.048,0.012,0.028,0.017,0.337,0.389,0.052
+Mike Matthews,WR,Tennessee,SEC,4,0.046,0.091,0.046,,,,0.046,0.067,0.021
+Caleb Komolafe,RB,Northwestern,Big Ten,3,0.008,0.09,0.083,-0.144,-0.059,0.084,0.787,0.792,0.006
+Emaree Winston,TE,Texas,SEC,4,0.039,0.089,0.05,,,,0.039,0.101,0.061
+Jaedn Skeete,WR,Boston College,ACC,3,0.103,0.087,-0.016,,,,0.103,0.105,0.002
+Sutton Smith,RB,Arkansas,SEC,4,-0.006,0.086,0.092,0.071,0.172,0.101,-0.172,-0.132,0.04
+Hogan Hansen,TE,Michigan,Big Ten,1,0.012,0.086,0.074,,,,0.012,-0.0,-0.012
+Steven Angeli,QB,Syracuse,ACC,3,0.1,0.085,-0.014,0.194,0.174,-0.02,0.104,0.148,0.044
+Derrick McFall,WR,SMU,ACC,3,0.115,0.081,-0.034,-0.681,-0.652,0.03,0.488,0.415,-0.073
+Andrew Barker,TE,Indiana,Big Ten,1,0.047,0.081,0.034,,,,0.047,0.111,0.064
+Jayden Moore,WR,Duke,ACC,4,0.169,0.08,-0.09,,,,0.169,0.097,-0.073
+Damon Ferguson Jr.,RB,Pittsburgh,ACC,4,0.047,0.079,0.032,0.028,0.051,0.023,0.072,0.094,0.022
+Keyone Jenkins,QB,UCF,Big 12,3,0.018,0.079,0.061,-1.101,-1.049,0.051,0.154,0.204,0.05
+Dylan Edwards,RB,Kansas,Big 12,3,0.045,0.076,0.03,-0.02,-0.0,0.02,0.088,0.099,0.011
+Cam Cook,RB,West Virginia,Big 12,4,0.048,0.072,0.024,0.048,0.069,0.022,-0.14,-0.116,0.024
+Sione I Moa,RB,BYU,Big 12,1,0.188,0.065,-0.123,0.188,0.057,-0.131,,,
+Jayden Kitchens,WR,Maryland,Big Ten,2,-0.001,0.063,0.063,,,,-0.001,0.058,0.059
+Kedrick Reescano,RB,Arizona,Big 12,4,0.04,0.062,0.022,0.074,0.072,-0.002,-0.104,-0.081,0.023
+DJ Butler,RB,Houston,Big 12,3,0.034,0.061,0.027,0.249,0.232,-0.017,-0.889,-0.864,0.025
+Ju'Juan Johnson,RB,Syracuse,ACC,2,0.039,0.061,0.022,-0.083,-0.103,-0.02,0.129,0.195,0.066
+Waymond Jordan,RB,USC,Big Ten,5,0.0,0.059,0.058,0.0,0.024,0.024,-0.097,-0.059,0.037
+Jasper Parker,RB,Arkansas,SEC,2,-0.039,0.059,0.098,-0.354,-0.208,0.146,3.164,3.155,-0.009
+Javin Gordon,RB,Tennessee,SEC,2,0.02,0.059,0.038,-0.096,-0.065,0.03,0.759,0.774,0.015
+Isaiah Johnson,WR,Cincinnati,Big 12,4,0.042,0.058,0.015,,,,0.042,0.061,0.018
+Grayson Rigdon,RB,Arizona State,Big 12,2,0.112,0.058,-0.054,-0.392,-0.359,0.032,4.356,4.275,-0.081
+Rahkeem Smith,WR,Georgia Tech,ACC,2,0.058,0.057,-0.002,,,,0.058,0.069,0.011
+Izaiah Williams,WR,Kansas State,Big 12,1,0.118,0.057,-0.061,,,,0.118,0.068,-0.05
+Dwight Phillips Jr.,RB,Georgia,SEC,4,0.049,0.053,0.005,0.016,-0.015,-0.031,0.284,0.344,0.06
+Travis Terrell Jr.,RB,Purdue,Big Ten,3,0.029,0.052,0.023,-0.168,-0.131,0.037,0.502,0.575,0.073
+Eli Holstein,QB,Virginia,ACC,1,0.008,0.052,0.044,,,,0.008,0.106,0.098
+Naeshaun Montgomery,WR,Missouri,SEC,4,0.022,0.048,0.027,,,,0.022,0.019,-0.003
+Fisher Clements,TE,Colorado,Big 12,1,-0.048,0.045,0.093,,,,-0.048,0.005,0.053
+Andrew Rappleyea,TE,Penn State,Big Ten,4,0.09,0.044,-0.045,,,,0.09,0.05,-0.04
+Quinton Martin Jr.,RB,Penn State,Big Ten,2,0.021,0.044,0.023,0.034,0.033,-0.0,-0.412,-0.318,0.094
+Evan James,WR,Iowa,Big Ten,4,0.034,0.043,0.009,,,,0.034,0.054,0.02
+George MacIntyre,QB,Tennessee,SEC,1,-0.096,0.042,0.138,-0.228,-0.16,0.068,-0.052,0.056,0.108
+Ismail Mahdi,RB,Arizona,Big 12,2,0.038,0.041,0.003,0.056,0.048,-0.008,0.106,0.155,0.049
+Michael Turner,RB,Baylor,Big 12,4,-0.007,0.04,0.047,-0.347,-0.314,0.033,0.341,0.346,0.005
+Gideon Davidson,RB,Clemson,ACC,4,-0.014,0.037,0.052,0.065,0.071,0.007,-0.804,-0.766,0.038
+Victor Snow,WR,NC State,ACC,3,-0.021,0.034,0.056,,,,-0.021,0.037,0.058
+Jeremy Payne,RB,TCU,Big 12,4,0.01,0.033,0.023,0.026,0.044,0.018,0.006,0.007,0.001
+Iverson Howard,RB,Maryland,Big Ten,4,-0.008,0.03,0.038,0.084,0.124,0.039,-0.822,-0.766,0.056
+Will Loerzel,TE,Wake Forest,ACC,2,0.052,0.029,-0.023,,,,0.052,0.056,0.004
+Mason Woods,TE,Iowa,Big Ten,1,0.074,0.028,-0.046,,,,0.074,0.101,0.027
+Mason James,WR,Washington,Big Ten,2,0.026,0.026,0.0,,,,0.026,0.004,-0.021
+Dilin Jones,RB,LSU,SEC,4,-0.006,0.025,0.031,-0.038,-0.037,0.001,0.179,0.202,0.022
+Nico Iamaleava,QB,UCLA,Big Ten,4,0.048,0.025,-0.023,-0.026,-0.042,-0.016,0.039,0.016,-0.022
+Isaiah Augustave,RB,South Carolina,SEC,2,-0.006,0.023,0.029,0.369,0.284,-0.085,-0.381,-0.311,0.07
+Brady Clough,TE,Boston College,ACC,2,0.079,0.022,-0.057,-3.587,-3.649,-0.062,0.37,0.319,-0.051
+Lee Beebe,RB,Indiana,Big Ten,4,0.06,0.019,-0.041,0.099,0.084,-0.015,-0.693,-0.707,-0.014
+Landon Morris,TE,Wake Forest,ACC,1,0.089,0.016,-0.073,,,,0.089,-0.039,-0.128
+James Peoples,RB,Penn State,Big Ten,4,0.054,0.009,-0.045,0.054,0.039,-0.015,,,
+Ar'mari Towns,TE,Purdue,Big Ten,1,-0.044,0.006,0.05,,,,-0.044,-0.016,0.028
+Dakota Twitty,TE,Virginia,ACC,4,0.008,0.001,-0.007,,,,0.008,-0.016,-0.024
+Carson Hansen,RB,Penn State,Big Ten,4,0.045,-0.0,-0.045,0.028,0.013,-0.015,0.648,0.614,-0.034
+Dekalon Taylor,RB,Colorado,Big 12,3,-0.024,-0.002,0.022,-0.315,-0.292,0.024,0.488,0.498,0.009
+Caleb Hawkins,RB,Oklahoma State,Big 12,4,-0.003,-0.002,0.001,0.059,0.065,0.006,-0.403,-0.41,-0.007
+Bryson Jones,WR,Texas Tech,Big 12,3,-0.019,-0.002,0.018,,,,-0.019,0.03,0.05
+Trae'shawn Brown,RB,Alabama,SEC,4,0.001,-0.004,-0.005,0.006,0.0,-0.006,0.154,0.149,-0.005
+Clay Thevenin,RB,Rutgers,Big Ten,4,-0.012,-0.005,0.007,0.084,0.11,0.026,-0.631,-0.697,-0.066
+Raleek Brown,RB,Texas,SEC,4,-0.057,-0.007,0.05,-0.013,-0.019,-0.006,0.01,0.072,0.061
+Tait Reynolds,QB,Clemson,ACC,4,-0.06,-0.008,0.052,0.036,0.043,0.007,-0.04,0.019,0.059
+Amir Jackson,TE,Florida,SEC,3,-0.001,-0.009,-0.007,,,,-0.001,-0.054,-0.052
+Dayton Howard,WR,Iowa,Big Ten,1,0.036,-0.01,-0.046,,,,0.036,0.063,0.027
+Deuce Lawrence,RB,Wake Forest,ACC,4,0.019,-0.013,-0.032,0.014,0.006,-0.007,0.07,0.03,-0.04
+Alex Manske,QB,Penn State,Big Ten,1,0.056,-0.015,-0.071,0.056,-0.002,-0.058,,,
+Brycen Coleman,WR,Vanderbilt,SEC,4,-0.042,-0.018,0.024,,,,-0.042,-0.058,-0.016
+Micah Ford,RB,Stanford,ACC,4,-0.026,-0.023,0.003,-0.031,-0.031,0.0,-0.218,-0.203,0.014
+Arlis Boardingham,TE,Auburn,SEC,3,-0.079,-0.026,0.054,,,,-0.079,-0.046,0.033
+Mason Humphrey,WR,North Carolina,ACC,3,-0.055,-0.027,0.028,,,,-0.055,-0.024,0.031
+London Montgomery,RB,Florida,SEC,2,-0.044,-0.029,0.015,-0.044,0.038,0.082,,,
+Da'Jaun Riggs,RB,Oregon,Big Ten,2,-0.03,-0.029,0.002,0.184,0.163,-0.021,-0.603,-0.715,-0.112
+DeBraun Hampton,WR,Baylor,Big 12,2,-0.086,-0.03,0.057,,,,-0.086,-0.072,0.015
+Duke Clark,RB,Florida,SEC,4,-0.014,-0.032,-0.018,-0.067,-0.048,0.019,2.435,2.412,-0.023
+Jackson Brousseau,QB,California,ACC,1,-0.154,-0.034,0.12,,,,-0.154,-0.037,0.117
+CJ Campbell,RB,Duke,ACC,4,0.053,-0.037,-0.09,0.053,-0.011,-0.064,-0.068,-0.155,-0.087
+Dramekco Green,RB,SMU,ACC,4,0.009,-0.041,-0.051,-0.128,-0.126,0.003,0.852,0.778,-0.073
+Kam Powell,WR,Oklahoma State,Big 12,1,0.102,-0.042,-0.144,,,,0.102,0.019,-0.083
+Quinten Joyner,RB,Texas Tech,Big 12,4,-0.069,-0.043,0.027,-0.069,-0.074,-0.005,,,
+JT Taggart,TE,Maryland,Big Ten,1,-0.164,-0.044,0.12,,,,-0.164,-0.047,0.117
+Jayvontay Conner,TE,Vanderbilt,SEC,4,-0.07,-0.045,0.024,,,,-0.07,-0.085,-0.016
+Kevin Riley,RB,Alabama,SEC,2,-0.058,-0.046,0.011,-0.552,-0.531,0.022,0.395,0.278,-0.117
+Daunte Bacheyie,TE,Syracuse,ACC,2,-0.072,-0.05,0.022,,,,-0.072,-0.006,0.066
+KJ Edwards,RB,Texas A&M,SEC,3,-0.131,-0.051,0.08,0.017,0.044,0.027,-0.562,-0.454,0.108
+Stacy Gage,RB,LSU,SEC,3,-0.094,-0.052,0.042,-0.072,-0.095,-0.023,0.044,0.096,0.052
+Tyler Fortenberry,TE,Iowa State,Big 12,2,-0.12,-0.052,0.068,,,,-0.12,-0.033,0.087
+Chris Henry Jr.,WR,Ohio State,Big Ten,2,0.03,-0.053,-0.083,,,,0.03,-0.041,-0.071
+Elias Coke,WR,Rutgers,Big Ten,1,0.001,-0.054,-0.055,,,,0.001,-0.124,-0.125
+Makhi Frazier,RB,Ole Miss,SEC,2,-0.083,-0.055,0.028,-0.066,-0.062,0.003,-0.296,-0.272,0.024
+Keisean Henderson,QB,Houston,Big 12,2,-0.06,-0.057,0.004,,,,-0.06,-0.023,0.037
+Cam Settles,RB,Arkansas,SEC,3,-0.156,-0.057,0.099,-0.117,-0.022,0.095,-0.3,-0.269,0.031
+Bryson Kuzdzal,RB,Michigan,Big Ten,3,-0.11,-0.058,0.052,-0.11,-0.069,0.041,,,
+Cameron Pettaway,RB,Iowa State,Big 12,4,-0.111,-0.062,0.05,-0.35,-0.327,0.024,0.543,0.602,0.058
+Bo MacCormack III,RB,Boston College,ACC,2,-0.037,-0.065,-0.027,0.034,0.017,-0.017,-0.363,-0.363,0.0
+JT Lindsey,RB,Ole Miss,SEC,4,-0.107,-0.066,0.041,-0.018,0.002,0.02,-0.158,-0.133,0.025
+Tre Page III,RB,Oklahoma State,Big 12,3,-0.092,-0.07,0.022,-0.046,-0.042,0.004,-0.998,-0.98,0.018
+Tony Kinsler,WR,Pittsburgh,ACC,4,-0.105,-0.072,0.032,,,,-0.105,-0.083,0.022
+Garrett Oakley,TE,Kansas State,Big 12,4,-0.041,-0.076,-0.034,,,,-0.041,-0.081,-0.04
+Tiger Bachmeier,WR,BYU,Big 12,1,0.047,-0.076,-0.123,,,,0.047,-0.007,-0.054
+Kade Eldridge,TE,Washington,Big Ten,2,-0.076,-0.076,0.0,1.178,1.158,-0.02,-0.517,-0.538,-0.021
+Bryan Jackson,RB,Wisconsin,Big Ten,2,-0.097,-0.077,0.019,-0.097,-0.075,0.021,,,
+Cardell Williams,QB,Maryland,Big Ten,2,-0.173,-0.083,0.09,-0.173,-0.121,0.052,,,
+Taevion Swint,RB,UCF,Big 12,4,-0.136,-0.084,0.052,-0.127,-0.116,0.011,0.096,0.179,0.083
+Tyran Warren,WR,NC State,ACC,3,-0.14,-0.084,0.056,,,,-0.14,-0.082,0.058
+Josh Sapp,TE,West Virginia,Big 12,1,-0.195,-0.086,0.109,,,,-0.195,-0.065,0.13
+Thomas Castellanos,QB,Texas Tech,Big 12,3,-0.136,-0.087,0.049,0.559,0.567,0.008,2.903,2.953,0.05
+Benji Gosnell,TE,Virginia Tech,ACC,3,-0.146,-0.088,0.058,,,,-0.146,-0.143,0.003
+Shamar Easter,TE,North Carolina,ACC,2,-0.076,-0.089,-0.013,,,,-0.076,-0.112,-0.036
+Jaquail Smith,RB,Colorado,Big 12,4,-0.081,-0.089,-0.008,-0.024,-0.038,-0.014,-0.781,-0.722,0.059
+Evan Dickens,RB,Boston College,ACC,4,-0.065,-0.091,-0.025,-0.084,-0.107,-0.023,-0.02,-0.032,-0.012
+Kaleb Thomas,TE,Houston,Big 12,1,-0.167,-0.093,0.074,,,,-0.167,-0.08,0.087
+Dylan Wade,TE,UCF,Big 12,4,-0.147,-0.094,0.052,,,,-0.147,-0.07,0.077
+Isaiah Mozee,RB,Nebraska,Big Ten,4,-0.085,-0.095,-0.01,-0.127,-0.135,-0.009,0.86,0.85,-0.01
+Chance Robinson,WR,NC State,ACC,2,-0.153,-0.096,0.057,,,,-0.153,-0.081,0.072
+Jamar Searcy,RB,Wake Forest,ACC,2,-0.056,-0.097,-0.041,-0.056,-0.037,0.019,,,
+Braylen Russell,RB,Arkansas,SEC,4,-0.191,-0.098,0.092,-0.191,-0.09,0.101,0.32,0.338,0.018
+Jon Denman,RB,TCU,Big 12,3,-0.141,-0.105,0.036,-0.137,-0.123,0.014,-0.547,-0.481,0.066
+Dominic Ingrassia,QB,California,ACC,1,-0.216,-0.106,0.11,-0.216,-0.269,-0.053,,,
+Matt Zollers,QB,Missouri,SEC,2,-0.105,-0.109,-0.004,-0.023,0.002,0.025,-0.09,-0.166,-0.075
+Malachi Hosley,RB,Georgia Tech,ACC,3,-0.183,-0.111,0.072,-0.183,-0.15,0.033,,,
+Jayce Brown,WR,LSU,SEC,3,-0.156,-0.113,0.042,,,,-0.156,-0.098,0.058
+Brandon Tullis,RB,Michigan State,Big Ten,1,-0.201,-0.113,0.088,-0.201,-0.15,0.051,,,
+Omar Mabson Ii,RB,Auburn,SEC,4,-0.177,-0.114,0.063,-0.031,0.001,0.032,-0.34,-0.301,0.039
+Isaac Brown,RB,Louisville,ACC,4,-0.123,-0.115,0.009,-0.09,-0.072,0.019,-0.129,-0.137,-0.007
+Jamezell Lassiter,RB,Vanderbilt,SEC,4,-0.141,-0.117,0.024,-0.16,-0.132,0.028,0.012,-0.011,-0.023
+Arnold Barnes,RB,Iowa State,Big 12,4,-0.168,-0.118,0.05,-0.084,-0.061,0.024,-0.624,-0.596,0.028
+Cam Pickett,WR,Kansas,Big 12,1,-0.256,-0.12,0.136,,,,-0.256,-0.168,0.088
+Ja'Cory Thomas,WR,Vanderbilt,SEC,3,-0.152,-0.122,0.029,,,,-0.152,-0.155,-0.003
+Isiah Canion,WR,Georgia,SEC,2,-0.062,-0.122,-0.06,,,,-0.062,-0.067,-0.005
+Christian Abney,TE,Illinois,Big Ten,3,-0.176,-0.124,0.052,,,,-0.176,-0.129,0.047
+Amari Latimer,RB,West Virginia,Big 12,4,-0.151,-0.128,0.024,-0.267,-0.245,0.022,0.07,0.101,0.031
+Brody Foley,TE,Louisville,ACC,2,-0.084,-0.129,-0.045,,,,-0.084,-0.147,-0.062
+Zylan Perry,RB,Cincinnati,Big 12,2,-0.139,-0.131,0.007,-0.098,-0.115,-0.017,-0.387,-0.393,-0.006
+Gavin Harris,TE,Georgia Tech,ACC,3,-0.132,-0.131,0.001,1.306,1.248,-0.058,-0.403,-0.387,0.016
+Carter Vargas,RB,California,ACC,1,-0.252,-0.132,0.12,0.048,0.109,0.061,-0.552,-0.435,0.117
+Jerrick Gibson,RB,Purdue,Big Ten,4,-0.189,-0.133,0.057,-0.227,-0.173,0.054,0.68,0.792,0.112
+Derrek Cooper,RB,Texas,SEC,3,-0.181,-0.135,0.046,-0.201,-0.206,-0.005,0.044,0.188,0.144
+Rodney Gallagher,WR,Arizona,Big 12,4,-0.166,-0.144,0.022,,,,-0.166,-0.143,0.023
+Elijah Thomas,WR,Oklahoma,SEC,3,-0.195,-0.145,0.051,,,,-0.195,-0.21,-0.015
+Jarvis Green,RB,Clemson,ACC,3,-0.171,-0.145,0.026,-0.142,-0.159,-0.017,-0.841,-0.874,-0.033
+Cole Adams,WR,Vanderbilt,SEC,3,-0.157,-0.146,0.011,,,,-0.157,-0.197,-0.04
+Damian Henderson II,RB,Colorado,Big 12,3,-0.109,-0.151,-0.042,-0.091,-0.146,-0.055,,,
+Houston Thomas,TE,Texas A&M,SEC,3,-0.232,-0.152,0.08,,,,-0.232,-0.148,0.085
+Jordan Lyle,RB,Miami,ACC,1,-0.126,-0.152,-0.026,-0.275,-0.304,-0.029,0.173,0.207,0.034
+Joshua Manning,WR,Kansas State,Big 12,4,-0.123,-0.157,-0.034,,,,-0.123,-0.162,-0.04
+Robby Preckel,TE,Northwestern,Big Ten,2,-0.245,-0.16,0.085,-0.469,-0.345,0.124,-0.021,0.009,0.03
+Reed Swanson,WR,Boston College,ACC,2,-0.104,-0.161,-0.057,,,,-0.104,-0.156,-0.051
+Connor Moberly,QB,Iowa State,Big 12,3,-0.21,-0.168,0.042,-0.21,-0.21,0.0,,,
+Taz Williams Jr.,WR,Baylor,Big 12,2,-0.247,-0.168,0.079,,,,-0.247,-0.235,0.012
+Jermaine Bishop Jr.,WR,Texas,SEC,3,-0.216,-0.17,0.046,,,,-0.216,-0.174,0.042
+Cole Boscia,WR,California,ACC,1,-0.299,-0.179,0.12,,,,-0.299,-0.182,0.117
+Cody Jackson,WR,Iowa State,Big 12,3,-0.251,-0.182,0.07,,,,-0.251,-0.197,0.054
+Quaid Carr,RB,Washington,Big Ten,1,-0.216,-0.185,0.031,-0.239,-0.261,-0.022,-0.1,-0.051,0.049
+Evan Pryor,RB,Florida,SEC,2,-0.202,-0.187,0.015,-0.214,-0.132,0.082,-0.207,-0.23,-0.023
+Tre Wisner,RB,Florida State,ACC,3,-0.206,-0.188,0.018,-0.195,-0.189,0.005,0.278,0.295,0.017
+Richard Young,RB,Colorado,Big 12,2,-0.204,-0.188,0.016,-0.204,-0.162,0.042,,,
+Micah Welch,RB,Colorado,Big 12,4,-0.18,-0.188,-0.008,-0.193,-0.206,-0.014,1.214,1.166,-0.048
+Tony Livingston,TE,Baylor,Big 12,1,-0.283,-0.193,0.09,,,,-0.283,-0.31,-0.027
+Julian McFadden,WR,Syracuse,ACC,2,-0.147,-0.194,-0.047,,,,-0.147,-0.111,0.036
+Kamryn Perry,WR,Colorado,Big 12,3,-0.176,-0.198,-0.022,0.605,0.716,0.111,-0.294,-0.322,-0.028
+Steele Pizzella,QB,Wake Forest,ACC,2,-0.205,-0.202,0.002,,,,-0.205,-0.225,-0.021
+A.J. Turner,RB,Minnesota,Big Ten,2,-0.208,-0.204,0.004,-0.216,-0.178,0.038,-0.507,-0.526,-0.019
+Danny Scudero,WR,Colorado,Big 12,2,-0.129,-0.208,-0.079,0.649,0.524,-0.125,-0.225,-0.294,-0.069
+Cam Fancher,QB,Michigan State,Big Ten,4,-0.272,-0.209,0.063,0.281,0.323,0.043,-0.128,-0.066,0.062
+TJ Thomas Jr.,RB,Minnesota,Big Ten,4,-0.201,-0.21,-0.009,-0.256,-0.231,0.025,-0.311,-0.34,-0.029
+Marvis Parrish,RB,Michigan State,Big Ten,4,-0.276,-0.213,0.063,-0.238,-0.193,0.045,-0.722,-0.685,0.037
+Jack Foley,WR,Wake Forest,ACC,4,-0.188,-0.22,-0.032,,,,-0.188,-0.237,-0.049
+Sequel Patterson,WR,South Carolina,SEC,3,-0.23,-0.222,0.008,-1.056,-1.017,0.039,-0.153,-0.116,0.037
+Cade Wolford,WR,Cincinnati,Big 12,2,-0.215,-0.227,-0.012,,,,-0.215,-0.205,0.01
+Elijah Moore,WR,Syracuse,ACC,1,-0.287,-0.236,0.051,,,,-0.287,-0.229,0.058
+Blaze Berlowitz,QB,Vanderbilt,SEC,3,-0.283,-0.243,0.039,-0.692,-0.654,0.038,-0.181,-0.187,-0.006
+Nate Palmer,RB,Wisconsin,Big Ten,2,-0.271,-0.244,0.027,-0.271,-0.294,-0.023,,,
+Ahmad Miller,RB,Syracuse,ACC,2,-0.268,-0.246,0.022,-0.244,-0.264,-0.02,-0.281,-0.223,0.058
+Isaiah West,RB,Ohio State,Big Ten,4,-0.249,-0.258,-0.009,-0.249,-0.257,-0.008,,,
+Michael Smith,TE,Ole Miss,SEC,4,-0.308,-0.267,0.041,,,,-0.308,-0.296,0.012
+Christopher Vizzina,QB,Clemson,ACC,2,-0.343,-0.271,0.072,-0.596,-0.518,0.078,-0.197,-0.151,0.046
+Tory Blaylock,RB,Oklahoma,SEC,3,-0.372,-0.272,0.1,-0.372,-0.278,0.093,,,
+Maurice Veney,TE,Vanderbilt,SEC,2,-0.331,-0.276,0.055,,,,-0.331,-0.314,0.017
+Ashten Emory,RB,California,ACC,4,-0.336,-0.278,0.058,-0.369,-0.374,-0.005,0.579,0.744,0.165
+Jayden Limar,RB,Washington,Big Ten,1,-0.31,-0.279,0.031,-0.31,-0.332,-0.022,,,
+Bennett Christian,TE,Ohio State,Big Ten,2,-0.347,-0.28,0.066,,,,-0.347,-0.291,0.055
+Julian Johnson,TE,Minnesota,Big Ten,3,-0.307,-0.283,0.023,,,,-0.307,-0.317,-0.011
+Harlem Berry,RB,LSU,SEC,1,-0.284,-0.286,-0.002,-0.284,-0.212,0.072,,,
+Logan Blake,TE,Rutgers,Big Ten,4,-0.295,-0.289,0.007,,,,-0.295,-0.339,-0.044
+TaRon Francis,WR,West Virginia,Big 12,1,-0.217,-0.299,-0.082,-0.237,-0.251,-0.014,-0.198,-0.314,-0.116
+Harry Dalton III,RB,Maryland,Big Ten,3,-0.316,-0.305,0.011,-0.242,-0.21,0.032,-1.258,-1.271,-0.013
+Cole Weaver,WR,Syracuse,ACC,3,-0.296,-0.31,-0.014,,,,-0.296,-0.252,0.044
+Channing Goodwin,WR,Michigan,Big Ten,1,-0.347,-0.317,0.03,,,,-0.347,-0.301,0.046
+Jamari Hawkins,WR,Arkansas,SEC,4,-0.424,-0.332,0.092,,,,-0.424,-0.385,0.04
+Trevion Cooley,RB,Washington,Big Ten,4,-0.36,-0.336,0.023,-0.265,-0.277,-0.012,-1.969,-1.885,0.084
+Carter Nelson,TE,Nebraska,Big Ten,2,-0.325,-0.338,-0.014,,,,-0.325,-0.37,-0.046
+Cam Wallace,RB,Penn State,Big Ten,3,-0.336,-0.344,-0.008,-0.174,-0.208,-0.034,-0.659,-0.693,-0.034
+Christian Greenlaw,TE,Iowa State,Big 12,1,-0.41,-0.347,0.063,,,,-0.41,-0.341,0.069
+Juju Preston,WR,Clemson,ACC,2,-0.394,-0.351,0.043,,,,-0.394,-0.374,0.02
+Zach Grace,TE,LSU,SEC,1,-0.304,-0.356,-0.052,,,,-0.304,-0.347,-0.043
+Carterrious Brown,WR,SMU,ACC,1,-0.313,-0.361,-0.048,,,,-0.313,-0.359,-0.046
+Dominick Barry,TE,Wake Forest,ACC,4,-0.334,-0.366,-0.032,,,,-0.334,-0.383,-0.049
+Linkon Cure,TE,Kansas State,Big 12,3,-0.353,-0.371,-0.018,,,,-0.353,-0.371,-0.018
+DJ Miller,WR,Kentucky,SEC,4,-0.367,-0.373,-0.006,,,,-0.367,-0.375,-0.008
+Ryan Puglisi,QB,Georgia,SEC,1,-0.324,-0.377,-0.053,,,,-0.324,-0.331,-0.007
+Brandon Smith,RB,Oregon,Big Ten,1,-0.275,-0.38,-0.105,-0.275,-0.349,-0.074,,,
+Jaylan Hornsby,WR,Purdue,Big Ten,2,-0.397,-0.388,0.01,,,,-0.397,-0.411,-0.013
+Nic Anderson,WR,Kentucky,SEC,3,-0.386,-0.393,-0.007,,,,-0.386,-0.368,0.018
+Xavier Robinson,RB,Oklahoma,SEC,3,-0.425,-0.399,0.026,-0.363,-0.342,0.02,-0.597,-0.545,0.051
+Journee Tonga,RB,BYU,Big 12,1,-0.354,-0.402,-0.048,-0.354,-0.429,-0.075,,,
+Thomas Blackshear,WR,Georgia,SEC,3,-0.434,-0.405,0.029,,,,-0.434,-0.398,0.036
+Zymear Smith,WR,Maryland,Big Ten,1,-0.533,-0.413,0.12,,,,-0.533,-0.416,0.117
+Evan Boyd,WR,Iowa State,Big 12,2,-0.485,-0.417,0.068,,,,-0.485,-0.457,0.028
+Jalen Butler,TE,Kansas,Big 12,3,-0.449,-0.419,0.03,,,,-0.449,-0.438,0.011
+HD Davis,RB,Baylor,Big 12,1,-0.504,-0.436,0.068,-0.504,-0.474,0.03,,,
+Javari Barnett,RB,Illinois,Big Ten,1,-0.501,-0.44,0.061,-0.501,-0.51,-0.009,,,
+Travis Smith Jr.,WR,Tennessee,SEC,2,-0.498,-0.446,0.053,,,,-0.498,-0.471,0.028
+Gavin Mueller,TE,Miami,ACC,1,-0.334,-0.455,-0.121,,,,-0.334,-0.456,-0.122
+Max Drag,TE,South Carolina,SEC,1,-0.407,-0.459,-0.052,,,,-0.407,-0.388,0.019
+Phillip Wright III,WR,LSU,SEC,1,-0.527,-0.459,0.068,,,,-0.527,-0.475,0.052
+Emmett Bork,TE,Wisconsin,Big Ten,3,-0.533,-0.462,0.071,,,,-0.533,-0.461,0.072
+Matt Outten,WR,Syracuse,ACC,1,-0.379,-0.465,-0.086,-0.379,-0.473,-0.094,,,
+Chris Johnson Jr.,RB,Clemson,ACC,4,-0.519,-0.467,0.052,-0.46,-0.454,0.007,-0.834,-0.813,0.02
+Nate Kurisky,TE,Duke,ACC,1,-0.351,-0.467,-0.116,,,,-0.351,-0.383,-0.032
+Ashton Bethel-Roman,WR,Texas A&M,SEC,3,-0.527,-0.483,0.044,,,,-0.527,-0.489,0.038
+TK Keys,WR,Tennessee,SEC,2,-0.451,-0.497,-0.046,,,,-0.451,-0.522,-0.071
+Jonathan Hatton Jr.,RB,Oklahoma,SEC,3,-0.551,-0.5,0.051,-0.579,-0.514,0.065,0.059,0.1,0.041
+Micah Hudson,WR,Texas Tech,Big 12,4,-0.527,-0.5,0.027,,,,-0.527,-0.491,0.036
+Teriq Mallory,WR,Florida State,ACC,1,-0.47,-0.516,-0.046,,,,-0.47,-0.506,-0.036
+Caleb Goodie,WR,Missouri,SEC,4,-0.549,-0.522,0.027,,,,-0.549,-0.552,-0.003
+TK Norman,WR,Texas A&M,SEC,1,-0.582,-0.522,0.06,,,,-0.582,-0.489,0.093
+Damon Hall Jr.,TE,Maryland,Big Ten,1,-0.675,-0.555,0.12,,,,-0.675,-0.558,0.117
+Kaden Feagin,TE,Illinois,Big Ten,3,-0.609,-0.557,0.052,,,,-0.609,-0.562,0.047
+James Giggey,TE,Arizona State,Big 12,1,-0.567,-0.569,-0.002,-0.567,-0.495,0.072,,,
+L.J. Phillips Jr.,RB,Iowa,Big Ten,1,-0.564,-0.588,-0.024,-0.564,-0.558,0.006,,,
+Gabe Burkle,TE,Penn State,Big Ten,2,-0.611,-0.588,0.023,,,,-0.611,-0.581,0.03
+Darien Williams,WR,Syracuse,ACC,3,-0.575,-0.589,-0.014,,,,-0.575,-0.531,0.044
+Hunter Welcing,TE,Ohio State,Big Ten,1,-0.495,-0.593,-0.098,,,,-0.495,-0.579,-0.084
+Salesi Moa,WR,Michigan,Big Ten,2,-0.646,-0.594,0.052,,,,-0.646,-0.629,0.017
+Cameron Ball,TE,West Virginia,Big 12,1,-0.649,-0.595,0.054,,,,-0.649,-0.618,0.031
+Jershaun Newton,WR,Illinois,Big Ten,1,-0.661,-0.6,0.061,-0.661,-0.67,-0.009,,,
+Zion Johnson,RB,Cincinnati,Big 12,4,-0.632,-0.616,0.015,-0.617,-0.636,-0.019,0.614,0.652,0.038
+Cutter Woods,QB,South Carolina,SEC,1,-0.566,-0.618,-0.052,-0.321,-0.406,-0.085,-0.81,-0.791,0.019
+Evan Chieca,TE,Florida,SEC,1,-0.582,-0.634,-0.052,,,,-0.582,-0.625,-0.043
+Aiden Black,TE,Stanford,ACC,1,-0.563,-0.643,-0.08,,,,-0.563,-0.533,0.03
+Tyreek King,WR,Tennessee,SEC,1,-0.582,-0.643,-0.061,,,,-0.582,-0.672,-0.09
+Easton Miller,RB,Iowa State,Big 12,3,-0.725,-0.655,0.07,-0.925,-0.873,0.052,1.264,1.333,0.069
+KD Daniels,RB,Wake Forest,ACC,1,-0.532,-0.656,-0.124,-0.532,-0.634,-0.102,,,
+Frank Covey IV,WR,Northwestern,Big Ten,1,-0.752,-0.662,0.09,,,,-0.752,-0.779,-0.027
+Shamar Rigby,WR,Wisconsin,Big Ten,3,-0.789,-0.679,0.11,,,,-0.789,-0.693,0.096
+Grayson Brousseau,TE,UCF,Big 12,1,-0.739,-0.71,0.029,,,,-0.739,-0.656,0.083
+Josiah Abdullah,WR,Virginia,ACC,1,-0.653,-0.714,-0.061,,,,-0.653,-0.75,-0.097
+Desirrio Riles,TE,Florida State,ACC,2,-0.738,-0.724,0.015,,,,-0.738,-0.72,0.019
+Madden Iamaleava,QB,UCLA,Big Ten,1,-0.608,-0.732,-0.124,,,,-0.608,-0.687,-0.079
+Jonathan Paylor,RB,NC State,ACC,1,-0.697,-0.734,-0.037,-0.697,-0.687,0.01,,,
+Shane Rosenthal,WR,UCLA,Big Ten,1,-0.764,-0.756,0.008,,,,-0.764,-0.824,-0.06
+Stone Furrey,WR,South Carolina,SEC,1,-0.718,-0.77,-0.052,,,,-0.718,-0.699,0.019
+DJ Black,WR,South Carolina,SEC,3,-0.842,-0.78,0.062,1.023,1.007,-0.016,-0.784,-0.73,0.054
+Monte Harrison,WR,Arkansas,SEC,2,-0.89,-0.792,0.098,,,,-0.89,-0.816,0.074
+Xavier Newsom,TE,Auburn,SEC,1,-0.791,-0.793,-0.002,,,,-0.791,-0.791,-0.0
+Bryson Williams,WR,Michigan State,Big Ten,2,-0.809,-0.806,0.003,,,,-0.809,-0.834,-0.025
+Landon Walker,RB,TCU,Big 12,1,-0.796,-0.812,-0.016,-0.796,-0.767,0.029,,,
+Evan Hampton,RB,Vanderbilt,SEC,1,-0.824,-0.815,0.009,-0.824,-0.779,0.045,,,
+Mike Tyler,TE,South Carolina,SEC,1,-0.832,-0.838,-0.006,,,,-0.832,-0.83,0.002
+Josh Phifer,TE,UCLA,Big Ten,2,-0.85,-0.838,0.012,,,,-0.85,-0.825,0.025
+Nolan Ray,RB,Boston College,ACC,2,-0.839,-0.862,-0.024,-0.998,-1.028,-0.029,-0.101,-0.154,-0.053
+Janiran Bonner,WR,Nebraska,Big Ten,2,-0.857,-0.888,-0.031,-0.962,-0.952,0.01,-0.661,-0.707,-0.046
+Joseph McVay,WR,Vanderbilt,SEC,1,-0.952,-0.907,0.045,,,,-0.952,-0.975,-0.023
+Zamondre Merriweather,WR,Syracuse,ACC,2,-0.868,-0.915,-0.047,,,,-0.868,-0.832,0.036
+Mason Bonner,TE,Michigan,Big Ten,1,-1.104,-0.926,0.178,,,,-1.104,-0.982,0.122
+Jacob Simpson,TE,Minnesota,Big Ten,1,-0.827,-0.933,-0.106,,,,-0.827,-0.911,-0.084
+Danny Edgehille,TE,Boston College,ACC,2,-0.877,-0.934,-0.057,,,,-0.877,-0.928,-0.051
+Ryan Schwendeman,TE,Wisconsin,Big Ten,1,-1.039,-0.945,0.094,-1.039,-1.069,-0.03,,,
+Ashton Locklear,WR,NC State,ACC,3,-1.008,-0.953,0.056,,,,-1.008,-0.95,0.058
+Parker Livingstone,WR,Oklahoma,SEC,2,-1.08,-0.992,0.088,-3.336,-3.297,0.039,1.176,1.217,0.041
+Keelan Smith,WR,Nebraska,Big Ten,1,-0.939,-0.998,-0.059,,,,-0.939,-1.021,-0.082
+Jake Taylor,TE,Duke,ACC,4,-0.934,-1.024,-0.09,,,,-0.934,-1.007,-0.073
+Legend Bey,RB,Ohio State,Big Ten,2,-1.132,-1.066,0.066,-1.132,-1.106,0.026,,,
+Dane Jones,WR,TCU,Big 12,1,-1.162,-1.089,0.073,,,,-1.162,-1.089,0.073
+David Pantelis,WR,Stanford,ACC,1,-1.169,-1.095,0.074,,,,-1.169,-1.138,0.031
+Matthew Klopfenstein,TE,Baylor,Big 12,3,-1.145,-1.105,0.039,,,,-1.145,-1.155,-0.01
+Javen Nicholas,WR,Duke,ACC,1,-0.99,-1.111,-0.121,,,,-0.99,-1.112,-0.122
+Aidan Mizell,WR,UCLA,Big Ten,1,-1.125,-1.117,0.008,,,,-1.125,-1.185,-0.06
+Terry Shelton,WR,TCU,Big 12,2,-1.115,-1.121,-0.006,,,,-1.115,-1.094,0.022
+Bryce Lewis,TE,Boston College,ACC,1,-1.13,-1.124,0.006,,,,-1.13,-1.075,0.055
+James Scott,WR,TCU,Big 12,1,-1.065,-1.149,-0.084,,,,-1.065,-1.095,-0.03
+Micah Mays Jr.,WR,Florida,SEC,1,-1.105,-1.154,-0.049,,,,-1.105,-1.124,-0.019
+Carsyn Baker,RB,Texas A&M,SEC,2,-1.345,-1.249,0.095,0.009,0.031,0.023,-4.198,-4.105,0.093
+Anthony League,RB,California,ACC,2,-1.673,-1.645,0.028,-2.556,-2.526,0.03,-0.853,-0.88,-0.027
+Jacob Butler,WR,Stanford,ACC,1,-1.836,-1.897,-0.061,-1.836,-1.863,-0.027,,,
+Noah Fox-Flores,TE,UCLA,Big Ten,1,-2.568,-2.536,0.032,-4.809,-4.754,0.055,-0.327,-0.351,-0.024
+Sawyer Anderson,QB,Arizona,Big 12,1,-7.549,-7.57,-0.021,,,,-7.549,-7.536,0.013
