@@ -47,7 +47,7 @@ from collections import defaultdict
 import numpy as np
 
 from . import adjust, injuries as inj
-from .collect import P4_CONFERENCES, default_year, write_csv
+from .collect import P4_CONFERENCES, default_year, upcoming_week, write_csv
 
 DEFAULT_MIN_EDGE = 3.0
 # Heavier ridge penalty than the rating tables use: on the 2025 backtest it cut total RMSE
@@ -772,7 +772,7 @@ def main(argv=None):
         return
 
     games = [dict(g, seasonType="regular") for g in client.games(args.year, "regular")]
-    week = args.week or min(g["week"] for g in games if not g.get("completed"))
+    week = args.week or upcoming_week(games)
     weeks = sorted({g["week"] for g in games if g.get("completed") and g["week"] <= week})
     game_rows = [r for w in weeks for r in client.game_advanced_stats(args.year, w, "regular", True)]
     drives = [d for w in weeks for d in client.drives(args.year, w, "regular")] if chosen["tempo"] else None

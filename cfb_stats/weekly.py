@@ -20,7 +20,7 @@ import io
 import os
 
 from . import availability, totals
-from .collect import default_year
+from .collect import default_year, upcoming_week
 
 
 def week_games(client, year, week):
@@ -103,7 +103,7 @@ def main(argv=None):
     args = p.parse_args(argv)
 
     client = CFBDClient(api_key=args.api_key)
-    week = args.week or min(g["week"] for g in client.games(args.year, "regular") if not g.get("completed"))
+    week = args.week or upcoming_week(client.games(args.year, "regular"))
     out_dir = os.path.join(args.out, str(args.year))
     os.makedirs(out_dir, exist_ok=True)
 

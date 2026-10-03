@@ -51,6 +51,30 @@ def default_year(today=None):
     return today.year if today.month >= 8 else today.year - 1
 
 
+def upcoming_week(games, now=None):
+    """First regular-season week with a game still to be played.
+
+    Ignores unfinished games whose kickoff passed more than 2 days ago (postponed or
+    canceled games stay "not completed" forever and would otherwise pin an old week).
+    """
+    now = now or datetime.datetime.now(datetime.timezone.utc)
+    cutoff = now - datetime.timedelta(days=2)
+    weeks = []
+    for g in games:
+        if g.get("completed") or g.get("week") is None:
+            continue
+        start = g.get("startDate")
+        try:
+            kick = datetime.datetime.fromisoformat(start.replace("Z", "+00:00")) if start else None
+        except ValueError:
+            kick = None
+        if kick is None or kick >= cutoff:
+            weeks.append(g["week"])
+    if not weeks:
+        raise ValueError("no upcoming regular-season games found; pass --week")
+    return min(weeks)
+
+
 def p4_teams(fbs_teams, include_notre_dame=False):
     teams = {}
     for t in fbs_teams:

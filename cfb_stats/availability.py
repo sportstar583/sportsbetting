@@ -19,7 +19,7 @@ import unicodedata
 
 import requests
 
-from .collect import default_year
+from .collect import default_year, upcoming_week
 
 FEED_URL = "https://app.hdintelligence.com"
 SKIP_STATUSES = {"available", "exempt"}
@@ -127,7 +127,7 @@ def main(argv=None):
     week = args.week
     if week is None:
         games = client.games(args.year, "regular")
-        week = min(g["week"] for g in games if not g.get("completed"))
+        week = upcoming_week(games)
     path = os.path.join(args.out, str(args.year), f"injuries_week{week}.csv")
     os.makedirs(os.path.dirname(path), exist_ok=True)
     with open(path, "w", newline="") as f:
