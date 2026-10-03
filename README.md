@@ -116,6 +116,9 @@ What goes into a projection:
   season carries over much less after a coaching change), instead of from average
   (`python -m cfb_stats.priors --build <year>` once per season; saved in `data/priors/`). This
   made projected margins more accurate in 2023-2025 but made totals worse, so totals don't use it.
+- **Team home field (spreads only):** on top of the league-wide home edge, each team's own home
+  field (home minus road performance vs the model over 2023-2025, shrunk) is added to projected
+  margins. It made margins more accurate in every season; stadium effects didn't help totals.
 - **Weather:** game-time forecasts from Open-Meteo (free; the CFBD weather endpoint is a paid
   tier) for each stadium. Wind over 10 mph lowers the total by 0.75 points per mph. Wind, rain
   and temperature are shown on the board and in the card notes. Over 2023-2025 the model ran

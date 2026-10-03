@@ -39,6 +39,7 @@ Usage:
 """
 
 import argparse
+import csv
 import math
 import os
 import statistics
@@ -369,7 +370,18 @@ def _ats(margin, spread):
     return margin + spread
 
 
-def board(model, games, lines, min_games=3, spread_model=None, weather=None):
+TEAM_HFA_PATH = os.path.join("data", "priors", "team_home_field.csv")
+
+
+def load_team_hfa(path=TEAM_HFA_PATH):
+    """{team: points of home field beyond the league-wide edge} (see scripts/home_field_backtest.py)."""
+    if not os.path.exists(path):
+        return {}
+    with open(path, newline="") as f:
+        return {r["team"]: float(r["home_edge_pts"]) for r in csv.DictReader(f)}
+
+
+def board(model, games, lines, min_games=3, spread_model=None, weather=None, team_hfa=None):
     """One row per game with a market total; spread columns too when there's a spread.
 
     Spread columns come from spread_model (a lightly shrunk model) when given. weather
@@ -395,6 +407,8 @@ def board(model, games, lines, min_games=3, spread_model=None, weather=None):
         spread, spread_open = consensus_spread(lr)
         best_over, best_over_book, best_under, best_under_book = best_totals(lr)
         shp, sap = spread_model.project(g) if spread_model else (hp, ap)
+        if team_hfa and not g.get("neutralSite"):
+            shp += team_hfa.get(home, 0.0)  # team-specific home field, spreads only
         margin = shp - sap
         done = g.get("homePoints") is not None and g.get("awayPoints") is not None
         spread_edge = None if spread is None else _ats(margin, spread)
@@ -997,7 +1011,7 @@ def main(argv=None):
             print(f"weather: forecasts for {len(weather)} of {len(upcoming)} games")
         except Exception as e:  # weather is optional; never block the board on it
             print(f"weather: forecast unavailable ({e}); no wind correction applied")
-    rows = board(model, upcoming, lines, args.min_games, spread_model, weather)
+    rows = board(model, upcoming, lines, args.min_games, spread_model, weather, load_team_hfa())
 
     path = os.path.join(out_dir, f"totals_week{week}.csv")
     write_csv(path, rows)

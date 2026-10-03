@@ -203,6 +203,19 @@ class TotalsTests(unittest.TestCase):
         self.assertAlmostEqual(off["B"], 0.0)  # one QB all season: no adjustment
 
 
+    def test_team_home_field_moves_spread_only(self):
+        games, rows = synthetic_season()
+        model = TotalsModel(rows, games, alpha=10)
+        g = [{"id": 999, "week": 7, "homeTeam": "A", "awayTeam": "B", "neutralSite": False}]
+        lines = [{"id": 999, "lines": [{"provider": "X", "overUnder": 50, "spread": -3}]}]
+        plain = board(model, g, lines, spread_model=model)[0]
+        boosted = board(model, g, lines, spread_model=model, team_hfa={"A": 2.0})[0]
+        self.assertAlmostEqual(boosted["proj_margin"] - plain["proj_margin"], 2.0, places=1)
+        self.assertEqual(boosted["proj_total"], plain["proj_total"])
+        neutral = board(model, [dict(g[0], neutralSite=True)], lines, spread_model=model, team_hfa={"A": 2.0})[0]
+        self.assertEqual(neutral["proj_margin"], board(model, [dict(g[0], neutralSite=True)], lines, spread_model=model)[0]["proj_margin"])
+
+
 class InjuryTests(unittest.TestCase):
     def setUp(self):
         season = [

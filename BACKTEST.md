@@ -327,6 +327,28 @@ only about 12% of it is real (fold estimates -0.07 to 0.30); RMSE didn't improve
 1,093 games with a QB change. A QB's EPA over a few hundred attempts is mostly noise, and the
 team rating already reflects who has been playing. Off by default.
 
+## Home field
+
+The model already has a league-wide home field term (about +0.085 EPA/play for the home
+offense, none at neutral sites). Team-specific home field was tested with
+`scripts/home_field_backtest.py`, fit on two seasons and tested on the third:
+
+- Team home edge = (team's actual-minus-model margin at home - on the road) / 2, shrunk by 12
+  games. Using home minus road cancels out a team the model simply under-rates.
+
+| Spread model margin RMSE | 2023 | 2024 | 2025 |
+| --- | --- | --- | --- |
+| League-wide home field only | 16.94 | 17.51 | 17.61 |
+| + team-specific home field | 16.90 | 17.38 | 17.45 |
+
+ATS edge >= 3 went 50.4% -> 50.1%: more accurate margins, still no betting edge. The largest home
+edges are teams like Hawai'i (opponents cross the Pacific), UTSA, NC State and TCU, plus small
+FCS programs. Used for the spread model's margins (`data/priors/team_home_field.csv`).
+
+Home-stadium scoring effects for totals (does a stadium run high or low vs the model) didn't
+carry over between seasons: RMSE 16.45 -> 16.44, 17.00 -> 17.05, 15.43 -> 15.55, card
+107-83 -> 104-85 (non-neutral games only). Not used.
+
 ## Not backtested
 
 - The conference availability report import itself (which players get listed, and how the
