@@ -5,6 +5,12 @@
 Pulls season stats for every ACC, Big 12, Big Ten and SEC team from the
 [CollegeFootballData API](https://collegefootballdata.com) and writes one row per team to CSV.
 
+### API limits
+
+The free CollegeFootballData tier allows **1,000 calls a month** (check with
+`curl https://api.collegefootballdata.com/info`). A weekly card run uses about 20-40 calls.
+Backtests download whole seasons, so run them with `--cache <dir>` and sparingly.
+
 ### Setup
 
 1. Get a free API key: https://collegefootballdata.com/key
@@ -98,6 +104,13 @@ What goes into a projection:
 - **Tempo (time per play):** from drive data. Each offense's seconds per play, each defense's
   seconds per play allowed, and each team's share of the clock give the plays each side should
   run. A fast offense facing a team that holds the ball (e.g. an option offense) gets fewer plays.
+- **Weather:** game-time forecasts from Open-Meteo (free; the CFBD weather endpoint is a paid
+  tier) for each stadium. Wind over 10 mph lowers the total by 0.75 points per mph. Wind, rain
+  and temperature are shown on the board and in the card notes. Over 2023-2025 the model ran
+  3-4 points high in 15+ mph wind while the market didn't, so books already price it: the
+  correction makes projections slightly more accurate but doesn't change betting results
+  (`python -m cfb_stats.weather --backtest`, results in `data/weather_backtest.csv`).
+  `--no-weather` turns it off.
 - **Not over-rewarding routs of weak teams:** games against FCS opponents count half
   (`--fcs-weight 0.5`). Single games where a team beat its expected EPA by a lot are down-weighted
   (`--huber-k 1.5`, a Huber fit), so a 63-7 win over a bad team moves a rating less than its

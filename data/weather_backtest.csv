@@ -1,0 +1,4 @@
+season,wind_coef,rmse_base,rmse_wind,edge3_base_w,edge3_base_l,card_base_w,card_base_l,edge3_wind_w,edge3_wind_l,card_wind_w,card_wind_l
+2023,-0.61,16.38,16.32,316,268,35,29,312,256,33,30
+2024,-1.07,17.03,17.09,333,284,40,29,315,284,40,29
+2025,-0.65,15.46,15.4,261,254,39,30,262,243,40,29

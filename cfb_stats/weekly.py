@@ -24,17 +24,13 @@ from . import availability, totals
 from .collect import default_year, upcoming_week
 
 
-def week_games(client, year, week):
-    return [g for g in client.games(year, "regular") if g.get("week") == week]
-
-
 CONFERENCES = {"B10": "Big Ten", "SEC": "SEC", "ACC": "ACC", "B12": "Big 12"}
 
 
-def current_injuries(client, year, week, out_dir):
+def current_injuries(client, year, week, out_dir, games):
     """Write injuries for this week's games from each conference feed; returns (path or None, note)."""
-    pairs = {frozenset((g["homeTeam"], g["awayTeam"])) for g in week_games(client, year, week)
-             if not g.get("completed")}
+    pairs = {frozenset((g["homeTeam"], g["awayTeam"])) for g in games
+             if g.get("week") == week and not g.get("completed")}
     current, notes = [], []
     for code, label in CONFERENCES.items():
         try:
@@ -51,7 +47,7 @@ def current_injuries(client, year, week, out_dir):
     if not current:
         return None, "; ".join(notes) + "; board built without injuries."
     teams = sorted({b.get("teamDisplayName") for r in current for b in r.get("games") or []})
-    rosters = {t: client.get("/roster", year=year, team=t) for t in teams}
+    rosters = availability.all_rosters(client, year, teams)
     rows = availability.entries(current, rosters)
     path = os.path.join(out_dir, f"injuries_week{week}.csv")
     with open(path, "w", newline="") as f:
@@ -64,12 +60,12 @@ def current_injuries(client, year, week, out_dir):
     return path, note + "".join(f" {n}." for n in notes)
 
 
-def stats_freshness(client, year, week):
+def stats_freshness(client, year, week, games):
     """Note if last week's advanced stats aren't loaded yet (ratings would miss those games)."""
     prev = week - 1
     if prev < 1:
         return ""
-    done = {g["id"] for g in week_games(client, year, prev) if g.get("completed")
+    done = {g["id"] for g in games if g.get("week") == prev and g.get("completed")
             and "fbs" in (g.get("homeClassification"), g.get("awayClassification"))}
     if not done:
         return ""
@@ -94,6 +90,16 @@ def card_markdown(rows, week, year, n, injury_note):
             extras.append(f"injuries {num(r, 'injury_adj'):+.1f}")
         if num(r, "matchup_adj"):
             extras.append(f"run/pass matchup {num(r, 'matchup_adj'):+.1f}")
+        if r.get("dome") == "True":
+            extras.append("dome")
+        elif num(r, "wind_mph") is not None:
+            wx = f"wind {num(r, 'wind_mph'):.0f} mph"
+            if num(r, "precip_in"):
+                wx += f", rain {num(r, 'precip_in'):.2f} in"
+            wx += f", {num(r, 'temp_f'):.0f}F"
+            if num(r, "weather_adj"):
+                wx += f" ({num(r, 'weather_adj'):+.1f})"
+            extras.append(wx)
         moved = ""
         if num(r, "market_open") is not None and num(r, "market_open") != num(r, "market_total"):
             moved = f" (opened {r['market_open']})"
@@ -126,12 +132,13 @@ def main(argv=None):
     args = p.parse_args(argv)
 
     client = CFBDClient(api_key=args.api_key)
-    week = args.week or upcoming_week(client.games(args.year, "regular"))
+    games = client.games(args.year, "regular")
+    week = args.week or upcoming_week(games)
     out_dir = os.path.join(args.out, str(args.year))
     os.makedirs(out_dir, exist_ok=True)
 
     inj_path, inj_note = (None, "Injuries skipped (--no-injuries).") if args.no_injuries else \
-        current_injuries(client, args.year, week, out_dir)
+        current_injuries(client, args.year, week, out_dir, games)
     board_args = ["--year", str(args.year), "--week", str(week), "--out", args.out, "--card", str(args.card)]
     if args.api_key:
         board_args += ["--api-key", args.api_key]
@@ -140,7 +147,7 @@ def main(argv=None):
     with contextlib.redirect_stdout(io.StringIO()):
         totals.main(board_args)
 
-    inj_note += stats_freshness(client, args.year, week)
+    inj_note += stats_freshness(client, args.year, week, games)
     with open(os.path.join(out_dir, f"totals_week{week}.csv")) as f:
         reader = csv.DictReader(f)
         fields, rows = reader.fieldnames, [r for r in reader if r["p4_game"] == "True"]
