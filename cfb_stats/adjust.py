@@ -81,13 +81,19 @@ def observations(game_rows, games):
     return obs
 
 
-def fit(obs, path, count_key, alpha=DEFAULT_ALPHA):
-    """Weighted ridge fit for one metric. Returns (intercept, hfa, off{}, def{}, raw_off{}, raw_def{})."""
+def fit(obs, path, count_key, alpha=DEFAULT_ALPHA, huber_k=None):
+    """Weighted ridge fit for one metric. Returns (intercept, hfa, off{}, def{}, raw_off{}, raw_def{}).
+
+    Rows are weighted by play count times o.get("weight", 1). With huber_k set, the fit is
+    re-run with games whose result lands more than huber_k robust standard deviations from
+    the model's expectation down-weighted (Huber), so a rout of a weak opponent moves a
+    rating less than its raw margin would.
+    """
     rows = []
     for o in obs:
         val, w = _dig(o["stats"], path), _plays(o["stats"], count_key)
         if val is not None and w > 0:
-            rows.append((o["offense"], o["defense"], o["home"], float(val), float(w)))
+            rows.append((o["offense"], o["defense"], o["home"], float(val), float(w) * o.get("weight", 1.0)))
     if not rows:
         return None
 
@@ -106,8 +112,19 @@ def fit(obs, path, count_key, alpha=DEFAULT_ALPHA):
 
     penalty = np.full(X.shape[1], alpha)
     penalty[:2] = 0.0  # don't shrink intercept or home field
-    XtW = X.T * w
-    beta = np.linalg.solve(XtW @ X + np.diag(penalty), XtW @ y)
+
+    def solve(weights):
+        XtW = X.T * weights
+        return np.linalg.solve(XtW @ X + np.diag(penalty), XtW @ y)
+
+    beta = solve(w)
+    if huber_k:
+        for _ in range(5):
+            # Residual noise shrinks with plays, so scale residuals by sqrt(plays).
+            z = (y - X @ beta) * np.sqrt(w)
+            scale = 1.4826 * np.median(np.abs(z)) or 1.0
+            excess = np.abs(z) / (huber_k * scale)
+            beta = solve(w * np.where(excess > 1, 1 / np.maximum(excess, 1e-9), 1.0))
 
     intercept, hfa = beta[0], beta[1]
     adj_off = {t: intercept + beta[2 + idx[t]] for t in teams}
@@ -124,11 +141,15 @@ def fit(obs, path, count_key, alpha=DEFAULT_ALPHA):
     return {"intercept": intercept, "hfa": hfa, "off": adj_off, "def": adj_def, "raw_off": raw_off, "raw_def": raw_def}
 
 
-def fit_all(game_rows, games, alpha=DEFAULT_ALPHA):
+def fit_all(game_rows, games, alpha=DEFAULT_ALPHA, obs_weight=None, huber_k=None):
+    """obs_weight(obs) -> multiplier on that matchup's weight (e.g. less for FCS opponents)."""
     obs = observations(game_rows, games)
+    if obs_weight:
+        for o in obs:
+            o["weight"] = obs_weight(o)
     models = {}
     for name, path, count_key in METRICS:
-        m = fit(obs, path, count_key, alpha)
+        m = fit(obs, path, count_key, alpha, huber_k)
         if m:
             models[name] = m
     return models, obs

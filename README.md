@@ -63,20 +63,57 @@ Notes:
 
 ### Over/under board
 
-`cfb_stats/totals.py` projects each game's total from adjusted EPA/play and pace, then
+`cfb_stats/totals.py` projects each game's total from adjusted EPA/play and tempo, then
 compares it to the market total (median across books from the CFBD `/lines` endpoint):
 
 ```bash
 python -m cfb_stats.totals                     # this week -> data/<year>/totals_week<N>.csv
 python -m cfb_stats.totals --week 6 --min-edge 5
-python -m cfb_stats.totals --year 2025 --backtest
+python -m cfb_stats.totals --injuries injuries.csv
+python -m cfb_stats.totals --year 2025 --backtest --cache .cfbd_cache
 ```
 
-**Read the backtest before betting.** On 2025 (walk-forward from week 4, 1,113 games),
-the edges did not beat closing totals: about 50% at every edge threshold, and worse at
-the biggest edges. They did predict line movement. Totals moved about 0.5-1 point toward
-the model between open and close, but betting the opening number only broke even. Treat
-the board as a screen for early-week numbers worth a closer look, not as a list of picks.
+What goes into a projection:
+
+- **Efficiency:** opponent-adjusted EPA/play for each offense against the other defense, plus home field.
+- **Tempo (time per play):** from drive data. Each offense's seconds per play, each defense's
+  seconds per play allowed, and each team's share of the clock give the plays each side should
+  run. A fast offense facing a team that holds the ball (e.g. an option offense) gets fewer plays.
+- **Not over-rewarding routs of weak teams:** games against FCS opponents count half
+  (`--fcs-weight 0.5`). Single games where a team beat its expected EPA by a lot are down-weighted
+  (`--huber-k 1.5`, a Huber fit), so a 63-7 win over a bad team moves a rating less than its
+  raw margin would. Garbage time is already excluded.
+- **Injuries:** `--injuries file.csv` with columns `team,player,status,side,epa_delta`
+  (template: `injuries.example.csv`). The API has no injury data, so you fill this in from team
+  availability reports. `status` is out/doubtful/questionable/probable or a 0-1 chance of missing
+  the game. For offensive players the impact is estimated from season EPA and usage share against
+  a backup-level player at the position. Defensive players have no per-player EPA, so give
+  `epa_delta` yourself (EPA/play the defense allows with the player out, e.g. `0.02` for a top
+  pass rusher). The `injury_adj` column on the board shows how many points the list moved
+  each total.
+
+**Read the backtest before betting.** Walk-forward (each week projected only from earlier
+games), weeks 4+, games where both teams have 3+ games of data:
+
+| | 2025 (~1,120 games) | 2024 (~1,120 games, out of sample) |
+| --- | --- | --- |
+| Model RMSE (baseline / with tempo + rout damping) | 15.9 / 15.5 | 17.2 / 17.0 |
+| Closing market RMSE | 14.9 | 16.8 |
+| Win % vs closing total, edge >= 3 | 50.0% | 56.8% |
+| Win % vs closing total, edge >= 5 | 49.2% | 56.5% |
+
+Breakeven at -110 is 52.4%. The two seasons disagree, and the plain baseline model also hit
+~55% in 2024, so that season looks like a good year for this style of model, not proof of
+an edge. Tempo is the one addition that improved accuracy in both seasons.
+
+The injury estimate was checked on games where a team's season-to-date starting QB didn't
+play (who actually played stands in for an injury report). The raw estimate overshot by about
+3x, so it is scaled by 0.35, which was fit on 2025. On 2024, out of sample, it left accuracy
+unchanged (RMSE 17.8 either way) and nudged pick rate from 54.2% to 54.9%. Markets already
+move on QB news.
+
+Treat the board as a screen for numbers worth a closer look, not as a list of picks. Per-variant
+results are in `data/<year>/totals_backtest_variants.csv`.
 
 ### Tests
 
