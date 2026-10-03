@@ -310,6 +310,22 @@ coach; CFBD /coaches, saved in `data/priors/`): last season's rating times a new
 Used in the spread priors because the effect is consistent, but it changes little once a few
 games are played. CFBD has head coaches only, not coordinators.
 
+## Transfer portal
+
+Net transfer talent per team (CFBD /player/portal, one call per season, saved in
+`data/priors/`): for each transfer, rating above a typical 3-star (0.80), floored at zero, added
+to the new school and subtracted from the old, split into offense and defense and z-scored.
+Added to the spread priors (leave-one-season-out):
+
+| Spread margin RMSE | 2023 | 2024 | 2025 | ATS edge >= 3 |
+| --- | --- | --- | --- | --- |
+| Priors (last season, returning production, talent, coaching) | 16.72 | 17.32 | 17.46 | 50.3% |
+| + net transfer talent | 16.71 | 17.32 | 17.46 | 50.2% |
+
+The fitted weights were near zero (about 0.002 EPA/play per standard deviation). The 247
+team talent composite already rates the roster including incoming transfers, so the portal adds
+nothing new. Off by default (`USE_TRANSFERS`).
+
 ## Quarterback ratings
 
 Each QB's EPA per pass, shrunk toward the league by 150 attempts; the expected starter is the QB

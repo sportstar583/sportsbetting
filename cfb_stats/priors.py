@@ -33,6 +33,7 @@ from . import adjust
 
 METRICS = ("epa", "rush_epa", "pass_epa")
 USE_COACHES = True  # new-head-coach term in the priors; see BACKTEST.md
+USE_TRANSFERS = False  # net transfer-portal talent term; see BACKTEST.md
 RATING_ALPHA = 150.0  # full-season "final" ratings: plenty of data, light shrinkage
 PRIOR_DIR = os.path.join("data", "priors")
 
@@ -125,11 +126,52 @@ def new_coach_teams(coach_map, year):
     return {t for (t, y), c in coach_map.items() if y == year and coach_map.get((t, y - 1)) not in (None, c)}
 
 
-def features(prev, ret, tal, metric, side, team, new=None):
-    """new: set of teams with a new head coach (None leaves the coaching term out)."""
+OFFENSE_POS = {"QB", "RB", "FB", "WR", "TE", "OL", "OT", "OG", "C", "IOL", "ATH"}
+STAR_RATING = {2: 0.78, 3: 0.84, 4: 0.90, 5: 0.97}  # fallback when a transfer has stars but no rating
+
+
+def portal(client, year, out_dir=PRIOR_DIR):
+    """Transfer portal entries for players moving before `year`'s season (CFBD /player/portal)."""
+    return _cached_csv(os.path.join(out_dir, f"portal_{year}.csv"),
+                       lambda: client.get("/player/portal", year=year),
+                       ["season", "firstName", "lastName", "position", "origin", "destination", "rating", "stars"])
+
+
+def transfer_net(rows):
+    """{team: {"off": z, "def": z}}: talent gained minus lost through the portal, z-scored.
+
+    A transfer's value is how far his transfer rating sits above a typical 3-star (0.80),
+    floored at zero, so a few good transfers outweigh many depth players."""
+    net = {}
+    for r in rows:
+        try:
+            rating = float(r["rating"]) if r.get("rating") not in (None, "") else \
+                STAR_RATING.get(int(float(r.get("stars") or 0)), 0.0)
+        except ValueError:
+            continue
+        value = max(rating - 0.80, 0.0)
+        if not value:
+            continue
+        side = "off" if (r.get("position") or "").upper() in OFFENSE_POS else "def"
+        for team, sign in ((r.get("destination"), 1), (r.get("origin"), -1)):
+            if team:
+                net.setdefault(team, {"off": 0.0, "def": 0.0})[side] += sign * value
+    out = {t: {} for t in net}
+    for side in ("off", "def"):
+        vals = [v[side] for v in net.values()]
+        mu, sd = statistics.mean(vals), statistics.pstdev(vals) or 1.0
+        for t, v in net.items():
+            out[t][side] = (v[side] - mu) / sd
+    return out
+
+
+def features(prev, ret, tal, metric, side, team, new=None, trans=None):
+    """new: set of teams with a new head coach; trans: transfer_net() (None leaves a term out)."""
     p = prev.get(metric, {}).get(side, {}).get(team, 0.0)
     t = tal.get(team, 0.0)
     extra = [] if new is None else [p * (team in new)]
+    if trans is not None:
+        extra.append(trans.get(team, {}).get(side, 0.0))
     if side == "off":
         r = ret.get(team, 0.5)
         return [p, p * (r - 0.5), t] + extra
@@ -142,31 +184,34 @@ def fit_weights(pairs):
     for m in METRICS:
         for side in ("off", "def"):
             X, y = [], []
-            for prev, ret, tal, new, cur in pairs:
+            for prev, ret, tal, new, trans, cur in pairs:
                 for team, val in cur[m][side].items():
-                    X.append(features(prev, ret, tal, m, side, team, new))
+                    X.append(features(prev, ret, tal, m, side, team, new, trans))
                     y.append(val)
             coefs[(m, side)] = np.linalg.lstsq(np.array(X), np.array(y), rcond=None)[0].tolist()
     return coefs
 
 
-def make_priors(prev, ret, tal, coefs, teams, new=None):
-    return {m: {side: {t: float(np.dot(coefs[(m, side)], features(prev, ret, tal, m, side, t, new))) for t in teams}
+def make_priors(prev, ret, tal, coefs, teams, new=None, trans=None):
+    return {m: {side: {t: float(np.dot(coefs[(m, side)], features(prev, ret, tal, m, side, t, new, trans)))
+                       for t in teams}
                 for side in ("off", "def")} for m in METRICS}
 
 
-def season_inputs(client, year, use_coaches=False):
+def season_inputs(client, year, use_coaches=False, use_transfers=False):
     new = new_coach_teams(coaches(client), year) if use_coaches else None
-    return season_ratings(client, year - 1), returning(client, year), talent(client, year), new
+    trans = transfer_net(portal(client, year)) if use_transfers else None
+    return season_ratings(client, year - 1), returning(client, year), talent(client, year), new, trans
 
 
-def build(client, year, train_years, use_coaches=USE_COACHES):
+def build(client, year, train_years, use_coaches=USE_COACHES, use_transfers=None):
     """Priors for `year`, with weights fit on (y-1 -> y) for each y in train_years."""
-    pairs = [(*season_inputs(client, y, use_coaches), season_ratings(client, y)) for y in train_years]
+    use_transfers = USE_TRANSFERS if use_transfers is None else use_transfers
+    pairs = [(*season_inputs(client, y, use_coaches, use_transfers), season_ratings(client, y)) for y in train_years]
     coefs = fit_weights(pairs)
-    prev, ret, tal, new = season_inputs(client, year, use_coaches)
+    prev, ret, tal, new, trans = season_inputs(client, year, use_coaches, use_transfers)
     teams = set(tal) | set(prev.get("epa", {}).get("off", {}))
-    return make_priors(prev, ret, tal, coefs, teams, new), coefs
+    return make_priors(prev, ret, tal, coefs, teams, new, trans), coefs
 
 
 def save_priors(priors, coefs, year, out_dir=PRIOR_DIR):

@@ -216,6 +216,16 @@ class TotalsTests(unittest.TestCase):
         self.assertEqual(neutral["proj_margin"], board(model, [dict(g[0], neutralSite=True)], lines, spread_model=model)[0]["proj_margin"])
 
 
+    def test_transfer_net(self):
+        from cfb_stats.priors import transfer_net
+        rows = [{"position": "QB", "origin": "A", "destination": "B", "rating": "0.95", "stars": "4"},
+                {"position": "CB", "origin": "C", "destination": "B", "rating": "", "stars": "4"},
+                {"position": "WR", "origin": "B", "destination": "", "rating": "0.79", "stars": "3"}]
+        net = transfer_net(rows)
+        self.assertGreater(net["B"]["off"], net["A"]["off"])  # QB went A -> B
+        self.assertGreater(net["B"]["def"], net["C"]["def"])  # 4-star CB went C -> B (stars fallback)
+
+
 class InjuryTests(unittest.TestCase):
     def setUp(self):
         season = [

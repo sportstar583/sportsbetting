@@ -1,0 +1,2503 @@
+season,firstName,lastName,position,origin,destination,rating,stars
+2023,Jamar,Rucks,DL,App State,Kennesaw State,,3
+2023,Joshua,Farmer,DL,Florida State,,,3
+2023,A'Jon,Vivens,RB,Colorado State,,,3
+2023,Michael,Mack,CB,Air Force,,,2
+2023,Nate,Jefferson,WR,Florida International,,,3
+2023,Aaron,Bedgood,WR,Coastal Carolina,,,2
+2023,Elijah,Bean,WR,Baylor,,,3
+2023,Jamil,Burroughs,DL,Alabama,,,4
+2023,Rufus,Harvey,WR,Mississippi State,,,3
+2023,John,Dunmore,WR,Oregon State,,,4
+2023,Jeffrey,Weimer,WR,UNLV,,,3
+2023,Aaryn,Parks,OT,Oklahoma,Oklahoma,,4
+2023,Patrick,Hisatake,LB,California,Hawai'i,,3
+2023,Latrell,McCutchin,CB,USC,Houston,,4
+2023,Kheagian,Heckaman,QB,New Mexico State,,,2
+2023,Joseph,Bruno,RB,Delaware,,,2
+2023,Tre,Siggers,RB,SMU,Incarnate Word,,3
+2023,Derrick,LeBlanc,DL,Oklahoma,UCF,0.9,4
+2023,Tyreke,Johnson,CB,Nebraska,,,5
+2023,Michael,Lynn,IOL,Nebraska,,,3
+2023,Jake,Seibert,K,Ohio State,Northern Illinois,,3
+2023,Jerrod,Gentry,CB,Tennessee,,,2
+2023,Kaleb,Brown,WR,Iowa,Iowa,0.92,4
+2023,Shamari,Simmons,CB,Austin Peay,Arizona State,0.88,3
+2023,Jaren,Lewis,QB,Kansas State,Kent State,,3
+2023,Benjamin,Perry,S,Louisville,,,4
+2023,Travis,Geiger,DL,Coastal Carolina,,,3
+2023,Jordan,Lolohea,EDGE,Washington,,,3
+2023,Anthony,Wilson,S,Georgia Southern,West Virginia,0.87,3
+2023,Johnny,Pergine,LB,Temple,Robert Morris,,2
+2023,Joshua,Jackson Jr.,CB,USC,,,3
+2023,Ben,Ballard,QB,Texas,Florida Atlantic,,2
+2023,Joseph,Church,OT,Fresno State,,,3
+2023,Shawn,Bowman,TE,Maine,Rutgers,0.89,3
+2023,Damir,Abdullah,WR,Colorado State,,,3
+2023,Josh,Moten,CB,Texas A&M,,,4
+2023,Camdyn,Childers,WR,Purdue,,,2
+2023,Nishad,Strother,IOL,East Carolina,Oregon,,3
+2023,Dre,Spriggs,WR,UTSA,UTEP,,3
+2023,Demetrius,Hill,S,Florida International,Illinois,,3
+2023,Davion,Hood,EDGE,East Tennessee State,Temple,,2
+2023,Joe,Perkins,S,Florida International,,,3
+2023,Chayce,Chalmers,S,Virginia,,,3
+2023,Dez,Williams,WR,Wake Forest,Stony Brook,,3
+2023,Tarian,Lee Jr.,LB,Texas A&M,Georgia Southern,,3
+2023,Ethan,Mort,OT,UCF,,,3
+2023,TJ,McDaniel,RB,SMU,Northern Arizona,,3
+2023,Corry,Thomas,CB,Eastern Michigan,,,2
+2023,Mikey,Keene,QB,UCF,Fresno State,0.89,3
+2023,Kainoa,Sayre,RB,Air Force,,,
+2023,Jamontez,Woods,RB,Troy,,,3
+2023,Henry,Ikahihifo,DL,California,Nevada,,2
+2023,Kody,Epps,WR,BYU,,,3
+2023,Levani,Damuni,LB,Stanford,Utah,0.9,4
+2023,Chris,Irvin,QB,Washington State,,,
+2023,Tar'varish,Dawson,WR,Auburn,Colorado,0.88,3
+2023,Joshua,Braun,OT,Florida,Arkansas,0.88,3
+2023,Danny,Valenzuela,IOL,Arizona State,Texas State,0.84,3
+2023,Grant,DuBose,WR,Charlotte,Charlotte,0.89,3
+2023,Jaquayln,Crawford,WR,Arkansas,,,4
+2023,Marcus,Harris,WR,Kent State,,,3
+2023,Jacob,Wahlberg,LB,Purdue,,,3
+2023,Tobias,Braun,OT,Ole Miss,,,3
+2023,Deidrick,Stanley,CB,Middle Tennessee,,,2
+2023,Vincent,Gourley,K,Washington State,,,2
+2023,Devon,Dorsey,WR,Miami (OH),,,3
+2023,Jaylen,Garth,OT,Texas,Houston,0.86,3
+2023,Romello,Watson,IOL,Grambling,Tennessee State,,
+2023,Grant,Page,WR,Colorado,Utah State,0.85,3
+2023,Brent,Jackson,S,Bucknell,,,2
+2023,Antwan,Massie,CB,UAB,,,3
+2023,Gage,Haskin,TE,SMU,,,
+2023,Peter,Warrick,CB,Florida Atlantic,,,3
+2023,Paris,Shand,DL,Arizona,LSU,0.92,4
+2023,Tywone,Malone,DL,Ole Miss,Ohio State,0.89,3
+2023,DeJordan,Mask,S,Texas State,UCF,0.85,3
+2023,Josh,Witt,IOL,Northern State,Indiana,,
+2023,Tyden,Ferris,IOL,Central Michigan,Georgia State,,2
+2023,Noah,Plack,LB,Delaware,UConn,,2
+2023,Chance,Nolan,QB,Oregon State,TCU,0.85,3
+2023,Cameron,Wright,WR,Memphis,,,3
+2023,Casey,Thompson,QB,Nebraska,Florida Atlantic,0.87,3
+2023,Shabazz,Dotson,DL,SMU,,,3
+2023,Ches,Jackson,OT,Colorado State,Ohio,,3
+2023,Graham,Mertz,QB,Wisconsin,Florida,0.9,4
+2023,Deshawn,Woods,IOL,Wyoming,,0.88,3
+2023,Nasir,Pogue,CB,Troy,,,2
+2023,Patrick,McMorris,CB,San Diego State,California,0.9,4
+2023,Jayvaun,Wilson,RB,UNLV,,,4
+2023,Michael,Furtney,OT,Wisconsin,,,3
+2023,Jouvensly,Bazil,RB,Washington State,,,3
+2023,Jaxon,Sawyer,RB,Washington State,,,2
+2023,Michael,Ruttlen Jr.,S,Princeton,,,2
+2023,Rodney,McGraw,EDGE,Penn State,Louisville,0.87,3
+2023,Julien,Simon,LB,USC,Tulsa,,4
+2023,Tahj,Bullock,QB,Virginia Tech,Akron,,3
+2023,Reese,Smith,WR,West Virginia,Liberty,,3
+2023,Jaylen,Johnson,S,Ohio State,Memphis,,3
+2023,Colby,Smith,OT,Auburn,Troy,,3
+2023,Da'Jon,Terry,DL,Tennessee,Oklahoma,0.89,3
+2023,Jace,Feely,K,Arizona State,Colorado,0.78,2
+2023,B.J.,Davis,LB,South Carolina State,East Carolina,0.89,3
+2023,Justin,Williams-Thomas,RB,Tennessee,California,0.89,3
+2023,Luther,Richesson,QB,Cincinnati,,,3
+2023,Jason,Brown,QB,Virginia Tech,Jackson State,,2
+2023,RJ,Perry,OT,Tennessee,South Florida,,3
+2023,Zach,Zimos,S,Arkansas,Louisiana Tech,,3
+2023,Zy,Alexander,CB,SE Louisiana,LSU,0.93,4
+2023,De'Zhaun,Stribling,WR,Washington State,Oklahoma State,0.91,4
+2023,Elijah,Spencer,WR,Charlotte,Minnesota,0.9,4
+2023,Da'Quan,Felton,WR,Norfolk State,Virginia Tech,0.89,3
+2023,Cale,Sanders,CB,Fresno State,SMU,0.87,3
+2023,Bobby,Taylor,CB,Texas A&M,,0.87,3
+2023,Thad,Franklin,RB,Miami,,,4
+2023,Mumu,Bin-Wahad,CB,West Virginia,UConn,,3
+2023,Jimeto,Obigbo,OT,Incarnate Word,Texas State,,2
+2023,Rusty,Staats,OT,Western Kentucky,Texas Tech,0.87,3
+2023,Marshawn,Kneeland,EDGE,Western Michigan,Colorado,0.87,3
+2023,Vito,Calvaruso,K,Wisconsin,,,2
+2023,Darion,Smith,LB,Charlotte,,,3
+2023,Almarion,Crim,OT,Houston,,,3
+2023,Peyton,Dixon,RB,New Mexico,Nevada,,3
+2023,Richard,Torres,QB,Nebraska,,,3
+2023,William,Thomas,OT,New Mexico State,,,2
+2023,Nathanial,Vakos,K,Ohio,Wisconsin,0.79,2
+2023,Malik,Reed,LB,Arizona,,,3
+2023,Tyre,Shelton,WR,Miami (OH),Louisiana Tech,,2
+2023,Joe,Fagnano,PRO,Maine,UConn,,2
+2023,Caleb,Medford,WR,TCU,New Mexico,,3
+2023,Kirmari,Gainous,EDGE,Kansas State,,,3
+2023,Terry,Roberts,CB,Miami,,,3
+2023,Derek,Taylor,ATH,Tennessee,,,3
+2023,Cam,Johnson,CB,Virginia Tech,,,4
+2023,Ian,Fitzgerald,OT,Missouri State,BYU,0.86,3
+2023,Arden,Walker,DL,Missouri,Colorado,0.86,3
+2023,Joe,Andreessen,LB,Bryant,Buffalo,0.85,3
+2023,Charles,Amankwaa,CB,Akron,Rutgers,0.85,3
+2023,Isaiah,Iton,DL,Ole Miss,Rutgers,,3
+2023,Dallan,Wright,WR,Virginia Tech,Jacksonville State,,3
+2023,Billy,Lutui,DL,Sacramento State,Portland State,,2
+2023,Darren,Brown,DL,SMU,Incarnate Word,,3
+2023,Jojuan,Claiborne,CB,Nevada,,,2
+2023,Grayson,McCall,QB,Coastal Carolina,,0.94,4
+2023,Isaiah,Lewis,CB,Colorado,,,4
+2023,Aaron,Moore,WR,Old Dominion,,,2
+2023,Jacob,Katona,DL,Stanford,,,
+2023,JP,Zamora,QB,Washington State,,,3
+2023,Diego,LaMonica,TE,Vanderbilt,,,3
+2023,Jordan,McCloud,QB,Arizona,James Madison,,3
+2023,Luis,Chavarria,IOL,Prairie View A&M,,,3
+2023,Karl,Odrick,DL,Ball State,,,3
+2023,Fitzroy,Gardner,LB,UL Monroe,,,3
+2023,Shoka,Griffin,RB,Ball State,,,2
+2023,Joe,Humphreys,QB,Miami (OH),,,3
+2023,Dion,Hunter,LB,New Mexico,,,2
+2023,Allan,Baugh,DL,Colorado,Valdosta State,,3
+2023,Eddie,Kelly,DL,South Florida,Georgia Tech,,3
+2023,Lorenzo,Styles,WR,Notre Dame,Ohio State,0.9,4
+2023,Landen,King,TE,Auburn,Utah,0.89,3
+2023,Jack,Henderson,S,SE Louisiana,Minnesota,0.89,3
+2023,Deondre,Buford,OT,Kentucky,Cincinnati,0.88,3
+2023,Ajani,Cornelius,OT,Rhode Island,Oregon,0.92,4
+2023,Sebastian,Benjamin,EDGE,Saint Francis (PA),,,
+2023,Mosiah,Nasili-Kite,DL,Maryland,Auburn,0.9,4
+2023,Daquan,Evans,CB,South Florida,,,3
+2023,Garrett,Morris,LB,Pennsylvania,,,2
+2023,Ryan,Selig,LB,Western Michigan,Minnesota,0.88,3
+2023,Corey,Warren,DL,Coastal Carolina,Georgia State,0.79,2
+2023,William,Hardrick,CB,Mississippi State,,,2
+2023,Trenton,Olson,TE,Washington State,,,2
+2023,Kwame,Sutton,OLB,Austin Peay,,,2
+2023,Dante,Walker,EDGE,Western Kentucky,,,3
+2023,Christian,Carter,WR,Pittsburg State,,,2
+2023,Tyrone,Sampson Jr.,IOL,Fresno State,Fresno State,,4
+2023,Marques,Cox,OT,Northern Illinois,Kentucky,0.88,3
+2023,Chauncey,Magwood,WR,Kentucky,UCF,0.86,3
+2023,Hayden,Wolff,QB,Old Dominion,Western Michigan,0.86,3
+2023,Tony,Davis,CB,Duke,,,4
+2023,I'Shawn,Stewart,WR,Eastern Michigan,,,3
+2023,Giovonni,Harper,S,San José State,Texas Southern,,
+2023,Terrell,Tilmon,EDGE,Oregon,Texas Tech,0.86,3
+2023,Bam,Amina,LB,Colorado State,UNLV,,3
+2023,Bailey,Rice,P,Charlotte,,,2
+2023,Brandon,Calloway,CB,Purdue,Georgia Southern,,3
+2023,Aaron,Austin,DL,Colorado,,,3
+2023,Antonio,Webb Jr.,CB,James Madison,,,3
+2023,Joe,Wilkins,CB,Notre Dame,,,3
+2023,Jarret,Doege,QB,Western Kentucky,Troy,,3
+2023,George,Miki-Han,IOL,Colorado State,Lindenwood University,,3
+2023,Ze'Vian,Capers,WR,Auburn,Western Kentucky,,4
+2023,DaeSean,Winston,S,Temple,UAlbany,,3
+2023,Jack,Martin,P,Alabama,Houston,,2
+2023,MJ,Daniels,S,Ole Miss,Southern Miss,,4
+2023,Chandler,Martin,LB,East Tennessee State,Memphis,,2
+2023,John Paul,Richardson,WR,Oklahoma State,TCU,0.89,3
+2023,Terrance,Copper Jr.,WR,East Carolina,,,2
+2023,Rocky,Shelton,LB,Duke,,,3
+2023,Isaiah,Rogers,DL,Central Michigan,,,3
+2023,Aljareek,Malry,S,VMI,Ball State,,
+2023,Braylon,Ryan,DL,Coastal Carolina,,,3
+2023,Antwain,Barham,LB,Memphis,,,3
+2023,Keveionta,Spears,DL,Louisiana Tech,,,3
+2023,Elijah,Howard,CB,Virginia Tech,,,3
+2023,Kahlil,Brantley,TE,Miami,Florida Atlantic,,3
+2023,Cameron,Williams,S,Washington,Georgia Southern,,4
+2023,Andre,Carter,DL,Western Michigan,Indiana,0.93,4
+2023,Mycah,Pittman,WR,Florida State,Utah,0.89,3
+2023,Evan,Branch-Haynes,DL,Arizona,,,3
+2023,Ja'Qurious,Conley,S,North Carolina,,,4
+2023,A'Khoury,Lyde,CB,Wisconsin,,,3
+2023,Blake,Watson,WR,Old Dominion,Memphis,,2
+2023,KeSean,Brown,LB,App State,Marshall,,3
+2023,Edgar,Amaya,IOL,Colorado,,,3
+2023,Allen,Walker,LB,Louisiana Tech,,,3
+2023,Gabriel,Lopez,EDGE,Washington State,New Mexico,,3
+2023,Taylor,Lewis,DL,Arkansas,,,
+2023,Alan,Guerrieri,P,Texas A&M,,,
+2023,Tommy,Brandt,OT,Massachusetts,,,2
+2023,Baba,Conate,LB,Florida International,,,2
+2023,Dylan,Ray,IOL,West Virginia,,,2
+2023,Hassan,Mahasin,WR,San Diego State,,,2
+2023,Arthur,Brathwaite,S,Western Kentucky,Arkansas,0.86,3
+2023,Ian,Mathews,DL,Missouri,,,3
+2023,Daniel,Edwards,CB,Illinois,Western Kentucky,,3
+2023,Vae,Soifua,IOL,BYU,Weber State,,3
+2023,Talique,Allen,S,Western Kentucky,Western Kentucky,,3
+2023,Derek,Spearman,S,UConn,,,3
+2023,Tyler,Wegis,EDGE,Utah,Boise State,,3
+2023,Braxton,Todd,LB,Bowling Green,,,2
+2023,Ali,Fisher,WR,Buffalo,,,3
+2023,Gabe,Stephens,OLB,North Carolina,,,4
+2023,Lideatrick,Griffin,WR,Mississippi State,Mississippi State,,4
+2023,Tiquan,Gilmore,WR,Utah,,,3
+2023,Dallin,Holker,TE,BYU,Colorado State,,3
+2023,Luke,Griffin,OT,Missouri,Purdue,,3
+2023,Joseph,Bearns,TE,Maryland,,,3
+2023,JC,French,QB,Memphis,Georgia Southern,,3
+2023,Marcus,Washington,CB,Georgia,Louisville,0.92,4
+2023,Cam'Ron,Dabney,CB,Kansas,Northern Illinois,,3
+2023,Jimari,Butler,EDGE,Nebraska,,,3
+2023,Jay'Veon,Sunday,RB,Washington,Abilene Christian,,3
+2023,Landon,Rogers,TE,Arkansas,,,3
+2023,Clay,Caudill,TE,Toledo,,,3
+2023,Adrian,Jackson,LB,Oregon,Nevada,,4
+2023,Jeremy,Mack,S,Colorado,,,3
+2023,Demarcus,Gregory,WR,Texas State,,,3
+2023,Trent,Gordon,CB,Arkansas,,,3
+2023,Hamilton,Hall,OT,Ole Miss,Arkansas State,,3
+2023,Cade,Briggs,IOL,Texas Tech,Arizona State,,3
+2023,Audavion,Collins,CB,Mississippi State,Penn State,,3
+2023,Dylan,Dixson,S,Colorado,Missouri State,,3
+2023,Jalen,Hoyle,S,Virginia Tech,,,3
+2023,Earl,Barquet,DL,USC,,,3
+2023,Sam,Davis,IOL,Temple,Robert Morris,,3
+2023,Saint,McLeod,S,West Virginia,,,3
+2023,Clyde,Pinder Jr.,DL,South Florida,,,4
+2023,Darren,Barkins,CB,Oregon,Washington,,3
+2023,Keanon,McNally,OT,Tulane,,,3
+2023,Zeke,Williams,CB,Northern Illinois,,,3
+2023,Damond,Harmon,S,Oklahoma,North Carolina A&T,,4
+2023,Josh,Jerome,DL,Eastern Washington,Hawai'i,,2
+2023,Britton,Williams,K,Georgia Southern,,,2
+2023,Jacoby,Kelly,WR,San Diego State,,,3
+2023,Peter,Delaportas,QB,Boston College,,,3
+2023,Isaiah,Davis,WR,UTSA,,,3
+2023,Caleb,Johnson,OT,Incarnate Word,Texas State,,2
+2023,Marco,Ortiz,LS,Florida,Nebraska,,
+2023,Dasan,McCullough,LB,Indiana,Oklahoma,0.93,4
+2023,Kolby,Morgan,P,Tennessee,Marshall,,2
+2023,Thomas,Haney,IOL,Nevada,,,2
+2023,Nikko,Reed,CB,Colorado,Oregon,0.89,3
+2023,Trevor,Borland,TE,Buffalo,Western Kentucky,,2
+2023,Calvin,Wiggins,WR,SMU,Houston Christian,,3
+2023,Bralyn,Lux,CB,Fresno State,Texas Tech,,2
+2023,EJ,Horton,WR,Marshall,West Virginia,0.88,3
+2023,Donte,Lindsey,S,Massachusetts,,,2
+2023,Jordan,Carroll,WR,UL Monroe,,,
+2023,Simon,Gonzalez,TE,SMU,Texas State,,3
+2023,Aaron,Anderson,WR,Alabama,LSU,0.91,4
+2023,Jantzen,Dunn,S,Ohio State,Kentucky,0.89,3
+2023,Isaac,Ukwu,EDGE,James Madison,Ole Miss,0.89,3
+2023,Rian,Davis,LB,Georgia,UCF,0.89,3
+2023,Quincy,Burroughs,WR,Cincinnati,Wisconsin,0.86,3
+2023,Russell,Corrigan,TE,Boise State,,,3
+2023,Brandon,Warner,S,Memphis,,,3
+2023,Donnovan,Moorer,WR,Texas State,,,2
+2023,Evan,Meyersick,WR,Nebraska,,,2
+2023,Tomiwa,Durojaiye,DL,Kentucky,West Virginia,,3
+2023,Cameron,Junior,OLB,Cincinnati,,,3
+2023,Willie,"Taggart, Jr.",ATH,Florida Atlantic,Western Kentucky,,3
+2023,Demetrius,Watson,DL,South Carolina,,,3
+2023,Devon,Lawrence,RB,North Carolina,,,3
+2023,AJ,Hamilton,CB,South Florida,,,3
+2023,Marlon,Crockett,WR,Memphis,,,3
+2023,Matthew,Weerts,LB,Arizona,,,3
+2023,Derrick,Canteen,CB,Georgia Southern,Virginia Tech,0.9,4
+2023,Calvin,Hart,LB,Illinois,Oregon State,,3
+2023,Bryce,Archie,QB,Coastal Carolina,South Florida,,3
+2023,Tony,Pierce Jr.,SDE,North Dakota State,,,3
+2023,Gavin,Barthiel,LB,Washington State,Utah State,,3
+2023,Jah'von,Grigsby,S,Purdue,,,3
+2023,Chase,Hattley,S,NC State,,,3
+2023,Ethan,Baxter,P,California,,,2
+2023,Kells,Bush,DL,LSU,,,2
+2023,Derrick,Bean,S,Arkansas State,,,3
+2023,Armon,Bethea,IOL,Arizona State,,,3
+2023,Isaiah,Knowles,PRO,Navy,,0.77,2
+2023,Colston,Powers,OT,App State,,,3
+2023,Dom,Foster,ATH,Syracuse,,,3
+2023,Maurice,Edwards,RB,Vanderbilt,,,3
+2023,Jordan,Moore,DL,Charlotte,,,2
+2023,Khiry,Morrison,WR,Louisiana Tech,,,3
+2023,Victor,Jones Jr.,WR,Nebraska,Liberty,,3
+2023,Jaiden,Credle,RB,Northern Illinois,Middle Tennessee,,2
+2023,Shawn,Battle,CB,Boston College,,,3
+2023,Finn,Hogan,WR,Central Michigan,,,2
+2023,Bryson,Whitehead,CB,Charlotte,,,2
+2023,Erick,Cade,OT,Ole Miss,Missouri State,,3
+2023,Jacob,Barlage,QB,Nevada,,,2
+2023,Ben,Postma,TE,Georgia Tech,,,3
+2023,Joseph,Weté,EDGE,Oklahoma,Oklahoma,,4
+2023,Ryan,Young,IOL,Campbell,,,2
+2023,Tanner,Salisbury,LB,UNLV,,0.84,3
+2023,William,Knight,RB,UConn,,,
+2023,Ray,Thornton,S,South Florida,,,3
+2023,James,Foster,QB,Charlotte,,,4
+2023,Zaire,Jackson,CB,Wyoming,,,3
+2023,Gus,McGee,TE,San Diego State,Charlotte,,3
+2023,Markevious,Brown,CB,Ole Miss,Purdue,,4
+2023,Bernock,Iya,CB,Texas State,,,3
+2023,Traeshon,Holden,WR,Alabama,Oregon,0.91,4
+2023,Yousef,Mugharbil,IOL,Colorado,,,4
+2023,Josh,Volk,IOL,Iowa,Northern Iowa,,3
+2023,Shawn,Hardy,WR,Nebraska,,,3
+2023,Jalen,Huff,S,Georgia Tech,,,3
+2023,Christian,Wortham,WR,South Alabama,,,3
+2023,Joriell,Washington,S,Louisiana Tech,,,3
+2023,Miguel,Maldonado,OT,UCF,,,3
+2023,Jonah,Chong,QB,Nevada,,,2
+2023,Damon,Stewart,QB,UAB,,,2
+2023,Cole,Young,OT,Oregon,,,2
+2023,Jacob,Politte,LS,Jackson State,,,2
+2023,Caleb,Burton,WR,Ohio State,Auburn,0.9,4
+2023,Ladarian,Paulk,CB,Memphis,,,3
+2023,Max,Dowling,TE,Kansas,,,2
+2023,Stanley,Lambert,EDGE,Arizona State,,,3
+2023,Kamareon,Williams,TE,Florida International,,,3
+2023,Micah,Bernard,RB,Utah,Utah,,3
+2023,Erron,Bean,DL,Louisiana Tech,,,3
+2023,Oluwaseyi,Omotosho,EDGE,Wyoming,Oregon State,0.89,3
+2023,Jalil,Tucker,CB,Oregon,San Diego State,0.89,3
+2023,Keahnist,Thompson,EDGE,UCF,,,3
+2023,Ahmirr,Robinson,WR,Texas State,,,3
+2023,Jordan,Woolverton,S,Colorado,,,2
+2023,Dontae,McMillan,ATH,Weber State,,,3
+2023,Antonio,Gaines,DL,Charlotte,,,3
+2023,Chayse,Todd,IOL,Houston,Texas State,,3
+2023,John,Blunt Jr.,S,Eastern Kentucky,Texas State,,2
+2023,Cory,Gildersleeve,OLB,Central Michigan,,,2
+2023,Errington,McRae,TE,Memphis,,,3
+2023,Brandon,Savage,CB,Norfolk State,,,
+2023,Kareem,Wilson,DL,Florida Atlantic,,,2
+2023,Elijah,Sabbatini,S,Ole Miss,,,3
+2023,Andre,Stewart,CB,Kentucky,,,3
+2023,Myles,Murao,IOL,Washington,,,4
+2023,Jacob,Long,IOL,Angelo State,Duke,0.84,3
+2023,Sam,Vander Haar,P,Pittsburgh,,,3
+2023,Amahri,McCray,LB,Florida International,,0.8,3
+2023,Milton,Wright,WR,Purdue,,0.88,3
+2023,Damani,Dent,S,Michigan,,,3
+2023,Nace,Washington,LB,Texas State,,,3
+2023,Fletcher,Marshall,CB,East Carolina,,,2
+2023,Zemarion,Harrell,LB,Coastal Carolina,,,3
+2023,Tyler,Brown,IOL,Jackson State,Colorado,0.86,3
+2023,Khalib,Johnson,QB,Louisville,Blinn College,0.84,3
+2023,Kaden,Weatherby,OT,Texas Tech,,,3
+2023,Shane,Cokes,DL,Dartmouth,Colorado,0.88,3
+2023,Larry,Nixon III,LB,North Texas,Auburn,0.88,3
+2023,Jordan,Young,CB,Florida,Cincinnati,0.86,3
+2023,Mike,O'Laughlin,TE,West Virginia,Houston,0.84,3
+2023,Verdis,Brown,DL,Illinois,Campbell,,4
+2023,Kameron,King,IOL,Southern Miss,Houston Christian,,3
+2023,Taj,Butts,RB,Missouri,,,3
+2023,Germie,Bernard,WR,Michigan State,Washington,0.9,4
+2023,Jalen,Holly,WR,Bowling Green,,,3
+2023,Siaosi,Finau,DL,Washington,,,3
+2023,Jeremiah,Caldwell,CB,Louisville,,,4
+2023,Thomas,Le Boucher,OT,Arizona State,Lamar,,2
+2023,Julius,Davis,RB,Wisconsin,,,3
+2023,Chace,Davis,DL,UTSA,,,3
+2023,Justin,Anderson,S,Washington State,,,3
+2023,Jeffrey,M'ba,DL,Auburn,Purdue,0.88,3
+2023,G'Mone,Wilson,CB,East Carolina,Valdosta State,,2
+2023,Raashaan,Wilkins,DL,Illinois,UConn,,3
+2023,Isaiah,Garcia-Castaneda,WR,Nebraska,Nebraska,,2
+2023,Bobby,Duncum,DL,SMU,,,3
+2023,Miles,Posey,EDGE,Charlotte,Hampton,,3
+2023,Jordan,Hudson,WR,TCU,SMU,0.93,4
+2023,Dillon,Wade,OT,Tulsa,Auburn,0.92,4
+2023,Emmanuel,Pregnon,IOL,Wyoming,USC,0.92,4
+2023,Ben,Bryant,QB,Cincinnati,Northwestern,0.88,3
+2023,Isaiah,Rutherford,CB,Arizona,,0.87,3
+2023,Anthony,Queeley,WR,Syracuse,Georgia Southern,,3
+2023,Jacob,Golden,OT,Boise State,New Mexico State,,3
+2023,Chris,Akporoghene,IOL,Tulsa,,,3
+2023,Brenen,Hawkins,WR,Kansas State,Austin Peay,,3
+2023,Lloyd,Willis,OT,Florida State,Marshall,,3
+2023,AJ,Odums,CB,New Mexico,UTEP,,2
+2023,Jeremiah,Wilson,CB,Syracuse,Syracuse,,3
+2023,Anton,Ricumstrict,EDGE,Buffalo,,,3
+2023,Carson,May,QB,Iowa,Coffeyville C.C.,,2
+2023,Matthew,Downing,QB,Louisiana Tech,,,2
+2023,Julius,Barfield,WDE,Florida Atlantic,,,3
+2023,Dainsus,Miller,S,Marshall,,,3
+2023,Jonah,Lytle,CB,Cincinnati,,,3
+2023,JaCorey,Hyder,LB,UTSA,,,3
+2023,Kajuan,Robinson,DL,Texas State,,,3
+2023,Aaron,Gunn,IOL,Louisville,,,3
+2023,Ayodele,Adeoye,LB,Sacramento State,,,4
+2023,Jamond,Gordon,DL,Ole Miss,Ole Miss,,3
+2023,Janaz,Jordan,DL,Colorado,Towson,,3
+2023,Damien,Moore,RB,California,Fresno State,,3
+2023,Noa,Pola-Gates,S,Nebraska,New Mexico,,4
+2023,Devin,Hayes,OT,Jackson State,Middle Tennessee,,3
+2023,Antwon,Jackson,CB,Liberty,,,2
+2023,Aric,Burton,EDGE,West Virginia,,,3
+2023,Kyle,Kelly,OT,Arkansas State,Northern Iowa,,3
+2023,CJ,Moore,WR,Washington State,,,3
+2023,Imari,Jones,CB,Texas Tech,,,3
+2023,Xavier,Lanier,CB,UAB,,,3
+2023,Da'Marcus,Johnson,EDGE,Fresno State,,,3
+2023,DeOnte,Washington,DL,Texas State,,,3
+2023,Braxton,Clark,CB,Nebraska,,,3
+2023,Demetrius,Mauney,S,East Carolina,,,3
+2023,Micah,Bell,RB,Charlotte,Mercer,,3
+2023,Devin,Farrell,QB,Virginia Tech,Rhode Island,,3
+2023,Keaton,Upshaw,TE,Kentucky,Georgia Southern,,3
+2023,Nemo,Squire,RB,East Carolina,Gardner-Webb,,3
+2023,Charlie,Spegal,RB,Indiana,Ball State,,2
+2023,Dane,Jackson,IOL,North Texas,Ohio,,3
+2023,Tyler,Nelome,CB,Southeast Missouri State,Kansas State,,3
+2023,Marvin,Scott III,RB,Florida Atlantic,,,3
+2023,Oakie,Salave'a,S,Colorado,Hawai'i,,3
+2023,Peter,Zamora,QB,Marshall,Tusculum,,3
+2023,Sheldon,Newton,DT,Northern Arizona,Boise State,,2
+2023,Akeem,Smith,DL,Georgia State,Sam Houston,,3
+2023,Lamar,Robinson,OT,Norfolk State,Georgia State,,
+2023,Pierre,Kemeni,CB,Texas State,,,3
+2023,JaCobian,Morgan,QB,Syracuse,,,3
+2023,Treshawn,Chamberlain,LB,Rice,,,2
+2023,Anthony,Bauer,OT,UL Monroe,,,2
+2023,Pierre,Goree,LB,SMU,,,3
+2023,Henry,Gray,S,Florida International,,,4
+2023,Frankco,Gratton,EDGE,Fresno State,,,3
+2023,Tim,Coutras,S,Liberty,,,3
+2023,Jordan,Hanna,LB,Arkansas,,,2
+2023,Bernard,Gooden,DL,Wake Forest,,,3
+2023,Kendall,Abdur-Rahman,WR,Western Kentucky,,,3
+2023,Malik,Cooper,WR,Temple,,,3
+2023,Marcus,Fleming,WR,Maryland,,,4
+2023,Bryce,Grays,S,Washington State,UTSA,,3
+2023,Jordan,Buchanan,CB,Purdue,South Alabama,,3
+2023,Gavin,Forsha,LB,Kansas State,South Alabama,,2
+2023,Cullen,Montgomery,OT,Oklahoma,Memphis,,3
+2023,Naim,Muhammad,CB,West Virginia,,,2
+2023,Kolbe,Cage,LB,Arizona,Southern Miss,,3
+2023,Al-Ma'hi,Ali,S,Saint Francis (PA),Charlotte,,3
+2023,Nigel,Lanier,WR,Tennessee,Grambling,,2
+2023,Keelan,Marion,WR,UConn,BYU,,3
+2023,Junior,Angilau,IOL,Texas,Oregon,0.9,4
+2023,A.J.,Kirk,S,Michigan State,,,3
+2023,David,Hensley,IOL,Texas State,,,3
+2023,Jayden,Lawton,CB,SMU,Laney College,,3
+2023,Brye,Lighon,TE,UNLV,,,3
+2023,Hunter,Stewart,LB,Virginia,,,3
+2023,Victor,Venn,RB,Colorado,,0.85,3
+2023,Connor,Noble,TE,Temple,,,2
+2023,Blair,Conwright,WR,TCU,North Texas,,3
+2023,Deon,Silas,RB,Iowa State,Rhode Island,,3
+2023,Joey,Hobert,WR,Utah Tech,Texas State,,3
+2023,Cedric,Roberts,DL,Oklahoma,,,3
+2023,Demario,King,LB,Washington,,,3
+2023,Sam,Latham,DL,Incarnate Word,Texas State,,2
+2023,Ralph,Frias,OT,Arizona State,Utah State,,3
+2023,Garrett,Braden,LB,Rice,,,2
+2023,Donald,Clay,S,SMU,,,3
+2023,Javonte,Kinsey,WR,Bowling Green,,,3
+2023,Zion,Magalei,LB,Colorado,,0.82,3
+2023,Ta'Shoyn,Johnson,DL,North Texas,,,3
+2023,Terrance,Dixon,WR,Georgia State,,,2
+2023,Anthony,Red,OT,Syracuse,,,3
+2023,Antonio,Hunt,CB,New Mexico,,,3
+2023,Leroy,Bowers,S,Cincinnati,,,3
+2023,Tristan,Allen,LB,Louisiana Tech,,,2
+2023,Ryan,Stubblefield,QB,East Carolina,Incarnate Word,,3
+2023,Yulkeith,Brown,WR,Texas A&M,Tulane,,4
+2023,Shammond,Cooper,LB,Illinois,Akron,,4
+2023,Justin,Lamson,QB,Syracuse,Stanford,,3
+2023,Jack,Kristofek,QB,Arkansas State,,,
+2023,Maximus,Gibbs,IOL,USC,Jackson State,,3
+2023,Casey,Kline,LB,Boise State,Central Oklahoma,,4
+2023,Trey,Laing,EDGE,Southern,Indiana,0.84,3
+2023,Ren,Hefley,QB,Presbyterian,Middle Tennessee,,
+2023,Chike,Nwankwo,LB,Abilene Christian,Liberty,,2
+2023,Cade,Conley,TE,Central Michigan,Marshall,,2
+2023,Marcus,Brown,DL,Howard,Incarnate Word,,2
+2023,Malik,Jones,S,UTSA,,,3
+2023,Myles,Alston,WR,Pittsburgh,,,3
+2023,Simeon,Smith,WR,Michigan,,,
+2023,Trevon,West,WR,Oklahoma,,,3
+2023,Montre,Miller,CB,Kent State,West Virginia,0.9,4
+2023,Malachi,Wideman,WR,Jackson State,,,4
+2023,Shaun,Grayson,TE,UNLV,,,3
+2023,James,Bruce,IOL,UL Monroe,,,2
+2023,Charlie,Kenrich,TE,Purdue,,,3
+2023,Tavier,Williams,S,UL Monroe,,,2
+2023,Jaedyn,McKinstry,TE,Bowling Green,,,3
+2023,Brandon,Buckhaulter,WR,Ole Miss,,,3
+2023,Grant,Gunnell,QB,North Texas,,,3
+2023,Jakairi,Moses,RB,Western Kentucky,,0.79,2
+2023,Altrique,Barlow,OT,TCU,Marshall,,3
+2023,Adarius,Tolliver,OT,Florida Atlantic,,,3
+2023,Kaleb,Peleki,DL,Missouri State,San José State,,2
+2023,Kamell,Smith,QB,Miami (OH),,,3
+2023,DeAunte,Hunter,LB,South Florida,,,3
+2023,NyNy,Davis,WR,Utah State,UL Monroe,,3
+2023,Laakea,Kapoi,OT,San Diego State,San José State,,3
+2023,Knox,Boyd,OT,Charlotte,Lamar,,3
+2023,Jaxon,Garcia,IOL,Utah,,,2
+2023,Amil,Savage,OT,Fresno State,,,2
+2023,Ajani,Carter,CB,Utah State,Baylor,0.87,3
+2023,Keydrain,Calligan,CB,UL Monroe,,,3
+2023,Glover,Cook,RB,Florida Atlantic,,,3
+2023,Kobe,Stewart,WR,Florida Atlantic,,,3
+2023,Elijah,Wroten,IOL,Duke,,,3
+2023,Caron,McNair,IOL,Old Dominion,,,3
+2023,Chayce,Bishop,WR,Ball State,,,3
+2023,Bishop,Davenport,QB,Utah State,South Alabama,,3
+2023,Luis,Cristobal,IOL,Georgia State,Miami,,3
+2023,Preston,Landis,RB,North Texas,Texas A&M,,2
+2023,Brian,Darby,WR,Oklahoma,,,3
+2023,Markus,Allen,WR,Wisconsin,,0.87,3
+2023,Doug,Blue-Eli,DL,TCU,,,3
+2023,Ky,Oday Jr.,WR,Colorado State,,,3
+2023,Ronald,Jackson,S,Akron,,,3
+2023,Nigel,Bethel,CB,Colorado,,,3
+2023,Owen,Daffer,K,East Carolina,,,2
+2023,Nathan,McElroy,QB,Louisville,,,2
+2023,Zyere,Horton,LB,Georgia Southern,,,2
+2023,Haaziq,Daniels,QB,Air Force,,,2
+2023,Mac,Aloisio,OG,BYU,,,2
+2023,Christy,Nkanu,OT,Southern Utah,Washington State,,2
+2023,Branden,Jennings,LB,UCF,,,4
+2023,Jalen,Richmond,WR,Boise State,,,3
+2023,Archer,Trafford,P,Mississippi State,East Carolina,,2
+2023,Grant,Gremel,QB,Indiana,,,2
+2023,Joshua,Wiggins,CB,Colorado,Liberty,,3
+2023,John,Gentry,RB,Utah State,Sam Houston,,3
+2023,Na'Drian,Dizadare,LB,Oklahoma State,,,3
+2023,Javon,Nelson,DL,Memphis,,,3
+2023,Marcayll,Jones,WR,Memphis,,,3
+2023,Amari,Ward,IOL,Jackson State,,,2
+2023,Damel,Hickman,CB,East Carolina,Georgia Southern,,2
+2023,Ricky,Miezan,LB,Stanford,,,3
+2023,Issiah,Nixon,LB,Texas State,,,3
+2023,Tobechi,Okoli,DL,Auburn,,,3
+2023,Collin,Sullivan,WR,Purdue,,,3
+2023,Trejon,Williams,S,Oregon,,,4
+2023,Jack,Tucker,OT,Texas Tech,Liberty,,3
+2023,Logan,Ridolph,OT,Missouri State,App State,,2
+2023,Matt,Robinson,QB,Fresno State,,,3
+2023,Trevor,Pope,WR,Oregon State,Oregon State,,3
+2023,Dante,Wright,WR,Colorado State,Temple,,3
+2023,Marcus,Peterson,WR,Cincinnati,McNeese,,3
+2023,Gavin,Pringle,CB,Bucknell,Georgia State,,
+2023,Evan,Jumper,OT,Furman,Coastal Carolina,,3
+2023,Isaiah,Stewart,WR,Pittsburgh,,,2
+2023,Devin,Nicholson,LB,Missouri,Kent State,,3
+2023,Falentha,Carswell,OT,Ole Miss,Memphis,,3
+2023,Chad,Alexander,RB,New Mexico,,,3
+2023,Gavin,Beerup,PRO,Wyoming,,,3
+2023,Grant,Perry,EDGE,Texas A&M,,,2
+2023,Ron,Tiavaasue,TE,Utah State,,,
+2023,Dashaun,Jerkins,S,Ole Miss,Massachusetts,,3
+2023,Tyler,Mullins,S,Ohio,,,2
+2023,Nigel,Fitzgerald,WR,UConn,,,3
+2023,Chance,Morrow,WR,Louisville,,,3
+2023,DeAndre,Thomas,RB,Kansas,Emporia State,,2
+2023,Elijah,Barclay,WR,Nevada,,,3
+2023,Daron,Allman,LB,Angelo State,UTSA,,2
+2023,Deuce,Palmer,LB,SMU,USC,,3
+2023,Ryan,Rivera,TE,Cal Poly,Louisiana Tech,,2
+2023,Jake,Renfro,IOL,Cincinnati,Wisconsin,0.88,3
+2023,Reggie,Bracy,CB,Iowa,Troy,,3
+2023,Viczaril,Alobwede,EDGE,Massachusetts,North Texas,,2
+2023,Tee,Denson,CB,Purdue,,,3
+2023,Tre,Horner,WR,Washington State,,,2
+2023,Tyler,Buchner,QB,Notre Dame,Alabama,0.88,3
+2023,Parris,Heath,IOL,UAlbany,Massachusetts,,3
+2023,Fatuvalu,Iosefa,CB,California,,,3
+2023,Montana,Lemonious-Craig,WR,Colorado,Arizona,0.91,4
+2023,Hut,Graham,CB,Texas Tech,,,3
+2023,Tyler,Phommachanh,QB,UConn,,,3
+2023,Jacolby,Hewitt,WR,Florida International,,,3
+2023,Dennis,Smith,WR,Eastern Michigan,,,3
+2023,Kevonte,Henry,EDGE,Oklahoma,,,4
+2023,Jarnorris,Hopson,WR,Mississippi State,,,3
+2023,Brian,Balom,S,Miami,Miami,,3
+2023,Darnell,Stephens,LB,Washington State,,,2
+2023,Kwesi,Evans,WR,Temple,,,3
+2023,JQ,Hardaway,CB,Cincinnati,Kentucky,0.91,4
+2023,Brennan,Armstrong,QB,Virginia,NC State,0.91,4
+2023,Bhayshul,Tuten,RB,North Carolina A&T,Virginia Tech,0.89,3
+2023,Tre,Weed,S,Eastern Washington,Nevada,,3
+2023,Thornton,Gentry,OT,NC State,App State,,3
+2023,Aaron,Dumas,RB,Washington,,,3
+2023,Omar,Daniels,CB,Kansas State,Georgia Tech,,3
+2023,Ajou,Ajou,WR,South Florida,,,3
+2023,Simeon,Harris,CB,Colorado,Utah State,,3
+2023,Cadien,Robinson,CB,Tulane,,,3
+2023,Smoke,Bouie,CB,Texas A&M,Georgia,0.92,4
+2023,Kentrell,Marks,RB,Purdue,,,3
+2023,Spencer,Lytle,LB,Wisconsin,,,4
+2023,Avante,Dickerson,CB,Oregon,,,4
+2023,Christian,Rapley,WR,Western Michigan,,,3
+2023,Alvin,Williams,EDGE,Colorado,,,3
+2023,Joe,Moore,EDGE,Arizona State,Washington,0.87,3
+2023,Spencer,Briggs,RB,UNLV,,,2
+2023,Warren,Peeples,LB,Memphis,,,3
+2023,Hunter,Barlow,IOL,Kansas,Stony Brook,,2
+2023,Khatib,Lyles,WR,North Texas,Austin Peay,,3
+2023,John,Sniffen,DL,Fresno State,,,2
+2023,Ja'Marquis,Johnson,WR,Florida Atlantic,,,3
+2023,Naran,Buntin,WR,Kent State,,,3
+2023,Dequan,Stanley,WR,South Florida,,,3
+2023,Deajaun,McDougle,WR,Tulane,,,3
+2023,Max,Banes,OT,Akron,Houston,,3
+2023,K.J.,Cloyd,LB,Louisville,Miami,,3
+2023,Shawn,Holton,CB,Incarnate Word,Texas State,,2
+2023,Christian,Rorie,DL,Duke,Texas State,,3
+2023,Keon,Kindred,OT,Maryland,,,3
+2023,Jackson,Cannon,OT,Mississippi State,Toledo,,3
+2023,Dylan,Lawrence,S,Mississippi State,Southern Miss,,3
+2023,Corbin,Page,TE,West Virginia,,,3
+2023,Dontrell,Jackson,QB,Coastal Carolina,,,3
+2023,Don,Chapman,S,North Carolina,,,3
+2023,Luke,Bottari,QB,Utah,California,,2
+2023,Donovan,Marcus,RB,Ball State,,,3
+2023,Willie,Jones,S,Bowling Green,,,3
+2023,Conner,Long,LB,Kentucky,,,2
+2023,Solomon,Rogers,CB,Charlotte,,,2
+2023,Champion,Johnson,TE,California,,,2
+2023,Kiyaunta,Goodwin,OT,Kentucky,Florida,0.91,4
+2023,Joseph,Amos,OT,Boise State,,,3
+2023,Dylan,Hall,DL,Arizona State,,,3
+2023,Andrell,Barney Jr.,CB,New Mexico,Snow College,,3
+2023,Tim,Moulton,EDGE,Massachusetts,,,2
+2023,Rian,Black,WR,Coastal Carolina,,,3
+2023,Alexander,Honig,QB,TCU,UConn,,3
+2023,Trevion,Sneed,EDGE,SMU,Northwestern State,,3
+2023,JB,Brown,DL,Arizona,Massachusetts,,3
+2023,L'Christian,Smith,WR,Cincinnati,Western Kentucky,,4
+2023,Wayne,Dennis,WR,Northwestern,,,3
+2023,Barrett,Miller,OT,Stanford,California,,3
+2023,Luke,Holcomb,QB,Washington State,,,2
+2023,Dearis,Thomas,LB,Florida Atlantic,,,2
+2023,Jailen,Weaver,DL,Nebraska,,,3
+2023,Weston,Wolff,TE,Maryland,South Florida,,3
+2023,Daron,Gilbert,S,Lafayette,,,
+2023,Kevin,Pyne,OT,Boston College,Rhode Island,,4
+2023,Naivyan,Cargill,TE,Illinois,,,3
+2023,Jevon,Bigelow,RB,Fresno State,,,2
+2023,Alex,Heininger,OT,Central Michigan,,,3
+2023,Khristian,Zachary,EDGE,Liberty,,,3
+2023,Khatavian,Franks,LB,Georgia Tech,,,3
+2023,Deshawn,McCuin,S,TCU,,,3
+2023,Taylor,Thompson,TE,Charlotte,,,3
+2023,Coby,Cavil,WR,UL Monroe,,,3
+2023,Keenan,Speer-Johnson,WR,Nevada,,,3
+2023,Andrew,Sirmon,QB,Washington,,,
+2023,Jackson,LaDuke,LB,Oregon,Nevada,,3
+2023,McKyle,So'oto,LB,California,,,2
+2023,Liam,Dick,OT,Texas State,,,3
+2023,Jordon,Vaughn,RB,Wyoming,,,3
+2023,Dink,Jackson,S,Marshall,,,4
+2023,Hunter,Escorcia,S,Washington State,,,3
+2023,Javion,Hunt,RB,Arkansas,,,3
+2023,Tony,Grimes,WR,Akron,,,2
+2023,Caleb,Coleman,CB,West Virginia,Texas State,,2
+2023,King,Mwikuta,LB,Arkansas State,,,4
+2023,Londyn,Craft,S,Kentucky,,,2
+2023,Isaiah,Azubuike,RB,Arkansas State,,,3
+2023,Mister,Williams,LB,Colorado,Incarnate Word,,3
+2023,Tanner,Davis,S,Massachusetts,New Haven,,2
+2023,Leiris,Manzi,OT,Bowling Green,,,2
+2023,Chace,Cromartie,S,SMU,,,3
+2023,Drew,Carter,QB,Colorado,,,3
+2023,Ralpheal,Marshall,CB,Louisiana Tech,,,3
+2023,Isaiah,Bruce,DL,Iowa,,,3
+2023,Andrew,Mataafa,LB,Utah,South Florida,,3
+2023,Danielson,Ike,IOL,SMU,Missouri State,,3
+2023,Chase,Brewster,QB,Massachusetts,Missouri State,,3
+2023,Clark,Barrington,IOL,BYU,Baylor,0.91,4
+2023,Dominic,Richardson,RB,Oklahoma State,Baylor,0.91,4
+2023,Jaden,Davis,CB,Oklahoma,Miami,0.9,4
+2023,Matthew,Wykoff,IOL,Texas A&M,California,0.89,3
+2023,Jackson,Bailey,LB,UL Monroe,,,3
+2023,Adarious,Jones,DL,Texas A&M,Memphis,,3
+2023,Gavin,McKay,TE,Missouri,Mercer,,3
+2023,Jahmari,Sylvester,OT,Florida International,Bethune-Cookman,,3
+2023,Matt,Myers,QB,Buffalo,,,2
+2023,Austin,Reed,QB,Western Kentucky,Western Kentucky,0.9,4
+2023,Dominic,Eldridge,OT,Nevada,,,3
+2023,Dallas,Walker IV,DL,Texas A&M,,,3
+2023,Matthew,Johnson,IOL,Troy,,,3
+2023,Caymen,Mills,CB,UL Monroe,,,3
+2023,Powell,Gordon,LB,Auburn,,,3
+2023,Jeremiah,Smith,S,Georgia Tech,,,3
+2023,Danny,Lockhart,LB,Ole Miss,,,3
+2023,Cameron,Wire,OT,LSU,Tulane,,3
+2023,Tucker,Dunn,LS,Colgate,Ball State,,2
+2023,Ky,Thomas,RB,Kansas,Kent State,,3
+2023,Kevin,Miniefield,CB,Air Force,,,2
+2023,Caden,Jumper,TE,Washington,,,3
+2023,Lamy,Constant,RB,Toledo,,,3
+2023,Tyrese,Grant,ATH,Wyoming,,,3
+2023,Caine,Savage,CB,Utah,,,3
+2023,Ak’Bar,Shabazz II,CB,Pittsburgh,,0.75,2
+2023,Jalen,Cunningham,DL,Ole Miss,,,3
+2023,Tyus,Fields,CB,Old Dominion,,,4
+2023,Luke,Smith,DL,App State,East Tennessee State,,3
+2023,Sam,Huard,QB,Washington,Cal Poly,0.88,3
+2023,Eric,Wilder,OT,Washington State,,,3
+2023,Maddox,Kopp,QB,Colorado,Miami (OH),,3
+2023,Austin,Goffney,S,Lamar,UL Monroe,,
+2023,Malcolm,Greene,S,Clemson,Virginia,0.88,3
+2023,De'Von,Fox,WR,Temple,Notre Dame College,,3
+2023,R.J.,Roderick,S,South Carolina,,,3
+2023,Grant,Starck,OT,Nevada,Oregon State,0.88,3
+2023,Jamarion,Ellis,EDGE,Georgia State,Alabama A&M,,3
+2023,Bryan,Bradford,RB,Kent State,,,2
+2023,Michael,Fitzgerald,WR,Massachusetts,,,3
+2023,Caleb,Lewis,EDGE,UTSA,,,3
+2023,Deven,Johnson,TE,Utah,,,2
+2023,Deven,Wright,EDGE,Boise State,Texas State,,3
+2023,Andrew,Leak,LB,Middle Tennessee,,,2
+2023,Shakaun,Bowser,LB,Colorado,,,3
+2023,Ryan,Nolan,IOL,Old Dominion,,,3
+2023,Darius,Jackson,CB,Missouri,Texas State,,3
+2023,Quinton,Cooley,RB,Wake Forest,Liberty,,3
+2023,Keyonta,Lanier,WR,New Mexico,,,3
+2023,Mohamed,Toure,WR,Northern Illinois,,,3
+2023,Prince,Green,CB,Illinois,Georgia Southern,,3
+2023,Sayyid,Stevens,LB,Duke,Old Dominion,,3
+2023,Kenyon,Sims,RB,San José State,,,3
+2023,Holden,Willis,WR,South Florida,Middle Tennessee,,3
+2023,Kybo,Jamerson,LB,UAB,,,3
+2023,Malik,Rainey,CB,Cincinnati,,,3
+2023,Kaden,Cobb,QB,Ball State,,,3
+2023,DD,Snyder,S,Illinois,Ball State,,3
+2023,Jace,Yerty,TE,Middle Tennessee,,,3
+2023,Jibrahn,Claude,S,Buffalo,,,3
+2023,Benjamin,Lisk,LS,Toledo,,,2
+2023,Ty,Keyes,QB,Southern Miss,,,3
+2023,River,Gordon,IOL,UTSA,,,3
+2023,Brandon,Higgs,CB,East Carolina,Stony Brook,,2
+2023,Rejhan,Tatum,LB,Boise State,,,3
+2023,Samuel,Green,RB,UNLV,,,3
+2023,Bryson,Jennings,LB,North Carolina,Liberty,,3
+2023,RJ,Orebo,DL,Southern Illinois,Houston Christian,,3
+2023,Logan,Smothers,QB,Nebraska,,,4
+2023,Tristan,Cox,LB,Purdue,,,3
+2023,Jaquan,Lowman,S,App State,,,2
+2023,Azhaun,Dingle,RB,Northern Illinois,,,2
+2023,Sonny,Semeatu,EDGE,Hawai'i,,,3
+2023,Eddie,Heckard,CB,Weber State,BYU,0.91,4
+2023,Ray,Davis,RB,Vanderbilt,Kentucky,0.9,4
+2023,Ketron,Jackson,WR,Arkansas,Baylor,0.9,4
+2023,Braylin,Presley,ATH,Oklahoma State,Tulsa,0.89,3
+2023,Jake,Heimlicher,EDGE,Pennsylvania,UCLA,0.89,3
+2023,Jordan,Phillips,DL,Tennessee,Maryland,0.89,3
+2023,Hunter,Deyo,DL,Iowa State,Bowling Green,,4
+2023,Brad,Harris,IOL,Rutgers,,,3
+2023,Kyle,Toole,QB,Georgia Southern,,,3
+2023,Kameron,Blount,LB,Maryland,,,3
+2023,Jordan,Blackmon,CB,South Florida,,,3
+2023,Genson,Hooper-Price,WR,Northwestern,Coastal Carolina,,3
+2023,Maximus,Fonoti-Maikui,LB,Utah State,,,3
+2023,Ravontae,Holt,DL,Akron,,,2
+2023,Dean,Engram,WR,Wisconsin,,,3
+2023,Johnny,Wilson,DL,Iowa State,,,3
+2023,Jayleen,Record,WR,SMU,Weber State,,3
+2023,Israel,Whitmore,LB,Arkansas State,,,3
+2023,Kiylan,Miller,S,Coastal Carolina,,,3
+2023,Ralph,Walker,CB,LSU,SE Louisiana,,2
+2023,Stone,Snyder,LB,VMI,Virginia Tech,0.87,3
+2023,Jaelen,Gill,WR,Boston College,Fresno State,,5
+2023,Jalen,Frazier,CB,NC State,UNLV,,3
+2023,Jaylin,Mines,S,Toledo,,,3
+2023,Chris,Reed,WR,Utah,,,3
+2023,Khamran,Laborn,WR,Buffalo,,,3
+2023,Romello,Edwards,CB,Tennessee,,,2
+2023,Sione,Finau,IOL,Purdue,Arizona State,,3
+2023,Da'Shon,Ross,LB,Massachusetts,Bethune-Cookman,,2
+2023,Myles,Heard,S,Stephen F. Austin,Louisiana Tech,,2
+2023,BJ,Green,LB,Arizona State,,,3
+2023,Shomari,Lawrence,RB,South Dakota,Florida International,,2
+2023,Anthony,Dunn Jr.,DL,Marshall,,0.79,2
+2023,Daniel,Greek,QB,Mississippi State,Tarleton State,,3
+2023,Naseim,Brantley,WR,Western Illinois,Rutgers,0.89,3
+2023,Kyon,Barrs,DL,Arizona,USC,0.89,3
+2023,Casey,Collier,IOL,Oklahoma State,,,3
+2023,Caziah,Holmes,RB,Penn State,Florida State,,4
+2023,Lyn-J,Dixon,RB,Tennessee,,,4
+2023,Kaleb,Dawson,S,App State,,,2
+2023,Savion,Collins,DL,Florida International,,,3
+2023,Shon,Stephens,CB,West Liberty,,,2
+2023,Lucas,Taylor,OT,Mississippi State,South Alabama,,3
+2023,Jayden,Williams,CB,USC,,0.82,3
+2023,Abdul-Lateef,Audu,CB,Houston,,,2
+2023,Noah,Fenske,OT,Colorado,Southern Illinois,,3
+2023,Jett,Solomon,CB,Utah State,,,3
+2023,Keyon,Henry-Brooks,RB,Louisiana Tech,,,3
+2023,Ahmad,Robinson,CB,Arkansas State,,,3
+2023,Aidan,Lee,WR,California,,,3
+2023,Camden,Sirmon,WR,Washington,,,2
+2023,Ryan,Williams,DL,Colorado,Western Kentucky,,3
+2023,Taequan,Tyler,RB,Boise State,,,
+2023,Jagger,Filippone,OT,Wyoming,,,2
+2023,Bryson,Washington,S,Oklahoma,New Mexico,,4
+2023,Keith,Jones,CB,Western Michigan,,,3
+2023,Caleb,Oppan,EDGE,Duke,,,3
+2023,Caden,Becker,QB,Wyoming,,,3
+2023,Maleek,McNeil,OT,Penn State,,,3
+2023,Malik,Feaster,CB,Florida State,Memphis,,2
+2023,Marcellus,Anderson,IOL,Saginaw Valley State,Massachusetts,,
+2023,Tyler,Morris,ATH,Navy,,,
+2023,Syncere,Massey,DL,Texas Tech,Abilene Christian,,3
+2023,Travis,Collier,CB,Western Kentucky,,,3
+2023,Marvin,Covington,CB,TCU,New Mexico,,3
+2023,Myles,Bell,CB,UConn,Marshall,,3
+2023,Tate,Hallock,ATH,Michigan State,Western Michigan,,3
+2023,Mason,Chambers,S,Iowa State,Incarnate Word,,3
+2023,Jordan,Young,WR,Florida Atlantic,,,3
+2023,Damon,Youngblood,S,Louisiana,North Texas,,3
+2023,Bronson,Barron,QB,Weber State,Western Kentucky,,2
+2023,EJ,Jackson,CB,Marshall,App State,,3
+2023,JD,Coffey,S,Texas,San Diego State,,4
+2023,Rian,Fields,LB,Fresno State,,,2
+2023,James,Quinnelly,DL,Memphis,,,3
+2023,Jamel,Starks,RB,Houston,,,3
+2023,Christian,Curatolo,OT,Boston College,,,2
+2023,Lonyatta,Alexander,WR,Washington,Montana State,,4
+2023,Justin,Prince,S,UTEP,,,2
+2023,Terence,Loville,WR,San José State,,,2
+2023,Kalani,Norris,WR,Georgia Tech,Middle Tennessee,,3
+2023,Ethan,Vasko,QB,Kansas,Coastal Carolina,,3
+2023,Joshua,Pakola,DL,Fresno State,,,4
+2023,Jamarrien,Burt,S,Oklahoma,,,3
+2023,Quae,Drake,LB,UL Monroe,,,3
+2023,Paula,Vaipulu,IOL,Georgia Tech,North Texas,,3
+2023,Colin,Mobley,DL,USC,USC,,3
+2023,Austin,Aune,QB,North Texas,,,3
+2023,Dallas,Craddieth,S,Iowa,Kent State,,3
+2023,Liam,Rempel,EDGE,Northern Illinois,,,3
+2023,Les,Hewitt,CB,Missouri,,,3
+2023,Jesus,Gibbs,DL,Towson,,,3
+2023,Keyshawn,Helton,WR,Florida State,Cincinnati,0.85,3
+2023,Emon,Hill,CB,Kent State,,,3
+2023,Osita,Ekwonu,LB,Notre Dame,,,4
+2023,Mitchell,Sellers,TE,Southern Miss,,,3
+2023,Dustin,Fletcher,QB,Northern Illinois,,,3
+2023,D'Vion,Harris,EDGE,Old Dominion,Colorado,0.87,3
+2023,Harrison,Waylee,RB,Northern Illinois,Wyoming,,2
+2023,Marquis,Black,DL,Nebraska,Western Kentucky,,3
+2023,Keleki,Latu,TE,California,Nevada,,3
+2023,Corey,Collier,CB,Florida,Nebraska,0.89,3
+2023,Jonathan,Mucciolo,IOL,Sacred Heart,Ball State,,
+2023,Samuela,Tuihalamaka,DL,Oklahoma State,San Diego State,,3
+2023,Joko,Willis,LB,Auburn,,,3
+2023,Adrian,Huey,CB,Kentucky,Tulsa,,3
+2023,Tony,Carter,S,Washington State,,,3
+2023,Savion,Herring,IOL,Tennessee,,,3
+2023,James,Carnie,TE,Nebraska,,,3
+2023,Tyler,Magnuson,OT,Syracuse,St. Thomas,,3
+2023,Dax,Courtney,TE,Arkansas,,,3
+2023,Zane,Herring,IOL,Florida State,South Florida,,3
+2023,Nick,Giacolone,LB,New Mexico State,,,2
+2023,Tiger,Peterson,S,Hawai'i,,,3
+2023,Jaden,Navarrette,EDGE,Oregon,,,4
+2023,Jayle,Stacks,RB,Colorado,,0.83,3
+2023,David,Pritchard,WR,Washington,,,2
+2023,Michael,Schneider,S,Air Force,,,
+2023,D'Marion,Alexander,EDGE,Kansas,Illinois State,,3
+2023,Jabril,McNeill,LB,Oregon,,,3
+2023,Justin,Hodges,CB,UCF,Ole Miss,,3
+2023,Kanyon,Walker,CB,Tulane,,,2
+2023,Jake,Kern,QB,Washington,,,2
+2023,Jason,Oliver,CB,Colorado,,,3
+2023,Dawson,Hill,RB,Georgia State,Fayetteville State,,3
+2023,Shawn,Dourseau,S,East Carolina,Northern Arizona,,3
+2023,Tristan,Driggers,S,UL Monroe,UL Monroe,,3
+2023,Kendall,Karr,TE,North Carolina,Coastal Carolina,,3
+2023,Nate,Wyatt,CB,Temple,Old Dominion,,3
+2023,Ismail,Mahdi,RB,Houston Christian,Texas State,,
+2023,Chad,Schuster,OT,Syracuse,Western Michigan,,3
+2023,Josaiah,Stewart,EDGE,Coastal Carolina,Michigan,0.91,4
+2023,Davon,Sears,DL,Texas State,Oklahoma,0.9,4
+2023,Nicholas,Days,LB,Toledo,,,3
+2023,Nathaniel,Beal III,WR,Virginia,,,3
+2023,Talin,Togiai,IOL,BYU,Idaho State,,3
+2023,Christian,Ford,WR,Mississippi State,App State,,2
+2023,Austin,Sullivan,LS,Minnesota,,,2
+2023,Hampton,Fay,QB,Michigan State,,,3
+2023,Keonte,Glinton,CB,Wyoming,New Mexico State,,3
+2023,Austin,Johnson,IOL,Colorado,Charlotte,0.83,3
+2023,Jordan,Palmer,WR,UAB,,,3
+2023,Luke,Marion,S,Utah State,,,3
+2023,Emari,Pait,ATH,Fresno State,,,3
+2023,Chris,Street,RB,California,,,3
+2023,Justin,Macias Jr.,S,UL Monroe,Houston Christian,,3
+2023,Jeremiah,Johnson,RB,Missouri State,,,2
+2023,Christian,Archangel,S,Louisiana Tech,,,3
+2023,Jaylen,Jennings,RB,Bowling Green,,,3
+2023,Owen,Bainbridge,QB,Bowling Green,,,3
+2023,Patrick,Foley,P,Arkansas,,,2
+2023,Jaquez,Yant,RB,Nebraska,Florida A&M,,3
+2023,Josiah,Robinson,LB,Coastal Carolina,Georgia State,,3
+2023,Thomas,Davis,EDGE,Miami,App State,,3
+2023,Walter,Reynolds,S,Holy Cross,Ohio,,2
+2023,Tyler,Bride,CB,Georgia Southern,Minnesota,0.85,3
+2023,Mario,Anderson Jr.,RB,Newberry,South Carolina,0.88,3
+2023,EJ,Wilson,RB,Florida International,Temple,,3
+2023,Derrick,Brown,LB,Texas,Texas State,0.87,3
+2023,Anthony,Rose,S,South Carolina,,,4
+2023,Lolani,Langi,LB,Utah,,,3
+2023,Cartez,Crook-Jones,DL,Kansas State,Northern Iowa,,3
+2023,Cameron,Wiley,RB,Akron,,,3
+2023,Omari,Walker,WR,Arkansas State,,,3
+2023,Miles,Bailey,DL,Fresno State,,,3
+2023,Cameron,Gillentine,QB,Ball State,,,
+2023,Levi,Wentz,CB,Old Dominion,,,3
+2023,Dominique,Anthony,QB,Old Dominion,,,3
+2023,Darius,Ocean,QB,Western Kentucky,,,2
+2023,Kevin,Williams,IOL,Nebraska,Charlotte,,2
+2023,Joel,DeCoursey,TE,Vanderbilt,Samford,,3
+2023,Nasir,Carter,LB,Florida International,,,3
+2023,Brandon,Gray,WR,Washington State,,,3
+2023,Codey,Martin,CB,UAB,,,2
+2023,Dean,Jones,S,BYU,Southern Utah,,3
+2023,Brett,Gabbert,PRO,Miami (OH),Miami (OH),0.89,3
+2023,Demetrius,Knight,LB,Georgia Tech,,,3
+2023,Jacari,Carter,WR,Merrimack,Georgia State,,
+2023,Jimto,Obidegwu,OT,Temple,Kent State,,3
+2023,Shawn,Munnerlyn,TE,Rutgers,,,3
+2023,Logan,Pili,S,BYU,Utah State,,3
+2023,Raphael,Williams,WR,Western Carolina,San Diego State,0.89,3
+2023,Damion,Charity,S,Old Dominion,,,2
+2023,Matt,Alaimo,TE,Rutgers,Coastal Carolina,,3
+2023,Dontae,Balfour,CB,North Carolina,Charlotte,,3
+2023,Dario,Longhetto,K,California,Arizona State,,
+2023,Fentrell,Cypress,CB,Virginia,Florida State,0.95,4
+2023,Stephen,Sings,WDE,Liberty,Auburn,,3
+2023,Matai,Mata'afa,DL,Mississippi State,,,2
+2023,Harlan,Dixon,RB,Louisiana Tech,,,3
+2023,Ty,Lyles,QB,Coastal Carolina,,,3
+2023,LB,Moore,LB,Texas Tech,,,3
+2023,Kobe,Pepe,DL,USC,,,3
+2023,Diego,Preciado,CB,Stanford,,,2
+2023,Kristian,Pechac,RB,Indiana,,,3
+2023,Taevion,Clarke,LB,Old Dominion,,,3
+2023,Anderson,Grover,WR,Washington State,Sacramento State,,2
+2023,Izaiah,Henderson,DL,Boston College,,,3
+2023,Joseph,Mason,LB,Louisiana Tech,,,3
+2023,Shone,Washington,DL,Georgia,East Mississippi C.C.,0.87,3
+2023,Zo,Wallace,PRO,NC State,,,3
+2023,Zyun,Reeves,DL,NC State,,,3
+2023,Saco,Alofipo,S,Utah State,,,3
+2023,Tony,Grimes,CB,North Carolina,Texas A&M,0.9,4
+2023,Joe,More,OT,Richmond,Syracuse,0.85,3
+2023,Elelyon,Noa,RB,Boise State,,,3
+2023,Konner,Fox,TE,Kansas State,Texas State,,3
+2023,Gage,King,LS,Arizona State,UCF,,2
+2023,Jacob,Knuth,QB,Minnesota,Kansas State,,3
+2023,Titus,Toler,S,Wisconsin,Boise State,,3
+2023,Ethon,Williams,WR,UConn,,,3
+2023,Drew,Moss,IOL,Lamar,Colorado State,,2
+2023,Jaydon,Hodge,S,Pennsylvania,Bethune-Cookman,,3
+2023,Diego,Tello,QB,UTSA,,,3
+2023,Tyler,Baylor,EDGE,Maryland,,,3
+2023,Trae,Hall,WR,New Mexico,,,3
+2023,David,Eure,CB,Air Force,,,3
+2023,Matthew,Thomas,DL,Rhode Island,Colorado State,,3
+2023,Corey,Rucker,WR,South Carolina,Arkansas State,,3
+2023,Gary,Quarles,RB,UNLV,,,2
+2023,ZionAngelo,Shockley,EDGE,Maryland,,,3
+2023,Mario,Eugenio,EDGE,Cincinnati,,,4
+2023,Casey,Case,QB,Buffalo,,,3
+2023,J.J.,Roberts,CB,Wake Forest,Marshall,,3
+2023,Darren,Anders,LB,Bowling Green,Bowling Green,,2
+2023,Langston,Anderson,WR,Oklahoma State,,,4
+2023,Erik,Gray,IOL,Texas Tech,,,3
+2023,Khayri,Banton,LB,Rutgers,,,4
+2023,Jaylin,Tolbert,WR,Georgia State,Stephen F. Austin,,3
+2023,Landry,Lyddy,QB,Louisiana Tech,,,3
+2023,Nate,Adams,OT,Hawai'i,Stephen F. Austin,,3
+2023,Willie,Moise,DL,Coastal Carolina,Coastal Carolina,,3
+2023,Josh,Hough,RB,Syracuse,,,3
+2023,John,Ferlmann,LS,Arizona State,Ohio State,,2
+2023,Ja'Had,Carter,S,Syracuse,Ohio State,0.93,4
+2023,Xavior,Gray,OT,Akron,Liberty,,2
+2023,Victor,Cutler,OT,UL Monroe,Ohio State,0.87,3
+2023,Larry,McCammon,RB,Florida Atlantic,Florida Atlantic,,3
+2023,Ronald,Wilson,S,New Mexico,Incarnate Word,,3
+2023,Keilon,Brown,QB,Georgia State,,,3
+2023,Landon,Parker,WR,Wofford,Troy,,2
+2023,D.J.,Harris Jr.,EDGE,Texas,South Florida,,4
+2023,Jay,Butterfield,QB,Oregon,San José State,,4
+2023,Ke'Travion,Hargrove,RB,Mississippi State,Memphis,,4
+2023,Malik,Jackson,RB,UL Monroe,Jacksonville State,,3
+2023,Daniel,Martin,LB,Vanderbilt,,,4
+2023,Larry,Mounds,OT,Assumption,,,
+2023,Quin,Williams,LB,Georgia Southern,,,3
+2023,Phillip,Hill,S,UNLV,North Texas,,3
+2023,Cassius,Savage,WR,San Diego State,,,3
+2023,Jonzell,Norrils,RB,Akron,,,3
+2023,Luke,Soto,TE,UTEP,,,2
+2023,Zach,Person,TE,Toledo,,,3
+2023,Jaewan,Boyd,WR,Virginia Tech,,,2
+2023,Maquel,Haywood,RB,Navy,App State,,2
+2023,Erin,Outley,TE,Arkansas,,,3
+2023,Eddie,Siaumau,DL,Arizona,,,3
+2023,Mosai,Newsom,DL,Nebraska,,,3
+2023,Dyshier,Clary,DL,Temple,Stony Brook,,3
+2023,Joey,Braasch,RB,Wyoming,,,2
+2023,Shontrail,Key,DL,Arizona,,,3
+2023,Alec,Trujillo,QB,Fresno State,De Anza College,,2
+2023,Brody,Dalton,TE,UAB,,,3
+2023,Trevor,Roberson,OT,Texas Tech,,,3
+2023,Eriq,Gilyard,LB,Kansas,UConn,,3
+2023,Jacob,Bodden,IOL,Liberty,,,2
+2023,Ja'Len,Sims,LB,Memphis,Copiah-Lincoln C.C.,,
+2023,Brett,Griffis,QB,Wake Forest,James Madison,,3
+2023,Desmond,Tisdol,LB,Auburn,Florida Atlantic,,4
+2023,Andres,Fox,EDGE,Fresno State,,,4
+2023,Joe,Horn,IOL,Massachusetts,Maine,,3
+2023,Josh,Cuevas,TE,Cal Poly,Washington,0.9,4
+2023,Jadon,Furubotten,OT,Air Force,Palomar College,,
+2023,Jalani,Williams,S,Missouri,,,4
+2023,Kejuan,Markham,S,Arizona State,,,4
+2023,Mike,York,TE,UAB,,,2
+2023,James,Stewart,DL,Memphis,,,3
+2023,Grayson,Lewis,IOL,East Carolina,,,2
+2023,Demon,Clowney,EDGE,Ole Miss,,,4
+2023,Caden,Holt,LB,UTSA,,,3
+2023,Tyrin,Woodby,CB,West Virginia,,,3
+2023,Jaheim,Singletary,CB,Georgia,Arkansas,0.92,4
+2023,James,Bohls,RB,Arizona,,,3
+2023,Malachai,Jones,WR,Tulsa,,,3
+2023,Dayton,LeBlanc,DL,North Texas,,,3
+2023,Elijah,Young,RB,Missouri,,,3
+2023,Joseph,Stone,IOL,Middle Tennessee,,,2
+2023,Jasiah,Provillon,WR,NC State,,,3
+2023,Kyler,Halvorsen,K,Hawai'i,San José State,,2
+2023,Anthony,Lewis Jr.,WR,Troy,,,3
+2023,Rex,Robich,LS,Mississippi State,,,2
+2023,Caleb,Ducking,WR,Mississippi State,,,3
+2023,Lucien,Brunetti,WR,Tennessee,,,3
+2023,Cameron,Stone,CB,Wyoming,Hawai'i,,3
+2023,Jared,Gipson,WR,Sacramento State,,,2
+2023,Brendan,Farrell,K,Virginia,South Florida,,2
+2023,Jamison,Collier,ATH,Ohio,,,3
+2023,Karlis,Bailey-Vice,EDGE,UCF,,,2
+2023,Elliott,Davison,S,Incarnate Word,UTSA,,2
+2023,Kinkead,Dent,QB,Ole Miss,UT Martin,,3
+2023,Caleb,Banks,DL,Louisville,Florida,0.91,4
+2023,RJ,Adams,IOL,Georgia Tech,Lackawanna College,,3
+2023,Carlton,Brown,TE,Nevada,Cal Poly,,3
+2023,Kenney,Solomon,CB,Tulsa,Tulsa,,3
+2023,Javon,Swinton,WR,Indiana,Eastern Michigan,,3
+2023,Jamarye,Joiner,WR,Arizona,,,3
+2023,Ayir,Asante,WR,Holy Cross,Wyoming,,2
+2023,Nick,Beans,IOL,Notre Dame College,Buffalo,0.83,3
+2023,DC,Tabscott,QB,App State,New Mexico,,3
+2023,JT,Daniels,QB,West Virginia,Rice,,5
+2023,Maceo,Donald,WR,East Carolina,,,2
+2023,Jerry,Rice,K,VMI,East Carolina,,
+2023,Andrew,Henry,RB,UL Monroe,New Mexico,,3
+2023,Kyle,Niese,OG,Air Force,,,
+2023,James,Smyre,LB,Marshall,UAB,,3
+2023,Warren,Thompson,WR,Arkansas,,,4
+2023,Zach,Hahn,WR,Missouri,,,2
+2023,Allan,Haye,DL,Miami,Temple,,3
+2023,Ronnie,Walker,RB,Virginia,,,3
+2023,Luke,Shouse,DL,Ole Miss,,,3
+2023,Von,Killins,CB,Hawai'i,Mississippi Valley State,,3
+2023,Jeffrey,Davis Jr.,CB,Penn State,,,3
+2023,Charles,Daniels,LB,UAB,,,3
+2023,Keontae,Jenkins,ATH,TCU,,,4
+2023,Justin,Lohrenz,EDGE,Washington State,,,3
+2023,Ahmad,Craig,DL,Duke,,,3
+2023,Andrew,Volmar,CB,Florida International,UL Monroe,,3
+2023,Tauskie,Dove,WR,Missouri,Memphis,,3
+2023,Kobe,Pace,RB,Clemson,Virginia,0.88,3
+2023,Antawn,Lewis,OT,South Alabama,,,2
+2023,Vincent,Davis,S,South Florida,,,3
+2023,Davion,Woolen,WR,Oklahoma,,,2
+2023,Isaiah,Watson,CB,Eastern Michigan,,,3
+2023,Logic,Hudgens,CB,Buffalo,Buffalo,,3
+2023,Korbyn,Green,CB,BYU,Hutchinson C.C.,,3
+2023,Marcus,Henderson,OT,Arkansas,Memphis,,4
+2023,Verenzo,Holmes,CB,UTEP,,,2
+2023,Chris,Marshall,WR,Texas A&M,Ole Miss,0.91,4
+2023,Kyi,Wright,TE,Pittsburgh,James Madison,,3
+2023,Dontae,Fleming,WR,Louisiana,Tulane,,3
+2023,D.J.,Burgess,DL,Southern Miss,,,3
+2023,Addison,Penn,IOL,Duke,,,3
+2023,Sione,Moa,ATH,Utah State,,,2
+2023,Henry,Kimmins,S,Washington State,,,2
+2023,Grady,Manley,DL,San José State,,,3
+2023,Malcolm,McClure,LB,California,Nevada,,
+2023,Dallas,Holliday,IOL,Boise State,Portland State,,3
+2023,Desmond,Mamudi,DL,Virginia Tech,Rhode Island,,3
+2023,Isaiah,Perez,SDE,BYU,Eastern Washington,,3
+2023,Noah,Robinson,WR,Old Dominion,,,3
+2023,Johnathan,Riley,S,Oregon State,,,3
+2023,Tunmise,Adeleye,DL,Texas A&M,Michigan State,0.92,4
+2023,Joshua,Cobbs,WR,Wyoming,Houston,0.85,3
+2023,Arland,Bruce IV,WR,Iowa,Oklahoma State,0.9,4
+2023,Gage,Keys,DL,Minnesota,Kansas,0.86,3
+2023,Trill,Carter,DL,Minnesota,Texas,0.88,3
+2023,Ike,White,WR,Minnesota,Charlotte,,3
+2023,Jamir,Roberts,WR,Massachusetts,,,3
+2023,Davis,Brin,QB,Tulsa,Georgia Southern,,3
+2023,Marquis,Robinson,DL,Auburn,,0.88,3
+2023,Teigan,Martin,TE,Liberty,South Florida,,3
+2023,Corey,Prince,DL,Wofford,Davenport,,2
+2023,Kadas,Reams,WR,Temple,,,3
+2023,Tyler,Feldkamp,WR,South Dakota State,,,2
+2023,Janik,Ogunlade,IOL,Buffalo,,,2
+2023,Zaid,Hamdan,DL,James Madison,Southern Illinois,,2
+2023,Randy,Cochran,CB,Akron,,,2
+2023,Tayler,Katoa,LB,USC,,,3
+2023,Derek,Bermudez,CB,Ole Miss,,,3
+2023,Kershawn,Fisher,EDGE,Louisiana Tech,,,3
+2023,Nate,Norris,LB,Lehigh,Georgia State,,
+2023,Titus,Swen,RB,Wyoming,,,3
+2023,Jojo,Bermudez,WR,Cincinnati,,,3
+2023,Jalen,Daniels,QB,South Carolina,,,2
+2023,Luke,Slusher,OT,Western Kentucky,,,3
+2023,Ish,Harris,LB,Texas A&M,Houston,0.89,3
+2023,Keyshawn,Hunter,DL,Old Dominion,,,3
+2023,Elijah,Gainey,QB,South Alabama,,,3
+2023,Ricky,Parks,RB,Utah,,,4
+2023,Austin,Fontaine,IOL,Maryland,,,4
+2023,Jordan,Toles,S,LSU,Morgan State,,4
+2023,Cole,Rusk,TE,Eastern Michigan,,,3
+2023,Kamren,Washington,DL,Memphis,,,
+2023,Shawn,Harris,WR,Stony Brook,Massachusetts,,
+2023,Kameryn,Alexander,CB,Sam Houston,UTSA,,2
+2023,Manny,Stokes,CB,Coastal Carolina,,,3
+2023,Kamren,Blanton,CB,UNLV,Cerritos College,,
+2023,Richard,Thomas,EDGE,Indiana,Florida Atlantic,,3
+2023,Makhi,Jackson,WR,Saint Francis (PA),,,
+2023,Kai,Millner,QB,California,Northern Arizona,,4
+2023,Drew,Donley,WR,Cincinnati,Texas State,,3
+2023,Brandon,Buckner,LB,Oregon,Middle Tennessee,,3
+2023,Ethan,Carde,OT,Texas Tech,Boise State,,3
+2023,Jayon,Venerable,CB,Maryland,,,3
+2023,Jake,Simmons,QB,Robert Morris,,,2
+2023,Juwan,Mitchell,LB,Tennessee,,,3
+2023,Ishmael,Ibraheem,CB,Texas,,,4
+2023,Brylan,Lanier,CB,Indiana,,,3
+2023,Ryan,Nixon,CB,San José State,,,2
+2023,Will,Eaton,WR,Washington State,,,2
+2023,Hagan,Stephenson,S,Marshall,,,2
+2023,Vincent,Davis,RB,Pittsburgh,UNLV,,3
+2023,Ormondell,Dingle,S,Central Michigan,,,3
+2023,Alton,Tarber,DL,Oklahoma,,0.84,3
+2023,Mike,Harris,CB,Baylor,,,3
+2023,TyGee,Leach,S,Lehigh,Georgia State,,
+2023,Tommy,Varhall,OT,Maryland,,,2
+2023,Jordan,Smith,QB,South Florida,,,3
+2023,Ethan,White,IOL,Florida,,0.88,3
+2023,DeMeer,Blankumsee,WR,Toledo,Memphis,,3
+2023,Austin,Mosier,IOL,Old Dominion,,,2
+2023,Kameron,Brown,LB,Auburn,,,3
+2023,Piotr,Partyla,RB,Rutgers,,,
+2023,Donald,Willis,LB,Minnesota,Western Michigan,,3
+2023,Gabe,Cavazos,OT,Mississippi State,Southern Miss,,3
+2023,Keshawn,Washington,S,Miami,,,3
+2023,Tyler,Grubbs,LB,Louisiana Tech,Tulane,,3
+2023,Ray,Eldridge,DT,Richmond,UConn,,2
+2023,Holman,Edwards,QB,Houston,Southern Miss,,
+2023,Carlos,Hatcher,EDGE,Tulane,Coastal Carolina,,3
+2023,Ronald,Nunnery,S,Houston,Florida,0.86,3
+2023,Kenny,Givens,DL,Western Michigan,,,3
+2023,Truman,Jones,EDGE,Harvard,Professional,0.88,3
+2023,Mike,Brown-Stephens,WR,Minnesota,South Florida,,3
+2023,Steve,Linton,EDGE,Syracuse,Texas Tech,0.91,4
+2023,Jalen,Catalon,S,Arkansas,Texas,0.9,4
+2023,Javion,Cohen,IOL,Alabama,Miami,0.94,4
+2023,Turon,Ivy Jr.,TE,Coastal Carolina,,,3
+2023,Levi,Bell,DL,Texas State,Professional,0.89,3
+2023,Roman,Kafentzis,S,Boise State,,,3
+2023,Lorenza,Surgers,DL,Minnesota,,,2
+2023,Isaah,Crocker,WR,Oregon,,,4
+2023,Randy,Holtz,IOL,Indiana,,,3
+2023,Tristan,Michaud,WR,Iowa State,,,3
+2023,Kardell,Thomas,IOL,LSU,,,4
+2023,Andre,Pegues,WR,East Carolina,,,3
+2023,Ely,Doyle,S,Eastern Washington,,,3
+2023,Aaron,Smith,RB,Oregon,,,2
+2023,Jahaad,Scales,S,Old Dominion,,,3
+2023,Craig,Burt,WR,Western Kentucky,,0.81,3
+2023,Jordan,Johnson,WR,UCF,,,5
+2023,Jared,Nedd,LB,Memphis,,,3
+2023,Rod,Orr,OT,Florida State,Toledo,,4
+2023,James,Mott,QB,Colorado,,,2
+2023,Jabbar,Muhammad,CB,Oklahoma State,Washington,0.9,4
+2023,Theron,Stroops,CB,Houston,,,3
+2023,Tyler,Matheny,S,Virginia Tech,,,2
+2023,Malik,Langham,DL,Vanderbilt,Purdue,,4
+2023,Trevion,Shadrick-Harris,CB,UCF,Eastern Washington,,3
+2023,Shyhiem,Scotland,LB,Charlotte,,,3
+2023,Matt,Sykes,WR,UCLA,Rice,,3
+2023,Eric,Rivers,ATH,Memphis,Florida International,,3
+2023,Jimmy,Holiday,WR,Tennessee,Western Kentucky,,3
+2023,Philip,Blidi,DL,Texas Tech,Indiana,0.88,3
+2023,Jerry,Johnson III,RB,Rice,Texas A&M,0.86,3
+2023,Coleman,Coco,SDE,Colgate,Rice,,
+2023,Terence,Fall,WR,BYU,Northern Arizona,,3
+2023,Jacob,Freeman,WR,Georgia State,Alabama State,,3
+2023,Keuan,Parker,CB,Arkansas,Tulsa,,3
+2023,Taj,Harris,WR,Rutgers,,,3
+2023,Desmond,Little,EDGE,LSU,,,3
+2023,Brycen,Huddleston,LB,Eastern Michigan,,,3
+2023,Scott,Valentas,LB,Columbia,,,
+2023,Samuel,Obiang,DL,Texas State,Incarnate Word,,2
+2023,Ruperake,Fuavai,LB,Washington,,,3
+2023,Trey,Blair,RB,Temple,,,3
+2023,Ja'Von,Kimpson,CB,Miami (OH),,,2
+2023,Malone,Mataele,CB,Utah,Utah State,,3
+2023,Kylen,McCracken,DL,Ohio,,,2
+2023,Hunter,Zenzen,LB,Iowa State,North Dakota State,,3
+2023,Jakari,Starling,S,South Dakota,Western Carolina,,2
+2023,Malachi,Russell,WR,Oregon,,,3
+2023,Nay'Quan,Wright,RB,Florida,South Florida,,4
+2023,Omarion,Hammond,DL,Georgia State,,,3
+2023,Justin,Britt,IOL,Iowa,,,3
+2023,Joshua,Eaton,CB,Oklahoma,Texas State,,4
+2023,Trey,Cleveland,WR,Texas Tech,North Texas,,3
+2023,Carlos,Davis,QB,Western Carolina,Massachusetts,,
+2023,Brylan,Noonan,LS,Wagner,Temple,,2
+2023,Dorion,Strawn,IOL,Incarnate Word,Texas State,,2
+2023,Anterrious,Gray,IOL,South Alabama,,,3
+2023,Elijah,Anderson-Taylor,LB,Northern Colorado,Florida International,,2
+2023,Zavier,Leonard,OT,San Diego State,,,3
+2023,Kevin,Swint,EDGE,Clemson,Georgia State,,4
+2023,Steven,Shaw,DL,Louisiana Tech,,,3
+2023,Tyrese,Ross,S,South Carolina,,,3
+2023,Andrew,Osteen,P,UCF,,,2
+2023,Iverson,Clement,CB,Temple,,0.79,2
+2023,Carl,Richardson,PRO,Northwestern,,,3
+2023,Chase,Carter,EDGE,Michigan State,Incarnate Word,,3
+2023,Jaylon,Barden,ATH,Pittsburgh,Georgia Southern,,3
+2023,Antarrius,Moultrie,LB,Florida Atlantic,,,3
+2023,Xzavier,Guyton,CB,New Mexico State,,,2
+2023,Adin,Huntington,DL,Kent State,,,3
+2023,Etinosa,Reuben,DL,Clemson,Georgia Tech,0.88,3
+2023,Justin,Olson,WR,North Carolina,Middle Tennessee,,3
+2023,Khmari,Thompson,WR,Illinois,Arkansas State,,3
+2023,Zy,McDonald,QB,Louisiana,Jackson State,,3
+2023,Kolbe,Fields,LB,LSU,Louisiana Tech,,3
+2023,Colby,Bowman,WR,Stanford,Utah State,,4
+2023,Ozzie,Hoffler,EDGE,Kansas State,Georgia State,,3
+2023,Jack,Hasz,IOL,Buffalo,UNLV,,2
+2023,Chance,Main,EDGE,Colorado,Colorado,0.85,3
+2023,Kenny,Bennett,CB,Georgia Tech,,,3
+2023,Kelvin,Dean,ATH,Florida Atlantic,Florida A&M,,3
+2023,Clayton,Isbell,S,Utah,,,2
+2023,Tyric,Gould,S,Louisiana Tech,,,2
+2023,Tyler,Jackson,LB,Lamar,,,3
+2023,Abraham,Temoney III,CB,Erskine College,Coastal Carolina,,2
+2023,Michael,Purcell,IOL,Duke,Maryland,,2
+2023,Roderick,Roberson Jr.,S,SMU,Louisiana Tech,,3
+2023,Onasis,Neely,RB,Temple,,,3
+2023,Xavier,Hill,IOL,LSU,Memphis,,3
+2023,Cannon,Blauser,LB,Ohio,,,3
+2023,Ashton,Wolff,K,Central Washington,Colorado State,,2
+2023,Moon,Ashby,LB,Washington State,,,3
+2023,Balansama,Kamara,EDGE,Temple,Hutchinson C.C.,,3
+2023,Dan,Volpe,IOL,Duke,,,2
+2023,Tory,Spears,S,Texas State,,,
+2023,Trey,Brown,EDGE,Duke,,,3
+2023,Jonathan,Streeter,CB,App State,Campbell,,3
+2023,Seth,Mason,DT,UL Monroe,,,2
+2023,Quentel,Jones,DL,Kentucky,,,3
+2023,Joshua,Tarango,DL,Ball State,,,3
+2023,Matt,Fries,OT,Illinois,Monmouth,,3
+2023,Jaquez,Pennimon,S,Georgia State,Mississippi Valley State,,3
+2023,Silas,Robinson,IOL,Texas State,,,3
+2023,Cody,Jackson,WR,Houston,,,4
+2023,Jake,Walrath,P,Tarleton State,Central Michigan,,2
+2023,Chandler,Rogers,QB,UL Monroe,North Texas,,
+2023,Dante,Cephas,WR,Kent State,Penn State,0.92,4
+2023,Jaheim,Bell,TE,South Carolina,Florida State,0.94,4
+2023,Ali,Jennings,WR,Old Dominion,Virginia Tech,0.92,4
+2023,DeMario,Tolan,LB,LSU,Auburn,0.9,4
+2023,Brett,Money,K,New Mexico State,,,2
+2023,Brannan,Mannix,S,Colorado State,,,2
+2023,Jake,Blair,QB,Oregon State,,,
+2023,Elijah,Hawk,DL,Western Michigan,,,3
+2023,Michael,Shanahan,OT,Texas Tech,,,2
+2023,Sione,Finau,RB,Purdue,,,3
+2023,DJ,Brown,LB,Charlotte,,,3
+2023,Junior Taase,Faumui,IOL,Hawai'i,,,3
+2023,Xavier,Williams,WR,Utah State,,,4
+2023,Francisco,Castro,LS,Arkansas,,,2
+2023,David,Nwaogwugwu,OT,Rutgers,,,3
+2023,Omar,Sims,DL,Louisiana Tech,,,2
+2023,Jack,Murphy,OT,Marshall,App State,,2
+2023,Josh,Sanguinetti,S,Indiana,Indiana,,4
+2023,Akili,Bonner,EDGE,Wyoming,,,2
+2023,Waydale,Jones,WR,Texas State,,,3
+2023,Michael,Drennen,RB,Kentucky,,,4
+2023,Zack,Taylor,LS,Rutgers,,,2
+2023,Christian,Helms,WR,South Florida,South Florida,,
+2023,Griffin,McDowell,IOL,Florida,,,3
+2023,Jalen,St. John,OT,Arkansas,UNLV,,3
+2023,Immanuel,Hickman,EDGE,East Carolina,South Florida,,3
+2023,Blake,Peterson,DL,Iowa State,South Dakota State,,3
+2023,Sam,McCall,CB,Florida State,Texas A&M,0.92,4
+2023,Miles,Campbell,TE,Tennessee,North Carolina Central,,3
+2023,Tye,Edwards,RB,UTSA,,,3
+2023,Sam,Vidlak,QB,Boise State,Montana,,3
+2023,Jeffrey,Clark,DL,Georgia State,Louisville,0.86,3
+2023,DJ,Harvey,CB,Virginia Tech,San José State,,4
+2023,Jalen,Mitchell,RB,Louisville,UConn,,3
+2023,Trey,Lowe III,QB,Southern Miss,Liberty,,3
+2023,Dominic,Lovett,WR,Missouri,Georgia,0.94,4
+2023,Seth,Keller,K,Texas State,Kansas,,
+2023,Jahleel,Heath,EDGE,Washington,,,2
+2023,Eli,Adams,EDGE,Virginia Tech,North Carolina Central,,3
+2023,Agiye,Hall,WR,Texas,,,5
+2023,Tedi,Kushi,OT,LIU Post,Western Michigan,,2
+2023,Derrick,Lewis,LB,Texas Tech,Incarnate Word,,3
+2023,Kilinahe,Mendiola-Jensen,CB,UNLV,,,3
+2023,Riley,WIlson,WR,Hawai'i,Montana,,3
+2023,Max,Muehlberger,TE,Oklahoma State,,,2
+2023,Kamonte,Grimes,WR,Nebraska,Northern Iowa,,3
+2023,Kyle,Bilodeau,TE,Purdue,,,3
+2023,Kevon,Garcia,EDGE,Arizona,,,3
+2023,Tobe,Umerah,EDGE,Stanford,,,3
+2023,Velltray,Jefferson,LB,Fresno State,,,3
+2023,Jarrett,Paul,S,Kansas,App State,,3
+2023,Chris,Bradberry,OT,Indiana,,,2
+2023,Chase,Lloyd,S,Vanderbilt,Florida A&M,,3
+2023,Michael,Green,LB,Virginia,,,3
+2023,Tyetus,Smith-Lindsey,RB,UAB,,,2
+2023,Demarcus,Gordon,OT,Louisiana Tech,,,3
+2023,Kyle,Cass,CB,Troy,,,3
+2023,Seth,Falley,IOL,Middle Tennessee,,,3
+2023,Judson,Tallandier,CB,Pittsburgh,,,3
+2023,Keon,Markham,CB,Arizona State,,,4
+2023,Dan,Sunderman,IOL,Central Missouri,Eastern Michigan,,2
+2023,Xavier,Graham,IOL,Massachusetts,,,3
+2023,Ryan,Duell,QB,Maryland,,,2
+2023,Micah,Bowens,QB,Oklahoma,,,3
+2023,Zavion,Thomas,WR,Mississippi State,Mississippi State,,4
+2023,Quali,Conley,RB,Utah Tech,San José State,,2
+2023,Seth,Jones,WR,Baylor,South Florida,,3
+2023,Jermaine,Braddock,WR,San José State,Portland State,,3
+2023,Tuasivi,Nomura,LB,USC,Fresno State,,3
+2023,Geordon,Porter,WR,New Mexico,UConn,,3
+2023,Jakari,Norwood,RB,Temple,,,3
+2023,Deland,McCullough II,S,Indiana,,,3
+2023,Taurrian,Stafford,OG,Alabama State,,,3
+2023,Xavier,Hailey,CB,New Mexico,,,3
+2023,Isaac,Pearson,P,Texas,SMU,0.79,2
+2023,Anthony,Williams,RB,UCF,,,3
+2023,Ygenio,Booker,ATH,Tulane,,,3
+2023,Challen,Faamatau,RB,Maryland,,,2
+2023,Jaden,Dottin,WR,Penn State,,,4
+2023,Isaiah,Hazel,WR,Maryland,,,4
+2023,Cortez,Roberts,S,Sacred Heart,,,2
+2023,Diwun,Black,LB,Florida,Temple,,4
+2023,Mason,Arnold,LS,Ohio State,Michigan State,0.78,2
+2023,Owen,Murphy,OT,Akron,East Carolina,,3
+2023,Julius,Pierce,OT,Florida International,Middle Tennessee,,3
+2023,J.T.,Shrout,QB,Colorado,Arkansas State,,3
+2023,Anthonie,Cooper,EDGE,Arizona State,,,3
+2023,Alex,Lines,TE,Arizona,,,3
+2023,Taji,Hudson,WR,East Carolina,James Madison,,3
+2023,Phillip,Webb,LB,LSU,Jackson State,,4
+2023,Johnny,Martin,RB,Charlotte,Stony Brook,,2
+2023,Andrew,Adair,IOL,James Madison,Charlotte,,3
+2023,Jaylen,Joyner,EDGE,Florida Atlantic,Memphis,,3
+2023,Jaquan,Allen,ATH,Villanova,,,3
+2023,Brandon,Wilson,DL,Georgia Southern,,,3
+2023,Armoni,Dixon,LB,Tulane,,,3
+2023,Naiem,Simmons,WR,Wagner,South Florida,,
+2023,Knox,Kadum,QB,McNeese,,,3
+2023,Tom,Snee,P,Oregon,,,2
+2023,Jonathan,Flowe,S,Oregon,,,4
+2023,Jaivian,Lofton,WR,Liberty,,,3
+2023,Itayvion,Brown,LB,Michigan State,,,4
+2023,Phillip,Paea,IOL,Utah State,,,3
+2023,Ali,Barkley,RB,Temple,,,3
+2023,Shamar,Hobdy-Lee,OT,Florida International,,,3
+2023,Demontae,Crumes,WR,Kentucky,,,3
+2023,Jacoby,Sharpe,DL,Temple,Hampton,,3
+2023,Chase,Wolf,QB,Wisconsin,,,3
+2023,Ryan,Campbell,WR,Texas A&M,,,2
+2023,Landon,Morris,TE,Utah,Temple,,3
+2023,Peter,Costelli,QB,Troy,,,4
+2023,Tyler,Devera,TE,Stony Brook,New Mexico State,,3
+2023,Xavier,Van,WR,San Diego,New Mexico,,
+2023,Ahmad,McCullough,LB,Maryland,Washington State,0.85,3
+2023,Contae,Cason,RB,Notre Dame College,,,
+2023,Jared,Wheatley,P,Vanderbilt,,,2
+2023,Daniel,Richardson,QB,Central Michigan,Florida Atlantic,,3
+2023,Greg,Hudgins,EDGE,Purdue,Charlotte,,3
+2023,Jamari,Buddin,LB,Penn State,,,4
+2023,Mykel,Janise,OT,Wyoming,Louisiana Tech,,3
+2023,Kamar,Wilcoxson,S,Florida,Temple,,4
+2023,Ronald,Gilliam,WR,San Diego State,,,3
+2023,John,Griffith,QB,Maryland,Merrimack,,3
+2023,Shawn,Collins,DL,Rutgers,App State,,3
+2023,Jaden,Phillips,DL,New Mexico,Sam Houston,,3
+2023,Jaden,Hullaby,RB,New Mexico,,,3
+2023,Zxaequan,Reeves,CB,Coastal Carolina,,,3
+2023,Davon,Ferguson,CB,Georgia Southern,,,3
+2023,Rodney,Johnson,CB,Alabama,,,3
+2023,Khalil,Anderson,ATH,Pittsburgh,,,3
+2023,McCall,Ray,WR,Indiana,,,2
+2023,Damon,Smith,WR,Oklahoma,,,2
+2023,Michael,Daugherty,S,LSU,,,3
+2023,Aidan,Siano,LB,Rice,Texas A&M,0.83,3
+2023,Carlton,Guidry,WR,Houston,,,3
+2023,Sincere,Brown,WR,South Florida,,,3
+2023,Lem,Watley-Neely,CB,Indiana,Kent State,,3
+2023,Daniel,Robledo,EDGE,Missouri,,,3
+2023,Barry,Wagner,WR,Western Kentucky,,,3
+2023,Brett,Wethington,RB,Indiana,,,
+2023,Tyrin,Smith,WR,Texas A&M,,,2
+2023,Kyndrich,Breedlove,CB,Ole Miss,Colorado,0.87,3
+2023,Samuel,Williams,EDGE,Pittsburgh,,,3
+2023,Jaxen,Turner,S,Arizona,UNLV,,3
+2023,Rasheed,Lyles,DL,Louisiana Tech,,,2
+2023,Blaine,Spires,EDGE,Bowling Green,,,2
+2023,Kivon,Wright,DL,Boston College,Boise State,,3
+2023,Chris,Lewis,WR,Kentucky,Troy,,4
+2023,Eli,Russ,OT,Oklahoma State,Troy,,3
+2023,John,Young,OT,Kentucky,Miami (OH),,4
+2023,Latrell,Neville,WR,North Texas,,,3
+2023,Jordon,Ingram,RB,Auburn,,,3
+2023,Kobe,Lewis,RB,Purdue,Florida Atlantic,,2
+2023,Ashton,Hayes,RB,California,Nevada,,3
+2023,Mattheus,Carroll,WDE,Virginia Tech,Kent State,,3
+2023,Jordan,Mukes,S,Oklahoma,Abilene Christian,,4
+2023,Quaterrius,Tolbert,WR,Middle Tennessee,,,3
+2023,Beau,Corrales,WR,SMU,Texas State,,3
+2023,Zavier,Simpson,WR,Wake Forest,,,2
+2023,Cameron,James,OT,Minnesota,Jackson State,,3
+2023,Tyshon,King,RB,Northern Michigan,,,2
+2023,Larry,Moore,OT,Texas Tech,North Texas,,3
+2023,Rodrigues,Clark,RB,Memphis,Southern Miss,,3
+2023,Reid,Bauer,P,Arkansas,Memphis,,
+2023,Darius,Boone,RB,Eastern Michigan,,,3
+2023,Omarion,Dollison,WR,South Florida,,,3
+2023,Davison,Igbinosun,CB,Ole Miss,Ohio State,0.94,4
+2023,Sam,Hartman,QB,Wake Forest,Notre Dame,0.94,4
+2023,Vershaud,Richardson,LB,Arkansas State,,,3
+2023,Josh,Simmons,IOL,San Diego State,Ohio State,0.91,4
+2023,Zak,Rozsman,QB,Georgia Southern,,,3
+2023,Reid,Dedman,LB,Georgia Southern,Georgia Southern,,2
+2023,Angelo,Butts,WR,Miami (OH),,,3
+2023,Tristan,Shorter,LB,Arkansas State,,,3
+2023,C.J.,Williams,WR,USC,Wisconsin,0.9,4
+2023,Aurion,Peoples,DT,Utah State,,,2
+2023,Demorie,Tate,CB,Florida State,,,5
+2023,Seven,McGee,RB,Oregon,Jackson State,,4
+2023,Storm,Duck,CB,Penn State,Louisville,0.89,3
+2023,Brady,McBride,QB,App State,,,3
+2023,Charles,Strong,RB,Troy,,,3
+2023,Jourdan,Heilig,LB,App State,,,3
+2023,Mario,Wilbourn,LB,Southern Miss,,,3
+2023,Ashanti,Cistrunk,LB,Ole Miss,Ole Miss,,3
+2023,Zykeivous,Walker,DL,Auburn,Auburn,,4
+2023,Jeremiah,Banks-Wall,OT,Bowling Green,,,3
+2023,Mikale,Greer,CB,San José State,Northern Arizona,,3
+2023,Dominic,Gonnella,RB,North Dakota State,South Florida,,2
+2023,Claude,Larkins,EDGE,NC State,Florida International,,3
+2023,Nash,Jones,OT,Incarnate Word,Texas State,,2
+2023,Julius,Welschof,DL,Michigan,Charlotte,,3
+2023,Oliver,Jervis,IOL,Monmouth,Colorado State,,2
+2023,Travion,Ford,EDGE,Missouri,Toledo,,4
+2023,Braden,Smith,WR,Louisville,Cincinnati,,3
+2023,Davonte,Brown,CB,UCF,Miami,0.91,4
+2023,Micah,Mazzccua,IOL,Baylor,Florida,0.9,4
+2023,D'Angelo,McKinnie,TE,East Carolina,Stony Brook,,3
+2023,Jalen,Glaze,S,Minnesota,Florida A&M,,3
+2023,Mariano,Valenti,QB,Temple,Northern Michigan,,3
+2023,Michael,Fletcher,EDGE,Michigan State,App State,,4
+2023,Terrence,Lewis,LB,UCF,,,5
+2023,Avery,Huff,LB,Miami,Florida International,,4
+2023,Saveyon,Henderson,OT,Lane College,Colorado State,,2
+2023,Kole,Wilson,WR,Incarnate Word,Texas State,,2
+2023,Dean,Clark,S,Kent State,Fresno State,,3
+2023,Steven,McBride,WR,Kansas,Hawai'i,,3
+2023,Simeon,Blair,S,Arkansas,Memphis,,2
+2023,Hunter,Herring,QB,Louisiana,,,3
+2023,Isaiah,Woullard,RB,Ole Miss,,,3
+2023,Carson,Walker,IOL,Houston,,,3
+2023,AJ,Watkins,DL,Georgia Southern,,,3
+2023,Antoine,Sampah,LB,LSU,,,4
+2023,Immanuel,Bush,DL,Marshall,,,3
+2023,Nikolai,Bujnowski,IOL,Virginia Tech,Boise State,,2
+2023,Jax,Dineen,RB,Kansas State,,,3
+2023,Jeremiah,Bodwin,LB,Nevada,,,3
+2023,Ronald,Gaines III,LS,Temple,,,2
+2023,Owen,McCown,QB,Colorado,UTSA,,3
+2023,Patrick,Body Jr,WR,Cincinnati,,,3
+2023,Elijah,Yelverton,TE,Iowa,,,3
+2023,Hutson,Lillibridge,IOL,Tulane,,,3
+2023,Michael,Alaimo,QB,Purdue,,,4
+2023,Adonai,Mitchell,WR,Georgia,Texas,0.98,5
+2023,Demouy,Kennedy,LB,Alabama,Colorado,0.91,4
+2023,Taurus,Simmons,EDGE,West Virginia,,,3
+2023,Khiyon,Wafer,WR,Houston,,,3
+2023,Victor,Nelson Jr.,S,LIU Post,Boston College,0.89,3
+2023,Fred,Stokes,EDGE,Central Michigan,,,2
+2023,Josh,Kelly,WR,Fresno State,Washington State,0.87,3
+2023,Ethan,Miner,IOL,Arkansas State,North Texas,,2
+2023,Ademola,Faleye,TE,Norfolk State,Michigan State,0.89,3
+2023,Rush,Lansdell,LB,Memphis,,,3
+2023,Trey,Fite,EDGE,SMU,Louisiana,,3
+2023,Kendarin,Ray,S,Tulsa,Tulsa,,3
+2023,Logan,Guthrie,OLB,Central Michigan,,,2
+2023,Andrew,Cannon,IOL,Nevada,,,2
+2023,DeMarcus,Harris,WR,Kentucky,,,3
+2023,Demarco,Jones,CB,Oklahoma State,Tulsa,,3
+2023,Luke,Wiginton,OT,Indiana,Ball State,,3
+2023,Lucas,Prendergast,WR,Nevada,,,2
+2023,Quaydarius,Davis,WR,Jackson State,,,4
+2023,Ezekiel,Durham-Campbell,EDGE,Lenoir Rhyne,Louisiana Tech,,2
+2023,Jah'mar,Sanders,ATH,New Mexico,Lamar,,3
+2023,Christian,Grubb,RB,UCLA,Portland State,,3
+2023,Crew,Wakley,ATH,Utah State,BYU,,2
+2023,King,Doerue,RB,Purdue,California,,3
+2023,Brian,Plummer,QB,Buffalo,,,3
+2023,Deris,Jackson,DL,Arkansas State,,,3
+2023,Adrian,Shepherd,S,Washington State,Stephen F. Austin,,3
+2023,Chase,Lowery,WR,Arkansas,,,3
+2023,Carson,Casteel,ILB,Michigan State,,,3
+2023,Rafal,Szymanski,EDGE,Houston,,,3
+2023,Xavier,Ward,QB,Washington State,Sam Houston,,3
+2023,Ty,McCullouch,WR,Colorado State,Montana State,,3
+2023,Kalen,Villanueva,LB,Louisiana Tech,,,3
+2023,Daveon,Hunter,RB,Liberty,,,3
+2023,Jalen,Hunt,DL,Michigan State,Houston,0.85,3
+2023,Lakeem,Rudolph,EDGE,Virginia Tech,Campbell,,3
+2023,Will,Crowder,QB,West Virginia,Troy,,3
+2023,Nick,Alftin,DL,California,,,3
+2023,Carl,Biddings,DL,Louisville,Indiana,,2
+2023,Charlie,Weinrich,K,Nebraska,Kansas,,2
+2023,Jacoby,Boykins,WR,Alabama,Abilene Christian,,2
+2023,Jeremiah,Trojan,LB,UCLA,,,3
+2023,Ty,Marsh,S,Hawai'i,Navarro College,,2
+2023,Jeslord,Boateng,LB,Akron,Louisiana Tech,,3
+2023,Eric,Thomas,EDGE,Arkansas,Southern Miss,,3
+2023,TJ,Smith,S,Kansas State,Georgia Southern,,3
+2023,Gerick,Robinson,ATH,Colorado State,Nevada,,3
+2023,Keshon,Artis,LB,Virginia Tech,Northern Illinois,,3
+2023,Daejon,Reynolds,WR,Florida,Pittsburgh,,4
+2023,Dazalin,Worsham,WR,Auburn,UAB,,3
+2023,Zachary,Teter,OT,Virginia,,,3
+2023,Mark,Wilson,CB,Houston,,,3
+2023,Brendan,Hall,K,SMU,Montana State,,3
+2023,J.Michael,Sturdivant,WR,California,UCLA,0.93,4
+2023,Rickey,Smith,LB,Purdue,,,3
+2023,Jacorrei,Turner,S,Arkansas,,,3
+2023,Alex,Berrouet,RB,Colorado State,,,3
+2023,Cameron,Peters,QB,UTSA,,,3
+2023,Dorian,Singer,WR,Arizona,USC,0.92,4
+2023,Justin,Brown,S,Mississippi State,Georgia Tech,,3
+2023,Nate,Glantz,QB,Iowa State,McNeese,,2
+2023,Khairi,Manns,SDE,Maine,Colorado,0.87,3
+2023,Matt,Lawson,DL,Fresno State,,,3
+2023,Errol,Rogers,WR,Louisiana,Liberty,,3
+2023,William,Haskell,QB,San Diego State,,,3
+2023,Al,Ashford III,CB,Wisconsin,,,3
+2023,Orin,Patu,LB,California,Arizona,0.85,3
+2023,Christian,Pedersen,TE,Louisville,Florida International,,3
+2023,Jaden,Bradley,WR,Pittsburgh,Charlotte,,3
+2023,Marquez,Dortch,WR,Mississippi State,California,0.89,3
+2023,Max,Lantzsch,TE,East Carolina,New Mexico,,2
+2023,Jaeden,Gould,CB,Nebraska,Syracuse,0.9,4
+2023,Keegan,Patterson,QB,USC,,,2
+2023,Joey,Hunter,CB,South Carolina,Akron,,3
+2023,Derrick,Davis Jr.,RB,LSU,Pittsburgh,0.89,3
+2023,Micah,Wing,LB,Rutgers,,,3
+2023,Tayvion,Beasley,CB,Colorado,San Diego State,0.86,3
+2023,David,Ndukwe,IOL,Western Kentucky,Houston,0.85,3
+2023,DJ,Uiagalelei,QB,Clemson,Oregon State,0.91,4
+2023,Avyonne,Jones,CB,Wisconsin,Coastal Carolina,,3
+2023,Quan,Lee,WR,UCF,,,3
+2023,Davian,Mayo,LB,Memphis,,,3
+2023,Jahquez,Robinson,CB,Alabama,Colorado,0.86,3
+2023,Denver,Harris,CB,Texas A&M,LSU,0.98,5
+2023,Trey,Amos,CB,Louisiana,Alabama,0.89,3
+2023,Bill,Norton,DL,Georgia,Arizona,0.88,3
+2023,Logan,Diggs,RB,Notre Dame,LSU,0.91,4
+2023,Eli,Stowers,QB,Texas A&M,New Mexico State,,4
+2023,Jaheim,Thomas,LB,Cincinnati,Arkansas,0.89,3
+2023,Rashad,Amos,RB,South Carolina,Miami (OH),,3
+2023,Anthony,Booker,DL,Maryland,Arkansas,0.91,4
+2023,Jalen,Klemm,OT,Kansas State,Washington,,3
+2023,Dion,Wilson,DL,Arizona,New Mexico State,,3
+2023,Tre'Quon,Fegans,CB,Alabama,USC,0.9,4
+2023,Kevin,Coleman,WR,Jackson State,Louisville,0.88,3
+2023,Isaiah,Hamilton,CB,Texas Southern,Houston,0.84,3
+2023,Duce,Chestnut,CB,Syracuse,LSU,0.91,4
+2023,Joshua,Atkins,OT,Houston,Hawai'i,,3
+2023,Casey,Kelly,TE,Ole Miss,Oregon,0.87,3
+2023,JaQues,Evans,EDGE,Western Kentucky,,,3
+2023,Michael,Tarquin,OT,Florida,USC,0.89,3
+2023,Jurriente,Davis,LB,Jackson State,Texas A&M,0.87,3
+2023,Jayvion,Cole,CB,Cal Poly,San José State,,
+2023,Treshaun,Ward,RB,Florida State,Kansas State,0.91,4
+2023,Myles,Rowser,S,Campbell,New Mexico State,,4
+2023,Kendren,Smith,CB,Pennsylvania,,,
+2023,Darian,Varner,DL,Temple,Wisconsin,0.89,3
+2023,Isaiah,Johnson,CB,Arizona State,Arizona State,,4
+2023,Thomas,Gore,DL,Georgia State,Miami,0.89,3
+2023,Sam,Jackson,QB,TCU,California,0.9,4
+2023,Gilber,Edmond,EDGE,South Carolina,Florida State,0.92,4
+2023,Cameron,Broussard,S,Sacramento State,,,3
+2023,Braxton,Myers,S,Ole Miss,Purdue,0.89,3
+2023,Timmy,McClain,QB,South Florida,UCF,0.85,3
+2023,Jake,Roberts,TE,North Texas,Baylor,0.88,3
+2023,Marquez,Cooper,RB,Kent State,Ball State,,3
+2023,Hank,Bachmeier,QB,Boise State,Louisiana Tech,0.87,3
+2023,Zakhari,Franklin,WR,UTSA,Ole Miss,0.91,4
+2023,Nick,Evers,QB,Oklahoma,Wisconsin,0.89,3
+2023,Jordan,Anthony,WR,Kentucky,Texas A&M,,4
+2023,Braylon,Braxton,QB,Tulsa,,,3
+2023,Kobee,Minor,S,Texas Tech,Indiana,0.86,3
+2023,Damien,Alford,WR,Syracuse,Syracuse,,3
+2023,Jaren,Mangham,RB,South Florida,Michigan State,0.87,3
+2023,Collin,Schlee,QB,Kent State,UCLA,0.91,4
+2023,Ryland,Goede,TE,Georgia,Mississippi State,0.87,3
+2023,Kaylin,Moore,ATH,Colorado,California,0.87,3
+2023,Omarion,Cooper,CB,Florida State,Colorado,0.88,3
+2023,Anthony,Jones,EDGE,Oregon,Indiana,,3
+2023,Jake,Garcia,QB,Miami,Missouri,0.9,4
+2023,Malik,McClain,WR,Florida State,Penn State,0.89,3
+2023,Kyle,Ford,WR,USC,UCLA,0.9,4
+2023,Jake,Wiley,IOL,Colorado,UCLA,0.86,3
+2023,Alton,McCaskill,RB,Houston,Colorado,0.91,4
+2023,Nikhai,Hill-Green,LB,Michigan,Charlotte,,3
+2023,Stephen,Dix Jr.,LB,Florida State,Marshall,,4
+2023,Jacolby,Criswell,QB,North Carolina,Arkansas,0.88,3
+2023,Dre,Butler,DL,Liberty,Michigan State,0.85,3
+2023,Vito,Tisdale,S,Kentucky,Colorado,0.88,3
+2023,Blake,Smith,TE,Texas A&M,Oklahoma,0.87,3
+2023,Lorando,Johnson,CB,Baylor,Arkansas,0.89,3
+2023,Davon,Townley,DL,Penn State,,,4
+2023,Daniel,Heimuli,LB,Washington,Arizona,0.86,3
+2023,Mike,Wright,QB,Vanderbilt,Mississippi State,0.86,3
+2023,RJ,Martinez,QB,Northern Arizona,Baylor,0.85,3
+2023,Gavin,Potter,LB,Kansas,Arkansas State,,3
+2023,Derrick,Edwards,CB,Louisville,Louisville,,3
+2023,Dan,Foster,LB,Marshall,Texas State,,3
+2023,Sidney,Fugar,OT,Western Illinois,South Carolina,0.87,3
+2023,Ben,Finley,QB,NC State,California,0.87,3
+2023,Xavier,Smith,S,Colorado,Austin Peay,,3
+2023,Jalen,Satchell,DL,Temple,Old Dominion,,3
+2023,Demarko,Williams,CB,Ole Miss,Ole Miss,,3
+2023,Jyaire,Shorter,WR,North Texas,Auburn,0.9,4
+2023,Jevon,Banks,DL,Mississippi State,Kansas State,0.87,3
+2023,Jalil,Rivera-Harvey,DL,Arizona State,Marshall,,3
+2023,Drew,Pyne,QB,Notre Dame,Arizona State,0.88,3
+2023,Sy'Veon,Wilkerson,RB,Jackson State,Colorado,0.88,3
+2023,Jacob,Conover,PRO,BYU,Arizona State,0.86,3
+2023,Chazz,Wallace,DL,Old Dominion,Colorado,0.85,3
+2023,Zach,Edwards,DL,Louisville,,,3
+2023,Lloyd,Summerall,EDGE,Florida,South Florida,,4
+2023,Christian,Veilleux,QB,Penn State,Pittsburgh,0.88,3
+2023,Jordan,Vincent,S,Eastern Illinois,New Mexico State,,
+2023,Keyshawn,Cobb,S,Buffalo,West Virginia,0.88,3
+2023,Davon,Hicks,LB,South Florida,Washington State,,3
+2023,Xavier,Williams,QB,Charlotte,UCF,0.84,3
+2023,Jack,Bailey,IOL,Kent State,Colorado,0.86,3
+2023,Malik,Hornsby,QB,Arkansas,Texas State,0.89,3
+2023,Dorian,Jones,LB,Louisville,Cincinnati,0.86,3
+2023,Beau,Allen,QB,Tarleton State,Georgia Southern,,3
+2023,Ja'Khi,Green,OT,Maryland,,,3
+2023,Gerald,Green,RB,Georgia Southern,East Carolina,0.87,3
+2023,Chief,Borders,LB,Florida,Nebraska,0.85,3
+2023,Bralon,Brown,WR,Ole Miss,Ole Miss,,4
+2023,Dannis,Jackson,WR,Ole Miss,,,4
+2023,Joshua,Harris,DL,NC State,Ole Miss,0.87,3
+2023,Donovan,Ollie,WR,Washington State,Cincinnati,0.87,3
+2023,Bryce,Cage,EDGE,SE Louisiana,Texas State,,2
+2023,Samuel,Benjamin,DL,Idaho State,Arizona State,0.85,3
+2023,Sir,Mells,DL,Oregon,,,3
+2023,Colin,Henrich,OT,South Carolina,Georgia State,0.83,3
+2023,Jaylon,Shelton,CB,West Virginia,Texas State,,2
+2023,Jadon,Pearson,S,Utah,,,3
+2023,Bobby,Salla,S,Temple,Florida International,,2
+2023,Slater,Zellers,LS,California,Arizona State,,3
+2023,Sean,Shaw Jr.,WR,Iowa State,Texas State,,3
+2023,Billy,Wiles,QB,Clemson,Southern Miss,,3
+2023,Jaden,Coffen,WR,Temple,Morgan State,,3
+2023,Johnathan,Bass,OT,Georgia State,Charlotte,,2
+2023,Woody,Jean,OT,Arizona,Florida Atlantic,,3
+2023,Layne,Hatcher,QB,Texas State,Ball State,,3
+2023,Marquis,Wilson,CB,Penn State,Purdue,,4
+2023,Travis,Hunter,CB,Jackson State,Colorado,0.99,5
+2023,Braden,Fiske,DL,Western Michigan,Florida State,0.93,4
+2023,Francisco,Mauigoa,LB,Washington State,Miami,0.92,4
+2023,Justin,Rogers,DL,Kentucky,Auburn,0.92,4
+2023,AJ,Barner,TE,Indiana,Michigan,0.91,4
+2023,Trace,Ford,DL,Oklahoma State,Oklahoma,0.91,4
+2023,Darrell,Jackson,DL,Miami,Florida State,0.91,4
+2023,Donovan,McMillon,S,Florida,Pittsburgh,0.9,4
+2023,Javontae,Jean-Baptiste,LB,Ohio State,Notre Dame,0.9,4
+2023,Jordan,Anderson,S,Bowling Green,UCLA,0.9,4
+2023,Keagan,Johnson,WR,Iowa,Kansas State,0.9,4
+2023,Jestin,Jacobs,LB,Iowa,Oregon,0.9,4
+2023,Jaylen,Key,S,UAB,Alabama,0.89,3
+2023,Jarrett,Kingston,IOL,Washington State,USC,0.89,3
+2023,Abdul,Janneh,WR,Duquesne,Georgia Tech,0.89,3
+2023,John,Campbell Jr.,OT,Miami,Tennessee,0.89,3
+2023,Decorian,Patterson,CB,Middle Tennessee,UCF,0.89,3
+2023,Justin,Wright,LB,Tulsa,Oklahoma State,0.89,3
+2023,Brevin,Randle,LB,Stephen F. Austin,Louisiana Tech,,2
+2023,Devin,Price,WR,Texas A&M,Florida Atlantic,,3
+2023,Sam,Telesa,OC,Georgetown,New Mexico,,3
+2023,Courtney,Jackson,WR,Syracuse,Arkansas State,,3
+2023,Kyree,Moyston,EDGE,Virginia Tech,Cincinnati,,3
+2023,Will,Parker,OT,Tennessee,UAB,,3
+2023,John,Jackson III,WR,USC,Nevada,,3
+2023,Bryson,Broadway,OT,Georgia State,Georgia Southern,,2
+2023,Elijah,Robinson,EDGE,East Carolina,Hawai'i,,3
+2023,Justen,Ramsey,DT,Ball State,Indiana State,,3
+2023,Jose,Pizano,K,Missouri State,UNLV,,2
+2023,Seth,Anderson,WR,Iowa,Iowa,,2
+2023,Isaiah,McElvane,S,San Diego State,Louisiana Tech,,3
+2023,Jordan,Burch,EDGE,South Carolina,Oregon,0.94,4
+2023,MarShawn,Lloyd,RB,South Carolina,USC,0.92,4
+2023,CJ,Dippre,TE,Maryland,Alabama,0.92,4
+2023,Rivaldo,Fairweather,TE,Florida International,Auburn,0.91,4
+2023,Devin,Carter,WR,NC State,West Virginia,0.91,4
+2023,Gunner,Britton,OT,Western Kentucky,Auburn,0.91,4
+2023,Gabe,Jeudy-Lally,CB,BYU,Tennessee,0.9,4
+2023,Omar,Speights,LB,Oregon State,LSU,0.9,4
+2023,Anthony,Goodlow,EDGE,Tulsa,Oklahoma State,0.9,4
+2023,Sean,Tyler,RB,Western Michigan,Minnesota,0.89,3
+2023,Andrel,Anthony,WR,Michigan,Oklahoma,0.89,3
+2023,Spencer,Sanders,QB,Oklahoma State,Ole Miss,0.89,3
+2023,Jamil,Muhammad,LB,Georgia State,USC,0.89,3
+2023,Thomas,Harper,S,Oklahoma State,Notre Dame,0.89,3
+2023,Cam,McCormick,TE,Oregon,Miami,0.89,3
+2023,Derrick,McLendon II,EDGE,Florida State,Colorado,0.89,3
+2023,Xavier,Guillory,WR,Idaho State,Arizona State,0.89,3
+2023,Logan,Brown,OT,Wisconsin,Kansas,0.88,3
+2023,Xavier,Weaver,WR,South Florida,Colorado,0.88,3
+2023,Juan,Powell,CB,East Carolina,Coastal Carolina,0.88,3
+2023,Harrison,Taggart,LB,Oregon,BYU,0.9,4
+2023,Jadais,Richard,CB,Vanderbilt,Miami,0.88,3
+2023,Braedyn,Locke,QB,Mississippi State,Wisconsin,0.88,3
+2023,Tyquan,King,ILB,North Carolina A&T,East Carolina,0.86,3
+2023,John Paul,Flores,OT,Virginia,Louisville,0.87,3
+2023,Austin,Smith,TE,Colorado,Memphis,0.85,3
+2023,Ryan,Coe,K,Cincinnati,North Carolina,0.8,3
+2023,Trey,Paster,ATH,California,,,3
+2023,Ahmir,Crowder,DL,Washington State,Tarleton State,,3
+2023,Chris,Mayo,IOL,West Virginia,Eastern Michigan,,3
+2023,Reggie,Jones,DL,Temple,Louisiana Tech,,2
+2023,Witt,Mitchum,OT,Kansas State,North Alabama,,3
+2023,Tom,Maginness,P,Monash University,North Carolina,,
+2023,Jake,Larson,K,Richmond,Charlotte,,2
+2023,Dominic,Morris,CB,Furman,Colorado State,,2
+2023,Emeka,Obigbo,IOL,Incarnate Word,Texas State,,2
+2023,Gavin,Williams,RB,Iowa,Northern Illinois,,3
+2023,Xavier,Player,CB,UTSA,Texas Southern,,3
+2023,Brayden,Narveson,K,Western Kentucky,NC State,,3
+2023,Emmanuel,Balogun,DL,Marshall,Charlotte,,3
+2023,Lavel,Dumont,OT,Toledo,Rice,,3
+2023,Hudson,Card,QB,Texas,Purdue,0.93,4
+2023,Carson,Steele,RB,Ball State,UCLA,0.92,4
+2023,Jeremiah,Byers,OT,UTEP,Florida State,0.92,4
+2023,Jamari,Thrash,WR,Georgia State,Louisville,0.91,4
+2023,Walter,Rouse,OT,Stanford,Oklahoma,0.91,4
+2023,Monty,Montgomery,LB,Louisville,Ole Miss,0.91,4
+2023,Luke,Altmyer,QB,Ole Miss,Illinois,0.9,4
+2023,MJ,Sherman,EDGE,Georgia,Nebraska,0.9,4
+2023,Ja'Quan,Sheppard,CB,Cincinnati,Maryland,0.9,4
+2023,Keeshawn,Silver,DL,North Carolina,Kentucky,0.9,4
+2023,Var'Keyes,Gumms,TE,North Texas,Arkansas,0.9,4
+2023,Oluwafemi,Oladejo,LB,California,UCLA,0.89,3
+2023,Anthony,Adkins,RB,Army,UCLA,0.89,3
+2023,Jeremiah,Jean-Baptiste,LB,UCF,Ole Miss,0.89,3
+2023,James,Jointer,RB,Arkansas,Liberty,,3
+2023,JK,Johnson,CB,Ohio State,LSU,0.92,4
+2023,K.J.,Miles,DL,Georgia Tech,Temple,,3
+2023,Keydrell,Lewis,OT,UL Monroe,UL Monroe,,3
+2023,Jacob,Borcila,K,Kansas,Vanderbilt,,2
+2023,Will,Ferrin,K,Boise State,BYU,,2
+2023,Jaxon,Hughes,IOL,Charlotte,South Carolina,,3
+2023,Kendall,Dennis,CB,Oklahoma,South Florida,,4
+2023,Christian,Wells,WR,App State,Massachusetts,,3
+2023,Keyshawn,Paul,CB,Temple,Louisiana Tech,,3
+2023,J.J.,Evans,WR,Auburn,North Alabama,,4
+2023,Mackavelli,Malotumau,DL,Utah Tech,Nevada,,3
+2023,Marcus,Sheppard,CB,Bowling Green,North Dakota State,,3
+2023,Shadeed,Ahmed,WR,Marshall,Texas State,,2
+2023,Edwin,White,S,Kansas,North Alabama,,3
+2023,Malachi,Holt-Bennett,WR,Indiana,UAB,,3
+2023,Kaleb,Ford-Dement,CB,Washington State,Texas State,,2
+2023,Nohl,Williams,CB,UNLV,California,0.91,4
+2023,Miles,Battle,CB,Ole Miss,Utah,0.91,4
+2023,Tommy,Brockermeyer,OT,Alabama,TCU,0.91,4
+2023,Tanner,Mordecai,QB,SMU,Wisconsin,0.91,4
+2023,LJ,Johnson,RB,Texas A&M,SMU,0.91,4
+2023,Dalton,Cooper,OT,Texas State,Oklahoma State,0.9,4
+2023,Demie,Sumo-Karngbaye,RB,NC State,Kentucky,0.9,4
+2023,McCallan,Castles,TE,UC Davis,Tennessee,0.9,4
+2023,Alfahiym,Walcott,S,Baylor,Arkansas,0.9,4
+2023,DeQuece,Carter,WR,Fordham,Indiana,0.9,4
+2023,Eric,Rogers,CB,Northern Illinois,Rutgers,0.89,3
+2023,Ben,Christman,OT,Ohio State,Kentucky,0.89,3
+2023,Damieon,George,OT,Alabama,Florida,0.89,3
+2023,Jaylan,Knighton,RB,Miami,SMU,0.89,3
+2023,Derrik,Allen,S,Georgia Tech,North Carolina,0.89,3
+2023,Sawyer,Robertson,QB,Mississippi State,Baylor,0.89,3
+2023,Walker,Howard,QB,LSU,Ole Miss,0.92,4
+2023,Kamari,Stephens,DL,Florida A&M,,,2
+2023,Darryl,Minor,LB,UTEP,Indiana,0.84,3
+2023,Robert,Rahimi,S,Liberty,,0.85,3
+2023,David,Conner,OT,Florida,Colorado,0.83,3
+2023,Ja'Shaun,Poke,WR,Kent State,West Virginia,0.88,3
+2023,Chris,Chernak,OT,Grambling,Old Dominion,,2
+2023,Nathaniel,Gillis,ATH,BYU,Northern Colorado,,2
+2023,Zach,Calzada,QB,Auburn,Incarnate Word,,3
+2023,Kanion,Williams,S,Oklahoma State,Tulsa,,3
+2023,Caleb,Chapman,WR,Oregon,Incarnate Word,,4
+2023,Ron,Hardge III,CB,Oregon State,Colorado State,,3
+2023,Davon,Gilmore,LB,Wingate,Georgia Southern,,2
+2023,Jackson,Hensley,WR,Wake Forest,Eastern Kentucky,,3
+2023,Josh,Ellison,DL,Oklahoma,Memphis,,3
+2023,Marcus,Alexander,IOL,Oklahoma,Texas State,,3
+2023,Zavier,Carter,LB,LSU,UNLV,,4
+2023,LaDarius,Henderson,IOL,Arizona State,Michigan,0.93,4
+2023,Brenen,Thompson,WR,Texas,Oklahoma,0.92,4
+2023,Jordyn,Tyson,WR,Colorado,Arizona State,0.91,4
+2023,JoJo,Earle,WR,Alabama,TCU,0.91,4
+2023,Rondell,Bothroyd,DL,Wake Forest,Oklahoma,0.9,4
+2023,Tyrone,Broden,WR,Bowling Green,Arkansas,0.9,4
+2023,Tyrese,Chambers,WR,Florida International,Maryland,0.9,4
+2023,Jimmy,Horn Jr.,WR,South Florida,Colorado,0.9,4
+2023,Jack,Sullivan,DL,Purdue,USC,0.9,4
+2023,Avantae,Williams,S,Miami,Maryland,0.9,4
+2023,Malik,Fleming,CB,East Carolina,Houston,0.89,3
+2023,Sav'ell,Smalls,EDGE,Washington,Colorado,0.89,3
+2023,Myles,Slusher,S,Arkansas,Colorado,0.89,3
+2023,Andrej,Karic,OT,Texas,Tennessee,0.89,3
+2023,Tysheem,Johnson,S,Ole Miss,Oregon,0.89,3
+2023,George,Udo,CB,BYU,Cincinnati,,3
+2023,Francis,Sherman,TE,Louisville,Arkansas,0.86,3
+2023,Kaleb,Culp,S,Incarnate Word,Texas State,,2
+2023,Devin,Grant,DL,Colorado,Incarnate Word,,3
+2023,Kingsley,Ugwu,OT,Kansas State,Fresno State,,2
+2023,Kaydin,Pope,WR,Mississippi State,New Mexico,,3
+2023,Tyrell,Raby,CB,Memphis,Middle Tennessee,,3
+2023,Jamari,Gassett,WR,Buffalo,Florida A&M,,3
+2023,Stephan,Bracey,WR,Wisconsin,Central Michigan,,3
+2023,Mikhari,Sibblis,DL,Lehigh,Ball State,,
+2023,Keshawn,King,RB,Virginia Tech,Western Michigan,,4
+2023,Chris,Van Eekeren,K,Purdue,Temple,,2
+2023,Zakhari,Spears,CB,Washington,UConn,,3
+2023,Derek,Bowman,OT,Houston,South Florida,,3
+2023,Tyrell,Grayson,ATH,Utah Tech,Colorado State,,2
+2023,Rory,Bell,K,Temple,Cincinnati,,2
+2023,Kyle,Morlock,TE,Shorter,Florida State,0.92,4
+2023,Trey,Knox,TE,Arkansas,South Carolina,0.92,4
+2023,Erick,All,TE,Michigan,Iowa,0.92,4
+2023,Branson,Deen,DL,Purdue,Miami,0.91,4
+2023,Jordan,Jefferson,DL,West Virginia,LSU,0.91,4
+2023,Gavin,Holmes,CB,Wake Forest,Texas,0.91,4
+2023,Cam'Ron,Johnson,OT,Houston,Missouri,0.91,4
+2023,Alijah,Huzzie,CB,East Tennessee State,North Carolina,0.9,4
+2023,Keenan,Pili,LB,BYU,Tennessee,0.9,4
+2023,Zamari,Walton,CB,Georgia Tech,Ole Miss,0.9,4
+2023,Marcus,Burris Jr.,DL,Texas A&M,Indiana,0.9,4
+2023,Cam,Kelly,S,Virginia,Louisville,0.89,3
+2023,Eddie,Lewis,WR,Memphis,South Carolina,0.89,3
+2023,Kedon,Slovis,QB,Pittsburgh,BYU,0.89,3
+2023,Campbell,Barrington,OT,BYU,Baylor,0.89,3
+2023,Casey,Roddick,IOL,Colorado,Florida State,0.89,3
+2023,Armani,Chatman,CB,Virginia Tech,North Carolina,0.89,3
+2023,Dashaun,Mallory,DL,Michigan State,Arizona State,0.89,3
+2023,Jahdae,Walker,WR,Grand Valley State,Texas A&M,0.89,3
+2023,Byron,Cardwell,RB,Oregon,California,0.89,3
+2023,Jordan,Domineck,EDGE,Arkansas,Colorado,0.88,3
+2023,Elijah,Brown,TE,Alabama,Florida Atlantic,0.88,3
+2023,Anthony,Campbell,DL,UL Monroe,Miami,0.88,3
+2023,Kye,Robichaux,RB,Western Kentucky,Boston College,0.88,3
+2023,Spencer,Lovell,OT,California,Kansas,0.84,3
+2023,Deacon,Hill,QB,Wisconsin,Iowa,0.85,3
+2023,Dylan,Hopkins,QB,UAB,New Mexico,,3
+2023,Jackson,Woodard,LB,Arkansas,UNLV,,2
+2023,Chris,Carter,TE,South Florida,Tulane,,3
+2023,Rocko,Griffin,RB,Vanderbilt,UTSA,,3
+2023,D'Arco,Perkins-McAllister,S,TCU,New Mexico,,4
+2023,Josh,Carlson,P,New Mexico State,Arizona State,,
+2023,Reed,Shumpert,WR,Washington State,Cal Poly,,2
+2023,Bear,Alexander,DL,Georgia,USC,0.94,4
+2023,Shedeur,Sanders,QB,Jackson State,Colorado,0.92,4
+2023,Joshua,Simon,TE,Western Kentucky,South Carolina,0.91,4
+2023,Dont'e,Thornton Jr.,WR,Oregon,Tennessee,0.91,4
+2023,Evan,Williams,S,Fresno State,Oregon,0.91,4
+2023,Drake,Nugent,IOL,Stanford,Michigan,0.9,4
+2023,Marcellus,Johnson,OT,Eastern Michigan,Missouri,0.9,4
+2023,Aaron,Frost,OT,Nevada,Arizona State,0.9,4
+2023,Nick,Jackson,LB,Virginia,Iowa,0.9,4
+2023,Logan,Fano,EDGE,BYU,Utah,0.9,4
+2023,Tre,Harris,WR,Louisiana Tech,Ole Miss,0.9,4
+2023,Willis,Patrick,IOL,Jackson State,TCU,0.89,3
+2023,Charles,Woods,CB,West Virginia,SMU,0.89,3
+2023,Ovie,Oghoufo,EDGE,Texas,LSU,0.89,3
+2023,Austin,Stogner,TE,South Carolina,Oklahoma,0.89,3
+2023,Moliki,Matavao,TE,Oregon,UCLA,0.89,3
+2023,Khyree,Jackson,CB,Alabama,Oregon,0.89,3
+2023,Devin,Neal,S,Baylor,Louisville,0.89,3
+2023,Taj,Davis,WR,Washington,California,0.88,3
+2023,Rodrick,Ward,S,Southern Utah,Colorado,0.88,3
+2023,Tony,Mathis,RB,West Virginia,Houston,0.88,3
+2023,Khadere,Kounta,OT,Old Dominion,UCLA,0.88,3
+2023,Elijah,Jeudy,DL,Texas A&M,Nebraska,0.88,3
+2023,Corey,Crooms,WR,Western Michigan,Minnesota,0.88,3
+2023,Reggie,Pearson Jr.,S,Texas Tech,Oklahoma,0.88,3
+2023,Kyle,Williams,WR,UNLV,Washington State,0.88,3
+2023,Isaac,TeSlaa,WR,Hillsdale College,Arkansas,0.88,3
+2023,Emery,Simmons,WR,Indiana,Utah,0.88,3
+2023,Joe,Huber,OT,Cincinnati,Wisconsin,0.88,3
+2023,Antonio,Grier,LB,South Florida,Arkansas,0.88,3
+2023,Antonio,Carter II,CB,Rhode Island,Notre Dame,0.89,3
+2023,Baraka,Beckett,IOL,UCLA,Campbell,,3
+2023,Mason,Williams,IOL,Harvard,,,2
+2023,Noah,Rauschenberg,K,Baylor,North Texas,,2
+2023,JoJo,Evans,S,Kent State,Florida International,,2
+2023,Jason,Gold,DL,Northwestern,Texas State,,3
+2023,Tyler,Macon,QB,Missouri,Alcorn State,,4
+2023,Jayden,Gray,EDGE,Iowa State,Louisiana Tech,,3
+2023,George,Wilson,EDGE,Florida State,Campbell,,4
+2023,Kuao,Peihopa,DL,Washington,Hawai'i,,3
+2023,Louis,Hansen,TE,Michigan,UConn,,4
+2023,Jarron,Morris,CB,Texas State,Florida Atlantic,,2
+2023,Armauni,Archie,CB,Washington State,UConn,,3
+2023,Connor,Bazelak,QB,Indiana,Bowling Green,,4
+2023,Rodricus,Fitten,EDGE,South Carolina,East Tennessee State,,3
+2023,Devontez,Walker,WR,Kent State,North Carolina,0.95,4
+2023,Avery,Jones,IOL,East Carolina,Auburn,0.93,4
+2023,Aidan,Robbins,RB,UNLV,BYU,0.92,4
+2023,Dillon,Johnson,RB,Mississippi State,Washington,0.91,4
+2023,Josh,DeBerry,CB,Boston College,Texas A&M,0.91,4
+2023,Avery,Helm,CB,Florida,TCU,0.9,4
+2023,Tanner,Bowles,IOL,Alabama,Kentucky,0.9,4
+2023,Cane,Berrong,TE,Notre Dame,Coastal Carolina,0.89,3
+2023,Nate,McCollum,WR,Georgia Tech,North Carolina,0.89,3
+2023,Clayton,Smith,EDGE,Oklahoma,Arizona State,0.89,3
+2023,Keyvone,Lee,RB,Penn State,Mississippi State,0.89,3
+2023,Bram,Walden,OT,Oregon,Arizona State,0.89,3
+2023,Jacob,Mangum-Farrar,LB,Stanford,Indiana,0.89,3
+2023,Alex,Washington,CB,Harvard,Boston College,0.89,3
+2023,Trevell,Mullen,CB,Indiana,James Madison,0.88,3
+2023,Jayden,Bellamy,CB,Notre Dame,Syracuse,0.88,3
+2023,Jaylin,Lane,WR,Middle Tennessee,Virginia Tech,0.88,3
+2023,Nick,Elksnis,TE,Florida,South Carolina,0.88,3
+2023,Logan,Taylor,OT,Virginia,Boston College,0.88,3
+2023,Corey,Bullock,IOL,North Carolina Central,Maryland,0.88,3
+2023,Marcellus,Marshall,OT,Kent State,UCF,0.88,3
+2023,Jacob,Hood,OT,Georgia,Nebraska,0.88,3
+2023,Mason,Lunsford,OT,Maryland,LSU,0.88,3
+2023,RaRa,Dillworth,LB,North Carolina,East Carolina,0.85,3
+2023,Noah,Massey,WR,Angelo State,West Virginia,,3
+2023,Clayton,Bush,S,Southern Illinois,Illinois,,3
+2023,Brooks,Maile,SDE,BYU,Northern Colorado,,3
+2023,Miles,Fleming,CB,Minnesota,Ohio,,3
+2023,Ethan,Calvert,LB,Utah,Cal Poly,,4
+2023,Jordan,White,IOL,West Virginia,Liberty,,3
+2023,Grey,Carroll,EDGE,Georgia Tech,Liberty,,3
+2023,Onuma,Dieke,WR,Massachusetts,Elon,,3
+2023,Ladaeson DeAndre,Hollins,CB,North Carolina,Charlotte,,3
+2023,Jahlil,Taylor,DL,North Carolina,Old Dominion,,3
+2023,Rico,Arnold,WR,Massachusetts,Georgia State,,2
+2023,Tre,Moore,EDGE,Georgia State,Campbell,,2
+2023,Tyrek,Funderburk,CB,Richmond,App State,,2
+2023,Len'Neth,Whitehead,RB,Tennessee,Georgia,,4
+2023,Shakhi,Carson,RB,Kent State,Stony Brook,,3
+2023,Demarcus,Griffin,CB,Houston,Louisiana Tech,,2
+2023,Ernest,Hausmann,LB,Nebraska,Michigan,0.96,4
+2023,Keon,Coleman,WR,Michigan State,Florida State,0.93,4
+2023,Christian,Roland-Wallace,CB,Arizona,USC,0.92,4
+2023,Brian,Battie,RB,South Florida,Auburn,0.91,4
+2023,John,Saunders,CB,Miami (OH),Ole Miss,0.91,4
+2023,Gottlieb,Ayedze,OT,Frostburg State,Maryland,0.9,4
+2023,Theo,Wease,WR,Oklahoma,Missouri,0.9,4
+2023,Freddie,Roberson,WR,Eastern Washington,Mississippi State,0.89,3
+2023,Hyrin,White,OT,Missouri,SMU,0.89,3
+2023,Caleb,Etienne,OT,Oklahoma State,BYU,0.89,3
+2023,Christian,Leary,WR,Alabama,Georgia Tech,0.89,3
+2023,Trey,Sanders,RB,Alabama,TCU,0.89,3
+2023,Trey,Potts,RB,Minnesota,Penn State,0.89,3
+2023,JaQuae,Jackson,WR,"California, Pa.",Rutgers,0.89,3
+2023,Omarr,Norman-Lott,DL,Arizona State,Tennessee,0.88,3
+2023,Kyle,Hergel,IOL,Texas State,Boston College,0.88,3
+2023,Nicario,Harper,S,Louisville,Illinois,0.88,3
+2023,Bradyn,Swinson,EDGE,Oregon,LSU,0.88,3
+2023,Jaylon,Robinson,WR,Ole Miss,TCU,0.88,3
+2023,Justin,Kirkland,DL,Utah Tech,Oklahoma State,0.88,3
+2023,Trajan,Jeffcoat,EDGE,Missouri,Arkansas,0.88,3
+2023,Daniel,Grzesiak,EDGE,Utah State,Cincinnati,0.88,3
+2023,Raydarious,Jones,CB,LSU,Mississippi State,0.88,3
+2023,AJ,Vongphachanh,LB,Utah State,BYU,0.88,3
+2023,Jonathan,McGill,S,Stanford,SMU,0.87,3
+2023,E.J.,Williams,WR,Clemson,Indiana,0.87,3
+2023,Chris,Collins,EDGE,North Carolina,Minnesota,0.87,3
+2023,John,Morgan,EDGE,Pittsburgh,Arkansas,0.87,3
+2023,Owen,Snively,IOL,Colorado State,Eastern Michigan,,3
+2023,Dominic,Tatum,CB,Utah State,Washington State,0.85,3
+2023,Jalil,Martin,S,Nebraska,Syracuse,,3
+2023,Steven,Krajewski,QB,Georgia State,Wagner,,3
+2023,Jermaine,Johnson,WR,Massachusetts,Duquesne,,3
+2023,Terrance,Butler,EDGE,Maryland,Charlotte,,3
+2023,Brant,Banks,OT,Nebraska,Rice,,3
+2023,Jacob,Bayer,IOL,Lamar,Arkansas State,,
+2023,Devin,Boddie Jr.,WR,Vanderbilt,Wyoming,,3
+2023,Devin,Leary,QB,NC State,Kentucky,0.94,4
+2023,Matt,Lee,IOL,UCF,Miami,0.93,4
+2023,Anthony,Lucas,DL,Texas A&M,USC,0.92,4
+2023,Caden,Prieskorn,TE,Memphis,Ole Miss,0.92,4
+2023,Kaden,Prather,WR,West Virginia,Maryland,0.92,4
+2023,Arik,Gilbert,TE,Georgia,Nebraska,0.91,4
+2023,Mason,Cobb,LB,Oklahoma State,USC,0.91,4
+2023,Trezmen,Marshall,LB,Georgia,Alabama,0.91,4
+2023,Jacob,Lacey,DL,Notre Dame,Oklahoma,0.9,4
+2023,Gary,Bryant Jr.,WR,USC,Oregon,0.9,4
+2023,CamRon,Jackson,DL,Memphis,Florida,0.9,4
+2023,Seydou,Traore,TE,Colorado,Mississippi State,0.9,4
+2023,Myles,Hinton,OT,Stanford,Michigan,0.9,4
+2023,Xzavier,Henderson,WR,Florida,Cincinnati,0.9,4
+2023,Shane,Hooks,WR,Jackson State,Auburn,0.9,4
+2023,Brendan,Gant,S,Florida State,Colorado,0.89,3
+2023,Jeremiah,Brown,LB,Jackson State,Colorado,0.89,3
+2023,Tywan,Francis,S,Colorado State,Temple,0.89,3
+2023,Kenneth,Harris,CB,Arkansas State,Oklahoma State,0.89,3
+2023,Teja,Young,S,Florida Atlantic,Ole Miss,0.89,3
+2023,Paul,Maile,IOL,Utah,BYU,0.88,3
+2023,Key'Shawn,Smith,WR,Miami,SMU,0.88,3
+2023,Cameron,Skattebo,RB,Sacramento State,Arizona State,0.88,3
+2023,JB,Brown,LB,Bowling Green,Kansas,0.88,3
+2023,Omar,Rogers,S,Elon,East Carolina,0.88,3
+2023,Isaiah,Ifanse,RB,San José State,California,0.88,3
+2023,Marques,Sigle,CB,North Dakota State,Kansas State,0.88,3
+2023,Caleb,Shaffer,OG,Miami (OH),Oklahoma,0.88,3
+2023,Tony,Muskett,QB,Monmouth,Virginia,0.88,3
+2023,Jack,Bech,TE,LSU,TCU,0.88,3
+2023,Stephon,Johnson,WR,Oklahoma State,Houston,0.88,3
+2023,Rusty,Feth,OG,Miami (OH),Iowa,0.87,3
+2023,Donovan,Smith,QB,Texas Tech,Houston,0.87,3
+2023,Anthony,Brown,S,Arkansas,Purdue,0.87,3
+2023,John,Paddock,QB,Ball State,Illinois,0.87,3
+2023,Javon,Ivory,WR,Memphis,South Alabama,0.87,3
+2023,Elijah,Collins,RB,Michigan State,Oklahoma State,0.87,3
+2023,Keiondre,Jones,IOL,Auburn,Florida State,0.87,3
+2023,Kavosiey,Smoke,RB,Kentucky,Colorado,0.87,3
+2023,Courtland,Ford,OT,USC,Kentucky,0.87,3
+2023,Logan,Parr,IOL,Texas,SMU,0.87,3
+2023,Alonzo,Ford,DL,Old Dominion,Penn State,0.87,3
+2023,Jordan,Davis,OT,South Carolina,South Alabama,,3
+2023,PJ,Williams,OT,Texas A&M,SMU,0.89,3
+2023,Xavion,Alford,S,USC,Arizona State,0.89,3
+2023,Billy,Kemp,WR,Virginia,Nebraska,0.89,3
+2023,Asa,Martin,RB,Memphis,Troy,0.89,3
+2023,Jakai,Clark,IOL,Miami,SMU,0.89,3
+2023,Sean,Dollars,RB,Oregon,Nevada,0.88,3
+2023,Josh,Wallace,CB,Massachusetts,Michigan,0.88,3
+2023,David,Ugwoegbu,LB,Oklahoma,Houston,0.88,3
+2023,Bryson,Green,WR,Oklahoma State,Wisconsin,0.88,3
+2023,Jahmal,Edrine,WR,Florida Atlantic,Purdue,0.88,3
+2023,Mike,Smith,LB,Liberty,Baylor,0.88,3
+2023,Tez,Johnson,WR,Troy,Oregon,0.88,3
+2023,Ralen,Goforth,LB,USC,Washington,0.88,3
+2023,Ahmad,Walker,LB,Liberty,SMU,0.88,3
+2023,Ben,Scott,OT,Arizona State,Nebraska,0.88,3
+2023,Willie,Lampkin,IOL,Coastal Carolina,North Carolina,0.88,3
+2023,Salim,Turner-Muhammad,CB,Stanford,Purdue,0.87,3
+2023,Brian,Stevens,IOL,Dayton,Virginia,0.87,3
+2023,Finn,Dirstine,IOL,Boston College,Texas A&M,0.87,3
+2023,Melquan,Stovall,WR,Colorado State,Arizona State,0.87,3
+2023,Kole,Taylor,TE,LSU,West Virginia,0.87,3
+2023,Brendon,Lewis,QB,Colorado,Nevada,0.87,3
+2023,Willie,Gaines,WR,Jackson State,Colorado,0.87,3
+2023,Phil,Jurkovec,QB,Boston College,Pittsburgh,0.87,3
+2023,Dylan,McDuffie,RB,Georgia Tech,Kansas,0.87,3
+2023,Tyrin,Taylor,S,Colorado,Memphis,0.87,3
+2023,Tre'Vez,Johnson,S,Florida,Missouri,0.87,3
+2023,Austin,Firestone,DL,Northwestern,Missouri,0.87,3
+2023,Josiah,Johnson,TE,Massachusetts,Oklahoma State,0.87,3
+2023,Jatius,Geer,DL,Syracuse,South Carolina,0.87,3
+2023,Braden,Davis,QB,South Carolina,Syracuse,0.87,3
+2023,Aaron,Turner,WR,UConn,Cincinnati,0.87,3
+2023,Payton,Thorne,QB,Michigan State,Auburn,0.87,3
+2023,Dawson,Jaramillo,OT,Oregon,NC State,0.87,3
+2023,A.J.,Henning,WR,Michigan,Northwestern,0.87,3
+2023,Nyzier,Fourqurean,CB,Grand Valley State,Wisconsin,0.87,3
+2023,Tico,Brown,DL,Missouri State,TCU,0.87,3
+2023,Khari,Johnson,CB,Arkansas,Boston College,0.87,3
+2023,Al,Blades Jr.,CB,Miami,Duke,0.87,3
+2023,Deuce,Spurlock,LB,Michigan,Florida,0.86,3
+2023,Eric,Miller,OT,Purdue,Louisville,0.86,3
+2023,Braelen,Oliver,LB,Minnesota,Georgia Tech,0.86,3
+2023,Jalen,McLeod,LB,App State,Auburn,0.86,3
+2023,Chase,Penry,WR,Colorado,Boise State,0.86,3
+2023,Jarrett,Jackson,DL,Florida State,Michigan State,0.86,3
+2023,Tyneil,Hopper,TE,Boise State,Michigan State,0.86,3
+2023,Andre,White Jr.,LB,Texas A&M,Georgia Tech,0.86,3
+2023,Ian,Edenfield,TE,"California, Pa.",Oklahoma State,0.86,3
+2023,Fred,Davis II,CB,Clemson,UCF,0.86,3
+2023,Ben,Coleman,OT,California,Arizona State,0.86,3
+2023,Quincy,Ledet,DL,UL Monroe,Texas Tech,0.86,3
+2023,Austin,Booker,EDGE,Minnesota,Kansas,0.86,3
+2023,Dee,Wiggins,WR,Louisville,Cincinnati,0.86,3
+2023,Trent,Whittemore,WR,Florida,UCF,0.86,3
+2023,Jalen,Lee,DL,Florida,LSU,0.86,3
+2023,Aubrey,Smith,LB,Colorado,Houston,0.86,3
+2023,Vonta,Bentley,LB,Clemson,Colorado,0.86,3
+2023,Steven,Ortiz,S,Minnesota,Massachusetts,0.86,3
+2023,Jaden,Muskrat,IOL,Tulsa,Auburn,0.86,3
+2023,Clayton,Frady,OT,Gardner-Webb,Virginia Tech,0.86,3
+2023,Luke,Kandra,IOL,Louisville,Cincinnati,0.86,3
+2023,Micah,Hilts,TE,Texas State,SMU,0.86,3
+2023,David,Reese,LB,Florida,California,0.85,3
+2023,Reggie,Young II,IOL,Liberty,Colorado,0.85,3
+2023,Gaethan,Bernadel,LB,Florida International,Stanford,0.85,3
+2023,Kamden,Garrett,CB,Weber State,BYU,0.85,3
+2023,Jake,Smith,WR,USC,Arizona State,0.85,3
+2023,Phillip,Wilder,OT,Southeast Missouri State,Cincinnati,0.85,3
+2023,Rowan,Zolman,S,Miami (OH),Minnesota,0.85,3
+2023,Nick,Mardner,WR,Cincinnati,Auburn,0.89,3
+2023,Leonard,Payne,DL,Fresno State,Colorado,0.89,3
+2023,Damarius,McGhee,CB,LSU,Kansas,0.88,3
+2023,Dylan,Goffney,WR,SMU,Colorado State,0.88,3
+2023,Jake,Hornibrook,OT,Stanford,Duke,0.88,3
+2023,Marcus,Scott II,CB,Missouri,California,0.88,3
+2023,Byron,Vaughns,LB,Utah State,Baylor,0.88,3
+2023,Jireh,Wilson,S,East Carolina,UCF,0.88,3
+2023,Andre,Sam,S,Tulane,LSU,0.88,3
+2023,Elijah,McAllister,EDGE,Vanderbilt,Auburn,0.88,3
+2023,ShunDerrick,Powell,RB,North Alabama,Central Arkansas,0.88,3
+2023,Cade,McNamara,QB,Michigan,Iowa,0.88,3
+2023,Trevor,Mayberry,OT,Pennsylvania,Stanford,0.87,3
+2023,Brett,Seither,TE,Georgia,Georgia Tech,0.87,3
+2023,Decoldest,Crawford,WR,Nebraska,Louisiana Tech,0.87,3
+2023,Donnell,Brown,SDE,Saint Francis (PA),Maryland,0.87,3
+2023,Jermaine,Terry II,TE,California,Oregon State,0.87,3
+2023,Marcus,Dumervil,OT,LSU,Maryland,0.87,3
+2023,Jason,Maitre,S,Boston College,Wisconsin,0.87,3
+2023,Chris,Megginson,CB,Liberty,SMU,0.87,3
+2023,Devyn,Ford,RB,Penn State,Notre Dame,0.87,3
+2023,Treven,Ma'ae,EDGE,Oregon,Baylor,0.87,3
+2023,Jeff,Pietrowski,EDGE,Michigan State,Wisconsin,0.87,3
+2023,Nicolas,Toomer,CB,Stanford,Indiana,0.87,3
+2023,Robert,Kennedy,S,East Carolina,NC State,0.87,3
+2023,Nathan,Carter,RB,UConn,Michigan State,0.87,3
+2023,Michael,Dixon,S,Minnesota,Rutgers,0.87,3
+2023,Isaac,Guerendo,RB,Wisconsin,Louisville,0.87,3
+2023,Daveren,Rayner,LB,Northern Illinois,Kentucky,0.87,3
+2023,Cam,Robertson,EDGE,North Texas,SMU,0.87,3
+2023,Jacob,Roberts,ILB,North Carolina A&T,Wake Forest,0.87,3
+2023,Dominick,Blaylock,WR,Georgia,Georgia Tech,0.87,3
+2023,Dylan,Wright,WR,Minnesota,TCU,0.87,3
+2023,Daijon,Parker,OT,Saginaw Valley State,Iowa,0.87,3
+2023,Willie,Tyler,IOL,Rutgers,Louisville,0.87,3
+2023,Rick,D'Abreu,DL,East Carolina,TCU,0.87,3
+2023,Cam,Johnson,WR,Arizona State,Northwestern,0.86,3
+2023,Jonathan,Jones,CB,Campbell,East Carolina,0.86,3
+2023,Isaiah,Hamilton,WR,San José State,Washington State,0.86,3
+2023,Bennett,Meredith,QB,Arizona State,Purdue,0.86,3
+2023,Amari,McNeill,DL,Tennessee,Colorado,0.86,3
+2023,Isaiah,Dunson,CB,Miami,Baylor,0.86,3
+2023,Tristan,Monday,DL,Wisconsin,Arizona State,0.86,3
+2023,Deion,Smith,RB,Colorado,BYU,0.86,3
+2023,Prince,Dorbah,EDGE,Texas,Arizona State,0.86,3
+2023,Jadon,Canady,CB,Tulane,Ole Miss,0.86,3
+2023,Jalen,Grant,IOL,Bowling Green,Purdue,0.86,3
+2023,Zion,Carter,TE,Dartmouth,Buffalo,0.86,3
+2023,Christopher,Keys,CB,Indiana,Mississippi State,0.86,3
+2023,Stephen,Herron Jr.,EDGE,Stanford,Louisville,0.86,3
+2023,Dontavius,Nash,S,North Carolina,East Carolina,0.86,3
+2023,Demetrius,Harris,S,Cornell,Buffalo,0.86,3
+2023,Amari,Kight,OT,Alabama,UCF,0.86,3
+2023,J.T.,Byrne,TE,Oregon State,California,0.86,3
+2023,Howard,Brown,DL,Iowa State,Boise State,0.86,3
+2023,Romello,Brinson,WR,Miami,SMU,0.86,3
+2023,Jimmy,Christ,OT,Penn State,Virginia,0.86,3
+2023,Jaden,Alexis,WR,Texas,South Florida,0.86,3
+2023,Krew,Jackson,LB,Kansas State,Arizona State,0.86,3
+2023,Jalen,Sami,DL,Colorado,Michigan State,0.86,3
+2023,Leif,Fautanu,IOL,UNLV,Arizona State,0.85,3
+2023,Harrison,Bailey,QB,UNLV,Louisville,0.85,3
+2023,Na'im,Rodman,DL,Colorado,Washington State,0.85,3
+2023,Tristan,Gebbia,QB,Oregon State,Ohio State,0.85,3
+2023,Weylin,Lapuaho,IOL,Utah State,BYU,0.85,3
+2023,Sergio,Allen,LB,Clemson,California,0.85,3
+2023,Jaylan,Franklin,TE,Wisconsin,Michigan State,0.85,3
+2023,Tyler,Harrell,WR,Alabama,Miami,0.89,3
+2023,Ryan,O'Keefe,WR,UCF,Boston College,0.89,3
+2023,Kameron,Pedescleaux,CB,Louisiana,Tulane,0.88,3
+2023,David,Bailey,RB,Colorado State,Texas A&M,0.88,3
+2023,Christian,Turner,RB,Wake Forest,Indiana,0.88,3
+2023,Daniyel,Ngata,RB,Arizona State,Washington,0.88,3
+2023,Dacari,Collins,WR,Clemson,NC State,0.88,3
+2023,Malik,Washington,WR,Northwestern,Virginia,0.88,3
+2023,Jordan,Miller,DL,Miami,SMU,0.88,3
+2023,Walker,Merrill,WR,Tennessee,Wake Forest,0.88,3
+2023,Arlen,Harris Jr.,RB,Stanford,Iowa State,0.88,3
+2023,Teradja,Mitchell,LB,Ohio State,Florida,0.87,3
+2023,Victor,Curne,IOL,Washington,Ole Miss,0.87,3
+2023,Kobe,Wilson,LB,Temple,SMU,0.87,3
+2023,Leon,Johnson III,WR,George Fox,Oklahoma State,0.87,3
+2023,Jack,Plummer,QB,California,Louisville,0.87,3
+2023,Coltin,Deery,IOL,Maryland,TCU,0.87,3
+2023,Preston,Nichols,IOL,UNLV,Purdue,0.87,3
+2023,Fatorma,Mulbah,DL,Penn State,West Virginia,0.87,3
+2023,Jadon,Thompson,WR,Cincinnati,Louisville,0.87,3
+2023,Caleb,Johnson,OT,Notre Dame,SMU,0.87,3
+2023,Keivie,Rose,DL,Louisiana Tech,Arkansas,0.87,3
+2023,Kaden,Ludwick,EDGE,Colorado,Oregon,0.87,3
+2023,David,Wohlabaugh,IOL,Kentucky,Syracuse,0.87,3
+2023,Lawrence,Johnson,DL,Purdue,Auburn,0.87,3
+2023,Isaiah,Nichols,DL,Arkansas,Purdue,0.87,3
+2023,Amari,Gainer,LB,Florida State,North Carolina,0.86,3
+2023,Thomas,Castellanos,QB,UCF,Boston College,0.86,3
+2023,Bula,Schmidt,IOL,Fresno State,UCF,0.86,3
+2023,Darius,Lassiter,WR,Eastern Michigan,BYU,0.86,3
+2023,Devin,Phillips,DL,Colorado State,Kansas,0.86,3
+2023,Beanie,Bishop,CB,Minnesota,West Virginia,0.86,3
+2023,Isaiah,Bagnah,DL,Boise State,BYU,0.86,3
+2023,Malcolm,Epps,TE,USC,Pittsburgh,0.86,3
+2023,Tanner,Arkin,TE,Colorado State,Illinois,0.86,3
+2023,Antavious,Lane,S,Georgia State,North Carolina,0.86,3
+2023,Ryan,King,WR,Georgia Tech,East Carolina,0.86,3
+2023,Noah,Bolticoff,OT,TCU,Indiana,0.86,3
+2023,Antwaun,Powell,EDGE,Florida,Virginia Tech,0.86,3
+2023,Kori,Roberson,DL,Oklahoma,SMU,0.86,3
+2023,Keyshon,Mills,CB,Colorado,SMU,0.86,3
+2023,D'Andre,Greeley,CB,Colorado State,Buffalo,0.85,3
+2023,Peyton,Dunn,IOL,UL Monroe,Houston,0.85,3
+2023,Stephon,Wynn,DL,Nebraska,Ole Miss,0.85,3
+2023,Jalen,Harrell,S,Miami,Massachusetts,0.85,3
+2023,Jaelyn,Davis-Robinson,CB,LSU,SMU,0.85,3
+2023,Bryce,Ganious,DL,Villanova,Wake Forest,0.85,3
+2023,Landon,Bebee,IOL,Missouri State,Colorado,0.85,3
+2023,Scott,Elliott,OT,Harvard,Duke,0.85,3
+2023,Ben,Farrell,OT,Indiana Wesleyan,Purdue,0.85,3
+2023,Haynes,King,QB,Texas A&M,Georgia Tech,0.85,3
+2023,Ugonna,Nnanna,OT,Houston,Virginia,0.85,3
+2023,Alex,Padilla,QB,Iowa,SMU,0.85,3
+2023,Mikel,Barkley,WR,Toledo,Fresno State,0.85,3
+2023,Joey,Beljan,TE,Western Kentucky,Cincinnati,0.85,3
+2023,Tayvonn,Kyle,CB,Iowa State,Virginia,0.85,3
+2023,Brian,Hightower,WR,Illinois,California,0.85,3
+2023,DeCarlos,Brooks,RB,California,Arizona State,0.85,3
+2023,Josh,Fleeks,WR,Baylor,Nebraska,0.85,3
+2023,Zach,Durfee,EDGE,Sioux Falls,Washington,0.85,3
+2023,Brey,Walker,IOL,Oklahoma,Texas State,0.84,3
+2023,Wyatt,Dawe,DL,Southern Utah,BYU,0.84,3
+2023,Jack,Tuttle,QB,Indiana,Michigan,0.84,3
+2023,Dustyn,Hall,IOL,Duke,East Carolina,0.84,3
+2023,Troy,Omeire,WR,Texas,Arizona State,0.87,3
+2023,Jackson,Brown,OT,California,Pittsburgh,0.87,3
+2023,Robby,Harrison,DL,Arizona State,Indiana,0.85,3
+2023,Ja'Kobi,Albert,ATH,Kentucky,Mississippi State,0.87,3
+2023,Javon,Antonio,WR,Northwestern State,Colorado,0.88,3
+2023,Davoan,Hawkins,DL,Tennessee State,West Virginia,0.88,3
+2023,Spencer,Holstege,IOL,Purdue,UCLA,0.88,3
+2023,Austin,Keys,LB,Ole Miss,Auburn,0.88,3
+2023,DeShawn,Gaddie,CB,North Texas,Ole Miss,0.88,3
+2023,Kyron,Drones,QB,Baylor,Virginia Tech,0.88,3
+2023,Myles,Jones,CB,Texas A&M,Duke,0.88,3
+2023,Taylor,Upshaw,EDGE,Colorado,Arizona,0.87,3
+2023,Cameron,Carroll,RB,Tulane,Florida,0.87,3
+2023,Sidney,Williams,LB,Florida State,Missouri,0.87,3
+2023,Cam'Ron,Silmon,S,Jackson State,Colorado,0.87,3
+2023,Elijah,Roberts,DL,Miami,SMU,0.87,3
+2023,Konnor,Near,LB,Ferris State,Oklahoma,0.87,3
+2023,Ben,Hoitink,IOL,Pennsylvania,Duke,0.87,3
+2023,George,Rooks,DL,Michigan,Boston College,0.87,3
+2023,Geor'quarius,Spivey,TE,TCU,Mississippi State,0.87,3
+2023,Jackson,Cravens,DL,Boise State,BYU,0.87,3
+2023,Travis,Jay,S,Florida State,Colorado,0.87,3
+2023,Craig,McDonald,S,Auburn,Minnesota,0.87,3
+2023,Lance,Robinson,IOL,Houston,Louisville,0.87,3
+2023,Mason,Tufaga,LB,Utah,Oregon State,0.87,3
+2023,Semar,Melvin,CB,Wisconsin,Michigan State,0.87,3
+2023,Chase,Lane,WR,Texas A&M,Georgia Tech,0.87,3
+2023,Prince,Kollie,LB,Notre Dame,Vanderbilt,0.87,3
+2023,Lorenzo,Lingard,RB,Florida,Akron,0.86,3
+2023,Jaylen,Ellis,WR,Baylor,Colorado,0.86,3
+2023,Will,Pauling,WR,Cincinnati,Wisconsin,0.86,3
+2023,Brian,George,CB,Texas A&M,Houston,0.86,3
+2023,Tymir,Brown,CB,North Carolina,East Carolina,0.86,3
+2023,Nyles,Gaddy,EDGE,Jackson State,Missouri,0.86,3
+2023,Denzel,Daxon,DL,Ohio,Illinois,0.86,3
+2023,Chris,Thomas,DL,Florida,Marshall,0.86,3
+2023,Lyndell,Hudson,OT,Florida International,Florida,0.86,3
+2023,Gilbert,Frierson,S,Miami,Louisville,0.86,3
+2023,A.J.,Hampton,CB,Northwestern,Tulane,0.86,3
+2023,Trevell,Johnson,LB,Texas,UL Monroe,0.86,3
+2023,Vincent,Lumia,OT,Duquesne,Louisville,0.86,3
+2023,Joey,Gatewood,WR,UCF,Louisville,0.86,3
+2023,Akelo,Stone,DL,Georgia Tech,Ole Miss,0.85,3
+2023,Jake,Eichorn,IOL,Weber State,BYU,0.85,3
+2023,Tyrin,Bradley,EDGE,Abilene Christian,West Virginia,0.85,3
+2023,Devin,Richardson,LB,Texas,Washington State,0.85,3
+2023,Isaiah,Paul,LB,Washington State,UCF,0.85,3
+2023,Trevor,Radosevich,IOL,Pennsylvania,Cincinnati,0.85,3
+2023,Tyler,Manoa,DL,UCLA,Arizona,0.85,3
+2023,Corey,Gammage,WR,Marshall,UCF,0.85,3
+2023,Joshua,Rudolph,LB,Austin Peay,Indiana,0.85,3
+2023,Kentrel,Bullock,RB,Ole Miss,South Alabama,0.85,3
+2023,Lanell,Carr,LB,West Virginia,Indiana,0.85,3
+2023,Jackson,Long,TE,South Florida,Georgia Tech,0.85,3
+2023,Connor,Soelle,LB,Arizona State,Oregon,0.85,3
+2023,Bradley,Archer,TE,Stanford,Indiana,0.85,3
+2023,Noah,Potter,DL,Cincinnati,NC State,0.84,3
+2023,Patrick,Joyner,EDGE,Utah State,Kansas,0.84,3
+2023,Max,Longman,OT,Massachusetts,Indiana,0.84,3
+2023,CJ,Ogbonna,QB,Southeast Missouri State,Buffalo,0.84,3
+2023,Sio,Nofoagatoto'a,DL,Indiana,Arizona,0.84,3
+2023,Rance,Conner,CB,Louisville,East Carolina,0.84,3
+2023,Shilo,Sanders,S,Jackson State,Colorado,0.84,3
+2023,Asher,Alberding,TE,North Texas,California,0.84,3
+2023,Zachary,Lovett,LB,Missouri,Iowa State,0.84,3
+2023,Austin,Dean,LB,Rutgers,Georgia Tech,0.84,3
+2023,Taijh,Alston,EDGE,West Virginia,Colorado,0.84,3
+2023,Travis,Gray,OT,Colorado,New Mexico,0.85,3
+2023,Sterling,Berkhalter,WR,North Carolina A&T,Cincinnati,0.86,3
+2023,Ian,Shewell,DL,New Mexico,Arizona State,0.84,3
+2023,Savion,Washington,OT,Kent State,Colorado,0.88,3
+2023,Drake,Metcalf,IOL,Stanford,UCF,0.85,3
+2023,Jeff,Sims,QB,Georgia Tech,Nebraska,0.9,4
+2023,Kelan,Robinson,WR,Kansas,East Carolina,0.84,3
+2023,Briton,Allen,S,USC,Utah,0.84,3
+2023,Derek,Ferraro,OT,Richmond,Texas A&M,0.83,3
+2023,Jalen,John,RB,Arizona,Massachusetts,0.81,3
+2023,Nicholas,Barr-Mira,K,UCLA,Mississippi State,0.79,2
+2023,Phaizon,Wilson,WR,Grambling,Grambling,,4
+2023,Roderick,Hopes,S,Tulsa,Louisiana Tech,,3
+2023,Adari,Haulcy,S,New Mexico,Houston,0.88,3
+2023,Travion,Brown,LB,Washington State,Arizona State,0.84,3
+2023,Ryan,Sanborn,P,Stanford,Texas,0.84,3
+2023,Alec,Bank,OT,Harvard,Stanford,0.84,3
+2023,Tyler,Martin,LB,Arizona,Massachusetts,0.84,3
+2023,Caden,Davis,K,Texas A&M,Ole Miss,0.83,3
+2023,Jyaire,Stevens,EDGE,Lafayette,Buffalo,0.83,3
+2023,Peter,Kikwata,WR,Old Dominion,Georgia State,0.82,3
+2023,Henry,Bryant,DL,Louisville,Georgia State,0.82,3
+2023,Alejandro,Mata,K,Jackson State,Colorado,0.81,3
+2023,Syrus,Dumas,CB,New Mexico State,UTSA,0.81,3
+2023,Cole,Becker,K,Colorado,Utah,0.79,2
+2023,Darrell,Harding,WR,Duke,Buffalo,0.79,2
+2023,Matt,Jones,RB,Ole Miss,Ole Miss,,2
+2023,Charles,Campbell,K,Indiana,Tennessee,0.78,2
+2023,Aaron,Jackson,QB,Eastern Michigan,Robert Morris,,2
+2023,Tyas,Martin,DL,Colorado,Jackson State,,3
+2023,RaRa,Thomas,WR,Mississippi State,Georgia,0.91,4
+2023,RJ,Moten,S,Michigan,Florida,0.92,4
+2023,Da'Shawn,Brown,WR,App State,Alabama A&M,0.81,3
+2023,Braylen,Ingraham,DL,Alabama,Syracuse,0.84,3
+2023,Tyler,Knaak,OT,Utah,Nebraska,0.84,3
+2023,Luke,Elzinga,P,Central Michigan,Oklahoma,0.83,3
+2023,Paul,Tyson,QB,Arizona State,Clemson,0.83,3
+2023,Brandon,Mack,EDGE,Ole Miss,Houston,0.83,3
+2023,Jermaine,Wiggins Jr,ATH,Arizona,Massachusetts,0.82,3
+2023,Jacob,Orlando,TE,Massachusetts,Buffalo,0.82,3
+2023,Alex,Raynor,K,Georgia Southern,Kentucky,0.81,3
+2023,Jackson,Paradis,RB,Buffalo,Massachusetts,0.8,3
+2023,Jonathan,Kim,K,North Carolina,Michigan State,0.79,2
+2023,Jaelon,Travis,WR,Kansas State,Incarnate Word,0.79,2
+2023,Darius,Bush,WR,UConn,Georgia State,0.78,2
+2023,Jack,Stone,K,Michigan State,Baylor,0.78,2
+2023,Cammon,Cooper,QB,Hawai'i,SE Louisiana,,4
+2023,Michael,Mason,DL,Wofford,Coastal Carolina,,
+2023,Craig,Williams,RB,Baylor,Louisiana Tech,0.89,3
+2023,CJ,Baskerville,S,San Diego State,Texas Tech,0.89,3
+2023,Adama,Fall,S,Arizona,,,2
+2023,Kannon,Katzer,RB,Washington State,,,2
+2023,Griffin,Scroggs,IOL,Georgia,App State,0.84,3
+2023,Emory,Jones,QB,Arizona State,Cincinnati,0.84,3
+2023,Trevonte,Sylvester,OT,Houston,Louisville,0.84,3
+2023,Nick,Gargiulo,OT,Yale,South Carolina,0.84,3
+2023,Aeneas,DiCosmo,LB,Stanford,Vanderbilt,0.83,3
+2023,Alex,Harkey,OT,Colorado,Texas State,0.83,3
+2023,Freddie,Brock,RB,Maine,Georgia State,0.83,3
+2023,Jerry,Roberts,LB,Arizona,Massachusetts,0.82,3
+2023,Mark,Vassett,P,Louisville,Colorado,0.8,3
+2023,Jerrod,Cameron,CB,Coastal Carolina,Massachusetts,0.8,3
+2023,Brandon,MacKinnon,OT,Northern Illinois,Massachusetts,0.79,2
+2023,Wendell,Davis,LB,Northwestern,Arkansas State,,3
+2023,Ron,Carr,OT,Duke,Illinois State,,3
+2023,Deandrae,McCray,WR,Austin Peay,Texas Tech,0.89,3
+2023,Carter,Brown,K,Arizona State,Cincinnati,0.79,2
+2023,Tavian,Coleman,DL,Utah State,Texas State,,2
+2023,Gunnar,Smith,QB,South Florida,UCF,0.84,3
+2023,Alan,Bowman,QB,Michigan,Oklahoma State,0.83,3
+2023,Reed,Buys,IOL,Mississippi State,South Alabama,0.83,3
+2023,Michael,Hayes,K,Georgia State,West Virginia,0.81,3
+2023,Spencer,Shrader,K,South Florida,Notre Dame,0.79,2
+2023,Trevor,Timmons,IOL,Charlotte,Georgia State,0.78,2
+2023,Armani,Diamond,CB,Auburn,UAB,,3
+2023,Kaleb,Smith,WR,Virginia Tech,Notre Dame,0.91,4
+2023,Edward,Czaplicki,P,Arizona State,USC,0.8,3
+2023,Jackson,Anderson,IOL,Colorado,UTSA,0.84,3
+2023,Ryan,Beckman,IOL,Akron,East Carolina,0.83,3
+2023,Riley,Thompson,P,Florida Atlantic,Penn State,0.82,3
+2023,Blake,Glessner,K,Montana State,UCLA,0.8,3
+2023,Taisun,Phommachanh,QB,Georgia Tech,Massachusetts,0.79,2
+2023,Donell,Harris,EDGE,Texas A&M,UL Monroe,,5
+2023,Nonte,Davis,WDE,UT Martin,Western Kentucky,,3
+2023,Keeyon,Stewart,CB,TCU,Arkansas,0.86,3
+2023,David,Kemp,K,Memphis,Minnesota,0.78,2
+2023,Charles,Brantley,CB,Michigan State,,,3
+2023,Braeden,McAlister,K,Charlotte,Georgia State,,3
+2023,Shambre,Jackson,EDGE,Florida State,Massachusetts,0.85,3
+2023,Elijah,Culp,CB,Troy,,,2
+2023,Jamier,Johnson,CB,Texas,Indiana,0.87,3
+2023,Alante,Brown,WR,Nebraska,Michigan State,0.87,3
+2023,Jessie,Campbell,WR,Southern Utah,Riverside C.C.,,2
+2023,Khamauri,Rogers,CB,Miami,Mississippi State,0.89,3
+2023,Kenji,Christian,RB,Virginia Tech,North Carolina A&T,,3
+2023,Chase,Sowell,WR,Colorado,East Carolina,0.85,3
+2023,Ajay,Allen,RB,Nebraska,Miami,0.89,3
+2023,Justin,Flowe,LB,Oregon,Arizona,0.91,4
+2023,Tayven,Jackson,QB,Tennessee,Indiana,0.9,4
+2023,Makai,Jackson,WR,Saint Francis (PA),App State,,
+2023,Zoom,Esplin,OT,BYU,,,3
+2023,Terry,Lockett,WR,Michigan State,Eastern Michigan,,3
+2023,Noah,McKinney,OT,UNLV,Oklahoma State,0.86,3
+2023,Dylan,Flowers,CB,Southern Utah,BYU,0.85,3
+2023,Eric,Weatherly,WR,Duke,Bucknell,,3
+2023,Iverson,Hooks,WR,UAB,UAB,,3
+2023,Dylan,Brooks,EDGE,Auburn,Kansas,0.89,3
+2023,Marquis,Groves-Killebrew,CB,Texas A&M,Louisville,0.91,4
+2023,Kyron,Chambers,CB,TCU,SMU,0.86,3
+2023,Keanu,Williams,DL,Oregon,UCLA,0.89,3
+2023,Troy,Everett,IOL,App State,Oklahoma,0.87,3
+2023,Antonio,Martin,RB,Georgia Tech,,,4
+2023,Jibran,Hawkins,DL,Ole Miss,Colorado,0.84,3
+2023,Bishop,Thomas,DL,Florida State,Colorado,0.86,3
+2023,Reginald,Hughes,LB,Ole Miss,,,3
+2023,Rhett,Larson,OT,SMU,Sam Houston,,3
+2023,Jabari,Ishmael,EDGE,Miami,,,4
+2023,Landyn,Watson,EDGE,TCU,Marshall,,3
+2023,T.J.,Finley,QB,Auburn,Texas State,,3
+2023,Armorion,Smith,S,Cincinnati,,,3
+2023,Jacob,Newell,TE,Arizona State,,,3
+2023,Trevion,Cooley,RB,Louisville,Georgia Tech,0.87,3
+2023,Keith,Brown,LB,Oregon,Louisville,0.88,3
+2023,Tyler,Keinath,IOL,Western Illinois,Boise State,,2
+2023,CJ,Montes,QB,New Mexico,Fordham,,3
+2023,Devin,Hightower,LB,Cincinnati,,,3
+2023,Tate,Romney,OLB,BYU,Arizona State,0.85,3
+2023,Jaron,Willis,EDGE,Ole Miss,South Carolina,0.9,4
+2023,Drake,Martinez,TE,Colorado State,,,3
+2023,Jimmy,Calloway,WR,Tennessee,Louisville,0.87,3
+2023,Brady,Allen,QB,Purdue,Louisville,0.9,4
+2023,Ty,Robinson,WR,Colorado,Ball State,0.83,3
+2023,Ashton,Whitner,S,Georgia Southern,Old Dominion,,3
+2023,Tito,Chikere,EDGE,Fresno State,,,3
+2023,Aaron,Alexander,LB,Massachusetts,Michigan State,0.85,3
+2023,Jordan,Brown,IOL,Charlotte,Georgia Tech,0.87,3
+2023,Wesley,Miller,S,Mississippi State,South Alabama,,3
+2023,Cameron,Miller,S,Tennessee,Memphis,,3
+2023,Anthony,Simpson,ATH,Arizona,Massachusetts,0.82,3
+2023,Quincy,Brown,WR,TCU,,,4
+2023,Antavious,Woody,IOL,Florida State,UAB,,3
+2023,Jaylen,Henderson,QB,Fresno State,Texas A&M,0.87,3
+2023,James,Turner,K,Louisville,Michigan,0.83,3
+2023,Mark,Pope,WR,Jackson State,Massachusetts,0.82,3
+2023,Matt,Smith,TE,Duke,Massachusetts,0.81,3
+2023,Tavian,Brown,LB,Colorado State,Georgia State,0.79,2
+2023,Hayden,Harris,DL,UCLA,Montana,,3
+2023,JP,Murphy,TE,San Diego State,Eastern Washington,,3
+2023,DJ,Taylor,S,Arizona State,Cincinnati,0.84,3
+2023,Zach,Courtney,TE,Colorado,Coastal Carolina,0.84,3
