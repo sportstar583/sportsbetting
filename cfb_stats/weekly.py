@@ -5,7 +5,7 @@
 
 Steps:
   1. Find the week (first regular-season week with a game that hasn't kicked off).
-  2. Pull Big Ten and SEC availability reports, keeping only reports for games actually played that
+  2. Pull Big Ten, SEC, ACC and Big 12 availability reports, keeping only reports for games actually played that
      week, so an old report from last week is never applied to this week's games.
   3. Build the totals board (data/<year>/totals_week<N>.csv) with those injuries.
   4. Note if last week's advanced stats aren't loaded yet (e.g. very early Sunday).
@@ -24,7 +24,7 @@ from . import availability, recruiting, totals
 from .collect import default_year, upcoming_week
 
 
-CONFERENCES = {"B10": "Big Ten", "SEC": "SEC"}
+CONFERENCES = {"B10": "Big Ten", "SEC": "SEC", "ACC": "ACC", "B12": "Big 12"}
 
 
 def current_injuries(client, year, week, out_dir, games):
