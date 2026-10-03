@@ -32,6 +32,7 @@ import numpy as np
 from . import adjust
 
 METRICS = ("epa", "rush_epa", "pass_epa")
+USE_COACHES = True  # new-head-coach term in the priors; see BACKTEST.md
 RATING_ALPHA = 150.0  # full-season "final" ratings: plenty of data, light shrinkage
 PRIOR_DIR = os.path.join("data", "priors")
 
@@ -93,13 +94,46 @@ def season_ratings(client, year, out_dir=PRIOR_DIR):
     return out
 
 
-def features(prev, ret, tal, metric, side, team):
+def coaches(client, out_dir=PRIOR_DIR, first=2021, last=None):
+    """{(team, year): primary head coach} (most games that season), from one CFBD /coaches call."""
+    from .collect import default_year
+    last = last or default_year()
+    path = os.path.join(out_dir, f"coaches_{first}_{last}.csv")
+    if not os.path.exists(path):
+        rows = []
+        for c in client.get("/coaches", minYear=first, maxYear=last):
+            for s in c.get("seasons") or []:
+                rows.append({"team": s["school"], "year": s["year"], "coach": f"{c['firstName']} {c['lastName']}",
+                             "games": s.get("games") or 0})
+        os.makedirs(out_dir, exist_ok=True)
+        with open(path, "w", newline="") as f:
+            w = csv.DictWriter(f, fieldnames=["team", "year", "coach", "games"])
+            w.writeheader()
+            w.writerows(rows)
+    with open(path, newline="") as f:
+        rows = list(csv.DictReader(f))
+    best = {}
+    for r in rows:
+        key, g = (r["team"], int(r["year"])), int(r["games"] or 0)
+        if key not in best or g > best[key][1]:
+            best[key] = (r["coach"], g)
+    return {k: v[0] for k, v in best.items()}
+
+
+def new_coach_teams(coach_map, year):
+    """Teams whose head coach for `year` differs from last season's primary head coach."""
+    return {t for (t, y), c in coach_map.items() if y == year and coach_map.get((t, y - 1)) not in (None, c)}
+
+
+def features(prev, ret, tal, metric, side, team, new=None):
+    """new: set of teams with a new head coach (None leaves the coaching term out)."""
     p = prev.get(metric, {}).get(side, {}).get(team, 0.0)
     t = tal.get(team, 0.0)
+    extra = [] if new is None else [p * (team in new)]
     if side == "off":
         r = ret.get(team, 0.5)
-        return [p, p * (r - 0.5), t]
-    return [p, t]
+        return [p, p * (r - 0.5), t] + extra
+    return [p, t] + extra
 
 
 def fit_weights(pairs):
@@ -108,30 +142,31 @@ def fit_weights(pairs):
     for m in METRICS:
         for side in ("off", "def"):
             X, y = [], []
-            for prev, ret, tal, cur in pairs:
+            for prev, ret, tal, new, cur in pairs:
                 for team, val in cur[m][side].items():
-                    X.append(features(prev, ret, tal, m, side, team))
+                    X.append(features(prev, ret, tal, m, side, team, new))
                     y.append(val)
             coefs[(m, side)] = np.linalg.lstsq(np.array(X), np.array(y), rcond=None)[0].tolist()
     return coefs
 
 
-def make_priors(prev, ret, tal, coefs, teams):
-    return {m: {side: {t: float(np.dot(coefs[(m, side)], features(prev, ret, tal, m, side, t))) for t in teams}
+def make_priors(prev, ret, tal, coefs, teams, new=None):
+    return {m: {side: {t: float(np.dot(coefs[(m, side)], features(prev, ret, tal, m, side, t, new))) for t in teams}
                 for side in ("off", "def")} for m in METRICS}
 
 
-def season_inputs(client, year):
-    return season_ratings(client, year - 1), returning(client, year), talent(client, year)
+def season_inputs(client, year, use_coaches=False):
+    new = new_coach_teams(coaches(client), year) if use_coaches else None
+    return season_ratings(client, year - 1), returning(client, year), talent(client, year), new
 
 
-def build(client, year, train_years):
+def build(client, year, train_years, use_coaches=USE_COACHES):
     """Priors for `year`, with weights fit on (y-1 -> y) for each y in train_years."""
-    pairs = [(*season_inputs(client, y), season_ratings(client, y)) for y in train_years]
+    pairs = [(*season_inputs(client, y, use_coaches), season_ratings(client, y)) for y in train_years]
     coefs = fit_weights(pairs)
-    prev, ret, tal = season_inputs(client, year)
+    prev, ret, tal, new = season_inputs(client, year, use_coaches)
     teams = set(tal) | set(prev.get("epa", {}).get("off", {}))
-    return make_priors(prev, ret, tal, coefs, teams), coefs
+    return make_priors(prev, ret, tal, coefs, teams, new), coefs
 
 
 def save_priors(priors, coefs, year, out_dir=PRIOR_DIR):

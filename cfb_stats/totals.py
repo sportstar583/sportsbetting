@@ -521,8 +521,14 @@ def _before(data, key, week):
 
 
 def build_model(data, week, alpha=TOTALS_ALPHA, tempo=False, fcs_weight=1.0, huber_k=None, matchup=0.0,
-                use_priors=False, finishing=False, **offsets):
+                use_priors=False, finishing=False, qb=False, **offsets):
     done = [g for g in data["games"] if g.get("week", 99) < week]
+    if qb:
+        qb_off = qb_offsets(_before(data, "passing", week), _before(data, "drives", week))[0]
+        merged = dict(offsets.get("off_offsets") or {})
+        for t, v in qb_off.items():
+            merged[t] = merged.get(t, 0.0) + v
+        offsets["off_offsets"] = merged
     return TotalsModel(_before(data, "rows", week), done, alpha,
                        drives=_before(data, "drives", week) if tempo else None,
                        fcs_weight=fcs_weight, huber_k=huber_k, matchup=matchup,
@@ -732,6 +738,54 @@ def compare_spread_variants(results):
     m = -np.array([r["market_spread"] for r in mkt])
     print(f"{'market (closing)':<20} {len(mkt):>5} {math.sqrt(((a - m) ** 2).mean()):>5.1f}")
     return rows
+
+
+def qb_offsets(passing, drives, prior_att=150):
+    """Offense EPA/play offsets for each team's expected QB vs its season-average QB play.
+
+    passing: QB-game rows (gameId, team, playerId, attempts, ppa per pass) from games already
+    played. Each QB's EPA per pass is shrunk toward the league by prior_att attempts. The
+    expected starter is the QB with the most attempts in the team's latest game. The offset
+    is (expected QB - team's attempt-weighted QB average) x the team's pass share, so it's
+    zero for a team that has used one QB all season and matters after a QB change.
+    Returns ({team: offset}, {team: expected QB name}).
+    """
+    qbs, latest = defaultdict(lambda: [0.0, 0, ""]), {}
+    tot_ppa = tot_att = 0.0
+    order = sorted({r["gameId"] for r in passing})
+    rank = {g: i for i, g in enumerate(order)}
+    for r in passing:
+        att, ppa = r.get("attempts") or 0, r.get("ppa")
+        if att <= 0 or ppa is None:
+            continue
+        q = qbs[(r["team"], r["playerId"])]
+        q[0] += ppa * att
+        q[1] += att
+        q[2] = r.get("player") or q[2]
+        tot_ppa += ppa * att
+        tot_att += att
+        g = rank[r["gameId"]]
+        cur = latest.get(r["team"])
+        if cur is None or g > cur[0] or (g == cur[0] and att > cur[2]):
+            latest[r["team"]] = (g, r["playerId"], att)
+    if not tot_att:
+        return {}, {}
+    lg = tot_ppa / tot_att
+    rating = {k: (v[0] + lg * prior_att) / (v[1] + prior_att) for k, v in qbs.items()}
+    team_att, team_mean = defaultdict(float), defaultdict(float)
+    for (team, pid), v in qbs.items():
+        team_att[team] += v[1]
+        team_mean[team] += rating[(team, pid)] * v[1]
+    plays = defaultdict(float)
+    for d in drives:
+        plays[d["offense"]] += d.get("plays") or 0
+    offsets, names = {}, {}
+    for team, (_, pid, _) in latest.items():
+        mean = team_mean[team] / team_att[team]
+        share = min(team_att[team] / plays[team], 0.75) if plays.get(team) else 0.5
+        offsets[team] = (rating[(team, pid)] - mean) * share
+        names[team] = qbs[(team, pid)][2]
+    return offsets, names
 
 
 def _qb_season(passing):

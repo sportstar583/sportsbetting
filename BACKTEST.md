@@ -297,6 +297,36 @@ four units in a game (1.0 = typical; most games fall between 0.88 and 1.11).
 Inconsistent teams are a little harder to predict, but equally so for the market, and using
 consistency to choose picks made the card worse. Shown on the board for reference only.
 
+## Coaching changes
+
+A "new head coach" term in the preseason priors (head coach differs from last season's primary
+coach; CFBD /coaches, saved in `data/priors/`): last season's rating times a new-coach flag.
+
+- The term's weight was negative in all three folds (-0.24 to -0.40 for overall EPA), so with a
+  new coach last season's rating carries over much less (roughly 10-15% instead of 40%).
+- In-season spread accuracy barely moved (margin RMSE 16.73 -> 16.72, 17.31 -> 17.32,
+  17.48 -> 17.46; weeks 4-6 15.66 -> 15.64, 21.25 -> 21.28, 18.67 -> 18.63), ATS unchanged.
+
+Used in the spread priors because the effect is consistent, but it changes little once a few
+games are played. CFBD has head coaches only, not coordinators.
+
+## Quarterback ratings
+
+Each QB's EPA per pass, shrunk toward the league by 150 attempts; the expected starter is the QB
+with the most attempts in the team's latest game; the offense is adjusted by (expected QB -
+team's season-average QB) x pass share (`qb_offsets`, `qb=True`). No hindsight is used.
+
+| | Every edge >= 3 | P4 card | Picks in games the adjustment moved 1+ pt |
+| --- | --- | --- | --- |
+| Current model | 53.0% | 116-86 (57.4%) | 50.9% |
+| With QB ratings (scale fit on the other seasons) | 52.4% | 110-91 (54.7%) | 51.7% |
+
+(The card here breaks ties slightly differently from the 114-88 elsewhere; both rows use the
+same method.) The raw adjustment moved a third of projections by 1+ point, but fitting showed
+only about 12% of it is real (fold estimates -0.07 to 0.30); RMSE didn't improve even in the
+1,093 games with a QB change. A QB's EPA over a few hundred attempts is mostly noise, and the
+team rating already reflects who has been playing. Off by default.
+
 ## Not backtested
 
 - The conference availability report import itself (which players get listed, and how the

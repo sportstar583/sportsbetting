@@ -112,7 +112,8 @@ What goes into a projection:
   seconds per play allowed, and each team's share of the clock give the plays each side should
   run. A fast offense facing a team that holds the ball (e.g. an option offense) gets fewer plays.
 - **Preseason priors (spreads only):** the spread model starts each team from last season's
-  rating scaled by returning production, plus roster talent, instead of from average
+  rating scaled by returning production, plus roster talent and a new-head-coach term (last
+  season carries over much less after a coaching change), instead of from average
   (`python -m cfb_stats.priors --build <year>` once per season; saved in `data/priors/`). This
   made projected margins more accurate in 2023-2025 but made totals worse, so totals don't use it.
 - **Weather:** game-time forecasts from Open-Meteo (free; the CFBD weather endpoint is a paid

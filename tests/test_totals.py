@@ -2,7 +2,7 @@ import random
 import unittest
 
 from cfb_stats import adjust, injuries as inj
-from cfb_stats.totals import TotalsModel, board, consensus_total, finishing_rates, run_shares, tempo, weekly_card
+from cfb_stats.totals import TotalsModel, board, consensus_total, finishing_rates, qb_offsets, run_shares, tempo, weekly_card
 
 TEAMS = ["A", "B", "C", "D", "E", "F"]
 # True offensive quality (EPA/play); defenses all average.
@@ -186,6 +186,21 @@ class TotalsTests(unittest.TestCase):
         m = TotalsModel(rows, games, alpha=10)
         self.assertGreater(m.sd_off["A"], m.sd_off["B"])
         self.assertGreater(m.volatility("A", "B"), m.volatility("C", "D"))
+
+
+    def test_qb_offsets_after_a_qb_change(self):
+        passing = [
+            {"gameId": 1, "team": "A", "playerId": "s", "player": "Starter", "attempts": 30, "ppa": 0.5},
+            {"gameId": 2, "team": "A", "playerId": "s", "player": "Starter", "attempts": 30, "ppa": 0.5},
+            {"gameId": 3, "team": "A", "playerId": "b", "player": "Backup", "attempts": 30, "ppa": -0.2},
+            {"gameId": 1, "team": "B", "playerId": "x", "player": "Only QB", "attempts": 30, "ppa": 0.1},
+            {"gameId": 3, "team": "B", "playerId": "x", "player": "Only QB", "attempts": 30, "ppa": 0.1},
+        ]
+        drives = [{"offense": "A", "plays": 180}, {"offense": "B", "plays": 120}]
+        off, names = qb_offsets(passing, drives, prior_att=10)
+        self.assertEqual(names, {"A": "Backup", "B": "Only QB"})
+        self.assertLess(off["A"], 0)  # backup now starting, worse than A's season average
+        self.assertAlmostEqual(off["B"], 0.0)  # one QB all season: no adjustment
 
 
 class InjuryTests(unittest.TestCase):
