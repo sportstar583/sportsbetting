@@ -198,14 +198,18 @@ def tempo(drives):
 class TotalsModel:
     def __init__(self, game_rows, games, alpha=TOTALS_ALPHA, drives=None,
                  fcs_weight=1.0, huber_k=None, off_offsets=None, def_offsets=None, matchup=0.0, priors=None,
-                 finishing=False):
+                 finishing=False, fixed_hfa=False):
         self.fbs = fbs_teams(games)
         self.fcs_weight = fcs_weight
         weight = self._weight if fcs_weight != 1.0 and self.fbs else None
         # Rush/pass ratings see about half the plays; halve their penalty so they are as spread
         # out as the overall rating (otherwise the matchup term is mostly extra shrinkage).
+        # fixed_hfa holds home field at its full-season value (adjust.HOME_FIELD). Fitted week by
+        # week it's inflated 2-4x early in the season, which biased spreads toward home teams; the
+        # spread model fixes it. Totals keep it free: the inflated term soaks up early home routs of
+        # weak teams that would otherwise inflate offensive ratings (fixing it hurt totals badly).
         self.models, self.obs = adjust.fit_all(game_rows, games, alpha, weight, huber_k, subset_alpha_scale=0.5,
-                                               priors=priors)
+                                               priors=priors, hfa_fixed=adjust.HOME_FIELD if fixed_hfa else None)
         self.epa = self.models["epa"]
         self.matchup = matchup if "rush_epa" in self.models and "pass_epa" in self.models else 0.0
         self.run_off, self.run_def, self.run_lg = run_shares(self.obs)
@@ -535,7 +539,7 @@ def _before(data, key, week):
 
 
 def build_model(data, week, alpha=TOTALS_ALPHA, tempo=False, fcs_weight=1.0, huber_k=None, matchup=0.0,
-                use_priors=False, finishing=False, qb=False, **offsets):
+                use_priors=False, finishing=False, qb=False, fixed_hfa=False, **offsets):
     done = [g for g in data["games"] if g.get("week", 99) < week]
     if qb:
         qb_off = qb_offsets(_before(data, "passing", week), _before(data, "drives", week))[0]
@@ -546,7 +550,8 @@ def build_model(data, week, alpha=TOTALS_ALPHA, tempo=False, fcs_weight=1.0, hub
     return TotalsModel(_before(data, "rows", week), done, alpha,
                        drives=_before(data, "drives", week) if tempo else None,
                        fcs_weight=fcs_weight, huber_k=huber_k, matchup=matchup,
-                       priors=data.get("priors") if use_priors else None, finishing=finishing, **offsets)
+                       priors=data.get("priors") if use_priors else None, finishing=finishing,
+                       fixed_hfa=fixed_hfa, **offsets)
 
 
 def backtest(data, first_week=4, min_games=3, variants=VARIANTS):
@@ -937,9 +942,16 @@ def main(argv=None):
 
     if args.backtest:
         data = load_season(client, args.year)
-        spread_variants_cfg = {f"spread a{a:g}": dict(chosen, alpha=a, matchup=0.0) for a in (25, 75, 150)}
-        spread_variants_cfg["spread a25+matchup"] = dict(chosen, alpha=25, matchup=1.0)
-        variants = dict(VARIANTS, chosen=chosen, spread_model=dict(chosen, alpha=args.spread_alpha, matchup=0.0),
+        try:  # the spread model uses preseason priors, fit on the other seasons (leave-one-out)
+            data["priors"] = priors_mod.build(client, args.year,
+                                              [y for y in (2023, 2024, 2025) if y != args.year])[0]
+        except Exception as e:
+            print(f"priors unavailable ({e}); spread backtest runs without them")
+        spread_variants_cfg = {f"spread a{a:g}": dict(chosen, alpha=a, matchup=0.0, fixed_hfa=True) for a in (25, 75, 150)}
+        spread_variants_cfg["spread a25 free home field"] = dict(chosen, alpha=25, matchup=0.0)
+        variants = dict(VARIANTS, chosen=chosen,
+                        spread_model=dict(chosen, alpha=args.spread_alpha, matchup=0.0, fixed_hfa=True,
+                                          use_priors="priors" in data),
                         **spread_variants_cfg)
         results = backtest(data, min_games=args.min_games, variants=variants)
         comparison = compare_variants({k: v for k, v in results.items() if k in VARIANTS or k == "chosen"})
@@ -1003,7 +1015,7 @@ def main(argv=None):
     spread_priors = priors_mod.load_priors(args.year)
     spread_model = TotalsModel(game_rows, done, args.spread_alpha, drives=drives, fcs_weight=args.fcs_weight,
                                huber_k=args.huber_k or None, off_offsets=off_offsets, def_offsets=def_offsets,
-                               priors=spread_priors)
+                               priors=spread_priors, fixed_hfa=True)
     weather = {}
     if not args.no_weather:
         try:

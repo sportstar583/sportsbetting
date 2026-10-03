@@ -1,1118 +1,1118 @@
 game_id,week,away,home,neutral,p4_game,market_spread,market_spread_open,proj_margin,spread_edge,spread_pick,actual_margin
-401654851,4,Sacramento State,East Texas A&M,False,False,19.5,,-4.6,14.9,East Texas A&M +19.5,-34
-401636374,4,Florida A&M,Troy,False,False,-21.5,-22.5,7.6,-13.9,Florida A&M +21.5,22
-401640991,4,East Carolina,Liberty,False,False,-7.5,-7.25,23.0,15.5,Liberty -7.5,11
-401643790,4,South Alabama,App State,False,False,-7.5,-8,17.6,10.1,App State -7.5,-34
-401632099,4,Central Arkansas,Arkansas-Pine Bluff,False,False,33,,0.9,33.9,Arkansas-Pine Bluff +33,-39
-401629042,4,Central Connecticut,Massachusetts,False,False,-19.5,-20,-8.0,-27.5,Central Connecticut +19.5,4
-401643714,4,San José State,Washington State,False,False,-13,-14.25,18.0,5.0,Washington State -13,2
-401628624,4,Maine,Merrimack,False,False,-0.5,,17.7,17.2,Merrimack -0.5,-11
-401628630,4,Furman,William & Mary,False,False,-10,,28.5,18.5,William & Mary -10,10
-401636874,4,Baylor,Colorado,False,True,-2.5,-1.25,16.6,14.1,Colorado -2.5,7
-401628369,4,Tennessee,Oklahoma,False,True,6,-3,-11.7,-5.7,Tennessee -6,-10
-401628488,4,Villanova,Maryland,False,True,-22.25,-17.5,35.7,13.4,Maryland -22.25,18
-401628491,4,Northwestern,Washington,False,True,-12,-10.25,39.8,27.8,Washington -12,19
-401644737,4,Saint Francis,Eastern Michigan,False,False,-25.5,-24,-1.0,-26.5,Saint Francis +25.5,36
-401636876,4,Utah,Oklahoma State,False,True,1,-3,11.6,12.6,Oklahoma State +1,-3
-401628629,4,Towson,North Dakota State,False,False,-25,,19.4,-5.6,Towson +25,17
-401635557,4,TCU,SMU,False,True,1.5,2.5,12.3,13.8,SMU +1.5,24
-401635555,4,Miami,South Florida,False,True,16.5,17.5,-12.1,4.4,South Florida +16.5,-35
-401635558,4,Virginia,Coastal Carolina,False,True,3.5,3.0,29.8,33.3,Coastal Carolina +3.5,-19
-401655634,4,St. Thomas (MN),Lindenwood,False,False,-4.5,,-1.0,-5.5,St. Thomas (MN) +4.5,64
-401628485,4,Illinois,Nebraska,False,True,-9,-8.75,8.9,-0.1,Illinois +9,-7
-401628627,4,Rhode Island,Long Island University,True,False,10.5,,2.9,13.4,Long Island University +10.5,-7
-401636872,4,Kansas State,BYU,False,True,7.5,7.25,3.0,10.5,BYU +7.5,29
-401628368,4,Vanderbilt,Missouri,False,True,-18,-21.0,26.2,8.2,Missouri -18,3
-401632078,4,Morehead State,Eastern Kentucky,False,False,-28,,3.2,-24.8,Morehead State +28,29
-401641037,4,Toledo,Western Kentucky,False,False,2.5,0.0,-7.9,-5.4,Toledo -2.5,5
-401628628,4,Richmond,Delaware State,False,False,23.5,,12.0,35.5,Delaware State +23.5,-14
-401643711,4,Fresno State,New Mexico,False,False,12,15.25,0.5,12.5,New Mexico +12,-17
-401629031,4,Florida Atlantic,UConn,False,False,-1,-2.5,0.4,-0.6,Florida Atlantic +1,34
-401636877,4,Arizona State,Texas Tech,False,True,-4.5,-3.25,9.5,5.0,Texas Tech -4.5,8
-401641028,4,UTEP,Colorado State,False,False,-8.5,-10.0,0.6,-7.9,UTEP +8.5,10
-401632100,4,Alabama A&M,Austin Peay,False,False,-13.5,,-9.2,-22.7,Alabama A&M +13.5,43
-401632102,4,Southern Utah,Idaho State,False,False,2.5,,14.2,16.7,Idaho State +2.5,10
-401628366,4,Georgia Southern,Ole Miss,False,True,-35,-36,43.7,8.7,Ole Miss -35,39
-401634242,4,Southeast Missouri State,Southern Illinois,False,False,-6.5,,13.5,7.0,Southern Illinois -6.5,-17
-401654586,4,Mississippi Valley State,Nicholls,False,False,-30,,13.5,-16.5,Mississippi Valley State +30,66
-401628370,4,Akron,South Carolina,False,True,-25,-27,23.2,-1.8,Akron +25,43
-401634247,4,Youngstown State,Pittsburgh,False,True,-28.25,-25.5,18.7,-9.5,Youngstown State +28.25,56
-401655619,4,Weber State,Northwestern State,False,False,31.5,,-26.4,5.1,Northwestern State +31.5,-39
-401654550,4,Norfolk State,VMI,False,False,-6.5,,1.7,-4.8,Norfolk State +6.5,-22
-401641034,4,New Mexico State,Sam Houston,False,False,-15,-14,29.2,14.2,Sam Houston -15,20
-401628367,4,Florida,Mississippi State,False,True,6.5,4.5,29.1,35.6,Mississippi State +6.5,-17
-401628486,4,Charlotte,Indiana,False,True,-28.5,-28.0,35.8,7.3,Indiana -28.5,38
-401628364,4,Ohio,Kentucky,False,True,-21.5,-18.25,10.5,-11.0,Ohio +21.5,35
-401643715,4,Utah State,Temple,False,False,6.5,6.25,4.1,10.6,Temple +6.5,16
-401643712,4,Northern Iowa,Hawai'i,False,False,-10.25,-8.0,2.8,-7.4,Northern Iowa +10.25,29
-401641000,4,Southern Miss,Jacksonville State,False,False,-6,-6.5,15.7,9.7,Jacksonville State -6,37
-401628487,4,Iowa,Minnesota,False,True,3,2.5,14.6,17.6,Minnesota +3,-17
-401643716,4,Wyoming,North Texas,False,False,-7,-9.25,25.2,18.2,North Texas -7,27
-401635553,4,Duke,Middle Tennessee,False,True,14.5,14.0,-11.9,2.6,Middle Tennessee +14.5,-28
-401628625,4,Monmouth,Florida International,True,False,-12.5,-13.5,1.4,-11.1,Monmouth +12.5,-3
-401634145,4,The Citadel,Mercer,False,False,-20.5,,34.9,14.4,Mercer -20.5,17
-401654606,4,Robert Morris,Wagner,False,False,6.5,,16.2,22.7,Wagner +6.5,-7
-401628622,4,East Tennessee State,Elon,False,False,-7.5,,2.7,-4.8,East Tennessee State +7.5,-20
-401636873,4,Houston,Cincinnati,False,True,-4,-5.5,4.2,0.2,Cincinnati -4,34
-401628363,4,Arkansas,Auburn,False,True,-2.5,-3.5,-7.6,-10.1,Arkansas +2.5,-10
-401636879,4,Kansas,West Virginia,False,True,-1.5,-2.5,-11.4,-12.9,Kansas +1.5,4
-401655626,4,Western Carolina,Montana,False,False,-18.5,,22.8,4.3,Montana -18.5,11
-401635551,4,California,Florida State,False,True,-3,-2.25,0.8,-2.2,California +3,5
-401628490,4,Michigan State,Boston College,False,True,-4.5,-6.25,10.7,6.2,Boston College -4.5,4
-401640981,5,Louisiana Tech,Florida International,True,False,2,2.5,15.6,17.6,Florida International +2,7
-401628496,5,Maryland,Indiana,False,True,-7.5,-6.5,6.2,-1.3,Maryland +7.5,14
-401636383,5,Grambling,Prairie View A&M,True,False,-7,,-13.3,-20.3,Grambling +7,2
-401635562,5,North Carolina,Duke,False,True,1.5,-3,14.7,16.2,Duke +1.5,1
-401628376,5,South Alabama,LSU,False,True,-21,-21,5.9,-15.1,South Alabama +21,32
-401634184,5,Youngstown State,Missouri State,False,False,-10,,17.6,7.6,Missouri State -10,7
-401634047,5,Idaho,UC Davis,False,False,4,,5.5,9.5,UC Davis +4,2
-401645332,5,Navy,UAB,False,False,4.5,2.5,12.9,17.4,UAB +4.5,-23
-401654666,5,SE Louisiana,Tarleton State,False,False,-8.5,,29.4,20.9,Tarleton State -8.5,3
-401635659,5,Louisiana,Wake Forest,False,True,-3,-3,-2.4,-5.4,Louisiana +3,-3
-401643795,5,Old Dominion,Bowling Green,False,False,-11,-9.5,27.6,16.6,Bowling Green -11,-3
-401628633,5,Hampton,William & Mary,False,False,-14,,9.0,-5.0,Hampton +14,42
-401633983,5,Tennessee Tech,Gardner-Webb,False,False,-4,,22.3,18.3,Gardner-Webb -4,-31
-401634243,5,Southern Illinois,South Dakota,False,False,-13.5,,12.1,-1.4,Southern Illinois +13.5,29
-401641025,5,Middle Tennessee,Memphis,False,False,-27,-24.5,45.2,18.2,Memphis -27,17
-401635564,5,Northern Illinois,NC State,False,True,-7,-7.5,-15.9,-22.9,Northern Illinois +7,7
-401628631,5,Maine,UAlbany,False,False,-10,,7.9,-2.1,Maine +10,-14
-401634161,5,North Dakota State,Illinois State,False,False,10,,0.6,10.6,Illinois State +10,-32
-401643719,5,Washington State,Boise State,False,False,-6.5,-7,11.9,5.4,Boise State -6.5,21
-401638659,5,Davidson,Presbyterian,False,False,-12.5,,-5.2,-17.7,Davidson +12.5,-11
-401628500,5,Oregon,UCLA,False,True,23.5,24.5,-2.3,21.2,UCLA +23.5,-21
-401628636,5,Fordham,Monmouth,False,False,-16,,12.3,-3.7,Fordham +16,42
-401628980,5,Louisville,Notre Dame,False,True,-6.5,-6.5,11.4,4.9,Notre Dame -6.5,7
-401629032,5,Buffalo,UConn,False,False,-6,-4,14.7,8.7,UConn -6,44
-401643720,5,Fresno State,UNLV,False,False,-2.5,-3.5,9.5,7.0,UNLV -2.5,45
-401641018,5,UT Martin,Kennesaw State,False,False,1.75,-1.5,3.6,5.4,Kennesaw State +1.75,-11
-401634049,5,Montana,Eastern Washington,False,False,16.5,,-17.8,-1.3,Montana -16.5,-3
-401628375,5,Oklahoma,Auburn,False,True,-2,2.5,5.5,3.5,Auburn -2,-6
-401645335,5,Wagner,Florida Atlantic,False,False,-34.75,-29.75,17.3,-17.4,Wagner +34.75,31
-401628378,5,Mississippi State,Texas,False,True,-37,-38,48.8,11.8,Texas -37,22
-401643793,5,Ball State,James Madison,False,False,-22,-20,45.4,23.4,James Madison -22,56
-401635565,5,Holy Cross,Syracuse,False,True,-30.75,-28.5,11.3,-19.5,Holy Cross +30.75,28
-401643721,5,San Diego State,Central Michigan,False,False,-2.5,-1.75,2.0,-0.5,San Diego State +2.5,1
-401634146,5,Mercer,Wofford,False,False,6.5,,-0.1,6.4,Wofford +6.5,-19
-401644739,5,Eastern Michigan,Kent State,False,False,14,14,-13.6,0.4,Kent State +14,-19
-401632107,5,Lamar,Central Arkansas,False,False,-17.5,,29.5,12.0,Central Arkansas -17.5,20
-401645333,5,Charlotte,Rice,False,False,-4,-6.5,-1.7,-5.7,Charlotte +4,-1
-401632106,5,Southern Utah,Austin Peay,False,False,-1,,1.8,0.8,Austin Peay -1,-11
-401636346,5,Alabama State,Bethune-Cookman,False,False,6.5,,-7.7,-1.2,Alabama State -6.5,-5
-401636882,5,TCU,Kansas,True,True,-1.5,-1.5,-4.6,-6.1,TCU +1.5,-11
-401636880,5,BYU,Baylor,False,True,-3,-3,-5.8,-8.8,BYU +3,-6
-401634172,5,Houston Christian,Indiana State,False,False,-9.5,,18.0,8.5,Indiana State -9.5,-3
-401628373,5,Arkansas,Texas A&M,True,True,-6.5,-4.5,0.5,-6.0,Arkansas +6.5,4
-401635563,5,Florida State,SMU,False,True,-6,-5.5,29.7,23.7,SMU -6,26
-401654617,5,Bucknell,Lehigh,False,False,-6,,34.8,28.8,Lehigh -6,-3
-401634046,5,Cal Poly,Northern Colorado,False,False,2.5,,2.2,4.7,Northern Colorado +2.5,-21
-401645336,5,Tulsa,North Texas,False,False,-7,-7,17.0,10.0,North Texas -7,32
-401641035,5,New Mexico,New Mexico State,False,False,9.5,7,-4.3,5.2,New Mexico State +9.5,-10
-401635560,5,Western Kentucky,Boston College,False,True,-7.5,-12.5,31.2,23.7,Boston College -7.5,1
-401628499,5,Nebraska,Purdue,False,True,10,10,-2.3,7.7,Purdue +10,-18
-401635561,5,Stanford,Clemson,False,True,-24,-22,22.7,-1.3,Stanford +24,26
-401632110,5,Robert Morris,Eastern Kentucky,False,False,-14,,3.0,-11.0,Robert Morris +14,24
-401633981,5,Charleston Southern,Tennessee State,False,False,-4,,6.0,2.0,Tennessee State -4,4
-401634136,5,East Tennessee State,The Citadel,False,False,13,,-8.6,4.4,The Citadel +13,-17
-401634048,5,Montana State,Idaho State,False,False,17.5,,4.3,21.8,Idaho State +17.5,-20
-401643792,5,Georgia Southern,Georgia State,False,False,-3.5,-1.0,9.1,5.6,Georgia State -3.5,-17
-401636881,5,Iowa State,Houston,False,True,16.5,12.5,-12.6,3.9,Houston +16.5,-20
-401641041,5,Texas State,Sam Houston,True,False,11,8,1.2,12.2,Sam Houston +11,1
-401628637,5,North Carolina A&T,South Carolina State,False,False,-3.5,,32.0,28.5,South Carolina State -3.5,20
-401655617,5,McNeese,Weber State,False,False,-13.5,,17.3,3.8,Weber State -13.5,-2
-401643796,5,UL Monroe,Troy,False,False,-6,-8.5,4.8,-1.2,UL Monroe +6,-4
-401628639,5,Long Island University,Villanova,False,False,-24,,16.3,-7.7,Long Island University +24,14
-401645334,5,UTSA,East Carolina,False,False,-2,-4,4.9,2.9,East Carolina -2,10
-401636883,5,Oklahoma State,Kansas State,False,True,-6,-5.5,14.7,8.7,Kansas State -6,22
-401628374,5,Georgia,Alabama,False,True,2,2,9.0,11.0,Alabama +2,7
-401636885,5,Colorado,UCF,False,True,-12.5,-14,23.3,10.8,UCF -12.5,-27
-401644738,5,Akron,Ohio,False,False,-8,-12.5,10.4,2.4,Ohio -8,20
-401654846,5,Northwestern State,Southeast Missouri State,False,False,-33.5,,37.8,4.3,Southeast Missouri State -33.5,19
-401628497,5,Minnesota,Michigan,False,True,-10.5,-10,2.1,-8.4,Minnesota +10.5,3
-401629043,5,Massachusetts,Miami (OH),False,False,-15.5,-17.5,5.3,-10.2,Massachusetts +15.5,3
-401628634,5,Delaware State,Campbell,False,False,-18,,9.8,-8.2,Delaware State +18,3
-401628632,5,Richmond,Elon,False,False,0,,5.6,5.6,Elon +0,-10
-401654553,5,North Carolina Central,Norfolk State,True,False,10,,-4.7,5.3,Norfolk State +10,-27
-401628502,5,Wisconsin,USC,False,True,-13.5,-14.5,24.6,11.1,USC -13.5,17
-401638660,5,Dayton,Marist,False,False,9.5,,-8.1,1.4,Marist +9.5,-33
-401643794,5,Western Michigan,Marshall,False,False,-3.5,-5.5,18.5,15.0,Marshall -3.5,7
-401638662,5,Valparaiso,Morehead State,False,False,-1,,7.2,6.2,Morehead State -1,12
-401628377,5,Kentucky,Ole Miss,False,True,-15,-17,28.1,13.1,Ole Miss -15,-3
-401636884,5,Cincinnati,Texas Tech,False,True,-3,-3.5,6.9,3.9,Texas Tech -3,3
-401628495,5,Illinois,Penn State,False,True,-19.5,-18,23.9,4.4,Penn State -19.5,14
-401643718,5,Air Force,Wyoming,False,False,4,2.5,-0.6,3.4,Wyoming +4,12
-401636886,5,Arizona,Utah,False,True,-7.5,-11,15.3,7.8,Utah -7.5,-13
-401645337,5,South Florida,Tulane,False,False,-4,-6.5,12.1,8.1,Tulane -4,35
-401634767,5,Virginia Tech,Miami,False,True,-17.5,-17,35.8,18.3,Miami -17.5,4
-401654587,5,Alcorn State,Mississippi Valley State,False,False,14.5,,5.3,19.8,Mississippi Valley State +14.5,-21
-401633982,5,Lindenwood,Eastern Illinois,False,False,-3,,0.8,-2.2,Lindenwood +3,-3
-401634192,5,Murray State,North Dakota,False,False,-21,,18.7,-2.3,Murray State +21,37
-401628635,5,Sacred Heart,Delaware,False,False,-31,,20.6,-10.4,Sacred Heart +31,49
-401628638,5,Morgan State,Stony Brook,False,False,-2.5,,3.2,0.7,Stony Brook -2.5,19
-401628501,5,Washington,Rutgers,False,True,-1.25,-2.75,-0.9,-2.2,Washington +1.25,3
-401632461,5,Portland State,Chattanooga,False,False,-11.5,,12.5,1.0,Chattanooga -11.5,15
-401628498,5,Ohio State,Michigan State,False,True,23.5,25,5.8,29.3,Michigan State +23.5,-31
-401632117,6,Central Arkansas,Abilene Christian,False,False,3,,11.5,14.5,Abilene Christian +3,7
-401628379,6,Tennessee,Arkansas,False,True,14,13.5,-7.5,6.5,Arkansas +14,5
-401638667,6,Stetson,St. Thomas (MN),False,False,-10.5,,-1.9,-12.4,Stetson +10.5,10
-401638664,6,Marist,Davidson,False,False,-20.5,,23.7,3.2,Davidson -20.5,23
-401628508,6,Rutgers,Nebraska,False,True,-6.25,-7.0,3.6,-2.7,Rutgers +6.25,7
-401629044,6,Massachusetts,Northern Illinois,False,False,-14,-17,20.8,6.8,Northern Illinois -14,14
-401638343,6,Furman,The Citadel,False,False,12.5,,7.0,19.5,The Citadel +12.5,-1
-401643723,6,Utah State,Boise State,False,False,-28,-26,45.4,17.4,Boise State -28,32
-401643801,6,James Madison,UL Monroe,False,False,16.5,15.5,-11.3,5.2,UL Monroe +16.5,2
-401643722,6,Navy,Air Force,False,False,10,8.5,-16.7,-6.7,Navy -10,-27
-401634201,6,North Dakota,North Dakota State,False,False,-14.5,,11.2,-3.3,North Dakota +14.5,24
-401638665,6,Morehead State,Butler,False,False,-14.5,,21.2,6.7,Butler -14.5,34
-401635569,6,Clemson,Florida State,False,True,16.5,15,-21.8,-5.3,Clemson -16.5,-16
-401654560,6,Nicholls,Southern,False,False,18.5,,10.8,29.3,Southern +18.5,-44
-401635573,6,Virginia Tech,Stanford,False,True,9.5,6.5,-11.4,-1.9,Virginia Tech -9.5,-24
-401628505,6,Michigan,Washington,False,True,-1.5,-2.5,31.4,29.9,Washington -1.5,10
-401645339,6,Army,Tulsa,False,False,13.5,10.5,-22.4,-8.9,Army -13.5,-42
-401633986,6,Gardner-Webb,UT Martin,False,False,-10.5,,-2.6,-13.1,Gardner-Webb +10.5,18
-401643800,6,South Alabama,Arkansas State,False,False,2.5,3.5,-7.4,-4.9,South Alabama -2.5,2
-401634173,6,Indiana State,Youngstown State,False,False,-14,,17.8,3.8,Youngstown State -14,7
-401629033,6,Temple,UConn,False,False,-17.5,-14,33.0,15.5,UConn -17.5,9
-401633984,6,Western Illinois,Charleston Southern,False,False,-14,,16.7,2.7,Charleston Southern -14,-11
-401654539,6,South Carolina State,Tennessee Tech,False,False,-8,,13.7,5.7,Tennessee Tech -8,-2
-401634053,6,Weber State,Montana,False,False,-13,,21.1,8.1,Montana -13,-7
-401634193,6,South Dakota,Murray State,False,False,27.5,,-1.0,26.5,Murray State +27.5,-59
-401638666,6,Presbyterian,San Diego,False,False,-18,,23.2,5.2,San Diego -18,6
-401634216,6,South Dakota State,Northern Iowa,False,False,24.5,,-2.4,22.1,Northern Iowa +24.5,-38
-401635638,6,Wake Forest,NC State,False,True,-4,-5.5,7.3,3.3,NC State -4,-4
-401654654,6,Wagner,Stonehill,False,False,-3,,8.2,5.2,Stonehill -3,-21
-401628504,6,Iowa,Ohio State,False,True,-17,-20.5,20.7,3.7,Ohio State -17,28
-401643725,6,Hawai'i,San Diego State,False,False,-1.5,-3,6.0,4.5,San Diego State -1.5,3
-401632462,6,Chattanooga,East Tennessee State,False,False,-1.5,,26.2,24.7,East Tennessee State -1.5,-7
-401636890,6,West Virginia,Oklahoma State,False,True,-2.5,-4.5,17.0,14.5,Oklahoma State -2.5,-24
-401644740,6,Bowling Green,Akron,False,False,16.5,14.5,-7.0,9.5,Akron +16.5,-7
-401634162,6,Illinois State,Southern Illinois,False,False,-2.5,,0.0,-2.5,Illinois State +2.5,-35
-401628510,6,UCLA,Penn State,False,True,-29.5,-28,27.7,-1.8,UCLA +29.5,16
-401636888,6,Kansas,Arizona State,False,True,-2.5,-2.5,6.2,3.7,Arizona State -2.5,4
-401634054,6,Northern Colorado,Montana State,False,False,-37.5,,31.3,-6.2,Northern Colorado +37.5,38
-401628506,6,Michigan State,Oregon,False,True,-22.5,-24,9.1,-13.4,Michigan State +22.5,21
-401628503,6,Indiana,Northwestern,True,True,12.5,13.5,-24.1,-11.6,Indiana -12.5,-17
-401654509,6,Saint Francis,Delaware State,False,False,2.5,,11.0,13.5,Delaware State +2.5,-11
-401635571,6,SMU,Louisville,False,True,-6.5,-7,5.6,-0.9,SMU +6.5,-7
-401643802,6,Louisiana,Southern Miss,False,False,17.5,14.5,-24.4,-6.9,Louisiana -17.5,-10
-401632112,6,Tarleton State,Southern Utah,False,False,-1.5,,8.2,6.7,Southern Utah -1.5,-1
-401644741,6,Western Michigan,Ball State,False,False,10,7.5,-12.6,-2.6,Western Michigan -10,-3
-401634051,6,Idaho State,Cal Poly,False,False,3.5,,7.1,10.6,Cal Poly +3.5,-3
-401635572,6,Pittsburgh,North Carolina,False,True,2.5,2.5,9.1,11.6,North Carolina +2.5,-10
-401636356,6,Arkansas-Pine Bluff,Alcorn State,False,False,-14.5,,0.4,-14.1,Arkansas-Pine Bluff +14.5,10
-401628640,6,Delaware,Monmouth,False,False,5.5,,-17.4,-11.9,Delaware -5.5,-7
-401628644,6,William & Mary,Towson,False,False,4.5,,5.9,10.4,Towson +4.5,7
-401645340,6,East Carolina,Charlotte,False,False,9.5,8,-0.8,8.7,Charlotte +9.5,31
-401628643,6,Villanova,Stony Brook,False,False,16.5,,4.1,20.6,Stony Brook +16.5,-18
-401628647,6,North Carolina Central,Campbell,False,False,4.5,,0.5,5.0,Campbell +4.5,-31
-401634253,6,Alabama A&M,Jackson State,True,False,-15,,13.0,-2.0,Alabama A&M +15,7
-401654637,6,Holy Cross,Colgate,False,False,3,,0.6,3.6,Colgate +3,-31
-401628383,6,Missouri,Texas A&M,False,True,-2.5,-1.5,-0.4,-2.9,Missouri +2.5,31
-401628384,6,Alabama,Vanderbilt,False,True,23,24,-9.1,13.9,Vanderbilt +23,5
-401628507,6,USC,Minnesota,False,True,8.5,9.5,6.5,15.0,Minnesota +8.5,7
-401634031,6,McNeese,Houston Christian,False,False,10.5,,-18.8,-8.3,McNeese -10.5,21
-401636887,6,Texas Tech,Arizona,False,True,-6,-5,11.8,5.8,Arizona -6,-6
-401633987,6,Tennessee State,Lindenwood,False,False,-7.5,,-4.1,-11.6,Tennessee State +7.5,-4
-401628380,6,UCF,Florida,False,True,1,-1,-19.6,-18.6,UCF -1,11
-401628509,6,Purdue,Wisconsin,False,True,-12,-12,17.2,5.2,Wisconsin -12,46
-401638361,6,Prairie View A&M,Incarnate Word,False,False,-23.5,,12.4,-11.1,Prairie View A&M +23.5,28
-401634779,6,Syracuse,UNLV,False,True,-5.5,-4.5,20.4,14.9,UNLV -5.5,-3
-401628382,6,Ole Miss,South Carolina,False,True,10,9.5,-15.2,-5.2,Ole Miss -10,-24
-401641001,6,Jacksonville State,Kennesaw State,False,False,17.5,14.5,-11.2,6.3,Kennesaw State +17.5,-39
-401628642,6,North Carolina A&T,Richmond,False,False,-22.5,,24.5,2.0,Richmond -22.5,3
-401641029,6,Sam Houston,UTEP,False,False,10,10.5,0.7,10.7,UTEP +10,-20
-401643798,6,Old Dominion,Coastal Carolina,False,False,-4,-5,6.7,2.7,Coastal Carolina -4,8
-401645338,6,Tulane,UAB,False,False,19.5,14.5,-11.8,7.7,UAB +19.5,-51
-401635570,6,Duke,Georgia Tech,False,True,-10.0,-8,6.5,-3.5,Duke +10,10
-401675117,6,Northwestern State,Stephen F. Austin,False,False,-35,,47.0,12.0,Stephen F. Austin -35,42
-401654589,6,Long Island University,Duquesne,False,False,-4.5,,11.4,6.9,Duquesne -4.5,26
-401635567,6,Boston College,Virginia,False,True,-2,-3,12.1,10.1,Virginia -2,10
-401654551,6,Norfolk State,Sacred Heart,False,False,3.5,,14.9,18.4,Sacred Heart +3.5,7
-401644684,6,Miami (OH),Toledo,False,False,-4.5,-7,16.9,12.4,Toledo -4.5,10
-401643797,6,Texas State,Troy,False,False,14.5,14.5,5.0,19.5,Troy +14.5,-21
-401636891,6,Houston,TCU,False,True,-16.5,-17,19.6,3.1,TCU -16.5,-11
-401633985,6,Southeast Missouri State,Eastern Illinois,False,False,10.5,,-11.3,-0.8,Southeast Missouri State -10.5,-11
-401643726,6,Nevada,San José State,False,False,-7,-7,13.2,6.2,San José State -7,4
-401643724,6,Colorado State,Oregon State,False,False,-10.5,-14,21.4,10.9,Oregon State -10.5,8
-401632108,6,Utah Tech,North Alabama,False,False,-10,,3.8,-6.2,Utah Tech +10,46
-401636347,6,Florida A&M,Alabama State,False,False,7.5,,18.6,26.1,Alabama State +7.5,-15
-401634153,6,Wofford,Western Carolina,False,False,-13,,3.1,-9.9,Wofford +13,4
-401643799,6,App State,Marshall,False,False,-3,-1.5,15.4,12.4,Marshall -3,15
-401628641,6,Rhode Island,Hampton,False,False,7.5,,3.6,11.1,Hampton +7.5,-2
-401654625,6,Lafayette,Fordham,False,False,17.5,,-9.0,8.5,Fordham +17.5,-5
-401636889,6,Baylor,Iowa State,False,True,-13,-13,26.9,13.9,Iowa State -13,22
-401635568,6,Miami,California,False,True,10,12.5,-18.0,-8.0,Miami -10,-1
-401634055,6,UC Davis,Portland State,False,False,10.5,,-8.7,1.8,Portland State +10.5,-1
-401628381,6,Auburn,Georgia,False,True,-21,-23.5,36.3,15.3,Georgia -21,18
-401636384,7,Alcorn State,Grambling,False,False,-4.5,,15.8,11.3,Grambling -4.5,-2
-401634208,7,North Dakota State,Southern Illinois,False,False,22.5,,-16.2,6.3,Southern Illinois +22.5,-21
-401628981,7,Stanford,Notre Dame,False,True,-22.5,-23,37.2,14.7,Notre Dame -22.5,42
-401634147,7,Princeton,Mercer,False,False,-13,,28.7,15.7,Mercer -13,27
-401643732,7,San Diego State,Wyoming,False,False,-1.5,1,-3.6,-5.1,San Diego State +1.5,-3
-401633990,7,Tennessee Tech,Southeast Missouri State,False,False,-13,,4.8,-8.2,Tennessee Tech +13,31
-401643808,7,Arkansas State,Texas State,False,False,-13.5,-14,14.0,0.5,Texas State -13.5,32
-401634030,7,East Texas A&M,Northwestern State,False,False,11.5,,-6.8,4.7,Northwestern State +11.5,-21
-401643806,7,App State,Louisiana,False,False,-10,-10.5,14.6,4.6,Louisiana -10,10
-401643730,7,Washington State,Fresno State,False,False,3.5,3.5,-4.4,-0.9,Washington State -3.5,-8
-401654590,7,Duquesne,Saint Francis,False,False,3,,-3.7,-0.7,Duquesne -3,-31
-401640982,7,Florida International,Liberty,False,False,-15.5,-19.5,19.3,3.8,Liberty -15.5,7
-401635574,7,Syracuse,NC State,False,True,1,4.5,-7.2,-6.2,Syracuse -1,-7
-401634058,7,Portland State,Idaho State,False,False,-7,,17.0,10.0,Idaho State -7,-4
-401636357,7,Prairie View A&M,Arkansas-Pine Bluff,False,False,8.5,,18.1,26.6,Arkansas-Pine Bluff +8.5,4
-401634217,7,Youngstown State,South Dakota State,False,False,-33,,17.5,-15.5,Youngstown State +33,50
-401678917,7,Eastern Kentucky,Southern Utah,False,False,-3.5,,-3.1,-6.6,Eastern Kentucky +3.5,21
-401643803,7,Coastal Carolina,James Madison,False,False,-7,-9.5,15.5,8.5,James Madison -7,32
-401641030,7,UTEP,Western Kentucky,False,False,-19,-19.5,17.1,-1.9,UTEP +19,27
-401645343,7,North Texas,Florida Atlantic,False,False,5.5,6.5,12.9,18.4,Florida Atlantic +5.5,-4
-401643731,7,Oregon State,Nevada,False,False,3,4.5,9.1,12.1,Nevada +3,5
-401644744,7,Northern Illinois,Bowling Green,False,False,-3,-3,-3.8,-6.8,Northern Illinois +3,-10
-401635576,7,Clemson,Wake Forest,False,True,21,20.5,-7.2,13.8,Wake Forest +21,-35
-401628388,7,Ole Miss,LSU,False,True,4,2.5,-19.9,-15.9,Ole Miss -4,3
-401645342,7,UAB,Army,False,False,-27,-24,28.9,1.9,Army -27,34
-401628653,7,Brown,Rhode Island,False,False,-3.5,,3.3,-0.2,Brown +3.5,10
-401636892,7,Utah,Arizona State,False,True,5.5,5,12.2,17.7,Arizona State +5.5,8
-401645344,7,UTSA,Rice,False,False,3.5,4,-3.0,0.5,Rice +3.5,2
-401654576,7,Mercyhurst,Central Connecticut,False,False,-16.5,,13.9,-2.6,Mercyhurst +16.5,18
-401638669,7,Davidson,Dayton,False,False,-1.5,,10.1,8.6,Dayton -1.5,2
-401634174,7,Murray State,Indiana State,False,False,-6.5,,-3.9,-10.4,Murray State +6.5,4
-401636893,7,Arizona,BYU,False,True,-2.5,-3.5,9.7,7.2,BYU -2.5,22
-401632113,7,Abilene Christian,North Alabama,False,False,7.5,,-18.8,-11.3,Abilene Christian -7.5,13
-401654547,7,Southern,Texas Southern,False,False,1.5,,2.2,3.7,Texas Southern +1.5,-3
-401634100,7,Idaho,Montana State,False,False,-9.5,,3.4,-6.1,Idaho +9.5,31
-401628386,7,Mississippi State,Georgia,False,True,-34,-34,24.5,-9.5,Mississippi State +34,10
-401654638,7,Fordham,Holy Cross,False,False,-16.5,,21.1,4.6,Holy Cross -16.5,3
-401654564,7,Northern Iowa,South Dakota,False,False,-21.5,,22.6,1.1,South Dakota -21.5,25
-401628387,7,Vanderbilt,Kentucky,False,True,-12.5,-13.5,9.5,-3.0,Vanderbilt +12.5,-7
-401628649,7,UAlbany,Bryant,False,False,7,,9.3,16.3,Bryant +7,-7
-401634137,7,Samford,East Tennessee State,False,False,-9.5,,21.0,11.5,East Tennessee State -9.5,3
-401643733,7,UNLV,Utah State,False,False,18.5,19,-19.6,-1.1,UNLV -18.5,-16
-401654473,7,Dartmouth,Yale,False,False,3,,-0.6,2.4,Yale +3,-1
-401638668,7,Butler,Drake,False,False,-2.5,,-4.3,-6.8,Butler +2.5,10
-401654596,7,Stonehill,Long Island University,True,False,-9.5,,-1.1,-10.6,Stonehill +9.5,24
-401634254,7,Bethune-Cookman,Alabama A&M,False,False,-3.5,,26.5,23.0,Alabama A&M -3.5,44
-401644743,7,Ball State,Kent State,False,False,3,6.5,4.7,7.7,Kent State +3,-2
-401644745,7,Toledo,Buffalo,False,False,10.5,9.5,0.2,10.7,Buffalo +10.5,15
-401643729,7,San José State,Colorado State,False,False,-2.5,2,-11.4,-13.9,San José State +2.5,7
-401634019,7,Nicholls,Incarnate Word,False,False,-3.5,,-9.1,-12.6,Nicholls +3.5,45
-401643728,7,Boise State,Hawai'i,False,False,21,21,-21.1,-0.1,Boise State -21,-21
-401628517,7,Wisconsin,Rutgers,False,True,-1.25,-2.5,14.4,13.1,Rutgers -1.25,-35
-401628512,7,Washington,Iowa,False,True,-2.5,-3.5,-0.1,-2.6,Washington +2.5,24
-401638671,7,St. Thomas (MN),Marist,False,False,7,,7.8,14.8,Marist +7,-7
-401654499,7,Delaware State,Robert Morris,False,False,-7.5,,8.8,1.3,Robert Morris -7.5,23
-401643805,7,Old Dominion,Georgia State,False,False,-3,-1.5,-6.6,-9.6,Old Dominion +3,-7
-401654651,7,Bucknell,Pennsylvania,False,False,-19,,26.8,7.8,Pennsylvania -19,10
-401638344,7,The Citadel,Western Carolina,False,False,-17.5,,16.3,-1.2,The Citadel +17.5,14
-401675118,7,Stephen F. Austin,Lamar,False,False,7.5,,-10.9,-3.4,Stephen F. Austin -7.5,-7
-401633989,7,Eastern Illinois,Tennessee State,False,False,2.5,,18.0,20.5,Tennessee State +2.5,24
-401644742,7,Akron,Western Michigan,False,False,-9.5,-9.5,5.9,-3.6,Akron +9.5,10
-401628650,7,Maine,Delaware,False,False,-19.5,,25.3,5.8,Delaware -19.5,23
-401635575,7,California,Pittsburgh,False,True,-3.5,-3.5,10.8,7.3,Pittsburgh -3.5,2
-401628651,7,New Hampshire,Elon,False,False,-1,,1.2,0.2,Elon -1,-7
-401643807,7,Southern Miss,UL Monroe,False,False,-4.5,-6,25.0,20.5,UL Monroe -4.5,17
-401635578,7,Louisville,Virginia,False,True,7,7.5,-0.5,6.5,Virginia +7,-4
-401634154,7,VMI,Wofford,False,False,-17.5,,34.4,16.9,Wofford -17.5,15
-401654513,7,Merrimack,Morgan State,False,False,-2.5,,8.0,5.5,Morgan State -2.5,-8
-401644685,7,Miami (OH),Eastern Michigan,False,False,3,3.5,5.7,8.7,Eastern Michigan +3,-24
-401634099,7,Northern Arizona,Montana,False,False,-12.5,,10.6,-1.9,Northern Arizona +12.5,11
-401628389,7,Missouri,Massachusetts,False,True,27,27.5,-4.1,22.9,Massachusetts +27,-42
-401654626,7,Georgetown,Lafayette,False,False,-13.5,,9.0,-4.5,Georgetown +13.5,-17
-401654490,7,Columbia,Wagner,False,False,14.5,,-0.2,14.3,Wagner +14.5,-18
-401633991,7,UT Martin,Western Illinois,False,False,21.5,,-3.5,18.0,Western Illinois +21.5,-28
-401628385,7,South Carolina,Alabama,False,True,-21,-21.5,25.7,4.7,Alabama -21,2
-401644746,7,Ohio,Central Michigan,False,False,3,3,-3.6,-0.6,Ohio -3,-2
-401634163,7,Missouri State,Illinois State,False,False,-2.5,,8.9,6.4,Illinois State -2.5,-34
-401634056,7,Cal Poly,UC Davis,False,False,-17,,17.5,0.5,UC Davis -17,46
-401636896,7,Iowa State,West Virginia,False,True,3,3,-13.0,-10.0,Iowa State -3,-12
-401641002,7,New Mexico State,Jacksonville State,False,False,-21,-20.5,24.5,3.5,Jacksonville State -21,41
-401645341,7,Memphis,South Florida,True,False,10,6,-10.9,-0.9,Memphis -10,-18
-401636894,7,Kansas State,Colorado,False,True,3.5,6,-4.6,-1.1,Kansas State -3.5,-3
-401641009,7,Middle Tennessee,Louisiana Tech,False,False,-5,-4,6.0,1.0,Louisiana Tech -5,27
-401628652,7,Towson,Norfolk State,False,False,18,,-10.4,7.6,Norfolk State +18,-5
-401636895,7,Cincinnati,UCF,False,True,-2.5,-3.5,-4.4,-6.9,Cincinnati +2.5,-6
-401643804,7,Marshall,Georgia Southern,False,False,-1,2.5,6.3,5.3,Georgia Southern -1,1
-401628516,7,Penn State,USC,False,True,3.5,5,0.2,3.7,USC +3.5,-3
-401628513,7,Northwestern,Maryland,False,True,-11,-10,30.7,19.7,Maryland -11,-27
-401634057,7,Eastern Washington,Sacramento State,False,False,-11.5,,22.4,10.9,Sacramento State -11.5,-7
-401628511,7,Purdue,Illinois,False,True,-22.5,-19,31.1,8.6,Illinois -22.5,1
-401643727,7,Air Force,New Mexico,False,False,-7,-4.5,16.2,9.2,New Mexico -7,15
-401634101,7,Northern Colorado,Weber State,False,False,-27,,30.7,3.7,Weber State -27,-4
-401628515,7,Ohio State,Oregon,False,True,3.5,4,-6.9,-3.4,Ohio State -3.5,1
-401628391,7,Florida,Tennessee,False,True,-14,-15,35.7,21.7,Tennessee -14,6
-401628514,7,Minnesota,UCLA,False,True,3.5,5,-7.9,-4.4,Minnesota -3.5,-4
-401635577,7,Georgia Tech,North Carolina,False,True,3.5,6,-3.6,-0.1,Georgia Tech -3.5,-7
+401636374,4,Florida A&M,Troy,False,False,-21.5,-22.5,3.9,-17.6,Florida A&M +21.5,22
+401643790,4,South Alabama,App State,False,False,-7.5,-8,11.0,3.5,App State -7.5,-34
+401654851,4,Sacramento State,East Texas A&M,False,False,19.5,,-10.8,8.7,East Texas A&M +19.5,-34
+401628624,4,Maine,Merrimack,False,False,-0.5,,4.9,4.4,Merrimack -0.5,-11
+401632099,4,Central Arkansas,Arkansas-Pine Bluff,False,False,33,,-4.7,28.3,Arkansas-Pine Bluff +33,-39
+401640991,4,East Carolina,Liberty,False,False,-7.5,-7.25,17.4,9.9,Liberty -7.5,11
+401643714,4,San José State,Washington State,False,False,-13,-14.25,19.4,6.4,Washington State -13,2
+401629042,4,Central Connecticut,Massachusetts,False,False,-19.5,-20,-11.4,-30.9,Central Connecticut +19.5,4
+401628630,4,Furman,William & Mary,False,False,-10,,10.0,0.0,William & Mary -10,10
+401628369,4,Tennessee,Oklahoma,False,True,6,-3,-13.2,-7.2,Tennessee -6,-10
+401628488,4,Villanova,Maryland,False,True,-22.25,-17.5,31.1,8.9,Maryland -22.25,18
+401635555,4,Miami,South Florida,False,True,16.5,17.5,-27.7,-11.2,Miami -16.5,-35
+401644737,4,Saint Francis,Eastern Michigan,False,False,-25.5,-24,-4.1,-29.6,Saint Francis +25.5,36
+401628491,4,Northwestern,Washington,False,True,-12,-10.25,34.8,22.8,Washington -12,19
+401635557,4,TCU,SMU,False,True,1.5,2.5,3.4,4.9,SMU +1.5,24
+401636874,4,Baylor,Colorado,False,True,-2.5,-1.25,8.2,5.7,Colorado -2.5,7
+401636876,4,Utah,Oklahoma State,False,True,1,-3,7.2,8.2,Oklahoma State +1,-3
+401628629,4,Towson,North Dakota State,False,False,-25,,12.3,-12.7,Towson +25,17
+401635558,4,Virginia,Coastal Carolina,False,True,3.5,3.0,7.9,11.4,Coastal Carolina +3.5,-19
+401655634,4,St. Thomas (MN),Lindenwood,False,False,-4.5,,-13.2,-17.7,St. Thomas (MN) +4.5,64
+401628368,4,Vanderbilt,Missouri,False,True,-18,-21.0,29.3,11.3,Missouri -18,3
+401628366,4,Georgia Southern,Ole Miss,False,True,-35,-36,46.4,11.4,Ole Miss -35,39
+401641028,4,UTEP,Colorado State,False,False,-8.5,-10.0,-1.5,-10.0,UTEP +8.5,10
+401628628,4,Richmond,Delaware State,False,False,23.5,,0.7,24.2,Delaware State +23.5,-14
+401628627,4,Rhode Island,Long Island University,True,False,10.5,,-2.6,7.9,Long Island University +10.5,-7
+401634242,4,Southeast Missouri State,Southern Illinois,False,False,-6.5,,5.9,-0.6,Southeast Missouri State +6.5,-17
+401632078,4,Morehead State,Eastern Kentucky,False,False,-28,,-8.2,-36.2,Morehead State +28,29
+401641037,4,Toledo,Western Kentucky,False,False,2.5,0.0,-18.2,-15.7,Toledo -2.5,5
+401628485,4,Illinois,Nebraska,False,True,-9,-8.75,2.8,-6.2,Illinois +9,-7
+401629031,4,Florida Atlantic,UConn,False,False,-1,-2.5,-8.2,-9.2,Florida Atlantic +1,34
+401636872,4,Kansas State,BYU,False,True,7.5,7.25,-10.5,-3.0,Kansas State -7.5,29
+401632102,4,Southern Utah,Idaho State,False,False,2.5,,8.2,10.7,Idaho State +2.5,10
+401643711,4,Fresno State,New Mexico,False,False,12,15.25,-10.7,1.3,New Mexico +12,-17
+401628364,4,Ohio,Kentucky,False,True,-21.5,-18.25,12.0,-9.5,Ohio +21.5,35
+401628370,4,Akron,South Carolina,False,True,-25,-27,25.6,0.6,South Carolina -25,43
+401636877,4,Arizona State,Texas Tech,False,True,-4.5,-3.25,-0.3,-4.8,Arizona State +4.5,8
+401654586,4,Mississippi Valley State,Nicholls,False,False,-30,,3.7,-26.3,Mississippi Valley State +30,66
+401632100,4,Alabama A&M,Austin Peay,False,False,-13.5,,-20.2,-33.7,Alabama A&M +13.5,43
+401643716,4,Wyoming,North Texas,False,False,-7,-9.25,9.4,2.4,North Texas -7,27
+401628487,4,Iowa,Minnesota,False,True,3,2.5,8.8,11.8,Minnesota +3,-17
+401628486,4,Charlotte,Indiana,False,True,-28.5,-28.0,29.1,0.6,Indiana -28.5,38
+401655619,4,Weber State,Northwestern State,False,False,31.5,,-33.4,-1.9,Weber State -31.5,-39
+401628367,4,Florida,Mississippi State,False,True,6.5,4.5,10.0,16.5,Mississippi State +6.5,-17
+401654550,4,Norfolk State,VMI,False,False,-6.5,,-7.8,-14.3,Norfolk State +6.5,-22
+401641000,4,Southern Miss,Jacksonville State,False,False,-6,-6.5,2.7,-3.3,Southern Miss +6,37
+401636873,4,Houston,Cincinnati,False,True,-4,-5.5,-4.3,-8.3,Houston +4,34
+401643715,4,Utah State,Temple,False,False,6.5,6.25,-11.4,-4.9,Utah State -6.5,16
+401634145,4,The Citadel,Mercer,False,False,-20.5,,25.8,5.3,Mercer -20.5,17
+401643712,4,Northern Iowa,Hawai'i,False,False,-10.25,-8.0,-6.0,-16.2,Northern Iowa +10.25,29
+401628625,4,Monmouth,Florida International,True,False,-12.5,-13.5,-5.8,-18.3,Monmouth +12.5,-3
+401634247,4,Youngstown State,Pittsburgh,False,True,-28.25,-25.5,16.4,-11.9,Youngstown State +28.25,56
+401636879,4,Kansas,West Virginia,False,True,-1.5,-2.5,-14.9,-16.4,Kansas +1.5,4
+401628363,4,Arkansas,Auburn,False,True,-2.5,-3.5,-8.2,-10.7,Arkansas +2.5,-10
+401635551,4,California,Florida State,False,True,-3,-2.25,-1.0,-4.0,California +3,5
+401641034,4,New Mexico State,Sam Houston,False,False,-15,-14,17.2,2.2,Sam Houston -15,20
+401654606,4,Robert Morris,Wagner,False,False,6.5,,6.8,13.3,Wagner +6.5,-7
+401628622,4,East Tennessee State,Elon,False,False,-7.5,,-5.1,-12.6,East Tennessee State +7.5,-20
+401655626,4,Western Carolina,Montana,False,False,-18.5,,19.5,1.0,Montana -18.5,11
+401628490,4,Michigan State,Boston College,False,True,-4.5,-6.25,9.0,4.5,Boston College -4.5,4
+401635553,4,Duke,Middle Tennessee,False,True,14.5,14.0,-21.2,-6.7,Duke -14.5,-28
+401640981,5,Louisiana Tech,Florida International,True,False,2,2.5,11.2,13.2,Florida International +2,7
+401628496,5,Maryland,Indiana,False,True,-7.5,-6.5,-2.0,-9.5,Maryland +7.5,14
+401636383,5,Grambling,Prairie View A&M,True,False,-7,,-14.3,-21.3,Grambling +7,2
+401628376,5,South Alabama,LSU,False,True,-21,-21,1.7,-19.3,South Alabama +21,32
+401635562,5,North Carolina,Duke,False,True,1.5,-3,8.0,9.5,Duke +1.5,1
+401634047,5,Idaho,UC Davis,False,False,4,,1.0,5.0,UC Davis +4,2
+401634184,5,Youngstown State,Missouri State,False,False,-10,,10.5,0.5,Missouri State -10,7
+401635659,5,Louisiana,Wake Forest,False,True,-3,-3,-2.1,-5.1,Louisiana +3,-3
+401628633,5,Hampton,William & Mary,False,False,-14,,1.0,-13.0,Hampton +14,42
+401633983,5,Tennessee Tech,Gardner-Webb,False,False,-4,,13.7,9.7,Gardner-Webb -4,-31
+401643795,5,Old Dominion,Bowling Green,False,False,-11,-9.5,15.6,4.6,Bowling Green -11,-3
+401635564,5,Northern Illinois,NC State,False,True,-7,-7.5,-20.2,-27.2,Northern Illinois +7,7
+401654666,5,SE Louisiana,Tarleton State,False,False,-8.5,,21.1,12.6,Tarleton State -8.5,3
+401645332,5,Navy,UAB,False,False,4.5,2.5,1.2,5.7,UAB +4.5,-23
+401628636,5,Fordham,Monmouth,False,False,-16,,8.0,-8.0,Fordham +16,42
+401641025,5,Middle Tennessee,Memphis,False,False,-27,-24.5,40.8,13.8,Memphis -27,17
+401643719,5,Washington State,Boise State,False,False,-6.5,-7,0.3,-6.2,Washington State +6.5,21
+401634243,5,Southern Illinois,South Dakota,False,False,-13.5,,9.1,-4.4,Southern Illinois +13.5,29
+401634161,5,North Dakota State,Illinois State,False,False,10,,-2.1,7.9,Illinois State +10,-32
+401628631,5,Maine,UAlbany,False,False,-10,,3.6,-6.4,Maine +10,-14
+401643720,5,Fresno State,UNLV,False,False,-2.5,-3.5,4.6,2.1,UNLV -2.5,45
+401638659,5,Davidson,Presbyterian,False,False,-12.5,,-11.1,-23.6,Davidson +12.5,-11
+401645335,5,Wagner,Florida Atlantic,False,False,-34.75,-29.75,9.1,-25.7,Wagner +34.75,31
+401641018,5,UT Martin,Kennesaw State,False,False,1.75,-1.5,-4.0,-2.2,UT Martin -1.75,-11
+401629032,5,Buffalo,UConn,False,False,-6,-4,6.2,0.2,UConn -6,44
+401634049,5,Montana,Eastern Washington,False,False,16.5,,-26.8,-10.3,Montana -16.5,-3
+401628500,5,Oregon,UCLA,False,True,23.5,24.5,-14.5,9.0,UCLA +23.5,-21
+401628378,5,Mississippi State,Texas,False,True,-37,-38,45.8,8.8,Texas -37,22
+401644739,5,Eastern Michigan,Kent State,False,False,14,14,-20.9,-6.9,Eastern Michigan -14,-19
+401645336,5,Tulsa,North Texas,False,False,-7,-7,13.5,6.5,North Texas -7,32
+401643793,5,Ball State,James Madison,False,False,-22,-20,42.7,20.7,James Madison -22,56
+401628375,5,Oklahoma,Auburn,False,True,-2,2.5,-2.7,-4.7,Oklahoma +2,-6
+401628373,5,Arkansas,Texas A&M,True,True,-6.5,-4.5,3.9,-2.6,Arkansas +6.5,4
+401628980,5,Louisville,Notre Dame,False,True,-6.5,-6.5,7.6,1.1,Notre Dame -6.5,7
+401634146,5,Mercer,Wofford,False,False,6.5,,-7.4,-0.9,Mercer -6.5,-19
+401636880,5,BYU,Baylor,False,True,-3,-3,-13.9,-16.9,BYU +3,-6
+401643721,5,San Diego State,Central Michigan,False,False,-2.5,-1.75,-5.6,-8.1,San Diego State +2.5,1
+401635560,5,Western Kentucky,Boston College,False,True,-7.5,-12.5,27.3,19.8,Boston College -7.5,1
+401635565,5,Holy Cross,Syracuse,False,True,-30.75,-28.5,15.9,-14.8,Holy Cross +30.75,28
+401632107,5,Lamar,Central Arkansas,False,False,-17.5,,19.7,2.2,Central Arkansas -17.5,20
+401635563,5,Florida State,SMU,False,True,-6,-5.5,19.3,13.3,SMU -6,26
+401635561,5,Stanford,Clemson,False,True,-24,-22,21.5,-2.5,Stanford +24,26
+401636882,5,TCU,Kansas,True,True,-1.5,-1.5,-7.3,-8.8,TCU +1.5,-11
+401636346,5,Alabama State,Bethune-Cookman,False,False,6.5,,-12.3,-5.8,Alabama State -6.5,-5
+401645333,5,Charlotte,Rice,False,False,-4,-6.5,-4.4,-8.4,Charlotte +4,-1
+401634172,5,Houston Christian,Indiana State,False,False,-9.5,,11.3,1.8,Indiana State -9.5,-3
+401636881,5,Iowa State,Houston,False,True,16.5,12.5,-18.8,-2.3,Iowa State -16.5,-20
+401632106,5,Southern Utah,Austin Peay,False,False,-1,,-1.6,-2.6,Southern Utah +1,-11
+401643792,5,Georgia Southern,Georgia State,False,False,-3.5,-1.0,7.6,4.1,Georgia State -3.5,-17
+401636883,5,Oklahoma State,Kansas State,False,True,-6,-5.5,6.9,0.9,Kansas State -6,22
+401633981,5,Charleston Southern,Tennessee State,False,False,-4,,-0.7,-4.7,Charleston Southern +4,4
+401634046,5,Cal Poly,Northern Colorado,False,False,2.5,,-4.8,-2.3,Cal Poly -2.5,-21
+401628499,5,Nebraska,Purdue,False,True,10,10,-13.5,-3.5,Nebraska -10,-18
+401628637,5,North Carolina A&T,South Carolina State,False,False,-3.5,,18.5,15.0,South Carolina State -3.5,20
+401645334,5,UTSA,East Carolina,False,False,-2,-4,-2.1,-4.1,UTSA +2,10
+401628634,5,Delaware State,Campbell,False,False,-18,,6.4,-11.6,Delaware State +18,3
+401641035,5,New Mexico,New Mexico State,False,False,9.5,7,-5.8,3.7,New Mexico State +9.5,-10
+401632110,5,Robert Morris,Eastern Kentucky,False,False,-14,,-0.6,-14.6,Robert Morris +14,24
+401634136,5,East Tennessee State,The Citadel,False,False,13,,-16.3,-3.3,East Tennessee State -13,-17
+401634048,5,Montana State,Idaho State,False,False,17.5,,1.9,19.4,Idaho State +17.5,-20
+401641041,5,Texas State,Sam Houston,True,False,11,8,-2.6,8.4,Sam Houston +11,1
+401628639,5,Long Island University,Villanova,False,False,-24,,12.3,-11.7,Long Island University +24,14
+401655617,5,McNeese,Weber State,False,False,-13.5,,10.6,-2.9,McNeese +13.5,-2
+401628502,5,Wisconsin,USC,False,True,-13.5,-14.5,17.3,3.8,USC -13.5,17
+401644738,5,Akron,Ohio,False,False,-8,-12.5,10.6,2.6,Ohio -8,20
+401629043,5,Massachusetts,Miami (OH),False,False,-15.5,-17.5,4.9,-10.6,Massachusetts +15.5,3
+401654846,5,Northwestern State,Southeast Missouri State,False,False,-33.5,,33.4,-0.1,Northwestern State +33.5,19
+401643796,5,UL Monroe,Troy,False,False,-6,-8.5,1.3,-4.7,UL Monroe +6,-4
+401628632,5,Richmond,Elon,False,False,0,,0.1,0.1,Elon +0,-10
+401654617,5,Bucknell,Lehigh,False,False,-6,,28.0,22.0,Lehigh -6,-3
+401636885,5,Colorado,UCF,False,True,-12.5,-14,19.7,7.2,UCF -12.5,-27
+401628497,5,Minnesota,Michigan,False,True,-10.5,-10,-2.4,-12.9,Minnesota +10.5,3
+401636886,5,Arizona,Utah,False,True,-7.5,-11,7.8,0.3,Utah -7.5,-13
+401628495,5,Illinois,Penn State,False,True,-19.5,-18,19.7,0.2,Penn State -19.5,14
+401628501,5,Washington,Rutgers,False,True,-1.25,-2.75,-10.1,-11.4,Washington +1.25,3
+401628377,5,Kentucky,Ole Miss,False,True,-15,-17,19.8,4.8,Ole Miss -15,-3
+401654553,5,North Carolina Central,Norfolk State,True,False,10,,-6.4,3.6,Norfolk State +10,-27
+401638662,5,Valparaiso,Morehead State,False,False,-1,,3.1,2.1,Morehead State -1,12
+401638660,5,Dayton,Marist,False,False,9.5,,-14.5,-5.0,Dayton -9.5,-33
+401628635,5,Sacred Heart,Delaware,False,False,-31,,16.2,-14.8,Sacred Heart +31,49
+401628374,5,Georgia,Alabama,False,True,2,2,3.4,5.4,Alabama +2,7
+401628638,5,Morgan State,Stony Brook,False,False,-2.5,,-0.4,-2.9,Morgan State +2.5,19
+401645337,5,South Florida,Tulane,False,False,-4,-6.5,10.0,6.0,Tulane -4,35
+401633982,5,Lindenwood,Eastern Illinois,False,False,-3,,-2.7,-5.7,Lindenwood +3,-3
+401643794,5,Western Michigan,Marshall,False,False,-3.5,-5.5,13.6,10.1,Marshall -3.5,7
+401643718,5,Air Force,Wyoming,False,False,4,2.5,-4.7,-0.7,Air Force -4,12
+401632461,5,Portland State,Chattanooga,False,False,-11.5,,12.9,1.4,Chattanooga -11.5,15
+401654587,5,Alcorn State,Mississippi Valley State,False,False,14.5,,0.8,15.3,Mississippi Valley State +14.5,-21
+401636884,5,Cincinnati,Texas Tech,False,True,-3,-3.5,2.7,-0.3,Cincinnati +3,3
+401628498,5,Ohio State,Michigan State,False,True,23.5,25,-4.2,19.3,Michigan State +23.5,-31
+401634192,5,Murray State,North Dakota,False,False,-21,,14.1,-6.9,Murray State +21,37
+401634767,5,Virginia Tech,Miami,False,True,-17.5,-17,31.2,13.7,Miami -17.5,4
+401628379,6,Tennessee,Arkansas,False,True,14,13.5,-12.9,1.1,Arkansas +14,5
+401632117,6,Central Arkansas,Abilene Christian,False,False,3,,6.0,9.0,Abilene Christian +3,7
+401638667,6,Stetson,St. Thomas (MN),False,False,-10.5,,-2.7,-13.2,Stetson +10.5,10
+401638664,6,Marist,Davidson,False,False,-20.5,,21.8,1.3,Davidson -20.5,23
+401628508,6,Rutgers,Nebraska,False,True,-6.25,-7.0,0.6,-5.7,Rutgers +6.25,7
+401629044,6,Massachusetts,Northern Illinois,False,False,-14,-17,20.0,6.0,Northern Illinois -14,14
+401643801,6,James Madison,UL Monroe,False,False,16.5,15.5,-12.3,4.2,UL Monroe +16.5,2
+401638343,6,Furman,The Citadel,False,False,12.5,,-0.7,11.8,The Citadel +12.5,-1
+401643723,6,Utah State,Boise State,False,False,-28,-26,40.3,12.3,Boise State -28,32
+401638665,6,Morehead State,Butler,False,False,-14.5,,18.7,4.2,Butler -14.5,34
+401654560,6,Nicholls,Southern,False,False,18.5,,6.8,25.3,Southern +18.5,-44
+401634201,6,North Dakota,North Dakota State,False,False,-14.5,,4.2,-10.3,North Dakota +14.5,24
+401635573,6,Virginia Tech,Stanford,False,True,9.5,6.5,-12.9,-3.4,Virginia Tech -9.5,-24
+401645339,6,Army,Tulsa,False,False,13.5,10.5,-23.5,-10.0,Army -13.5,-42
+401635569,6,Clemson,Florida State,False,True,16.5,15,-26.1,-9.6,Clemson -16.5,-16
+401633986,6,Gardner-Webb,UT Martin,False,False,-10.5,,-4.3,-14.8,Gardner-Webb +10.5,18
+401643722,6,Navy,Air Force,False,False,10,8.5,-22.1,-12.1,Navy -10,-27
+401628505,6,Michigan,Washington,False,True,-1.5,-2.5,22.0,20.5,Washington -1.5,10
+401629033,6,Temple,UConn,False,False,-17.5,-14,30.2,12.7,UConn -17.5,9
+401634173,6,Indiana State,Youngstown State,False,False,-14,,13.0,-1.0,Indiana State +14,7
+401654539,6,South Carolina State,Tennessee Tech,False,False,-8,,12.4,4.4,Tennessee Tech -8,-2
+401643800,6,South Alabama,Arkansas State,False,False,2.5,3.5,-10.6,-8.1,South Alabama -2.5,2
+401633984,6,Western Illinois,Charleston Southern,False,False,-14,,12.5,-1.5,Western Illinois +14,-11
+401634053,6,Weber State,Montana,False,False,-13,,18.4,5.4,Montana -13,-7
+401638666,6,Presbyterian,San Diego,False,False,-18,,18.9,0.9,San Diego -18,6
+401634193,6,South Dakota,Murray State,False,False,27.5,,-4.7,22.8,Murray State +27.5,-59
+401634216,6,South Dakota State,Northern Iowa,False,False,24.5,,-6.6,17.9,Northern Iowa +24.5,-38
+401643802,6,Louisiana,Southern Miss,False,False,17.5,14.5,-29.2,-11.7,Louisiana -17.5,-10
+401643725,6,Hawai'i,San Diego State,False,False,-1.5,-3,1.6,0.1,San Diego State -1.5,3
+401636890,6,West Virginia,Oklahoma State,False,True,-2.5,-4.5,12.7,10.2,Oklahoma State -2.5,-24
+401635638,6,Wake Forest,NC State,False,True,-4,-5.5,1.4,-2.6,Wake Forest +4,-4
+401628503,6,Indiana,Northwestern,True,True,12.5,13.5,-25.0,-12.5,Indiana -12.5,-17
+401644740,6,Bowling Green,Akron,False,False,16.5,14.5,-13.2,3.3,Akron +16.5,-7
+401628510,6,UCLA,Penn State,False,True,-29.5,-28,27.2,-2.3,UCLA +29.5,16
+401654654,6,Wagner,Stonehill,False,False,-3,,5.9,2.9,Stonehill -3,-21
+401636888,6,Kansas,Arizona State,False,True,-2.5,-2.5,3.5,1.0,Arizona State -2.5,4
+401634054,6,Northern Colorado,Montana State,False,False,-37.5,,27.0,-10.5,Northern Colorado +37.5,38
+401628504,6,Iowa,Ohio State,False,True,-17,-20.5,17.8,0.8,Ohio State -17,28
+401635571,6,SMU,Louisville,False,True,-6.5,-7,1.8,-4.7,SMU +6.5,-7
+401645340,6,East Carolina,Charlotte,False,False,9.5,8,-5.4,4.1,Charlotte +9.5,31
+401654509,6,Saint Francis,Delaware State,False,False,2.5,,7.6,10.1,Delaware State +2.5,-11
+401632112,6,Tarleton State,Southern Utah,False,False,-1.5,,4.4,2.9,Southern Utah -1.5,-1
+401634253,6,Alabama A&M,Jackson State,True,False,-15,,10.8,-4.2,Alabama A&M +15,7
+401628640,6,Delaware,Monmouth,False,False,5.5,,-23.5,-18.0,Delaware -5.5,-7
+401632462,6,Chattanooga,East Tennessee State,False,False,-1.5,,21.3,19.8,East Tennessee State -1.5,-7
+401634162,6,Illinois State,Southern Illinois,False,False,-2.5,,-5.7,-8.2,Illinois State +2.5,-35
+401628506,6,Michigan State,Oregon,False,True,-22.5,-24,7.8,-14.7,Michigan State +22.5,21
+401634051,6,Idaho State,Cal Poly,False,False,3.5,,1.5,5.0,Cal Poly +3.5,-3
+401635572,6,Pittsburgh,North Carolina,False,True,2.5,2.5,5.2,7.7,North Carolina +2.5,-10
+401628644,6,William & Mary,Towson,False,False,4.5,,0.8,5.3,Towson +4.5,7
+401644741,6,Western Michigan,Ball State,False,False,10,7.5,-18.8,-8.8,Western Michigan -10,-3
+401654637,6,Holy Cross,Colgate,False,False,3,,-5.8,-2.8,Holy Cross -3,-31
+401636356,6,Arkansas-Pine Bluff,Alcorn State,False,False,-14.5,,-6.7,-21.2,Arkansas-Pine Bluff +14.5,10
+401628383,6,Missouri,Texas A&M,False,True,-2.5,-1.5,-5.0,-7.5,Missouri +2.5,31
+401628380,6,UCF,Florida,False,True,1,-1,-19.7,-18.7,UCF -1,11
+401628643,6,Villanova,Stony Brook,False,False,16.5,,-0.3,16.2,Stony Brook +16.5,-18
+401628384,6,Alabama,Vanderbilt,False,True,23,24,-16.4,6.6,Vanderbilt +23,5
+401628647,6,North Carolina Central,Campbell,False,False,4.5,,-3.8,0.7,Campbell +4.5,-31
+401628509,6,Purdue,Wisconsin,False,True,-12,-12,15.3,3.3,Wisconsin -12,46
+401633987,6,Tennessee State,Lindenwood,False,False,-7.5,,-7.8,-15.3,Tennessee State +7.5,-4
+401636887,6,Texas Tech,Arizona,False,True,-6,-5,5.5,-0.5,Texas Tech +6,-6
+401628507,6,USC,Minnesota,False,True,8.5,9.5,3.4,11.9,Minnesota +8.5,7
+401628382,6,Ole Miss,South Carolina,False,True,10,9.5,-20.0,-10.0,Ole Miss -10,-24
+401634031,6,McNeese,Houston Christian,False,False,10.5,,-23.1,-12.6,McNeese -10.5,21
+401641029,6,Sam Houston,UTEP,False,False,10,10.5,-4.4,5.6,UTEP +10,-20
+401628642,6,North Carolina A&T,Richmond,False,False,-22.5,,20.7,-1.8,North Carolina A&T +22.5,3
+401634779,6,Syracuse,UNLV,False,True,-5.5,-4.5,11.4,5.9,UNLV -5.5,-3
+401644684,6,Miami (OH),Toledo,False,False,-4.5,-7,11.5,7.0,Toledo -4.5,10
+401641001,6,Jacksonville State,Kennesaw State,False,False,17.5,14.5,-15.2,2.3,Kennesaw State +17.5,-39
+401645338,6,Tulane,UAB,False,False,19.5,14.5,-18.7,0.8,UAB +19.5,-51
+401635567,6,Boston College,Virginia,False,True,-2,-3,7.2,5.2,Virginia -2,10
+401654551,6,Norfolk State,Sacred Heart,False,False,3.5,,11.2,14.7,Sacred Heart +3.5,7
+401643797,6,Texas State,Troy,False,False,14.5,14.5,2.2,16.7,Troy +14.5,-21
+401638361,6,Prairie View A&M,Incarnate Word,False,False,-23.5,,9.2,-14.3,Prairie View A&M +23.5,28
+401643799,6,App State,Marshall,False,False,-3,-1.5,13.0,10.0,Marshall -3,15
+401635570,6,Duke,Georgia Tech,False,True,-10.0,-8,2.8,-7.2,Duke +10,10
+401643798,6,Old Dominion,Coastal Carolina,False,False,-4,-5,-1.3,-5.3,Old Dominion +4,8
+401643726,6,Nevada,San José State,False,False,-7,-7,4.7,-2.3,Nevada +7,4
+401636891,6,Houston,TCU,False,True,-16.5,-17,14.7,-1.8,Houston +16.5,-11
+401654589,6,Long Island University,Duquesne,False,False,-4.5,,8.1,3.6,Duquesne -4.5,26
+401636347,6,Florida A&M,Alabama State,False,False,7.5,,14.9,22.4,Alabama State +7.5,-15
+401635568,6,Miami,California,False,True,10,12.5,-20.9,-10.9,Miami -10,-1
+401654625,6,Lafayette,Fordham,False,False,17.5,,-13.9,3.6,Fordham +17.5,-5
+401628381,6,Auburn,Georgia,False,True,-21,-23.5,30.8,9.8,Georgia -21,18
+401633985,6,Southeast Missouri State,Eastern Illinois,False,False,10.5,,-13.5,-3.0,Southeast Missouri State -10.5,-11
+401643724,6,Colorado State,Oregon State,False,False,-10.5,-14,18.7,8.2,Oregon State -10.5,8
+401636889,6,Baylor,Iowa State,False,True,-13,-13,26.8,13.8,Iowa State -13,22
+401628641,6,Rhode Island,Hampton,False,False,7.5,,-2.6,4.9,Hampton +7.5,-2
+401632108,6,Utah Tech,North Alabama,False,False,-10,,1.0,-9.0,Utah Tech +10,46
+401634055,6,UC Davis,Portland State,False,False,10.5,,-16.6,-6.1,UC Davis -10.5,-1
+401634153,6,Wofford,Western Carolina,False,False,-13,,-1.0,-14.0,Wofford +13,4
+401675117,6,Northwestern State,Stephen F. Austin,False,False,-35,,39.8,4.8,Stephen F. Austin -35,42
+401636384,7,Alcorn State,Grambling,False,False,-4.5,,14.6,10.1,Grambling -4.5,-2
+401634208,7,North Dakota State,Southern Illinois,False,False,22.5,,-18.5,4.0,Southern Illinois +22.5,-21
+401628981,7,Stanford,Notre Dame,False,True,-22.5,-23,37.4,14.9,Notre Dame -22.5,42
+401634147,7,Princeton,Mercer,False,False,-13,,27.8,14.8,Mercer -13,27
+401643806,7,App State,Louisiana,False,False,-10,-10.5,13.9,3.9,Louisiana -10,10
+401633990,7,Tennessee Tech,Southeast Missouri State,False,False,-13,,1.7,-11.3,Tennessee Tech +13,31
+401634030,7,East Texas A&M,Northwestern State,False,False,11.5,,-8.9,2.6,Northwestern State +11.5,-21
+401643732,7,San Diego State,Wyoming,False,False,-1.5,1,-7.1,-8.6,San Diego State +1.5,-3
+401643808,7,Arkansas State,Texas State,False,False,-13.5,-14,12.7,-0.8,Arkansas State +13.5,32
+401643730,7,Washington State,Fresno State,False,False,3.5,3.5,-8.7,-5.2,Washington State -3.5,-8
+401654590,7,Duquesne,Saint Francis,False,False,3,,-7.6,-4.6,Duquesne -3,-31
+401635574,7,Syracuse,NC State,False,True,1,4.5,-9.2,-8.2,Syracuse -1,-7
+401640982,7,Florida International,Liberty,False,False,-15.5,-19.5,20.7,5.2,Liberty -15.5,7
+401636357,7,Prairie View A&M,Arkansas-Pine Bluff,False,False,8.5,,17.3,25.8,Arkansas-Pine Bluff +8.5,4
+401634058,7,Portland State,Idaho State,False,False,-7,,15.4,8.4,Idaho State -7,-4
+401634217,7,Youngstown State,South Dakota State,False,False,-33,,16.2,-16.8,Youngstown State +33,50
+401643803,7,Coastal Carolina,James Madison,False,False,-7,-9.5,11.5,4.5,James Madison -7,32
+401628388,7,Ole Miss,LSU,False,True,4,2.5,-23.4,-19.4,Ole Miss -4,3
+401678917,7,Eastern Kentucky,Southern Utah,False,False,-3.5,,-6.3,-9.8,Eastern Kentucky +3.5,21
+401641030,7,UTEP,Western Kentucky,False,False,-19,-19.5,16.7,-2.3,UTEP +19,27
+401645342,7,UAB,Army,False,False,-27,-24,23.6,-3.4,UAB +27,34
+401643731,7,Oregon State,Nevada,False,False,3,4.5,6.5,9.5,Nevada +3,5
+401644744,7,Northern Illinois,Bowling Green,False,False,-3,-3,-5.6,-8.6,Northern Illinois +3,-10
+401636892,7,Utah,Arizona State,False,True,5.5,5,9.3,14.8,Arizona State +5.5,8
+401628653,7,Brown,Rhode Island,False,False,-3.5,,0.6,-2.9,Brown +3.5,10
+401628386,7,Mississippi State,Georgia,False,True,-34,-34,25.0,-9.0,Mississippi State +34,10
+401654576,7,Mercyhurst,Central Connecticut,False,False,-16.5,,11.5,-5.0,Mercyhurst +16.5,18
+401634174,7,Murray State,Indiana State,False,False,-6.5,,-7.7,-14.2,Murray State +6.5,4
+401645343,7,North Texas,Florida Atlantic,False,False,5.5,6.5,11.0,16.5,Florida Atlantic +5.5,-4
+401635576,7,Clemson,Wake Forest,False,True,21,20.5,-10.9,10.1,Wake Forest +21,-35
+401638669,7,Davidson,Dayton,False,False,-1.5,,5.5,4.0,Dayton -1.5,2
+401632113,7,Abilene Christian,North Alabama,False,False,7.5,,-21.2,-13.7,Abilene Christian -7.5,13
+401634137,7,Samford,East Tennessee State,False,False,-9.5,,17.6,8.1,East Tennessee State -9.5,3
+401634100,7,Idaho,Montana State,False,False,-9.5,,0.8,-8.7,Idaho +9.5,31
+401636893,7,Arizona,BYU,False,True,-2.5,-3.5,4.8,2.3,BYU -2.5,22
+401645344,7,UTSA,Rice,False,False,3.5,4,-4.1,-0.6,UTSA -3.5,2
+401628387,7,Vanderbilt,Kentucky,False,True,-12.5,-13.5,9.3,-3.2,Vanderbilt +12.5,-7
+401654547,7,Southern,Texas Southern,False,False,1.5,,1.8,3.3,Texas Southern +1.5,-3
+401654638,7,Fordham,Holy Cross,False,False,-16.5,,20.4,3.9,Holy Cross -16.5,3
+401654564,7,Northern Iowa,South Dakota,False,False,-21.5,,22.4,0.9,South Dakota -21.5,25
+401628649,7,UAlbany,Bryant,False,False,7,,6.3,13.3,Bryant +7,-7
+401654473,7,Dartmouth,Yale,False,False,3,,-4.0,-1.0,Dartmouth -3,-1
+401638668,7,Butler,Drake,False,False,-2.5,,-7.0,-9.5,Butler +2.5,10
+401643733,7,UNLV,Utah State,False,False,18.5,19,-25.0,-6.5,UNLV -18.5,-16
+401643728,7,Boise State,Hawai'i,False,False,21,21,-25.4,-4.4,Boise State -21,-21
+401644743,7,Ball State,Kent State,False,False,3,6.5,2.6,5.6,Kent State +3,-2
+401654596,7,Stonehill,Long Island University,True,False,-9.5,,-1.4,-10.9,Stonehill +9.5,24
+401634254,7,Bethune-Cookman,Alabama A&M,False,False,-3.5,,23.8,20.3,Alabama A&M -3.5,44
+401635575,7,California,Pittsburgh,False,True,-3.5,-3.5,6.8,3.3,Pittsburgh -3.5,2
+401644745,7,Toledo,Buffalo,False,False,10.5,9.5,-5.4,5.1,Buffalo +10.5,15
+401634019,7,Nicholls,Incarnate Word,False,False,-3.5,,-10.4,-13.9,Nicholls +3.5,45
+401643729,7,San José State,Colorado State,False,False,-2.5,2,-12.2,-14.7,San José State +2.5,7
+401654499,7,Delaware State,Robert Morris,False,False,-7.5,,6.5,-1.0,Delaware State +7.5,23
+401628512,7,Washington,Iowa,False,True,-2.5,-3.5,-1.6,-4.1,Washington +2.5,24
+401638671,7,St. Thomas (MN),Marist,False,False,7,,3.3,10.3,Marist +7,-7
+401628517,7,Wisconsin,Rutgers,False,True,-1.25,-2.5,12.0,10.7,Rutgers -1.25,-35
+401654651,7,Bucknell,Pennsylvania,False,False,-19,,23.2,4.2,Pennsylvania -19,10
+401675118,7,Stephen F. Austin,Lamar,False,False,7.5,,-12.5,-5.0,Stephen F. Austin -7.5,-7
+401633989,7,Eastern Illinois,Tennessee State,False,False,2.5,,14.2,16.7,Tennessee State +2.5,24
+401628389,7,Missouri,Massachusetts,False,True,27,27.5,-12.3,14.7,Massachusetts +27,-42
+401644742,7,Akron,Western Michigan,False,False,-9.5,-9.5,1.5,-8.0,Akron +9.5,10
+401638344,7,The Citadel,Western Carolina,False,False,-17.5,,14.0,-3.5,The Citadel +17.5,14
+401643807,7,Southern Miss,UL Monroe,False,False,-4.5,-6,22.5,18.0,UL Monroe -4.5,17
+401628650,7,Maine,Delaware,False,False,-19.5,,23.7,4.2,Delaware -19.5,23
+401643805,7,Old Dominion,Georgia State,False,False,-3,-1.5,-6.8,-9.8,Old Dominion +3,-7
+401654513,7,Merrimack,Morgan State,False,False,-2.5,,4.9,2.4,Morgan State -2.5,-8
+401644746,7,Ohio,Central Michigan,False,False,3,3,-6.9,-3.9,Ohio -3,-2
+401628651,7,New Hampshire,Elon,False,False,-1,,0.6,-0.4,New Hampshire +1,-7
+401644685,7,Miami (OH),Eastern Michigan,False,False,3,3.5,0.9,3.9,Eastern Michigan +3,-24
+401641002,7,New Mexico State,Jacksonville State,False,False,-21,-20.5,20.0,-1.0,New Mexico State +21,41
+401654626,7,Georgetown,Lafayette,False,False,-13.5,,3.9,-9.6,Georgetown +13.5,-17
+401635578,7,Louisville,Virginia,False,True,7,7.5,-4.4,2.6,Virginia +7,-4
+401634099,7,Northern Arizona,Montana,False,False,-12.5,,10.3,-2.2,Northern Arizona +12.5,11
+401636895,7,Cincinnati,UCF,False,True,-2.5,-3.5,-4.6,-7.1,Cincinnati +2.5,-6
+401636894,7,Kansas State,Colorado,False,True,3.5,6,-8.7,-5.2,Kansas State -3.5,-3
+401633991,7,UT Martin,Western Illinois,False,False,21.5,,-6.8,14.7,Western Illinois +21.5,-28
+401628385,7,South Carolina,Alabama,False,True,-21,-21.5,22.9,1.9,Alabama -21,2
+401634154,7,VMI,Wofford,False,False,-17.5,,30.9,13.4,Wofford -17.5,15
+401654490,7,Columbia,Wagner,False,False,14.5,,-3.3,11.2,Wagner +14.5,-18
+401636896,7,Iowa State,West Virginia,False,True,3,3,-15.1,-12.1,Iowa State -3,-12
+401634163,7,Missouri State,Illinois State,False,False,-2.5,,7.3,4.8,Illinois State -2.5,-34
+401628652,7,Towson,Norfolk State,False,False,18,,-12.2,5.8,Norfolk State +18,-5
+401643804,7,Marshall,Georgia Southern,False,False,-1,2.5,4.3,3.3,Georgia Southern -1,1
+401628516,7,Penn State,USC,False,True,3.5,5,-3.3,0.2,USC +3.5,-3
+401645341,7,Memphis,South Florida,True,False,10,6,-13.2,-3.2,Memphis -10,-18
+401628511,7,Purdue,Illinois,False,True,-22.5,-19,29.4,6.9,Illinois -22.5,1
+401634056,7,Cal Poly,UC Davis,False,False,-17,,14.5,-2.5,Cal Poly +17,46
+401634101,7,Northern Colorado,Weber State,False,False,-27,,28.3,1.3,Weber State -27,-4
+401643727,7,Air Force,New Mexico,False,False,-7,-4.5,14.8,7.8,New Mexico -7,15
+401628513,7,Northwestern,Maryland,False,True,-11,-10,28.5,17.5,Maryland -11,-27
+401634057,7,Eastern Washington,Sacramento State,False,False,-11.5,,17.4,5.9,Sacramento State -11.5,-7
+401628391,7,Florida,Tennessee,False,True,-14,-15,31.3,17.3,Tennessee -14,6
+401641009,7,Middle Tennessee,Louisiana Tech,False,False,-5,-4,1.9,-3.1,Middle Tennessee +5,27
+401628515,7,Ohio State,Oregon,False,True,3.5,4,-8.9,-5.4,Ohio State -3.5,1
+401628514,7,Minnesota,UCLA,False,True,3.5,5,-11.4,-7.9,Minnesota -3.5,-4
+401673031,7,Sacred Heart,Howard,False,False,-7.5,,-0.6,-8.1,Sacred Heart +7.5,7
+401635577,7,Georgia Tech,North Carolina,False,True,3.5,6,-7.1,-3.6,Georgia Tech -3.5,-7
 401628390,7,Texas,Oklahoma,True,True,17,8.5,-20.5,-3.5,Texas -17,-31
-401673031,7,Sacred Heart,Howard,False,False,-7.5,,3.2,-4.3,Sacred Heart +7.5,7
-401638670,7,Presbyterian,Morehead State,False,False,2.5,,4.2,6.7,Morehead State +2.5,7
-401632463,7,Chattanooga,Furman,False,False,6.5,,8.0,14.5,Furman +6.5,-31
-401633988,7,Charleston Southern,Lindenwood,False,False,-8.5,,0.9,-7.6,Charleston Southern +8.5,15
-401632114,7,Utah Tech,Tarleton State,False,False,-24,,28.2,4.2,Tarleton State -24,42
-401643737,8,New Mexico,Utah State,False,False,1,2.5,4.2,5.2,Utah State +1,-5
-401634148,8,Mercer,Samford,False,False,9,,-16.5,-7.5,Mercer -9,20
-401654647,8,Saint Francis,Wagner,False,False,3.5,,3.8,7.3,Wagner +3.5,14
-401654491,8,Columbia,Pennsylvania,False,False,-3.5,,-1.7,-5.2,Columbia +3.5,-6
-401634248,8,South Dakota,Youngstown State,False,False,23.5,,-18.0,5.5,Youngstown State +23.5,-10
-401632137,8,Eastern Kentucky,Abilene Christian,False,False,-7.5,,7.6,0.1,Abilene Christian -7.5,14
-401645347,8,Charlotte,Navy,False,False,-16.5,-17,25.1,8.6,Navy -16.5,34
-401636904,8,Kansas State,West Virginia,False,True,2.5,3,-9.5,-7.0,Kansas State -2.5,-27
-401643809,8,Troy,South Alabama,False,False,-10,-11.5,4.7,-5.3,Troy +10,16
-401636358,8,Arkansas-Pine Bluff,Grambling,False,False,-13,,10.9,-2.1,Arkansas-Pine Bluff +13,10
-401635590,8,SMU,Stanford,False,True,16.5,14.5,-27.4,-10.9,SMU -16.5,-30
-401629034,8,Wake Forest,UConn,False,True,2.5,-2,22.9,25.4,UConn +2.5,-3
-401636899,8,Arizona State,Cincinnati,False,True,-5,-3,3.9,-1.1,Arizona State +5,10
-401654474,8,Central Connecticut,Dartmouth,False,False,-12.5,,16.3,3.8,Dartmouth -12.5,4
-401643812,8,James Madison,Georgia Southern,False,False,9.5,10,-12.4,-2.9,James Madison -9.5,14
-401628519,8,Nebraska,Indiana,False,True,-6.5,-6,15.0,8.5,Indiana -6.5,49
-401654457,8,Brown,Princeton,False,False,-2.5,,-2.9,-5.4,Brown +2.5,12
-401636375,8,Florida A&M,Jackson State,False,False,-4,,10.3,6.3,Jackson State -4,14
-401641010,8,Louisiana Tech,New Mexico State,False,False,12.5,10.5,-7.2,5.3,New Mexico State +12.5,3
-401636897,8,Colorado,Arizona,False,True,-2.5,-4,-0.8,-3.3,Colorado +2.5,-27
-401640983,8,Florida International,UTEP,False,False,7,5,-4.3,2.7,UTEP +7,9
-401643734,8,Colorado State,Air Force,False,False,6,7.5,-3.2,2.8,Air Force +6,-8
-401635589,8,Miami,Louisville,False,True,4.5,3.5,-2.6,1.9,Louisville +4.5,-7
-401634103,8,UC Davis,Eastern Washington,False,False,4,,-4.7,-0.7,UC Davis -4,-10
-401632134,8,Austin Peay,Utah Tech,False,False,15.5,,-6.9,8.6,Utah Tech +15.5,-6
-401654618,8,Lehigh,Yale,False,False,-7,,-4.0,-11.0,Lehigh +7,15
-401641019,8,Kennesaw State,Middle Tennessee,False,False,-8.5,-10,7.6,-0.9,Kennesaw State +8.5,9
-401644748,8,Kent State,Bowling Green,False,False,-24,-21,29.9,5.9,Bowling Green -24,21
-401634209,8,South Dakota State,North Dakota State,False,False,1.5,,9.3,10.8,North Dakota State +1.5,4
-401628394,8,Texas A&M,Mississippi State,False,True,21,15,-2.9,18.1,Mississippi State +21,-10
-401643813,8,Texas State,Old Dominion,False,False,10.5,10,1.0,11.5,Old Dominion +10.5,10
-401645349,8,North Texas,Memphis,False,False,-10.5,-10.5,12.9,2.4,Memphis -10.5,8
-401636902,8,Baylor,Texas Tech,False,True,-4.5,-6.5,11.6,7.1,Texas Tech -4.5,-24
-401634033,8,Lamar,East Texas A&M,False,False,6.5,,-3.5,3.0,East Texas A&M +6.5,-9
-401636901,8,Houston,Kansas,True,True,-4.5,-6.5,3.7,-0.8,Houston +4.5,28
-401654643,8,Georgetown,Colgate,False,False,1.5,,-9.1,-7.6,Georgetown -1.5,10
-401628397,8,Alabama,Tennessee,False,True,3.5,2.5,7.6,11.1,Tennessee +3.5,7
-401643811,8,Louisiana,Coastal Carolina,False,False,6.5,3.5,3.7,10.2,Coastal Carolina +6.5,-10
-401643736,8,Hawai'i,Washington State,False,False,-18.5,-19.5,17.3,-1.2,Hawai'i +18.5,32
-401634202,8,Northern Iowa,North Dakota,False,False,-16,,18.9,2.9,North Dakota -16,24
-401654561,8,Alcorn State,Southern,False,False,-2.5,,9.9,7.4,Southern -2.5,10
-401634106,8,Weber State,Sacramento State,False,False,-5,,6.6,1.6,Sacramento State -5,3
-401628659,8,Rhode Island,New Hampshire,False,False,-5,,5.3,0.3,New Hampshire -5,-17
-401638674,8,Drake,Presbyterian,False,False,11.5,,-11.7,-0.2,Drake -11.5,-3
-401628518,8,Michigan,Illinois,False,True,6,1.5,8.8,14.8,Illinois +6,14
-401633994,8,Tennessee Tech,Western Illinois,False,False,10,,-4.7,5.3,Western Illinois +10,16
-401638676,8,Stetson,Davidson,False,False,-18.5,,18.4,-0.1,Stetson +18.5,22
-401644750,8,Central Michigan,Eastern Michigan,False,False,-3.5,-1.5,9.8,6.3,Eastern Michigan -3.5,4
-401632464,8,Wofford,Chattanooga,False,False,-15.5,,9.5,-6.0,Wofford +15.5,32
-401645345,8,UAB,South Florida,False,False,-14,-14,6.6,-7.4,UAB +14,10
-401636900,8,UCF,Iowa State,False,True,-13,-12.5,20.1,7.1,Iowa State -13,3
-401643735,8,Fresno State,Nevada,False,False,3,3,7.8,10.8,Nevada +3,-3
-401654507,8,Cornell,Bucknell,False,False,1.5,,-1.5,0.0,Bucknell +1.5,-13
-401644600,8,Holy Cross,Harvard,False,False,-6.5,,17.6,11.1,Harvard -6.5,1
-401638346,8,The Citadel,VMI,False,False,4,,-10.6,-6.6,The Citadel -4,-3
-401628523,8,Oregon,Purdue,False,True,29.5,28,-27.2,2.3,Purdue +29.5,-35
-401628396,8,South Carolina,Oklahoma,False,True,1,-3,-1.1,-0.1,South Carolina -1,-26
-401628657,8,Stony Brook,Towson,False,False,-10,,13.8,3.8,Towson -10,-28
-401654627,8,Sacred Heart,Lafayette,False,False,-17,,12.7,-4.3,Sacred Heart +17,14
-401655635,8,Tennessee State,Howard,False,False,2.5,,-2.8,-0.3,Tennessee State -2.5,-13
-401636903,8,TCU,Utah,False,True,-3,-7,1.7,-1.3,TCU +3,-6
-401628399,8,Ball State,Vanderbilt,False,True,-27.5,-24.5,30.5,3.0,Vanderbilt -27.5,10
-401645346,8,East Carolina,Army,False,False,-17.5,-17,35.3,17.8,Army -17.5,17
-401643739,8,UNLV,Oregon State,False,False,6.5,6,-10.0,-3.5,UNLV -6.5,-8
-401635588,8,Virginia,Clemson,False,True,-20,-21.5,14.7,-5.3,Virginia +20,17
-401628521,8,USC,Maryland,False,True,6.5,7,4.7,11.2,Maryland +6.5,1
-401643810,8,Georgia State,Marshall,False,False,-9.5,-9,13.6,4.1,Marshall -9.5,15
-401654597,8,Long Island University,Robert Morris,False,False,-2.5,,8.1,5.6,Robert Morris -2.5,14
-401634105,8,Montana State,Portland State,False,False,21.5,,-15.9,5.6,Portland State +21.5,-30
-401644749,8,Western Michigan,Buffalo,False,False,1.5,-1.5,15.1,16.6,Buffalo +1.5,-7
-401654612,8,Stonehill,Merrimack,False,False,-17.5,,13.6,-3.9,Stonehill +17.5,20
-401645350,8,Rice,Tulane,False,False,-21.5,-23,28.0,6.5,Tulane -21.5,14
-401638345,8,Western Carolina,Furman,False,False,6.5,,-3.7,2.8,Furman +6.5,-32
-401634104,8,Idaho State,Northern Arizona,False,False,-7.5,,10.4,2.9,Northern Arizona -7.5,4
-401675119,8,Stephen F. Austin,SE Louisiana,False,False,3,,-17.2,-14.2,Stephen F. Austin -3,1
-401643738,8,Wyoming,San José State,False,False,-13,-11,24.4,11.4,San José State -13,10
-401628654,8,Campbell,William & Mary,False,False,-17,,19.3,2.3,William & Mary -17,7
-401634102,8,Cal Poly,Idaho,False,False,-22,,19.6,-2.4,Cal Poly +22,5
-401634175,8,Indiana State,Missouri State,False,False,-27,,28.3,1.3,Missouri State -27,25
-401634164,8,Illinois State,Murray State,False,False,19.5,,-7.6,11.9,Murray State +19.5,-8
-401633992,8,Southeast Missouri State,Charleston Southern,False,False,19,,-12.0,7.0,Charleston Southern +19,-13
-401628392,8,LSU,Arkansas,False,True,3,3,7.7,10.7,Arkansas +3,-24
-401628656,8,Hampton,North Carolina A&T,False,False,1.5,,-3.4,-1.9,Hampton -1.5,-42
-401645351,8,Tulsa,Temple,False,False,-3,-2.5,8.6,5.6,Temple -3,10
-401634022,8,McNeese,Incarnate Word,False,False,-14.5,,7.8,-6.7,McNeese +14.5,13
-401628393,8,Kentucky,Florida,False,True,2.5,-2,-1.6,0.9,Florida +2.5,28
-401644686,8,Ohio,Miami (OH),False,False,-3.5,-4,10.0,6.5,Miami (OH) -3.5,10
-401628658,8,Delaware,Richmond,False,False,10.5,,-8.5,2.0,Richmond +10.5,19
-401628398,8,Georgia,Texas,False,True,-4,-3.5,18.4,14.4,Texas -4,-15
-401628522,8,Wisconsin,Northwestern,True,True,9.5,7,-0.4,9.1,Northwestern +9.5,-20
-401638675,8,Marist,San Diego,False,False,-16.5,,20.9,4.4,San Diego -16.5,28
-401628395,8,Auburn,Missouri,False,True,-3.5,-9.5,13.0,9.5,Missouri -3.5,4
-401628982,8,Notre Dame,Georgia Tech,True,True,14,8.5,-14.0,-0.0,Notre Dame -14,-18
-401636898,8,Oklahoma State,BYU,False,True,-8.5,-8,18.2,9.7,BYU -8.5,3
-401645348,8,Florida Atlantic,UTSA,False,False,-4,-4.5,-9.2,-13.2,Florida Atlantic +4,14
-401634768,8,Boston College,Virginia Tech,False,True,-8.5,-7,12.4,3.9,Virginia Tech -8.5,21
-401628655,8,Villanova,Maine,False,False,13.5,,-3.8,9.7,Maine +13.5,28
-401633993,8,Lindenwood,Gardner-Webb,False,False,-2.5,,12.6,10.1,Gardner-Webb -2.5,7
-401634769,8,Florida State,Duke,False,True,-2.5,-3,16.1,13.6,Duke -2.5,7
-401635587,8,NC State,California,False,True,-9.5,-10,13.9,4.4,California -9.5,-1
-401643814,8,Arkansas State,Southern Miss,False,False,7,6.5,-5.5,1.5,Southern Miss +7,-16
-401634034,8,Northwestern State,Nicholls,False,False,-30,,39.4,9.4,Nicholls -30,20
-401628661,8,Elon,UAlbany,False,False,-2.5,,-2.7,-5.2,Elon +2.5,-16
-401638673,8,Dayton,Butler,False,False,-5.5,,12.4,6.9,Butler -5.5,-7
-401641038,8,Western Kentucky,Sam Houston,False,False,-1.5,-2.5,5.5,4.0,Sam Houston -1.5,-17
-401628520,8,Iowa,Michigan State,False,True,6.5,6,-5.2,1.3,Michigan State +6.5,12
-401636366,8,Bethune-Cookman,Mississippi Valley State,False,False,8.5,,0.0,8.5,Mississippi Valley State +8.5,-10
-401644751,8,Toledo,Northern Illinois,False,False,-3,-2.5,10.6,7.6,Northern Illinois -3,-7
-401628524,8,UCLA,Rutgers,False,True,-4.25,-6.25,6.4,2.2,Rutgers -4.25,-3
-401673036,9,Yale,Pennsylvania,False,False,-3,,0.1,-2.9,Yale +3,-21
-401628669,9,William & Mary,Stony Brook,False,False,7.5,,-0.9,6.6,Stony Brook +7.5,22
-401638678,9,Butler,Davidson,False,False,1,,1.3,2.3,Davidson +1,-10
-401628667,9,Towson,Monmouth,False,False,-9.5,,10.1,0.6,Monmouth -9.5,-12
-401635595,9,SMU,Duke,False,True,11.5,11.5,-13.2,-1.7,SMU -11.5,-1
-401654570,9,East Texas A&M,Prairie View A&M,False,False,3,,7.4,10.4,Prairie View A&M +3,7
-401634026,9,McNeese,Nicholls,False,False,-6.5,,4.4,-2.1,McNeese +6.5,5
-401638679,9,Morehead State,Dayton,False,False,-14.5,,8.9,-5.6,Morehead State +14.5,-8
-401634149,9,Western Carolina,Mercer,False,False,-3.5,,19.3,15.8,Mercer -3.5,10
-401643742,9,San José State,Fresno State,False,False,-6.5,-6.5,2.2,-4.3,San José State +6.5,23
-401633995,9,Charleston Southern,Tennessee Tech,False,False,-7,,8.3,1.3,Tennessee Tech -7,5
-401634194,9,North Dakota State,Murray State,False,False,35,,-19.7,15.3,Murray State +35,-53
-401643741,9,New Mexico,Colorado State,False,False,-3.5,-6,4.1,0.6,Colorado State -3.5,11
-401636385,9,Grambling,Texas Southern,False,False,-1,,1.5,0.5,Texas Southern -1,7
-401628526,9,Washington,Indiana,False,True,-5.5,-7,12.5,7.0,Indiana -5.5,14
-401645352,9,Temple,East Carolina,False,False,-8.5,-7,11.6,3.1,East Carolina -8.5,22
-401654608,9,Saint Francis,Robert Morris,False,False,-6.5,,6.2,-0.3,Saint Francis +6.5,17
-401635596,9,Florida State,Miami,False,True,-22.5,-21,33.3,10.8,Miami -22.5,22
-401634138,9,East Tennessee State,Wofford,False,False,9.5,,-2.9,6.6,Wofford +9.5,-17
-401654500,9,Delaware State,South Carolina State,False,False,-14.5,,14.4,-0.1,Delaware State +14.5,34
-401643743,9,Nevada,Hawai'i,False,False,-2.5,2.5,-0.9,-3.4,Nevada +2.5,21
-401654458,9,Cornell,Brown,False,False,-3.5,,-0.4,-3.9,Cornell +3.5,2
+401638670,7,Presbyterian,Morehead State,False,False,2.5,,2.5,5.0,Morehead State +2.5,7
+401632114,7,Utah Tech,Tarleton State,False,False,-24,,24.4,0.4,Tarleton State -24,42
+401633988,7,Charleston Southern,Lindenwood,False,False,-8.5,,-1.0,-9.5,Charleston Southern +8.5,15
+401632463,7,Chattanooga,Furman,False,False,6.5,,4.8,11.3,Furman +6.5,-31
+401643737,8,New Mexico,Utah State,False,False,1,2.5,3.0,4.0,Utah State +1,-5
+401634148,8,Mercer,Samford,False,False,9,,-17.3,-8.3,Mercer -9,20
+401654647,8,Saint Francis,Wagner,False,False,3.5,,2.7,6.2,Wagner +3.5,14
+401654491,8,Columbia,Pennsylvania,False,False,-3.5,,-3.5,-7.0,Columbia +3.5,-6
+401632137,8,Eastern Kentucky,Abilene Christian,False,False,-7.5,,5.2,-2.3,Eastern Kentucky +7.5,14
+401634248,8,South Dakota,Youngstown State,False,False,23.5,,-20.8,2.7,Youngstown State +23.5,-10
+401636904,8,Kansas State,West Virginia,False,True,2.5,3,-10.8,-8.3,Kansas State -2.5,-27
+401643809,8,Troy,South Alabama,False,False,-10,-11.5,1.1,-8.9,Troy +10,16
+401645347,8,Charlotte,Navy,False,False,-16.5,-17,21.9,5.4,Navy -16.5,34
+401636358,8,Arkansas-Pine Bluff,Grambling,False,False,-13,,8.1,-4.9,Arkansas-Pine Bluff +13,10
+401636899,8,Arizona State,Cincinnati,False,True,-5,-3,1.7,-3.3,Arizona State +5,10
+401635590,8,SMU,Stanford,False,True,16.5,14.5,-30.7,-14.2,SMU -16.5,-30
+401629034,8,Wake Forest,UConn,False,True,2.5,-2,17.7,20.2,UConn +2.5,-3
+401654474,8,Central Connecticut,Dartmouth,False,False,-12.5,,15.0,2.5,Dartmouth -12.5,4
+401643812,8,James Madison,Georgia Southern,False,False,9.5,10,-13.3,-3.8,James Madison -9.5,14
+401628519,8,Nebraska,Indiana,False,True,-6.5,-6,12.8,6.3,Indiana -6.5,49
+401654457,8,Brown,Princeton,False,False,-2.5,,-6.0,-8.5,Brown +2.5,12
+401640983,8,Florida International,UTEP,False,False,7,5,-5.2,1.8,UTEP +7,9
+401641010,8,Louisiana Tech,New Mexico State,False,False,12.5,10.5,-8.0,4.5,New Mexico State +12.5,3
+401636375,8,Florida A&M,Jackson State,False,False,-4,,8.7,4.7,Jackson State -4,14
+401643734,8,Colorado State,Air Force,False,False,6,7.5,-7.4,-1.4,Colorado State -6,-8
+401636897,8,Colorado,Arizona,False,True,-2.5,-4,-3.5,-6.0,Colorado +2.5,-27
+401635589,8,Miami,Louisville,False,True,4.5,3.5,-3.4,1.1,Louisville +4.5,-7
+401634103,8,UC Davis,Eastern Washington,False,False,4,,-6.8,-2.8,UC Davis -4,-10
+401632134,8,Austin Peay,Utah Tech,False,False,15.5,,-10.0,5.5,Utah Tech +15.5,-6
+401654618,8,Lehigh,Yale,False,False,-7,,-5.5,-12.5,Lehigh +7,15
+401628394,8,Texas A&M,Mississippi State,False,True,21,15,-7.1,13.9,Mississippi State +21,-10
+401643813,8,Texas State,Old Dominion,False,False,10.5,10,-2.2,8.3,Old Dominion +10.5,10
+401634209,8,South Dakota State,North Dakota State,False,False,1.5,,7.3,8.8,North Dakota State +1.5,4
+401644748,8,Kent State,Bowling Green,False,False,-24,-21,29.2,5.2,Bowling Green -24,21
+401641019,8,Kennesaw State,Middle Tennessee,False,False,-8.5,-10,6.8,-1.7,Kennesaw State +8.5,9
+401636902,8,Baylor,Texas Tech,False,True,-4.5,-6.5,10.9,6.4,Texas Tech -4.5,-24
+401654643,8,Georgetown,Colgate,False,False,1.5,,-12.0,-10.5,Georgetown -1.5,10
+401636901,8,Houston,Kansas,True,True,-4.5,-6.5,3.2,-1.3,Houston +4.5,28
+401634033,8,Lamar,East Texas A&M,False,False,6.5,,-6.3,0.2,East Texas A&M +6.5,-9
+401643811,8,Louisiana,Coastal Carolina,False,False,6.5,3.5,1.6,8.1,Coastal Carolina +6.5,-10
+401654561,8,Alcorn State,Southern,False,False,-2.5,,8.4,5.9,Southern -2.5,10
+401645349,8,North Texas,Memphis,False,False,-10.5,-10.5,14.2,3.7,Memphis -10.5,8
+401628397,8,Alabama,Tennessee,False,True,3.5,2.5,4.7,8.2,Tennessee +3.5,7
+401634106,8,Weber State,Sacramento State,False,False,-5,,4.3,-0.7,Weber State +5,3
+401634202,8,Northern Iowa,North Dakota,False,False,-16,,18.2,2.2,North Dakota -16,24
+401628659,8,Rhode Island,New Hampshire,False,False,-5,,2.8,-2.2,Rhode Island +5,-17
+401638674,8,Drake,Presbyterian,False,False,11.5,,-14.6,-3.1,Drake -11.5,-3
+401643736,8,Hawai'i,Washington State,False,False,-18.5,-19.5,15.8,-2.7,Hawai'i +18.5,32
+401644750,8,Central Michigan,Eastern Michigan,False,False,-3.5,-1.5,7.0,3.5,Eastern Michigan -3.5,4
+401638676,8,Stetson,Davidson,False,False,-18.5,,17.4,-1.1,Stetson +18.5,22
+401628518,8,Michigan,Illinois,False,True,6,1.5,5.8,11.8,Illinois +6,14
+401632464,8,Wofford,Chattanooga,False,False,-15.5,,8.4,-7.1,Wofford +15.5,32
+401633994,8,Tennessee Tech,Western Illinois,False,False,10,,-7.5,2.5,Western Illinois +10,16
+401654507,8,Cornell,Bucknell,False,False,1.5,,-5.9,-4.4,Cornell -1.5,-13
+401628396,8,South Carolina,Oklahoma,False,True,1,-3,-2.2,-1.2,South Carolina -1,-26
+401654627,8,Sacred Heart,Lafayette,False,False,-17,,9.5,-7.5,Sacred Heart +17,14
+401643735,8,Fresno State,Nevada,False,False,3,3,6.6,9.6,Nevada +3,-3
+401643739,8,UNLV,Oregon State,False,False,6.5,6,-12.1,-5.6,UNLV -6.5,-8
+401644600,8,Holy Cross,Harvard,False,False,-6.5,,15.8,9.3,Harvard -6.5,1
+401628657,8,Stony Brook,Towson,False,False,-10,,11.2,1.2,Towson -10,-28
+401636900,8,UCF,Iowa State,False,True,-13,-12.5,17.6,4.6,Iowa State -13,3
+401655635,8,Tennessee State,Howard,False,False,2.5,,-5.3,-2.8,Tennessee State -2.5,-13
+401645345,8,UAB,South Florida,False,False,-14,-14,5.3,-8.7,UAB +14,10
+401638346,8,The Citadel,VMI,False,False,4,,-12.0,-8.0,The Citadel -4,-3
+401645346,8,East Carolina,Army,False,False,-17.5,-17,32.0,14.5,Army -17.5,17
+401636903,8,TCU,Utah,False,True,-3,-7,-0.8,-3.8,TCU +3,-6
+401628399,8,Ball State,Vanderbilt,False,True,-27.5,-24.5,31.6,4.1,Vanderbilt -27.5,10
+401643810,8,Georgia State,Marshall,False,False,-9.5,-9,10.2,0.7,Marshall -9.5,15
+401634105,8,Montana State,Portland State,False,False,21.5,,-18.1,3.4,Portland State +21.5,-30
+401628523,8,Oregon,Purdue,False,True,29.5,28,-31.1,-1.6,Oregon -29.5,-35
+401644749,8,Western Michigan,Buffalo,False,False,1.5,-1.5,14.2,15.7,Buffalo +1.5,-7
+401654597,8,Long Island University,Robert Morris,False,False,-2.5,,6.6,4.1,Robert Morris -2.5,14
+401634102,8,Cal Poly,Idaho,False,False,-22,,17.3,-4.7,Cal Poly +22,5
+401628521,8,USC,Maryland,False,True,6.5,7,1.3,7.8,Maryland +6.5,1
+401635588,8,Virginia,Clemson,False,True,-20,-21.5,13.3,-6.7,Virginia +20,17
+401654612,8,Stonehill,Merrimack,False,False,-17.5,,11.3,-6.2,Stonehill +17.5,20
+401634104,8,Idaho State,Northern Arizona,False,False,-7.5,,7.2,-0.3,Idaho State +7.5,4
+401634164,8,Illinois State,Murray State,False,False,19.5,,-10.3,9.2,Murray State +19.5,-8
+401628392,8,LSU,Arkansas,False,True,3,3,5.5,8.5,Arkansas +3,-24
+401645350,8,Rice,Tulane,False,False,-21.5,-23,26.1,4.6,Tulane -21.5,14
+401675119,8,Stephen F. Austin,SE Louisiana,False,False,3,,-17.9,-14.9,Stephen F. Austin -3,1
+401634175,8,Indiana State,Missouri State,False,False,-27,,25.7,-1.3,Indiana State +27,25
+401628393,8,Kentucky,Florida,False,True,2.5,-2,-3.8,-1.3,Kentucky -2.5,28
+401643738,8,Wyoming,San José State,False,False,-13,-11,22.8,9.8,San José State -13,10
+401628654,8,Campbell,William & Mary,False,False,-17,,16.2,-0.8,Campbell +17,7
+401638345,8,Western Carolina,Furman,False,False,6.5,,-5.6,0.9,Furman +6.5,-32
+401633992,8,Southeast Missouri State,Charleston Southern,False,False,19,,-14.2,4.8,Charleston Southern +19,-13
+401628656,8,Hampton,North Carolina A&T,False,False,1.5,,-5.2,-3.7,Hampton -1.5,-42
+401634022,8,McNeese,Incarnate Word,False,False,-14.5,,6.4,-8.1,McNeese +14.5,13
+401628395,8,Auburn,Missouri,False,True,-3.5,-9.5,11.2,7.7,Missouri -3.5,4
+401645351,8,Tulsa,Temple,False,False,-3,-2.5,7.5,4.5,Temple -3,10
+401638675,8,Marist,San Diego,False,False,-16.5,,19.3,2.8,San Diego -16.5,28
+401628658,8,Delaware,Richmond,False,False,10.5,,-9.7,0.8,Richmond +10.5,19
+401634768,8,Boston College,Virginia Tech,False,True,-8.5,-7,9.2,0.7,Virginia Tech -8.5,21
+401628982,8,Notre Dame,Georgia Tech,True,True,14,8.5,-15.7,-1.7,Notre Dame -14,-18
+401644686,8,Ohio,Miami (OH),False,False,-3.5,-4,8.3,4.8,Miami (OH) -3.5,10
+401628522,8,Wisconsin,Northwestern,True,True,9.5,7,-1.3,8.2,Northwestern +9.5,-20
+401628398,8,Georgia,Texas,False,True,-4,-3.5,16.5,12.5,Texas -4,-15
+401635587,8,NC State,California,False,True,-9.5,-10,10.7,1.2,California -9.5,-1
+401645348,8,Florida Atlantic,UTSA,False,False,-4,-4.5,-10.7,-14.7,Florida Atlantic +4,14
+401628524,8,UCLA,Rutgers,False,True,-4.25,-6.25,4.1,-0.2,UCLA +4.25,-3
+401634034,8,Northwestern State,Nicholls,False,False,-30,,37.2,7.2,Nicholls -30,20
+401628655,8,Villanova,Maine,False,False,13.5,,-6.4,7.1,Maine +13.5,28
+401644751,8,Toledo,Northern Illinois,False,False,-3,-2.5,9.0,6.0,Northern Illinois -3,-7
+401638673,8,Dayton,Butler,False,False,-5.5,,11.0,5.5,Butler -5.5,-7
+401633993,8,Lindenwood,Gardner-Webb,False,False,-2.5,,9.5,7.0,Gardner-Webb -2.5,7
+401636898,8,Oklahoma State,BYU,False,True,-8.5,-8,13.4,4.9,BYU -8.5,3
+401634769,8,Florida State,Duke,False,True,-2.5,-3,12.6,10.1,Duke -2.5,7
+401641038,8,Western Kentucky,Sam Houston,False,False,-1.5,-2.5,2.8,1.3,Sam Houston -1.5,-17
+401643814,8,Arkansas State,Southern Miss,False,False,7,6.5,-7.1,-0.1,Arkansas State -7,-16
+401628661,8,Elon,UAlbany,False,False,-2.5,,-6.0,-8.5,Elon +2.5,-16
+401628520,8,Iowa,Michigan State,False,True,6.5,6,-8.2,-1.7,Iowa -6.5,12
+401636366,8,Bethune-Cookman,Mississippi Valley State,False,False,8.5,,-3.8,4.7,Mississippi Valley State +8.5,-10
+401673036,9,Yale,Pennsylvania,False,False,-3,,-1.6,-4.6,Yale +3,-21
+401628669,9,William & Mary,Stony Brook,False,False,7.5,,-2.5,5.0,Stony Brook +7.5,22
+401638678,9,Butler,Davidson,False,False,1,,0.4,1.4,Davidson +1,-10
+401628667,9,Towson,Monmouth,False,False,-9.5,,8.9,-0.6,Towson +9.5,-12
+401635595,9,SMU,Duke,False,True,11.5,11.5,-15.2,-3.7,SMU -11.5,-1
+401638679,9,Morehead State,Dayton,False,False,-14.5,,6.6,-7.9,Morehead State +14.5,-8
+401654570,9,East Texas A&M,Prairie View A&M,False,False,3,,5.2,8.2,Prairie View A&M +3,7
+401634026,9,McNeese,Nicholls,False,False,-6.5,,2.8,-3.7,McNeese +6.5,5
+401643742,9,San José State,Fresno State,False,False,-6.5,-6.5,0.8,-5.7,San José State +6.5,23
+401634149,9,Western Carolina,Mercer,False,False,-3.5,,17.0,13.5,Mercer -3.5,10
+401643741,9,New Mexico,Colorado State,False,False,-3.5,-6,2.8,-0.7,New Mexico +3.5,11
+401645352,9,Temple,East Carolina,False,False,-8.5,-7,9.5,1.0,East Carolina -8.5,22
+401634194,9,North Dakota State,Murray State,False,False,35,,-21.1,13.9,Murray State +35,-53
+401633995,9,Charleston Southern,Tennessee Tech,False,False,-7,,6.4,-0.6,Charleston Southern +7,5
+401628526,9,Washington,Indiana,False,True,-5.5,-7,11.1,5.6,Indiana -5.5,14
+401654608,9,Saint Francis,Robert Morris,False,False,-6.5,,5.4,-1.1,Saint Francis +6.5,17
+401636385,9,Grambling,Texas Southern,False,False,-1,,0.1,-0.9,Grambling +1,7
+401635596,9,Florida State,Miami,False,True,-22.5,-21,30.3,7.8,Miami -22.5,22
+401634138,9,East Tennessee State,Wofford,False,False,9.5,,-5.7,3.8,Wofford +9.5,-17
+401654458,9,Cornell,Brown,False,False,-3.5,,-4.3,-7.8,Cornell +3.5,2
+401654500,9,Delaware State,South Carolina State,False,False,-14.5,,12.9,-1.6,Delaware State +14.5,34
+401643743,9,Nevada,Hawai'i,False,False,-2.5,2.5,-3.3,-5.8,Nevada +2.5,21
+401636908,9,Utah,Houston,False,True,4.5,3.5,-1.7,2.8,Houston +4.5,3
 401654514,9,Morgan State,North Carolina Central,False,False,-11,,14.6,3.6,North Carolina Central -11,9
-401644752,9,Eastern Michigan,Akron,False,False,2.5,3,-1.5,1.0,Akron +2.5,4
-401644601,9,Princeton,Harvard,False,False,-9.5,,14.9,5.4,Harvard -9.5,32
-401634203,9,North Dakota,Youngstown State,False,False,9.5,,-10.9,-1.4,North Dakota -9.5,1
-401636908,9,Utah,Houston,False,True,4.5,3.5,-0.9,3.6,Houston +4.5,3
-401643817,9,Southern Miss,James Madison,False,False,-24,-24,39.4,15.4,James Madison -24,17
-401628663,9,Richmond,Bryant,False,False,16,,-17.4,-1.4,Richmond -16,-27
-401640993,9,Liberty,Kennesaw State,False,False,27,23.5,-18.6,8.4,Kennesaw State +27,3
-401654619,9,Fordham,Lehigh,False,False,-8.5,,23.8,15.3,Lehigh -8.5,14
-401675120,9,Houston Christian,Stephen F. Austin,False,False,-14.5,,27.2,12.7,Stephen F. Austin -14.5,49
-401634185,9,Missouri State,Northern Iowa,False,False,10.5,,-10.5,0.0,Northern Iowa +10.5,-7
-401644687,9,Central Michigan,Miami (OH),False,False,-10.5,-12,17.1,6.6,Miami (OH) -10.5,39
-401643745,9,Utah State,Wyoming,False,False,2,-2.5,-4.7,-2.7,Utah State -2,-2
-401636909,9,Kansas,Kansas State,False,True,-10,-9.5,16.9,6.9,Kansas State -10,2
-401634770,9,Syracuse,Pittsburgh,False,True,-5,-5,9.3,4.3,Pittsburgh -5,28
-401641011,9,UTEP,Louisiana Tech,False,False,-6.5,-7.5,2.5,-4.0,UTEP +6.5,4
-401643740,9,Boise State,UNLV,False,False,4,2.5,-8.0,-4.0,Boise State -4,-5
-401628530,9,Nebraska,Ohio State,False,True,-25,-25.5,20.8,-4.2,Nebraska +25,4
-401643819,9,UL Monroe,South Alabama,False,False,-7,-8.5,4.3,-2.7,UL Monroe +7,29
-401628401,9,Auburn,Kentucky,False,True,-2,-2.5,6.7,4.7,Kentucky -2,-14
-401635597,9,Georgia Tech,Virginia Tech,False,True,-11,-9,4.4,-6.6,Georgia Tech +11,15
-401654644,9,Bucknell,Georgetown,False,False,-5.5,,16.9,11.4,Georgetown -5.5,1
-401634017,9,Lamar,Northwestern State,False,False,17.5,,-16.9,0.6,Northwestern State +17.5,-32
-401628529,9,Michigan State,Michigan,False,True,-3.5,-5,-2.6,-6.1,Michigan State +3.5,7
-401628404,9,LSU,Texas A&M,False,True,-2,-2.5,2.6,0.6,Texas A&M -2,15
-401643818,9,Troy,Arkansas State,False,False,-8.5,-7.5,-5.1,-13.6,Troy +8.5,3
-401654591,9,Duquesne,Stonehill,False,False,21,,-19.8,1.2,Stonehill +21,-14
-401628664,9,North Carolina A&T,Campbell,False,False,-10,,13.2,3.2,Campbell -10,14
-401628403,9,Arkansas,Mississippi State,False,True,7.5,7.5,-2.0,5.5,Mississippi State +7.5,-33
-401644755,9,Buffalo,Ohio,False,False,-4,-6.5,2.2,-1.8,Buffalo +4,31
-401644756,9,Kent State,Western Michigan,False,False,-19,-17,20.5,1.5,Western Michigan -19,31
-401654577,9,Central Connecticut,Long Island University,True,False,2.5,,-8.4,-5.9,Central Connecticut -2.5,3
-401632465,9,VMI,Chattanooga,False,False,-30.5,,32.9,2.4,Chattanooga -30.5,21
-401634218,9,South Dakota,South Dakota State,False,False,-8.5,,1.7,-6.8,South Dakota +8.5,3
-401628668,9,New Hampshire,Villanova,False,False,-8.5,,7.2,-1.3,New Hampshire +8.5,8
-401641003,9,Middle Tennessee,Jacksonville State,False,False,-20.5,-21.5,26.7,6.2,Jacksonville State -20.5,22
-401628983,9,Notre Dame,Navy,True,False,14,12.5,-12.7,1.3,Navy +14,-37
-401634108,9,Sacramento State,Idaho State,False,False,7.5,,2.7,10.2,Idaho State +7.5,3
-401634107,9,Eastern Washington,Idaho,False,False,-9,,10.3,1.3,Idaho -9,10
-401636359,9,Mississippi Valley State,Arkansas-Pine Bluff,False,False,-11,,26.1,15.1,Arkansas-Pine Bluff -11,14
-401629035,9,Rice,UConn,False,False,-6.5,-6,17.9,11.4,UConn -6.5,7
-401645355,9,UTSA,Tulsa,False,False,9.5,8,-14.8,-5.3,UTSA -9.5,1
-401628666,9,Maine,Rhode Island,False,False,-4.5,,4.0,-0.5,Maine +4.5,10
-401634255,9,Alabama State,Alabama A&M,True,False,2,,-6.2,-4.2,Alabama State -2,-8
-401636376,9,Southern,Florida A&M,False,False,-10.5,,2.6,-7.9,Southern +10.5,18
-401634771,9,Louisville,Boston College,False,True,7,7,-10.9,-3.9,Louisville -7,-4
-401628402,9,Oklahoma,Ole Miss,False,True,-19.5,-20.5,24.8,5.3,Ole Miss -19.5,12
-401635599,9,Wake Forest,Stanford,False,True,3,2.5,-3.8,-0.8,Wake Forest -3,-3
-401628405,9,Texas,Vanderbilt,False,True,17,17.5,-19.0,-2.0,Texas -17,-3
-401632116,9,West Georgia,Southern Utah,False,False,10.5,,-0.4,10.1,Southern Utah +10.5,11
-401633996,9,Eastern Illinois,UT Martin,False,False,-17,,23.1,6.1,UT Martin -17,35
-401633997,9,Gardner-Webb,Southeast Missouri State,False,False,-18,,9.7,-8.3,Gardner-Webb +18,6
-401645353,9,Charlotte,Memphis,False,False,-17,-19,16.3,-0.7,Charlotte +17,5
-401636905,9,West Virginia,Arizona,False,True,-5.5,-3,8.3,2.8,Arizona -5.5,-5
-401632122,9,Tarleton State,Austin Peay,False,False,7.5,,-13.9,-6.4,Tarleton State -7.5,-10
-401654613,9,Colgate,Merrimack,False,False,-2.5,,7.0,4.5,Merrimack -2.5,34
-401654552,9,Howard,Norfolk State,False,False,-1,,8.9,7.9,Norfolk State -1,1
-401628662,9,UAlbany,Delaware,False,False,-14,,26.9,12.9,Delaware -14,14
-401640984,9,Sam Houston,Florida International,True,False,5,7,-10.6,-5.6,Sam Houston -5,-3
-401645354,9,Tulane,North Texas,False,False,7.5,8,-11.9,-4.4,Tulane -7.5,-8
-401643816,9,Georgia State,App State,False,False,-7.5,-8,4.1,-3.4,Georgia State +7.5,7
-401638682,9,Valparaiso,Marist,False,False,1,,13.6,14.6,Marist +1,-3
-401634176,9,Southern Illinois,Indiana State,False,False,9.5,,-4.6,4.9,Indiana State +9.5,3
-401628531,9,Penn State,Wisconsin,False,True,6.5,6.5,-8.5,-2.0,Penn State -6.5,-15
-401643744,9,Washington State,San Diego State,False,False,17,14.5,-10.5,6.5,San Diego State +17,-3
-401628528,9,Maryland,Minnesota,False,True,-6,-4.5,2.9,-3.1,Maryland +6,25
-401654628,9,Holy Cross,Lafayette,False,False,2.5,,8.9,11.4,Lafayette +2.5,-6
-401634032,9,Incarnate Word,SE Louisiana,False,False,6.5,,-8.3,-1.8,Incarnate Word -6.5,-3
-401638680,9,Presbyterian,Stetson,False,False,4.5,,1.2,5.7,Stetson +4.5,-28
-401628527,9,Northwestern,Iowa,False,True,-16.5,-14,12.6,-3.9,Northwestern +16.5,26
-401656951,9,Mercyhurst,Sacred Heart,False,False,-7.5,,11.6,4.1,Sacred Heart -7.5,17
-401634109,9,Montana,Northern Colorado,False,False,24,,-22.1,1.9,Northern Colorado +24,-24
-401635594,9,Oregon State,California,False,True,-13,-10,12.4,-0.6,Oregon State +13,37
-401635598,9,North Carolina,Virginia,False,True,-3.5,-5,9.7,6.2,Virginia -3.5,-27
-401644754,9,Bowling Green,Toledo,False,False,-2,-3,6.6,4.6,Toledo -2,-15
-401638347,9,Samford,The Citadel,False,False,8.5,,-15.9,-7.4,Samford -8.5,17
-401636911,9,BYU,UCF,False,True,-2.5,1,5.8,3.3,UCF -2.5,-13
-401632123,9,North Alabama,Central Arkansas,False,False,-10,,16.3,6.3,Central Arkansas -10,5
-401628525,9,Illinois,Oregon,False,True,-22.5,-21.5,14.1,-8.4,Illinois +22.5,29
-401645308,9,Wagner,Massachusetts,False,False,-23.25,-22.75,9.1,-14.1,Wagner +23.25,28
-401644753,9,Northern Illinois,Ball State,False,False,13.5,12,-18.8,-5.3,Northern Illinois -13.5,2
-401636910,9,Texas Tech,TCU,False,True,-5,-6,5.0,-0.0,Texas Tech +5,1
-401632120,9,Utah Tech,Eastern Kentucky,False,False,-20,,28.5,8.5,Eastern Kentucky -20,11
-401643815,9,Georgia Southern,Old Dominion,False,False,1,-2,6.5,7.5,Old Dominion +1,28
-401628400,9,Missouri,Alabama,False,True,-16,-13.5,11.9,-4.1,Missouri +16,34
-401628532,9,Rutgers,USC,False,True,-13.75,-14.25,20.4,6.7,USC -13.75,22
-401636367,9,Jackson State,Bethune-Cookman,False,False,17.5,,-19.3,-1.8,Jackson State -17.5,-20
-401636906,9,Oklahoma State,Baylor,False,True,-7,-4,3.8,-3.2,Oklahoma State +7,10
-401636907,9,Cincinnati,Colorado,False,True,-6,-4,6.3,0.3,Colorado -6,11
-401628665,9,Elon,Hampton,False,False,7,,6.8,13.8,Hampton +7,20
-401632128,10,Southern Utah,Abilene Christian,False,False,-3.5,,11.4,7.9,Abilene Christian -3.5,3
-401638687,10,St. Thomas (MN),Morehead State,False,False,6,,8.1,14.1,Morehead State +6,14
-401634000,10,Western Illinois,Eastern Illinois,False,False,-4,,2.5,-1.5,Western Illinois +4,7
-401632126,10,Austin Peay,North Alabama,False,False,-7.5,,9.2,1.7,North Alabama -7.5,-14
-401644758,10,Toledo,Eastern Michigan,False,False,10,7.5,-2.3,7.7,Eastern Michigan +10,-1
-401628673,10,Stony Brook,Bryant,False,False,14,,-12.1,1.9,Bryant +14,-1
-401634155,10,Wofford,Samford,False,False,-9,,10.4,1.4,Samford -9,-4
-401635600,10,Louisville,Clemson,False,True,-11,-10.5,5.0,-6.0,Louisville +11,-12
-401644602,10,Harvard,Dartmouth,False,False,3,,5.2,8.2,Dartmouth +3,-4
-401634186,10,Southern Illinois,Missouri State,False,False,-14.5,,19.0,4.5,Missouri State -14.5,21
-401634139,10,East Tennessee State,Mercer,False,False,-6,,13.3,7.3,Mercer -6,6
-401634210,10,Northern Iowa,North Dakota State,False,False,-30,,25.0,-5.0,Northern Iowa +30,23
-401643747,10,San Diego State,Boise State,False,False,-24.5,-23.5,29.9,5.4,Boise State -24.5,32
-401643746,10,Air Force,Army,False,False,-18,-23.5,37.8,19.8,Army -18,17
-401634111,10,Montana State,Eastern Washington,False,False,17,,-17.6,-0.6,Montana State -17,-14
-401636368,10,Grambling,Bethune-Cookman,False,False,5.5,,-10.2,-4.7,Grambling -5.5,3
-401643749,10,Hawai'i,Fresno State,False,False,-12.5,-13,9.5,-3.0,Hawai'i +12.5,-1
-401634001,10,Lindenwood,Tennessee Tech,False,False,-2.5,,2.0,-0.5,Lindenwood +2.5,42
-401636360,10,Arkansas-Pine Bluff,Jackson State,False,False,-24.5,,17.0,-7.5,Arkansas-Pine Bluff +24.5,38
-401645358,10,Tulsa,UAB,False,False,-2.5,-3,8.5,6.0,UAB -2.5,38
-401628412,10,Kentucky,Tennessee,False,True,-17.5,-16,24.7,7.2,Tennessee -17.5,10
-401628409,10,Massachusetts,Mississippi State,False,True,-19.5,-18,11.8,-7.7,Massachusetts +19.5,25
-401634002,10,UT Martin,Tennessee State,False,False,14.5,,-2.3,12.2,Tennessee State +14.5,-7
-401634020,10,East Texas A&M,McNeese,False,False,-12,,20.5,8.5,McNeese -12,28
-401636349,10,Alcorn State,Alabama State,True,False,-4,,14.8,10.8,Alabama State -4,4
-401654648,10,Stonehill,Saint Francis,False,False,-10,,6.0,-4.0,Stonehill +10,34
-401634165,10,Youngstown State,Illinois State,False,False,-7.5,,12.3,4.8,Illinois State -7.5,7
-401654459,10,Pennsylvania,Brown,False,False,1.5,,11.3,12.8,Brown +1.5,-10
-401632466,10,Chattanooga,Western Carolina,False,False,2,,7.4,9.4,Western Carolina +2,4
-401641020,10,Kennesaw State,Western Kentucky,False,False,-23.5,-24,27.8,4.3,Western Kentucky -23.5,17
-401654493,10,Yale,Columbia,False,False,-1.5,,4.1,2.6,Columbia -1.5,3
-401634110,10,Montana,Cal Poly,False,False,20.5,,-17.4,3.1,Cal Poly +20.5,-35
-401634177,10,North Dakota,Indiana State,False,False,17,,-13.1,3.9,Indiana State +17,4
-401654578,10,Wagner,Central Connecticut,False,False,-8,,8.4,0.4,Central Connecticut -8,10
-401641026,10,Middle Tennessee,UTEP,False,False,-2,-3,12.7,10.7,UTEP -2,-7
-401628670,10,William & Mary,North Carolina A&T,False,False,16.5,,-14.0,2.5,North Carolina A&T +16.5,-38
-401635627,10,Pittsburgh,SMU,False,True,-7,-7.5,13.5,6.5,SMU -7,23
-401628534,10,Indiana,Michigan State,False,True,7.5,7,-9.6,-2.1,Indiana -7.5,-37
-401628539,10,Ohio State,Penn State,False,True,3,4,-4.8,-1.8,Ohio State -3,-7
-401645359,10,Memphis,UTSA,False,False,7,8,-1.0,6.0,UTSA +7,8
-401645360,10,Navy,Rice,False,False,12.5,13,-16.1,-3.6,Navy -12.5,14
-401643750,10,Wyoming,New Mexico,False,False,-7.5,-7,15.5,8.0,New Mexico -7.5,-4
-401640985,10,New Mexico State,Florida International,True,False,-7,-7.5,7.3,0.3,Florida International -7,21
-401628410,10,Maine,Oklahoma,False,True,-37.5,-35,13.6,-23.9,Maine +37.5,45
-401643748,10,Colorado State,Nevada,False,False,2,1,7.4,9.4,Nevada +2,-17
-401638684,10,Dayton,Presbyterian,False,False,5.5,,0.4,5.9,Presbyterian +5.5,21
-401628674,10,Monmouth,Rhode Island,False,False,2,,1.4,3.4,Rhode Island +2,9
-401675121,10,Stephen F. Austin,Nicholls,False,False,2,,-5.2,-3.2,Stephen F. Austin -2,-16
-401635516,10,Stanford,NC State,False,True,-9.5,-10,16.2,6.7,NC State -9.5,31
-401636915,10,Arizona State,Oklahoma State,False,True,5,-1,-0.9,4.1,Oklahoma State +5,-21
-401638683,10,Davidson,San Diego,False,False,-3,,6.0,3.0,San Diego -3,27
-401634256,10,Southern,Alabama A&M,False,False,-2.5,,6.6,4.1,Alabama A&M -2.5,-5
-401643823,10,Georgia Southern,South Alabama,False,False,-5.5,-6,8.5,3.0,South Alabama -5.5,-4
-401628407,10,Vanderbilt,Auburn,False,True,-7.5,-6,3.5,-4.0,Vanderbilt +7.5,-10
-401654620,10,Lehigh,Georgetown,False,False,-0.5,,-6.1,-6.6,Lehigh +0.5,-37
-401634112,10,Weber State,Northern Arizona,False,False,-1.5,,6.5,5.0,Northern Arizona -1.5,21
-401628536,10,Oregon,Michigan,False,True,14.5,14.5,-14.4,0.1,Michigan +14.5,-21
-401645357,10,South Florida,Florida Atlantic,False,False,1.5,2,13.5,15.0,Florida Atlantic +1.5,-23
-401643824,10,Coastal Carolina,Troy,False,False,4,4.5,1.3,5.3,Troy +4,14
-401644757,10,Buffalo,Akron,False,False,1,1,0.2,1.2,Akron +1,-11
-401654466,10,Cornell,Princeton,False,False,-3.5,,-3.7,-7.2,Cornell +3.5,-14
-401628533,10,Minnesota,Illinois,False,True,2.5,2,-1.3,1.2,Illinois +2.5,-8
-401654501,10,Delaware State,Howard,False,False,-11.5,,7.6,-3.9,Delaware State +11.5,38
-401635604,10,Virginia Tech,Syracuse,False,True,3.5,4,-3.7,-0.2,Virginia Tech -3.5,7
-401628411,10,Texas A&M,South Carolina,False,True,3,3.5,1.3,4.3,South Carolina +3,24
-401654515,10,Norfolk State,Morgan State,False,False,-6.5,,9.9,3.4,Morgan State -6.5,1
-401628408,10,Florida,Georgia,True,True,-14.5,-16.5,4.6,-9.9,Florida +14.5,14
-401628535,10,Wisconsin,Iowa,False,True,-2.5,-3.5,12.1,9.6,Iowa -2.5,32
-401628537,10,UCLA,Nebraska,False,True,-7.5,-7.5,11.0,3.5,Nebraska -7.5,-7
-401635602,10,North Carolina,Florida State,False,True,2.5,2.5,-6.8,-4.3,North Carolina -2.5,-24
-401636913,10,Kansas State,Houston,False,True,12.5,13,-18.2,-5.7,Kansas State -12.5,5
-401654609,10,Merrimack,Robert Morris,False,False,1.5,,1.6,3.1,Robert Morris +1.5,6
-401632125,10,Central Arkansas,Utah Tech,False,False,24.5,,-19.8,4.7,Utah Tech +24.5,13
-401634113,10,Northern Colorado,UC Davis,False,False,-23.5,,25.4,1.9,UC Davis -23.5,52
-401638348,10,Furman,VMI,False,False,10,,-1.1,8.9,VMI +10,4
-401636914,10,Texas Tech,Iowa State,False,True,-13.5,-14,15.9,2.4,Iowa State -13.5,-1
-401654571,10,Prairie View A&M,Mississippi Valley State,False,False,14,,-6.1,7.9,Mississippi Valley State +14,-1
-401628538,10,Northwestern,Purdue,False,True,-3,1.5,-9.2,-12.2,Northwestern +3,-6
-401634025,10,SE Louisiana,Lamar,False,False,2,,9.9,11.9,Lamar +2,-3
-401641012,10,Louisiana Tech,Sam Houston,False,False,-10.5,-10.5,17.0,6.5,Sam Houston -10.5,6
-401634195,10,Murray State,South Dakota State,False,False,-42,,31.2,-10.8,Murray State +42,46
-401638686,10,Stetson,Butler,False,False,-26.5,,28.2,1.7,Butler -26.5,33
-401634035,10,Houston Christian,Incarnate Word,False,False,-23.5,,25.4,1.9,Incarnate Word -23.5,25
-401636912,10,TCU,Baylor,False,True,-2.5,-3,2.3,-0.2,TCU +2.5,3
-401654592,10,Mercyhurst,Duquesne,False,False,-26.5,,26.3,-0.2,Mercyhurst +26.5,7
-401636377,10,Texas Southern,Florida A&M,False,False,-14.5,,5.3,-9.2,Texas Southern +14.5,24
-401634114,10,Portland State,Sacramento State,False,False,-12.5,,13.2,0.7,Sacramento State -12.5,-20
-401645356,10,Tulane,Charlotte,False,False,14.5,16,-12.7,1.8,Charlotte +14.5,-31
-401643822,10,UL Monroe,Marshall,False,False,-10.5,-10.5,5.1,-5.4,UL Monroe +10.5,5
-401654541,10,North Carolina Central,South Carolina State,False,False,3.5,,-2.5,1.0,South Carolina State +3.5,3
-401654629,10,Lafayette,Bucknell,False,False,6,,-4.9,1.1,Bucknell +6,7
-401628540,10,USC,Washington,False,True,2,2.5,3.8,5.8,Washington +2,5
-401643821,10,Old Dominion,App State,False,False,2.5,2,-10.0,-7.5,Old Dominion -2.5,8
-401640994,10,Jacksonville State,Liberty,False,False,-2.5,-1,4.9,2.4,Liberty -2.5,-10
-401628675,10,New Hampshire,UAlbany,False,False,-0.5,,-1.7,-2.2,New Hampshire +0.5,-17
-401628406,10,Ole Miss,Arkansas,False,True,8,6.5,-6.5,1.5,Arkansas +8,-32
-401635601,10,Duke,Miami,False,True,-21,-20,20.2,-0.8,Duke +21,22
-401628671,10,Villanova,Hampton,False,False,8.5,,6.7,15.2,Hampton +8.5,-6
-401632124,10,Eastern Kentucky,Tarleton State,False,False,-13,,7.8,-5.2,Eastern Kentucky +13,-4
-401656602,10,Colgate,Fordham,False,False,-1.5,,6.5,5.0,Fordham -1.5,6
-401636916,10,Arizona,UCF,False,True,-6.5,-6,9.4,2.9,UCF -6.5,44
-401629036,10,Georgia State,UConn,False,False,-7,-7,17.6,10.6,UConn -7,7
-401643820,10,Louisiana,Texas State,False,False,-4,-3,4.6,0.6,Texas State -4,-6
-401636350,11,Alabama State,Grambling,False,False,3.5,,-6.9,-3.4,Alabama State -3.5,1
-401634150,11,Mercer,VMI,False,False,21,,-27.4,-6.4,Mercer -21,-34
-401634244,11,Youngstown State,Southern Illinois,False,False,-0.5,,5.8,5.3,Southern Illinois -0.5,4
-401643751,11,Fresno State,Air Force,False,False,9.5,10.5,-14.0,-4.5,Fresno State -9.5,8
-401634187,11,Missouri State,Murray State,False,False,24,,-18.8,5.2,Murray State +24,-28
-401643752,11,Nevada,Boise State,False,False,-23.5,-24.5,32.7,9.2,Boise State -23.5,7
-401628541,11,Michigan,Indiana,False,True,-14.5,-14,27.6,13.1,Indiana -14.5,5
-401655656,11,Tennessee Tech,Samford,False,False,-2.5,,12.1,9.6,Samford -2.5,-20
-401634257,11,Alabama A&M,Arkansas-Pine Bluff,False,False,8,,-6.1,1.9,Arkansas-Pine Bluff +8,-28
-401629045,11,Army,North Texas,False,False,6.5,5,-9.9,-3.4,Army -6.5,-11
-401644760,11,Bowling Green,Central Michigan,False,False,15.5,12.5,-8.0,7.5,Central Michigan +15.5,-10
-401628680,11,Rhode Island,Delaware,False,False,-6,,11.8,5.8,Delaware -6,3
-401643826,11,Georgia State,James Madison,False,False,-14.5,-16.5,21.9,7.4,James Madison -14.5,31
-401636918,11,West Virginia,Cincinnati,False,True,-5.5,-4,14.8,9.3,Cincinnati -5.5,-7
-401645363,11,Navy,South Florida,False,False,4.5,3.5,-2.2,2.3,South Florida +4.5,-21
-401654508,11,Pennsylvania,Cornell,False,False,2.5,,16.0,18.5,Cornell +2.5,-18
-401634027,11,Nicholls,Houston Christian,False,False,11.5,,-8.0,3.5,Houston Christian +11.5,3
-401645361,11,Florida Atlantic,East Carolina,False,False,-7.5,-7.5,0.4,-7.1,Florida Atlantic +7.5,35
-401643754,11,New Mexico,San Diego State,False,False,-1.5,-3,8.0,6.5,San Diego State -1.5,-5
-401654494,11,Columbia,Harvard,False,False,-7,,6.1,-0.9,Columbia +7,20
-401641004,11,Jacksonville State,Louisiana Tech,False,False,10,10,-11.9,-1.9,Jacksonville State -10,-7
-401654652,11,Fordham,Bucknell,False,False,-3,,5.6,2.6,Bucknell -3,1
-401645362,11,Rice,Memphis,False,False,-7,-10.5,13.4,6.4,Memphis -7,7
-401628544,11,Minnesota,Rutgers,False,True,6.5,6.25,-8.4,-1.9,Minnesota -6.5,7
-401634116,11,Eastern Washington,Northern Colorado,False,False,13.5,,-8.1,5.4,Northern Colorado +13.5,-28
-401643827,11,Arkansas State,Louisiana,False,False,-14,-14,18.2,4.2,Louisiana -14,36
-401628677,11,UAlbany,Stony Brook,False,False,-2.5,,12.0,9.5,Stony Brook -2.5,18
-401641021,11,Kennesaw State,UTEP,False,False,-4.5,-3.5,7.9,3.4,UTEP -4.5,8
-401638689,11,Drake,St. Thomas (MN),False,False,4.5,,-5.0,-0.5,Drake -4.5,-3
-401635609,11,Miami,Georgia Tech,False,True,9.5,11,-4.5,5.0,Georgia Tech +9.5,5
-401636922,11,BYU,Utah,False,True,3,4.5,-4.8,-1.8,BYU -3,-1
-401628681,11,Elon,William & Mary,False,False,-7.5,,15.1,7.6,William & Mary -7.5,-4
-401634004,11,Eastern Illinois,Gardner-Webb,False,False,-5.5,,15.1,9.6,Gardner-Webb -5.5,3
-401636920,11,Oklahoma State,TCU,False,True,-10.5,-11.5,12.6,2.1,TCU -10.5,25
-401654630,11,Lafayette,Colgate,False,False,3.5,,-10.4,-6.9,Lafayette -3.5,-1
-401675122,11,Stephen F. Austin,East Texas A&M,False,False,16.5,,-23.1,-6.6,Stephen F. Austin -16.5,5
-401640995,11,Liberty,Middle Tennessee,False,False,12.5,10.5,-11.2,1.3,Middle Tennessee +12.5,-20
-401636921,11,Colorado,Texas Tech,False,True,4.5,3,0.7,5.2,Texas Tech +4.5,-14
-401629037,11,UConn,UAB,False,False,7.5,6,-4.5,3.0,UAB +7.5,-8
-401635608,11,Duke,NC State,False,True,-3,-3,-2.0,-5.0,Duke +3,-10
-401634005,11,Southeast Missouri State,Lindenwood,False,False,17,,-10.3,6.7,Lindenwood +17,12
-401632135,11,Southern Utah,North Alabama,False,False,-7.5,,-4.6,-12.1,Southern Utah +7.5,-12
-401654621,11,Lehigh,Holy Cross,False,False,-6.5,,-2.7,-9.2,Lehigh +6.5,-3
-401636369,11,Bethune-Cookman,Southern,False,False,-7,,19.8,12.8,Southern -7,2
-401638692,11,San Diego,Dayton,False,False,3.5,,-1.0,2.5,Dayton +3.5,-6
-401644688,11,Miami (OH),Ball State,False,False,13,12,-8.7,4.3,Ball State +13,-6
-401635606,11,Syracuse,Boston College,False,True,-3,-1.5,-0.9,-3.9,Syracuse +3,6
-401628417,11,Florida,Texas,False,True,-23,-21.5,21.4,-1.6,Florida +23,32
-401643825,11,App State,Coastal Carolina,False,False,2.5,-1.5,5.2,7.7,Coastal Carolina +2.5,14
-401628414,11,Georgia,Ole Miss,False,True,2,2.5,13.6,15.6,Ole Miss +2,18
-401634140,11,Western Carolina,East Tennessee State,False,False,-6.5,,4.8,-1.7,Western Carolina +6.5,3
-401632467,11,Chattanooga,The Citadel,False,False,14,,-10.0,4.0,The Citadel +14,-24
-401641036,11,Western Kentucky,New Mexico State,False,False,18,18,-22.4,-4.4,Western Kentucky -18,-13
-401636919,11,Iowa State,Kansas,True,True,2.5,3,-5.0,-2.5,Iowa State -2.5,9
-401636391,11,Mississippi Valley State,Jackson State,False,False,-31.5,,33.4,1.9,Jackson State -31.5,37
-401628684,11,North Carolina A&T,Villanova,False,False,-25.5,,16.0,-9.5,North Carolina A&T +25.5,28
-401628984,11,Florida State,Notre Dame,False,True,-25.5,-26,38.1,12.6,Notre Dame -25.5,49
-401628682,11,Hampton,Towson,False,False,-5.5,,4.5,-1.0,Hampton +5.5,17
-401634204,11,South Dakota State,North Dakota,False,False,17,,-9.0,8.0,North Dakota +17,-31
-401638688,11,Butler,Valparaiso,False,False,14.5,,-20.5,-6.0,Butler -14.5,-7
-401635607,11,Clemson,Virginia Tech,False,True,5.5,6.5,0.4,5.9,Virginia Tech +5.5,-10
-401628678,11,Bryant,Maine,False,False,-13.5,,11.8,-1.7,Bryant +13.5,12
-401634156,11,Wofford,Furman,False,False,-4.5,,-8.7,-13.2,Wofford +4.5,-6
-401634006,11,Tennessee State,Western Illinois,False,False,4,,-6.9,-2.9,Tennessee State -4,-25
-401634118,11,Idaho State,Weber State,False,False,-6.5,,5.0,-1.5,Idaho State +6.5,-8
-401654542,11,South Carolina State,Howard,False,False,4.5,,-7.5,-3.0,South Carolina State -4.5,-24
-401654593,11,Robert Morris,Duquesne,False,False,-4.5,,12.4,7.9,Duquesne -4.5,25
-401634120,11,Sacramento State,Montana State,False,False,-17.5,,25.6,8.1,Montana State -17.5,42
-401645364,11,Temple,Tulane,False,False,-25.5,-26.5,31.9,6.4,Tulane -25.5,46
-401628415,11,Oklahoma,Missouri,False,True,3.5,-2.5,2.8,6.3,Missouri +3.5,7
-401632130,11,Abilene Christian,Austin Peay,False,False,4,,-13.6,-9.6,Abilene Christian -4,-1
-401643828,11,Texas State,UL Monroe,False,False,9.5,7,1.7,11.2,UL Monroe +9.5,-21
-401654460,11,Brown,Yale,False,False,-10,,18.3,8.3,Yale -10,22
-401632140,11,Central Arkansas,Eastern Kentucky,False,False,4,,1.8,5.8,Eastern Kentucky +4,7
-401654579,11,Central Connecticut,Stonehill,False,False,15,,-13.1,1.9,Stonehill +15,-4
-401634117,11,Idaho,Portland State,False,False,11,,-6.1,4.9,Portland State +11,-9
-401628683,11,Monmouth,New Hampshire,False,False,1.5,,-1.1,0.4,New Hampshire +1.5,13
-401654502,11,Morgan State,Delaware State,False,False,14.5,,-10.5,4.0,Delaware State +14.5,-8
-401628545,11,Purdue,Ohio State,False,True,-37.5,-38.5,37.2,-0.3,Purdue +37.5,45
-401644762,11,Northern Illinois,Western Michigan,False,False,2,1.5,-4.3,-2.3,Northern Illinois -2,-14
-401628543,11,Maryland,Oregon,False,True,-24,-25,17.7,-6.3,Maryland +24,21
-401636917,11,UCF,Arizona State,False,True,-2.5,-4,5.1,2.6,Arizona State -2.5,4
-401634003,11,UT Martin,Charleston Southern,False,False,17.5,,-11.8,5.7,Charleston Southern +17.5,-26
-401628418,11,South Carolina,Vanderbilt,False,True,6,3.5,-3.7,2.3,Vanderbilt +6,-21
-401628679,11,Richmond,Campbell,False,False,9.5,,-8.3,1.2,Campbell +9.5,-3
-401644761,11,Ohio,Kent State,False,False,20.5,18.5,-14.8,5.7,Kent State +20.5,-41
-401636378,11,Florida A&M,Prairie View A&M,False,False,17,,-11.5,5.5,Prairie View A&M +17,19
-401643756,11,Utah State,Washington State,False,False,-20.5,-20.5,21.4,0.9,Washington State -20.5,21
-401654568,11,Texas Southern,Alcorn State,False,False,-5,,-2.0,-7.0,Texas Southern +5,21
-401634178,11,Indiana State,South Dakota,False,False,-31,,28.5,-2.5,Indiana State +31,49
-401638691,11,Morehead State,Davidson,False,False,-7,,-1.5,-8.5,Morehead State +7,17
-401632077,11,Tarleton State,West Georgia,False,False,8.5,,6.8,15.3,West Georgia +8.5,-17
-401638690,11,Marist,Stetson,False,False,-0.5,,1.5,1.0,Stetson -0.5,-9
-401634773,11,California,Wake Forest,False,True,7,7,-7.2,-0.2,California -7,-10
-401628546,11,Washington,Penn State,False,True,-13.5,-13.5,4.6,-8.9,Washington +13.5,29
-401643829,11,Marshall,Southern Miss,False,False,13.5,13.5,-13.1,0.4,Southern Miss +13.5,-34
-401643753,11,UNLV,Hawai'i,False,False,12.5,13.5,-9.8,2.7,Hawai'i +12.5,-2
-401634115,11,Northern Arizona,Cal Poly,False,False,13.5,,-7.0,6.5,Cal Poly +13.5,-17
-401654467,11,Dartmouth,Princeton,False,False,9.5,,-8.7,0.8,Princeton +9.5,-9
-401643755,11,San José State,Oregon State,False,False,-3,-3.5,-3.4,-6.4,San José State +3,-11
-401628416,11,Mississippi State,Tennessee,False,True,-26.5,-23.5,29.8,3.3,Tennessee -26.5,19
-401635610,11,Virginia,Pittsburgh,False,True,-7.5,-7,13.4,5.9,Pittsburgh -7.5,-5
-401634119,11,UC Davis,Montana,False,False,-5.5,,13.5,8.0,Montana -5.5,-16
-401628413,11,Alabama,LSU,False,True,2.5,2.5,1.6,4.1,LSU +2.5,-29
-401634028,11,Lamar,Incarnate Word,False,False,-15.5,,17.2,1.7,Incarnate Word -15.5,21
-401628542,11,Iowa,UCLA,False,True,6.5,6,-4.1,2.4,UCLA +6.5,3
-401634023,11,Northwestern State,SE Louisiana,False,False,-28,,30.5,2.5,SE Louisiana -28,41
-401634166,11,Illinois State,Northern Iowa,False,False,2.5,,-0.9,1.6,Northern Iowa +2.5,-22
-401654598,11,Long Island University,Sacred Heart,False,False,3,,2.6,5.6,Sacred Heart +3,-21
-401634122,12,Idaho State,Eastern Washington,False,False,-5,,7.0,2.0,Eastern Washington -5,35
-401644604,12,Harvard,Pennsylvania,False,False,8.5,,-8.1,0.4,Pennsylvania +8.5,-3
-401634249,12,Northern Iowa,Youngstown State,False,False,-4.5,,4.3,-0.2,Northern Iowa +4.5,1
-401628690,12,Bryant,William & Mary,False,False,-21,,22.9,1.9,William & Mary -21,10
-401645370,12,Tulane,Navy,False,False,7.5,6.5,-3.5,4.0,Navy +7.5,-35
-401643834,12,South Alabama,Louisiana,False,False,-6.5,-9,5.9,-0.6,South Alabama +6.5,-2
-401628425,12,Mercer,Alabama,False,True,-42.25,-43.5,19.3,-22.9,Mercer +42.25,45
-401634188,12,Missouri State,North Dakota State,False,False,-13.5,,12.8,-0.7,Missouri State +13.5,38
+401634203,9,North Dakota,Youngstown State,False,False,9.5,,-12.9,-3.4,North Dakota -9.5,1
+401644752,9,Eastern Michigan,Akron,False,False,2.5,3,-2.9,-0.4,Eastern Michigan -2.5,4
+401628663,9,Richmond,Bryant,False,False,16,,-20.1,-4.1,Richmond -16,-27
+401644601,9,Princeton,Harvard,False,False,-9.5,,14.1,4.6,Harvard -9.5,32
+401643817,9,Southern Miss,James Madison,False,False,-24,-24,37.0,13.0,James Madison -24,17
+401654619,9,Fordham,Lehigh,False,False,-8.5,,22.7,14.2,Lehigh -8.5,14
+401634185,9,Missouri State,Northern Iowa,False,False,10.5,,-12.0,-1.5,Missouri State -10.5,-7
+401640993,9,Liberty,Kennesaw State,False,False,27,23.5,-22.0,5.0,Kennesaw State +27,3
+401644687,9,Central Michigan,Miami (OH),False,False,-10.5,-12,16.5,6.0,Miami (OH) -10.5,39
+401675120,9,Houston Christian,Stephen F. Austin,False,False,-14.5,,24.0,9.5,Stephen F. Austin -14.5,49
+401636909,9,Kansas,Kansas State,False,True,-10,-9.5,15.7,5.7,Kansas State -10,2
+401643745,9,Utah State,Wyoming,False,False,2,-2.5,-7.4,-5.4,Utah State -2,-2
+401643740,9,Boise State,UNLV,False,False,4,2.5,-9.5,-5.5,Boise State -4,-5
+401641011,9,UTEP,Louisiana Tech,False,False,-6.5,-7.5,1.1,-5.4,UTEP +6.5,4
+401628530,9,Nebraska,Ohio State,False,True,-25,-25.5,20.6,-4.4,Nebraska +25,4
+401628404,9,LSU,Texas A&M,False,True,-2,-2.5,1.8,-0.2,LSU +2,15
+401634770,9,Syracuse,Pittsburgh,False,True,-5,-5,7.6,2.6,Pittsburgh -5,28
+401643819,9,UL Monroe,South Alabama,False,False,-7,-8.5,1.8,-5.2,UL Monroe +7,29
+401635597,9,Georgia Tech,Virginia Tech,False,True,-11,-9,2.1,-8.9,Georgia Tech +11,15
+401628401,9,Auburn,Kentucky,False,True,-2,-2.5,5.4,3.4,Kentucky -2,-14
+401654644,9,Bucknell,Georgetown,False,False,-5.5,,14.8,9.3,Georgetown -5.5,1
+401634017,9,Lamar,Northwestern State,False,False,17.5,,-19.0,-1.5,Lamar -17.5,-32
+401643818,9,Troy,Arkansas State,False,False,-8.5,-7.5,-7.6,-16.1,Troy +8.5,3
+401644756,9,Kent State,Western Michigan,False,False,-19,-17,18.6,-0.4,Kent State +19,31
+401628664,9,North Carolina A&T,Campbell,False,False,-10,,11.7,1.7,Campbell -10,14
+401654591,9,Duquesne,Stonehill,False,False,21,,-21.2,-0.2,Duquesne -21,-14
+401628529,9,Michigan State,Michigan,False,True,-3.5,-5,-2.7,-6.2,Michigan State +3.5,7
+401654577,9,Central Connecticut,Long Island University,True,False,2.5,,-8.2,-5.7,Central Connecticut -2.5,3
+401628668,9,New Hampshire,Villanova,False,False,-8.5,,5.9,-2.6,New Hampshire +8.5,8
+401632465,9,VMI,Chattanooga,False,False,-30.5,,31.9,1.4,Chattanooga -30.5,21
+401644755,9,Buffalo,Ohio,False,False,-4,-6.5,0.6,-3.4,Buffalo +4,31
+401645355,9,UTSA,Tulsa,False,False,9.5,8,-17.9,-8.4,UTSA -9.5,1
+401634218,9,South Dakota,South Dakota State,False,False,-8.5,,-0.1,-8.6,South Dakota +8.5,3
+401634107,9,Eastern Washington,Idaho,False,False,-9,,8.2,-0.8,Eastern Washington +9,10
+401634108,9,Sacramento State,Idaho State,False,False,7.5,,0.9,8.4,Idaho State +7.5,3
+401628403,9,Arkansas,Mississippi State,False,True,7.5,7.5,-3.4,4.1,Mississippi State +7.5,-33
+401629035,9,Rice,UConn,False,False,-6.5,-6,16.0,9.5,UConn -6.5,7
+401636359,9,Mississippi Valley State,Arkansas-Pine Bluff,False,False,-11,,25.2,14.2,Arkansas-Pine Bluff -11,14
+401636376,9,Southern,Florida A&M,False,False,-10.5,,1.8,-8.7,Southern +10.5,18
+401641003,9,Middle Tennessee,Jacksonville State,False,False,-20.5,-21.5,24.5,4.0,Jacksonville State -20.5,22
+401628666,9,Maine,Rhode Island,False,False,-4.5,,2.8,-1.7,Maine +4.5,10
+401628983,9,Notre Dame,Navy,True,False,14,12.5,-16.3,-2.3,Notre Dame -14,-37
+401634255,9,Alabama State,Alabama A&M,True,False,2,,-5.5,-3.5,Alabama State -2,-8
+401635599,9,Wake Forest,Stanford,False,True,3,2.5,-6.1,-3.1,Wake Forest -3,-3
+401645353,9,Charlotte,Memphis,False,False,-17,-19,16.4,-0.6,Charlotte +17,5
+401634771,9,Louisville,Boston College,False,True,7,7,-13.6,-6.6,Louisville -7,-4
+401628405,9,Texas,Vanderbilt,False,True,17,17.5,-22.4,-5.4,Texas -17,-3
+401632116,9,West Georgia,Southern Utah,False,False,10.5,,-0.8,9.7,Southern Utah +10.5,11
+401633996,9,Eastern Illinois,UT Martin,False,False,-17,,21.3,4.3,UT Martin -17,35
+401632122,9,Tarleton State,Austin Peay,False,False,7.5,,-14.9,-7.4,Tarleton State -7.5,-10
+401640984,9,Sam Houston,Florida International,True,False,5,7,-11.6,-6.6,Sam Houston -5,-3
+401636905,9,West Virginia,Arizona,False,True,-5.5,-3,5.5,-0.0,West Virginia +5.5,-5
+401633997,9,Gardner-Webb,Southeast Missouri State,False,False,-18,,8.6,-9.4,Gardner-Webb +18,6
+401654613,9,Colgate,Merrimack,False,False,-2.5,,5.8,3.3,Merrimack -2.5,34
+401628402,9,Oklahoma,Ole Miss,False,True,-19.5,-20.5,22.6,3.1,Ole Miss -19.5,12
+401643816,9,Georgia State,App State,False,False,-7.5,-8,0.6,-6.9,Georgia State +7.5,7
+401654552,9,Howard,Norfolk State,False,False,-1,,7.2,6.2,Norfolk State -1,1
+401628662,9,UAlbany,Delaware,False,False,-14,,25.2,11.2,Delaware -14,14
+401638682,9,Valparaiso,Marist,False,False,1,,11.7,12.7,Marist +1,-3
+401645354,9,Tulane,North Texas,False,False,7.5,8,-16.1,-8.6,Tulane -7.5,-8
+401634176,9,Southern Illinois,Indiana State,False,False,9.5,,-6.4,3.1,Indiana State +9.5,3
+401654628,9,Holy Cross,Lafayette,False,False,2.5,,6.8,9.3,Lafayette +2.5,-6
+401643744,9,Washington State,San Diego State,False,False,17,14.5,-13.0,4.0,San Diego State +17,-3
+401628531,9,Penn State,Wisconsin,False,True,6.5,6.5,-10.9,-4.4,Penn State -6.5,-15
+401628528,9,Maryland,Minnesota,False,True,-6,-4.5,1.5,-4.5,Maryland +6,25
+401635594,9,Oregon State,California,False,True,-13,-10,11.4,-1.6,Oregon State +13,37
+401635598,9,North Carolina,Virginia,False,True,-3.5,-5,7.9,4.4,Virginia -3.5,-27
+401644754,9,Bowling Green,Toledo,False,False,-2,-3,4.1,2.1,Toledo -2,-15
+401638680,9,Presbyterian,Stetson,False,False,4.5,,-0.4,4.1,Stetson +4.5,-28
+401656951,9,Mercyhurst,Sacred Heart,False,False,-7.5,,11.3,3.8,Sacred Heart -7.5,17
+401634032,9,Incarnate Word,SE Louisiana,False,False,6.5,,-9.7,-3.2,Incarnate Word -6.5,-3
+401634109,9,Montana,Northern Colorado,False,False,24,,-25.3,-1.3,Montana -24,-24
+401632123,9,North Alabama,Central Arkansas,False,False,-10,,13.9,3.9,Central Arkansas -10,5
+401628527,9,Northwestern,Iowa,False,True,-16.5,-14,11.9,-4.6,Northwestern +16.5,26
+401638347,9,Samford,The Citadel,False,False,8.5,,-18.9,-10.4,Samford -8.5,17
+401636911,9,BYU,UCF,False,True,-2.5,1,5.5,3.0,UCF -2.5,-13
+401636910,9,Texas Tech,TCU,False,True,-5,-6,2.8,-2.2,Texas Tech +5,1
+401628400,9,Missouri,Alabama,False,True,-16,-13.5,10.0,-6.0,Missouri +16,34
+401628525,9,Illinois,Oregon,False,True,-22.5,-21.5,13.6,-8.9,Illinois +22.5,29
+401636906,9,Oklahoma State,Baylor,False,True,-7,-4,0.4,-6.6,Oklahoma State +7,10
+401645308,9,Wagner,Massachusetts,False,False,-23.25,-22.75,8.0,-15.2,Wagner +23.25,28
+401644753,9,Northern Illinois,Ball State,False,False,13.5,12,-21.8,-8.3,Northern Illinois -13.5,2
+401636367,9,Jackson State,Bethune-Cookman,False,False,17.5,,-21.4,-3.9,Jackson State -17.5,-20
+401632120,9,Utah Tech,Eastern Kentucky,False,False,-20,,26.4,6.4,Eastern Kentucky -20,11
+401643815,9,Georgia Southern,Old Dominion,False,False,1,-2,4.5,5.5,Old Dominion +1,28
+401628532,9,Rutgers,USC,False,True,-13.75,-14.25,19.3,5.5,USC -13.75,22
+401636907,9,Cincinnati,Colorado,False,True,-6,-4,4.5,-1.5,Cincinnati +6,11
+401628665,9,Elon,Hampton,False,False,7,,4.4,11.4,Hampton +7,20
+401632128,10,Southern Utah,Abilene Christian,False,False,-3.5,,9.7,6.2,Abilene Christian -3.5,3
+401638687,10,St. Thomas (MN),Morehead State,False,False,6,,6.5,12.5,Morehead State +6,14
+401634000,10,Western Illinois,Eastern Illinois,False,False,-4,,1.3,-2.7,Western Illinois +4,7
+401644758,10,Toledo,Eastern Michigan,False,False,10,7.5,-5.0,5.0,Eastern Michigan +10,-1
+401628673,10,Stony Brook,Bryant,False,False,14,,-14.9,-0.9,Stony Brook -14,-1
+401632126,10,Austin Peay,North Alabama,False,False,-7.5,,7.3,-0.2,Austin Peay +7.5,-14
+401634155,10,Wofford,Samford,False,False,-9,,9.0,0.0,Samford -9,-4
+401634186,10,Southern Illinois,Missouri State,False,False,-14.5,,17.0,2.5,Missouri State -14.5,21
+401644602,10,Harvard,Dartmouth,False,False,3,,2.9,5.9,Dartmouth +3,-4
+401634139,10,East Tennessee State,Mercer,False,False,-6,,11.2,5.2,Mercer -6,6
+401635600,10,Louisville,Clemson,False,True,-11,-10.5,3.9,-7.1,Louisville +11,-12
+401634210,10,Northern Iowa,North Dakota State,False,False,-30,,24.0,-6.0,Northern Iowa +30,23
+401634111,10,Montana State,Eastern Washington,False,False,17,,-18.9,-1.9,Montana State -17,-14
+401643746,10,Air Force,Army,False,False,-18,-23.5,35.2,17.2,Army -18,17
+401643747,10,San Diego State,Boise State,False,False,-24.5,-23.5,28.4,3.9,Boise State -24.5,32
+401636368,10,Grambling,Bethune-Cookman,False,False,5.5,,-11.7,-6.2,Grambling -5.5,3
+401628409,10,Massachusetts,Mississippi State,False,True,-19.5,-18,12.7,-6.8,Massachusetts +19.5,25
+401636360,10,Arkansas-Pine Bluff,Jackson State,False,False,-24.5,,15.4,-9.1,Arkansas-Pine Bluff +24.5,38
+401643749,10,Hawai'i,Fresno State,False,False,-12.5,-13,8.3,-4.2,Hawai'i +12.5,-1
+401634001,10,Lindenwood,Tennessee Tech,False,False,-2.5,,0.2,-2.3,Lindenwood +2.5,42
+401628412,10,Kentucky,Tennessee,False,True,-17.5,-16,23.1,5.6,Tennessee -17.5,10
+401634002,10,UT Martin,Tennessee State,False,False,14.5,,-4.2,10.3,Tennessee State +14.5,-7
+401645358,10,Tulsa,UAB,False,False,-2.5,-3,7.8,5.3,UAB -2.5,38
+401634020,10,East Texas A&M,McNeese,False,False,-12,,18.3,6.3,McNeese -12,28
+401636349,10,Alcorn State,Alabama State,True,False,-4,,16.6,12.6,Alabama State -4,4
+401654648,10,Stonehill,Saint Francis,False,False,-10,,3.9,-6.1,Stonehill +10,34
+401641020,10,Kennesaw State,Western Kentucky,False,False,-23.5,-24,26.9,3.4,Western Kentucky -23.5,17
+401634165,10,Youngstown State,Illinois State,False,False,-7.5,,10.4,2.9,Illinois State -7.5,7
+401654493,10,Yale,Columbia,False,False,-1.5,,2.4,0.9,Columbia -1.5,3
+401654459,10,Pennsylvania,Brown,False,False,1.5,,8.6,10.1,Brown +1.5,-10
+401654578,10,Wagner,Central Connecticut,False,False,-8,,6.0,-2.0,Wagner +8,10
+401632466,10,Chattanooga,Western Carolina,False,False,2,,4.7,6.7,Western Carolina +2,4
+401635627,10,Pittsburgh,SMU,False,True,-7,-7.5,11.7,4.7,SMU -7,23
+401634110,10,Montana,Cal Poly,False,False,20.5,,-19.9,0.6,Cal Poly +20.5,-35
+401634177,10,North Dakota,Indiana State,False,False,17,,-15.2,1.8,Indiana State +17,4
+401628670,10,William & Mary,North Carolina A&T,False,False,16.5,,-15.9,0.6,North Carolina A&T +16.5,-38
+401628534,10,Indiana,Michigan State,False,True,7.5,7,-11.8,-4.3,Indiana -7.5,-37
+401641026,10,Middle Tennessee,UTEP,False,False,-2,-3,10.5,8.5,UTEP -2,-7
+401643750,10,Wyoming,New Mexico,False,False,-7.5,-7,13.7,6.2,New Mexico -7.5,-4
+401628539,10,Ohio State,Penn State,False,True,3,4,-6.2,-3.2,Ohio State -3,-7
+401640985,10,New Mexico State,Florida International,True,False,-7,-7.5,6.0,-1.0,New Mexico State +7,21
+401645359,10,Memphis,UTSA,False,False,7,8,-4.3,2.7,UTSA +7,8
+401645360,10,Navy,Rice,False,False,12.5,13,-16.8,-4.3,Navy -12.5,14
+401643748,10,Colorado State,Nevada,False,False,2,1,6.3,8.3,Nevada +2,-17
+401638684,10,Dayton,Presbyterian,False,False,5.5,,-1.2,4.3,Presbyterian +5.5,21
+401636915,10,Arizona State,Oklahoma State,False,True,5,-1,-1.8,3.2,Oklahoma State +5,-21
+401628674,10,Monmouth,Rhode Island,False,False,2,,-0.5,1.5,Rhode Island +2,9
+401628410,10,Maine,Oklahoma,False,True,-37.5,-35,15.3,-22.2,Maine +37.5,45
+401654620,10,Lehigh,Georgetown,False,False,-0.5,,-7.2,-7.7,Lehigh +0.5,-37
+401675121,10,Stephen F. Austin,Nicholls,False,False,2,,-6.4,-4.4,Stephen F. Austin -2,-16
+401635516,10,Stanford,NC State,False,True,-9.5,-10,15.7,6.2,NC State -9.5,31
+401643823,10,Georgia Southern,South Alabama,False,False,-5.5,-6,6.7,1.2,South Alabama -5.5,-4
+401654466,10,Cornell,Princeton,False,False,-3.5,,-6.3,-9.8,Cornell +3.5,-14
+401628536,10,Oregon,Michigan,False,True,14.5,14.5,-16.4,-1.9,Oregon -14.5,-21
+401645357,10,South Florida,Florida Atlantic,False,False,1.5,2,11.3,12.8,Florida Atlantic +1.5,-23
+401638683,10,Davidson,San Diego,False,False,-3,,3.6,0.6,San Diego -3,27
+401628407,10,Vanderbilt,Auburn,False,True,-7.5,-6,2.9,-4.6,Vanderbilt +7.5,-10
+401634112,10,Weber State,Northern Arizona,False,False,-1.5,,5.2,3.7,Northern Arizona -1.5,21
+401634256,10,Southern,Alabama A&M,False,False,-2.5,,6.9,4.4,Alabama A&M -2.5,-5
+401644757,10,Buffalo,Akron,False,False,1,1,-2.0,-1.0,Buffalo -1,-11
+401643824,10,Coastal Carolina,Troy,False,False,4,4.5,-0.3,3.7,Troy +4,14
+401628533,10,Minnesota,Illinois,False,True,2.5,2,-3.2,-0.7,Minnesota -2.5,-8
+401628408,10,Florida,Georgia,True,True,-14.5,-16.5,5.6,-8.9,Florida +14.5,14
+401628411,10,Texas A&M,South Carolina,False,True,3,3.5,-0.4,2.6,South Carolina +3,24
+401654515,10,Norfolk State,Morgan State,False,False,-6.5,,7.3,0.8,Morgan State -6.5,1
+401654501,10,Delaware State,Howard,False,False,-11.5,,6.8,-4.7,Delaware State +11.5,38
+401635602,10,North Carolina,Florida State,False,True,2.5,2.5,-7.7,-5.2,North Carolina -2.5,-24
+401638348,10,Furman,VMI,False,False,10,,-3.9,6.1,VMI +10,4
+401634113,10,Northern Colorado,UC Davis,False,False,-23.5,,24.0,0.5,UC Davis -23.5,52
+401635604,10,Virginia Tech,Syracuse,False,True,3.5,4,-4.9,-1.4,Virginia Tech -3.5,7
+401654609,10,Merrimack,Robert Morris,False,False,1.5,,-0.5,1.0,Robert Morris +1.5,6
+401628535,10,Wisconsin,Iowa,False,True,-2.5,-3.5,10.6,8.1,Iowa -2.5,32
+401628537,10,UCLA,Nebraska,False,True,-7.5,-7.5,9.5,2.0,Nebraska -7.5,-7
+401636914,10,Texas Tech,Iowa State,False,True,-13.5,-14,14.7,1.2,Iowa State -13.5,-1
+401636913,10,Kansas State,Houston,False,True,12.5,13,-19.7,-7.2,Kansas State -12.5,5
+401632125,10,Central Arkansas,Utah Tech,False,False,24.5,,-22.1,2.4,Utah Tech +24.5,13
+401654571,10,Prairie View A&M,Mississippi Valley State,False,False,14,,-8.1,5.9,Mississippi Valley State +14,-1
+401641012,10,Louisiana Tech,Sam Houston,False,False,-10.5,-10.5,15.8,5.3,Sam Houston -10.5,6
+401638686,10,Stetson,Butler,False,False,-26.5,,27.0,0.5,Butler -26.5,33
+401634025,10,SE Louisiana,Lamar,False,False,2,,7.6,9.6,Lamar +2,-3
+401628538,10,Northwestern,Purdue,False,True,-3,1.5,-10.3,-13.3,Northwestern +3,-6
+401636912,10,TCU,Baylor,False,True,-2.5,-3,-0.2,-2.7,TCU +2.5,3
+401634195,10,Murray State,South Dakota State,False,False,-42,,29.7,-12.3,Murray State +42,46
+401634035,10,Houston Christian,Incarnate Word,False,False,-23.5,,23.7,0.2,Incarnate Word -23.5,25
+401643822,10,UL Monroe,Marshall,False,False,-10.5,-10.5,3.9,-6.6,UL Monroe +10.5,5
+401654592,10,Mercyhurst,Duquesne,False,False,-26.5,,25.8,-0.7,Mercyhurst +26.5,7
+401636377,10,Texas Southern,Florida A&M,False,False,-14.5,,3.9,-10.6,Texas Southern +14.5,24
+401643821,10,Old Dominion,App State,False,False,2.5,2,-12.3,-9.8,Old Dominion -2.5,8
+401634114,10,Portland State,Sacramento State,False,False,-12.5,,12.3,-0.2,Portland State +12.5,-20
+401654541,10,North Carolina Central,South Carolina State,False,False,3.5,,-5.1,-1.6,North Carolina Central -3.5,3
+401654629,10,Lafayette,Bucknell,False,False,6,,-6.7,-0.7,Lafayette -6,7
+401645356,10,Tulane,Charlotte,False,False,14.5,16,-15.0,-0.5,Tulane -14.5,-31
+401635601,10,Duke,Miami,False,True,-21,-20,18.5,-2.5,Duke +21,22
+401628406,10,Ole Miss,Arkansas,False,True,8,6.5,-8.7,-0.7,Ole Miss -8,-32
+401632124,10,Eastern Kentucky,Tarleton State,False,False,-13,,5.3,-7.7,Eastern Kentucky +13,-4
+401628540,10,USC,Washington,False,True,2,2.5,1.2,3.2,Washington +2,5
+401628675,10,New Hampshire,UAlbany,False,False,-0.5,,-2.7,-3.2,New Hampshire +0.5,-17
+401628671,10,Villanova,Hampton,False,False,8.5,,5.2,13.7,Hampton +8.5,-6
+401643820,10,Louisiana,Texas State,False,False,-4,-3,3.7,-0.3,Louisiana +4,-6
+401640994,10,Jacksonville State,Liberty,False,False,-2.5,-1,3.8,1.3,Liberty -2.5,-10
+401629036,10,Georgia State,UConn,False,False,-7,-7,16.2,9.2,UConn -7,7
+401656602,10,Colgate,Fordham,False,False,-1.5,,3.7,2.2,Fordham -1.5,6
+401636916,10,Arizona,UCF,False,True,-6.5,-6,8.0,1.5,UCF -6.5,44
+401636350,11,Alabama State,Grambling,False,False,3.5,,-8.7,-5.2,Alabama State -3.5,1
+401634150,11,Mercer,VMI,False,False,21,,-29.2,-8.2,Mercer -21,-34
+401634244,11,Youngstown State,Southern Illinois,False,False,-0.5,,4.1,3.6,Southern Illinois -0.5,4
+401643751,11,Fresno State,Air Force,False,False,9.5,10.5,-16.5,-7.0,Fresno State -9.5,8
+401634187,11,Missouri State,Murray State,False,False,24,,-20.4,3.6,Murray State +24,-28
+401643752,11,Nevada,Boise State,False,False,-23.5,-24.5,30.4,6.9,Boise State -23.5,7
+401629045,11,Army,North Texas,False,False,6.5,5,-10.4,-3.9,Army -6.5,-11
+401628541,11,Michigan,Indiana,False,True,-14.5,-14,25.2,10.7,Indiana -14.5,5
+401634257,11,Alabama A&M,Arkansas-Pine Bluff,False,False,8,,-8.3,-0.3,Alabama A&M -8,-28
+401655656,11,Tennessee Tech,Samford,False,False,-2.5,,11.0,8.5,Samford -2.5,-20
+401628680,11,Rhode Island,Delaware,False,False,-6,,10.1,4.1,Delaware -6,3
+401643826,11,Georgia State,James Madison,False,False,-14.5,-16.5,19.5,5.0,James Madison -14.5,31
+401644760,11,Bowling Green,Central Michigan,False,False,15.5,12.5,-9.7,5.8,Central Michigan +15.5,-10
+401636918,11,West Virginia,Cincinnati,False,True,-5.5,-4,12.1,6.6,Cincinnati -5.5,-7
+401634027,11,Nicholls,Houston Christian,False,False,11.5,,-10.0,1.5,Houston Christian +11.5,3
+401654508,11,Pennsylvania,Cornell,False,False,2.5,,14.1,16.6,Cornell +2.5,-18
+401643754,11,New Mexico,San Diego State,False,False,-1.5,-3,6.1,4.6,San Diego State -1.5,-5
+401645361,11,Florida Atlantic,East Carolina,False,False,-7.5,-7.5,-2.6,-10.1,Florida Atlantic +7.5,35
+401645363,11,Navy,South Florida,False,False,4.5,3.5,-3.2,1.3,South Florida +4.5,-21
+401641004,11,Jacksonville State,Louisiana Tech,False,False,10,10,-13.4,-3.4,Jacksonville State -10,-7
+401654494,11,Columbia,Harvard,False,False,-7,,4.2,-2.8,Columbia +7,20
+401643827,11,Arkansas State,Louisiana,False,False,-14,-14,15.9,1.9,Louisiana -14,36
+401645362,11,Rice,Memphis,False,False,-7,-10.5,12.0,5.0,Memphis -7,7
+401654652,11,Fordham,Bucknell,False,False,-3,,4.7,1.7,Bucknell -3,1
+401634116,11,Eastern Washington,Northern Colorado,False,False,13.5,,-11.1,2.4,Northern Colorado +13.5,-28
+401628544,11,Minnesota,Rutgers,False,True,6.5,6.25,-10.0,-3.5,Minnesota -6.5,7
+401628677,11,UAlbany,Stony Brook,False,False,-2.5,,10.0,7.5,Stony Brook -2.5,18
+401641021,11,Kennesaw State,UTEP,False,False,-4.5,-3.5,6.2,1.7,UTEP -4.5,8
+401635609,11,Miami,Georgia Tech,False,True,9.5,11,-6.4,3.1,Georgia Tech +9.5,5
+401638689,11,Drake,St. Thomas (MN),False,False,4.5,,-6.6,-2.1,Drake -4.5,-3
+401636922,11,BYU,Utah,False,True,3,4.5,-6.7,-3.7,BYU -3,-1
+401628681,11,Elon,William & Mary,False,False,-7.5,,12.9,5.4,William & Mary -7.5,-4
+401636920,11,Oklahoma State,TCU,False,True,-10.5,-11.5,10.9,0.4,TCU -10.5,25
+401634004,11,Eastern Illinois,Gardner-Webb,False,False,-5.5,,12.4,6.9,Gardner-Webb -5.5,3
+401640995,11,Liberty,Middle Tennessee,False,False,12.5,10.5,-13.6,-1.1,Liberty -12.5,-20
+401654630,11,Lafayette,Colgate,False,False,3.5,,-12.1,-8.6,Lafayette -3.5,-1
+401675122,11,Stephen F. Austin,East Texas A&M,False,False,16.5,,-24.7,-8.2,Stephen F. Austin -16.5,5
+401636921,11,Colorado,Texas Tech,False,True,4.5,3,-1.3,3.2,Texas Tech +4.5,-14
+401635608,11,Duke,NC State,False,True,-3,-3,-2.3,-5.3,Duke +3,-10
+401629037,11,UConn,UAB,False,False,7.5,6,-8.0,-0.5,UConn -7.5,-8
+401632135,11,Southern Utah,North Alabama,False,False,-7.5,,-5.7,-13.2,Southern Utah +7.5,-12
+401634005,11,Southeast Missouri State,Lindenwood,False,False,17,,-11.7,5.3,Lindenwood +17,12
+401636369,11,Bethune-Cookman,Southern,False,False,-7,,16.8,9.8,Southern -7,2
+401638692,11,San Diego,Dayton,False,False,3.5,,-2.7,0.8,Dayton +3.5,-6
+401654621,11,Lehigh,Holy Cross,False,False,-6.5,,-4.3,-10.8,Lehigh +6.5,-3
+401643825,11,App State,Coastal Carolina,False,False,2.5,-1.5,3.9,6.4,Coastal Carolina +2.5,14
+401628414,11,Georgia,Ole Miss,False,True,2,2.5,11.2,13.2,Ole Miss +2,18
+401628417,11,Florida,Texas,False,True,-23,-21.5,20.1,-2.9,Florida +23,32
+401635606,11,Syracuse,Boston College,False,True,-3,-1.5,-2.6,-5.6,Syracuse +3,6
+401641036,11,Western Kentucky,New Mexico State,False,False,18,18,-24.0,-6.0,Western Kentucky -18,-13
+401636391,11,Mississippi Valley State,Jackson State,False,False,-31.5,,32.7,1.2,Jackson State -31.5,37
+401638688,11,Butler,Valparaiso,False,False,14.5,,-22.2,-7.7,Butler -14.5,-7
+401644688,11,Miami (OH),Ball State,False,False,13,12,-11.4,1.6,Ball State +13,-6
+401632467,11,Chattanooga,The Citadel,False,False,14,,-12.2,1.8,The Citadel +14,-24
+401634156,11,Wofford,Furman,False,False,-4.5,,-9.7,-14.2,Wofford +4.5,-6
+401634140,11,Western Carolina,East Tennessee State,False,False,-6.5,,3.0,-3.5,Western Carolina +6.5,3
+401636919,11,Iowa State,Kansas,True,True,2.5,3,-5.8,-3.3,Iowa State -2.5,9
+401628984,11,Florida State,Notre Dame,False,True,-25.5,-26,36.9,11.4,Notre Dame -25.5,49
+401628678,11,Bryant,Maine,False,False,-13.5,,10.5,-3.0,Bryant +13.5,12
+401628684,11,North Carolina A&T,Villanova,False,False,-25.5,,14.5,-11.0,North Carolina A&T +25.5,28
+401634204,11,South Dakota State,North Dakota,False,False,17,,-10.3,6.7,North Dakota +17,-31
+401628682,11,Hampton,Towson,False,False,-5.5,,2.2,-3.3,Hampton +5.5,17
+401645364,11,Temple,Tulane,False,False,-25.5,-26.5,30.8,5.3,Tulane -25.5,46
+401635607,11,Clemson,Virginia Tech,False,True,5.5,6.5,-2.9,2.6,Virginia Tech +5.5,-10
+401634006,11,Tennessee State,Western Illinois,False,False,4,,-9.0,-5.0,Tennessee State -4,-25
+401634118,11,Idaho State,Weber State,False,False,-6.5,,2.7,-3.8,Idaho State +6.5,-8
+401654542,11,South Carolina State,Howard,False,False,4.5,,-8.6,-4.1,South Carolina State -4.5,-24
+401654593,11,Robert Morris,Duquesne,False,False,-4.5,,10.5,6.0,Duquesne -4.5,25
+401634120,11,Sacramento State,Montana State,False,False,-17.5,,23.7,6.2,Montana State -17.5,42
+401632130,11,Abilene Christian,Austin Peay,False,False,4,,-15.2,-11.2,Abilene Christian -4,-1
+401654460,11,Brown,Yale,False,False,-10,,15.9,5.9,Yale -10,22
+401628545,11,Purdue,Ohio State,False,True,-37.5,-38.5,36.8,-0.7,Purdue +37.5,45
+401628415,11,Oklahoma,Missouri,False,True,3.5,-2.5,1.8,5.3,Missouri +3.5,7
+401643828,11,Texas State,UL Monroe,False,False,9.5,7,0.2,9.7,UL Monroe +9.5,-21
+401628683,11,Monmouth,New Hampshire,False,False,1.5,,-3.6,-2.1,Monmouth -1.5,13
+401654579,11,Central Connecticut,Stonehill,False,False,15,,-14.5,0.5,Stonehill +15,-4
+401634117,11,Idaho,Portland State,False,False,11,,-8.8,2.2,Portland State +11,-9
+401632140,11,Central Arkansas,Eastern Kentucky,False,False,4,,-0.3,3.7,Eastern Kentucky +4,7
+401644762,11,Northern Illinois,Western Michigan,False,False,2,1.5,-7.1,-5.1,Northern Illinois -2,-14
+401654502,11,Morgan State,Delaware State,False,False,14.5,,-11.5,3.0,Delaware State +14.5,-8
+401644761,11,Ohio,Kent State,False,False,20.5,18.5,-17.1,3.4,Kent State +20.5,-41
+401636917,11,UCF,Arizona State,False,True,-2.5,-4,2.6,0.1,Arizona State -2.5,4
+401634003,11,UT Martin,Charleston Southern,False,False,17.5,,-13.1,4.4,Charleston Southern +17.5,-26
+401628418,11,South Carolina,Vanderbilt,False,True,6,3.5,-5.6,0.4,Vanderbilt +6,-21
+401628679,11,Richmond,Campbell,False,False,9.5,,-10.6,-1.1,Richmond -9.5,-3
+401628543,11,Maryland,Oregon,False,True,-24,-25,16.8,-7.2,Maryland +24,21
+401636378,11,Florida A&M,Prairie View A&M,False,False,17,,-13.6,3.4,Prairie View A&M +17,19
+401638691,11,Morehead State,Davidson,False,False,-7,,-2.9,-9.9,Morehead State +7,17
+401643756,11,Utah State,Washington State,False,False,-20.5,-20.5,19.9,-0.6,Utah State +20.5,21
+401654568,11,Texas Southern,Alcorn State,False,False,-5,,-4.5,-9.5,Texas Southern +5,21
+401634178,11,Indiana State,South Dakota,False,False,-31,,27.0,-4.0,Indiana State +31,49
+401634773,11,California,Wake Forest,False,True,7,7,-8.6,-1.6,California -7,-10
+401643829,11,Marshall,Southern Miss,False,False,13.5,13.5,-14.9,-1.4,Marshall -13.5,-34
+401628546,11,Washington,Penn State,False,True,-13.5,-13.5,4.0,-9.5,Washington +13.5,29
+401634115,11,Northern Arizona,Cal Poly,False,False,13.5,,-8.6,4.9,Cal Poly +13.5,-17
+401643755,11,San José State,Oregon State,False,False,-3,-3.5,-3.9,-6.9,San José State +3,-11
+401638690,11,Marist,Stetson,False,False,-0.5,,-0.3,-0.8,Marist +0.5,-9
+401628416,11,Mississippi State,Tennessee,False,True,-26.5,-23.5,29.3,2.8,Tennessee -26.5,19
+401635610,11,Virginia,Pittsburgh,False,True,-7.5,-7,11.3,3.8,Pittsburgh -7.5,-5
+401654467,11,Dartmouth,Princeton,False,False,9.5,,-10.1,-0.6,Dartmouth -9.5,-9
+401632077,11,Tarleton State,West Georgia,False,False,8.5,,3.9,12.4,West Georgia +8.5,-17
+401643753,11,UNLV,Hawai'i,False,False,12.5,13.5,-12.4,0.1,Hawai'i +12.5,-2
+401628413,11,Alabama,LSU,False,True,2.5,2.5,-0.8,1.7,LSU +2.5,-29
+401634119,11,UC Davis,Montana,False,False,-5.5,,12.3,6.8,Montana -5.5,-16
+401634028,11,Lamar,Incarnate Word,False,False,-15.5,,15.5,-0.0,Lamar +15.5,21
+401628542,11,Iowa,UCLA,False,True,6.5,6,-6.2,0.3,UCLA +6.5,3
+401634023,11,Northwestern State,SE Louisiana,False,False,-28,,29.5,1.5,SE Louisiana -28,41
+401634166,11,Illinois State,Northern Iowa,False,False,2.5,,-3.1,-0.6,Illinois State -2.5,-22
+401654598,11,Long Island University,Sacred Heart,False,False,3,,1.7,4.7,Sacred Heart +3,-21
+401634122,12,Idaho State,Eastern Washington,False,False,-5,,5.8,0.8,Eastern Washington -5,35
+401644604,12,Harvard,Pennsylvania,False,False,8.5,,-9.8,-1.3,Harvard -8.5,-3
+401634249,12,Northern Iowa,Youngstown State,False,False,-4.5,,3.1,-1.4,Northern Iowa +4.5,1
+401628690,12,Bryant,William & Mary,False,False,-21,,22.3,1.3,William & Mary -21,10
+401643834,12,South Alabama,Louisiana,False,False,-6.5,-9,3.9,-2.6,South Alabama +6.5,-2
+401645370,12,Tulane,Navy,False,False,7.5,6.5,-6.1,1.4,Navy +7.5,-35
+401628425,12,Mercer,Alabama,False,True,-42.25,-43.5,20.5,-21.8,Mercer +42.25,45
+401634188,12,Missouri State,North Dakota State,False,False,-13.5,,11.6,-1.9,Missouri State +13.5,38
 401654599,12,Saint Francis,Long Island University,True,False,-3.5,,5.8,2.3,Long Island University -3.5,-7
-401638695,12,Stetson,San Diego,False,False,-27.5,,32.1,4.6,San Diego -27.5,39
-401654631,12,Stonehill,Lafayette,False,False,-22,,16.8,-5.2,Stonehill +22,32
-401640986,12,Florida International,Jacksonville State,False,False,-12.5,-14,13.8,1.3,Jacksonville State -12.5,3
-401643833,12,James Madison,Old Dominion,False,False,1.5,4,-3.5,-2.0,James Madison -1.5,-3
-401634010,12,Tennessee Tech,UT Martin,False,False,-13,,15.9,2.9,UT Martin -13,-1
-401634124,12,Portland State,Montana,False,False,-15.5,,27.2,11.7,Montana -15.5,11
-401632468,12,Samford,Chattanooga,False,False,-16.5,,10.5,-6.0,Samford +16.5,-23
-401634037,12,Nicholls,Lamar,False,False,1.5,,2.1,3.6,Lamar +1.5,17
-401638693,12,Morehead State,Drake,False,False,-14.5,,6.8,-7.7,Morehead State +14.5,-9
-401635582,12,Clemson,Pittsburgh,False,True,12,10,-3.4,8.6,Pittsburgh +12,-4
-401634123,12,Weber State,Idaho,False,False,-10.5,,14.6,4.1,Idaho -10.5,7
-401636925,12,Utah,Colorado,False,True,-13.5,-10,15.9,2.4,Colorado -13.5,25
-401628686,12,Villanova,Monmouth,False,False,3,,6.3,9.3,Monmouth +3,7
-401641013,12,Louisiana Tech,Western Kentucky,False,False,-11.5,-13,16.1,4.6,Western Kentucky -11.5,-5
-401638694,12,Presbyterian,Marist,False,False,10,,-8.7,1.3,Marist +10,-19
-401643831,12,Arkansas State,Georgia State,False,False,-2.5,-1.5,6.2,3.7,Georgia State -2.5,-7
-401634021,12,Houston Christian,East Texas A&M,False,False,-3,,8.5,5.5,East Texas A&M -3,1
-401645365,12,East Carolina,Tulsa,False,False,16.5,14,-6.8,9.7,Tulsa +16.5,-7
-401634258,12,Grambling,Alabama A&M,False,False,-6,,8.4,2.4,Alabama A&M -6,5
-401634167,12,Illinois State,Indiana State,False,False,14.5,,-9.5,5.0,Indiana State +14.5,-12
-401654536,12,South Carolina State,Morgan State,False,False,8,,-2.9,5.1,Morgan State +8,-47
-401632139,12,Abilene Christian,Tarleton State,False,False,-3,,2.7,-0.3,Abilene Christian +3,-4
-401643761,12,Washington State,New Mexico,False,False,10.5,13.5,-10.4,0.1,New Mexico +10.5,3
-401628421,12,Tennessee,Georgia,False,True,-8.5,-9.5,2.2,-6.3,Tennessee +8.5,14
-401654645,12,Georgetown,Fordham,False,False,-3.5,,1.3,-2.2,Georgetown +3.5,28
-401628419,12,Texas,Arkansas,False,True,13,16.5,-13.4,-0.4,Texas -13,-10
-401634007,12,Charleston Southern,Eastern Illinois,False,False,-5,,6.8,1.8,Eastern Illinois -5,3
-401634036,12,McNeese,Northwestern State,False,False,25.5,,-30.2,-4.7,McNeese -25.5,-32
-401644764,12,Western Michigan,Bowling Green,False,False,-9.5,-9,11.3,1.8,Bowling Green -9.5,18
-401638697,12,Valparaiso,Dayton,False,False,-13,,14.4,1.4,Dayton -13,12
-401654556,12,Howard,North Carolina Central,False,False,-15.5,,20.7,5.2,North Carolina Central -15.5,23
-401628548,12,Rutgers,Maryland,False,True,-4.5,-3.75,11.4,6.9,Maryland -4.5,-14
-401636361,12,Arkansas-Pine Bluff,Southern,False,False,-14,,15.1,1.1,Southern -14,22
+401638695,12,Stetson,San Diego,False,False,-27.5,,30.7,3.2,San Diego -27.5,39
+401643833,12,James Madison,Old Dominion,False,False,1.5,4,-4.9,-3.4,James Madison -1.5,-3
+401640986,12,Florida International,Jacksonville State,False,False,-12.5,-14,12.9,0.4,Jacksonville State -12.5,3
+401654631,12,Stonehill,Lafayette,False,False,-22,,15.2,-6.8,Stonehill +22,32
+401634010,12,Tennessee Tech,UT Martin,False,False,-13,,14.4,1.4,UT Martin -13,-1
+401634124,12,Portland State,Montana,False,False,-15.5,,26.7,11.2,Montana -15.5,11
+401634037,12,Nicholls,Lamar,False,False,1.5,,0.6,2.1,Lamar +1.5,17
+401636925,12,Utah,Colorado,False,True,-13.5,-10,14.8,1.3,Colorado -13.5,25
+401638693,12,Morehead State,Drake,False,False,-14.5,,5.4,-9.1,Morehead State +14.5,-9
+401632468,12,Samford,Chattanooga,False,False,-16.5,,8.7,-7.8,Samford +16.5,-23
+401628686,12,Villanova,Monmouth,False,False,3,,4.8,7.8,Monmouth +3,7
+401638694,12,Presbyterian,Marist,False,False,10,,-10.5,-0.5,Presbyterian -10,-19
+401634021,12,Houston Christian,East Texas A&M,False,False,-3,,6.2,3.2,East Texas A&M -3,1
+401634123,12,Weber State,Idaho,False,False,-10.5,,13.2,2.7,Idaho -10.5,7
+401635582,12,Clemson,Pittsburgh,False,True,12,10,-6.2,5.8,Pittsburgh +12,-4
+401641013,12,Louisiana Tech,Western Kentucky,False,False,-11.5,-13,14.8,3.3,Western Kentucky -11.5,-5
+401643831,12,Arkansas State,Georgia State,False,False,-2.5,-1.5,4.5,2.0,Georgia State -2.5,-7
+401634258,12,Grambling,Alabama A&M,False,False,-6,,7.5,1.5,Alabama A&M -6,5
+401643761,12,Washington State,New Mexico,False,False,10.5,13.5,-12.7,-2.2,Washington State -10.5,3
+401632139,12,Abilene Christian,Tarleton State,False,False,-3,,0.3,-2.7,Abilene Christian +3,-4
+401645365,12,East Carolina,Tulsa,False,False,16.5,14,-9.2,7.3,Tulsa +16.5,-7
+401654645,12,Georgetown,Fordham,False,False,-3.5,,-1.2,-4.7,Georgetown +3.5,28
+401634167,12,Illinois State,Indiana State,False,False,14.5,,-10.7,3.8,Indiana State +14.5,-12
+401654536,12,South Carolina State,Morgan State,False,False,8,,-5.1,2.9,Morgan State +8,-47
+401628421,12,Tennessee,Georgia,False,True,-8.5,-9.5,0.4,-8.1,Tennessee +8.5,14
+401628419,12,Texas,Arkansas,False,True,13,16.5,-15.2,-2.2,Texas -13,-10
+401634007,12,Charleston Southern,Eastern Illinois,False,False,-5,,5.3,0.3,Eastern Illinois -5,3
+401644764,12,Western Michigan,Bowling Green,False,False,-9.5,-9,10.1,0.6,Bowling Green -9.5,18
+401634036,12,McNeese,Northwestern State,False,False,25.5,,-31.7,-6.2,McNeese -25.5,-32
+401638697,12,Valparaiso,Dayton,False,False,-13,,13.2,0.2,Dayton -13,12
+401634141,12,Furman,East Tennessee State,False,False,-15,,27.9,12.9,East Tennessee State -15,-3
+401636361,12,Arkansas-Pine Bluff,Southern,False,False,-14,,12.5,-1.5,Arkansas-Pine Bluff +14,22
+401654556,12,Howard,North Carolina Central,False,False,-15.5,,19.3,3.8,North Carolina Central -15.5,23
 401628985,12,Virginia,Notre Dame,False,True,-21.5,-23,30.9,9.4,Notre Dame -21.5,21
-401645366,12,North Texas,UTSA,False,False,-1.5,2,1.8,0.3,UTSA -1.5,21
-401634141,12,Furman,East Tennessee State,False,False,-15,,30.0,15.0,East Tennessee State -15,-3
-401643835,12,Southern Miss,Texas State,False,False,-27.5,-26.5,25.2,-2.3,Southern Miss +27.5,55
-401628422,12,Murray State,Kentucky,False,True,-41.5,-38.5,26.3,-15.2,Murray State +41.5,42
-401628423,12,Missouri,South Carolina,False,True,-10.5,-13,11.8,1.3,South Carolina -10.5,4
-401628424,12,New Mexico State,Texas A&M,False,True,-38.5,-40.5,36.5,-2.0,New Mexico State +38.5,35
-401654476,12,Dartmouth,Cornell,False,False,9.5,,1.1,10.6,Cornell +9.5,17
-401635580,12,Boston College,SMU,False,True,-19,-15.5,23.3,4.3,SMU -19,10
-401654503,12,Delaware State,Norfolk State,False,False,-13.5,,8.7,-4.8,Delaware State +13.5,19
-401644763,12,Ball State,Buffalo,False,False,-3.5,-6,9.0,5.5,Buffalo -3.5,3
-401628692,12,Stony Brook,New Hampshire,False,False,-5.5,,5.7,0.2,New Hampshire -5.5,1
-401644767,12,Eastern Michigan,Ohio,False,False,-10.5,-8.5,5.8,-4.7,Eastern Michigan +10.5,25
-401654468,12,Princeton,Yale,False,False,-12.5,,22.3,9.8,Yale -12.5,14
-401628685,12,Richmond,Hampton,False,False,7,,-1.9,5.1,Hampton +7,-3
-401634126,12,Northern Arizona,Northern Colorado,False,False,19.5,,-13.8,5.7,Northern Colorado +19.5,-41
-401654622,12,Colgate,Lehigh,False,False,-10.5,,22.1,11.6,Lehigh -10.5,28
-401628689,12,UAlbany,Rhode Island,False,False,-13,,15.5,2.5,Rhode Island -13,3
-401644689,12,Kent State,Miami (OH),False,False,-30.5,-30.5,31.9,1.4,Miami (OH) -30.5,27
-401636929,12,Baylor,West Virginia,False,True,2,1.5,-1.4,0.6,West Virginia +2,-14
-401636927,12,Arizona State,Kansas State,False,True,-7.5,-8,11.8,4.3,Kansas State -7.5,-10
-401635583,12,Wake Forest,North Carolina,False,True,-10.5,-11,18.0,7.5,North Carolina -10.5,7
-401635517,12,Louisville,Stanford,False,True,21,20,-23.3,-2.3,Louisville -21,3
-401628551,12,Oregon,Wisconsin,False,True,13.5,14.5,-17.0,-3.5,Oregon -13.5,-3
-401628691,12,Campbell,Delaware,False,False,-16.5,,19.4,2.9,Delaware -16.5,19
-401634205,12,South Dakota,North Dakota,False,False,14,,-11.6,2.4,North Dakota +14,-6
-401629046,12,Liberty,Massachusetts,False,False,16.5,14,-0.3,16.2,Massachusetts +16.5,-1
-401634121,12,Sacramento State,Cal Poly,False,False,7.5,,4.5,12.0,Cal Poly +7.5,3
-401632129,12,West Georgia,Utah Tech,False,False,4.5,,-17.2,-12.7,West Georgia -4.5,-3
-401644766,12,Akron,Northern Illinois,False,False,-14,-16,21.6,7.6,Northern Illinois -14,13
-401628426,12,UL Monroe,Auburn,False,True,-24.5,-24,11.0,-13.5,UL Monroe +24.5,34
-401628547,12,Michigan State,Illinois,False,True,-2,-3.5,6.4,4.4,Illinois -2,22
-401643758,12,Boise State,San José State,False,False,14.5,13.5,-14.7,-0.2,Boise State -14.5,-21
-401634008,12,Tennessee State,Gardner-Webb,False,False,-2,,2.4,0.4,Gardner-Webb -2,-3
-401645368,12,South Florida,Charlotte,False,False,-1.5,3,0.4,-1.1,South Florida +1.5,-35
-401645367,12,UAB,Memphis,False,False,-16.5,-15,14.0,-2.5,UAB +16.5,35
-401636351,12,Jackson State,Alabama State,False,False,7.5,,5.6,13.1,Alabama State +7.5,-6
-401636923,12,Houston,Arizona,False,True,-1,-2,7.5,6.5,Arizona -1,24
-401643830,12,Troy,Georgia Southern,False,False,-7,-8,9.2,2.2,Georgia Southern -7,-8
-401643762,12,San Diego State,UNLV,False,False,-21.5,-20.5,25.1,3.6,UNLV -21.5,21
-401634009,12,Western Illinois,Southeast Missouri State,False,False,-24,,20.0,-4.0,Western Illinois +24,9
-401644765,12,Central Michigan,Toledo,False,False,-15,-15,14.2,-0.8,Central Michigan +15,27
-401628550,12,Ohio State,Northwestern,True,True,28.5,30.5,-23.9,4.6,Northwestern +28.5,-24
-401632119,12,Eastern Kentucky,Austin Peay,False,False,-1,,-4.8,-5.8,Eastern Kentucky +1,-3
-401636926,12,Cincinnati,Iowa State,False,True,-7,-9,5.4,-1.6,Cincinnati +7,17
-401638349,12,VMI,Western Carolina,False,False,-24.5,,37.9,13.4,Western Carolina -24.5,30
-401638696,12,St. Thomas (MN),Butler,False,False,-6.5,,10.2,3.7,Butler -6.5,16
-401643757,12,Oregon State,Air Force,False,False,2.5,4.5,0.3,2.8,Air Force +2.5,28
-401643760,12,Hawai'i,Utah State,False,False,2.5,2.5,-3.2,-0.7,Hawai'i -2.5,45
-401654572,12,Alcorn State,Prairie View A&M,False,False,2.5,,-1.4,1.1,Prairie View A&M +2.5,-13
-401628549,12,Nebraska,USC,False,True,-6.5,-9,11.8,5.3,USC -6.5,8
-401628553,12,UCLA,Washington,False,True,-5,-3.5,11.5,6.5,Washington -5,12
-401641022,12,Sam Houston,Kennesaw State,False,False,21,13.5,-16.0,5.0,Kennesaw State +21,-6
-401654614,12,Sacred Heart,Merrimack,False,False,-15.5,,12.5,-3.0,Sacred Heart +15.5,-11
-401654639,12,Bucknell,Holy Cross,False,False,-14,,14.6,0.6,Holy Cross -14,2
-401643759,12,Wyoming,Colorado State,False,False,-8.5,-10,13.6,5.1,Colorado State -8.5,14
-401654580,12,Robert Morris,Central Connecticut,False,False,-1,,6.3,5.3,Central Connecticut -1,2
-401628688,12,North Carolina A&T,Towson,False,False,-22,,22.7,0.7,Towson -22,18
-401675123,12,Incarnate Word,Stephen F. Austin,False,False,8,,6.0,14.0,Stephen F. Austin +8,-7
-401635581,12,Syracuse,California,False,True,-10.5,-7,6.2,-4.3,Syracuse +10.5,-8
-401634157,12,The Citadel,Wofford,False,False,-6.5,,13.9,7.4,Wofford -6.5,-13
-401628552,12,Penn State,Purdue,False,True,30,28,-28.1,1.9,Purdue +30,-39
-401636379,12,Mississippi Valley State,Florida A&M,False,False,-31,,21.0,-10.0,Mississippi Valley State +31,-3
-401634239,12,Southern Illinois,South Dakota State,False,False,-30.5,,26.6,-3.9,Southern Illinois +30.5,31
-401636924,12,Kansas,BYU,False,True,-2.5,-3.5,6.8,4.3,BYU -2.5,-4
-401654495,12,Columbia,Brown,False,False,5,,-2.9,2.1,Brown +5,-9
-401654594,12,Wagner,Duquesne,False,False,-14.5,,18.2,3.7,Duquesne -14.5,21
-401645369,12,Florida Atlantic,Temple,False,False,-2,-1.5,-3.8,-5.8,Florida Atlantic +2,3
-401628420,12,LSU,Florida,False,True,3,5,-5.0,-2.0,LSU -3,11
-401643832,12,Coastal Carolina,Marshall,False,False,-7.5,-8.5,9.4,1.9,Marshall -7.5,12
-401628687,12,Maine,Elon,False,False,-4,,4.2,0.2,Elon -4,6
-401634125,12,Montana State,UC Davis,False,False,7,,-1.9,5.1,UC Davis +7,-2
-401636370,12,Bethune-Cookman,Texas Southern,False,False,-2.5,,8.8,6.3,Texas Southern -2.5,3
-401644605,13,Yale,Harvard,False,False,-3.5,,6.1,2.6,Harvard -3.5,-5
-401628697,13,Monmouth,Stony Brook,False,False,3,,-1.2,1.8,Stony Brook +3,-8
-401654635,13,Saint Francis,Mercyhurst,False,False,10,,6.2,16.2,Mercyhurst +10,1
-401634039,13,SE Louisiana,Nicholls,False,False,4.5,,6.4,10.9,Nicholls +4.5,-3
-401678896,13,Abilene Christian,Stephen F. Austin,False,False,-1,,-0.3,-1.3,Abilene Christian +1,13
-401634012,13,Gardner-Webb,Western Illinois,False,False,7,,1.2,8.2,Western Illinois +7,17
-401654469,13,Pennsylvania,Princeton,False,False,4.5,,-2.0,2.5,Princeton +4.5,3
-401634151,13,Furman,Mercer,False,False,-14,,28.4,14.4,Mercer -14,26
-401635615,13,Virginia Tech,Duke,False,True,2.5,2.5,0.5,3.0,Duke +2.5,3
-401634128,13,Eastern Washington,Northern Arizona,False,False,-5.5,,9.4,3.9,Northern Arizona -5.5,12
-401628435,13,UTEP,Tennessee,False,True,-41.5,-41.5,36.1,-5.4,UTEP +41.5,56
-401638698,13,Butler,Presbyterian,False,False,9.5,,-3.8,5.7,Presbyterian +9.5,3
-401636352,13,Prairie View A&M,Alabama State,False,False,-9,,19.7,10.7,Alabama State -9,3
-401628427,13,Louisiana Tech,Arkansas,False,True,-23.5,-23,25.0,1.5,Arkansas -23.5,21
-401644770,13,Western Michigan,Central Michigan,False,False,6,6.5,-1.5,4.5,Central Michigan +6,2
-401628695,13,William & Mary,Richmond,False,False,-5.5,,8.3,2.8,Richmond -5.5,27
-401628434,13,Wofford,South Carolina,False,True,-42.5,-42.5,28.4,-14.1,Wofford +42.5,44
-401628554,13,Illinois,Rutgers,False,True,-2.25,-1.75,-0.0,-2.3,Illinois +2.25,-7
-401638700,13,Dayton,St. Thomas (MN),False,False,-2.5,,8.6,6.1,St. Thomas (MN) -2.5,23
-401654610,13,Stonehill,Robert Morris,False,False,-14,,15.8,1.8,Robert Morris -14,18
-401643840,13,Troy,Louisiana,False,False,-7.5,-11.5,9.5,2.0,Louisiana -7.5,21
-401634196,13,Murray State,Southern Illinois,False,False,-17,,16.1,-0.9,Murray State +17,62
-401634014,13,Southeast Missouri State,Tennessee State,False,False,6.5,,1.6,8.1,Tennessee State +6.5,7
-401635618,13,Wake Forest,Miami,False,True,-23.5,-24,29.9,6.4,Miami -23.5,28
-401638701,13,Drake,Stetson,False,False,19.5,,-21.7,-2.2,Drake -19.5,-39
-401634772,13,NC State,Georgia Tech,False,True,-7.5,-9,16.5,9.0,Georgia Tech -7.5,1
-401638702,13,San Diego,Morehead State,False,False,6.5,,2.4,8.9,Morehead State +6.5,-23
-401640987,13,Florida International,Kennesaw State,False,False,9,9,-6.2,2.8,Kennesaw State +9,1
-401634131,13,Northern Colorado,Portland State,False,False,-16.5,,9.4,-7.1,Northern Colorado +16.5,32
-401628431,13,Vanderbilt,LSU,False,True,-9.5,-9,13.3,3.8,LSU -9.5,7
-401634013,13,Lindenwood,UT Martin,False,False,-19.5,,16.3,-3.2,Lindenwood +19.5,7
-401643764,13,Boise State,Wyoming,False,False,22,22.5,-32.6,-10.6,Boise State -22,-4
-401634211,13,North Dakota State,South Dakota,False,False,3,,2.7,5.7,South Dakota +3,1
-401634179,13,Indiana State,Northern Iowa,False,False,-8.5,,9.9,1.4,Northern Iowa -8.5,7
-401636934,13,Texas Tech,Oklahoma State,False,True,5,3.5,-6.1,-1.1,Texas Tech -5,-8
-401634042,13,Lamar,McNeese,False,False,-3,,10.6,7.6,McNeese -3,-2
-401643836,13,James Madison,App State,False,False,7,7,-12.1,-5.1,James Madison -7,14
-401632143,13,Utah Tech,Southern Utah,False,False,-19,,20.0,1.0,Southern Utah -19,3
-401645374,13,Temple,UTSA,False,False,-16.5,-16.5,17.2,0.7,UTSA -16.5,24
-401643765,13,Colorado State,Fresno State,False,False,-3.5,-3,6.9,3.4,Fresno State -3.5,6
-401635613,13,Stanford,California,False,True,-15,-14,16.4,1.4,California -15,3
-401654537,13,Howard,Morgan State,False,False,-1.5,,8.4,6.9,Morgan State -1.5,14
-401628436,13,Kentucky,Texas,False,True,-18.5,-20.5,27.4,8.9,Texas -18.5,17
-401635518,13,UConn,Syracuse,False,True,-10,-11,8.9,-1.1,UConn +10,7
-401643841,13,South Alabama,Southern Miss,False,False,24,21.5,-22.6,1.4,Southern Miss +24,-21
-401634011,13,Eastern Illinois,Tennessee Tech,False,False,-13,,13.5,0.5,Tennessee Tech -13,17
-401645373,13,Rice,UAB,False,False,7,6.5,0.9,7.9,UAB +7,26
-401628433,13,Alabama,Oklahoma,False,True,14,14,-11.3,2.7,Oklahoma +14,21
-401635612,13,North Carolina,Boston College,False,True,2,2.5,0.1,2.1,Boston College +2,20
-401643767,13,UNLV,San José State,False,False,7.5,7.5,-2.4,5.1,San José State +7.5,-11
-401654623,13,Lafayette,Lehigh,False,False,-6,,10.5,4.5,Lehigh -6,24
-401628558,13,Purdue,Michigan State,False,True,-14,-13,19.8,5.8,Michigan State -14,7
-401628555,13,Indiana,Ohio State,False,True,-10.5,-11.5,9.3,-1.2,Indiana +10.5,23
-401628560,13,Wisconsin,Nebraska,False,True,-1.5,-2.5,5.0,3.5,Nebraska -1.5,19
-401628572,13,Washington State,Oregon State,False,False,11,12.5,-13.1,-2.1,Washington State -11,3
-401628557,13,Northwestern,Michigan,False,True,-10.5,-12.5,5.0,-5.5,Northwestern +10.5,44
-401636936,13,Iowa State,Utah,False,True,6.5,6.5,-5.5,1.0,Utah +6.5,-3
-401636931,13,Baylor,Houston,False,True,7,7.5,-8.7,-1.7,Baylor -7,-10
-401654653,13,Colgate,Bucknell,False,False,-5.5,,9.7,4.2,Bucknell -5.5,14
-401636932,13,Colorado,Kansas,True,True,1.5,2.5,-8.0,-6.5,Colorado -1.5,16
-401628556,13,Iowa,Maryland,False,True,4,6.5,-4.5,-0.5,Iowa -4,-16
-401654615,13,Merrimack,Fordham,False,False,-3,,-0.3,-3.3,Merrimack +3,-16
-401636935,13,Arizona,TCU,False,True,-10.5,-11,8.5,-2.0,Arizona +10.5,21
-401636371,13,Florida A&M,Bethune-Cookman,True,False,10.5,,-10.2,0.3,Bethune-Cookman +10.5,-3
-401636933,13,Cincinnati,Kansas State,False,True,-7.5,-8.5,7.0,-0.5,Cincinnati +7.5,26
-401643842,13,Georgia State,Texas State,False,False,-23,-20,18.1,-4.9,Georgia State +23,-8
-401635614,13,The Citadel,Clemson,False,True,-49.0,-49.5,35.6,-13.4,The Citadel +49,37
-401628696,13,Elon,North Carolina A&T,False,False,17,,-9.5,7.5,North Carolina A&T +17,-10
-401640996,13,Western Kentucky,Liberty,False,False,-1,1,3.6,2.6,Liberty -1,17
-401635616,13,Charleston Southern,Florida State,False,True,-33.25,-33,14.4,-18.8,Charleston Southern +33.25,34
-401628699,13,Rhode Island,Bryant,False,False,12,,-6.7,5.3,Bryant +12,-14
-401634129,13,Idaho,Idaho State,False,False,10.5,,-4.1,6.4,Idaho State +10.5,-23
-401643839,13,UL Monroe,Arkansas State,False,False,-3,-3,0.6,-2.4,UL Monroe +3,7
-401635619,13,SMU,Virginia,False,True,10.5,9.5,-17.2,-6.7,SMU -10.5,-26
-401645375,13,Tulsa,South Florida,False,False,-17,-16,24.3,7.3,South Florida -17,33
-401643766,13,San Diego State,Utah State,False,False,-5,-4,6.4,1.4,Utah State -5,21
-401634259,13,Alabama A&M,Mississippi Valley State,False,False,14,,-15.8,-1.8,Alabama A&M -14,-14
-401638699,13,Davidson,Valparaiso,False,False,8,,-13.7,-5.7,Davidson -8,1
-401638350,13,Western Carolina,Samford,False,False,2.5,,2.1,4.6,Samford +2.5,-5
-401654496,13,Cornell,Columbia,False,False,-7.5,,5.5,-2.0,Cornell +7.5,8
-401645371,13,Charlotte,Florida Atlantic,False,False,3,2,7.3,10.3,Florida Atlantic +3,-12
-401636392,13,Jackson State,Alcorn State,False,False,9.5,,-6.5,3.0,Alcorn State +9.5,-38
-401635617,13,Pittsburgh,Louisville,False,True,-7.5,-8,12.2,4.7,Louisville -7.5,28
-401654543,13,Norfolk State,South Carolina State,False,False,-18,,16.4,-1.6,Norfolk State +18,32
-401628693,13,New Hampshire,Maine,False,False,3,,1.1,4.1,Maine +3,-18
-401636937,13,UCF,West Virginia,False,True,3,3,-12.9,-9.9,UCF -3,10
-401641027,13,New Mexico State,Middle Tennessee,False,False,-3.5,-4,9.4,5.9,Middle Tennessee -3.5,-15
-401634142,13,East Tennessee State,VMI,False,False,16.5,,-21.2,-4.7,East Tennessee State -16.5,-7
-401628698,13,Hampton,UAlbany,False,False,-3,,-6.2,-9.2,Hampton +3,7
-401643837,13,Georgia Southern,Coastal Carolina,False,False,-2,-2,1.2,-0.8,Georgia Southern +2,-20
-401654462,13,Brown,Dartmouth,False,False,-13.5,,16.9,3.4,Dartmouth -13.5,28
-401634130,13,Montana,Montana State,False,False,-16.5,,8.1,-8.4,Montana +16.5,23
-401636930,13,BYU,Arizona State,False,True,-3.5,-3.5,5.5,2.0,Arizona State -3.5,5
-401644772,13,Buffalo,Eastern Michigan,False,False,-1,-2.5,3.1,2.1,Eastern Michigan -1,-17
-401644769,13,Akron,Kent State,False,False,10.5,9.5,-10.1,0.4,Kent State +10.5,-21
-401643763,13,Air Force,Nevada,False,False,-2.5,-4,9.3,6.8,Nevada -2.5,-3
-401654504,13,North Carolina Central,Delaware State,False,False,23.5,,-22.3,1.2,Delaware State +23.5,-42
-401628428,13,Texas A&M,Auburn,False,True,2.5,2,0.2,2.7,Auburn +2.5,2
-401644773,13,Ohio,Toledo,False,False,-1.5,-2.5,2.6,1.1,Toledo -1.5,-17
-401644690,13,Northern Illinois,Miami (OH),False,False,-1.5,-3,1.9,0.4,Miami (OH) -1.5,11
-401632131,13,Central Arkansas,Tarleton State,False,False,-3,,3.8,0.8,Tarleton State -3,25
-401632142,13,Chattanooga,Austin Peay,False,False,4,,-5.3,-1.3,Chattanooga -4,-7
-401628432,13,Missouri,Mississippi State,False,True,9.5,7.5,-4.1,5.4,Mississippi State +9.5,-19
-401644774,13,Bowling Green,Ball State,False,False,12.5,11,-7.7,4.8,Ball State +12.5,-25
-401634132,13,UC Davis,Sacramento State,False,False,13.5,,-17.4,-3.9,UC Davis -13.5,-3
-401643838,13,Marshall,Old Dominion,False,False,-3,-2,6.1,3.1,Old Dominion -3,-7
-401654640,13,Holy Cross,Georgetown,False,False,13.5,,-4.2,9.3,Georgetown +13.5,-34
-401628700,13,Towson,Campbell,False,False,4.5,,-7.5,-3.0,Towson -4.5,-22
-401634127,13,Cal Poly,Weber State,False,False,-14,,5.1,-8.9,Cal Poly +14,11
-401641005,13,Sam Houston,Jacksonville State,False,False,-5.5,-6,4.5,-1.0,Sam Houston +5.5,10
-401634189,13,South Dakota State,Missouri State,False,False,14.5,,-10.4,4.1,Missouri State +14.5,-36
-401628429,13,Ole Miss,Florida,False,True,13,9.5,-14.9,-1.9,Ole Miss -13,7
-401628430,13,Massachusetts,Georgia,False,True,-42.5,-43.5,28.6,-13.9,Massachusetts +42.5,38
-401628561,13,USC,UCLA,False,True,4.5,5,-4.5,0.0,UCLA +4.5,-6
-401654581,13,Duquesne,Central Connecticut,False,False,5.5,,-3.7,1.8,Central Connecticut +5.5,7
-401628559,13,Penn State,Minnesota,False,True,11,11,-3.6,7.4,Minnesota +11,-1
-401654600,13,Long Island University,Wagner,False,False,4.5,,-2.5,2.0,Wagner +4.5,-7
-401628694,13,Delaware,Villanova,False,False,1.5,,-5.3,-3.8,Delaware -1.5,10
-401640959,13,Army,Notre Dame,True,False,-14.5,-15.5,10.1,-4.4,Army +14.5,35
-401634168,13,North Dakota,Illinois State,False,False,-3.5,,5.8,2.3,Illinois State -3.5,22
-401636362,13,Texas Southern,Arkansas-Pine Bluff,False,False,3.5,,5.2,8.7,Arkansas-Pine Bluff +3.5,-8
-401645372,13,East Carolina,North Texas,False,False,-2.5,-3,5.0,2.5,North Texas -2.5,-12
-401632132,13,North Alabama,Eastern Kentucky,False,False,-4,,13.4,9.4,Eastern Kentucky -4,6
-401634040,13,Northwestern State,Houston Christian,False,False,-17.5,,27.6,10.1,Houston Christian -17.5,38
-401636386,14,Grambling,Southern,True,False,-3,,3.9,0.9,Southern -3,10
-401628442,14,Mississippi State,Ole Miss,False,True,-26,-27,30.7,4.7,Ole Miss -26,12
-401643846,14,Marshall,James Madison,False,False,-3.5,-3.5,6.0,2.5,James Madison -3.5,-2
-401643771,14,New Mexico,Hawai'i,False,False,6.5,2.5,4.7,11.2,Hawai'i +6.5,8
-401635623,14,Miami,Syracuse,False,True,12,10.5,-9.1,2.9,Syracuse +12,4
-401628571,14,Notre Dame,USC,False,True,7,7,-11.5,-4.5,Notre Dame -7,-14
-401635625,14,Stanford,San José State,False,True,-2.5,-2.5,10.8,8.3,San José State -2.5,3
-401729737,14,Central Connecticut,Rhode Island,False,False,-15,,5.5,-9.5,Central Connecticut +15,4
-401644776,14,Kent State,Buffalo,False,False,-23.5,-21,28.6,5.1,Buffalo -23.5,36
-401645382,14,South Florida,Rice,False,False,5.5,4.5,-10.4,-4.9,South Florida -5.5,7
-401628567,14,Rutgers,Michigan State,False,True,-1.5,-1.25,2.0,0.5,Michigan State -1.5,-27
-401643848,14,Louisiana,UL Monroe,False,False,8.5,10,-9.6,-1.1,Louisiana -8.5,-14
-401636943,14,TCU,Cincinnati,False,True,2.5,3,4.7,7.2,Cincinnati +2.5,-7
-401644779,14,Central Michigan,Northern Illinois,False,False,-13.5,-12.5,20.2,6.7,Northern Illinois -13.5,8
-401729729,14,UT Martin,New Hampshire,False,False,-0.5,,0.1,-0.4,UT Martin +0.5,-31
-401645379,14,Navy,East Carolina,False,False,-2.75,1,-2.5,-5.3,Navy +2.75,-14
-401628566,14,Michigan,Ohio State,False,True,-20,-20.5,26.3,6.3,Ohio State -20,-3
-401644691,14,Miami (OH),Bowling Green,False,False,-3,-3,4.7,1.7,Bowling Green -3,-16
-401644775,14,Toledo,Akron,False,False,9.5,8,-4.9,4.6,Akron +9.5,7
-401643769,14,Oregon State,Boise State,False,False,-17.5,-19.5,31.9,14.4,Boise State -17.5,16
-401641014,14,Kennesaw State,Louisiana Tech,False,False,-10.5,-12.5,10.5,-0.0,Kennesaw State +10.5,33
-401729731,14,Illinois State,Southeast Missouri State,False,False,3,,1.9,4.9,Southeast Missouri State +3,-8
+401628548,12,Rutgers,Maryland,False,True,-4.5,-3.75,9.6,5.1,Maryland -4.5,-14
+401643835,12,Southern Miss,Texas State,False,False,-27.5,-26.5,24.1,-3.4,Southern Miss +27.5,55
+401628422,12,Murray State,Kentucky,False,True,-41.5,-38.5,27.3,-14.2,Murray State +41.5,42
+401628424,12,New Mexico State,Texas A&M,False,True,-38.5,-40.5,37.0,-1.5,New Mexico State +38.5,35
+401654476,12,Dartmouth,Cornell,False,False,9.5,,-0.1,9.4,Cornell +9.5,17
+401628423,12,Missouri,South Carolina,False,True,-10.5,-13,9.6,-0.9,Missouri +10.5,4
+401645366,12,North Texas,UTSA,False,False,-1.5,2,0.9,-0.6,North Texas +1.5,21
+401635580,12,Boston College,SMU,False,True,-19,-15.5,21.8,2.8,SMU -19,10
+401654503,12,Delaware State,Norfolk State,False,False,-13.5,,8.1,-5.4,Delaware State +13.5,19
+401644767,12,Eastern Michigan,Ohio,False,False,-10.5,-8.5,4.9,-5.6,Eastern Michigan +10.5,25
+401628692,12,Stony Brook,New Hampshire,False,False,-5.5,,4.1,-1.4,Stony Brook +5.5,1
+401629046,12,Liberty,Massachusetts,False,False,16.5,14,-2.6,13.9,Massachusetts +16.5,-1
+401628685,12,Richmond,Hampton,False,False,7,,-3.6,3.4,Hampton +7,-3
+401628689,12,UAlbany,Rhode Island,False,False,-13,,14.6,1.6,Rhode Island -13,3
+401636929,12,Baylor,West Virginia,False,True,2,1.5,-1.8,0.2,West Virginia +2,-14
+401654622,12,Colgate,Lehigh,False,False,-10.5,,20.8,10.3,Lehigh -10.5,28
+401634126,12,Northern Arizona,Northern Colorado,False,False,19.5,,-15.4,4.1,Northern Colorado +19.5,-41
+401636927,12,Arizona State,Kansas State,False,True,-7.5,-8,10.8,3.3,Kansas State -7.5,-10
+401654468,12,Princeton,Yale,False,False,-12.5,,20.5,8.0,Yale -12.5,14
+401644763,12,Ball State,Buffalo,False,False,-3.5,-6,7.7,4.2,Buffalo -3.5,3
+401644689,12,Kent State,Miami (OH),False,False,-30.5,-30.5,31.1,0.6,Miami (OH) -30.5,27
+401635583,12,Wake Forest,North Carolina,False,True,-10.5,-11,16.2,5.7,North Carolina -10.5,7
+401634205,12,South Dakota,North Dakota,False,False,14,,-13.0,1.0,North Dakota +14,-6
+401644766,12,Akron,Northern Illinois,False,False,-14,-16,20.3,6.3,Northern Illinois -14,13
+401635517,12,Louisville,Stanford,False,True,21,20,-24.9,-3.9,Louisville -21,3
+401628551,12,Oregon,Wisconsin,False,True,13.5,14.5,-19.3,-5.8,Oregon -13.5,-3
+401628691,12,Campbell,Delaware,False,False,-16.5,,18.1,1.6,Delaware -16.5,19
+401632129,12,West Georgia,Utah Tech,False,False,4.5,,-18.3,-13.8,West Georgia -4.5,-3
+401636923,12,Houston,Arizona,False,True,-1,-2,5.6,4.6,Arizona -1,24
+401628426,12,UL Monroe,Auburn,False,True,-24.5,-24,11.5,-13.0,UL Monroe +24.5,34
+401634008,12,Tennessee State,Gardner-Webb,False,False,-2,,0.7,-1.3,Tennessee State +2,-3
+401628547,12,Michigan State,Illinois,False,True,-2,-3.5,5.7,3.7,Illinois -2,22
+401643830,12,Troy,Georgia Southern,False,False,-7,-8,7.3,0.3,Georgia Southern -7,-8
+401644765,12,Central Michigan,Toledo,False,False,-15,-15,12.4,-2.6,Central Michigan +15,27
+401634121,12,Sacramento State,Cal Poly,False,False,7.5,,3.1,10.6,Cal Poly +7.5,3
+401645368,12,South Florida,Charlotte,False,False,-1.5,3,-1.9,-3.4,South Florida +1.5,-35
+401636351,12,Jackson State,Alabama State,False,False,7.5,,3.7,11.2,Alabama State +7.5,-6
+401643758,12,Boise State,San José State,False,False,14.5,13.5,-16.8,-2.3,Boise State -14.5,-21
+401643762,12,San Diego State,UNLV,False,False,-21.5,-20.5,23.9,2.4,UNLV -21.5,21
+401634009,12,Western Illinois,Southeast Missouri State,False,False,-24,,18.5,-5.5,Western Illinois +24,9
+401628550,12,Ohio State,Northwestern,True,True,28.5,30.5,-25.2,3.3,Northwestern +28.5,-24
+401632119,12,Eastern Kentucky,Austin Peay,False,False,-1,,-5.9,-6.9,Eastern Kentucky +1,-3
+401636926,12,Cincinnati,Iowa State,False,True,-7,-9,5.0,-2.0,Cincinnati +7,17
+401645367,12,UAB,Memphis,False,False,-16.5,-15,13.4,-3.1,UAB +16.5,35
+401638696,12,St. Thomas (MN),Butler,False,False,-6.5,,8.5,2.0,Butler -6.5,16
+401641022,12,Sam Houston,Kennesaw State,False,False,21,13.5,-18.2,2.8,Kennesaw State +21,-6
+401654572,12,Alcorn State,Prairie View A&M,False,False,2.5,,-2.2,0.3,Prairie View A&M +2.5,-13
+401638349,12,VMI,Western Carolina,False,False,-24.5,,36.1,11.6,Western Carolina -24.5,30
+401628553,12,UCLA,Washington,False,True,-5,-3.5,10.1,5.1,Washington -5,12
+401628549,12,Nebraska,USC,False,True,-6.5,-9,10.5,4.0,USC -6.5,8
+401628552,12,Penn State,Purdue,False,True,30,28,-30.0,0.0,Purdue +30,-39
+401643760,12,Hawai'i,Utah State,False,False,2.5,2.5,-5.2,-2.7,Hawai'i -2.5,45
+401654614,12,Sacred Heart,Merrimack,False,False,-15.5,,11.3,-4.2,Sacred Heart +15.5,-11
+401654580,12,Robert Morris,Central Connecticut,False,False,-1,,4.2,3.2,Central Connecticut -1,2
+401654639,12,Bucknell,Holy Cross,False,False,-14,,13.0,-1.0,Bucknell +14,2
+401628420,12,LSU,Florida,False,True,3,5,-6.6,-3.6,LSU -3,11
+401628688,12,North Carolina A&T,Towson,False,False,-22,,21.2,-0.8,North Carolina A&T +22,18
+401675123,12,Incarnate Word,Stephen F. Austin,False,False,8,,2.9,10.9,Stephen F. Austin +8,-7
+401635581,12,Syracuse,California,False,True,-10.5,-7,4.7,-5.8,Syracuse +10.5,-8
+401636924,12,Kansas,BYU,False,True,-2.5,-3.5,4.8,2.3,BYU -2.5,-4
+401643759,12,Wyoming,Colorado State,False,False,-8.5,-10,12.3,3.8,Colorado State -8.5,14
+401643757,12,Oregon State,Air Force,False,False,2.5,4.5,-2.3,0.2,Air Force +2.5,28
+401636379,12,Mississippi Valley State,Florida A&M,False,False,-31,,20.0,-11.0,Mississippi Valley State +31,-3
+401634239,12,Southern Illinois,South Dakota State,False,False,-30.5,,25.4,-5.1,Southern Illinois +30.5,31
+401654495,12,Columbia,Brown,False,False,5,,-4.5,0.5,Brown +5,-9
+401634157,12,The Citadel,Wofford,False,False,-6.5,,12.3,5.8,Wofford -6.5,-13
+401645369,12,Florida Atlantic,Temple,False,False,-2,-1.5,-5.5,-7.5,Florida Atlantic +2,3
+401643832,12,Coastal Carolina,Marshall,False,False,-7.5,-8.5,8.2,0.7,Marshall -7.5,12
+401654594,12,Wagner,Duquesne,False,False,-14.5,,17.1,2.6,Duquesne -14.5,21
+401628687,12,Maine,Elon,False,False,-4,,3.4,-0.6,Maine +4,6
+401636370,12,Bethune-Cookman,Texas Southern,False,False,-2.5,,6.8,4.3,Texas Southern -2.5,3
+401634125,12,Montana State,UC Davis,False,False,7,,-3.2,3.8,UC Davis +7,-2
+401644605,13,Yale,Harvard,False,False,-3.5,,4.5,1.0,Harvard -3.5,-5
+401628697,13,Monmouth,Stony Brook,False,False,3,,-3.1,-0.1,Monmouth -3,-8
+401654635,13,Saint Francis,Mercyhurst,False,False,10,,4.3,14.3,Mercyhurst +10,1
+401678896,13,Abilene Christian,Stephen F. Austin,False,False,-1,,-2.4,-3.4,Abilene Christian +1,13
+401634039,13,SE Louisiana,Nicholls,False,False,4.5,,4.6,9.1,Nicholls +4.5,-3
+401634012,13,Gardner-Webb,Western Illinois,False,False,7,,-0.4,6.6,Western Illinois +7,17
+401654469,13,Pennsylvania,Princeton,False,False,4.5,,-3.5,1.0,Princeton +4.5,3
+401634151,13,Furman,Mercer,False,False,-14,,27.0,13.0,Mercer -14,26
+401635615,13,Virginia Tech,Duke,False,True,2.5,2.5,-0.8,1.7,Duke +2.5,3
+401638698,13,Butler,Presbyterian,False,False,9.5,,-5.1,4.4,Presbyterian +9.5,3
+401634128,13,Eastern Washington,Northern Arizona,False,False,-5.5,,7.7,2.2,Northern Arizona -5.5,12
+401628435,13,UTEP,Tennessee,False,True,-41.5,-41.5,37.8,-3.7,UTEP +41.5,56
+401644770,13,Western Michigan,Central Michigan,False,False,6,6.5,-2.5,3.5,Central Michigan +6,2
+401636352,13,Prairie View A&M,Alabama State,False,False,-9,,18.8,9.8,Alabama State -9,3
+401628427,13,Louisiana Tech,Arkansas,False,True,-23.5,-23,26.3,2.8,Arkansas -23.5,21
+401628695,13,William & Mary,Richmond,False,False,-5.5,,7.1,1.6,Richmond -5.5,27
+401628434,13,Wofford,South Carolina,False,True,-42.5,-42.5,29.4,-13.1,Wofford +42.5,44
+401643840,13,Troy,Louisiana,False,False,-7.5,-11.5,8.2,0.7,Louisiana -7.5,21
+401628554,13,Illinois,Rutgers,False,True,-2.25,-1.75,-1.4,-3.7,Illinois +2.25,-7
+401654610,13,Stonehill,Robert Morris,False,False,-14,,15.0,1.0,Robert Morris -14,18
+401638700,13,Dayton,St. Thomas (MN),False,False,-2.5,,7.2,4.7,St. Thomas (MN) -2.5,23
+401635618,13,Wake Forest,Miami,False,True,-23.5,-24,28.8,5.3,Miami -23.5,28
+401638701,13,Drake,Stetson,False,False,19.5,,-23.2,-3.7,Drake -19.5,-39
+401634014,13,Southeast Missouri State,Tennessee State,False,False,6.5,,-0.0,6.5,Tennessee State +6.5,7
+401634196,13,Murray State,Southern Illinois,False,False,-17,,14.5,-2.5,Murray State +17,62
+401634772,13,NC State,Georgia Tech,False,True,-7.5,-9,14.7,7.2,Georgia Tech -7.5,1
+401638702,13,San Diego,Morehead State,False,False,6.5,,1.3,7.8,Morehead State +6.5,-23
+401628431,13,Vanderbilt,LSU,False,True,-9.5,-9,12.5,3.0,LSU -9.5,7
+401640987,13,Florida International,Kennesaw State,False,False,9,9,-6.9,2.1,Kennesaw State +9,1
+401634131,13,Northern Colorado,Portland State,False,False,-16.5,,7.5,-9.0,Northern Colorado +16.5,32
+401634013,13,Lindenwood,UT Martin,False,False,-19.5,,15.0,-4.5,Lindenwood +19.5,7
+401643764,13,Boise State,Wyoming,False,False,22,22.5,-34.0,-12.0,Boise State -22,-4
+401634211,13,North Dakota State,South Dakota,False,False,3,,1.5,4.5,South Dakota +3,1
+401634179,13,Indiana State,Northern Iowa,False,False,-8.5,,8.3,-0.2,Indiana State +8.5,7
+401636934,13,Texas Tech,Oklahoma State,False,True,5,3.5,-7.5,-2.5,Texas Tech -5,-8
+401634042,13,Lamar,McNeese,False,False,-3,,8.8,5.8,McNeese -3,-2
+401643836,13,James Madison,App State,False,False,7,7,-13.3,-6.3,James Madison -7,14
+401632143,13,Utah Tech,Southern Utah,False,False,-19,,18.6,-0.4,Utah Tech +19,3
+401643765,13,Colorado State,Fresno State,False,False,-3.5,-3,5.8,2.3,Fresno State -3.5,6
+401635613,13,Stanford,California,False,True,-15,-14,15.1,0.1,California -15,3
+401628436,13,Kentucky,Texas,False,True,-18.5,-20.5,26.2,7.7,Texas -18.5,17
+401645374,13,Temple,UTSA,False,False,-16.5,-16.5,16.3,-0.2,Temple +16.5,24
+401654537,13,Howard,Morgan State,False,False,-1.5,,6.4,4.9,Morgan State -1.5,14
+401634011,13,Eastern Illinois,Tennessee Tech,False,False,-13,,11.9,-1.1,Eastern Illinois +13,17
+401635518,13,UConn,Syracuse,False,True,-10,-11,8.1,-1.9,UConn +10,7
+401635612,13,North Carolina,Boston College,False,True,2,2.5,-1.5,0.5,Boston College +2,20
+401643841,13,South Alabama,Southern Miss,False,False,24,21.5,-23.8,0.2,Southern Miss +24,-21
+401628558,13,Purdue,Michigan State,False,True,-14,-13,18.2,4.2,Michigan State -14,7
+401643767,13,UNLV,San José State,False,False,7.5,7.5,-3.9,3.6,San José State +7.5,-11
+401628433,13,Alabama,Oklahoma,False,True,14,14,-12.4,1.6,Oklahoma +14,21
+401654623,13,Lafayette,Lehigh,False,False,-6,,9.5,3.5,Lehigh -6,24
+401628555,13,Indiana,Ohio State,False,True,-10.5,-11.5,8.9,-1.6,Indiana +10.5,23
+401645373,13,Rice,UAB,False,False,7,6.5,-0.7,6.3,UAB +7,26
+401628572,13,Washington State,Oregon State,False,False,11,12.5,-14.1,-3.1,Washington State -11,3
+401636936,13,Iowa State,Utah,False,True,6.5,6.5,-7.5,-1.0,Iowa State -6.5,-3
+401628560,13,Wisconsin,Nebraska,False,True,-1.5,-2.5,3.6,2.1,Nebraska -1.5,19
+401628557,13,Northwestern,Michigan,False,True,-10.5,-12.5,4.8,-5.7,Northwestern +10.5,44
+401654653,13,Colgate,Bucknell,False,False,-5.5,,8.6,3.1,Bucknell -5.5,14
+401636931,13,Baylor,Houston,False,True,7,7.5,-9.5,-2.5,Baylor -7,-10
+401654615,13,Merrimack,Fordham,False,False,-3,,-2.4,-5.4,Merrimack +3,-16
+401640996,13,Western Kentucky,Liberty,False,False,-1,1,2.3,1.3,Liberty -1,17
+401636932,13,Colorado,Kansas,True,True,1.5,2.5,-8.3,-6.8,Colorado -1.5,16
+401636935,13,Arizona,TCU,False,True,-10.5,-11,7.2,-3.3,Arizona +10.5,21
+401636933,13,Cincinnati,Kansas State,False,True,-7.5,-8.5,6.6,-0.9,Cincinnati +7.5,26
+401628556,13,Iowa,Maryland,False,True,4,6.5,-5.6,-1.6,Iowa -4,-16
+401643842,13,Georgia State,Texas State,False,False,-23,-20,17.2,-5.8,Georgia State +23,-8
+401628696,13,Elon,North Carolina A&T,False,False,17,,-11.2,5.8,North Carolina A&T +17,-10
+401636371,13,Florida A&M,Bethune-Cookman,True,False,10.5,,-10.0,0.5,Bethune-Cookman +10.5,-3
+401635616,13,Charleston Southern,Florida State,False,True,-33.25,-33,15.3,-17.9,Charleston Southern +33.25,34
+401638699,13,Davidson,Valparaiso,False,False,8,,-15.1,-7.1,Davidson -8,1
+401635619,13,SMU,Virginia,False,True,10.5,9.5,-19.3,-8.8,SMU -10.5,-26
+401635614,13,The Citadel,Clemson,False,True,-49.0,-49.5,36.9,-12.1,The Citadel +49,37
+401634129,13,Idaho,Idaho State,False,False,10.5,,-5.6,4.9,Idaho State +10.5,-23
+401628699,13,Rhode Island,Bryant,False,False,12,,-9.0,3.0,Bryant +12,-14
+401634259,13,Alabama A&M,Mississippi Valley State,False,False,14,,-18.4,-4.4,Alabama A&M -14,-14
+401643839,13,UL Monroe,Arkansas State,False,False,-3,-3,-0.9,-3.9,UL Monroe +3,7
+401638350,13,Western Carolina,Samford,False,False,2.5,,0.7,3.2,Samford +2.5,-5
+401643766,13,San Diego State,Utah State,False,False,-5,-4,5.1,0.1,Utah State -5,21
+401654496,13,Cornell,Columbia,False,False,-7.5,,3.4,-4.1,Cornell +7.5,8
+401645371,13,Charlotte,Florida Atlantic,False,False,3,2,5.9,8.9,Florida Atlantic +3,-12
+401645375,13,Tulsa,South Florida,False,False,-17,-16,24.1,7.1,South Florida -17,33
+401636392,13,Jackson State,Alcorn State,False,False,9.5,,-8.7,0.8,Alcorn State +9.5,-38
+401654543,13,Norfolk State,South Carolina State,False,False,-18,,14.7,-3.3,Norfolk State +18,32
+401635617,13,Pittsburgh,Louisville,False,True,-7.5,-8,10.5,3.0,Louisville -7.5,28
+401636937,13,UCF,West Virginia,False,True,3,3,-13.4,-10.4,UCF -3,10
+401628693,13,New Hampshire,Maine,False,False,3,,-0.3,2.7,Maine +3,-18
+401634142,13,East Tennessee State,VMI,False,False,16.5,,-22.6,-6.1,East Tennessee State -16.5,-7
+401628432,13,Missouri,Mississippi State,False,True,9.5,7.5,-6.6,2.9,Mississippi State +9.5,-19
+401641027,13,New Mexico State,Middle Tennessee,False,False,-3.5,-4,8.2,4.7,Middle Tennessee -3.5,-15
+401628698,13,Hampton,UAlbany,False,False,-3,,-7.6,-10.6,Hampton +3,7
+401644773,13,Ohio,Toledo,False,False,-1.5,-2.5,1.1,-0.4,Ohio +1.5,-17
+401643837,13,Georgia Southern,Coastal Carolina,False,False,-2,-2,-0.1,-2.1,Georgia Southern +2,-20
+401644769,13,Akron,Kent State,False,False,10.5,9.5,-11.5,-1.0,Akron -10.5,-21
+401634130,13,Montana,Montana State,False,False,-16.5,,6.0,-10.5,Montana +16.5,23
+401628429,13,Ole Miss,Florida,False,True,13,9.5,-16.4,-3.4,Ole Miss -13,7
+401628428,13,Texas A&M,Auburn,False,True,2.5,2,-0.7,1.8,Auburn +2.5,2
+401643838,13,Marshall,Old Dominion,False,False,-3,-2,4.5,1.5,Old Dominion -3,-7
+401636930,13,BYU,Arizona State,False,True,-3.5,-3.5,4.2,0.7,Arizona State -3.5,5
+401654462,13,Brown,Dartmouth,False,False,-13.5,,15.0,1.5,Dartmouth -13.5,28
+401654640,13,Holy Cross,Georgetown,False,False,13.5,,-5.4,8.1,Georgetown +13.5,-34
+401644772,13,Buffalo,Eastern Michigan,False,False,-1,-2.5,1.1,0.1,Eastern Michigan -1,-17
+401644690,13,Northern Illinois,Miami (OH),False,False,-1.5,-3,0.9,-0.6,Northern Illinois +1.5,11
+401641005,13,Sam Houston,Jacksonville State,False,False,-5.5,-6,3.1,-2.4,Sam Houston +5.5,10
+401643763,13,Air Force,Nevada,False,False,-2.5,-4,8.9,6.4,Nevada -2.5,-3
+401654504,13,North Carolina Central,Delaware State,False,False,23.5,,-24.2,-0.7,North Carolina Central -23.5,-42
+401632142,13,Chattanooga,Austin Peay,False,False,4,,-6.4,-2.4,Chattanooga -4,-7
+401632131,13,Central Arkansas,Tarleton State,False,False,-3,,2.0,-1.0,Central Arkansas +3,25
+401634189,13,South Dakota State,Missouri State,False,False,14.5,,-12.0,2.5,Missouri State +14.5,-36
+401634132,13,UC Davis,Sacramento State,False,False,13.5,,-19.0,-5.5,UC Davis -13.5,-3
+401628430,13,Massachusetts,Georgia,False,True,-42.5,-43.5,30.2,-12.3,Massachusetts +42.5,38
+401628700,13,Towson,Campbell,False,False,4.5,,-8.7,-4.2,Towson -4.5,-22
+401634127,13,Cal Poly,Weber State,False,False,-14,,3.4,-10.6,Cal Poly +14,11
+401644774,13,Bowling Green,Ball State,False,False,12.5,11,-9.3,3.2,Ball State +12.5,-25
+401628559,13,Penn State,Minnesota,False,True,11,11,-5.2,5.8,Minnesota +11,-1
+401654600,13,Long Island University,Wagner,False,False,4.5,,-3.6,0.9,Wagner +4.5,-7
+401654581,13,Duquesne,Central Connecticut,False,False,5.5,,-5.5,-0.0,Duquesne -5.5,7
+401645372,13,East Carolina,North Texas,False,False,-2.5,-3,3.8,1.3,North Texas -2.5,-12
+401634168,13,North Dakota,Illinois State,False,False,-3.5,,4.0,0.5,Illinois State -3.5,22
+401628561,13,USC,UCLA,False,True,4.5,5,-6.1,-1.6,USC -4.5,-6
+401640959,13,Army,Notre Dame,True,False,-14.5,-15.5,13.3,-1.2,Army +14.5,35
+401628694,13,Delaware,Villanova,False,False,1.5,,-6.8,-5.3,Delaware -1.5,10
+401632132,13,North Alabama,Eastern Kentucky,False,False,-4,,11.7,7.7,Eastern Kentucky -4,6
+401636362,13,Texas Southern,Arkansas-Pine Bluff,False,False,3.5,,4.1,7.6,Arkansas-Pine Bluff +3.5,-8
+401634040,13,Northwestern State,Houston Christian,False,False,-17.5,,26.3,8.8,Houston Christian -17.5,38
+401636386,14,Grambling,Southern,True,False,-3,,3.6,0.6,Southern -3,10
+401643846,14,Marshall,James Madison,False,False,-3.5,-3.5,3.7,0.2,James Madison -3.5,-2
+401628442,14,Mississippi State,Ole Miss,False,True,-26,-27,29.5,3.5,Ole Miss -26,12
+401643771,14,New Mexico,Hawai'i,False,False,6.5,2.5,3.2,9.7,Hawai'i +6.5,8
+401635623,14,Miami,Syracuse,False,True,12,10.5,-10.9,1.1,Syracuse +12,4
+401628571,14,Notre Dame,USC,False,True,7,7,-13.4,-6.4,Notre Dame -7,-14
+401729737,14,Central Connecticut,Rhode Island,False,False,-15,,5.2,-9.8,Central Connecticut +15,4
+401635625,14,Stanford,San José State,False,True,-2.5,-2.5,8.5,6.0,San José State -2.5,3
+401643848,14,Louisiana,UL Monroe,False,False,8.5,10,-11.2,-2.7,Louisiana -8.5,-14
+401644776,14,Kent State,Buffalo,False,False,-23.5,-21,27.3,3.8,Buffalo -23.5,36
+401645382,14,South Florida,Rice,False,False,5.5,4.5,-11.6,-6.1,South Florida -5.5,7
+401636943,14,TCU,Cincinnati,False,True,2.5,3,2.7,5.2,Cincinnati +2.5,-7
+401644779,14,Central Michigan,Northern Illinois,False,False,-13.5,-12.5,19.1,5.6,Northern Illinois -13.5,8
+401628567,14,Rutgers,Michigan State,False,True,-1.5,-1.25,0.4,-1.1,Rutgers +1.5,-27
+401729729,14,UT Martin,New Hampshire,False,False,-0.5,,-1.4,-1.9,UT Martin +0.5,-31
+401644775,14,Toledo,Akron,False,False,9.5,8,-6.6,2.9,Akron +9.5,7
+401641014,14,Kennesaw State,Louisiana Tech,False,False,-10.5,-12.5,9.5,-1.0,Kennesaw State +10.5,33
+401643769,14,Oregon State,Boise State,False,False,-17.5,-19.5,30.1,12.6,Boise State -17.5,16
+401628566,14,Michigan,Ohio State,False,True,-20,-20.5,25.3,5.3,Ohio State -20,-3
+401729731,14,Illinois State,Southeast Missouri State,False,False,3,,0.3,3.3,Southeast Missouri State +3,-8
+401644691,14,Miami (OH),Bowling Green,False,False,-3,-3,3.1,0.1,Bowling Green -3,-16
 401628439,14,Georgia Tech,Georgia,False,True,-17.5,-19.5,7.3,-10.2,Georgia Tech +17.5,2
-401628570,14,Fresno State,UCLA,False,True,-7.5,-9.5,12.6,5.1,UCLA -7.5,7
-401729738,14,Northern Arizona,Abilene Christian,False,False,2.5,,1.4,3.9,Abilene Christian +2.5,24
-401643847,14,Old Dominion,Arkansas State,False,False,5.5,4,-6.7,-1.2,Old Dominion -5.5,-8
-401628446,14,Tennessee,Vanderbilt,False,True,9.5,10.5,-10.5,-1.0,Tennessee -9.5,-13
-401641031,14,UTEP,New Mexico State,False,False,-3.5,-2.5,-4.3,-7.8,UTEP +3.5,-7
-401635622,14,Duke,Wake Forest,False,True,3.5,3,-10.1,-6.6,Duke -3.5,-6
-401629038,14,UConn,Massachusetts,False,False,9.5,10,-5.7,3.8,Massachusetts +9.5,-5
-401643770,14,Utah State,Colorado State,False,False,-5.5,-6,3.8,-1.7,Utah State +5.5,5
-401636942,14,Houston,BYU,False,True,-12,-12,17.6,5.6,BYU -12,12
-401643845,14,Coastal Carolina,Georgia State,False,False,-0.5,1.5,3.7,3.2,Georgia State -0.5,-21
-401729732,14,Drake,Tarleton State,False,False,-18.5,,9.3,-9.2,Drake +18.5,14
-401628441,14,Oklahoma,LSU,False,True,-6,-5.5,5.5,-0.5,Oklahoma +6,20
-401628562,14,Nebraska,Iowa,False,True,-3,-5.5,7.5,4.5,Iowa -3,3
-401636939,14,Utah,UCF,False,True,-10,-9,12.4,2.4,UCF -10,-14
-401729730,14,Lehigh,Richmond,False,False,-10.5,,4.4,-6.1,Lehigh +10.5,-4
-401628445,14,Texas,Texas A&M,False,True,4.5,5.5,-9.5,-5.0,Texas -4.5,-10
-401628569,14,Washington,Oregon,False,True,-17.5,-18.5,14.1,-3.4,Washington +17.5,28
-401628444,14,South Carolina,Clemson,False,True,-2.5,-2.5,0.3,-2.2,South Carolina +2.5,-3
-401628440,14,Louisville,Kentucky,False,True,4,3.5,-7.5,-3.5,Louisville -4,-27
-401635620,14,Pittsburgh,Boston College,False,True,-3.5,-4,2.7,-0.8,Pittsburgh +3.5,11
-401636944,14,Kansas State,Iowa State,False,True,-2,-2.5,-2.3,-4.3,Kansas State +2,8
-401628443,14,Arkansas,Missouri,False,True,-3,-3.5,8.7,5.7,Missouri -3,7
-401628568,14,Minnesota,Wisconsin,False,True,1.5,-2,-5.3,-3.8,Minnesota -1.5,-17
-401643844,14,App State,Georgia Southern,False,False,-2.5,-2.5,6.4,3.9,Georgia Southern -2.5,9
-401645376,14,Memphis,Tulane,False,False,-12.5,-14,23.7,11.2,Tulane -12.5,-10
-401628438,14,Florida,Florida State,False,True,17,14.5,-12.2,4.8,Florida State +17,-20
-401635624,14,NC State,North Carolina,False,True,-2,-3.5,5.2,3.2,North Carolina -2,-5
-401645378,14,UTSA,Army,False,False,-6.5,-7.5,12.9,6.4,Army -6.5,5
-401628564,14,Purdue,Indiana,False,True,-28.5,-28,34.2,5.7,Indiana -28.5,66
-401643772,14,Nevada,UNLV,False,False,-17.5,-18,19.9,2.4,UNLV -17.5,24
-401643843,14,Texas State,South Alabama,False,False,2.5,1,5.3,7.8,South Alabama +2.5,-7
-401641006,14,Jacksonville State,Western Kentucky,False,False,0.5,-1.5,-0.4,0.1,Western Kentucky +0.5,2
-401628563,14,Illinois,Northwestern,True,True,9,7.5,-9.0,0.0,Northwestern +9,-10
-401645380,14,Florida Atlantic,Tulsa,False,False,-1,1.5,-8.2,-9.2,Florida Atlantic +1,-47
-401636938,14,Oklahoma State,Colorado,False,True,-15,-16.5,20.9,5.9,Colorado -15,52
-401636941,14,Kansas,Baylor,False,True,1.5,-1.5,-0.3,1.2,Baylor +1.5,28
-401645377,14,UAB,Charlotte,False,False,-1,-3,2.6,1.6,Charlotte -1,2
-401643768,14,Air Force,San Diego State,False,False,6,3.5,3.1,9.1,San Diego State +6,-11
-401635640,14,Virginia,Virginia Tech,False,True,-4.5,-7.5,16.5,12.0,Virginia Tech -4.5,20
-401643849,14,Southern Miss,Troy,False,False,-17.5,-17,22.6,5.1,Troy -17.5,32
-401644777,14,Ball State,Ohio,False,False,-17.5,-14.5,13.9,-3.6,Ball State +17.5,21
-401636945,14,West Virginia,Texas Tech,False,True,-2.5,-3.5,13.7,11.2,Texas Tech -2.5,37
-401645381,14,North Texas,Temple,False,False,11,11,-8.4,2.6,Temple +11,-7
-401729736,14,Eastern Kentucky,Villanova,False,False,-9,,3.9,-5.1,Eastern Kentucky +9,5
-401640997,14,Liberty,Sam Houston,False,False,2.5,2.5,1.9,4.4,Sam Houston +2.5,2
-401643773,14,Wyoming,Washington State,False,False,-18.5,-17.5,21.1,2.6,Washington State -18.5,-1
-401729734,14,Tennessee State,Montana,False,False,-18,,17.1,-0.9,Tennessee State +18,14
-401628565,14,Maryland,Penn State,False,True,-26,-24.5,20.6,-5.4,Maryland +26,37
-401635621,14,California,SMU,False,True,-12.5,-13.5,20.1,7.6,SMU -12.5,32
-401628437,14,Auburn,Alabama,False,True,-11,-14,13.3,2.3,Alabama -11,14
-401636940,14,Arizona State,Arizona,False,True,7.5,8.5,-4.2,3.3,Arizona +7.5,-42
-401634252,14,Alabama A&M,Florida A&M,False,False,-5,,-3.8,-8.8,Alabama A&M +5,8
-401640988,14,Middle Tennessee,Florida International,True,False,-9.5,-9,11.8,2.3,Florida International -9.5,11
-401644780,14,Eastern Michigan,Western Michigan,False,False,-6.5,-6.5,4.4,-2.1,Eastern Michigan +6.5,8
-401729745,15,Abilene Christian,North Dakota State,False,False,-21.5,,14.6,-6.9,Abilene Christian +21.5,20
-401729756,15,Rhode Island,Mercer,False,False,-7.5,,13.2,5.7,Mercer -7.5,7
-401673462,15,Tulane,Army,False,False,5,4.0,-2.8,2.2,Army +5,21
-401673468,15,UNLV,Boise State,False,False,-4,-3.75,10.1,6.1,Boise State -4,14
-401729750,15,Montana,South Dakota State,False,False,-22.5,,14.2,-8.3,Montana +22.5,17
-401729753,15,Illinois State,UC Davis,False,False,-10.5,,12.0,1.5,UC Davis -10.5,32
-401729754,15,Villanova,Incarnate Word,False,False,-11.5,,7.7,-3.8,Villanova +11.5,7
-401673463,15,Clemson,SMU,True,True,-2.5,-2.5,9.6,7.1,SMU -2.5,-3
-401673470,15,Marshall,Louisiana,False,False,-5,-4.5,8.3,3.3,Louisiana -5,-28
-401673467,15,Ohio,Miami (OH),True,False,-2.5,-2.5,1.6,-0.9,Ohio +2.5,-35
-401729743,15,UT Martin,Montana State,False,False,-19,,13.5,-5.5,UT Martin +19,32
-401673466,15,Western Kentucky,Jacksonville State,False,False,-4.5,-3.5,7.0,2.5,Jacksonville State -4.5,40
-401673469,15,Georgia,Texas,True,True,-3,-2.5,11.7,8.7,Texas -3,-3
-401673471,15,Southern,Jackson State,False,False,-13.5,,7.4,-6.1,Southern +13.5,28
-401673464,15,Penn State,Oregon,True,True,-3.5,-3.5,1.3,-2.2,Penn State +3.5,8
-401729752,15,Tarleton State,South Dakota,False,False,-18.5,,13.4,-5.1,Tarleton State +18.5,11
-401673465,15,Iowa State,Arizona State,True,True,1.5,-2.5,3.0,4.5,Arizona State +1.5,26
+401628570,14,Fresno State,UCLA,False,True,-7.5,-9.5,12.2,4.7,UCLA -7.5,7
+401729738,14,Northern Arizona,Abilene Christian,False,False,2.5,,0.1,2.6,Abilene Christian +2.5,24
+401645379,14,Navy,East Carolina,False,False,-2.75,1,-4.4,-7.1,Navy +2.75,-14
+401643847,14,Old Dominion,Arkansas State,False,False,5.5,4,-8.1,-2.6,Old Dominion -5.5,-8
+401628446,14,Tennessee,Vanderbilt,False,True,9.5,10.5,-12.8,-3.3,Tennessee -9.5,-13
+401641031,14,UTEP,New Mexico State,False,False,-3.5,-2.5,-5.0,-8.5,UTEP +3.5,-7
+401635622,14,Duke,Wake Forest,False,True,3.5,3,-11.5,-8.0,Duke -3.5,-6
+401629038,14,UConn,Massachusetts,False,False,9.5,10,-7.5,2.0,Massachusetts +9.5,-5
+401643770,14,Utah State,Colorado State,False,False,-5.5,-6,2.4,-3.1,Utah State +5.5,5
+401636942,14,Houston,BYU,False,True,-12,-12,15.7,3.7,BYU -12,12
+401729732,14,Drake,Tarleton State,False,False,-18.5,,8.1,-10.4,Drake +18.5,14
+401636939,14,Utah,UCF,False,True,-10,-9,11.2,1.2,UCF -10,-14
+401643845,14,Coastal Carolina,Georgia State,False,False,-0.5,1.5,2.1,1.6,Georgia State -0.5,-21
+401628441,14,Oklahoma,LSU,False,True,-6,-5.5,4.1,-1.9,Oklahoma +6,20
+401628569,14,Washington,Oregon,False,True,-17.5,-18.5,13.6,-3.9,Washington +17.5,28
+401628445,14,Texas,Texas A&M,False,True,4.5,5.5,-11.4,-6.9,Texas -4.5,-10
+401729730,14,Lehigh,Richmond,False,False,-10.5,,3.8,-6.7,Lehigh +10.5,-4
+401628562,14,Nebraska,Iowa,False,True,-3,-5.5,6.2,3.2,Iowa -3,3
+401628440,14,Louisville,Kentucky,False,True,4,3.5,-8.1,-4.1,Louisville -4,-27
+401628444,14,South Carolina,Clemson,False,True,-2.5,-2.5,-0.7,-3.2,South Carolina +2.5,-3
+401635620,14,Pittsburgh,Boston College,False,True,-3.5,-4,1.1,-2.4,Pittsburgh +3.5,11
+401643844,14,App State,Georgia Southern,False,False,-2.5,-2.5,5.1,2.6,Georgia Southern -2.5,9
+401636944,14,Kansas State,Iowa State,False,True,-2,-2.5,-3.7,-5.7,Kansas State +2,8
+401628568,14,Minnesota,Wisconsin,False,True,1.5,-2,-6.5,-5.0,Minnesota -1.5,-17
+401628443,14,Arkansas,Missouri,False,True,-3,-3.5,7.7,4.7,Missouri -3,7
+401628564,14,Purdue,Indiana,False,True,-28.5,-28,33.3,4.8,Indiana -28.5,66
+401645380,14,Florida Atlantic,Tulsa,False,False,-1,1.5,-10.1,-11.1,Florida Atlantic +1,-47
+401628438,14,Florida,Florida State,False,True,17,14.5,-13.9,3.1,Florida State +17,-20
+401645376,14,Memphis,Tulane,False,False,-12.5,-14,22.1,9.6,Tulane -12.5,-10
+401628563,14,Illinois,Northwestern,True,True,9,7.5,-9.6,-0.6,Illinois -9,-10
+401636941,14,Kansas,Baylor,False,True,1.5,-1.5,-1.5,0.0,Baylor +1.5,28
+401643772,14,Nevada,UNLV,False,False,-17.5,-18,18.2,0.7,UNLV -17.5,24
+401635624,14,NC State,North Carolina,False,True,-2,-3.5,3.7,1.7,North Carolina -2,-5
+401636938,14,Oklahoma State,Colorado,False,True,-15,-16.5,19.5,4.5,Colorado -15,52
+401641006,14,Jacksonville State,Western Kentucky,False,False,0.5,-1.5,-1.5,-1.0,Jacksonville State -0.5,2
+401643768,14,Air Force,San Diego State,False,False,6,3.5,2.2,8.2,San Diego State +6,-11
+401643843,14,Texas State,South Alabama,False,False,2.5,1,3.8,6.3,South Alabama +2.5,-7
+401645378,14,UTSA,Army,False,False,-6.5,-7.5,10.5,4.0,Army -6.5,5
+401635640,14,Virginia,Virginia Tech,False,True,-4.5,-7.5,14.9,10.4,Virginia Tech -4.5,20
+401645377,14,UAB,Charlotte,False,False,-1,-3,0.8,-0.2,UAB +1,2
+401643849,14,Southern Miss,Troy,False,False,-17.5,-17,21.4,3.9,Troy -17.5,32
+401645381,14,North Texas,Temple,False,False,11,11,-9.3,1.7,Temple +11,-7
+401640997,14,Liberty,Sam Houston,False,False,2.5,2.5,0.2,2.7,Sam Houston +2.5,2
+401729736,14,Eastern Kentucky,Villanova,False,False,-9,,2.9,-6.1,Eastern Kentucky +9,5
+401643773,14,Wyoming,Washington State,False,False,-18.5,-17.5,20.0,1.5,Washington State -18.5,-1
+401644777,14,Ball State,Ohio,False,False,-17.5,-14.5,12.9,-4.6,Ball State +17.5,21
+401636945,14,West Virginia,Texas Tech,False,True,-2.5,-3.5,11.3,8.8,Texas Tech -2.5,37
+401729734,14,Tennessee State,Montana,False,False,-18,,16.2,-1.8,Tennessee State +18,14
+401628437,14,Auburn,Alabama,False,True,-11,-14,12.2,1.2,Alabama -11,14
+401635621,14,California,SMU,False,True,-12.5,-13.5,18.7,6.2,SMU -12.5,32
+401628565,14,Maryland,Penn State,False,True,-26,-24.5,19.5,-6.5,Maryland +26,37
+401636940,14,Arizona State,Arizona,False,True,7.5,8.5,-5.4,2.1,Arizona +7.5,-42
+401634252,14,Alabama A&M,Florida A&M,False,False,-5,,-5.5,-10.5,Alabama A&M +5,8
+401644780,14,Eastern Michigan,Western Michigan,False,False,-6.5,-6.5,2.8,-3.7,Eastern Michigan +6.5,8
+401640988,14,Middle Tennessee,Florida International,True,False,-9.5,-9,10.7,1.2,Florida International -9.5,11
+401729745,15,Abilene Christian,North Dakota State,False,False,-21.5,,13.9,-7.6,Abilene Christian +21.5,20
+401729756,15,Rhode Island,Mercer,False,False,-7.5,,12.2,4.7,Mercer -7.5,7
+401673462,15,Tulane,Army,False,False,5,4.0,-4.5,0.5,Army +5,21
+401729750,15,Montana,South Dakota State,False,False,-22.5,,13.2,-9.3,Montana +22.5,17
+401673468,15,UNLV,Boise State,False,False,-4,-3.75,9.0,5.0,Boise State -4,14
+401729753,15,Illinois State,UC Davis,False,False,-10.5,,10.8,0.3,UC Davis -10.5,32
+401729754,15,Villanova,Incarnate Word,False,False,-11.5,,6.6,-4.9,Villanova +11.5,7
+401673463,15,Clemson,SMU,True,True,-2.5,-2.5,9.1,6.6,SMU -2.5,-3
+401673470,15,Marshall,Louisiana,False,False,-5,-4.5,7.4,2.4,Louisiana -5,-28
+401673467,15,Ohio,Miami (OH),True,False,-2.5,-2.5,1.8,-0.7,Ohio +2.5,-35
+401729743,15,UT Martin,Montana State,False,False,-19,,12.4,-6.6,UT Martin +19,32
+401673466,15,Western Kentucky,Jacksonville State,False,False,-4.5,-3.5,5.8,1.3,Jacksonville State -4.5,40
+401673469,15,Georgia,Texas,True,True,-3,-2.5,11.4,8.4,Texas -3,-3
+401673471,15,Southern,Jackson State,False,False,-13.5,,6.7,-6.8,Southern +13.5,28
+401673464,15,Penn State,Oregon,True,True,-3.5,-3.5,1.4,-2.1,Penn State +3.5,8
+401729752,15,Tarleton State,South Dakota,False,False,-18.5,,12.8,-5.7,Tarleton State +18.5,11
+401673465,15,Iowa State,Arizona State,True,True,1.5,-2.5,2.6,4.1,Arizona State +1.5,26
 401645383,16,Navy,Army,True,False,-6.5,-5.5,3.4,-3.1,Navy +6.5,-18
-401729781,16,Incarnate Word,South Dakota State,False,False,-20.5,,19.2,-1.3,Incarnate Word +20.5,41
-401729785,16,Mercer,North Dakota State,False,False,-23.5,,13.7,-9.8,Mercer +23.5,24
-401729783,16,UC Davis,South Dakota,False,False,-7,,7.2,0.2,South Dakota -7,14
-401729780,16,Idaho,Montana State,False,False,-14.5,-13.5,14.4,-0.1,Idaho +14.5,33
+401729785,16,Mercer,North Dakota State,False,False,-23.5,,12.7,-10.8,Mercer +23.5,24
+401729781,16,Incarnate Word,South Dakota State,False,False,-20.5,,18.5,-2.0,Incarnate Word +20.5,41
+401729783,16,UC Davis,South Dakota,False,False,-7,,6.5,-0.5,UC Davis +7,14
+401729780,16,Idaho,Montana State,False,False,-14.5,-13.5,13.3,-1.2,Idaho +14.5,33

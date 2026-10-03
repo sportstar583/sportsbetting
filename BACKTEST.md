@@ -343,6 +343,28 @@ only about 12% of it is real (fold estimates -0.07 to 0.30); RMSE didn't improve
 1,093 games with a QB change. A QB's EPA over a few hundred attempts is mostly noise, and the
 team rating already reflects who has been playing. Off by default.
 
+## Home-field bias in spreads (fixed)
+
+The model's home-field term was fit each week. Early in the season it came out 2-4x its true
+size (0.06-0.09 EPA/play per side through week 4 vs about 0.022 over full seasons of FBS-vs-FBS
+games), because home routs of FCS teams and heavily shrunk team ratings get read as home field.
+Projected margins leaned toward home teams by +0.7, +1.6 and +2.4 points in 2023-2025.
+
+The spread model now holds home field at its full-season value (`adjust.HOME_FIELD`: 0.022
+EPA/play overall, 0.014 rush, 0.026 pass):
+
+| Spread model | 2023 | 2024 | 2025 |
+| --- | --- | --- | --- |
+| Margin RMSE, home field fitted weekly | 16.9 | 17.4 | 17.6 |
+| Margin RMSE, home field fixed (+ priors) | 16.6 | 17.2 | 17.3 |
+| Home-game bias (model minus actual), fitted | +0.7 | +1.6 | +2.4 |
+| Home-game bias, fixed | -0.1 | -0.8 | -0.4 |
+
+Still no ATS edge. The totals model keeps the weekly-fitted term: fixing it there made totals
+much worse (RMSE 16.38 -> 16.71, 17.03 -> 17.62, 15.46 -> 16.13; card 114-88 -> 94-107). For a
+total the home and road shifts cancel, and the inflated term soaks up early home routs of weak
+teams that would otherwise inflate offensive ratings. Totals backtest results are unchanged.
+
 ## Home field
 
 The model already has a league-wide home field term (about +0.085 EPA/play for the home
@@ -354,10 +376,11 @@ offense, none at neutral sites). Team-specific home field was tested with
 
 | Spread model margin RMSE | 2023 | 2024 | 2025 |
 | --- | --- | --- | --- |
-| League-wide home field only | 16.94 | 17.51 | 17.61 |
-| + team-specific home field | 16.90 | 17.38 | 17.45 |
+| League-wide home field only (after the bias fix) | 16.68 | 17.26 | 17.26 |
+| + team-specific home field | 16.69 | 17.18 | 17.18 |
 
-ATS edge >= 3 went 50.4% -> 50.1%: more accurate margins, still no betting edge. The largest home
+(Before the bias fix: 16.94 -> 16.90, 17.51 -> 17.38, 17.61 -> 17.45.) ATS edge >= 3 stayed about
+50%: slightly more accurate margins in two seasons, no betting edge. The largest home
 edges are teams like Hawai'i (opponents cross the Pacific), UTSA, NC State and TCU, plus small
 FCS programs. Used for the spread model's margins (`data/priors/team_home_field.csv`).
 

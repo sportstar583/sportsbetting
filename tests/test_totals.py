@@ -226,6 +226,16 @@ class TotalsTests(unittest.TestCase):
         self.assertGreater(net["B"]["def"], net["C"]["def"])  # 4-star CB went C -> B (stars fallback)
 
 
+    def test_fixed_home_field(self):
+        obs = [{"offense": o, "defense": d, "home": h, "stats": {"ppa": v, "plays": 60}}
+               for o, d, h, v in [("A", "B", 1, 0.5), ("B", "A", -1, 0.0), ("A", "C", -1, 0.3), ("C", "A", 1, 0.1),
+                                  ("B", "C", 1, 0.3), ("C", "B", -1, 0.0)]]
+        free = adjust.fit(obs, ("ppa",), None, alpha=1000)
+        fixed = adjust.fit(obs, ("ppa",), None, alpha=1000, hfa_fixed=0.02)
+        self.assertGreater(free["hfa"], 0.05)  # heavy shrinkage pushes team gaps into home field
+        self.assertEqual(fixed["hfa"], 0.02)
+
+
 class InjuryTests(unittest.TestCase):
     def setUp(self):
         season = [

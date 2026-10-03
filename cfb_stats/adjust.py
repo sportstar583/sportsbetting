@@ -81,7 +81,14 @@ def observations(game_rows, games):
     return obs
 
 
-def fit(obs, path, count_key, alpha=DEFAULT_ALPHA, huber_k=None, prior=None):
+# Home field per side, in metric units, from full seasons of FBS-vs-FBS games with light
+# shrinkage (2023-2025 averages). Early in a season a freely fitted home term is inflated
+# 2-4x: home routs of FCS teams and heavily shrunk team ratings get read as home field.
+HOME_FIELD = {"epa": 0.022, "rush_epa": 0.014, "pass_epa": 0.026, "success_rate": 0.0073,
+              "explosiveness": 0.0042}
+
+
+def fit(obs, path, count_key, alpha=DEFAULT_ALPHA, huber_k=None, prior=None, hfa_fixed=None):
     """Weighted ridge fit for one metric. Returns (intercept, hfa, off{}, def{}, raw_off{}, raw_def{}).
 
     prior: {"off": {team: deviation}, "def": {team: deviation}} shrinks each team toward its
@@ -115,6 +122,11 @@ def fit(obs, path, count_key, alpha=DEFAULT_ALPHA, huber_k=None, prior=None):
 
     penalty = np.full(X.shape[1], alpha)
     penalty[:2] = 0.0  # don't shrink intercept or home field
+    if hfa_fixed is not None:
+        # Fixed home field: move it into the target and drop the free home term.
+        y = y - hfa_fixed * X[:, 1]
+        X[:, 1] = 0.0
+        penalty[1] = 1.0
 
     mu = np.zeros(X.shape[1])
     if prior:
@@ -136,6 +148,8 @@ def fit(obs, path, count_key, alpha=DEFAULT_ALPHA, huber_k=None, prior=None):
             excess = np.abs(z) / (huber_k * scale)
             beta = solve(w * np.where(excess > 1, 1 / np.maximum(excess, 1e-9), 1.0))
 
+    if hfa_fixed is not None:
+        beta[1] = hfa_fixed
     intercept, hfa = beta[0], beta[1]
     adj_off = {t: intercept + beta[2 + idx[t]] for t in teams}
     adj_def = {t: intercept + beta[2 + n + idx[t]] for t in teams}
@@ -152,7 +166,7 @@ def fit(obs, path, count_key, alpha=DEFAULT_ALPHA, huber_k=None, prior=None):
 
 
 def fit_all(game_rows, games, alpha=DEFAULT_ALPHA, obs_weight=None, huber_k=None, subset_alpha_scale=1.0,
-            priors=None):
+            priors=None, hfa_fixed=None):
     """obs_weight(obs) -> multiplier on that matchup's weight (e.g. less for FCS opponents).
 
     subset_alpha_scale multiplies the ridge penalty for rush-only and pass-only metrics. The
@@ -166,7 +180,7 @@ def fit_all(game_rows, games, alpha=DEFAULT_ALPHA, obs_weight=None, huber_k=None
     models = {}
     for name, path, count_key in METRICS:
         m = fit(obs, path, count_key, alpha * (subset_alpha_scale if count_key else 1.0), huber_k,
-                (priors or {}).get(name))
+                (priors or {}).get(name), (hfa_fixed or {}).get(name))
         if m:
             models[name] = m
     return models, obs
