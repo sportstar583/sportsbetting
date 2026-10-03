@@ -147,7 +147,7 @@ class InjuryTests(unittest.TestCase):
         self.assertEqual(dfn, {"B": 0.02})
         notes = {d["player"]: d["note"] for d in detail}
         self.assertIn("skipped", notes["Corner"])
-        self.assertIn("not found", notes["Nobody"])
+        self.assertIn("no offensive EPA", notes["Nobody"])
 
 
 if __name__ == "__main__":

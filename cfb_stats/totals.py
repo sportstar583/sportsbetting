@@ -536,11 +536,19 @@ def main(argv=None):
     off_offsets, def_offsets = {}, {}
     if args.injuries:
         players, positions = inj.player_values(client.player_season_ppa(args.year), client.player_usage(args.year))
-        off_offsets, def_offsets, detail = inj.team_offsets(inj.load_injuries(args.injuries), players, positions)
-        print("injuries:")
-        for d in detail:
-            impact = "skipped" if d["impact"] is None else f"{d['impact']:+.3f} EPA/play"
-            print(f"  {d['team']:<18} {d['player']:<22} {d['side']:<3} p(out)={d['prob_out']:.2f}  {impact}  ({d['note']})")
+        defenders = inj.defender_values(
+            client.get("/stats/player/season", year=args.year, category="defensive")
+            + client.get("/stats/player/season", year=args.year, category="interceptions"))
+        off_offsets, def_offsets, detail = inj.team_offsets(inj.load_injuries(args.injuries), players, positions, defenders)
+        write_csv(os.path.join(out_dir, f"injury_impacts_week{week}.csv"), detail)
+        print("injuries (EPA/play; offense negative = worse, defense positive = allows more):")
+        for team in sorted({d["team"] for d in detail}):
+            rows_t = [d for d in detail if d["team"] == team]
+            top = sorted((d for d in rows_t if d["impact"]), key=lambda d: -abs(d["impact"]))[:3]
+            no_est = sum(d["impact"] is None for d in rows_t)
+            print(f"  {team:<16} off {off_offsets.get(team, 0):+.3f}  def {def_offsets.get(team, 0):+.3f}  "
+                  f"({len(rows_t)} listed{f', {no_est} OL/unestimated' if no_est else ''})  biggest: "
+                  + ", ".join(f"{d['player']} {d['impact']:+.3f}" for d in top))
 
     done = [g for g in games if g.get("completed")]
     model = TotalsModel(game_rows, done, args.alpha, drives=drives, fcs_weight=args.fcs_weight,

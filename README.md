@@ -84,13 +84,28 @@ What goes into a projection:
   (`--huber-k 1.5`, a Huber fit), so a 63-7 win over a bad team moves a rating less than its
   raw margin would. Garbage time is already excluded.
 - **Injuries:** `--injuries file.csv` with columns `team,player,status,side,epa_delta`
-  (template: `injuries.example.csv`). The API has no injury data, so you fill this in from team
-  availability reports. `status` is out/doubtful/questionable/probable or a 0-1 chance of missing
-  the game. For offensive players the impact is estimated from season EPA and usage share against
-  a backup-level player at the position. Defensive players have no per-player EPA, so give
-  `epa_delta` yourself (EPA/play the defense allows with the player out, e.g. `0.02` for a top
-  pass rusher). The `injury_adj` column on the board shows how many points the list moved
-  each total.
+  (optional `player_id`, `position`; template: `injuries.example.csv`). The CFBD API has no
+  injury data. For Big Ten games, pull the conference availability report automatically:
+
+  ```bash
+  python -m cfb_stats.availability --week 5      # -> data/2026/injuries_week5.csv
+  python -m cfb_stats.totals --week 5 --injuries data/2026/injuries_week5.csv
+  ```
+
+  It reads the public feed behind bigten.org's availability page, skips Available and Exempt
+  players (Exempt players aren't required to be reported) and kickers/punters, and matches
+  players to CFBD by jersey number. `status` is out/doubtful/questionable/probable/game time
+  decision/out - (1st half), or a 0-1 chance of missing the game.
+  - Offensive skill players: estimated from season EPA and usage share against a backup-level
+    player at the position (calibrated on QB absences, see below).
+  - Defenders: estimated from their share of the team's defensive production (tackles, TFLs,
+    sacks, pass breakups, INTs). This scale is **not calibrated**, since there is no historical
+    availability data to fit it to, so it is kept small.
+  - Offensive linemen: no individual stats, so they get no estimate unless you give
+    `epa_delta`.
+
+  `epa_delta` overrides any estimate. `injury_impacts_week<N>.csv` lists each player's
+  effect, and the board's `injury_adj` column shows how many points injuries moved each total.
 
 **Read the backtest before betting.** Walk-forward (each week projected only from earlier
 games), weeks 4+, games where both teams have 3+ games of data:
