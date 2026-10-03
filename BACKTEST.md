@@ -217,10 +217,32 @@ Worse in every season. Red zone and turnover rates swing on a handful of plays, 
 that's real is already in EPA (which counts TDs vs FGs and turnovers), so the extra terms mostly
 add noise. Off by default.
 
+## Rest, travel, altitude and game script
+
+Adjustments to the model's backtest totals, fit on two seasons and tested on the third
+(`scripts/situational_backtest.py`, no API calls once the backtests are cached):
+
+| Added factor | RMSE 2023 / 2024 / 2025 | Every edge >= 3 | P4 card |
+| --- | --- | --- | --- |
+| None (current model) | 16.38 / 17.03 / 15.46 | 53.0% | 114-88 (56.4%) |
+| Rest: short weeks, off a bye | 16.39 / 17.05 / 15.48 | 52.5% | 111-90 |
+| Travel distance, time zones | 16.38 / 17.00 / 15.47 | 53.2% | 113-89 |
+| Altitude | 16.39 / 17.03 / 15.47 | 52.9% | 113-89 |
+| Game script (spread over 14) | 16.37 / 17.00 / 15.45 | 52.5% | 110-92 |
+| All four | 16.39 / 17.00 / 15.51 | 52.6% | 109-94 |
+
+- Game script is a real model bias: with spreads over 14 the model's totals ran low by about
+  1.6 points per extra 10 points of spread. The market didn't share it, and correcting it didn't
+  help the picks.
+- The model ran slightly low when the road team traveled far (about 2.5 points per 1,000 miles);
+  correcting it didn't help the picks.
+- Rest and altitude: no detectable effect (altitude covers only about 200 games).
+
+None is used.
+
 ## Not backtested
 
 - Defensive-player injury estimates and the Big Ten availability report import. There is no
   historical availability data to test against, so the defensive scale is uncalibrated and
   kept small.
-- Rest and travel, and altitude.
 - Weather forecasts (the backtest uses observed weather; Sunday forecasts are 6 days out).
