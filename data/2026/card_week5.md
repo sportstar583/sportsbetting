@@ -1,6 +1,6 @@
 # Week 5 card (2026)
 
-Generated 2026-10-03 04:03 UTC. Injuries: 7 Big Ten game reports (155 players), latest posted 2026-10-02 19:00:00.
+Generated 2026-10-03 04:10 UTC. Injuries: 7 Big Ten game reports (155 players), latest posted 2026-10-02 19:00:00.
 
 The 3 biggest over edges and 3 biggest under edges among Power 4 games. Backtest
 2023-2025: 114-88 (56.4%) against closing and opening totals; small sample, track it
