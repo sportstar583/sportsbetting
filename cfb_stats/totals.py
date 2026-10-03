@@ -220,6 +220,7 @@ class TotalsModel:
         for o in self.obs:
             self.games_played[o["offense"]].add(o["game_id"])
         self._fit_points(games)
+        self._consistency()
 
     def _weight(self, o):
         both_fbs = o["offense"] in self.fbs and o["defense"] in self.fbs
@@ -259,6 +260,38 @@ class TotalsModel:
         if injuries:
             exp_epa += self.off_offsets.get(off, 0.0) + self.def_offsets.get(dfn, 0.0)
         return exp_epa, self._plays(off, dfn)
+
+    def _consistency(self, prior_games=4):
+        """Game-to-game spread of each offense's and defense's EPA around what the ratings expected.
+
+        A residual is a game's EPA/play minus the matchup expectation; its spread per team is
+        shrunk toward the league's (prior_games pseudo-games), since a few games say little
+        about variance. Scaled by sqrt(plays) so short games don't look erratic.
+        """
+        e, i = self.epa, self.epa["intercept"]
+        res_off, res_def, allr = defaultdict(list), defaultdict(list), []
+        for o in self.obs:
+            ppa, plays = o["stats"].get("ppa"), o["stats"].get("plays")
+            if ppa is None or not plays:
+                continue
+            exp = e["off"].get(o["offense"], i) + e["def"].get(o["defense"], i) - i + e["hfa"] * o["home"]
+            r = (ppa - exp) * math.sqrt(plays / 60)
+            res_off[o["offense"]].append(r)
+            res_def[o["defense"]].append(r)
+            allr.append(r)
+        lg_var = statistics.pvariance(allr) if len(allr) > 1 else 0.0
+        shrink = lambda rs: (sum(x * x for x in rs) + lg_var * prior_games) / (len(rs) + prior_games)  # noqa: E731
+        self.lg_sd = math.sqrt(lg_var)
+        self.sd_off = {t: math.sqrt(shrink(rs)) for t, rs in res_off.items()}
+        self.sd_def = {t: math.sqrt(shrink(rs)) for t, rs in res_def.items()}
+
+    def volatility(self, home, away):
+        """Relative volatility of a game: 1 = league-typical, higher = less consistent teams."""
+        if not self.lg_sd:
+            return 1.0
+        sds = [self.sd_off.get(home, self.lg_sd), self.sd_def.get(away, self.lg_sd),
+               self.sd_off.get(away, self.lg_sd), self.sd_def.get(home, self.lg_sd)]
+        return math.sqrt(sum(x * x for x in sds) / 4) / self.lg_sd
 
     def _finish_terms(self, off, dfn, exp_plays):
         """Extra regression columns: red zone and turnover matchup, scaled by volume."""
@@ -400,6 +433,7 @@ def board(model, games, lines, min_games=3, spread_model=None, weather=None):
                for k, v in zip(("run_rate", "exp_rush_epa", "exp_pass_epa"), model.matchup_detail(o, d, hh))},
             "edge": round(proj - total, 1),
             "pick": "OVER" if proj > total else "UNDER",
+            "volatility": round(model.volatility(home, away), 3),
             "games_home": n_home,
             "games_away": n_away,
             "enough_data": min(n_home, n_away) >= min_games,

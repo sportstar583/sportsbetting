@@ -240,6 +240,29 @@ Adjustments to the model's backtest totals, fit on two seasons and tested on the
 
 None is used.
 
+## Team consistency
+
+How much each offense's and defense's game-by-game EPA swings around what the opponent-adjusted
+ratings expected, shrunk toward the league norm. The board's `volatility` column combines the
+four units in a game (1.0 = typical; most games fall between 0.88 and 1.11).
+
+| Games by consistency | Model avg miss | Market avg miss | Every edge >= 3 |
+| --- | --- | --- | --- |
+| Most consistent 25% | 12.5 | 12.0 | 50.5% |
+| 25-50% | 12.9 | 12.6 | 54.9% |
+| 50-75% | 13.3 | 13.0 | 52.8% |
+| Least consistent 25% | 13.4 | 13.0 | 53.9% |
+
+| P4 weekly card, 2023-2025 | Record |
+| --- | --- |
+| Ranked by edge (current) | 114-88 (56.4%) |
+| Ranked by edge / volatility | 106-96 (52.5%) |
+| Consistent-team games only | 100-98 (50.5%) |
+| Inconsistent-team games only | 96-90 (51.6%) |
+
+Inconsistent teams are a little harder to predict, but equally so for the market, and using
+consistency to choose picks made the card worse. Shown on the board for reference only.
+
 ## Not backtested
 
 - Defensive-player injury estimates and the Big Ten availability report import. There is no

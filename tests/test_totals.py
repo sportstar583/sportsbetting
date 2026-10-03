@@ -178,6 +178,16 @@ class TotalsTests(unittest.TestCase):
         self.assertEqual((lg_rz, lg_to), (5.0, 0.25))
 
 
+    def test_volatility(self):
+        games, rows = synthetic_season()
+        # Make A's offense erratic: alternate big over- and under-performances.
+        for i, r in enumerate(x for x in rows if x["team"] == "A"):
+            r["offense"] = dict(r["offense"], ppa=r["offense"]["ppa"] + (0.4 if i % 2 else -0.4))
+        m = TotalsModel(rows, games, alpha=10)
+        self.assertGreater(m.sd_off["A"], m.sd_off["B"])
+        self.assertGreater(m.volatility("A", "B"), m.volatility("C", "D"))
+
+
 class InjuryTests(unittest.TestCase):
     def setUp(self):
         season = [
