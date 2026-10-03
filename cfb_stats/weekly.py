@@ -4,11 +4,12 @@
   python -m cfb_stats.weekly --week 6
 
 Steps:
-  1. Find the week (first regular-season week with unplayed games).
+  1. Find the week (first regular-season week with a game that hasn't kicked off).
   2. Pull Big Ten availability reports, keeping only reports for games actually played that
      week, so an old report from last week is never applied to this week's games.
   3. Build the totals board (data/<year>/totals_week<N>.csv) with those injuries.
-  4. Write the weekly card to data/<year>/card_week<N>.md and print it: the biggest over and
+  4. Note if last week's advanced stats aren't loaded yet (e.g. very early Sunday).
+  5. Write the weekly card to data/<year>/card_week<N>.md and print it: the biggest over and
      under edges among Power 4 games, the strategy with the best backtest (see BACKTEST.md).
 """
 
@@ -50,6 +51,23 @@ def current_injuries(client, year, week, out_dir):
         w.writerows(rows)
     latest = max(f"{r.get('publishDate')} {r.get('postedTime')}" for r in current)
     return path, f"Injuries: {len(current)} Big Ten game reports ({len(rows)} players), latest posted {latest}."
+
+
+def stats_freshness(client, year, week):
+    """Note if last week's advanced stats aren't loaded yet (ratings would miss those games)."""
+    prev = week - 1
+    if prev < 1:
+        return ""
+    done = {g["id"] for g in week_games(client, year, prev) if g.get("completed")
+            and "fbs" in (g.get("homeClassification"), g.get("awayClassification"))}
+    if not done:
+        return ""
+    have = {r["gameId"] for r in client.game_advanced_stats(year, prev, "regular", True)}
+    missing = len(done - have)
+    if missing / len(done) > 0.1:
+        return (f" WARNING: advanced stats are missing for {missing} of {len(done)} completed week {prev} "
+                f"games, so ratings don't include them yet. Re-run later for a full update.")
+    return ""
 
 
 def card_markdown(rows, week, year, n, injury_note):
@@ -117,6 +135,7 @@ def main(argv=None):
     with contextlib.redirect_stdout(io.StringIO()):
         totals.main(board_args)
 
+    inj_note += stats_freshness(client, args.year, week)
     with open(os.path.join(out_dir, f"totals_week{week}.csv")) as f:
         rows = list(csv.DictReader(f))
     md = card_markdown(rows, week, args.year, args.card, inj_note)

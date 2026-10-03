@@ -54,16 +54,17 @@ class CollectTests(unittest.TestCase):
         self.assertEqual(default_year(datetime.date(2026, 3, 1)), 2025)
 
     def test_upcoming_week_skips_stale_unplayed_games(self):
-        now = datetime.datetime(2026, 10, 5, 13, 47, tzinfo=datetime.timezone.utc)  # a Monday
         games = [
             {"week": 2, "completed": False, "startDate": "2026-09-12T16:00:00.000Z"},  # postponed
             {"week": 5, "completed": True, "startDate": "2026-10-03T16:00:00.000Z"},
-            {"week": 5, "completed": False, "startDate": "2026-10-04T02:00:00.000Z"},  # late, not final yet
+            {"week": 5, "completed": False, "startDate": "2026-10-04T02:00:00.000Z"},  # late game
             {"week": 6, "completed": False, "startDate": "2026-10-10T16:00:00.000Z"},
         ]
-        self.assertEqual(upcoming_week(games, now), 5)
-        games[2]["completed"] = True
-        self.assertEqual(upcoming_week(games, now), 6)
+        utc = datetime.timezone.utc
+        # Saturday afternoon: the late week 5 game hasn't kicked off yet.
+        self.assertEqual(upcoming_week(games, datetime.datetime(2026, 10, 3, 20, 0, tzinfo=utc)), 5)
+        # Sunday morning: it has kicked off (maybe not marked final yet), so it's week 6.
+        self.assertEqual(upcoming_week(games, datetime.datetime(2026, 10, 4, 13, 47, tzinfo=utc)), 6)
 
     def test_build_tables(self):
         tables = build_tables(p4_teams(FBS), SEASON, ADVANCED, GAMES)

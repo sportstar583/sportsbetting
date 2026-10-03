@@ -71,7 +71,9 @@ Pulls this week's Big Ten availability reports (only for games actually played t
 builds the totals board with those injuries, and writes `data/<year>/card_week<N>.md`: the 3
 biggest over edges and 3 biggest under edges among Power 4 games, the strategy with the best
 backtest (114-88 over 2023-2025, see [BACKTEST.md](BACKTEST.md)). Best run twice a week:
-early in the week when lines open, and again on Friday after availability reports.
+Sunday morning, after new lines go up Saturday night and Saturday's results are in, and again
+on Friday night after availability reports. If last week's advanced stats aren't loaded yet,
+the card says so.
 
 ### Over/under board
 

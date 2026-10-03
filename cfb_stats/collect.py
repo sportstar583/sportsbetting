@@ -52,13 +52,14 @@ def default_year(today=None):
 
 
 def upcoming_week(games, now=None):
-    """First regular-season week with a game still to be played.
+    """First regular-season week with a game that hasn't kicked off yet.
 
-    Ignores unfinished games whose kickoff passed more than 2 days ago (postponed or
-    canceled games stay "not completed" forever and would otherwise pin an old week).
+    Uses kickoff time rather than the "completed" flag: postponed or canceled games stay
+    "not completed" forever, and on Sunday morning a late Saturday game may not be marked
+    final yet; neither should hold the card on a week that's already been played.
     """
     now = now or datetime.datetime.now(datetime.timezone.utc)
-    cutoff = now - datetime.timedelta(days=2)
+    cutoff = now
     weeks = []
     for g in games:
         if g.get("completed") or g.get("week") is None:
