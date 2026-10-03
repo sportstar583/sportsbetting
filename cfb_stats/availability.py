@@ -82,6 +82,14 @@ def match_player(team, number, name, rosters):
     return by_num[0]["id"] if len(by_num) == 1 else None
 
 
+def all_rosters(client, year, teams):
+    """{team: roster} for the given teams in one API call (the free tier allows 1,000 a month)."""
+    by_team = {}
+    for p in client.get("/roster", year=year, classification="fbs"):
+        by_team.setdefault(p.get("team"), []).append(p)
+    return {t: by_team.get(t, []) for t in teams}
+
+
 def entries(reports, rosters, teams_filter=None):
     """Report rows -> injury rows, one per non-available player."""
     out = []
@@ -121,7 +129,7 @@ def main(argv=None):
     client = CFBDClient(api_key=args.api_key)
     reports = fetch_reports(args.conf)
     teams = sorted({b.get("teamDisplayName") for r in reports for b in r.get("games") or []})
-    rosters = {t: client.get("/roster", year=args.year, team=t) for t in teams}
+    rosters = all_rosters(client, args.year, teams)
     rows = entries(reports, rosters)
 
     week = args.week

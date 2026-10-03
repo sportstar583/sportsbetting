@@ -151,9 +151,37 @@ same. The market already moves on QB news.
 
 Source: `data/<year>/totals_backtest_qb_summary.csv`, per game in `totals_backtest_qb_out.csv`.
 
+## Weather
+
+Game-time weather (Open-Meteo archive) for every backtest game, 2023-2025. Reproduce with
+`python -m cfb_stats.weather --backtest`.
+
+| Wind at kickoff | Games | Actual minus model | Actual minus market |
+| --- | --- | --- | --- |
+| Under 10 mph | 2,616 | +0.6 | +0.9 |
+| 10-15 mph | 514 | -1.7 | +0.2 |
+| 15+ mph | 84 | -3.6 | +0.8 |
+
+The model's totals ran high in wind (about 0.75 points per mph over 10 mph); the market's
+didn't, so books already price it. Rain and cold estimates were too noisy to use.
+
+Wind correction, fit on two seasons and tested on the third:
+
+| Season | Wind coef | RMSE before / after | Edge >= 3 before / after | P4 card before / after |
+| --- | --- | --- | --- | --- |
+| 2023 | -0.61 | 16.38 / 16.32 | 316-268 / 312-256 | 35-29 / 33-30 |
+| 2024 | -1.07 | 17.03 / 17.09 | 333-284 / 315-284 | 40-29 / 40-29 |
+| 2025 | -0.65 | 15.46 / 15.40 | 261-254 / 262-243 | 39-30 / 40-29 |
+
+Slightly more accurate in two of three seasons, no change in betting results. It's applied
+(-0.75 per mph over 10) because it removes a known bias, not because it finds edges.
+
+Source: `data/weather_backtest.csv`.
+
 ## Not backtested
 
 - Defensive-player injury estimates and the Big Ten availability report import. There is no
   historical availability data to test against, so the defensive scale is uncalibrated and
   kept small.
-- Weather, rest and travel, and prior-season ratings carried into early weeks.
+- Rest and travel, altitude, and prior-season ratings carried into early weeks.
+- Weather forecasts (the backtest uses observed weather; Sunday forecasts are 6 days out).

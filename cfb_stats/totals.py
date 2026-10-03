@@ -46,7 +46,7 @@ from collections import defaultdict
 
 import numpy as np
 
-from . import adjust, injuries as inj
+from . import adjust, injuries as inj, weather as wx_mod
 from .collect import P4_CONFERENCES, default_year, upcoming_week, write_csv
 
 DEFAULT_MIN_EDGE = 3.0
@@ -272,10 +272,12 @@ def _ats(margin, spread):
     return margin + spread
 
 
-def board(model, games, lines, min_games=3, spread_model=None):
+def board(model, games, lines, min_games=3, spread_model=None, weather=None):
     """One row per game with a market total; spread columns too when there's a spread.
 
-    Spread columns come from spread_model (a lightly shrunk model) when given."""
+    Spread columns come from spread_model (a lightly shrunk model) when given. weather
+    ({game id: conditions}, see cfb_stats.weather) adds a wind correction to the total."""
+    weather = weather or {}
     by_id = {g["id"]: g for g in games}
     rows = []
     for lr in lines:
@@ -285,10 +287,13 @@ def board(model, games, lines, min_games=3, spread_model=None):
             continue
         home, away = g["homeTeam"], g["awayTeam"]
         n_home, n_away = len(model.games_played[home]), len(model.games_played[away])
+        wx = weather.get(g["id"])
+        w_adj = wx_mod.total_adjustment(wx)
         hp, ap = model.project(g)
-        healthy = sum(model.project(g, injuries=False))
+        hp, ap = hp + w_adj / 2, ap + w_adj / 2
+        healthy = sum(model.project(g, injuries=False)) + w_adj
         proj = hp + ap
-        no_matchup = sum(model.project(g, use_matchup=False))
+        no_matchup = sum(model.project(g, use_matchup=False)) + w_adj
         h = 0 if g.get("neutralSite") else 1
         spread, spread_open = consensus_spread(lr)
         shp, sap = spread_model.project(g) if spread_model else (hp, ap)
@@ -315,6 +320,12 @@ def board(model, games, lines, min_games=3, spread_model=None):
             "exp_epa_away": round(model.features(away, home, -h, True)[0], 3),
             "exp_epa_home": round(model.features(home, away, h, True)[0], 3),
             "matchup_adj": round(proj - no_matchup, 1),
+            "weather_adj": round(w_adj, 1),
+            "wind_mph": wx.get("wind_mph") if wx else None,
+            "gust_mph": wx.get("gust_mph") if wx else None,
+            "precip_in": wx.get("precip_in") if wx else None,
+            "temp_f": wx.get("temp_f") if wx else None,
+            "dome": wx.get("dome") if wx else None,
             **{f"{k}_{side}": (None if v is None else round(v, 3))
                for side, (o, d, hh) in (("away", (away, home, -h)), ("home", (home, away, h)))
                for k, v in zip(("run_rate", "exp_rush_epa", "exp_pass_epa"), model.matchup_detail(o, d, hh))},
@@ -716,6 +727,7 @@ def main(argv=None):
     p.add_argument("--api-key", default=None)
     p.add_argument("--alpha", type=float, default=TOTALS_ALPHA)
     p.add_argument("--no-tempo", action="store_true", help="use plays/game instead of drive-based tempo")
+    p.add_argument("--no-weather", action="store_true", help="skip the Open-Meteo forecast and wind correction")
     p.add_argument("--spread-alpha", type=float, default=SPREAD_ALPHA, help="ridge penalty for the spread model")
     p.add_argument("--matchup", type=float, default=DEFAULT_MATCHUP,
                    help="weight of the run/pass matchup split in totals (0 = overall EPA only)")
@@ -802,7 +814,14 @@ def main(argv=None):
     upcoming = [g for g in games if g.get("week") == week and not g.get("completed")]
     spread_model = TotalsModel(game_rows, done, args.spread_alpha, drives=drives, fcs_weight=args.fcs_weight,
                                huber_k=args.huber_k or None, off_offsets=off_offsets, def_offsets=def_offsets)
-    rows = board(model, upcoming, lines, args.min_games, spread_model)
+    weather = {}
+    if not args.no_weather:
+        try:
+            weather = wx_mod.game_weather(upcoming, client.get("/venues"))
+            print(f"weather: forecasts for {len(weather)} of {len(upcoming)} games")
+        except Exception as e:  # weather is optional; never block the board on it
+            print(f"weather: forecast unavailable ({e}); no wind correction applied")
+    rows = board(model, upcoming, lines, args.min_games, spread_model, weather)
 
     path = os.path.join(out_dir, f"totals_week{week}.csv")
     write_csv(path, rows)
