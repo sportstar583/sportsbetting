@@ -198,7 +198,7 @@ def tempo(drives):
 class TotalsModel:
     def __init__(self, game_rows, games, alpha=TOTALS_ALPHA, drives=None,
                  fcs_weight=1.0, huber_k=None, off_offsets=None, def_offsets=None, matchup=0.0, priors=None,
-                 finishing=False, fixed_hfa=False):
+                 finishing=False, fixed_hfa=False, form=0.0, form_games=3, form_prior=2.0):
         self.fbs = fbs_teams(games)
         self.fcs_weight = fcs_weight
         weight = self._weight if fcs_weight != 1.0 and self.fbs else None
@@ -224,6 +224,8 @@ class TotalsModel:
         self.games_played = defaultdict(set)
         for o in self.obs:
             self.games_played[o["offense"]].add(o["game_id"])
+        self.form = form
+        self.form_off, self.form_def = self._recent_form(games, form_games, form_prior) if form else ({}, {})
         self._fit_points(games)
         self._consistency()
 
@@ -251,7 +253,27 @@ class TotalsModel:
         r = self.run_off.get(off, self.run_lg) + self.run_def.get(dfn, self.run_lg) - self.run_lg
         return min(max(r, 0.2), 0.8)
 
-    def features(self, off, dfn, home, injuries=False, use_matchup=True):
+    def _recent_form(self, games, n_recent, prior):
+        """Each offense's and defense's recent EPA/play vs what its season rating expected.
+
+        A team's last n_recent games (by kickoff) are compared with the matchup expectation; the
+        mean residual is shrunk toward 0 by `prior` pseudo-games. Offense > 0 = hotter than its
+        rating, defense > 0 = allowing more than its rating (cold).
+        """
+        e, i = self.epa, self.epa["intercept"]
+        start = {g["id"]: (g.get("startDate") or "", g.get("week") or 0) for g in games}
+        res_off, res_def = defaultdict(list), defaultdict(list)
+        for o in sorted(self.obs, key=lambda o: start.get(o["game_id"], ("", 0))):
+            ppa = o["stats"].get("ppa")
+            if ppa is None:
+                continue
+            exp = e["off"].get(o["offense"], i) + e["def"].get(o["defense"], i) - i + e["hfa"] * o["home"]
+            res_off[o["offense"]].append(ppa - exp)
+            res_def[o["defense"]].append(ppa - exp)
+        mean = lambda rs: sum(rs[-n_recent:]) / (len(rs[-n_recent:]) + prior)  # noqa: E731
+        return {t: mean(rs) for t, rs in res_off.items()}, {t: mean(rs) for t, rs in res_def.items()}
+
+    def features(self, off, dfn, home, injuries=False, use_matchup=True, form=False):
         exp_epa = self._expected("epa", off, dfn, home)
         if self.matchup and use_matchup:
             # Run/pass matchup: a strong run offense against a weak run defense gets credit
@@ -264,6 +286,8 @@ class TotalsModel:
             exp_epa += self.matchup * ((split - lvl) - (exp_epa - self.epa["intercept"]))
         if injuries:
             exp_epa += self.off_offsets.get(off, 0.0) + self.def_offsets.get(dfn, 0.0)
+        if form and self.form:
+            exp_epa += self.form * (self.form_off.get(off, 0.0) + self.form_def.get(dfn, 0.0))
         return exp_epa, self._plays(off, dfn)
 
     def _consistency(self, prior_games=4):
@@ -322,7 +346,7 @@ class TotalsModel:
         self.coef, *_ = np.linalg.lstsq(np.array(X) * sw[:, None], np.array(y, dtype=float) * sw, rcond=None)
 
     def team_points(self, off, dfn, home, injuries=True, use_matchup=True):
-        exp_epa, exp_plays = self.features(off, dfn, home, injuries, use_matchup)
+        exp_epa, exp_plays = self.features(off, dfn, home, injuries, use_matchup, form=True)
         x = (1.0, exp_plays, exp_plays * exp_epa) + self._finish_terms(off, dfn, exp_plays)
         return float(self.coef @ np.array(x))
 
