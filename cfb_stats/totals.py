@@ -22,7 +22,10 @@ its expected EPA by a lot, so a rout moves a rating less than its raw margin wou
 
 Injuries: --injuries <csv>, see cfb_stats/injuries.py.
 
-Backtest before trusting edges (--backtest). Results on 2025 are in the README.
+Spreads: the board also has projected margins (proj_margin, spread_edge) from a lightly
+shrunk model (--spread-alpha). The backtest found no edge against the spread; see BACKTEST.md.
+
+Backtest before trusting edges (--backtest). Results are in BACKTEST.md.
 
 Usage:
   python -m cfb_stats.totals                      # this week's board
@@ -45,6 +48,9 @@ DEFAULT_MIN_EDGE = 3.0
 # Heavier ridge penalty than the rating tables use: on the 2025 backtest it cut total RMSE
 # from 17.1 to 15.9 and kept early-season projections from running to extremes.
 TOTALS_ALPHA = 1000.0
+# Spreads need far less shrinkage than totals: at alpha 1000 projected margins vary about
+# half as much as market spreads. 25 gave the lowest margin RMSE on 2024 and 2025.
+SPREAD_ALPHA = 25.0
 DEFAULT_FCS_WEIGHT = 0.5
 DEFAULT_HUBER_K = 1.5
 GAME_SECONDS = 3600
@@ -198,8 +204,23 @@ def consensus_total(line_row):
             ", ".join(sorted({l["provider"] for l in lines if l.get("overUnder") is not None})))
 
 
-def board(model, games, lines, min_games=3):
-    """One row per game with a market total."""
+def consensus_spread(line_row):
+    """Median closing and opening home spread (negative = home favored)."""
+    lines = line_row.get("lines") or []
+    close = [l["spread"] for l in lines if l.get("spread") is not None]
+    opens = [l["spreadOpen"] for l in lines if l.get("spreadOpen") is not None]
+    return (statistics.median(close) if close else None, statistics.median(opens) if opens else None)
+
+
+def _ats(margin, spread):
+    """Home result against the spread: >0 home covers, <0 away covers, 0 push."""
+    return margin + spread
+
+
+def board(model, games, lines, min_games=3, spread_model=None):
+    """One row per game with a market total; spread columns too when there's a spread.
+
+    Spread columns come from spread_model (a lightly shrunk model) when given."""
     by_id = {g["id"]: g for g in games}
     rows = []
     for lr in lines:
@@ -213,6 +234,11 @@ def board(model, games, lines, min_games=3):
         healthy = sum(model.project(g, injuries=False))
         proj = hp + ap
         h = 0 if g.get("neutralSite") else 1
+        spread, spread_open = consensus_spread(lr)
+        shp, sap = spread_model.project(g) if spread_model else (hp, ap)
+        margin = shp - sap
+        done = g.get("homePoints") is not None and g.get("awayPoints") is not None
+        spread_edge = None if spread is None else _ats(margin, spread)
         rows.append({
             "game_id": g["id"],
             "week": g.get("week"),
@@ -237,7 +263,15 @@ def board(model, games, lines, min_games=3):
             "games_home": n_home,
             "games_away": n_away,
             "enough_data": min(n_home, n_away) >= min_games,
-            "actual_total": (g["homePoints"] + g["awayPoints"]) if g.get("homePoints") is not None and g.get("awayPoints") is not None else None,
+            "actual_total": (g["homePoints"] + g["awayPoints"]) if done else None,
+            # Spread: market_spread is the home line (-7 = home favored by 7).
+            "market_spread": spread,
+            "market_spread_open": spread_open,
+            "proj_margin": round(margin, 1),
+            "spread_edge": None if spread_edge is None else round(spread_edge, 1),
+            "spread_pick": None if spread_edge is None else (
+                f"{home} {spread:+g}" if spread_edge > 0 else f"{away} {-spread:+g}"),
+            "actual_margin": (g["homePoints"] - g["awayPoints"]) if done else None,
         })
     rows.sort(key=lambda r: -abs(r["edge"]))
     return rows
@@ -397,6 +431,77 @@ def summarize_backtest(results, thresholds=(0, 2, 3, 4, 5, 7, 10)):
     return out, open_rows
 
 
+def _ats_record(results, t, line_key="market_spread"):
+    w = l = p = 0
+    for r in results:
+        line = r.get(line_key)
+        if line is None or r.get("actual_margin") is None:
+            continue
+        edge = _ats(r["proj_margin"], line)
+        if abs(edge) < t or edge == 0:
+            continue
+        res = _ats(r["actual_margin"], line)
+        if res == 0:
+            p += 1
+        elif (res > 0) == (edge > 0):
+            w += 1
+        else:
+            l += 1
+    return w, l, p
+
+
+def summarize_spreads(results, thresholds=(0, 2, 3, 5, 7, 10)):
+    """Against-the-spread results at the closing and opening line."""
+    rows = [r for r in results if r.get("market_spread") is not None and r.get("actual_margin") is not None]
+    a = np.array([r["actual_margin"] for r in rows])
+    p = np.array([r["proj_margin"] for r in rows])
+    m = -np.array([r["market_spread"] for r in rows])  # market's expected home margin
+    print(f"\nSPREADS: {len(rows)} games with a spread")
+    print(f"margin RMSE model {math.sqrt(((a - p) ** 2).mean()):.1f}, market {math.sqrt(((a - m) ** 2).mean()):.1f}")
+    print(f"corr(model edge, actual vs spread) = {np.corrcoef(p - m, a - m)[0, 1]:+.3f}")
+    out = []
+    for key, label in (("market_spread", "close"), ("market_spread_open", "open")):
+        if label == "open":
+            op = [r for r in rows if r.get("market_spread_open") is not None]
+            if op:
+                e = np.array([r["proj_margin"] + r["market_spread_open"] for r in op])
+                mv = np.array([r["market_spread_open"] - r["market_spread"] for r in op])  # >0: line moved toward home
+                print(f"corr(model edge vs open, line move toward home) = {np.corrcoef(e, mv)[0, 1]:+.3f}")
+        print(f"  vs {label}: " + "  ".join(
+            f"|e|>={t}: {w + l} {w / (w + l):.1%}" for t in thresholds
+            for w, l, _ in [_ats_record(rows, t, key)] if w + l))
+        for t in thresholds:
+            w, l, pu = _ats_record(rows, t, key)
+            n = w + l
+            if n:
+                out.append({"line": label, "min_edge": t, "bets": n + pu, "wins": w, "losses": l, "pushes": pu,
+                            "win_pct": round(w / n, 3), "roi_110": round((w * 100 / 110 - l) / n, 3)})
+    return out
+
+
+def compare_spread_variants(results):
+    rows = []
+    print(f"\n{'spreads: variant':<20} {'games':>5} {'RMSE':>5}  {'|e|>=3':>13} {'|e|>=5':>13} {'|e|>=7':>13}")
+    for name, res in results.items():
+        res = [r for r in res if r.get("market_spread") is not None and r.get("actual_margin") is not None]
+        a = np.array([r["actual_margin"] for r in res])
+        p = np.array([r["proj_margin"] for r in res])
+        rmse = math.sqrt(((a - p) ** 2).mean())
+        row, cells = {"variant": name, "games": len(res), "margin_rmse": round(rmse, 2)}, []
+        for t in (3, 5, 7):
+            w, l, _ = _ats_record(res, t)
+            pct = w / (w + l) if w + l else float("nan")
+            row[f"win_pct_edge{t}"], row[f"bets_edge{t}"] = round(pct, 3), w + l
+            cells.append(f"{w + l:>4} {pct:>6.1%}")
+        print(f"{name:<20} {len(res):>5} {rmse:>5.1f}  " + "  ".join(f"{c:>13}" for c in cells))
+        rows.append(row)
+    mkt = [r for r in next(iter(results.values())) if r.get("market_spread") is not None and r.get("actual_margin") is not None]
+    a = np.array([r["actual_margin"] for r in mkt])
+    m = -np.array([r["market_spread"] for r in mkt])
+    print(f"{'market (closing)':<20} {len(mkt):>5} {math.sqrt(((a - m) ** 2).mean()):>5.1f}")
+    return rows
+
+
 def _qb_season(passing):
     """(team, player id) -> {attempts, ppa, games, name} from QB-game rows."""
     agg = {}
@@ -508,6 +613,7 @@ def main(argv=None):
     p.add_argument("--api-key", default=None)
     p.add_argument("--alpha", type=float, default=TOTALS_ALPHA)
     p.add_argument("--no-tempo", action="store_true", help="use plays/game instead of drive-based tempo")
+    p.add_argument("--spread-alpha", type=float, default=SPREAD_ALPHA, help="ridge penalty for the spread model")
     p.add_argument("--fcs-weight", type=float, default=DEFAULT_FCS_WEIGHT,
                    help="weight of games vs FCS opponents in the fit (1 = full)")
     p.add_argument("--huber-k", type=float, default=DEFAULT_HUBER_K,
@@ -527,21 +633,33 @@ def main(argv=None):
 
     if args.backtest:
         data = load_season(client, args.year)
-        variants = dict(VARIANTS, chosen=chosen)
+        spread_variants_cfg = {f"spread a{a:g}": dict(chosen, alpha=a) for a in (25, 75, 150)}
+        variants = dict(VARIANTS, chosen=chosen, spread_model=dict(chosen, alpha=args.spread_alpha),
+                        **spread_variants_cfg)
         results = backtest(data, min_games=args.min_games, variants=variants)
-        comparison = compare_variants(results)
+        comparison = compare_variants({k: v for k, v in results.items() if k in VARIANTS or k == "chosen"})
         print("\nchosen settings:", chosen)
         summary, open_summary = summarize_backtest(results["chosen"])
         qb = qb_out_backtest(data, min_games=args.min_games, model_kw=chosen)
         qb_summary = summarize_qb_backtest(qb)
+        spread_variants = compare_spread_variants(results)
+        spread_summary = summarize_spreads(results["spread_model"])
+        write_csv(os.path.join(out_dir, "spreads_backtest_variants.csv"), spread_variants)
+        write_csv(os.path.join(out_dir, "spreads_backtest_summary.csv"), spread_summary)
         write_csv(os.path.join(out_dir, "totals_backtest_open.csv"), open_summary)
         if qb_summary:
             write_csv(os.path.join(out_dir, "totals_backtest_qb_summary.csv"), qb_summary)
-        write_csv(os.path.join(out_dir, "totals_backtest_games.csv"), results["chosen"])
+        spread_cols = ("market_spread", "market_spread_open", "proj_margin", "spread_edge", "spread_pick", "actual_margin")
+        write_csv(os.path.join(out_dir, "totals_backtest_games.csv"),
+                  [{k: v for k, v in r.items() if k not in spread_cols} for r in results["chosen"]])
+        write_csv(os.path.join(out_dir, "spreads_backtest_games.csv"),
+                  [{k: r[k] for k in ("game_id", "week", "away", "home", "neutral", "p4_game") + spread_cols}
+                   for r in results["spread_model"]])
         write_csv(os.path.join(out_dir, "totals_backtest_summary.csv"), summary)
         write_csv(os.path.join(out_dir, "totals_backtest_variants.csv"), comparison)
         if qb:
-            write_csv(os.path.join(out_dir, "totals_backtest_qb_out.csv"), qb)
+            write_csv(os.path.join(out_dir, "totals_backtest_qb_out.csv"),
+                      [{k: v for k, v in r.items() if k not in spread_cols} for r in qb])
         return
 
     games = [dict(g, seasonType="regular") for g in client.games(args.year, "regular")]
@@ -572,7 +690,9 @@ def main(argv=None):
                         huber_k=args.huber_k or None, off_offsets=off_offsets, def_offsets=def_offsets)
     lines = client.lines(args.year, week, "regular")
     upcoming = [g for g in games if g.get("week") == week and not g.get("completed")]
-    rows = board(model, upcoming, lines, args.min_games)
+    spread_model = TotalsModel(game_rows, done, args.spread_alpha, drives=drives, fcs_weight=args.fcs_weight,
+                               huber_k=args.huber_k or None, off_offsets=off_offsets, def_offsets=def_offsets)
+    rows = board(model, upcoming, lines, args.min_games, spread_model)
 
     path = os.path.join(out_dir, f"totals_week{week}.csv")
     write_csv(path, rows)
@@ -583,6 +703,9 @@ def main(argv=None):
         inj_note = f"  (injuries {r['injury_adj']:+.1f})" if r["injury_adj"] else ""
         print(f"  {r['away']:>20} @ {r['home']:<20} mkt {r['market_total']:>5}  proj {r['proj_total']:>5}  "
               f"{r['pick']:<5} {r['edge']:+5.1f}{inj_note}")
+    print("\nspreads: projected margins are in the CSV (proj_margin, spread_edge) for reference only.")
+    print("  The backtest found no edge against the spread (49-51% at every threshold, 2024 and 2025),")
+    print("  and early-season margins are very noisy, so no spread picks are listed. See BACKTEST.md.")
 
 
 if __name__ == "__main__":

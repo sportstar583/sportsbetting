@@ -127,6 +127,10 @@ play (who actually played stands in for an injury report). The raw estimate over
 slightly worsened accuracy (RMSE 17.77 to 17.85) and nudged pick rate from 54.2% to 54.9%. Markets already
 move on QB news.
 
+The board also has projected margins against the spread (`proj_margin`, `spread_edge`),
+from a separately tuned, lightly shrunk model. The backtest found **no edge against the
+spread** (49-51% at every threshold in 2024 and 2025), so no spread picks are listed.
+
 Treat the board as a screen for numbers worth a closer look, not as a list of picks. Full
 results, including opening-line and QB-absence checks, are in [BACKTEST.md](BACKTEST.md).
 

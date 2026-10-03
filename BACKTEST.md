@@ -17,7 +17,8 @@ the median across books from the CFBD `/lines` endpoint. Breakeven at -110 is 52
 edges did not reliably beat closing totals: break-even to losing in 2025, winning in 2024,
 and about 53.6% across both (roughly 1,150 bets at edge >= 3), which is within normal luck
 of breakeven. It does predict which way lines move between open and close. Use the board as
-a screen for early-week numbers, not as a list of bets.
+a screen for early-week numbers, not as a list of bets. Against the spread it has no edge at
+all (49-51% at every threshold in both seasons).
 
 ## Accuracy (RMSE of the game total, points)
 
@@ -85,6 +86,48 @@ Out of sample the adjustment slightly worsened accuracy and slightly improved pi
 which is no clear effect either way. The market already moves on QB news.
 
 Source: `data/<year>/totals_backtest_qb_summary.csv`, per game in `totals_backtest_qb_out.csv`.
+
+## Against the spread
+
+Same walk-forward setup, using each team's projected points to get a projected margin
+(home minus away), compared with the median home spread. A pick is the side the model says
+covers; edge is how many points it disagrees with the line.
+
+**No edge against the spread at any setting.** The model's edge has essentially zero
+correlation with whether the favorite covers (-0.011 in 2025, 0.000 in 2024).
+
+Shrinkage matters a lot more for spreads than totals. The totals model (ridge penalty
+alpha=1000) projects margins that vary about half as much as market spreads, so it "picks"
+nearly every underdog. Less shrinkage is more accurate, but never close to the market:
+
+| Margin RMSE (points) | 2025 | 2024 |
+| --- | --- | --- |
+| Totals settings (alpha 1000) | 20.6 | 19.9 |
+| alpha 150 | 18.4 | 18.1 |
+| alpha 75 | 18.0 | 17.7 |
+| **alpha 25 (spread model)** | **17.6** | **17.4** |
+| Closing market | 15.1 | 15.3 |
+
+Spread model (alpha 25) against the line:
+
+| Edge >= | 2025 close | 2024 close | 2025 open | 2024 open |
+| --- | --- | --- | --- | --- |
+| 0 | 50.5% (1,098) | 49.5% (1,086) | 53.4% (612) | 49.9% (591) |
+| 3 | 50.3% (785) | 49.6% (762) | 53.3% (443) | 51.3% (411) |
+| 5 | 49.2% (608) | 50.2% (576) | 54.1% (338) | 52.5% (295) |
+| 7 | 49.5% (438) | 49.1% (377) | 52.4% (254) | 51.8% (197) |
+| 10 | 49.6% (250) | 48.5% (227) | 52.1% (146) | 53.9% (115) |
+
+(Win % with bets in parentheses, pushes excluded.) Against the opening spread, 2025 hit
+53-54% and lines moved toward the model (correlation 0.30), but 2024 was 50-54% with
+almost no line-movement signal (0.09). That is the same inconsistent pattern as totals.
+
+Even alpha 25 is overconfident early in the season. In week 5 of 2026 it projected margins
+like UMass by 38 over Eastern Michigan. So the board keeps projected margins in the CSV for
+reference but does not list spread picks.
+
+Source: `data/<year>/spreads_backtest_summary.csv`, `spreads_backtest_variants.csv`,
+per game in `spreads_backtest_games.csv`.
 
 ## Not backtested
 
