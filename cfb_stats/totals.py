@@ -431,8 +431,10 @@ def board(model, games, lines, min_games=3, spread_model=None, weather=None, tea
             "best_over_book": best_over_book,
             "best_under": best_under,
             "best_under_book": best_under_book,
-            "proj_away": round(ap, 1),
-            "proj_home": round(hp, 1),
+            # Score split uses the spread model's margin (the totals model's heavy shrinkage and
+            # free home field make its own margin unreliable: it only has to get the sum right).
+            "proj_away": round((proj - margin) / 2, 1),
+            "proj_home": round((proj + margin) / 2, 1),
             "proj_total": round(proj, 1),
             "injury_adj": round(proj - healthy, 1),
             "exp_plays_away": round(model._plays(away, home), 1),

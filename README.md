@@ -122,6 +122,9 @@ What goes into a projection:
 - **Team home field (spreads only):** on top of the league-wide home edge, each team's own home
   field (home minus road performance vs the model over 2023-2025, shrunk) is added to projected
   margins. It made margins more accurate in every season; stadium effects didn't help totals.
+- **Score split:** `proj_home`/`proj_away` split the projected total using the spread model's margin, so
+  the two always agree on who wins. (The totals model's own split isn't used: its heavy shrinkage and
+  free home field made it lean to the home team early in the season.)
 - **Weather:** game-time forecasts from Open-Meteo (free; the CFBD weather endpoint is a paid
   tier) for each stadium. Wind over 10 mph lowers the total by 0.75 points per mph. Wind, rain
   and temperature are shown on the board and in the card notes. Over 2023-2025 the model ran
