@@ -1,26 +1,26 @@
 team,player,prob_out,side,epa_delta,player_id,position,impact,note
-Penn State,Daryus Dixson,0.5,def,,5141411,CB,0.0012,2.5% of team defensive production
-Penn State,Koby Howard,1.0,off,,5141525,WR,-0.0078,"WR usage 0.09, epa +1.500 over 18 plays"
+Penn State,Daryus Dixson,0.5,def,,5141411,CB,0.0016,3.3% of team defensive production
+Penn State,Koby Howard,1.0,off,,5141525,WR,-0.0077,"WR usage 0.09, epa +1.500 over 18 plays"
 Penn State,LaVar Arrington II,1.0,def,,5214556,DE,0.0,no defensive stats this season (depth player)
 Penn State,Joshua Johnson,1.0,def,,5214530,CB,0.0,no defensive stats this season (depth player)
-Penn State,Max Granville,1.0,def,,5141483,DE,0.0008,0.8% of team defensive production
-Penn State,Cam Smith,1.0,def,,5142598,LB,0.0012,1.2% of team defensive production
+Penn State,Max Granville,1.0,def,,5141483,DE,0.0006,0.6% of team defensive production
+Penn State,Cam Smith,1.0,def,,5142598,LB,0.0009,0.9% of team defensive production
 Penn State,Christian Askew,1.0,def,,5327757,CB,0.0,no defensive stats this season (depth player)
-Penn State,Tyler Armstead,1.0,def,,5230372,CB,0.0003,0.3% of team defensive production
+Penn State,Tyler Armstead,1.0,def,,5230372,CB,0.0002,0.2% of team defensive production
 Penn State,Mason Robinson,1.0,def,,4899362,DE,0.0,no defensive stats this season (depth player)
 Penn State,Dayshaun Burnett,1.0,def,,5141393,DE,0.0,no defensive stats this season (depth player)
 Penn State,Will Tompkins,1.0,off,,5198051,OL,,"offensive line: no individual stats, give epa_delta to count it"
 Penn State,Cooper Alexander,1.0,off,,5146740,TE,0.0,no offensive EPA this season (depth player or name mismatch)
-Northwestern,Hayden Eligon II,0.5,off,,5084772,WR,-0.0004,"WR usage 0.02, epa +0.229 over 1 plays"
-Northwestern,Braden Turner,1.0,def,,4912163,DB,0.0084,8.4% of team defensive production
+Northwestern,Hayden Eligon II,0.5,off,,5084772,WR,-0.0004,"WR usage 0.02, epa -0.137 over 2 plays"
+Northwestern,Braden Turner,1.0,def,,4912163,DB,0.0064,6.4% of team defensive production
 Northwestern,Seth Valeri,1.0,def,,5295997,DB,0.0,no defensive stats this season (depth player)
-Northwestern,Josh Fussell,1.0,def,,4923270,DB,0.0065,6.5% of team defensive production
+Northwestern,Josh Fussell,1.0,def,,4923270,DB,0.0049,4.9% of team defensive production
 Northwestern,Chase Farrell,0.5,off,,5079389,WR,0.0,no offensive EPA this season (depth player or name mismatch)
-Northwestern,Damon Walters,0.5,def,,4899672,DB,0.0047,9.4% of team defensive production
-Northwestern,Max Mohring,1.0,def,,5291097,LB,0.0,no defensive stats this season (depth player)
+Northwestern,Damon Walters,0.5,def,,4899672,DB,0.0036,7.1% of team defensive production
+Northwestern,Max Mohring,1.0,def,,5291097,LB,0.0002,0.2% of team defensive production
 Northwestern,Jason Reynolds II,1.0,def,,4838692,LB,0.0,no defensive stats this season (depth player)
 Northwestern,Nigel Glover,0.5,def,,4921508,LB,0.0,no defensive stats this season (depth player)
-Northwestern,Callen Campbell,1.0,def,,5145121,DL,0.0005,0.5% of team defensive production
+Northwestern,Callen Campbell,1.0,def,,5145121,DL,0.0004,0.4% of team defensive production
 Northwestern,Qayvier Johnson,1.0,def,,5193589,LB,0.0,no defensive stats this season (depth player)
 Northwestern,David Anchondo,1.0,off,,5307060,OL,,"offensive line: no individual stats, give epa_delta to count it"
 Northwestern,Ezomo Oratokhai,1.0,off,,5195388,OL,,"offensive line: no individual stats, give epa_delta to count it"
@@ -32,7 +32,7 @@ Northwestern,Tom McGlinchey,1.0,off,,5246775,TE,0.0,no offensive EPA this season
 Northwestern,Migo Jackson,1.0,def,,4685233,DL,0.0,no defensive stats this season (depth player)
 Northwestern,Glory Stephen-Wangboje,1.0,def,,5165978,DL,0.0,no defensive stats this season (depth player)
 Northwestern,Troy Regovich,0.5,def,,5156387,DL,0.0,no defensive stats this season (depth player)
-Michigan,Andrew Marsh,0.4,off,,5141572,WR,-0.0026,"WR usage 0.14, epa +0.432 over 35 plays"
+Michigan,Andrew Marsh,0.4,off,,5141572,WR,-0.0025,"WR usage 0.14, epa +0.432 over 35 plays"
 Michigan,Dom Nichols,0.4,def,,5079636,DE,0.0037,9.3% of team defensive production
 Michigan,Braydon Alford,1.0,off,,5224470,WR,0.0,no offensive EPA this season (depth player or name mismatch)
 Michigan,Micah Ka'apana,1.0,off,,5079546,RB,0.0,no offensive EPA this season (depth player or name mismatch)
@@ -150,21 +150,21 @@ Illinois,TJ McMillen,1.0,off,,4921262,OL,,"offensive line: no individual stats, 
 Illinois,Dezmond Schuster,0.75,off,,5154332,OL,,"offensive line: no individual stats, give epa_delta to count it"
 Illinois,Maika Matelau,0.1,off,,5369898,OL,,"offensive line: no individual stats, give epa_delta to count it"
 Illinois,Brandon Henderson,0.1,off,,4921407,OL,,"offensive line: no individual stats, give epa_delta to count it"
-Illinois,Kaden Feagin,0.75,off,,4870728,TE,-0.0006,"TE usage 0.04, epa -0.600 over 7 plays"
+Illinois,Kaden Feagin,0.75,off,,4870728,TE,-0.0007,"TE usage 0.04, epa -0.600 over 7 plays"
 Illinois,BJ Thurman,1.0,off,,5369901,TE,0.0,no offensive EPA this season (depth player or name mismatch)
 Illinois,Darrell Prater,0.1,def,,5153131,DL,0.0004,4.4% of team defensive production
 Washington,Emmanuel Karnley,0.1,def,,4923299,CB,0.0002,2.4% of team defensive production
 Washington,Jordan Washington,1.0,off,,5219119,RB,0.0,no offensive EPA this season (depth player or name mismatch)
 Washington,Christian Moss,1.0,off,,4709669,WR,0.0,no offensive EPA this season (depth player or name mismatch)
-Washington,Jayden Limar,1.0,off,,4870868,RB,-0.0035,"RB usage 0.19, epa -0.310 over 12 plays"
-Washington,Quaid Carr,1.0,off,,5209302,RB,-0.0024,"RB usage 0.09, epa -0.216 over 6 plays"
+Washington,Jayden Limar,1.0,off,,4870868,RB,-0.0036,"RB usage 0.19, epa -0.310 over 12 plays"
+Washington,Quaid Carr,1.0,off,,5209302,RB,-0.0025,"RB usage 0.09, epa -0.216 over 6 plays"
 Washington,Landen Hatchett,0.4,off,,4921406,OL,,"offensive line: no individual stats, give epa_delta to count it"
 Washington,CJ Christian,1.0,def,,5082027,S,0.0,no defensive stats this season (depth player)
 USC,Jahkeem Stewart,0.1,def,,5159077,DT,0.0002,1.7% of team defensive production
-USC,Trent Mosley,0.75,off,,5160469,WR,-0.0045,"WR usage 0.08, epa +1.239 over 17 plays"
+USC,Trent Mosley,0.75,off,,5160469,WR,-0.0044,"WR usage 0.08, epa +1.239 over 17 plays"
 USC,Alex Graham,0.4,def,,5141468,S,0.0017,4.1% of team defensive production
 USC,Corey Simms,1.0,off,,5148664,WR,-0.0031,"WR usage 0.06, epa +0.669 over 16 plays"
-USC,Mark Bowman,0.4,off,,5264686,TE,-0.0015,"TE usage 0.08, epa +0.478 over 28 plays"
+USC,Mark Bowman,0.4,off,,5264686,TE,-0.0016,"TE usage 0.08, epa +0.478 over 28 plays"
 USC,Kendarius Reddick,1.0,def,,5141644,S,0.0,no defensive stats this season (depth player)
 USC,"Taylor ""Taybo"" Johnson",0.1,def,,5282030,LB,0.0,no defensive stats this season (depth player)
 USC,Kilian O'Connor,1.0,off,,5085032,OL,,"offensive line: no individual stats, give epa_delta to count it"

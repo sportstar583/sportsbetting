@@ -16,6 +16,11 @@ Tempo comes from drive data (clock time and plays per drive):
 so a fast offense facing a team that holds the ball (e.g. an option offense) is projected
 for fewer plays than its season average.
 
+Run/pass matchup (--matchup, default 1): exp_epa is built from rush EPA (A's rush offense vs
+B's rush defense) and pass EPA (A's pass offense vs B's pass defense), weighted by A's expected
+run rate, so a strong run team facing a weak run defense gets credit the overall ratings
+average away. matchup_adj on the board shows how many points this moved each total.
+
 Not rewarding routs of bad teams: games against FCS opponents count --fcs-weight as much
 in the ratings and points fit, and --huber-k down-weights single games where a team beat
 its expected EPA by a lot, so a rout moves a rating less than its raw margin would.
@@ -51,6 +56,9 @@ TOTALS_ALPHA = 1000.0
 # Spreads need far less shrinkage than totals: at alpha 1000 projected margins vary about
 # half as much as market spreads. 25 gave the lowest margin RMSE on 2024 and 2025.
 SPREAD_ALPHA = 25.0
+# Run/pass matchup weight for totals. Full split improved total RMSE and edge-vs-result
+# correlation in both 2024 and 2025; it made spreads slightly worse, so spreads use 0.
+DEFAULT_MATCHUP = 1.0
 DEFAULT_FCS_WEIGHT = 0.5
 DEFAULT_HUBER_K = 1.5
 GAME_SECONDS = 3600
@@ -84,6 +92,24 @@ def pace(obs):
     teams = set(off) | set(dfn)
     return {t: (statistics.mean(off[t]) if off[t] else None,
                 statistics.mean(dfn[t]) if dfn[t] else None) for t in teams}
+
+
+def run_shares(obs, prior_plays=100):
+    """Run share of plays for each offense and allowed by each defense, shrunk toward the league."""
+    off, dfn = defaultdict(lambda: [0.0, 0.0]), defaultdict(lambda: [0.0, 0.0])
+    for o in obs:
+        rush = adjust._plays(o["stats"], "rushingPlays") if o["stats"].get("rushingPlays") else 0.0
+        pas = adjust._plays(o["stats"], "passingPlays") if o["stats"].get("passingPlays") else 0.0
+        if rush + pas <= 0:
+            continue
+        for d, team in ((off, o["offense"]), (dfn, o["defense"])):
+            d[team][0] += rush
+            d[team][1] += rush + pas
+    tot_r = sum(v[0] for v in off.values())
+    tot = sum(v[1] for v in off.values())
+    lg = tot_r / tot if tot else 0.5
+    shrink = lambda d: {t: (r + lg * prior_plays) / (n + prior_plays) for t, (r, n) in d.items()}  # noqa: E731
+    return shrink(off), shrink(dfn), lg
 
 
 def _secs(t):
@@ -131,12 +157,16 @@ def tempo(drives):
 
 class TotalsModel:
     def __init__(self, game_rows, games, alpha=TOTALS_ALPHA, drives=None,
-                 fcs_weight=1.0, huber_k=None, off_offsets=None, def_offsets=None):
+                 fcs_weight=1.0, huber_k=None, off_offsets=None, def_offsets=None, matchup=0.0):
         self.fbs = fbs_teams(games)
         self.fcs_weight = fcs_weight
         weight = self._weight if fcs_weight != 1.0 and self.fbs else None
-        self.models, self.obs = adjust.fit_all(game_rows, games, alpha, weight, huber_k)
+        # Rush/pass ratings see about half the plays; halve their penalty so they are as spread
+        # out as the overall rating (otherwise the matchup term is mostly extra shrinkage).
+        self.models, self.obs = adjust.fit_all(game_rows, games, alpha, weight, huber_k, subset_alpha_scale=0.5)
         self.epa = self.models["epa"]
+        self.matchup = matchup if "rush_epa" in self.models and "pass_epa" in self.models else 0.0
+        self.run_off, self.run_def, self.run_lg = run_shares(self.obs)
         self.pace = pace(self.obs)
         all_plays = [o["stats"]["plays"] for o in self.obs if o["stats"].get("plays")]
         self.avg_plays = statistics.mean(all_plays)
@@ -162,10 +192,27 @@ class TotalsModel:
         def_pace = self.pace.get(dfn, (None, None))[1] or self.avg_plays
         return (off_pace + def_pace) / 2
 
-    def features(self, off, dfn, home, injuries=False):
-        e = self.epa
-        i = e["intercept"]
-        exp_epa = e["off"].get(off, i) + e["def"].get(dfn, i) - i + e["hfa"] * home
+    def _expected(self, name, off, dfn, home):
+        m = self.models[name]
+        i = m["intercept"]
+        return m["off"].get(off, i) + m["def"].get(dfn, i) - i + m["hfa"] * home
+
+    def run_rate(self, off, dfn):
+        """Expected share of A's plays that are runs: A's tendency, nudged by what B's opponents do."""
+        r = self.run_off.get(off, self.run_lg) + self.run_def.get(dfn, self.run_lg) - self.run_lg
+        return min(max(r, 0.2), 0.8)
+
+    def features(self, off, dfn, home, injuries=False, use_matchup=True):
+        exp_epa = self._expected("epa", off, dfn, home)
+        if self.matchup and use_matchup:
+            # Run/pass matchup: a strong run offense against a weak run defense gets credit
+            # that the overall ratings average away.
+            r = self.run_rate(off, dfn)
+            split = r * self._expected("rush_epa", off, dfn, home) + (1 - r) * self._expected("pass_epa", off, dfn, home)
+            # Rush and pass EPA sit on a different level from overall EPA; keep the overall
+            # level and add the matchup's deviation from what the split model expects on average.
+            lvl = r * self.models["rush_epa"]["intercept"] + (1 - r) * self.models["pass_epa"]["intercept"]
+            exp_epa += self.matchup * ((split - lvl) - (exp_epa - self.epa["intercept"]))
         if injuries:
             exp_epa += self.off_offsets.get(off, 0.0) + self.def_offsets.get(dfn, 0.0)
         return exp_epa, self._plays(off, dfn)
@@ -184,14 +231,22 @@ class TotalsModel:
         sw = np.sqrt(np.array(w))
         self.coef, *_ = np.linalg.lstsq(np.array(X) * sw[:, None], np.array(y, dtype=float) * sw, rcond=None)
 
-    def team_points(self, off, dfn, home, injuries=True):
-        exp_epa, exp_plays = self.features(off, dfn, home, injuries)
+    def team_points(self, off, dfn, home, injuries=True, use_matchup=True):
+        exp_epa, exp_plays = self.features(off, dfn, home, injuries, use_matchup)
         return float(self.coef @ (1.0, exp_plays, exp_plays * exp_epa))
 
-    def project(self, game, injuries=True):
+    def project(self, game, injuries=True, use_matchup=True):
         home, away = game["homeTeam"], game["awayTeam"]
         h = 0 if game.get("neutralSite") else 1
-        return self.team_points(home, away, h, injuries), self.team_points(away, home, -h, injuries)
+        return (self.team_points(home, away, h, injuries, use_matchup),
+                self.team_points(away, home, -h, injuries, use_matchup))
+
+    def matchup_detail(self, off, dfn, home):
+        """Expected run rate and rush/pass EPA for this offense vs this defense."""
+        if "rush_epa" not in self.models or "pass_epa" not in self.models:
+            return None, None, None
+        return (self.run_rate(off, dfn), self._expected("rush_epa", off, dfn, home),
+                self._expected("pass_epa", off, dfn, home))
 
 
 def consensus_total(line_row):
@@ -233,6 +288,7 @@ def board(model, games, lines, min_games=3, spread_model=None):
         hp, ap = model.project(g)
         healthy = sum(model.project(g, injuries=False))
         proj = hp + ap
+        no_matchup = sum(model.project(g, use_matchup=False))
         h = 0 if g.get("neutralSite") else 1
         spread, spread_open = consensus_spread(lr)
         shp, sap = spread_model.project(g) if spread_model else (hp, ap)
@@ -258,6 +314,10 @@ def board(model, games, lines, min_games=3, spread_model=None):
             "exp_plays_home": round(model._plays(home, away), 1),
             "exp_epa_away": round(model.features(away, home, -h, True)[0], 3),
             "exp_epa_home": round(model.features(home, away, h, True)[0], 3),
+            "matchup_adj": round(proj - no_matchup, 1),
+            **{f"{k}_{side}": (None if v is None else round(v, 3))
+               for side, (o, d, hh) in (("away", (away, home, -h)), ("home", (home, away, h)))
+               for k, v in zip(("run_rate", "exp_rush_epa", "exp_pass_epa"), model.matchup_detail(o, d, hh))},
             "edge": round(proj - total, 1),
             "pick": "OVER" if proj > total else "UNDER",
             "games_home": n_home,
@@ -286,6 +346,8 @@ VARIANTS = {
     "+huber": {"huber_k": DEFAULT_HUBER_K},
     "+fcs_weight+huber": {"fcs_weight": DEFAULT_FCS_WEIGHT, "huber_k": DEFAULT_HUBER_K},
     "all": {"tempo": True, "fcs_weight": DEFAULT_FCS_WEIGHT, "huber_k": DEFAULT_HUBER_K},
+    "all+matchup0.5": {"tempo": True, "fcs_weight": DEFAULT_FCS_WEIGHT, "huber_k": DEFAULT_HUBER_K, "matchup": 0.5},
+    "all+matchup": {"tempo": True, "fcs_weight": DEFAULT_FCS_WEIGHT, "huber_k": DEFAULT_HUBER_K, "matchup": 1.0},
 }
 
 
@@ -331,11 +393,11 @@ def _before(data, key, week):
     return [r for w, rs in data[key].items() if w < week for r in rs]
 
 
-def build_model(data, week, alpha=TOTALS_ALPHA, tempo=False, fcs_weight=1.0, huber_k=None, **offsets):
+def build_model(data, week, alpha=TOTALS_ALPHA, tempo=False, fcs_weight=1.0, huber_k=None, matchup=0.0, **offsets):
     done = [g for g in data["games"] if g.get("week", 99) < week]
     return TotalsModel(_before(data, "rows", week), done, alpha,
                        drives=_before(data, "drives", week) if tempo else None,
-                       fcs_weight=fcs_weight, huber_k=huber_k, **offsets)
+                       fcs_weight=fcs_weight, huber_k=huber_k, matchup=matchup, **offsets)
 
 
 def backtest(data, first_week=4, min_games=3, variants=VARIANTS):
@@ -429,6 +491,47 @@ def summarize_backtest(results, thresholds=(0, 2, 3, 4, 5, 7, 10)):
                                   "corr_edge_vs_line_move": round(corr_move, 3),
                                   "corr_edge_vs_result": round(corr_result, 3)})
     return out, open_rows
+
+
+def weekly_card(rows, n=3, p4_only=False):
+    """Each week's n biggest over edges and n biggest under edges -> [(row, side)]."""
+    by_week = defaultdict(list)
+    for r in rows:
+        if r.get("enough_data") and (r.get("p4_game") or not p4_only):
+            by_week[r["week"]].append(r)
+    card = []
+    for _, rs in sorted(by_week.items()):
+        card += [(r, "OVER") for r in sorted(rs, key=lambda r: -r["edge"])[:n] if r["edge"] > 0]
+        card += [(r, "UNDER") for r in sorted(rs, key=lambda r: r["edge"])[:n] if r["edge"] < 0]
+    return card
+
+
+def summarize_cards(results, sizes=(3,)):
+    """Backtest of the weekly card, all games and P4 only, at closing and opening totals."""
+    out = []
+    print("\nweekly card (n biggest over edges + n biggest under edges each week):")
+    for n in sizes:
+        for p4 in (False, True):
+            card = weekly_card(results, n, p4)
+            for key, label in (("market_total", "close"), ("market_open", "open")):
+                w = l = p = 0
+                for r, side in card:
+                    if r.get(key) is None:
+                        continue
+                    d = r["actual_total"] - r[key]
+                    if d == 0:
+                        p += 1
+                    elif (d > 0) == (side == "OVER"):
+                        w += 1
+                    else:
+                        l += 1
+                if w + l:
+                    pool = "P4" if p4 else "all"
+                    roi = (w * 100 / 110 - l) / (w + l)
+                    print(f"  top {n} each way, {pool:<3} vs {label}: {w}-{l}-{p}  {w / (w + l):.1%}  ROI {roi:+.1%}")
+                    out.append({"n": n, "pool": pool, "line": label, "wins": w, "losses": l, "pushes": p,
+                                "win_pct": round(w / (w + l), 3), "roi_110": round(roi, 3)})
+    return out
 
 
 def _ats_record(results, t, line_key="market_spread"):
@@ -614,12 +717,15 @@ def main(argv=None):
     p.add_argument("--alpha", type=float, default=TOTALS_ALPHA)
     p.add_argument("--no-tempo", action="store_true", help="use plays/game instead of drive-based tempo")
     p.add_argument("--spread-alpha", type=float, default=SPREAD_ALPHA, help="ridge penalty for the spread model")
+    p.add_argument("--matchup", type=float, default=DEFAULT_MATCHUP,
+                   help="weight of the run/pass matchup split in totals (0 = overall EPA only)")
     p.add_argument("--fcs-weight", type=float, default=DEFAULT_FCS_WEIGHT,
                    help="weight of games vs FCS opponents in the fit (1 = full)")
     p.add_argument("--huber-k", type=float, default=DEFAULT_HUBER_K,
                    help="down-weight single-game results beyond k robust SDs (0 = off)")
     p.add_argument("--injuries", default=None, help="CSV: team,player,status[,side,epa_delta]")
     p.add_argument("--min-edge", type=float, default=DEFAULT_MIN_EDGE, help="points of edge to list as a pick")
+    p.add_argument("--card", type=int, default=3, help="size of the weekly card (biggest over and under edges)")
     p.add_argument("--min-games", type=int, default=3, help="games of data each team needs")
     p.add_argument("--backtest", action="store_true", help="walk-forward backtest of --year instead")
     p.add_argument("--cache", default=None, help="directory to cache API responses (backtests)")
@@ -629,12 +735,13 @@ def main(argv=None):
     out_dir = os.path.join(args.out, str(args.year))
     os.makedirs(out_dir, exist_ok=True)
     chosen = {"alpha": args.alpha, "tempo": not args.no_tempo, "fcs_weight": args.fcs_weight,
-              "huber_k": args.huber_k or None}
+              "huber_k": args.huber_k or None, "matchup": args.matchup}
 
     if args.backtest:
         data = load_season(client, args.year)
-        spread_variants_cfg = {f"spread a{a:g}": dict(chosen, alpha=a) for a in (25, 75, 150)}
-        variants = dict(VARIANTS, chosen=chosen, spread_model=dict(chosen, alpha=args.spread_alpha),
+        spread_variants_cfg = {f"spread a{a:g}": dict(chosen, alpha=a, matchup=0.0) for a in (25, 75, 150)}
+        spread_variants_cfg["spread a25+matchup"] = dict(chosen, alpha=25, matchup=1.0)
+        variants = dict(VARIANTS, chosen=chosen, spread_model=dict(chosen, alpha=args.spread_alpha, matchup=0.0),
                         **spread_variants_cfg)
         results = backtest(data, min_games=args.min_games, variants=variants)
         comparison = compare_variants({k: v for k, v in results.items() if k in VARIANTS or k == "chosen"})
@@ -642,6 +749,8 @@ def main(argv=None):
         summary, open_summary = summarize_backtest(results["chosen"])
         qb = qb_out_backtest(data, min_games=args.min_games, model_kw=chosen)
         qb_summary = summarize_qb_backtest(qb)
+        card_summary = summarize_cards(results["chosen"], sizes=(3, 5))
+        write_csv(os.path.join(out_dir, "totals_backtest_card.csv"), card_summary)
         spread_variants = compare_spread_variants(results)
         spread_summary = summarize_spreads(results["spread_model"])
         write_csv(os.path.join(out_dir, "spreads_backtest_variants.csv"), spread_variants)
@@ -687,7 +796,8 @@ def main(argv=None):
 
     done = [g for g in games if g.get("completed")]
     model = TotalsModel(game_rows, done, args.alpha, drives=drives, fcs_weight=args.fcs_weight,
-                        huber_k=args.huber_k or None, off_offsets=off_offsets, def_offsets=def_offsets)
+                        huber_k=args.huber_k or None, off_offsets=off_offsets, def_offsets=def_offsets,
+                        matchup=args.matchup)
     lines = client.lines(args.year, week, "regular")
     upcoming = [g for g in games if g.get("week") == week and not g.get("completed")]
     spread_model = TotalsModel(game_rows, done, args.spread_alpha, drives=drives, fcs_weight=args.fcs_weight,
@@ -703,6 +813,11 @@ def main(argv=None):
         inj_note = f"  (injuries {r['injury_adj']:+.1f})" if r["injury_adj"] else ""
         print(f"  {r['away']:>20} @ {r['home']:<20} mkt {r['market_total']:>5}  proj {r['proj_total']:>5}  "
               f"{r['pick']:<5} {r['edge']:+5.1f}{inj_note}")
+    card = weekly_card(rows, args.card, p4_only=True)
+    if card:
+        print(f"\nweekly card: {args.card} biggest over and under edges, P4 games (see BACKTEST.md):")
+        for r, side in card:
+            print(f"  {side:<5} {r['market_total']:>5}  {r['away']} @ {r['home']}  (proj {r['proj_total']}, edge {r['edge']:+.1f})")
     print("\nspreads: projected margins are in the CSV (proj_margin, spread_edge) for reference only.")
     print("  The backtest found no edge against the spread (49-51% at every threshold, 2024 and 2025),")
     print("  and early-season margins are very noisy, so no spread picks are listed. See BACKTEST.md.")

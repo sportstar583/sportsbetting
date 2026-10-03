@@ -2,7 +2,7 @@ import random
 import unittest
 
 from cfb_stats import adjust, injuries as inj
-from cfb_stats.totals import TotalsModel, board, consensus_total, tempo
+from cfb_stats.totals import TotalsModel, board, consensus_total, run_shares, tempo, weekly_card
 
 TEAMS = ["A", "B", "C", "D", "E", "F"]
 # True offensive quality (EPA/play); defenses all average.
@@ -106,6 +106,53 @@ class TotalsTests(unittest.TestCase):
         self.assertLess(sum(hurt.project(g)), sum(healthy.project(g)))
         self.assertEqual(sum(hurt.project(g, injuries=False)), sum(healthy.project(g)))
 
+
+    def test_run_pass_matchup(self):
+        # R runs well, passes badly and runs 70% of the time. W has a weak run defense and
+        # strong pass defense, S the opposite. The overall ratings can't see that R attacks
+        # W's weakness with most of its plays; the run/pass split can.
+        rush_off = {"R": 0.30, "P": -0.10, "W": 0.10, "S": 0.10, "X": 0.10, "Y": 0.10}
+        pass_off = {"R": -0.10, "P": 0.30, "W": 0.10, "S": 0.10, "X": 0.10, "Y": 0.10}
+        rush_def = {"W": 0.20, "S": -0.20, "R": 0.0, "P": 0.0, "X": 0.0, "Y": 0.0}
+        pass_def = {"W": -0.20, "S": 0.20, "R": 0.0, "P": 0.0, "X": 0.0, "Y": 0.0}
+        teams = list(rush_off)
+        games, rows, gid = [], [], 0
+        rng = random.Random(3)
+        for week in range(1, 9):
+            order = teams[:]
+            rng.shuffle(order)
+            for home, away in zip(order[::2], order[1::2]):
+                gid += 1
+                sides = {}
+                for o, d in ((home, away), (away, home)):
+                    r, p_ = rush_off[o] + rush_def[d], pass_off[o] + pass_def[d]
+                    n_run = 42 if o == "R" else 30  # R is run-heavy: 70% runs
+                    sides[o] = {"ppa": (n_run * r + (60 - n_run) * p_) / 60, "plays": 60,
+                                "rushingPlays": {"ppa": r or 1e-6, "totalPPA": n_run * (r or 1e-6)},
+                                "passingPlays": {"ppa": p_ or 1e-6, "totalPPA": (60 - n_run) * (p_ or 1e-6)}}
+                games.append({"id": gid, "week": week, "homeTeam": home, "awayTeam": away, "neutralSite": False,
+                              "homePoints": 28, "awayPoints": 28, "completed": True})
+                for o, d in ((home, away), (away, home)):
+                    rows.append({"gameId": gid, "team": o, "opponent": d, "offense": sides[o], "defense": sides[d]})
+        off_share, _, lg = run_shares(TotalsModel(rows, games, alpha=1).obs)
+        self.assertGreater(off_share["R"], 0.6)
+        plain = TotalsModel(rows, games, alpha=1, matchup=0.0)
+        mm = TotalsModel(rows, games, alpha=1, matchup=1.0)
+        gain_vs_weak = mm.features("R", "W", 0)[0] - plain.features("R", "W", 0)[0]
+        gain_vs_strong = mm.features("R", "S", 0)[0] - plain.features("R", "S", 0)[0]
+        self.assertGreater(gain_vs_weak, 0)
+        self.assertLess(gain_vs_strong, 0)
+        self.assertEqual(mm.features("R", "W", 0, use_matchup=False), plain.features("R", "W", 0))
+
+    def test_weekly_card(self):
+        rows = [{"week": w, "edge": e, "p4_game": p4, "enough_data": ok}
+                for w, e, p4, ok in [(1, 5, True, True), (1, 4, True, True), (1, 9, False, True),
+                                     (1, 8, True, False), (1, -2, True, True), (1, -6, True, True),
+                                     (1, 1, True, True), (2, -1, True, True)]]
+        card = [(r["week"], r["edge"], side) for r, side in weekly_card(rows, 2, p4_only=True)]
+        self.assertEqual(card, [(1, 5, "OVER"), (1, 4, "OVER"), (1, -6, "UNDER"), (1, -2, "UNDER"),
+                                (2, -1, "UNDER")])
+        self.assertIn((1, 9, "OVER"), [(r["week"], r["edge"], s) for r, s in weekly_card(rows, 2)])
 
 class InjuryTests(unittest.TestCase):
     def setUp(self):

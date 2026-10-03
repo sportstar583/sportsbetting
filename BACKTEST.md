@@ -1,137 +1,159 @@
-# Totals model backtest
+# Backtest
 
-Results for `cfb_stats.totals` (game-total projections from opponent-adjusted EPA and
-tempo). Reproduce with:
+Results for `cfb_stats.totals`: game totals (and spreads) projected from opponent-adjusted
+EPA, tempo and run/pass matchups. Reproduce with:
 
 ```bash
-python -m cfb_stats.totals --year 2025 --backtest --cache .cfbd_cache
-python -m cfb_stats.totals --year 2024 --backtest --cache .cfbd_cache
+python -m cfb_stats.totals --year 2025 --backtest --cache .cfbd_cache   # also 2024, 2023
 ```
 
 **Method.** Walk-forward: every week from week 4 on is projected using only games played
 before it. Only games with a market total where both teams have 3+ games of data are
-included. "Edge" is projected total minus the market total. Closing and opening totals are
-the median across books from the CFBD `/lines` endpoint. Breakeven at -110 is 52.4%.
+included. "Edge" is projection minus market. Closing and opening lines are the median across
+books from the CFBD `/lines` endpoint. Breakeven at -110 is 52.4%. Win % excludes pushes.
 
-**Bottom line.** The model is less accurate than the closing market in both seasons. Its
-edges did not reliably beat closing totals: break-even to losing in 2025, winning in 2024,
-and about 53.6% across both (roughly 1,150 bets at edge >= 3), which is within normal luck
-of breakeven. It does predict which way lines move between open and close. Use the board as
-a screen for early-week numbers, not as a list of bets. Against the spread it has no edge at
-all (49-51% at every threshold in both seasons).
+**Which seasons are clean tests.** The ridge penalty and injury scale were chosen by looking
+at 2024 and 2025, and the run/pass matchup and weekly card were judged on all three seasons.
+2023 was the holdout for the base model, but it has since been looked at, so none of the
+results below is fully out of sample. The next real test is the 2026 season as it's played.
 
-## Accuracy (RMSE of the game total, points)
+## Bottom line
 
-| Variant | 2025 | 2024 |
-| --- | --- | --- |
-| Baseline (EPA + plays/game) | 15.89 | 17.17 |
-| + tempo (time per play) | 15.59 | 17.04 |
-| + FCS games at half weight | 15.90 | 17.21 |
-| + rout damping (Huber) | 15.86 | 17.16 |
-| + FCS weight + Huber | 15.81 | 17.19 |
-| **All (current default)** | **15.49** | **17.00** |
-| Closing market | 14.9 | 16.8 |
+- **Totals: a small, unproven lean.** The model is less accurate than the closing market in
+  every season. Betting every edge >= 3 went 53.0% against the closing total and 54.0% against
+  the opening total over 2023-2025, which is barely above breakeven.
+- **The weekly card is the strongest result:** the 3 biggest over edges and 3 biggest under
+  edges each week among Power 4 games went **114-88 (56.4%)** against both closing and opening
+  totals, above breakeven in every season. That is about 1.7 standard errors above breakeven
+  on 202 bets, and it was found after trying several ways to slice the results. Promising,
+  not proven.
+- **Spreads: no edge.** 49-52% against the closing spread at every threshold in every season.
+- Treat the board as a screen, with modest stakes, and track the card on 2026 before trusting it.
 
-Tempo is the only change that improved accuracy on its own in both seasons. Down-weighting
-FCS games and routs doesn't help alone, but the full combination is the most accurate.
+## Weekly card
+
+Each week, take the N biggest over edges and N biggest under edges (games where both teams
+have 3+ games of data). `python -m cfb_stats.totals` prints this week's Power 4 card.
+
+| Card | 2023 | 2024 | 2025 | All three |
+| --- | --- | --- | --- | --- |
+| **Top 3 each way, P4, vs closing** | 35-29 (54.7%) | 40-29 (58.0%) | 39-30 (56.5%) | **114-88 (56.4%)** |
+| **Top 3 each way, P4, vs opening** | 35-28 (55.6%) | 41-29 (58.6%) | 38-31 (55.1%) | **114-88 (56.4%)** |
+| Top 3 each way, all games, vs closing | 34-32 (51.5%) | 43-32 (57.3%) | 37-38 (49.3%) | 114-102 (52.8%) |
+| Top 5 each way, P4, vs closing | 55-48 (53.4%) | 58-53 (52.3%) | 59-54 (52.2%) | 172-155 (52.6%) |
+| Top 5 each way, all games, vs closing | 62-47 (56.9%) | 73-50 (59.3%) | 62-61 (50.4%) | 197-158 (55.5%) |
+
+- The P4 top-3 card is the only version above breakeven in every season against both lines.
+- Widening to top 5 dilutes it, so most of the value is in the very top of the list.
+- P4 games have more data and more consistent schedules, which may be why the ratings
+  separate them better than Group of 5 and FCS games.
+
+Source: `data/<year>/totals_backtest_card.csv`.
+
+## Totals: accuracy (RMSE of the game total, points)
+
+| Variant | 2023 | 2024 | 2025 |
+| --- | --- | --- | --- |
+| Baseline (EPA + plays/game) | 16.56 | 17.17 | 15.89 |
+| + tempo (time per play) | 16.47 | 17.04 | 15.59 |
+| + FCS games at half weight | 16.50 | 17.21 | 15.90 |
+| + rout damping (Huber) | 16.55 | 17.16 | 15.86 |
+| + FCS weight + Huber | 16.48 | 17.19 | 15.81 |
+| All of the above | 16.36 | 17.00 | 15.49 |
+| + run/pass matchup, half blend | 16.34 | 17.00 | 15.46 |
+| **+ run/pass matchup (current default)** | **16.38** | **17.03** | **15.46** |
+| Closing market | 15.9 | 16.8 | 14.9 |
+
+Tempo improved accuracy in all three seasons and is the most reliable single addition.
+
 Source: `data/<year>/totals_backtest_variants.csv`.
 
-## Betting the edge against the closing total (current default model)
+## Run/pass matchup
 
-| Edge >= | 2025 bets | 2025 win % | 2025 ROI | 2024 bets | 2024 win % | 2024 ROI |
-| --- | --- | --- | --- | --- | --- | --- |
-| 0 | 1,104 | 50.9% | -2.8% | 1,112 | 53.0% | +1.3% |
-| 3 | 534 | 50.0% | -4.5% | 621 | 56.8% | +8.4% |
-| 5 | 243 | 49.2% | -6.1% | 338 | 56.5% | +7.8% |
-| 7 | 106 | 49.5% | -5.5% | 158 | 56.8% | +8.4% |
-| 10 | 31 | 45.2% | -13.8% | 42 | 51.2% | -2.2% |
+Each side's expected EPA is built from rush EPA (offense's rush rating vs the defense's rush
+rating) and pass EPA (same for passing), weighted by the expected run rate. It only differs
+from the overall rating when play mix is lopsided: a run-heavy offense aims most of its plays
+at a weak run defense, and offenses run more against defenses that can't stop it. Rush and
+pass ratings are shrunk half as hard as the overall rating, since each sees about half a
+team's plays. (An earlier version shrank them as hard as the overall rating, which flattened
+them and made the matchup act as extra shrinkage; that version's results are superseded.)
 
-- The seasons disagree. In 2024 the plain baseline also hit about 55% at edge >= 3, so
-  2024 probably suited this style of model rather than showing an edge.
-- Bigger edges don't win more often; the largest (10+) are the worst in both seasons. A real
-  edge would strengthen as the edge grows.
+- **Accuracy: no change** (table above). On average it doesn't improve projections.
+- **Ranking the biggest disagreements: better.** With it on, the weekly card did better in all
+  eight versions tested, for example P4 top 3 vs closing 56.4% with vs 54.0% without, and all
+  games top 5 vs closing 55.5% vs 51.1%. That's why it's on by default (`--matchup 0` turns it off).
+- It doesn't help spreads, so the spread model doesn't use it.
 
-Source: `data/<year>/totals_backtest_summary.csv`, per game in `totals_backtest_games.csv`.
+## Totals: betting every edge against the closing total
 
-## Betting the edge against the opening total
+| Edge >= | 2023 | 2024 | 2025 | All three |
+| --- | --- | --- | --- | --- |
+| 0 | 51.0% (953) | 53.3% (1,096) | 51.4% (1,108) | 51.9% (3,157) |
+| 3 | 54.1% (584) | 54.0% (617) | 50.7% (515) | 53.0% (1,716) |
+| 5 | 55.3% (365) | 57.3% (351) | 50.6% (243) | 54.8% (959) |
+| 7 | 54.0% (187) | 59.0% (183) | 50.0% (110) | 55.0% (480) |
 
-| Edge >= | 2025 bets | 2025 win % | 2025 ROI | 2024 bets | 2024 win % | 2024 ROI |
-| --- | --- | --- | --- | --- | --- | --- |
-| 0 | 609 | 52.4% | 0.0% | 607 | 53.4% | +1.9% |
-| 3 | 303 | 52.8% | +0.8% | 355 | 53.5% | +2.2% |
-| 5 | 155 | 52.9% | +1.0% | 202 | 48.5% | -7.4% |
-| 7 | 73 | 58.9% | +12.5% | 95 | 51.6% | -1.5% |
+(Bets in parentheses.) Source: `data/<year>/totals_backtest_summary.csv`, per game in
+`totals_backtest_games.csv`.
 
-- Lines move toward the model between open and close: correlation 0.32 (2025) and 0.14
-  (2024); at edge >= 3 the line moved 0.87 and 0.33 points toward the model on average.
-- The model's edge vs the opening line barely predicts results (correlation 0.06 and 0.02).
-- The 58.9% at edge >= 7 in 2025 is 73 bets and isn't repeated in 2024.
+## Totals: betting every edge against the opening total
+
+| Edge >= | 2023 | 2024 | 2025 | All three |
+| --- | --- | --- | --- | --- |
+| 0 | 53.2% (588) | 52.2% (607) | 53.1% (610) | 52.9% (1,805) |
+| 3 | 56.2% (336) | 52.5% (354) | 53.4% (313) | 54.0% (1,003) |
+| 5 | 56.2% (201) | 51.7% (201) | 55.0% (151) | 54.2% (553) |
+| 7 | 60.4% (106) | 54.0% (100) | 53.8% (80) | 56.3% (286) |
+
+Lines move toward the model between open and close (correlation of edge with line movement
+0.19, 0.15 and 0.32 in 2023-2025). Only about half of games have an opening total in the data.
 
 Source: `data/<year>/totals_backtest_open.csv`.
+
+## Spreads
+
+Projected margin (home minus away) against the median home spread. The totals model shrinks
+ratings heavily (alpha 1000), which compresses margins to about half the spread of market
+lines, so spreads use a separate, lightly shrunk model (alpha 25).
+
+| | 2023 | 2024 | 2025 |
+| --- | --- | --- | --- |
+| Margin RMSE, totals settings | 19.6 | 19.9 | 20.6 |
+| Margin RMSE, spread model (alpha 25) | 16.9 | 17.4 | 17.6 |
+| Closing market | 15.3 | 15.3 | 15.1 |
+| Win % vs close, edge >= 3 | 51.6% (634) | 49.6% (762) | 50.3% (785) |
+| Win % vs close, edge >= 7 | 49.0% (292) | 49.1% (377) | 49.5% (438) |
+| Win % vs open, edge >= 3 | 53.3% (415) | 51.3% (411) | 53.3% (443) |
+
+No edge against the closing spread in any season. Early in the season the spread model is
+also wildly overconfident (in week 5 of 2026 it had UMass by 38 over Eastern Michigan), so
+the board keeps projected margins in the CSV for reference but lists no spread picks.
+
+Source: `data/<year>/spreads_backtest_summary.csv`, `spreads_backtest_variants.csv`,
+per game in `spreads_backtest_games.csv`.
 
 ## Injury adjustment (starting QB absent)
 
 Games where a team's season-to-date starting QB didn't play, using who actually played as a
 stand-in for an injury report. The raw estimate overshot by about 3x, so offensive impacts
-are scaled by 0.35, which was fit on 2025.
+are scaled by 0.35 (fit on 2025).
 
-| | 2025 (181 games, in sample) | 2024 (351 games, out of sample) |
-| --- | --- | --- |
-| RMSE without / with adjustment | 15.81 / 15.54 | 17.77 / 17.85 |
-| Market RMSE | 15.06 | 17.39 |
-| Pick win % without / with | 51.1% / 54.9% | 54.2% / 54.9% |
-| Average adjustment | -2.1 pts | -1.8 pts |
+| | 2023 | 2024 | 2025 |
+| --- | --- | --- | --- |
+| Games | 321 | 351 | 181 |
+| RMSE without / with adjustment | 16.36 / 16.61 | 17.82 / 17.87 | 15.75 / 15.51 |
+| Market RMSE | 15.82 | 17.39 | 15.06 |
+| Pick win % without / with | 50.6% / 50.9% | 53.6% / 54.4% | 53.1% / 53.4% |
+| Average adjustment | -2.5 pts | -1.8 pts | -2.1 pts |
 
-Out of sample the adjustment slightly worsened accuracy and slightly improved pick rate,
-which is no clear effect either way. The market already moves on QB news.
+No clear effect: accuracy slightly worse in two seasons and better in one, pick rate about the
+same. The market already moves on QB news.
 
 Source: `data/<year>/totals_backtest_qb_summary.csv`, per game in `totals_backtest_qb_out.csv`.
 
-## Against the spread
-
-Same walk-forward setup, using each team's projected points to get a projected margin
-(home minus away), compared with the median home spread. A pick is the side the model says
-covers; edge is how many points it disagrees with the line.
-
-**No edge against the spread at any setting.** The model's edge has essentially zero
-correlation with whether the favorite covers (-0.011 in 2025, 0.000 in 2024).
-
-Shrinkage matters a lot more for spreads than totals. The totals model (ridge penalty
-alpha=1000) projects margins that vary about half as much as market spreads, so it "picks"
-nearly every underdog. Less shrinkage is more accurate, but never close to the market:
-
-| Margin RMSE (points) | 2025 | 2024 |
-| --- | --- | --- |
-| Totals settings (alpha 1000) | 20.6 | 19.9 |
-| alpha 150 | 18.4 | 18.1 |
-| alpha 75 | 18.0 | 17.7 |
-| **alpha 25 (spread model)** | **17.6** | **17.4** |
-| Closing market | 15.1 | 15.3 |
-
-Spread model (alpha 25) against the line:
-
-| Edge >= | 2025 close | 2024 close | 2025 open | 2024 open |
-| --- | --- | --- | --- | --- |
-| 0 | 50.5% (1,098) | 49.5% (1,086) | 53.4% (612) | 49.9% (591) |
-| 3 | 50.3% (785) | 49.6% (762) | 53.3% (443) | 51.3% (411) |
-| 5 | 49.2% (608) | 50.2% (576) | 54.1% (338) | 52.5% (295) |
-| 7 | 49.5% (438) | 49.1% (377) | 52.4% (254) | 51.8% (197) |
-| 10 | 49.6% (250) | 48.5% (227) | 52.1% (146) | 53.9% (115) |
-
-(Win % with bets in parentheses, pushes excluded.) Against the opening spread, 2025 hit
-53-54% and lines moved toward the model (correlation 0.30), but 2024 was 50-54% with
-almost no line-movement signal (0.09). That is the same inconsistent pattern as totals.
-
-Even alpha 25 is overconfident early in the season. In week 5 of 2026 it projected margins
-like UMass by 38 over Eastern Michigan. So the board keeps projected margins in the CSV for
-reference but does not list spread picks.
-
-Source: `data/<year>/spreads_backtest_summary.csv`, `spreads_backtest_variants.csv`,
-per game in `spreads_backtest_games.csv`.
-
 ## Not backtested
 
-- Defensive-player injury estimates (share of team defensive production) and the Big Ten
-  availability report import. There is no historical availability data to test against, so
-  the defensive scale is uncalibrated and kept small.
+- Defensive-player injury estimates and the Big Ten availability report import. There is no
+  historical availability data to test against, so the defensive scale is uncalibrated and
+  kept small.
 - Weather, rest and travel, and prior-season ratings carried into early weeks.

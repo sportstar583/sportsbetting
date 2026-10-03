@@ -1,4 +1,4 @@
 qb_adjustment,games,rmse,bias,pick_win_pct,picks,avg_adjustment
-without,351,17.77,-0.09,0.542,347,0.0
-with,351,17.85,1.68,0.549,344,-1.77
+without,351,17.82,-0.34,0.536,343,0.0
+with,351,17.87,1.45,0.544,344,-1.79
 market,351,17.39,1.56,,,

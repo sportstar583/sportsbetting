@@ -141,15 +141,20 @@ def fit(obs, path, count_key, alpha=DEFAULT_ALPHA, huber_k=None):
     return {"intercept": intercept, "hfa": hfa, "off": adj_off, "def": adj_def, "raw_off": raw_off, "raw_def": raw_def}
 
 
-def fit_all(game_rows, games, alpha=DEFAULT_ALPHA, obs_weight=None, huber_k=None):
-    """obs_weight(obs) -> multiplier on that matchup's weight (e.g. less for FCS opponents)."""
+def fit_all(game_rows, games, alpha=DEFAULT_ALPHA, obs_weight=None, huber_k=None, subset_alpha_scale=1.0):
+    """obs_weight(obs) -> multiplier on that matchup's weight (e.g. less for FCS opponents).
+
+    subset_alpha_scale multiplies the ridge penalty for rush-only and pass-only metrics. The
+    penalty is in plays, and each of those sees only about half a team's plays, so with the
+    same penalty they are shrunk about twice as hard as the overall metrics.
+    """
     obs = observations(game_rows, games)
     if obs_weight:
         for o in obs:
             o["weight"] = obs_weight(o)
     models = {}
     for name, path, count_key in METRICS:
-        m = fit(obs, path, count_key, alpha, huber_k)
+        m = fit(obs, path, count_key, alpha * (subset_alpha_scale if count_key else 1.0), huber_k)
         if m:
             models[name] = m
     return models, obs
