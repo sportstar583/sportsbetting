@@ -81,6 +81,13 @@ Sunday morning, after new lines go up Saturday night and Saturday's results are 
 on Friday night after availability reports. If last week's advanced stats aren't loaded yet,
 the card says so.
 
+**Line shopping and tracking.** Each card pick shows the best total available (lowest for an
+over, highest for an under) and the book offering it; CFBD carries up to three books (DraftKings,
+Bovada, ESPN Bet), on about half of games. Every run logs its picks to
+`data/<year>/card_log.csv`; once games are final, later runs fill in the closing line, the final
+score, closing line value (points the line moved your way after the pick) and the result at the
+best line, and the card shows the running record (`cfb_stats.tracking`).
+
 ### Over/under board
 
 `cfb_stats/totals.py` projects each game's total from adjusted EPA/play and tempo, then

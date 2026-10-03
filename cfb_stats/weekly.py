@@ -9,7 +9,8 @@ Steps:
      week, so an old report from last week is never applied to this week's games.
   3. Build the totals board (data/<year>/totals_week<N>.csv) with those injuries.
   4. Note if last week's advanced stats aren't loaded yet (e.g. very early Sunday).
-  5. Write the weekly card to data/<year>/card_week<N>.md and print it: the biggest over and
+  5. Grade earlier card picks against the closing line and final score (card_log.csv).
+  6. Write the weekly card to data/<year>/card_week<N>.md and print it: the biggest over and
      under edges among Power 4 games, the strategy with the best backtest (see BACKTEST.md).
 """
 
@@ -20,7 +21,7 @@ import datetime
 import io
 import os
 
-from . import availability, recruiting, totals
+from . import availability, recruiting, totals, tracking
 from .collect import default_year, upcoming_week
 
 
@@ -95,11 +96,23 @@ def key_injuries(injuries, team):
     return out
 
 
-def card_markdown(rows, week, year, n, injury_note, injuries=None):
-    num = lambda r, k: float(r[k]) if r.get(k) not in ("", None) else None  # noqa: E731
+def _num(r, k):
+    return float(r[k]) if r.get(k) not in ("", None) else None
+
+
+def card_picks(rows, n):
+    """The card: n biggest over edges and n biggest under edges among Power 4 games."""
     p4 = [r for r in rows if r["p4_game"] == "True" and r["enough_data"] == "True"]
-    overs = sorted((r for r in p4 if num(r, "edge") > 0), key=lambda r: -num(r, "edge"))[:n]
-    unders = sorted((r for r in p4 if num(r, "edge") < 0), key=lambda r: num(r, "edge"))[:n]
+    overs = sorted((r for r in p4 if _num(r, "edge") > 0), key=lambda r: -_num(r, "edge"))[:n]
+    unders = sorted((r for r in p4 if _num(r, "edge") < 0), key=lambda r: _num(r, "edge"))[:n]
+    return [(r, "OVER") for r in overs] + [(r, "UNDER") for r in unders]
+
+
+def card_markdown(rows, week, year, n, injury_note, injuries=None, track_record=None):
+    num = _num
+    picks = card_picks(rows, n)
+    overs = [r for r, side in picks if side == "OVER"]
+    unders = [r for r, side in picks if side == "UNDER"]
     stamp = datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
 
     def line(r, side):
@@ -121,7 +134,11 @@ def card_markdown(rows, week, year, n, injury_note, injuries=None):
         moved = ""
         if num(r, "market_open") is not None and num(r, "market_open") != num(r, "market_total"):
             moved = f" (opened {r['market_open']})"
-        return (f"| {side} {r['market_total']}{moved} | {r['away']} @ {r['home']} | {r['proj_total']} | "
+        best, book = (r.get("best_over"), r.get("best_over_book")) if side == "OVER" else \
+            (r.get("best_under"), r.get("best_under_book"))
+        shop = f"{best} ({book})" if best not in (None, "") and num(r, "best_over" if side == "OVER" else "best_under") \
+            != num(r, "market_total") else "same"
+        return (f"| {side} {r['market_total']}{moved} | {shop} | {r['away']} @ {r['home']} | {r['proj_total']} | "
                 f"{num(r, 'edge'):+.1f} | {r['start'][:10]} | {', '.join(extras)} |")
 
     out = [f"# Week {week} card ({year})", "",
@@ -129,8 +146,10 @@ def card_markdown(rows, week, year, n, injury_note, injuries=None):
            f"The {n} biggest over edges and {n} biggest under edges among Power 4 games. Backtest",
            "2023-2025: 114-88 (56.4%) against closing and opening totals; small sample, track it",
            "before trusting it. See BACKTEST.md.", "",
-           "| Bet | Game | Model total | Edge | Date | Notes |",
-           "| --- | --- | --- | --- | --- | --- |"]
+           "Bet is the median line across books; Best line is the best number available (lowest",
+           "total for an over, highest for an under) and the book offering it.", "",
+           "| Bet | Best line | Game | Model total | Edge | Date | Notes |",
+           "| --- | --- | --- | --- | --- | --- | --- |"]
     out += [line(r, "OVER") for r in overs] + [line(r, "UNDER") for r in unders]
     keys = []
     for r in overs + unders:
@@ -142,7 +161,9 @@ def card_markdown(rows, week, year, n, injury_note, injuries=None):
         out += ["", "Key injuries in card games (QBs and 4-5 star recruits listed out, doubtful or game-time):", ""]
         out += keys
     if not overs and not unders:
-        out.append("| (no Power 4 games with a market total yet) | | | | | |")
+        out.append("| (no Power 4 games with a market total yet) | | | | | | |")
+    if track_record:
+        out += [""] + track_record
     return "\n".join(out) + "\n"
 
 
@@ -186,7 +207,14 @@ def main(argv=None):
     if inj_path:
         with open(inj_path, newline="") as f:
             injuries = list(csv.DictReader(f))
-    md = card_markdown(rows, week, args.year, args.card, inj_note, injuries)
+    log = tracking.log_path(out_dir)
+    try:  # grade earlier picks whose games are final (about 1 API call per week graded)
+        tracking.update_log(log, client, args.year, games)
+    except Exception as e:
+        print(f"could not update the card log ({e})")
+    tracking.log_card(log, card_picks(rows, args.card), week)
+    md = card_markdown(rows, week, args.year, args.card, inj_note, injuries,
+                       tracking.summary(tracking.read_log(log)))
     path = os.path.join(out_dir, f"card_week{week}.md")
     with open(path, "w") as f:
         f.write(md)

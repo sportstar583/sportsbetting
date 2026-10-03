@@ -312,6 +312,17 @@ def consensus_total(line_row):
             ", ".join(sorted({l["provider"] for l in lines if l.get("overUnder") is not None})))
 
 
+def best_totals(line_row):
+    """Best total for each side across books: lowest for an over, highest for an under."""
+    lines = [l for l in line_row.get("lines") or [] if l.get("overUnder") is not None]
+    if not lines:
+        return None, "", None, ""
+    lo = min(l["overUnder"] for l in lines)
+    hi = max(l["overUnder"] for l in lines)
+    books = lambda v: ", ".join(sorted(l["provider"] for l in lines if l["overUnder"] == v))  # noqa: E731
+    return lo, books(lo), hi, books(hi)
+
+
 def consensus_spread(line_row):
     """Median closing and opening home spread (negative = home favored)."""
     lines = line_row.get("lines") or []
@@ -349,6 +360,7 @@ def board(model, games, lines, min_games=3, spread_model=None, weather=None):
         no_matchup = sum(model.project(g, use_matchup=False)) + w_adj
         h = 0 if g.get("neutralSite") else 1
         spread, spread_open = consensus_spread(lr)
+        best_over, best_over_book, best_under, best_under_book = best_totals(lr)
         shp, sap = spread_model.project(g) if spread_model else (hp, ap)
         margin = shp - sap
         done = g.get("homePoints") is not None and g.get("awayPoints") is not None
@@ -364,6 +376,10 @@ def board(model, games, lines, min_games=3, spread_model=None, weather=None):
             "market_total": total,
             "market_open": total_open,
             "books": books,
+            "best_over": best_over,
+            "best_over_book": best_over_book,
+            "best_under": best_under,
+            "best_under_book": best_under_book,
             "proj_away": round(ap, 1),
             "proj_home": round(hp, 1),
             "proj_total": round(proj, 1),
