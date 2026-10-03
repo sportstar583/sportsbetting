@@ -20,7 +20,7 @@ import datetime
 import io
 import os
 
-from . import availability, totals
+from . import availability, recruiting, totals
 from .collect import default_year, upcoming_week
 
 
@@ -49,10 +49,13 @@ def current_injuries(client, year, week, out_dir, games):
     teams = sorted({b.get("teamDisplayName") for r in current for b in r.get("games") or []})
     rosters = availability.all_rosters(client, year, teams)
     rows = availability.entries(current, rosters)
+    try:  # recruiting classes are saved to data/recruiting/ after the first download
+        recruiting.add_recruiting(rows, recruiting.recruit_index(client, year), rosters)
+    except Exception as e:
+        notes.append(f"recruiting ratings unavailable ({e})")
     path = os.path.join(out_dir, f"injuries_week{week}.csv")
     with open(path, "w", newline="") as f:
-        w = csv.DictWriter(f, fieldnames=["team", "player", "status", "side", "epa_delta",
-                                          "player_id", "position", "jersey", "report"])
+        w = csv.DictWriter(f, fieldnames=availability.INJURY_FIELDS, extrasaction="ignore")
         w.writeheader()
         w.writerows(rows)
     latest = max(f"{r.get('publishDate')} {r.get('postedTime')}" for r in current)
@@ -77,7 +80,22 @@ def stats_freshness(client, year, week, games):
     return ""
 
 
-def card_markdown(rows, week, year, n, injury_note):
+KEY_STATUSES = {"out", "doubtful", "game time decision", "out - (1st half)"}
+
+
+def key_injuries(injuries, team):
+    """Notable players unlikely to play for a team: QBs, and 4-5 star recruits."""
+    out = []
+    for r in injuries or []:
+        if r.get("team") != team or (r.get("status") or "").strip().lower() not in KEY_STATUSES:
+            continue
+        stars = int(float(r.get("stars") or 0))
+        if r.get("position") == "QB" or stars >= 4:
+            out.append(f"{r['player']} ({r.get('position')}, {recruiting.star_label(r)}, {r['status'].lower()})")
+    return out
+
+
+def card_markdown(rows, week, year, n, injury_note, injuries=None):
     num = lambda r, k: float(r[k]) if r.get(k) not in ("", None) else None  # noqa: E731
     p4 = [r for r in rows if r["p4_game"] == "True" and r["enough_data"] == "True"]
     overs = sorted((r for r in p4 if num(r, "edge") > 0), key=lambda r: -num(r, "edge"))[:n]
@@ -114,6 +132,15 @@ def card_markdown(rows, week, year, n, injury_note):
            "| Bet | Game | Model total | Edge | Date | Notes |",
            "| --- | --- | --- | --- | --- | --- |"]
     out += [line(r, "OVER") for r in overs] + [line(r, "UNDER") for r in unders]
+    keys = []
+    for r in overs + unders:
+        for team in (r["away"], r["home"]):
+            players = key_injuries(injuries, team)
+            if players:
+                keys.append(f"- {team}: " + "; ".join(players))
+    if keys:
+        out += ["", "Key injuries in card games (QBs and 4-5 star recruits listed out, doubtful or game-time):", ""]
+        out += keys
     if not overs and not unders:
         out.append("| (no Power 4 games with a market total yet) | | | | | |")
     return "\n".join(out) + "\n"
@@ -155,7 +182,11 @@ def main(argv=None):
         w = csv.DictWriter(f, fieldnames=fields)
         w.writeheader()
         w.writerows(rows)
-    md = card_markdown(rows, week, args.year, args.card, inj_note)
+    injuries = []
+    if inj_path:
+        with open(inj_path, newline="") as f:
+            injuries = list(csv.DictReader(f))
+    md = card_markdown(rows, week, args.year, args.card, inj_note, injuries)
     path = os.path.join(out_dir, f"card_week{week}.md")
     with open(path, "w") as f:
         f.write(md)

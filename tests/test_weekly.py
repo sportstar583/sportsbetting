@@ -1,6 +1,7 @@
 import unittest
 
-from cfb_stats.weekly import card_markdown
+from cfb_stats import recruiting
+from cfb_stats.weekly import card_markdown, key_injuries
 
 
 def row(away, home, edge, p4=True, ok=True, total=50.0, open_=None):
@@ -21,6 +22,22 @@ class WeeklyTests(unittest.TestCase):
         self.assertNotIn("G @ H", md)  # 4th-biggest over
         self.assertNotIn("K @ L", md)  # card is Power 4 only
         self.assertNotIn("M @ N", md)  # not enough data
+
+    def test_key_injuries_and_recruiting(self):
+        index = {"athlete:7": {"stars": "5", "rating": "0.99", "ranking": "4", "year": "2025"},
+                 "recruit:900": {"stars": "4", "rating": "0.93", "ranking": "120", "year": "2024"}}
+        rosters = {"A": [{"id": "8", "recruitIds": ["900"]}]}
+        inj = [{"team": "A", "player": "Five Star", "player_id": "7", "position": "WR", "status": "Out"},
+               {"team": "A", "player": "Four Star", "player_id": "8", "position": "LB", "status": "Doubtful"},
+               {"team": "A", "player": "Walk On", "player_id": "9", "position": "RB", "status": "Out"},
+               {"team": "A", "player": "Backup QB", "player_id": "10", "position": "QB", "status": "Questionable"},
+               {"team": "A", "player": "Starter QB", "player_id": "11", "position": "QB", "status": "Game Time Decision"}]
+        recruiting.add_recruiting(inj, index, rosters)
+        self.assertEqual((inj[0]["stars"], inj[1]["stars"], inj[2]["stars"]), ("5", "4", ""))
+        self.assertEqual(key_injuries(inj, "A"), ["Five Star (WR, 5-star, out)", "Four Star (LB, 4-star, doubtful)",
+                                                  "Starter QB (QB, unrated, game time decision)"])
+        md = card_markdown([row("A", "B", 6)], 6, 2026, 3, "note", inj)
+        self.assertIn("- A: Five Star (WR, 5-star, out)", md)
 
 
 if __name__ == "__main__":

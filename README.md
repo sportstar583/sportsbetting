@@ -136,6 +136,11 @@ What goes into a projection:
   - Offensive linemen: no individual stats, so they get no estimate unless you give
     `epa_delta`.
 
+  Each injured player also gets their high school recruiting stars, 247 composite rating and
+  national rank (`cfb_stats.recruiting`; classes are downloaded once to `data/recruiting/`),
+  and the card lists QBs and 4-5 star recruits who are out or doubtful in its games. Stars are
+  context only, not part of the point estimate.
+
   `epa_delta` overrides any estimate. `injury_impacts_week<N>.csv` lists each player's
   effect, and the board's `injury_adj` column shows how many points injuries moved each total.
 
