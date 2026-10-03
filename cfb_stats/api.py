@@ -56,3 +56,23 @@ class CFBDClient:
 
     def games(self, year, season_type):
         return self.get("/games", year=year, seasonType=season_type)
+
+    def game_advanced_stats(self, year, week, season_type, exclude_garbage_time=True):
+        """Per team-game advanced stats (offense and defense PPA, success rate, ...)."""
+        return self.get(
+            "/stats/game/advanced",
+            year=year,
+            week=week,
+            seasonType=season_type,
+            excludeGarbageTime=str(exclude_garbage_time).lower(),
+        )
+
+    def player_game_ppa(self, year, week, season_type, exclude_garbage_time=True):
+        """Per player-game average PPA (all / pass / rush)."""
+        return self.get(
+            "/ppa/players/games",
+            year=year,
+            week=week,
+            seasonType=season_type,
+            excludeGarbageTime=str(exclude_garbage_time).lower(),
+        )

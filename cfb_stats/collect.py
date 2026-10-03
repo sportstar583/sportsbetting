@@ -5,6 +5,8 @@ Writes CSVs (one row per team) to data/<year>/:
   defense.csv        points/yards allowed, sacks, takeaways and advanced defense
   special_teams.csv  kick and punt returns
   all_stats.csv      everything above in one wide table
+  adjusted_team_epa.csv    opponent-adjusted EPA/success rate, offense and defense
+  adjusted_player_epa.csv  opponent-adjusted EPA/play for every P4 player
 
 Usage:
   export CFBD_API_KEY=...
@@ -16,6 +18,8 @@ import csv
 import datetime
 import os
 from collections import defaultdict
+
+from . import adjust
 
 P4_CONFERENCES = ("ACC", "Big 12", "Big Ten", "SEC")
 
@@ -207,6 +211,16 @@ def build_tables(teams, season_rows, advanced_rows, games):
     return tables
 
 
+def played_weeks(games):
+    """Sorted (seasonType, week) pairs that have at least one completed game."""
+    weeks = {
+        (g["seasonType"], g["week"])
+        for g in games
+        if g.get("week") is not None and _g(g, "homePoints", "home_points") is not None
+    }
+    return sorted(weeks, key=lambda sw: (sw[0] != "regular", sw[1]))
+
+
 def write_csv(path, rows):
     columns = []
     for r in rows:
@@ -226,23 +240,42 @@ def main(argv=None):
     p.add_argument("--api-key", default=None)
     p.add_argument("--include-notre-dame", action="store_true")
     p.add_argument("--include-garbage-time", action="store_true", help="include garbage time in advanced stats")
+    p.add_argument("--alpha", type=float, default=adjust.DEFAULT_ALPHA,
+                   help="ridge penalty for opponent adjustment; higher shrinks more toward average")
     args = p.parse_args(argv)
 
     client = CFBDClient(api_key=args.api_key)
-    teams = p4_teams(client.fbs_teams(args.year), args.include_notre_dame)
+    fbs = client.fbs_teams(args.year)
+    teams = p4_teams(fbs, args.include_notre_dame)
     print(f"{len(teams)} P4 teams for {args.year}")
 
     season_rows = client.season_stats(args.year)
     advanced_rows = client.advanced_season_stats(args.year, not args.include_garbage_time)
-    games = client.games(args.year, "regular") + client.games(args.year, "postseason")
+    games = []
+    for season_type in ("regular", "postseason"):
+        games += [dict(g, seasonType=season_type) for g in client.games(args.year, season_type)]
 
     tables = build_tables(teams, season_rows, advanced_rows, games)
+
+    # Opponent adjustment uses every FBS game, not just P4 ones, so opponents are rated fairly.
+    exclude_gt = not args.include_garbage_time
+    game_rows, player_games = [], []
+    for season_type, week in played_weeks(games):
+        game_rows += client.game_advanced_stats(args.year, week, season_type, exclude_gt)
+        player_games += client.player_game_ppa(args.year, week, season_type, exclude_gt)
+    models, obs = adjust.fit_all(game_rows, games, args.alpha)
+    if "epa" in models:
+        print(f"home field advantage: {models['epa']['hfa']:+.3f} EPA/play")
+    fbs_schools = {t["school"] for t in fbs}
+    tables["adjusted_team_epa"] = adjust.team_table(models, obs, teams, fbs_schools)
+    tables["adjusted_player_epa"] = adjust.player_table(player_games, models, teams)
+
     out_dir = os.path.join(args.out, str(args.year))
     os.makedirs(out_dir, exist_ok=True)
     for name, rows in tables.items():
         path = os.path.join(out_dir, f"{name}.csv")
         write_csv(path, rows)
-        print(f"wrote {path} ({len(rows)} teams)")
+        print(f"wrote {path} ({len(rows)} rows)")
 
 
 if __name__ == "__main__":
