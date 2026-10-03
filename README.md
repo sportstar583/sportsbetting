@@ -131,8 +131,9 @@ What goes into a projection:
   - Offensive skill players: estimated from season EPA and usage share against a backup-level
     player at the position (calibrated on QB absences, see below).
   - Defenders: estimated from their share of the team's defensive production (tackles, TFLs,
-    sacks, pass breakups, INTs). This scale is **not calibrated**, since there is no historical
-    availability data to fit it to, so it is kept small.
+    sacks, pass breakups, INTs), scaled by a factor fit on 2023-2025 box scores (a regular with
+    no stat line counts as out; `python -m cfb_stats.defense --backtest`, see BACKTEST.md).
+    The effect is small, usually under 2 points.
   - Offensive linemen: no individual stats, so they get no estimate unless you give
     `epa_delta`.
 

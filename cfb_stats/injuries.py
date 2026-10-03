@@ -26,9 +26,9 @@ Defense (side "def"), estimated from box-score production:
     impact = P(out) x DEF_SCALE x player's share of team defensive production
 
 production = tackles + 2 x TFL + 3 x sacks + 2 x pass breakups + 3 x INTs + 0.5 x QB hurries.
-A defender who hasn't recorded stats counts as zero. DEF_SCALE is NOT calibrated (there is no
-historical availability data to fit it to); it is set conservatively. Giving epa_delta
-overrides the estimate for any player.
+A defender who hasn't recorded stats counts as zero. DEF_SCALE is calibrated on who actually
+played 2023-2025 (cfb_stats.defense, see BACKTEST.md). Giving epa_delta overrides the
+estimate for any player.
 """
 
 import csv
@@ -56,9 +56,11 @@ NON_QB_CREDIT = 0.5
 # the right scale at 0.36 (90% bootstrap interval 0.14-0.56). Backups play better than a
 # 20th-percentile QB and offenses adapt, so data-driven impacts are scaled by this.
 IMPACT_SCALE = 0.35
-# Uncalibrated. EPA/play allowed if a defense lost 100% of its production to replacement
-# players. A defender with a 10% share (a top starter) -> +0.01 EPA/play, about 1 point a game.
-DEF_SCALE = 0.10
+# EPA/play allowed if a defense lost 100% of its production to replacement players. Fit on
+# 2023-2025 box scores (a regular with no stat line = out, see cfb_stats.defense): 0.08 for
+# starters with 5%+ of team production (90% bootstrap 0.02-0.14), 0.04 if 3%+ regulars count
+# too. A defender with a 10% share (a top starter) -> +0.008 EPA/play, under a point a game.
+DEF_SCALE = 0.08
 DEF_WEIGHTS = {"TOT": 1.0, "TFL": 2.0, "SACKS": 3.0, "PD": 2.0, "QB HUR": 0.5, "INT": 3.0}
 OFFENSE_POSITIONS = {"QB", "RB", "FB", "WR", "TE", "OL", "OT", "OG", "C", "IOL", "ATH"}
 
