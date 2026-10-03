@@ -99,12 +99,6 @@ def card_markdown(rows, week, year, n, injury_note):
     out += [line(r, "OVER") for r in overs] + [line(r, "UNDER") for r in unders]
     if not overs and not unders:
         out.append("| (no Power 4 games with a market total yet) | | | | | |")
-    other = sorted((r for r in rows if r not in p4 and r["enough_data"] == "True" and abs(num(r, "edge")) >= 7),
-                   key=lambda r: -abs(num(r, "edge")))[:5]
-    if other:
-        out += ["", "Biggest edges outside Power 4 (weaker backtest, about 50-53%):", ""]
-        out += [f"- {r['pick']} {r['market_total']}: {r['away']} @ {r['home']} (model {r['proj_total']}, "
-                f"edge {num(r, 'edge'):+.1f})" for r in other]
     return "\n".join(out) + "\n"
 
 
@@ -137,7 +131,12 @@ def main(argv=None):
 
     inj_note += stats_freshness(client, args.year, week)
     with open(os.path.join(out_dir, f"totals_week{week}.csv")) as f:
-        rows = list(csv.DictReader(f))
+        reader = csv.DictReader(f)
+        fields, rows = reader.fieldnames, [r for r in reader if r["p4_game"] == "True"]
+    with open(os.path.join(out_dir, f"totals_week{week}.csv"), "w", newline="") as f:
+        w = csv.DictWriter(f, fieldnames=fields)
+        w.writeheader()
+        w.writerows(rows)
     md = card_markdown(rows, week, args.year, args.card, inj_note)
     path = os.path.join(out_dir, f"card_week{week}.md")
     with open(path, "w") as f:
