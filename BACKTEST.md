@@ -212,9 +212,70 @@ point in each season, the card is a wash.
 
 Source: `data/defense_backtest.csv`, per game in `defense_backtest_games.csv`.
 
+## Preseason priors
+
+Instead of shrinking every team toward league average, start each from last season's final
+rating scaled by returning production, plus roster talent (`cfb_stats.priors`). Weights were fit
+on two seasons and tested on the third. Fitted weights: a team keeps about 40% of last season's
+rating, more when its offensive production returns; talent adds little once last season is known.
+
+| Totals model RMSE | 2023 | 2024 | 2025 |
+| --- | --- | --- | --- |
+| Without priors | 16.38 | 17.03 | 15.46 |
+| With priors | 16.49 | 17.10 | 15.71 |
+| Weeks 4-6 without / with | 17.44 / 17.70 | 17.77 / 17.87 | 15.73 / 15.69 |
+
+| Spread model margin RMSE | 2023 | 2024 | 2025 |
+| --- | --- | --- | --- |
+| Without priors | 16.90 | 17.43 | 17.61 |
+| With priors | 16.73 | 17.31 | 17.48 |
+| Weeks 4-6 without / with | 16.13 / 15.66 | 21.47 / 21.25 | 19.04 / 18.67 |
+| ATS edge >= 3 with priors | 51.0% | 49.5% | 50.6% |
+
+Priors make totals slightly worse (totals do best with every team shrunk hard toward average)
+and spreads more accurate in every season, most in weeks 4-6, still with no edge against the
+spread. So only the spread model uses them. Source: `data/priors_backtest.csv` (totals).
+
+## Red zone and turnover rates
+
+Red zone points per trip (drives starting or ending inside the 20; TD = 7, FG = 3) and turnovers
+per drive, for each offense and each defense allowed, shrunk toward league rates (20 trips / 60
+drives), added to the points model as extra matchup terms (`finishing=True`).
+
+| | 2023 | 2024 | 2025 | P4 card, all three |
+| --- | --- | --- | --- | --- |
+| RMSE, current | 16.38 | 17.03 | 15.46 | 114-88 (56.4%) |
+| RMSE, with red zone + turnovers | 16.73 | 17.49 | 16.17 | 103-96 (51.8%) |
+
+Worse in every season. Red zone and turnover rates swing on a handful of plays, and the part
+that's real is already in EPA (which counts TDs vs FGs and turnovers), so the extra terms mostly
+add noise. Off by default.
+
+## Rest, travel, altitude and game script
+
+Adjustments to the model's backtest totals, fit on two seasons and tested on the third
+(`scripts/situational_backtest.py`, no API calls once the backtests are cached):
+
+| Added factor | RMSE 2023 / 2024 / 2025 | Every edge >= 3 | P4 card |
+| --- | --- | --- | --- |
+| None (current model) | 16.38 / 17.03 / 15.46 | 53.0% | 114-88 (56.4%) |
+| Rest: short weeks, off a bye | 16.39 / 17.05 / 15.48 | 52.5% | 111-90 |
+| Travel distance, time zones | 16.38 / 17.00 / 15.47 | 53.2% | 113-89 |
+| Altitude | 16.39 / 17.03 / 15.47 | 52.9% | 113-89 |
+| Game script (spread over 14) | 16.37 / 17.00 / 15.45 | 52.5% | 110-92 |
+| All four | 16.39 / 17.00 / 15.51 | 52.6% | 109-94 |
+
+- Game script is a real model bias: with spreads over 14 the model's totals ran low by about
+  1.6 points per extra 10 points of spread. The market didn't share it, and correcting it didn't
+  help the picks.
+- The model ran slightly low when the road team traveled far (about 2.5 points per 1,000 miles);
+  correcting it didn't help the picks.
+- Rest and altitude: no detectable effect (altitude covers only about 200 games).
+
+None is used.
+
 ## Not backtested
 
 - The conference availability report import itself (which players get listed, and how the
   reported statuses map to the chance of missing the game).
-- Rest and travel, altitude, and prior-season ratings carried into early weeks.
 - Weather forecasts (the backtest uses observed weather; Sunday forecasts are 6 days out).

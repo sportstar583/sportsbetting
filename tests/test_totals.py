@@ -2,7 +2,7 @@ import random
 import unittest
 
 from cfb_stats import adjust, injuries as inj
-from cfb_stats.totals import TotalsModel, board, consensus_total, run_shares, tempo, weekly_card
+from cfb_stats.totals import TotalsModel, board, consensus_total, finishing_rates, run_shares, tempo, weekly_card
 
 TEAMS = ["A", "B", "C", "D", "E", "F"]
 # True offensive quality (EPA/play); defenses all average.
@@ -153,6 +153,30 @@ class TotalsTests(unittest.TestCase):
         self.assertEqual(card, [(1, 5, "OVER"), (1, 4, "OVER"), (1, -6, "UNDER"), (1, -2, "UNDER"),
                                 (2, -1, "UNDER")])
         self.assertIn((1, 9, "OVER"), [(r["week"], r["edge"], s) for r, s in weekly_card(rows, 2)])
+
+    def test_prior_pulls_toward_preseason_rating(self):
+        obs = [{"offense": o, "defense": d, "home": h, "stats": {"ppa": 0.1, "plays": 60}}
+               for o, d, h in [("A", "B", 1), ("B", "A", -1), ("A", "C", -1), ("C", "A", 1)]]
+        flat = adjust.fit(obs, ("ppa",), None, alpha=10000)
+        lifted = adjust.fit(obs, ("ppa",), None, alpha=10000, prior={"off": {"A": 0.2}})
+        self.assertAlmostEqual(flat["off"]["A"] - flat["intercept"], 0.0, places=3)
+        self.assertGreater(lifted["off"]["A"] - lifted["intercept"], 0.15)
+
+
+    def test_finishing_rates(self):
+        drives = [
+            {"offense": "A", "defense": "B", "driveResult": "TD", "startYardsToGoal": 75, "endYardsToGoal": 0},
+            {"offense": "A", "defense": "B", "driveResult": "FG", "startYardsToGoal": 60, "endYardsToGoal": 15},
+            {"offense": "A", "defense": "B", "driveResult": "INT", "startYardsToGoal": 70, "endYardsToGoal": 40},
+            {"offense": "B", "defense": "A", "driveResult": "PUNT", "startYardsToGoal": 80, "endYardsToGoal": 60},
+            {"offense": "B", "defense": "A", "driveResult": "END OF HALF", "startYardsToGoal": 18, "endYardsToGoal": 10},
+        ]
+        rates, lg_rz, lg_to = finishing_rates(drives, rz_prior=0, to_prior=0)
+        self.assertEqual(rates["A"]["rz_off"], 5.0)  # TD + FG on two trips; INT never reached the 20
+        self.assertAlmostEqual(rates["A"]["to_off"], 1 / 3)
+        self.assertEqual(rates["B"]["to_off"], 0.0)  # end-of-half drive ignored
+        self.assertEqual((lg_rz, lg_to), (5.0, 0.25))
+
 
 class InjuryTests(unittest.TestCase):
     def setUp(self):

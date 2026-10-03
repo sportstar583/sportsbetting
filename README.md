@@ -81,6 +81,13 @@ Sunday morning, after new lines go up Saturday night and Saturday's results are 
 on Friday night after availability reports. If last week's advanced stats aren't loaded yet,
 the card says so.
 
+**Line shopping and tracking.** Each card pick shows the best total available (lowest for an
+over, highest for an under) and the book offering it; CFBD carries up to three books (DraftKings,
+Bovada, ESPN Bet), on about half of games. Every run logs its picks to
+`data/<year>/card_log.csv`; once games are final, later runs fill in the closing line, the final
+score, closing line value (points the line moved your way after the pick) and the result at the
+best line, and the card shows the running record (`cfb_stats.tracking`).
+
 ### Over/under board
 
 `cfb_stats/totals.py` projects each game's total from adjusted EPA/play and tempo, then
@@ -104,6 +111,10 @@ What goes into a projection:
 - **Tempo (time per play):** from drive data. Each offense's seconds per play, each defense's
   seconds per play allowed, and each team's share of the clock give the plays each side should
   run. A fast offense facing a team that holds the ball (e.g. an option offense) gets fewer plays.
+- **Preseason priors (spreads only):** the spread model starts each team from last season's
+  rating scaled by returning production, plus roster talent, instead of from average
+  (`python -m cfb_stats.priors --build <year>` once per season; saved in `data/priors/`). This
+  made projected margins more accurate in 2023-2025 but made totals worse, so totals don't use it.
 - **Weather:** game-time forecasts from Open-Meteo (free; the CFBD weather endpoint is a paid
   tier) for each stadium. Wind over 10 mph lowers the total by 0.75 points per mph. Wind, rain
   and temperature are shown on the board and in the card notes. Over 2023-2025 the model ran
@@ -136,6 +147,11 @@ What goes into a projection:
     The effect is small, usually under 2 points.
   - Offensive linemen: no individual stats, so they get no estimate unless you give
     `epa_delta`.
+
+  Each injured player also gets their high school recruiting stars, 247 composite rating and
+  national rank (`cfb_stats.recruiting`; classes are downloaded once to `data/recruiting/`),
+  and the card lists QBs and 4-5 star recruits who are out or doubtful in its games. Stars are
+  context only, not part of the point estimate.
 
   `epa_delta` overrides any estimate. `injury_impacts_week<N>.csv` lists each player's
   effect, and the board's `injury_adj` column shows how many points injuries moved each total.

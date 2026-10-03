@@ -82,6 +82,10 @@ def match_player(team, number, name, rosters):
     return by_num[0]["id"] if len(by_num) == 1 else None
 
 
+INJURY_FIELDS = ["team", "player", "status", "side", "epa_delta", "player_id", "position", "jersey",
+                 "report", "stars", "rating", "national_rank", "recruit_class"]
+
+
 def all_rosters(client, year, teams):
     """{team: roster} for the given teams in one API call (the free tier allows 1,000 a month)."""
     by_team = {}
@@ -131,6 +135,11 @@ def main(argv=None):
     teams = sorted({b.get("teamDisplayName") for r in reports for b in r.get("games") or []})
     rosters = all_rosters(client, args.year, teams)
     rows = entries(reports, rosters)
+    try:
+        from . import recruiting
+        recruiting.add_recruiting(rows, recruiting.recruit_index(client, args.year), rosters)
+    except Exception as e:  # ratings are optional context
+        print(f"recruiting ratings unavailable ({e})")
 
     week = args.week
     if week is None:
@@ -139,8 +148,7 @@ def main(argv=None):
     path = os.path.join(args.out, str(args.year), f"injuries_week{week}.csv")
     os.makedirs(os.path.dirname(path), exist_ok=True)
     with open(path, "w", newline="") as f:
-        w = csv.DictWriter(f, fieldnames=["team", "player", "status", "side", "epa_delta",
-                                          "player_id", "position", "jersey", "report"])
+        w = csv.DictWriter(f, fieldnames=INJURY_FIELDS, extrasaction="ignore")
         w.writeheader()
         w.writerows(rows)
     unmatched = [r for r in rows if not r["player_id"]]
