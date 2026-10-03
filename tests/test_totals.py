@@ -154,6 +154,15 @@ class TotalsTests(unittest.TestCase):
                                 (2, -1, "UNDER")])
         self.assertIn((1, 9, "OVER"), [(r["week"], r["edge"], s) for r, s in weekly_card(rows, 2)])
 
+    def test_prior_pulls_toward_preseason_rating(self):
+        obs = [{"offense": o, "defense": d, "home": h, "stats": {"ppa": 0.1, "plays": 60}}
+               for o, d, h in [("A", "B", 1), ("B", "A", -1), ("A", "C", -1), ("C", "A", 1)]]
+        flat = adjust.fit(obs, ("ppa",), None, alpha=10000)
+        lifted = adjust.fit(obs, ("ppa",), None, alpha=10000, prior={"off": {"A": 0.2}})
+        self.assertAlmostEqual(flat["off"]["A"] - flat["intercept"], 0.0, places=3)
+        self.assertGreater(lifted["off"]["A"] - lifted["intercept"], 0.15)
+
+
 class InjuryTests(unittest.TestCase):
     def setUp(self):
         season = [

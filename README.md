@@ -104,6 +104,10 @@ What goes into a projection:
 - **Tempo (time per play):** from drive data. Each offense's seconds per play, each defense's
   seconds per play allowed, and each team's share of the clock give the plays each side should
   run. A fast offense facing a team that holds the ball (e.g. an option offense) gets fewer plays.
+- **Preseason priors (spreads only):** the spread model starts each team from last season's
+  rating scaled by returning production, plus roster talent, instead of from average
+  (`python -m cfb_stats.priors --build <year>` once per season; saved in `data/priors/`). This
+  made projected margins more accurate in 2023-2025 but made totals worse, so totals don't use it.
 - **Weather:** game-time forecasts from Open-Meteo (free; the CFBD weather endpoint is a paid
   tier) for each stadium. Wind over 10 mph lowers the total by 0.75 points per mph. Wind, rain
   and temperature are shown on the board and in the card notes. Over 2023-2025 the model ran

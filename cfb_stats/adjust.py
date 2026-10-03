@@ -81,8 +81,11 @@ def observations(game_rows, games):
     return obs
 
 
-def fit(obs, path, count_key, alpha=DEFAULT_ALPHA, huber_k=None):
+def fit(obs, path, count_key, alpha=DEFAULT_ALPHA, huber_k=None, prior=None):
     """Weighted ridge fit for one metric. Returns (intercept, hfa, off{}, def{}, raw_off{}, raw_def{}).
+
+    prior: {"off": {team: deviation}, "def": {team: deviation}} shrinks each team toward its
+    own preseason estimate (deviation from league average) instead of toward average.
 
     Rows are weighted by play count times o.get("weight", 1). With huber_k set, the fit is
     re-run with games whose result lands more than huber_k robust standard deviations from
@@ -113,9 +116,16 @@ def fit(obs, path, count_key, alpha=DEFAULT_ALPHA, huber_k=None):
     penalty = np.full(X.shape[1], alpha)
     penalty[:2] = 0.0  # don't shrink intercept or home field
 
+    mu = np.zeros(X.shape[1])
+    if prior:
+        for t, i in idx.items():
+            mu[2 + i] = prior.get("off", {}).get(t, 0.0)
+            mu[2 + n + i] = prior.get("def", {}).get(t, 0.0)
+
     def solve(weights):
         XtW = X.T * weights
-        return np.linalg.solve(XtW @ X + np.diag(penalty), XtW @ y)
+        # Ridge toward mu: minimizes weighted squared error + sum(penalty * (beta - mu)^2).
+        return np.linalg.solve(XtW @ X + np.diag(penalty), XtW @ y + penalty * mu)
 
     beta = solve(w)
     if huber_k:
@@ -141,7 +151,8 @@ def fit(obs, path, count_key, alpha=DEFAULT_ALPHA, huber_k=None):
     return {"intercept": intercept, "hfa": hfa, "off": adj_off, "def": adj_def, "raw_off": raw_off, "raw_def": raw_def}
 
 
-def fit_all(game_rows, games, alpha=DEFAULT_ALPHA, obs_weight=None, huber_k=None, subset_alpha_scale=1.0):
+def fit_all(game_rows, games, alpha=DEFAULT_ALPHA, obs_weight=None, huber_k=None, subset_alpha_scale=1.0,
+            priors=None):
     """obs_weight(obs) -> multiplier on that matchup's weight (e.g. less for FCS opponents).
 
     subset_alpha_scale multiplies the ridge penalty for rush-only and pass-only metrics. The
@@ -154,7 +165,8 @@ def fit_all(game_rows, games, alpha=DEFAULT_ALPHA, obs_weight=None, huber_k=None
             o["weight"] = obs_weight(o)
     models = {}
     for name, path, count_key in METRICS:
-        m = fit(obs, path, count_key, alpha * (subset_alpha_scale if count_key else 1.0), huber_k)
+        m = fit(obs, path, count_key, alpha * (subset_alpha_scale if count_key else 1.0), huber_k,
+                (priors or {}).get(name))
         if m:
             models[name] = m
     return models, obs

@@ -46,7 +46,7 @@ from collections import defaultdict
 
 import numpy as np
 
-from . import adjust, injuries as inj, weather as wx_mod
+from . import adjust, injuries as inj, priors as priors_mod, weather as wx_mod
 from .collect import P4_CONFERENCES, default_year, upcoming_week, write_csv
 
 DEFAULT_MIN_EDGE = 3.0
@@ -157,13 +157,14 @@ def tempo(drives):
 
 class TotalsModel:
     def __init__(self, game_rows, games, alpha=TOTALS_ALPHA, drives=None,
-                 fcs_weight=1.0, huber_k=None, off_offsets=None, def_offsets=None, matchup=0.0):
+                 fcs_weight=1.0, huber_k=None, off_offsets=None, def_offsets=None, matchup=0.0, priors=None):
         self.fbs = fbs_teams(games)
         self.fcs_weight = fcs_weight
         weight = self._weight if fcs_weight != 1.0 and self.fbs else None
         # Rush/pass ratings see about half the plays; halve their penalty so they are as spread
         # out as the overall rating (otherwise the matchup term is mostly extra shrinkage).
-        self.models, self.obs = adjust.fit_all(game_rows, games, alpha, weight, huber_k, subset_alpha_scale=0.5)
+        self.models, self.obs = adjust.fit_all(game_rows, games, alpha, weight, huber_k, subset_alpha_scale=0.5,
+                                               priors=priors)
         self.epa = self.models["epa"]
         self.matchup = matchup if "rush_epa" in self.models and "pass_epa" in self.models else 0.0
         self.run_off, self.run_def, self.run_lg = run_shares(self.obs)
@@ -404,11 +405,13 @@ def _before(data, key, week):
     return [r for w, rs in data[key].items() if w < week for r in rs]
 
 
-def build_model(data, week, alpha=TOTALS_ALPHA, tempo=False, fcs_weight=1.0, huber_k=None, matchup=0.0, **offsets):
+def build_model(data, week, alpha=TOTALS_ALPHA, tempo=False, fcs_weight=1.0, huber_k=None, matchup=0.0,
+                use_priors=False, **offsets):
     done = [g for g in data["games"] if g.get("week", 99) < week]
     return TotalsModel(_before(data, "rows", week), done, alpha,
                        drives=_before(data, "drives", week) if tempo else None,
-                       fcs_weight=fcs_weight, huber_k=huber_k, matchup=matchup, **offsets)
+                       fcs_weight=fcs_weight, huber_k=huber_k, matchup=matchup,
+                       priors=data.get("priors") if use_priors else None, **offsets)
 
 
 def backtest(data, first_week=4, min_games=3, variants=VARIANTS):
@@ -812,8 +815,12 @@ def main(argv=None):
                         matchup=args.matchup)
     lines = client.lines(args.year, week, "regular")
     upcoming = [g for g in games if g.get("week") == week and not g.get("completed")]
+    # Preseason priors (cfb_stats.priors) made spreads more accurate but totals less, so only the
+    # spread model uses them. Build with: python -m cfb_stats.priors --build <year>
+    spread_priors = priors_mod.load_priors(args.year)
     spread_model = TotalsModel(game_rows, done, args.spread_alpha, drives=drives, fcs_weight=args.fcs_weight,
-                               huber_k=args.huber_k or None, off_offsets=off_offsets, def_offsets=def_offsets)
+                               huber_k=args.huber_k or None, off_offsets=off_offsets, def_offsets=def_offsets,
+                               priors=spread_priors)
     weather = {}
     if not args.no_weather:
         try:

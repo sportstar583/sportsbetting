@@ -178,10 +178,34 @@ Slightly more accurate in two of three seasons, no change in betting results. It
 
 Source: `data/weather_backtest.csv`.
 
+## Preseason priors
+
+Instead of shrinking every team toward league average, start each from last season's final
+rating scaled by returning production, plus roster talent (`cfb_stats.priors`). Weights were fit
+on two seasons and tested on the third. Fitted weights: a team keeps about 40% of last season's
+rating, more when its offensive production returns; talent adds little once last season is known.
+
+| Totals model RMSE | 2023 | 2024 | 2025 |
+| --- | --- | --- | --- |
+| Without priors | 16.38 | 17.03 | 15.46 |
+| With priors | 16.49 | 17.10 | 15.71 |
+| Weeks 4-6 without / with | 17.44 / 17.70 | 17.77 / 17.87 | 15.73 / 15.69 |
+
+| Spread model margin RMSE | 2023 | 2024 | 2025 |
+| --- | --- | --- | --- |
+| Without priors | 16.90 | 17.43 | 17.61 |
+| With priors | 16.73 | 17.31 | 17.48 |
+| Weeks 4-6 without / with | 16.13 / 15.66 | 21.47 / 21.25 | 19.04 / 18.67 |
+| ATS edge >= 3 with priors | 51.0% | 49.5% | 50.6% |
+
+Priors make totals slightly worse (totals do best with every team shrunk hard toward average)
+and spreads more accurate in every season, most in weeks 4-6, still with no edge against the
+spread. So only the spread model uses them. Source: `data/priors_backtest.csv` (totals).
+
 ## Not backtested
 
 - Defensive-player injury estimates and the Big Ten availability report import. There is no
   historical availability data to test against, so the defensive scale is uncalibrated and
   kept small.
-- Rest and travel, altitude, and prior-season ratings carried into early weeks.
+- Rest and travel, and altitude.
 - Weather forecasts (the backtest uses observed weather; Sunday forecasts are 6 days out).
