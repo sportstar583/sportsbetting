@@ -12,8 +12,9 @@ before it. Only games with a market total where both teams have 3+ games of data
 included. "Edge" is projection minus market. Closing and opening lines are the median across
 books from the CFBD `/lines` endpoint. Breakeven at -110 is 52.4%. Win % excludes pushes.
 
-**Which seasons are clean tests.** The ridge penalty and injury scale were chosen by looking
-at 2024 and 2025, and the run/pass matchup and weekly card were judged on all three seasons.
+**Which seasons are clean tests.** The ridge penalty and QB injury scale were chosen by looking
+at 2024 and 2025; the run/pass matchup, weekly card, weather and defensive injury scale were
+judged on all three seasons.
 2023 was the holdout for the base model, but it has since been looked at, so none of the
 results below is fully out of sample. The next real test is the 2026 season as it's played.
 
@@ -178,6 +179,39 @@ Slightly more accurate in two of three seasons, no change in betting results. It
 
 Source: `data/weather_backtest.csv`.
 
+## Injury adjustment (defender absent)
+
+There are no historical availability reports, so this uses box scores after the fact: a
+regular (a stat line in 60%+ of his team's games) with no defensive stat line in a game counts
+as out for it. Weeks 4+, 2023-2025, games where the season-to-date starting QB sat dropped.
+Reproduce with `python -m cfb_stats.defense --backtest --cache .cfbd_cache`.
+
+Missing defenders do push totals up, and the market only partly prices it:
+
+| Starters (5%+ of team production) missing | Games | Actual minus healthy model | Actual minus market |
+| --- | --- | --- | --- |
+| None | 1,279 | -0.1 | +0.4 |
+| Adjustment would be under 10 pts at scale 1.0 | 349 | +0.7 | +0.9 |
+| 10-25 pts | 431 | +1.7 | +2.0 |
+| 25+ pts | 96 | +1.3 | +2.3 |
+
+Scale fit on two seasons and tested on the third (RMSE and records with the fitted scale):
+
+| Season | Fit (5%+ starters) | Fit (3%+ regulars) | RMSE healthy / fit | Edge >= 3 healthy / fit | P4 card healthy / fit |
+| --- | --- | --- | --- | --- | --- |
+| 2023 | 0.096 | 0.040 | 16.57 / 16.57 | 212-177 / 221-176 | 28-34 / 32-30 |
+| 2024 | 0.071 | 0.050 | 16.50 / 16.46 | 233-187 / 230-182 | 42-26 / 39-30 |
+| 2025 | 0.072 | 0.042 | 15.51 / 15.50 | 184-161 / 183-157 | 39-31 / 39-31 |
+| All | 0.079 (90% bootstrap 0.02-0.14) | 0.043 (0.00-0.08) | | | |
+
+`DEF_SCALE` is set to 0.08, the starters-only fit; counting 3% rotational players adds quiet
+games as false absences and pulls the slope toward zero. The old guess of 0.10 was inside the
+interval. Either way the adjustment is small (a 10%-share starter is worth under a point), so
+accuracy and betting results barely move: the edge >= 3 win rate ticked up about half a
+point in each season, the card is a wash.
+
+Source: `data/defense_backtest.csv`, per game in `defense_backtest_games.csv`.
+
 ## Preseason priors
 
 Instead of shrinking every team toward league average, start each from last season's final
@@ -265,7 +299,6 @@ consistency to choose picks made the card worse. Shown on the board for referenc
 
 ## Not backtested
 
-- Defensive-player injury estimates and the Big Ten availability report import. There is no
-  historical availability data to test against, so the defensive scale is uncalibrated and
-  kept small.
+- The conference availability report import itself (which players get listed, and how the
+  reported statuses map to the chance of missing the game).
 - Weather forecasts (the backtest uses observed weather; Sunday forecasts are 6 days out).

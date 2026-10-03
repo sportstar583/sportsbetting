@@ -479,6 +479,19 @@ def load_season(client, year):
     return data
 
 
+def load_season_lite(client, year):
+    """load_season without passing/PPA, plus the raw box scores (for cfb_stats.defense)."""
+    games = [dict(g, seasonType="regular") for g in client.games(year, "regular")]
+    weeks = sorted({g["week"] for g in games if g.get("completed")})
+    data = {"games": games, "weeks": weeks, "rows": {}, "drives": {}, "lines": {}, "box": {}}
+    for w in weeks:
+        data["rows"][w] = client.game_advanced_stats(year, w, "regular", True)
+        data["drives"][w] = client.drives(year, w, "regular")
+        data["lines"][w] = client.lines(year, w, "regular")
+        data["box"][w] = client.get("/games/players", year=year, week=w, seasonType="regular")
+    return data
+
+
 def passing_from_box(box_games, player_ppa):
     """QB-game rows like /passing/players/games, for seasons that endpoint doesn't cover:
     attempts from box scores, EPA per pass play from player-game PPA."""
