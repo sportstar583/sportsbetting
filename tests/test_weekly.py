@@ -19,8 +19,7 @@ class WeeklyTests(unittest.TestCase):
         self.assertIn("| OVER 50.0 (opened 47) | C @ D |", md)
         self.assertIn("| UNDER 50.0 | I @ J |", md)
         self.assertNotIn("G @ H", md)  # 4th-biggest over
-        self.assertIn("Biggest edges outside Power 4", md)
-        self.assertIn("K @ L", md)
+        self.assertNotIn("K @ L", md)  # card is Power 4 only
         self.assertNotIn("M @ N", md)  # not enough data
 
 

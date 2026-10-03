@@ -5,7 +5,7 @@
 
 Steps:
   1. Find the week (first regular-season week with a game that hasn't kicked off).
-  2. Pull Big Ten availability reports, keeping only reports for games actually played that
+  2. Pull Big Ten and SEC availability reports, keeping only reports for games actually played that
      week, so an old report from last week is never applied to this week's games.
   3. Build the totals board (data/<year>/totals_week<N>.csv) with those injuries.
   4. Note if last week's advanced stats aren't loaded yet (e.g. very early Sunday).
@@ -24,18 +24,28 @@ from . import availability, totals
 from .collect import default_year, upcoming_week
 
 
+CONFERENCES = {"B10": "Big Ten", "SEC": "SEC"}
+
+
 def current_injuries(client, year, week, out_dir, games):
-    """Write injuries for this week's Big Ten games; returns (path or None, note)."""
-    try:
-        reports = availability.fetch_reports("B10")
-    except Exception as e:  # network/feed problems shouldn't stop the board
-        return None, f"Big Ten availability feed unavailable ({e}); board built without injuries."
+    """Write injuries for this week's games from each conference feed; returns (path or None, note)."""
     pairs = {frozenset((g["homeTeam"], g["awayTeam"])) for g in games
              if g.get("week") == week and not g.get("completed")}
-    current = [r for r in reports
-               if frozenset(b.get("teamDisplayName") for b in r.get("games") or []) in pairs]
+    current, notes = [], []
+    for code, label in CONFERENCES.items():
+        try:
+            reports = availability.fetch_reports(code)
+        except Exception as e:  # network/feed problems shouldn't stop the board
+            notes.append(f"{label} availability feed unavailable ({e})")
+            continue
+        mine = [r for r in reports
+                if frozenset(b.get("teamDisplayName") for b in r.get("games") or []) in pairs]
+        if mine:
+            current += mine
+        else:
+            notes.append(f"No {label} availability reports posted yet for this week's games")
     if not current:
-        return None, "No Big Ten availability reports posted yet for this week's games."
+        return None, "; ".join(notes) + "; board built without injuries."
     teams = sorted({b.get("teamDisplayName") for r in current for b in r.get("games") or []})
     rosters = availability.all_rosters(client, year, teams)
     rows = availability.entries(current, rosters)
@@ -46,7 +56,8 @@ def current_injuries(client, year, week, out_dir, games):
         w.writeheader()
         w.writerows(rows)
     latest = max(f"{r.get('publishDate')} {r.get('postedTime')}" for r in current)
-    return path, f"Injuries: {len(current)} Big Ten game reports ({len(rows)} players), latest posted {latest}."
+    note = f"Injuries: {len(current)} conference game reports ({len(rows)} players), latest posted {latest}."
+    return path, note + "".join(f" {n}." for n in notes)
 
 
 def stats_freshness(client, year, week, games):
@@ -105,12 +116,6 @@ def card_markdown(rows, week, year, n, injury_note):
     out += [line(r, "OVER") for r in overs] + [line(r, "UNDER") for r in unders]
     if not overs and not unders:
         out.append("| (no Power 4 games with a market total yet) | | | | | |")
-    other = sorted((r for r in rows if r not in p4 and r["enough_data"] == "True" and abs(num(r, "edge")) >= 7),
-                   key=lambda r: -abs(num(r, "edge")))[:5]
-    if other:
-        out += ["", "Biggest edges outside Power 4 (weaker backtest, about 50-53%):", ""]
-        out += [f"- {r['pick']} {r['market_total']}: {r['away']} @ {r['home']} (model {r['proj_total']}, "
-                f"edge {num(r, 'edge'):+.1f})" for r in other]
     return "\n".join(out) + "\n"
 
 
@@ -144,7 +149,12 @@ def main(argv=None):
 
     inj_note += stats_freshness(client, args.year, week, games)
     with open(os.path.join(out_dir, f"totals_week{week}.csv")) as f:
-        rows = list(csv.DictReader(f))
+        reader = csv.DictReader(f)
+        fields, rows = reader.fieldnames, [r for r in reader if r["p4_game"] == "True"]
+    with open(os.path.join(out_dir, f"totals_week{week}.csv"), "w", newline="") as f:
+        w = csv.DictWriter(f, fieldnames=fields)
+        w.writeheader()
+        w.writerows(rows)
     md = card_markdown(rows, week, args.year, args.card, inj_note)
     path = os.path.join(out_dir, f"card_week{week}.md")
     with open(path, "w") as f:
