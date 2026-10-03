@@ -61,6 +61,18 @@ Notes:
 - Advanced stats leave out garbage time by default. Pass `--include-garbage-time` to keep it.
 - Points and W/L come from completed regular-season and postseason games, including games against FCS opponents.
 
+### Weekly card (one command)
+
+```bash
+python -m cfb_stats.weekly            # upcoming week; --week N for another
+```
+
+Pulls this week's Big Ten availability reports (only for games actually played that week),
+builds the totals board with those injuries, and writes `data/<year>/card_week<N>.md`: the 3
+biggest over edges and 3 biggest under edges among Power 4 games, the strategy with the best
+backtest (114-88 over 2023-2025, see [BACKTEST.md](BACKTEST.md)). Best run twice a week:
+early in the week when lines open, and again on Friday after availability reports.
+
 ### Over/under board
 
 `cfb_stats/totals.py` projects each game's total from adjusted EPA/play and tempo, then

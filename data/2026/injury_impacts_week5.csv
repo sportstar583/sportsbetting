@@ -1,37 +1,4 @@
 team,player,prob_out,side,epa_delta,player_id,position,impact,note
-Penn State,Daryus Dixson,0.5,def,,5141411,CB,0.0016,3.3% of team defensive production
-Penn State,Koby Howard,1.0,off,,5141525,WR,-0.0077,"WR usage 0.09, epa +1.500 over 18 plays"
-Penn State,LaVar Arrington II,1.0,def,,5214556,DE,0.0,no defensive stats this season (depth player)
-Penn State,Joshua Johnson,1.0,def,,5214530,CB,0.0,no defensive stats this season (depth player)
-Penn State,Max Granville,1.0,def,,5141483,DE,0.0006,0.6% of team defensive production
-Penn State,Cam Smith,1.0,def,,5142598,LB,0.0009,0.9% of team defensive production
-Penn State,Christian Askew,1.0,def,,5327757,CB,0.0,no defensive stats this season (depth player)
-Penn State,Tyler Armstead,1.0,def,,5230372,CB,0.0002,0.2% of team defensive production
-Penn State,Mason Robinson,1.0,def,,4899362,DE,0.0,no defensive stats this season (depth player)
-Penn State,Dayshaun Burnett,1.0,def,,5141393,DE,0.0,no defensive stats this season (depth player)
-Penn State,Will Tompkins,1.0,off,,5198051,OL,,"offensive line: no individual stats, give epa_delta to count it"
-Penn State,Cooper Alexander,1.0,off,,5146740,TE,0.0,no offensive EPA this season (depth player or name mismatch)
-Northwestern,Hayden Eligon II,0.5,off,,5084772,WR,-0.0004,"WR usage 0.02, epa -0.137 over 2 plays"
-Northwestern,Braden Turner,1.0,def,,4912163,DB,0.0064,6.4% of team defensive production
-Northwestern,Seth Valeri,1.0,def,,5295997,DB,0.0,no defensive stats this season (depth player)
-Northwestern,Josh Fussell,1.0,def,,4923270,DB,0.0049,4.9% of team defensive production
-Northwestern,Chase Farrell,0.5,off,,5079389,WR,0.0,no offensive EPA this season (depth player or name mismatch)
-Northwestern,Damon Walters,0.5,def,,4899672,DB,0.0036,7.1% of team defensive production
-Northwestern,Max Mohring,1.0,def,,5291097,LB,0.0002,0.2% of team defensive production
-Northwestern,Jason Reynolds II,1.0,def,,4838692,LB,0.0,no defensive stats this season (depth player)
-Northwestern,Nigel Glover,0.5,def,,4921508,LB,0.0,no defensive stats this season (depth player)
-Northwestern,Callen Campbell,1.0,def,,5145121,DL,0.0004,0.4% of team defensive production
-Northwestern,Qayvier Johnson,1.0,def,,5193589,LB,0.0,no defensive stats this season (depth player)
-Northwestern,David Anchondo,1.0,off,,5307060,OL,,"offensive line: no individual stats, give epa_delta to count it"
-Northwestern,Ezomo Oratokhai,1.0,off,,5195388,OL,,"offensive line: no individual stats, give epa_delta to count it"
-Northwestern,Jacob Miller,1.0,off,,5320929,OL,,"offensive line: no individual stats, give epa_delta to count it"
-Northwestern,Chris Petrucci,1.0,off,,4812341,TE,0.0,no offensive EPA this season (depth player or name mismatch)
-Northwestern,Jaden McDuffie,1.0,off,,5287502,WR,0.0,no offensive EPA this season (depth player or name mismatch)
-Northwestern,Luke Dehnicke,1.0,off,,5328488,TE,-0.0044,"TE usage 0.07, epa +1.033 over 13 plays"
-Northwestern,Tom McGlinchey,1.0,off,,5246775,TE,0.0,no offensive EPA this season (depth player or name mismatch)
-Northwestern,Migo Jackson,1.0,def,,4685233,DL,0.0,no defensive stats this season (depth player)
-Northwestern,Glory Stephen-Wangboje,1.0,def,,5165978,DL,0.0,no defensive stats this season (depth player)
-Northwestern,Troy Regovich,0.5,def,,5156387,DL,0.0,no defensive stats this season (depth player)
 Michigan,Andrew Marsh,0.4,off,,5141572,WR,-0.0025,"WR usage 0.14, epa +0.432 over 35 plays"
 Michigan,Dom Nichols,0.4,def,,5079636,DE,0.0037,9.3% of team defensive production
 Michigan,Braydon Alford,1.0,off,,5224470,WR,0.0,no offensive EPA this season (depth player or name mismatch)
