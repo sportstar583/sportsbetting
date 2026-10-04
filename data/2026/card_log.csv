@@ -1,7 +1,13 @@
 logged_at,run,week,game_id,away,home,side,median_line,best_line,best_book,proj_total,edge,close_line,actual_total,clv,result
-2026-10-03 04:03,Saturday,5,401858251,Stanford,Wake Forest,OVER,53.75,53.75,,62.7,9.0,,,,
-2026-10-03 04:03,Saturday,5,401856821,Texas Tech,Colorado,OVER,49.5,49.5,,58.0,8.5,,,,
-2026-10-03 04:03,Saturday,5,401858253,Virginia,Florida State,OVER,51.5,51.5,,59.8,8.3,,,,
-2026-10-03 04:03,Saturday,5,401856705,Vanderbilt,Georgia,UNDER,50.75,50.75,,45.8,-5.0,,,,
-2026-10-03 04:03,Saturday,5,401858478,Washington,USC,UNDER,58.25,58.25,,53.7,-4.5,,,,
-2026-10-03 04:03,Saturday,5,401858477,Indiana,Rutgers,UNDER,56.75,56.75,,52.6,-4.2,,,,
+2026-10-03 04:03,Saturday,5,401858251,Stanford,Wake Forest,OVER,53.75,53.75,,62.7,9.0,54.25,60,0.5,W
+2026-10-03 04:03,Saturday,5,401856821,Texas Tech,Colorado,OVER,49.5,49.5,,58.0,8.5,50.0,36,0.5,L
+2026-10-03 04:03,Saturday,5,401858253,Virginia,Florida State,OVER,51.5,51.5,,59.8,8.3,51.5,45,0.0,L
+2026-10-03 04:03,Saturday,5,401856705,Vanderbilt,Georgia,UNDER,50.75,50.75,,45.8,-5.0,50.25,52,0.5,L
+2026-10-03 04:03,Saturday,5,401858478,Washington,USC,UNDER,58.25,58.25,,53.7,-4.5,58.25,46,0.0,W
+2026-10-03 04:03,Saturday,5,401858477,Indiana,Rutgers,UNDER,56.75,56.75,,52.6,-4.2,56.75,62,0.0,L
+2026-10-04 13:48,Sunday,6,401858487,Iowa,Washington,OVER,41.5,41.5,DraftKings,46.0,4.5,,,,
+2026-10-04 13:48,Sunday,6,401856714,South Carolina,Florida,OVER,57.5,57.5,DraftKings,61.9,4.4,,,,
+2026-10-04 13:48,Sunday,6,401856717,Texas,Oklahoma,OVER,41.5,41.5,DraftKings,43.3,1.8,,,,
+2026-10-04 13:48,Sunday,6,401856712,Georgia,Alabama,UNDER,56.5,56.5,DraftKings,45.1,-11.4,,,,
+2026-10-04 13:48,Sunday,6,401858484,UCLA,Oregon,UNDER,60.5,60.5,DraftKings,54.6,-5.9,,,,
+2026-10-04 13:48,Sunday,6,401858485,USC,Penn State,UNDER,58.5,58.5,DraftKings,56.8,-1.7,,,,
