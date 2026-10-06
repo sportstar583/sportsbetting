@@ -284,25 +284,33 @@ league average:
   FG attempts per game, in points per game.
 - **Net punting:** where the opponent's next drive starts vs. an average punt from the same
   spot (distance, returns, coverage and blocks), times punts per game.
-- **4th-down go rate:** attempts / (attempts + punts + FG attempts).
+- **4th-down go rate:** attempts / (attempts + punts + FG attempts), this season so far.
+  League average 26%; most teams fall between 17% and 35%.
+- **Coach go rate:** the head coach's go rate over his previous 3 seasons (at any school),
+  blended with this season's (history counts as about 8 games). Also tried adjusted for
+  scoring margin, but margin barely moves go rate, so the two versions agree.
 
 | Added factor | RMSE 2023 / 2024 / 2025 | Every edge >= 3 | P4 card |
 | --- | --- | --- | --- |
 | None (current model) | 16.38 / 17.03 / 15.46 | 53.0% | 114-88 (56.4%) |
 | FG kicking | 16.38 / 17.03 / 15.46 | 52.9% | 115-87 |
 | Net punting | 16.38 / 17.03 / 15.46 | 52.7% | 114-88 |
-| 4th-down go rate | 16.38 / 17.03 / 15.48 | 53.7% | 109-93 |
-| All three | 16.38 / 17.04 / 15.48 | 53.2% | 108-94 |
+| 4th-down go rate (this season) | 16.39 / 17.03 / 15.48 | 53.8% | 115-88 |
+| Coach go rate (with history) | 16.38 / 17.03 / 15.47 | 53.6% | 114-88 |
+| FG + punting + go rate | 16.39 / 17.04 / 15.49 | 53.7% | 113-89 |
 
 - The differences between teams are small next to a game total's noise: once shrunk, the
   FG term spans about +-0.3 points a game, and punting about +-8 yards of field position.
 - Net punting has the expected sign (better punting, lower total: about -0.2 points per 10
-  yards a game) but is under one standard error. FG kicking has the wrong sign and is noise.
-- Teams that go for it more ran slightly over the model (+0.35 points per 10 points of go
-  rate, about one standard error) but not over the market, and correcting for it hurt the card.
-- Even with full-season ratings (hindsight, so a best case) none improved RMSE by more than
-  0.02 points or helped the card. The market already prices these, and what isn't priced is
-  mostly in EPA (4th-down conversions are plays) and tempo (punts end possessions).
+  yards a game) but is under one standard error. FG kicking is noise.
+- Aggressive teams ran slightly over the model (about +0.3 points per 10 points of go rate,
+  under one standard error) and not over the market. Coach aggressiveness is a real habit
+  (a coach's last 3 seasons vs this one: r = 0.40), but it doesn't move totals: going for it
+  adds plays to one drive and takes a punt away, which mostly nets out, and what's left is
+  already in EPA (conversions are plays) and tempo.
+- The small gains on "every edge >= 3" come with worse RMSE and no better card, so they look
+  like noise. With full-season ratings (hindsight, a best case) none of these improved RMSE by
+  more than 0.02 points or helped the card either.
 
 None is used.
 
