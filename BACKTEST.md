@@ -274,6 +274,38 @@ Adjustments to the model's backtest totals, fit on two seasons and tested on the
 
 None is used.
 
+## Special teams and 4th-down aggressiveness
+
+Same leave-one-season-out test (`scripts/special_teams_backtest.py`; about 13 API calls per
+season the first time, none once cached). Team ratings use only earlier weeks, shrunk toward
+league average:
+
+- **FG kicking:** makes minus expected makes (league rate by kick distance) per attempt, times
+  FG attempts per game, in points per game.
+- **Net punting:** where the opponent's next drive starts vs. an average punt from the same
+  spot (distance, returns, coverage and blocks), times punts per game.
+- **4th-down go rate:** attempts / (attempts + punts + FG attempts).
+
+| Added factor | RMSE 2023 / 2024 / 2025 | Every edge >= 3 | P4 card |
+| --- | --- | --- | --- |
+| None (current model) | 16.38 / 17.03 / 15.46 | 53.0% | 114-88 (56.4%) |
+| FG kicking | 16.38 / 17.03 / 15.46 | 52.9% | 115-87 |
+| Net punting | 16.38 / 17.03 / 15.46 | 52.7% | 114-88 |
+| 4th-down go rate | 16.38 / 17.03 / 15.48 | 53.7% | 109-93 |
+| All three | 16.38 / 17.04 / 15.48 | 53.2% | 108-94 |
+
+- The differences between teams are small next to a game total's noise: once shrunk, the
+  FG term spans about +-0.3 points a game, and punting about +-8 yards of field position.
+- Net punting has the expected sign (better punting, lower total: about -0.2 points per 10
+  yards a game) but is under one standard error. FG kicking has the wrong sign and is noise.
+- Teams that go for it more ran slightly over the model (+0.35 points per 10 points of go
+  rate, about one standard error) but not over the market, and correcting for it hurt the card.
+- Even with full-season ratings (hindsight, so a best case) none improved RMSE by more than
+  0.02 points or helped the card. The market already prices these, and what isn't priced is
+  mostly in EPA (4th-down conversions are plays) and tempo (punts end possessions).
+
+None is used.
+
 ## Team consistency
 
 How much each offense's and defense's game-by-game EPA swings around what the opponent-adjusted
