@@ -314,6 +314,29 @@ league average:
 
 None is used.
 
+## SP+ (last season's final)
+
+Bill Connelly's SP+ via CFBD `/ratings/sp` (`scripts/sp_plus_backtest.py`, 4 API calls). CFBD
+has only final SP+ for past seasons, no weekly snapshots, so current-season SP+ can't be
+tested without look-ahead. Last season's final SP+ is known before the season, so it can.
+Same leave-one-season-out test; FBS games only (FCS teams have no SP+), 1,745 games.
+
+| | RMSE 2023 / 2024 / 2025 | Every edge >= 3 | P4 card |
+| --- | --- | --- | --- |
+| Totals, current model | 16.07 / 16.82 / 15.50 | 53.7% | 116-86 (57.4%) |
+| + last season's SP+ (offense + defense, both teams) | 15.96 / 16.75 / 15.50 | 53.4% | 111-89 |
+| Spreads, current model (margin) | 16.80 / 16.72 / 16.61 | 50.2% ATS | |
+| + last season's SP+ difference | 16.78 / 16.75 / 16.58 | 50.0% ATS | |
+
+- Totals: games between teams that were high-scoring or leaky last season ran over the model
+  (+0.09 points per point of SP+, almost 4 standard errors), and correcting for it makes
+  totals more accurate. But the market already has it (-0.02 vs the market), so it moves the
+  model toward the closing line and the edge shrinks: the card drops 5 wins.
+- Spreads: nothing; the spread model's priors already carry last season's ratings.
+
+Not used. Current-season SP+ could be shown next to the model's numbers for reference, but
+it would need to come from somewhere other than CFBD's free tier and couldn't be backtested.
+
 ## Team consistency
 
 How much each offense's and defense's game-by-game EPA swings around what the opponent-adjusted
