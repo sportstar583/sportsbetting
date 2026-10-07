@@ -47,7 +47,7 @@ from collections import defaultdict
 
 import numpy as np
 
-from . import adjust, injuries as inj, priors as priors_mod, weather as wx_mod
+from . import adjust, injuries as inj, priors as priors_mod, sp_plus, weather as wx_mod
 from .collect import P4_CONFERENCES, default_year, upcoming_week, write_csv
 
 DEFAULT_MIN_EDGE = 3.0
@@ -385,11 +385,12 @@ def load_team_hfa(path=TEAM_HFA_PATH):
         return {r["team"]: float(r["home_edge_pts"]) for r in csv.DictReader(f)}
 
 
-def board(model, games, lines, min_games=3, spread_model=None, weather=None, team_hfa=None):
+def board(model, games, lines, min_games=3, spread_model=None, weather=None, team_hfa=None, sp=None):
     """One row per game with a market total; spread columns too when there's a spread.
 
     Spread columns come from spread_model (a lightly shrunk model) when given. weather
-    ({game id: conditions}, see cfb_stats.weather) adds a wind correction to the total."""
+    ({game id: conditions}, see cfb_stats.weather) adds a wind correction to the total.
+    sp (cfb_stats.sp_plus.load) adds SP+ total and margin columns, for reference only."""
     weather = weather or {}
     by_id = {g["id"]: g for g in games}
     rows = []
@@ -416,6 +417,7 @@ def board(model, games, lines, min_games=3, spread_model=None, weather=None, tea
         margin = shp - sap
         done = g.get("homePoints") is not None and g.get("awayPoints") is not None
         spread_edge = None if spread is None else _ats(margin, spread)
+        sp_total, sp_margin = sp_plus.project(sp, home, away, bool(g.get("neutralSite")))
         rows.append({
             "game_id": g["id"],
             "week": g.get("week"),
@@ -464,6 +466,9 @@ def board(model, games, lines, min_games=3, spread_model=None, weather=None, tea
             "spread_pick": None if spread_edge is None else (
                 f"{home} {spread:+g}" if spread_edge > 0 else f"{away} {-spread:+g}"),
             "actual_margin": (g["homePoints"] - g["awayPoints"]) if done else None,
+            # SP+ (reference only, not used for picks): implied total and home margin.
+            "sp_total": sp_total,
+            "sp_margin": sp_margin,
         })
     rows.sort(key=lambda r: -abs(r["edge"]))
     return rows
@@ -927,6 +932,8 @@ def main(argv=None):
     p.add_argument("--huber-k", type=float, default=DEFAULT_HUBER_K,
                    help="down-weight single-game results beyond k robust SDs (0 = off)")
     p.add_argument("--injuries", default=None, help="CSV: team,player,status[,side,epa_delta]")
+    p.add_argument("--sp-plus", default=None,
+                   help="CSV of current SP+ (team,sp,off,def); default data/<year>/sp_plus_week<N>.csv if it exists")
     p.add_argument("--min-edge", type=float, default=DEFAULT_MIN_EDGE, help="points of edge to list as a pick")
     p.add_argument("--card", type=int, default=3, help="size of the weekly card (biggest over and under edges)")
     p.add_argument("--min-games", type=int, default=3, help="games of data each team needs")
@@ -1023,7 +1030,14 @@ def main(argv=None):
             print(f"weather: forecasts for {len(weather)} of {len(upcoming)} games")
         except Exception as e:  # weather is optional; never block the board on it
             print(f"weather: forecast unavailable ({e}); no wind correction applied")
-    rows = board(model, upcoming, lines, args.min_games, spread_model, weather, load_team_hfa())
+    sp = sp_plus.load(args.sp_plus or sp_plus.path_for(out_dir, week))
+    if sp:
+        missing = sorted({t for g in upcoming for t in (g["homeTeam"], g["awayTeam"])
+                          if g.get("homeConference") in P4_CONFERENCES or g.get("awayConference") in P4_CONFERENCES}
+                         - set(sp["teams"]))
+        print(f"SP+: {len(sp['teams'])} teams (reference only)"
+              + (f"; no SP+ for {len(missing)} teams in P4 games: {', '.join(missing)}" if missing else ""))
+    rows = board(model, upcoming, lines, args.min_games, spread_model, weather, load_team_hfa(), sp)
 
     path = os.path.join(out_dir, f"totals_week{week}.csv")
     write_csv(path, rows)

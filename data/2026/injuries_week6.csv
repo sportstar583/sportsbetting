@@ -1,0 +1,53 @@
+team,player,status,side,epa_delta,player_id,position,jersey,report,stars,rating,national_rank,recruit_class
+Iowa,Tyler Brown,Out,def,,5193099,DB,2,Initial 2026-10-06 19:00:00,3,0.81,2705,2024
+Iowa,Hank Brown,Questionable,off,,5089314,QB,9,Initial 2026-10-06 19:00:00,3,0.8489,1473,2023
+Iowa,Kyler Gerardy,Out,def,,5218925,DB,19,Initial 2026-10-06 19:00:00,2,0.74,3565,2024
+Iowa,Ty Hudkins,Questionable,def,,5147228,DB,20,Initial 2026-10-06 19:00:00,3,0.8617,1175,2024
+Washington,Jordan Washington,Out,off,,5219119,RB,4,Initial 2026-10-06 19:00:00,,,,
+Washington,Christian Moss,Out,off,,4709669,WR,5,Initial 2026-10-06 19:00:00,3,0.8556,1031,2021
+Washington,Jayden Limar,Out,off,,4870868,RB,17,Initial 2026-10-06 19:00:00,4,0.905,296,2023
+Washington,Quaid Carr,Out,off,,5209302,RB,21,Initial 2026-10-06 19:00:00,3,0.8603,1322,2025
+Washington,Jeron Jones,Doubtful,def,,5276974,CB,24,Initial 2026-10-06 19:00:00,4,0.8933,438,2026
+Washington,Landen Hatchett,Questionable,off,,4921406,OL,66,Initial 2026-10-06 19:00:00,4,0.8911,441,2023
+Washington,CJ Christian,Out,def,,5082027,S,,Initial 2026-10-06 19:00:00,,,,
+Florida State,Darryll Desir,Questionable,def,,5167701,DL,1,Initial 2026-10-06 20:00:00,4,0.8959,390,2025
+Florida State,Samuel Singleton Jr.,Out,off,,4870955,RB,3,Initial 2026-10-06 20:00:00,4,0.895,389,2023
+Florida State,Devin Carter,Out,off,,5158982,WR,11,Initial 2026-10-06 20:00:00,4,0.9075,289,2026
+Florida State,Karson Hobbs,Out,def,,5085107,DB,16,Initial 2026-10-06 20:00:00,3,0.8811,631,2024
+Florida State,Jamari Howard,Out,def,,5079488,DB,18,Initial 2026-10-06 20:00:00,4,0.9495,110,2024
+Florida State,Blake Nichelson,Out,def,,4899480,LB,20,Initial 2026-10-06 20:00:00,4,0.9283,183,2023
+Florida State,Zae Thomas,Out,def,,5294071,DB,22,Initial 2026-10-06 20:00:00,4,0.9005,342,2025
+Florida State,Jordan Crutchfield,Out,def,,5203605,DB,27,Initial 2026-10-06 20:00:00,3,0.89,487,2026
+Florida State,Mikai Gbayor,Probable,def,,4683154,LB,28,Initial 2026-10-06 20:00:00,3,0.8737,613,2021
+Florida State,Izayia Williams,Out,def,,5186904,LB,30,Initial 2026-10-06 20:00:00,4,0.9442,137,2026
+Florida State,Karon Maycock,Probable,def,,5172098,LB,31,Initial 2026-10-06 20:00:00,3,0.8789,774,2026
+Florida State,Antonio Cromartie Jr.,Probable,def,,5222701,DB,33,Initial 2026-10-06 20:00:00,3,0.8344,2361,2025
+Florida State,Daylen Green,Out,def,,5271218,LB,38,Initial 2026-10-06 20:00:00,3,0.8711,1066,2026
+Florida State,Noah LaVallee,Out,def,,5291010,LB,45,Initial 2026-10-06 20:00:00,3,0.8578,1708,2026
+Louisville,Lincoln Kienholz,Probable,off,,5078278,QB,3,Initial 2026-10-06 20:00:00,4,0.9264,191,2023
+Louisville,TJ Banks,Questionable,def,,5079312,DB,4,Initial 2026-10-06 20:00:00,4,0.9111,259,2024
+Louisville,Keyjuan Brown,Questionable,off,,4923046,RB,5,Initial 2026-10-06 20:00:00,3,0.8786,634,2023
+Louisville,Koen Entringer,Probable,def,,4869698,DB,5,Initial 2026-10-06 20:00:00,3,0.877,623,2022
+Louisville,Antonio Watts,Out,def,,4838276,DB,9,Initial 2026-10-06 20:00:00,3,0.8359,1661,2022
+Louisville,AJ Green,Probable,def,,4899477,DL,17,Initial 2026-10-06 20:00:00,4,0.9245,195,2023
+Louisville,Travis Egan,Out,off,,5151017,TE,44,Initial 2026-10-06 20:00:00,,,,
+Louisville,Bryten Close,Out,off,,5280615,OT,63,Initial 2026-10-06 20:00:00,3,0.8678,1211,2026
+Louisville,Ellis McAdoo,Probable,off,,5226576,OL,65,Initial 2026-10-06 20:00:00,3,0.86,1220,2024
+Louisville,Anwar O'neal,Probable,off,,4921265,OL,70,Initial 2026-10-06 20:00:00,,,,
+Louisville,Cason Henry,Questionable,off,,4838533,OL,71,Initial 2026-10-06 20:00:00,3,0.8585,1053,2022
+Louisville,Sam Secrest,Out,off,,4869389,OL,72,Initial 2026-10-06 20:00:00,3,0.8281,1855,2022
+Louisville,Montavin Quisenberry,Out,off,,5164691,WR,82,Initial 2026-10-06 20:00:00,3,0.8753,769,2025
+Louisville,Hamilton Atkins,Out,off,,5226577,TE,90,Initial 2026-10-06 20:00:00,,,,
+Louisville,Daylen Russell,Questionable,def,,5146111,DL,90,Initial 2026-10-06 20:00:00,3,0.8586,1291,2024
+Louisville,Joshua Donald,Probable,def,,5084455,DL,95,Initial 2026-10-06 20:00:00,,,,
+Louisville,Sam Dawson,Out,def,,5263946,DL,98,Initial 2026-10-06 20:00:00,3,0.8644,1358,2026
+Iowa State,Drew Surges,Out,def,,5150695,S,6,Initial 2026-10-06 21:00:00,3,0.84,1710,2023
+Iowa State,Rylan Barnes,Questionable,def,,5150699,LB,41,Initial 2026-10-06 21:00:00,,,,
+Iowa State,Christian Greenlaw,Questionable,off,,5155426,TE,88,Initial 2026-10-06 21:00:00,,,,
+Iowa State,Caden Crawford,Out,def,,4718462,DE,92,Initial 2026-10-06 21:00:00,3,0.8837,502,2022
+Iowa State,Ka'Mori Moore,Out,def,,5154698,DT,95,Initial 2026-10-06 21:00:00,3,0.8731,848,2025
+BYU,Raider Damuni,Doubtful,def,,5150619,S,3,Initial 2026-10-06 21:00:00,,,,
+BYU,LJ Martin,Out,off,,4918126,RB,4,Initial 2026-10-06 21:00:00,3,0.8873,491,2023
+BYU,Isaiah Glasker,Out,def,,5080697,LB,16,Initial 2026-10-06 21:00:00,3,0.8333,1654,2021
+BYU,Sione Moa,Out,off,,5219689,RB,30,Initial 2026-10-06 21:00:00,,,,
+BYU,Cannon DeVries,Probable,def,,5296270,CB,32,Initial 2026-10-06 21:00:00,,,,

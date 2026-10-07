@@ -1,0 +1,53 @@
+team,player,prob_out,side,epa_delta,player_id,position,impact,note
+Iowa,Tyler Brown,1.0,def,,5193099,DB,0.0019,2.3% of team defensive production
+Iowa,Hank Brown,0.4,off,,5089314,QB,-0.0081,"QB usage 0.44, epa +0.197 over 140 plays"
+Iowa,Kyler Gerardy,1.0,def,,5218925,DB,0.0,no defensive stats this season (depth player)
+Iowa,Ty Hudkins,0.4,def,,5147228,DB,0.0008,2.5% of team defensive production
+Washington,Jordan Washington,1.0,off,,5219119,RB,0.0,no offensive EPA this season (depth player or name mismatch)
+Washington,Christian Moss,1.0,off,,4709669,WR,0.0,no offensive EPA this season (depth player or name mismatch)
+Washington,Jayden Limar,1.0,off,,4870868,RB,-0.0032,"RB usage 0.19, epa -0.310 over 12 plays"
+Washington,Quaid Carr,1.0,off,,5209302,RB,-0.0023,"RB usage 0.09, epa -0.216 over 6 plays"
+Washington,Jeron Jones,0.75,def,,5276974,CB,0.0036,5.9% of team defensive production
+Washington,Landen Hatchett,0.4,off,,4921406,OL,,"offensive line: no individual stats, give epa_delta to count it"
+Washington,CJ Christian,1.0,def,,5082027,S,0.0,no defensive stats this season (depth player)
+Florida State,Darryll Desir,0.4,def,,5167701,DL,0.0001,0.4% of team defensive production
+Florida State,Samuel Singleton Jr.,1.0,off,,4870955,RB,-0.0073,"RB usage 0.14, epa +0.483 over 29 plays"
+Florida State,Devin Carter,1.0,off,,5158982,WR,0.0,no offensive EPA this season (depth player or name mismatch)
+Florida State,Karson Hobbs,1.0,def,,5085107,DB,0.0,no defensive stats this season (depth player)
+Florida State,Jamari Howard,1.0,def,,5079488,DB,0.0,no defensive stats this season (depth player)
+Florida State,Blake Nichelson,1.0,def,,4899480,LB,0.0005,0.6% of team defensive production
+Florida State,Zae Thomas,1.0,def,,5294071,DB,0.0003,0.4% of team defensive production
+Florida State,Jordan Crutchfield,1.0,def,,5203605,DB,0.0002,0.2% of team defensive production
+Florida State,Mikai Gbayor,0.1,def,,4683154,LB,0.0006,7.7% of team defensive production
+Florida State,Izayia Williams,1.0,def,,5186904,LB,0.0,no defensive stats this season (depth player)
+Florida State,Karon Maycock,0.1,def,,5172098,LB,0.0001,1.2% of team defensive production
+Florida State,Antonio Cromartie Jr.,0.1,def,,5222701,DB,0.0001,1.2% of team defensive production
+Florida State,Daylen Green,1.0,def,,5271218,LB,0.0,no defensive stats this season (depth player)
+Florida State,Noah LaVallee,1.0,def,,5291010,LB,0.001,1.2% of team defensive production
+Louisville,Lincoln Kienholz,0.1,off,,5078278,QB,-0.0059,"QB usage 0.59, epa +0.407 over 190 plays"
+Louisville,TJ Banks,0.4,def,,5079312,DB,0.0018,5.6% of team defensive production
+Louisville,Keyjuan Brown,0.4,off,,4923046,RB,-0.0022,"RB usage 0.12, epa +0.349 over 40 plays"
+Louisville,Koen Entringer,0.1,def,,4869698,DB,0.0004,4.7% of team defensive production
+Louisville,Antonio Watts,1.0,def,,4838276,DB,0.0015,1.8% of team defensive production
+Louisville,AJ Green,0.1,def,,4899477,DL,0.0002,2.7% of team defensive production
+Louisville,Travis Egan,1.0,off,,5151017,TE,0.0,no offensive EPA this season (depth player or name mismatch)
+Louisville,Bryten Close,1.0,off,,5280615,OT,,"offensive line: no individual stats, give epa_delta to count it"
+Louisville,Ellis McAdoo,0.1,off,,5226576,OL,,"offensive line: no individual stats, give epa_delta to count it"
+Louisville,Anwar O'neal,0.1,off,,4921265,OL,,"offensive line: no individual stats, give epa_delta to count it"
+Louisville,Cason Henry,0.4,off,,4838533,OL,,"offensive line: no individual stats, give epa_delta to count it"
+Louisville,Sam Secrest,1.0,off,,4869389,OL,,"offensive line: no individual stats, give epa_delta to count it"
+Louisville,Montavin Quisenberry,1.0,off,,5164691,WR,0.0,no offensive EPA this season (depth player or name mismatch)
+Louisville,Hamilton Atkins,1.0,off,,5226577,TE,0.0,no offensive EPA this season (depth player or name mismatch)
+Louisville,Daylen Russell,0.4,def,,5146111,DL,0.0008,2.4% of team defensive production
+Louisville,Joshua Donald,0.1,def,,5084455,DL,0.0001,1.8% of team defensive production
+Louisville,Sam Dawson,1.0,def,,5263946,DL,0.0,no defensive stats this season (depth player)
+Iowa State,Drew Surges,1.0,def,,5150695,S,0.0027,3.4% of team defensive production
+Iowa State,Rylan Barnes,0.4,def,,5150699,LB,0.0001,0.2% of team defensive production
+Iowa State,Christian Greenlaw,0.4,off,,5155426,TE,-0.0005,"TE usage 0.02, epa -0.410 over 1 plays"
+Iowa State,Caden Crawford,1.0,def,,4718462,DE,0.0013,1.6% of team defensive production
+Iowa State,Ka'Mori Moore,1.0,def,,5154698,DT,0.0,no defensive stats this season (depth player)
+BYU,Raider Damuni,0.75,def,,5150619,S,0.0002,0.3% of team defensive production
+BYU,LJ Martin,1.0,off,,4918126,RB,-0.0103,"RB usage 0.21, epa +0.365 over 52 plays"
+BYU,Isaiah Glasker,1.0,def,,5080697,LB,0.0033,4.1% of team defensive production
+BYU,Sione Moa,1.0,off,,5219689,RB,-0.0026,"RB usage 0.09, epa +0.188 over 6 plays"
+BYU,Cannon DeVries,0.1,def,,5296270,CB,0.0005,6.4% of team defensive production

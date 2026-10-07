@@ -1,6 +1,6 @@
 # Week 6 card (2026)
 
-Generated 2026-10-04 13:48 UTC. No Big Ten availability reports posted yet for this week's games; No SEC availability reports posted yet for this week's games; No ACC availability reports posted yet for this week's games; No Big 12 availability reports posted yet for this week's games; board built without injuries.
+Generated 2026-10-07 06:23 UTC. Injuries: 25 conference game reports (52 players), latest posted 2026-10-07 23:00:00.
 
 The 3 biggest over edges and 3 biggest under edges among Power 4 games. Backtest
 2023-2025: 114-88 (56.4%) against closing and opening totals; small sample, track it
@@ -9,13 +9,16 @@ before trusting it. See BACKTEST.md.
 Bet is the median line across books; Best line is the best number available (lowest
 total for an over, highest for an under) and the book offering it.
 
-| Bet | Best line | Game | Model total | Edge | Date | Notes |
-| --- | --- | --- | --- | --- | --- | --- |
-| OVER 41.5 | same | Iowa @ Washington | 46.0 | +4.5 | 2026-10-10 | run/pass matchup +0.9, wind 4 mph, rain 0.02 in, 59F |
-| OVER 57.5 | same | South Carolina @ Florida | 61.9 | +4.4 | 2026-10-10 | wind 6 mph, rain 0.01 in, 89F |
-| OVER 41.5 (opened 48.5) | same | Texas @ Oklahoma | 43.3 | +1.8 | 2026-10-10 | run/pass matchup +2.4, wind 8 mph, 72F |
-| UNDER 56.5 (opened 50.5) | same | Georgia @ Alabama | 45.1 | -11.4 | 2026-10-10 | run/pass matchup -0.7, wind 20 mph, rain 1.20 in, 66F (-7.5) |
-| UNDER 60.5 | same | UCLA @ Oregon | 54.6 | -5.9 | 2026-10-10 | run/pass matchup -1.7, wind 5 mph, rain 0.01 in, 59F |
-| UNDER 58.5 (opened 56.5) | same | USC @ Penn State | 56.8 | -1.7 | 2026-10-10 | wind 4 mph, 54F |
+SP+ total is what Bill Connelly's SP+ ratings imply, for reference only: it isn't used
+for picks and couldn't be backtested in-season (see BACKTEST.md). - = team not in the SP+ file.
+
+| Bet | Best line | Game | Model total | SP+ total | Edge | Date | Notes |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| OVER 49.75 (opened 50.0) | 49.5 (DraftKings) | Syracuse @ Virginia | 56.9 | - | +7.2 | 2026-10-10 | run/pass matchup +0.4, wind 3 mph, rain 0.14 in, 56F |
+| OVER 47.25 | 47 (Bovada) | North Carolina @ Pittsburgh | 54.0 | - | +6.7 | 2026-10-10 | run/pass matchup +1.9, wind 6 mph, 71F |
+| OVER 52.5 (opened 52.75) | same | Ball State @ Northwestern | 58.0 | - | +5.5 | 2026-10-10 | run/pass matchup -0.6, wind 11 mph, 77F (-0.8) |
+| UNDER 52.75 (opened 52.5) | 53 (Bovada) | LSU @ Kentucky | 43.9 | 61.5 | -8.9 | 2026-10-10 | run/pass matchup -3.0, wind 20 mph, rain 0.04 in, 58F (-7.4) |
+| UNDER 51.5 (opened 51.75) | same | Kansas @ Utah | 45.5 | 41.5 | -6.0 | 2026-10-11 | run/pass matchup -2.7, wind 16 mph, 75F (-4.4) |
+| UNDER 56.25 | 56.5 (DraftKings) | Maryland @ Ohio State | 51.3 | - | -5.0 | 2026-10-10 | run/pass matchup -3.0, wind 11 mph, 68F (-0.5) |
 
 Track record (6 picks): 2-4-0 at the best line (33.3%); average closing line value +0.25 pts, beat the close on 3 of 6. Positive CLV over a full season is the best early sign the edge is real.

@@ -17,7 +17,7 @@ import datetime
 import os
 
 LOG_FIELDS = ["logged_at", "run", "week", "game_id", "away", "home", "side", "median_line", "best_line",
-              "best_book", "proj_total", "edge", "close_line", "actual_total", "clv", "result"]
+              "best_book", "proj_total", "edge", "close_line", "actual_total", "clv", "result", "sp_total"]
 
 
 def log_path(out_dir):
@@ -48,7 +48,8 @@ def log_card(path, picks, week, now=None):
         rows.append({"logged_at": now.strftime("%Y-%m-%d %H:%M"), "run": now.strftime("%A"), "week": week,
                      "game_id": r["game_id"], "away": r["away"], "home": r["home"], "side": side,
                      "median_line": r["market_total"], "best_line": best or r["market_total"],
-                     "best_book": book or "", "proj_total": r["proj_total"], "edge": r["edge"]})
+                     "best_book": book or "", "proj_total": r["proj_total"], "edge": r["edge"],
+                     "sp_total": r.get("sp_total") or ""})
     write_log(path, rows)
 
 
@@ -104,4 +105,16 @@ def summary(rows):
              f"{f' ({w / (w + l):.1%})' if w + l else ''}; average closing line value {sum(clvs) / len(clvs):+.2f} pts,"
              f" beat the close on {beat} of {len(clvs)}. Positive CLV over a full season is the best early sign the"
              " edge is real."]
+    # SP+ is shown for reference; track whether picks it agreed with did better.
+    sp = {"agreed": [0, 0, 0], "disagreed": [0, 0, 0]}
+    for r in graded:
+        if r.get("sp_total") in (None, ""):
+            continue
+        sp_side = float(r["sp_total"]) - float(r["median_line"])
+        if sp_side:
+            k = "agreed" if (sp_side > 0) == (r["side"] == "OVER") else "disagreed"
+            sp[k]["WLP".index(r["result"])] += 1
+    if any(sum(v) for v in sp.values()):
+        lines.append("SP+ check (reference only): " + "; ".join(
+            f"SP+ {k} with the pick {w}-{l}-{p}" for k, (w, l, p) in sp.items() if w + l + p) + ".")
     return lines

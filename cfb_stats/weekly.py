@@ -114,6 +114,7 @@ def card_markdown(rows, week, year, n, injury_note, injuries=None, track_record=
     overs = [r for r, side in picks if side == "OVER"]
     unders = [r for r, side in picks if side == "UNDER"]
     stamp = datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
+    has_sp = any(r.get("sp_total") not in (None, "") for r, _ in picks)
 
     def line(r, side):
         extras = []
@@ -138,8 +139,9 @@ def card_markdown(rows, week, year, n, injury_note, injuries=None, track_record=
             (r.get("best_under"), r.get("best_under_book"))
         shop = f"{best} ({book})" if best not in (None, "") and num(r, "best_over" if side == "OVER" else "best_under") \
             != num(r, "market_total") else "same"
-        return (f"| {side} {r['market_total']}{moved} | {shop} | {r['away']} @ {r['home']} | {r['proj_total']} | "
-                f"{num(r, 'edge'):+.1f} | {r['start'][:10]} | {', '.join(extras)} |")
+        sp_col = f" {r.get('sp_total') or '-'} |" if has_sp else ""
+        return (f"| {side} {r['market_total']}{moved} | {shop} | {r['away']} @ {r['home']} | {r['proj_total']} |"
+                f"{sp_col} {num(r, 'edge'):+.1f} | {r['start'][:10]} | {', '.join(extras)} |")
 
     out = [f"# Week {week} card ({year})", "",
            f"Generated {stamp}. {injury_note}", "",
@@ -147,9 +149,12 @@ def card_markdown(rows, week, year, n, injury_note, injuries=None, track_record=
            "2023-2025: 114-88 (56.4%) against closing and opening totals; small sample, track it",
            "before trusting it. See BACKTEST.md.", "",
            "Bet is the median line across books; Best line is the best number available (lowest",
-           "total for an over, highest for an under) and the book offering it.", "",
-           "| Bet | Best line | Game | Model total | Edge | Date | Notes |",
-           "| --- | --- | --- | --- | --- | --- | --- |"]
+           "total for an over, highest for an under) and the book offering it."]
+    if has_sp:
+        out += ["", "SP+ total is what Bill Connelly's SP+ ratings imply, for reference only: it isn't used",
+                "for picks and couldn't be backtested in-season (see BACKTEST.md). - = team not in the SP+ file."]
+    out += ["", "| Bet | Best line | Game | Model total |" + (" SP+ total |" if has_sp else "") + " Edge | Date | Notes |",
+            "| --- | --- | --- | --- |" + (" --- |" if has_sp else "") + " --- | --- | --- |"]
     out += [line(r, "OVER") for r in overs] + [line(r, "UNDER") for r in unders]
     keys = []
     for r in overs + unders:
@@ -161,7 +166,7 @@ def card_markdown(rows, week, year, n, injury_note, injuries=None, track_record=
         out += ["", "Key injuries in card games (QBs and 4-5 star recruits listed out, doubtful or game-time):", ""]
         out += keys
     if not overs and not unders:
-        out.append("| (no Power 4 games with a market total yet) | | | | | | |")
+        out.append("| (no Power 4 games with a market total yet) | | | | | | |" + (" |" if has_sp else ""))
     if track_record:
         out += [""] + track_record
     return "\n".join(out) + "\n"
