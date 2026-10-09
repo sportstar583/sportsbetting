@@ -21,7 +21,7 @@ import datetime
 import io
 import os
 
-from . import availability, recruiting, totals, tracking
+from . import availability, priors, recruiting, spread_tracking, totals, tracking
 from .collect import default_year, upcoming_week
 
 
@@ -108,7 +108,8 @@ def card_picks(rows, n):
     return [(r, "OVER") for r in overs] + [(r, "UNDER") for r in unders]
 
 
-def card_markdown(rows, week, year, n, injury_note, injuries=None, track_record=None):
+def card_markdown(rows, week, year, n, injury_note, injuries=None, track_record=None, spread_picks=None,
+                  spread_record=None):
     num = _num
     picks = card_picks(rows, n)
     overs = [r for r, side in picks if side == "OVER"]
@@ -170,6 +171,14 @@ def card_markdown(rows, week, year, n, injury_note, injuries=None, track_record=
         out.append("| (no Power 4 games with a market total yet) | | | | | | |" + (" |" if has_sp else ""))
     if track_record:
         out += [""] + track_record
+    if spread_picks:
+        out += ["", "## Spread tracking (paper only, not bets)", "",
+                "No spread angle beat the closing line in the 2023-2025 backtest (see BACKTEST.md). These are",
+                "logged and graded each week to see whether any does in 2026. Lines are the median across books.", "",
+                "| Angle | Pick | Game | Why |", "| --- | --- | --- | --- |"]
+        out += [f"| {p['angle']} | {p['pick']} | {p['away']} @ {p['home']} | {p['detail']} |" for p in spread_picks]
+        if spread_record:
+            out += [""] + spread_record
     return "\n".join(out) + "\n"
 
 
@@ -213,14 +222,24 @@ def main(argv=None):
     if inj_path:
         with open(inj_path, newline="") as f:
             injuries = list(csv.DictReader(f))
-    log = tracking.log_path(out_dir)
+    log, spread_log = tracking.log_path(out_dir), tracking.spread_log_path(out_dir)
     try:  # grade earlier picks whose games are final (about 1 API call per week graded)
-        tracking.update_log(log, client, args.year, games)
+        tracking.update_log(log, client, args.year, games, spread_log)
     except Exception as e:
         print(f"could not update the card log ({e})")
     tracking.log_card(log, card_picks(rows, args.card), week)
+    try:  # paper-tracked spread angles: 1 API call (AP poll), plus 9 once a season for coach records
+        coach_map = priors.coaches(client)
+        records = spread_tracking.coach_vs_top10(client, args.year, coach_map)
+        spread_picks = spread_tracking.picks(rows, spread_tracking.ap_ranks(client, args.year, week),
+                                             coach_map, records, args.year)
+    except Exception as e:
+        print(f"spread tracking skipped ({e})")
+        spread_picks = []
+    tracking.log_spreads(spread_log, spread_picks, week)
     md = card_markdown(rows, week, args.year, args.card, inj_note, injuries,
-                       tracking.summary(tracking.read_log(log)))
+                       tracking.summary(tracking.read_log(log)), spread_picks,
+                       tracking.spread_summary(tracking.read_log(spread_log)))
     path = os.path.join(out_dir, f"card_week{week}.md")
     with open(path, "w") as f:
         f.write(md)

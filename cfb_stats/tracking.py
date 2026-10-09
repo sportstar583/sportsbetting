@@ -20,8 +20,55 @@ LOG_FIELDS = ["logged_at", "run", "week", "game_id", "away", "home", "side", "me
               "best_book", "proj_total", "edge", "close_line", "actual_total", "clv", "result", "sp_total"]
 
 
+# Spread angles are tracked on paper only (cfb_stats.spread_tracking): logged and graded, never bets.
+SPREAD_FIELDS = ["logged_at", "run", "week", "game_id", "away", "home", "angle", "side", "pick", "home_line",
+                 "detail", "close_home_line", "home_margin", "clv", "result"]
+
+
 def log_path(out_dir):
     return os.path.join(out_dir, "card_log.csv")
+
+
+def spread_log_path(out_dir):
+    return os.path.join(out_dir, "spread_log.csv")
+
+
+def log_spreads(path, picks, week, now=None):
+    """Append this run's paper spread picks (dicts from cfb_stats.spread_tracking.picks)."""
+    now = now or datetime.datetime.now(datetime.timezone.utc)
+    rows = read_log(path)
+    for p in picks:
+        rows.append(dict(p, logged_at=now.strftime("%Y-%m-%d %H:%M"), run=now.strftime("%A"), week=week))
+    write_log(path, rows, SPREAD_FIELDS)
+
+
+def grade_spread(row, close, margin):
+    """(CLV, W/L/P) for the picked side. Lines are home lines (-7 = home favored by 7)."""
+    line = float(row["home_line"])
+    home = row["side"] == row["home"]
+    clv = (line - close) if home else (close - line)
+    ats = margin + line
+    result = "P" if ats == 0 else ("W" if (ats > 0) == home else "L")
+    return round(clv, 2), result
+
+
+def spread_summary(rows):
+    """Markdown lines: record and CLV per angle (first appearance of each game/angle/side)."""
+    seen, by_angle = set(), {}
+    for r in rows:
+        key = (r["week"], r["game_id"], r["angle"], r["side"])
+        if key not in seen and r.get("result"):
+            seen.add(key)
+            by_angle.setdefault(r["angle"], []).append(r)
+    if not by_angle:
+        return ["Spread tracking record: nothing graded yet."]
+    out = []
+    for angle, rs in sorted(by_angle.items()):
+        w, l, p = (sum(r["result"] == k for r in rs) for k in "WLP")
+        clv = sum(float(r["clv"]) for r in rs) / len(rs)
+        out.append(f"Spread tracking, {angle}: {w}-{l}-{p}" + (f" ({w / (w + l):.1%})" if w + l else "")
+                   + f", average closing line value {clv:+.2f} pts.")
+    return out
 
 
 def read_log(path):
@@ -31,9 +78,9 @@ def read_log(path):
         return list(csv.DictReader(f))
 
 
-def write_log(path, rows):
+def write_log(path, rows, fields=None):
     with open(path, "w", newline="") as f:
-        w = csv.DictWriter(f, fieldnames=LOG_FIELDS, extrasaction="ignore")
+        w = csv.DictWriter(f, fieldnames=fields or LOG_FIELDS, extrasaction="ignore")
         w.writeheader()
         w.writerows(rows)
 
@@ -62,17 +109,21 @@ def grade(row, close, actual):
     return round(clv, 2), result
 
 
-def update_log(path, client, year, games):
-    """Fill closing line, final total, CLV and result for picks whose game is final."""
-    from .totals import consensus_total
+def update_log(path, client, year, games, spread_path=None):
+    """Fill closing line, final total, CLV and result for picks whose game is final; with
+    spread_path, grade the spread tracking log too (same /lines calls, one per week)."""
+    from .totals import consensus_spread, consensus_total
 
     rows = read_log(path)
+    spread_rows = read_log(spread_path) if spread_path else []
     by_id = {str(g["id"]): g for g in games}
-    pending = [r for r in rows if not r.get("result") and by_id.get(str(r["game_id"]), {}).get("completed")]
-    closes = {}
-    for week in sorted({int(r["week"]) for r in pending}):
+    done = lambda r: not r.get("result") and by_id.get(str(r["game_id"]), {}).get("completed")  # noqa: E731
+    pending, spread_pending = [r for r in rows if done(r)], [r for r in spread_rows if done(r)]
+    closes, spread_closes = {}, {}
+    for week in sorted({int(r["week"]) for r in pending + spread_pending}):
         for lr in client.get("/lines", year=year, week=week, seasonType="regular"):
             closes[str(lr["id"])] = consensus_total(lr)[0]
+            spread_closes[str(lr["id"])] = consensus_spread(lr)[0]
     for r in pending:
         g, close = by_id[str(r["game_id"])], closes.get(str(r["game_id"]))
         if close is None or g.get("homePoints") is None or g.get("awayPoints") is None:
@@ -82,6 +133,15 @@ def update_log(path, client, year, games):
         r["clv"], r["result"] = grade(r, close, actual)
     if pending:
         write_log(path, rows)
+    for r in spread_pending:
+        g, close = by_id[str(r["game_id"])], spread_closes.get(str(r["game_id"]))
+        if close is None or g.get("homePoints") is None or g.get("awayPoints") is None:
+            continue
+        margin = g["homePoints"] - g["awayPoints"]
+        r["close_home_line"], r["home_margin"] = close, margin
+        r["clv"], r["result"] = grade_spread(r, close, margin)
+    if spread_pending:
+        write_log(spread_path, spread_rows, SPREAD_FIELDS)
     return rows
 
 

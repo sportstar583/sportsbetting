@@ -94,6 +94,14 @@ game with line, model, edge, SP+, injury and wind adjustments and spreads, sorta
 (card picks, edge 3+, not started), with projected score, pace, best lines and key injuries
 when a row is opened.
 
+**Spread tracking (paper only).** No spread angle beat the closing line in the backtest, so the
+card doesn't pick spreads. Each run instead logs two angles to `data/<year>/spread_log.csv` and
+shows them in a "Spread tracking" section of the card (`cfb_stats.spread_tracking`): the spread
+model's 3 biggest disagreements with the line (and whether SP+ agrees), and teams facing an AP
+top-10 opponent whose coach covered 55%+ (or won half or more) of such games over his previous 3
+seasons. Later runs grade them against the closing spread and final score, so 2026 shows whether
+either is worth more than a coin flip.
+
 **SP+ for reference.** If `data/<year>/sp_plus_week<N>.csv` exists (`team,sp,off,def`; other
 columns ignored; save the week's full SP+ table there, or pass `--sp-plus <file>` to the board),
 the board gets `sp_total` (with the model's wind correction added) and `sp_margin` columns

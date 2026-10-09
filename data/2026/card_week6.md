@@ -36,3 +36,18 @@ Key injuries in card games (QBs and 4-5 star recruits listed out, doubtful or ga
 - Kentucky: Alex Afari Jr. (ILB, 4-star, out); Jaden Smith (DB, 4-star, out); Tavion Wallace (ILB, 4-star, out); Kalen Edwards (DL, 4-star, doubtful)
 
 Track record (6 picks): 2-4-0 at the best line (33.3%); average closing line value +0.25 pts, beat the close on 3 of 6. Positive CLV over a full season is the best early sign the edge is real.
+
+## Spread tracking (paper only, not bets)
+
+No spread angle beat the closing line in the 2023-2025 backtest (see BACKTEST.md). These are
+logged and graded each week to see whether any does in 2026. Lines are the median across books.
+
+| Angle | Pick | Game | Why |
+| --- | --- | --- | --- |
+| model | Missouri -3.5 | Texas A&M @ Missouri | model margin +19.8, edge +16.3; SP+ agrees |
+| model | Virginia Tech -10 | Virginia Tech @ California | model margin -24.9, edge -14.9; SP+ agrees |
+| model | Tennessee -13.5 | Tennessee @ Arkansas | model margin -24.7, edge -11.2; SP+ agrees |
+| coach vs top 10 | Oklahoma +7.5 | Texas @ Oklahoma | Brent Venables vs top 10, last 3 seasons: 3-3 ATS, 3-3 SU; Texas is #1 |
+| coach vs top 10 | Vanderbilt +9.25 | Ole Miss @ Vanderbilt | Clark Lea vs top 10, last 3 seasons: 5-2 ATS, 2-5 SU; Ole Miss is #9 |
+
+Spread tracking record: nothing graded yet.
