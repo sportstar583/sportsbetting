@@ -151,8 +151,9 @@ def card_markdown(rows, week, year, n, injury_note, injuries=None, track_record=
            "Bet is the median line across books; Best line is the best number available (lowest",
            "total for an over, highest for an under) and the book offering it."]
     if has_sp:
-        out += ["", "SP+ total is what Bill Connelly's SP+ ratings imply, for reference only: it isn't used",
-                "for picks and couldn't be backtested in-season (see BACKTEST.md). - = team not in the SP+ file."]
+        out += ["", "SP+ total is what Bill Connelly's SP+ ratings imply, with the same wind correction as",
+                "the model. Reference only: it isn't used for picks and couldn't be backtested in-season",
+                "(see BACKTEST.md). - = team not in the SP+ file."]
     out += ["", "| Bet | Best line | Game | Model total |" + (" SP+ total |" if has_sp else "") + " Edge | Date | Notes |",
             "| --- | --- | --- | --- |" + (" --- |" if has_sp else "") + " --- | --- | --- |"]
     out += [line(r, "OVER") for r in overs] + [line(r, "UNDER") for r in unders]

@@ -10,6 +10,9 @@ SP+ offense and defense ratings are points per game against an average opponent,
   team points = offense + opponent defense - national average (offense and defense averaged)
   margin      = home rating - away rating + home field
 
+The board adds the model's wind correction (cfb_stats.weather) to the SP+ total, so the
+two totals differ only in the ratings.
+
 Checked on 2024-2025 final ratings: the implied totals average within about 1 point of the
 actual totals, and home teams beat the rating difference by 2.5-3 points. It was not
 backtested with in-season ratings (CFBD has no weekly snapshots); see BACKTEST.md.

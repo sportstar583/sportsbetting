@@ -390,7 +390,8 @@ def board(model, games, lines, min_games=3, spread_model=None, weather=None, tea
 
     Spread columns come from spread_model (a lightly shrunk model) when given. weather
     ({game id: conditions}, see cfb_stats.weather) adds a wind correction to the total.
-    sp (cfb_stats.sp_plus.load) adds SP+ total and margin columns, for reference only."""
+    sp (cfb_stats.sp_plus.load) adds SP+ total (with the same weather correction) and margin
+    columns, for reference only."""
     weather = weather or {}
     by_id = {g["id"]: g for g in games}
     rows = []
@@ -418,6 +419,8 @@ def board(model, games, lines, min_games=3, spread_model=None, weather=None, tea
         done = g.get("homePoints") is not None and g.get("awayPoints") is not None
         spread_edge = None if spread is None else _ats(margin, spread)
         sp_total, sp_margin = sp_plus.project(sp, home, away, bool(g.get("neutralSite")))
+        if sp_total is not None:
+            sp_total = round(sp_total + w_adj, 1)  # same wind correction as the model
         rows.append({
             "game_id": g["id"],
             "week": g.get("week"),

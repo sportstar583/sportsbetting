@@ -90,8 +90,8 @@ best line, and the card shows the running record (`cfb_stats.tracking`).
 
 **SP+ for reference.** If `data/<year>/sp_plus_week<N>.csv` exists (`team,sp,off,def`; other
 columns ignored; save the week's full SP+ table there, or pass `--sp-plus <file>` to the board),
-the board gets `sp_total` and `sp_margin` columns and the card an "SP+ total" column
-(`cfb_stats.sp_plus`). SP+ isn't used for picks: CFBD's free tier has only final SP+, so it
+the board gets `sp_total` (with the model's wind correction added) and `sp_margin` columns
+and the card an "SP+ total" column (`cfb_stats.sp_plus`). SP+ isn't used for picks: CFBD's free tier has only final SP+, so it
 couldn't be backtested in-season. The card log records it, and the track record shows how picks
 did when SP+ agreed or disagreed. With fewer than 100 teams in the file, last season's national
 averages are used to turn ratings into points, so a partial table runs less accurate.

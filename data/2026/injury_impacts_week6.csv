@@ -1,16 +1,237 @@
 team,player,prob_out,side,epa_delta,player_id,position,impact,note
 Iowa,Tyler Brown,1.0,def,,5193099,DB,0.0019,2.3% of team defensive production
-Iowa,Hank Brown,0.4,off,,5089314,QB,-0.0081,"QB usage 0.44, epa +0.197 over 140 plays"
+Iowa,Hank Brown,0.4,off,,5089314,QB,-0.0082,"QB usage 0.44, epa +0.197 over 140 plays"
+Iowa,Carson Cooney,1.0,def,,5196816,LB,0.0002,0.2% of team defensive production
 Iowa,Kyler Gerardy,1.0,def,,5218925,DB,0.0,no defensive stats this season (depth player)
-Iowa,Ty Hudkins,0.4,def,,5147228,DB,0.0008,2.5% of team defensive production
+Iowa,Mason Woods,1.0,off,,5214549,TE,-0.0011,"TE usage 0.02, epa -0.066 over 3 plays"
+Iowa,Ty Hudkins,0.75,def,,5147228,DB,0.0015,2.5% of team defensive production
 Washington,Jordan Washington,1.0,off,,5219119,RB,0.0,no offensive EPA this season (depth player or name mismatch)
 Washington,Christian Moss,1.0,off,,4709669,WR,0.0,no offensive EPA this season (depth player or name mismatch)
 Washington,Jayden Limar,1.0,off,,4870868,RB,-0.0032,"RB usage 0.19, epa -0.310 over 12 plays"
 Washington,Quaid Carr,1.0,off,,5209302,RB,-0.0023,"RB usage 0.09, epa -0.216 over 6 plays"
-Washington,Jeron Jones,0.75,def,,5276974,CB,0.0036,5.9% of team defensive production
-Washington,Landen Hatchett,0.4,off,,4921406,OL,,"offensive line: no individual stats, give epa_delta to count it"
+Washington,Jeron Jones,1.0,def,,5276974,CB,0.0048,5.9% of team defensive production
+Washington,Landen Hatchett,0.1,off,,4921406,OL,,"offensive line: no individual stats, give epa_delta to count it"
 Washington,CJ Christian,1.0,def,,5082027,S,0.0,no defensive stats this season (depth player)
-Florida State,Darryll Desir,0.4,def,,5167701,DL,0.0001,0.4% of team defensive production
+Indiana,Carson Williams,1.0,def,,5157419,DB,0.0002,0.2% of team defensive production
+Indiana,Lebron Bond,0.4,off,,5209424,WR,0.0,no offensive EPA this season (depth player or name mismatch)
+Indiana,Khobie Martin,1.0,off,,5142140,RB,0.0,no offensive EPA this season (depth player or name mismatch)
+Indiana,Andrew Barker,1.0,off,,5216524,TE,-0.0008,"TE usage 0.01, epa +0.047 over 1 plays"
+Nebraska,Larry Miles,1.0,off,,5272709,WR,-0.0006,"WR usage 0.01, epa -0.541 over 1 plays"
+Nebraska,Kahmir Prescott,1.0,def,,5110456,DB,0.0,no defensive stats this season (depth player)
+Nebraska,Carter Nelson,0.4,off,,5110168,TE,-0.0003,"TE usage 0.01, epa -0.325 over 2 plays"
+Nebraska,Riley Van Poppel,0.4,def,,4954452,DL,0.0015,4.8% of team defensive production
+Nebraska,Gage Stenger,0.4,def,,4869605,LB,0.0,no defensive stats this season (depth player)
+Nebraska,Jase Reynolds,1.0,def,,5281138,LB,0.0,no defensive stats this season (depth player)
+Nebraska,Jacob Bower,1.0,def,,5159495,LB,0.0,no defensive stats this season (depth player)
+Nebraska,Gabe Moore,1.0,def,,5092567,DL,0.0,no defensive stats this season (depth player)
+UCLA,Tao Johnson,0.1,def,,4901131,DB,0.0,0.5% of team defensive production
+UCLA,Mikey Matthews,1.0,off,,4921306,WR,-0.0053,"WR usage 0.09, epa +1.101 over 5 plays"
+UCLA,Jonah Smith,1.0,off,,5306734,WR,0.0,no offensive EPA this season (depth player or name mismatch)
+UCLA,Ashton Sanders,0.75,def,,4918114,DL,0.0006,1.0% of team defensive production
+UCLA,Sam Yoon,1.0,off,,4889169,OL,,"offensive line: no individual stats, give epa_delta to count it"
+Oregon,Jeremiah McClellan,1.0,off,,5079519,WR,-0.0061,"WR usage 0.10, epa +1.014 over 12 plays"
+Oregon,Dante Moore,1.0,off,,4870921,QB,-0.0381,"QB usage 0.37, epa +0.440 over 108 plays"
+Oregon,Aaron Scott Jr.,0.4,def,,5079680,DB,0.0001,0.3% of team defensive production
+Oregon,Aaron Flowers,0.75,def,,5079428,DB,0.0032,5.3% of team defensive production
+Oregon,Simeon Price,1.0,off,,4684421,RB,0.0,no offensive EPA this season (depth player or name mismatch)
+Oregon,Brayden Platt,1.0,def,,5079670,ILB,0.0,no defensive stats this season (depth player)
+Oregon,Trent Ferguson,1.0,off,,5141801,OL,,"offensive line: no individual stats, give epa_delta to count it"
+Oregon,Jack Ressler,1.0,off,,5126533,WR,0.0,no offensive EPA this season (depth player or name mismatch)
+Illinois,Jayshon Platt,0.1,off,,4834817,WR,0.0,no offensive EPA this season (depth player or name mismatch)
+Illinois,Ca'Lil Valentine,1.0,off,,5106299,RB,-0.0048,"RB usage 0.17, epa +0.102 over 53 plays"
+Illinois,Alex Perry,1.0,off,,5084133,WR,0.0,no offensive EPA this season (depth player or name mismatch)
+Illinois,Tywan Cox,0.1,def,,5214494,DB,0.0003,3.5% of team defensive production
+Illinois,Jack Paris,1.0,def,,5265272,LB,0.0016,2.0% of team defensive production
+Illinois,Carter Smith,1.0,def,,5191859,DL,0.0,no defensive stats this season (depth player)
+Illinois,Champ Smith,0.1,off,,5369896,OL,,"offensive line: no individual stats, give epa_delta to count it"
+Illinois,Kai Pritchard,0.75,off,,5210855,OL,,"offensive line: no individual stats, give epa_delta to count it"
+Illinois,TJ McMillen,1.0,off,,4921262,OL,,"offensive line: no individual stats, give epa_delta to count it"
+Illinois,Dezmond Schuster,0.1,off,,5154332,OL,,"offensive line: no individual stats, give epa_delta to count it"
+Illinois,BJ Thurman,1.0,off,,5369901,TE,0.0,no offensive EPA this season (depth player or name mismatch)
+Michigan State,NiJhay Burt,1.0,def,,5083730,CB,0.0008,1.0% of team defensive production
+Michigan State,Cam Edwards,1.0,off,,5086034,RB,-0.0054,"RB usage 0.26, epa +0.025 over 69 plays"
+Michigan State,Cam Fancher,0.4,off,,4700135,QB,-0.0004,"QB usage 0.06, epa -0.182 over 22 plays"
+Michigan State,Tre Bell,0.4,def,,5086080,CB,0.0021,6.5% of team defensive production
+Michigan State,Jordan Hall,0.4,def,,4870737,LB,0.0023,7.2% of team defensive production
+Michigan State,Keshawn Williams,1.0,def,,5178577,CB,0.0002,0.3% of team defensive production
+Michigan State,Tyran Chappell,1.0,def,,5225872,CB,0.0021,2.6% of team defensive production
+Michigan State,Darrin Jones Jr.,0.75,off,,5295653,RB,0.0,no offensive EPA this season (depth player or name mismatch)
+Michigan State,Jay Coyne,1.0,off,,5084950,FB,0.0,no offensive EPA this season (depth player or name mismatch)
+Michigan State,Caleb Wheatland,1.0,def,,4869121,LB,0.0047,5.9% of team defensive production
+Michigan State,Tristan Comer,1.0,off,,5290642,OL,,"offensive line: no individual stats, give epa_delta to count it"
+Michigan State,Joe Caudill,1.0,off,,5264656,TE,0.0,no offensive EPA this season (depth player or name mismatch)
+Maryland,DeJuan Williams,0.1,off,,5295550,RB,-0.0007,"RB usage 0.12, epa +0.763 over 18 plays"
+Maryland,Trey Reddick,0.1,def,,5218946,LB,0.0004,5.0% of team defensive production
+Maryland,Jamare Glasker,0.4,def,,4912140,DB,0.0023,7.1% of team defensive production
+Maryland,Preston Howard,0.1,off,,4685393,TE,-0.0001,"TE usage 0.03, epa -0.140 over 6 plays"
+Maryland,Zahir Mathis,1.0,def,,5141583,LB,0.0,no defensive stats this season (depth player)
+Maryland,Jayden Shipps,0.4,def,,5141676,DB,0.0015,4.6% of team defensive production
+Maryland,Lloyd Irvin III,1.0,def,,5149435,DB,0.0,no defensive stats this season (depth player)
+Maryland,Dontay Joyner,0.1,def,,4870829,DB,0.0,no defensive stats this season (depth player)
+Maryland,Josiah Teasley,1.0,off,,5327246,WR,0.0,no offensive EPA this season (depth player or name mismatch)
+Maryland,DJ Samuels,1.0,off,,4950548,RB,0.0,no offensive EPA this season (depth player or name mismatch)
+Maryland,Sean Williams,1.0,off,,4954512,WR,0.0,no offensive EPA this season (depth player or name mismatch)
+Maryland,Amari Jackson,0.4,def,,4838539,DB,0.0011,3.4% of team defensive production
+Maryland,Ricardo Cooper Jr.,0.4,def,,5150664,DB,0.0006,1.8% of team defensive production
+Maryland,Harry Dalton III,1.0,off,,5141419,RB,-0.0025,"RB usage 0.15, epa -0.088 over 34 plays"
+Maryland,Terrez Worthy,1.0,off,,5219864,RB,0.0,no offensive EPA this season (depth player or name mismatch)
+Maryland,Solomon Foye,1.0,off,,5306795,RB,0.0,no offensive EPA this season (depth player or name mismatch)
+Maryland,Trevor Szymanski,1.0,off,,5146851,OL,,"offensive line: no individual stats, give epa_delta to count it"
+Maryland,Bryce Jenkins,0.4,def,,5141529,DL,0.0003,1.0% of team defensive production
+Maryland,Day'Jon Moore,1.0,off,,5159040,OL,,"offensive line: no individual stats, give epa_delta to count it"
+Maryland,Rahtrel Perry,0.1,off,,5094098,OL,,"offensive line: no individual stats, give epa_delta to count it"
+Maryland,Delmar White,1.0,def,,5216963,DL,0.0,no defensive stats this season (depth player)
+Maryland,Lavon Johnson,0.75,def,,4832851,DL,0.0007,1.1% of team defensive production
+Ohio State,Brandon Inniss,0.4,off,,4870835,WR,-0.001,"WR usage 0.04, epa +1.204 over 12 plays"
+Ohio State,Devin McCuin,0.4,off,,5076952,WR,-0.0013,"WR usage 0.06, epa +0.677 over 20 plays"
+Ohio State,Leroy Roker III,1.0,def,,5176115,S,0.0012,1.6% of team defensive production
+Ohio State,Terry Moore,0.4,def,,4869820,S,0.0004,1.1% of team defensive production
+Ohio State,Christian Alliegro,0.4,def,,5120968,LB,0.002,6.1% of team defensive production
+Ohio State,Anthony “Turbo” Rogers,0.4,off,,5141663,RB,0.0,no offensive EPA this season (depth player or name mismatch)
+Ohio State,Jay Timmons,0.4,def,,5276976,CB,0.0012,3.8% of team defensive production
+Ohio State,Amari Valerio-Hudson,1.0,off,,5375124,WR,0.0,no offensive EPA this season (depth player or name mismatch)
+Ohio State,Khary Wilder,0.4,def,,5276572,DE,0.0002,0.7% of team defensive production
+Ohio State,Braxton Rembert,0.4,def,,5291777,LB,0.0004,1.1% of team defensive production
+Ohio State,Jaxon Powell,1.0,off,,5375130,OL,,"offensive line: no individual stats, give epa_delta to count it"
+Ohio State,Phillip Daniels,0.4,off,,4923217,OL,,"offensive line: no individual stats, give epa_delta to count it"
+Ohio State,Vasean Washington,1.0,off,,5085517,OL,,"offensive line: no individual stats, give epa_delta to count it"
+USC,Jahkeem Stewart,0.4,def,,5159077,DT,0.0005,1.5% of team defensive production
+USC,Trent Mosley,0.4,off,,5160469,WR,-0.0024,"WR usage 0.08, epa +1.239 over 17 plays"
+USC,Terrell Anderson,0.4,off,,5084658,WR,-0.0011,"WR usage 0.05, epa +0.940 over 4 plays"
+USC,Corey Simms,1.0,off,,5148664,WR,-0.0031,"WR usage 0.06, epa +0.669 over 16 plays"
+USC,Mark Bowman,0.4,off,,5264686,TE,-0.0019,"TE usage 0.08, epa +0.478 over 28 plays"
+USC,Kendarius Reddick,1.0,def,,5141644,S,0.0,no defensive stats this season (depth player)
+USC,"Taylor ""Taybo"" Johnson",1.0,def,,5282030,LB,0.0,no defensive stats this season (depth player)
+USC,Roman Marchetti,1.0,def,,5085031,LB,0.0,no defensive stats this season (depth player)
+USC,Kilian O'Connor,1.0,off,,5085032,OL,,"offensive line: no individual stats, give epa_delta to count it"
+USC,Hayden Treter,0.4,off,,5146426,OL,,"offensive line: no individual stats, give epa_delta to count it"
+USC,Jide Abasiri,0.4,def,,5138455,DT,0.002,6.3% of team defensive production
+Penn State,Koby Howard,1.0,off,,5141525,WR,-0.0078,"WR usage 0.09, epa +1.500 over 18 plays"
+Penn State,LaVar Arrington II,1.0,def,,5214556,DE,0.0,no defensive stats this season (depth player)
+Penn State,Joshua Johnson,1.0,def,,5214530,CB,0.0,no defensive stats this season (depth player)
+Penn State,Max Granville,1.0,def,,5141483,DE,0.0005,0.6% of team defensive production
+Penn State,Alex Tatsch,0.4,def,,5195702,LB,0.0011,3.4% of team defensive production
+Penn State,Cam Smith,1.0,def,,5142598,LB,0.0007,0.9% of team defensive production
+Penn State,Christian Askew,1.0,def,,5327757,CB,0.0,no defensive stats this season (depth player)
+Penn State,Tyler Armstead,1.0,def,,5230372,CB,0.0002,0.2% of team defensive production
+Penn State,Mason Robinson,1.0,def,,4899362,DE,0.0,no defensive stats this season (depth player)
+Penn State,Dayshaun Burnett,1.0,def,,5141393,DE,0.0,no defensive stats this season (depth player)
+Penn State,Will Tompkins,1.0,off,,5198051,OL,,"offensive line: no individual stats, give epa_delta to count it"
+Penn State,Cooper Alexander,1.0,off,,5146740,TE,0.0,no offensive EPA this season (depth player or name mismatch)
+Penn State,Armstrong Nnodim,0.4,def,,5125968,DT,0.0007,2.3% of team defensive production
+Minnesota,Michael Merdinger,1.0,off,,5144313,QB,0.0,no offensive EPA this season (depth player or name mismatch)
+Minnesota,Donielle Hayes,1.0,off,,5077206,WR,0.0,no offensive EPA this season (depth player or name mismatch)
+Minnesota,Ryan Estrada,1.0,off,,5244756,RB,-0.002,"RB usage 0.07, epa +0.106 over 5 plays"
+Minnesota,Elisha West,1.0,def,,5225305,DB,0.0,no defensive stats this season (depth player)
+Minnesota,Enoch Atewogbola,1.0,def,,5209927,DL,0.0,no defensive stats this season (depth player)
+Minnesota,Brett Carroll,1.0,off,,5146828,OL,,"offensive line: no individual stats, give epa_delta to count it"
+Minnesota,Jaden Ball,1.0,off,,5138040,OL,,"offensive line: no individual stats, give epa_delta to count it"
+Minnesota,Ashton Beers,1.0,off,,4909948,OL,,"offensive line: no individual stats, give epa_delta to count it"
+Minnesota,Hayden Moore,1.0,off,,5271219,WR,-0.0014,"WR usage 0.03, epa +0.553 over 4 plays"
+Purdue,Mister Clark,1.0,def,,5158234,DB,0.0026,3.3% of team defensive production
+Purdue,Kylan Fox,1.0,off,,5079462,TE,0.0,no offensive EPA this season (depth player or name mismatch)
+Purdue,Raderrion Daniels,1.0,def,,5274360,DB,0.0,no defensive stats this season (depth player)
+Purdue,Joey Tanona,1.0,off,,4685586,OL,,"offensive line: no individual stats, give epa_delta to count it"
+Texas A&M,Mario Craver,0.4,off,,5079345,WR,-0.0015,"WR usage 0.10, epa +0.301 over 37 plays"
+Texas A&M,Terry Bussey,1.0,off,,5079326,WR,-0.0049,"WR usage 0.09, epa +0.613 over 14 plays"
+Texas A&M,Blake Ivy,1.0,off,,5079453,OL,,"offensive line: no individual stats, give epa_delta to count it"
+Missouri,Robert Woodyard Jr.,0.4,def,,4685604,LB,0.0023,7.3% of team defensive production
+Missouri,DaMarion Fowlkes,0.4,off,,5156379,WR,-0.0003,"WR usage 0.02, epa +0.333 over 5 plays"
+Missouri,Kensley Louidor-Faustin,0.4,def,,5219025,S,0.0021,6.5% of team defensive production
+Missouri,Langden Kitchen,0.4,def,,5260012,EDG,0.0012,3.6% of team defensive production
+Missouri,Jaden Jones,0.1,def,,5150836,EDG,0.0001,0.7% of team defensive production
+Missouri,Santana Banner,0.4,def,,5121688,S,0.0031,9.7% of team defensive production
+Missouri,Bobby Washington Jr.,0.1,def,,5001149,LB,0.0001,1.1% of team defensive production
+Missouri,JaDon Blair,1.0,def,,5148620,S,0.0001,0.2% of team defensive production
+Missouri,Darris Smith,0.4,def,,4708355,EDG,0.0006,1.9% of team defensive production
+Missouri,Jahlil Florence,0.1,def,,4880351,CB,0.0003,3.2% of team defensive production
+Missouri,Malae Fonoti,1.0,off,,5225213,RB,-0.0012,"RB usage 0.04, epa +0.279 over 3 plays"
+Missouri,Ahmad Hardy,1.0,off,,5197065,RB,0.0,no offensive EPA this season (depth player or name mismatch)
+Missouri,Josh Atkins,1.0,off,,4612621,OL,,"offensive line: no individual stats, give epa_delta to count it"
+Missouri,Cayden Green,0.4,off,,4870727,OL,,"offensive line: no individual stats, give epa_delta to count it"
+Missouri,Brett Norfleet,0.1,off,,4870869,TE,-0.0002,"TE usage 0.04, epa +0.301 over 13 plays"
+Missouri,Gavin Hoffman,1.0,off,,5149008,TE,0.0,no offensive EPA this season (depth player or name mismatch)
+South Carolina,Mazeo Bennett Jr.,0.1,off,,5079329,WR,-0.0004,"WR usage 0.08, epa +0.427 over 30 plays"
+South Carolina,Quay'sheed Scott,0.75,def,,5149824,DB,0.0018,3.1% of team defensive production
+South Carolina,Jalewis Solomon,1.0,def,,5079703,DB,0.0,no defensive stats this season (depth player)
+South Carolina,Jayden Sellers,1.0,off,,5179622,WR,0.0,no offensive EPA this season (depth player or name mismatch)
+South Carolina,Kobby Sakyi-Prah,1.0,def,,5167710,EDG,0.0008,0.9% of team defensive production
+South Carolina,Carter Miller,0.75,off,,4911931,OL,,"offensive line: no individual stats, give epa_delta to count it"
+South Carolina,Julian Walker,0.75,def,,5271180,EDG,0.0012,2.0% of team defensive production
+South Carolina,Josiah Thompson,1.0,off,,5079724,OL,,"offensive line: no individual stats, give epa_delta to count it"
+South Carolina,Gabriel Brownlow-Dindy,0.75,def,,4685273,DL,0.0005,0.8% of team defensive production
+Florida,Vernell Brown III,0.4,off,,5295811,WR,-0.0023,"WR usage 0.08, epa +0.920 over 23 plays"
+Florida,London Montgomery,0.1,off,,4941012,RB,-0.0001,"RB usage 0.03, epa -0.133 over 10 plays"
+Florida,Dijon Johnson,0.1,def,,4899671,CB,0.0003,3.7% of team defensive production
+Texas,Kaliq Lockett,1.0,off,,5141524,WR,-0.0006,"WR usage 0.01, epa -1.714 over 1 plays"
+Texas,Justus Terry,0.4,def,,5141732,DL,0.0003,0.8% of team defensive production
+Texas,Jordan Coleman,1.0,off,,5195700,OL,,"offensive line: no individual stats, give epa_delta to count it"
+Texas,Zion Williams,1.0,def,,5141765,DL,0.0004,0.5% of team defensive production
+Oklahoma,Jer'Michael Carter,0.1,off,,5155000,WR,0.0,no offensive EPA this season (depth player or name mismatch)
+Oklahoma,Taylor Heim,1.0,def,,5125365,LB,0.0,no defensive stats this season (depth player)
+Oklahoma,Trell Harris,1.0,off,,4912130,WR,-0.005,"WR usage 0.09, epa +0.788 over 11 plays"
+Oklahoma,Cole Sullivan,0.1,def,,5144965,LB,0.0001,1.1% of team defensive production
+Oklahoma,Xavier Robinson,1.0,off,,5122554,RB,-0.0014,"RB usage 0.07, epa -0.115 over 17 plays"
+Oklahoma,Trynae Washington,0.75,off,,5181572,TE,0.0,no offensive EPA this season (depth player or name mismatch)
+Oklahoma,Jacobe Johnson,1.0,def,,4870815,DB,0.0023,2.9% of team defensive production
+Oklahoma,Michael Boganowski,0.1,def,,5147138,DB,0.0001,1.6% of team defensive production
+Oklahoma,Owen Heinecke,0.1,def,,5081928,LB,0.0009,10.8% of team defensive production
+Oklahoma,Eddy Pierre-Louis,0.4,off,,5079668,OL,,"offensive line: no individual stats, give epa_delta to count it"
+Oklahoma,Michael Fasusi,0.75,off,,5141430,OL,,"offensive line: no individual stats, give epa_delta to count it"
+Oklahoma,Fred Hinton,1.0,off,,5156434,OL,,"offensive line: no individual stats, give epa_delta to count it"
+Oklahoma,Jack Van Dorselaer,0.1,off,,5141744,TE,0.0,no offensive EPA this season (depth player or name mismatch)
+Ole Miss,Kewan Lacy,0.4,off,,5086388,RB,-0.0032,"RB usage 0.24, epa +0.160 over 52 plays"
+Ole Miss,Izaiah Hartrup,1.0,off,,4695341,WR,0.0,no offensive EPA this season (depth player or name mismatch)
+Ole Miss,Ant Davis Jr.,1.0,def,,5200101,LB,0.0,no defensive stats this season (depth player)
+Ole Miss,Joshua Dye,1.0,off,,5125900,RB,-0.0005,"RB usage 0.02, epa +0.549 over 1 plays"
+Ole Miss,Craig Tutt,1.0,def,,5210857,S,0.0002,0.3% of team defensive production
+Ole Miss,Gerald Lacy Jr.,1.0,def,,5166148,S,0.0004,0.5% of team defensive production
+Ole Miss,Jalan Chapman,1.0,off,,5160484,OL,,"offensive line: no individual stats, give epa_delta to count it"
+Ole Miss,Emanuel Faulkner,1.0,off,,5245137,OL,,"offensive line: no individual stats, give epa_delta to count it"
+Ole Miss,Wyatt Smalley,1.0,off,,5150436,TE,0.0,no offensive EPA this season (depth player or name mismatch)
+Vanderbilt,Jared Curtis,0.1,off,,5158948,QB,-0.0038,"QB usage 0.50, epa +0.321 over 135 plays"
+Vanderbilt,Jaylin Lackey,1.0,def,,5146809,CB,0.0,no defensive stats this season (depth player)
+Vanderbilt,Jamison Curtis,1.0,def,,5146810,LB,0.0002,0.2% of team defensive production
+Vanderbilt,Aaron Bryant,1.0,def,,4801729,DL,0.0,no defensive stats this season (depth player)
+Vanderbilt,Mitchell Smith,0.75,off,,5161881,OL,,"offensive line: no individual stats, give epa_delta to count it"
+Vanderbilt,Kahden Smith,1.0,off,,5276669,WR,0.0,no offensive EPA this season (depth player or name mismatch)
+Tennessee,Ethan Davis,1.0,off,,4870683,TE,-0.0022,"TE usage 0.04, epa +0.804 over 5 plays"
+Tennessee,Javin Gordon,0.4,off,,5294293,RB,-0.0017,"RB usage 0.15, epa +0.080 over 22 plays"
+Tennessee,Joakim Dodson,1.0,off,,5164355,WR,0.0,no offensive EPA this season (depth player or name mismatch)
+Tennessee,Faizon Brandon,0.4,off,,5158973,QB,-0.0071,"QB usage 0.42, epa +0.180 over 151 plays"
+Tennessee,Jaedon Harmon,1.0,def,,5141496,LB,0.0,no defensive stats this season (depth player)
+Tennessee,Edrees Farooq,1.0,def,,5101128,DB,0.0,no defensive stats this season (depth player)
+Tennessee,Dylan Lewis,1.0,def,,5166889,DB,0.0009,1.1% of team defensive production
+Tennessee,Kedric Golston II,1.0,def,,5159242,DL,0.0004,0.5% of team defensive production
+Tennessee,Wendell Moe Jr.,1.0,off,,5086640,OL,,"offensive line: no individual stats, give epa_delta to count it"
+Arkansas,Steven Soles Jr.,0.4,def,,5079701,DL,0.0007,2.2% of team defensive production
+Arkansas,Maddox Lassiter,1.0,off,,5150266,TE,0.0,no offensive EPA this season (depth player or name mismatch)
+LSU,Trey'Dez Green,1.0,off,,5079420,TE,-0.0076,"TE usage 0.08, epa +1.280 over 20 plays"
+LSU,Whit Weeks,1.0,def,,4871034,LB,0.0053,6.6% of team defensive production
+LSU,Dashawn Spears,1.0,def,,5218723,S,0.0021,2.7% of team defensive production
+LSU,Phillip Wright III,1.0,off,,5149484,WR,-0.002,"WR usage 0.04, epa +0.772 over 7 plays"
+LSU,Charles Ross II,1.0,def,,5201881,LB,0.0006,0.8% of team defensive production
+Kentucky,Antwan Smith,1.0,def,,5147047,ILB,0.0011,1.4% of team defensive production
+Kentucky,Alex Afari Jr.,1.0,def,,4819224,ILB,0.0022,2.7% of team defensive production
+Kentucky,Jaden Smith,1.0,def,,5147089,DB,0.0015,1.9% of team defensive production
+Kentucky,Tavion Wallace,1.0,def,,5141745,ILB,0.0014,1.7% of team defensive production
+Kentucky,Jordan Colbert,0.4,off,,5446994,RB,-0.0004,"RB usage 0.03, epa +0.665 over 2 plays"
+Kentucky,Grant Grayton,1.0,def,,5156389,DB,0.001,1.2% of team defensive production
+Kentucky,Aba Selm,1.0,off,,5125969,OL,,"offensive line: no individual stats, give epa_delta to count it"
+Kentucky,Kalen Edwards,0.75,def,,5141440,DL,0.0005,0.8% of team defensive production
+Georgia,Thomas Blackshear,1.0,off,,5149473,WR,-0.0018,"WR usage 0.06, epa +0.021 over 14 plays"
+Georgia,Chauncey Bowens,1.0,off,,5079335,RB,-0.0064,"RB usage 0.14, epa +0.315 over 45 plays"
+Georgia,Isiah Canion,0.4,off,,5132253,WR,-0.0007,"WR usage 0.04, epa +0.092 over 5 plays"
+Georgia,Amaris Williams,1.0,def,,5139139,OLB,0.0,no defensive stats this season (depth player)
+Georgia,Tyriq Green,1.0,def,,5161815,S,0.0006,0.7% of team defensive production
+Georgia,Marcus Harrison,1.0,off,,5145652,OL,,"offensive line: no individual stats, give epa_delta to count it"
+Alabama,Justin Hill,1.0,def,,5141519,LB,0.0023,2.9% of team defensive production
+Alabama,Desmond Umeozulu,1.0,def,,4899417,LB,0.0013,1.6% of team defensive production
+Alabama,Jorden Edmonds,0.4,def,,5209375,DB,0.0,no defensive stats this season (depth player)
+Alabama,Cayden Jones,1.0,def,,5079479,LB,0.0,no defensive stats this season (depth player)
+Alabama,Nick Sherman,1.0,def,,5369909,DB,0.0,no defensive stats this season (depth player)
+Alabama,Josh Ford,0.4,off,,5124338,TE,-0.0008,"TE usage 0.04, epa +0.173 over 2 plays"
+Alabama,Jeremiah Beaman,1.0,def,,5079317,DL,0.0,no defensive stats this season (depth player)
 Florida State,Samuel Singleton Jr.,1.0,off,,4870955,RB,-0.0073,"RB usage 0.14, epa +0.483 over 29 plays"
 Florida State,Devin Carter,1.0,off,,5158982,WR,0.0,no offensive EPA this season (depth player or name mismatch)
 Florida State,Karson Hobbs,1.0,def,,5085107,DB,0.0,no defensive stats this season (depth player)
@@ -18,36 +239,208 @@ Florida State,Jamari Howard,1.0,def,,5079488,DB,0.0,no defensive stats this seas
 Florida State,Blake Nichelson,1.0,def,,4899480,LB,0.0005,0.6% of team defensive production
 Florida State,Zae Thomas,1.0,def,,5294071,DB,0.0003,0.4% of team defensive production
 Florida State,Jordan Crutchfield,1.0,def,,5203605,DB,0.0002,0.2% of team defensive production
-Florida State,Mikai Gbayor,0.1,def,,4683154,LB,0.0006,7.7% of team defensive production
 Florida State,Izayia Williams,1.0,def,,5186904,LB,0.0,no defensive stats this season (depth player)
-Florida State,Karon Maycock,0.1,def,,5172098,LB,0.0001,1.2% of team defensive production
-Florida State,Antonio Cromartie Jr.,0.1,def,,5222701,DB,0.0001,1.2% of team defensive production
 Florida State,Daylen Green,1.0,def,,5271218,LB,0.0,no defensive stats this season (depth player)
 Florida State,Noah LaVallee,1.0,def,,5291010,LB,0.001,1.2% of team defensive production
-Louisville,Lincoln Kienholz,0.1,off,,5078278,QB,-0.0059,"QB usage 0.59, epa +0.407 over 190 plays"
-Louisville,TJ Banks,0.4,def,,5079312,DB,0.0018,5.6% of team defensive production
-Louisville,Keyjuan Brown,0.4,off,,4923046,RB,-0.0022,"RB usage 0.12, epa +0.349 over 40 plays"
-Louisville,Koen Entringer,0.1,def,,4869698,DB,0.0004,4.7% of team defensive production
+Louisville,Keyjuan Brown,1.0,off,,4923046,RB,-0.0056,"RB usage 0.12, epa +0.349 over 40 plays"
 Louisville,Antonio Watts,1.0,def,,4838276,DB,0.0015,1.8% of team defensive production
-Louisville,AJ Green,0.1,def,,4899477,DL,0.0002,2.7% of team defensive production
 Louisville,Travis Egan,1.0,off,,5151017,TE,0.0,no offensive EPA this season (depth player or name mismatch)
 Louisville,Bryten Close,1.0,off,,5280615,OT,,"offensive line: no individual stats, give epa_delta to count it"
-Louisville,Ellis McAdoo,0.1,off,,5226576,OL,,"offensive line: no individual stats, give epa_delta to count it"
-Louisville,Anwar O'neal,0.1,off,,4921265,OL,,"offensive line: no individual stats, give epa_delta to count it"
-Louisville,Cason Henry,0.4,off,,4838533,OL,,"offensive line: no individual stats, give epa_delta to count it"
+Louisville,Cason Henry,0.5,off,,4838533,OL,,"offensive line: no individual stats, give epa_delta to count it"
 Louisville,Sam Secrest,1.0,off,,4869389,OL,,"offensive line: no individual stats, give epa_delta to count it"
 Louisville,Montavin Quisenberry,1.0,off,,5164691,WR,0.0,no offensive EPA this season (depth player or name mismatch)
 Louisville,Hamilton Atkins,1.0,off,,5226577,TE,0.0,no offensive EPA this season (depth player or name mismatch)
-Louisville,Daylen Russell,0.4,def,,5146111,DL,0.0008,2.4% of team defensive production
-Louisville,Joshua Donald,0.1,def,,5084455,DL,0.0001,1.8% of team defensive production
 Louisville,Sam Dawson,1.0,def,,5263946,DL,0.0,no defensive stats this season (depth player)
+North Carolina,Isaiah Johnson,0.4,def,,5086646,DL,0.0011,3.3% of team defensive production
+North Carolina,Ade Willie,0.4,def,,4812367,DB,0.0002,0.8% of team defensive production
+North Carolina,Donovan Hoilette Jr.,0.4,def,,4877894,DL,0.0005,1.5% of team defensive production
+North Carolina,Peyton Waters,0.4,def,,5127877,DB,0.0014,4.4% of team defensive production
+North Carolina,Jaylen Harvey,0.4,def,,5079439,DL,0.0025,7.9% of team defensive production
+North Carolina,Jakob Weatherspoon,1.0,def,,5209393,DB,0.0004,0.5% of team defensive production
+North Carolina,Xavier Jackson,0.4,def,,5290762,DB,0.0001,0.3% of team defensive production
+North Carolina,Jonah Rodriguez,0.4,off,,4950542,OL,,"offensive line: no individual stats, give epa_delta to count it"
+North Carolina,Viliami Moala,1.0,def,,5162998,DL,0.0,no defensive stats this season (depth player)
+North Carolina,Jordan Hall,0.4,off,,5105850,OL,,"offensive line: no individual stats, give epa_delta to count it"
+North Carolina,Jordan Washington,1.0,off,,5146756,TE,0.0,no offensive EPA this season (depth player or name mismatch)
+North Carolina,Keeyun Chapman,1.0,off,,5212608,WR,0.0,no offensive EPA this season (depth player or name mismatch)
+North Carolina,Dream Rashad,0.4,off,,5212620,TE,0.0,no offensive EPA this season (depth player or name mismatch)
+North Carolina,Vodney Cleveland,1.0,def,,5161006,DL,0.0,no defensive stats this season (depth player)
+North Carolina,Jimmy-Phrisco Alo-Suliafu,0.4,def,,5158932,DL,0.0,no defensive stats this season (depth player)
+Pittsburgh,Zach Crothers,0.4,def,,5138653,DL,0.0008,2.5% of team defensive production
+Pittsburgh,Mason Heintschel,1.0,off,,5208095,QB,-0.0543,"QB usage 0.50, epa +0.437 over 177 plays"
+Pittsburgh,Raion Strader,0.1,def,,5075797,DB,0.0004,5.5% of team defensive production
+Pittsburgh,Malik Knight,0.4,off,,5089549,WR,0.0,no offensive EPA this season (depth player or name mismatch)
+Pittsburgh,Alex Sanford Jr.,0.4,def,,4917983,LB,0.0024,7.5% of team defensive production
+Pittsburgh,Josh Guerrier,0.4,def,,5214561,DB,0.0018,5.7% of team defensive production
+Pittsburgh,Elijah Lagg,1.0,off,,5296040,TE,-0.0008,"TE usage 0.01, epa +1.884 over 1 plays"
+Pittsburgh,Max Hunt,1.0,off,,5222252,TE,0.0,no offensive EPA this season (depth player or name mismatch)
+Pittsburgh,Allen Bryant,1.0,def,,5146366,DB,0.002,2.5% of team defensive production
+Pittsburgh,Ben Kauffman,1.0,def,,5296241,DL,0.0,no defensive stats this season (depth player)
+Pittsburgh,Isaac Patterson,1.0,def,,5269870,DB,0.0,no defensive stats this season (depth player)
+Pittsburgh,Rodney Dunbar,1.0,off,,5379963,WR,0.0,no offensive EPA this season (depth player or name mismatch)
+Pittsburgh,Trevor Sommers,1.0,def,,5156160,DL,0.0,no defensive stats this season (depth player)
+Wake Forest,Tyler Walton,1.0,def,,4954454,DL,0.001,1.2% of team defensive production
+Wake Forest,Devin Cook,1.0,def,,5139525,DB,0.0001,0.2% of team defensive production
+Wake Forest,Elijah Otieno,1.0,off,,5291183,WR,0.0,no offensive EPA this season (depth player or name mismatch)
+Wake Forest,Dalton DeBoer,1.0,off,,5291731,OL,,"offensive line: no individual stats, give epa_delta to count it"
+Wake Forest,Jack Hines,0.4,off,,5132641,OL,,"offensive line: no individual stats, give epa_delta to count it"
+Wake Forest,Matt Herron,0.1,def,,5085622,DL,0.0002,2.8% of team defensive production
+NC State,"Jayden ""Duke"" Scott",1.0,off,,5126513,RB,-0.0048,"RB usage 0.17, epa +0.102 over 63 plays"
+NC State,"Joshisa ""Jojo"" Trader",0.4,off,,5079745,WR,-0.0017,"WR usage 0.08, epa +0.602 over 28 plays"
+NC State,Tristan Teasdell,1.0,def,,5211398,S,0.0031,3.9% of team defensive production
+NC State,Vander Ploog,1.0,off,,5201877,TE,0.0,no offensive EPA this season (depth player or name mismatch)
+NC State,Isaiah Crowell,1.0,off,,4703064,NCK,0.0,no offensive EPA this season (depth player or name mismatch)
+NC State,AJ Richardson,1.0,def,,5155981,ILB,0.0007,0.9% of team defensive production
+NC State,Adrian Farrow,0.4,def,,5203717,DL,0.001,3.2% of team defensive production
+NC State,Rylan Vann,1.0,off,,4812345,OL,,"offensive line: no individual stats, give epa_delta to count it"
+NC State,Jimarion McCrimon,0.4,off,,5125334,OL,,"offensive line: no individual stats, give epa_delta to count it"
+NC State,Yousef Mugharbil,1.0,off,,4431473,OL,,"offensive line: no individual stats, give epa_delta to count it"
+NC State,Spike Sowells Jr.,1.0,off,,5296075,OL,,"offensive line: no individual stats, give epa_delta to count it"
+NC State,Kamen Smith,0.4,off,,5079837,OT,,"offensive line: no individual stats, give epa_delta to count it"
+NC State,Ian Flynt,1.0,off,,5126527,TE,0.0,no offensive EPA this season (depth player or name mismatch)
+NC State,Carmelo McKenzie,1.0,off,,5159007,NG,0.0,no offensive EPA this season (depth player or name mismatch)
+Duke,Jamien Little,1.0,off,,5208403,WR,0.0,no offensive EPA this season (depth player or name mismatch)
+Duke,Landan Callahan,0.1,def,,5124964,CB,0.0001,0.8% of team defensive production
+Duke,Blake Rohrer,1.0,off,,5372137,WR,-0.0006,"WR usage 0.01, epa -0.835 over 1 plays"
+Duke,Kimari Robinson,0.1,def,,5077406,CB,0.0,no defensive stats this season (depth player)
+Duke,Javen Nicholas,0.1,off,,5081131,WR,-0.0001,"WR usage 0.01, epa -0.990 over 1 plays"
+Duke,Lawrence Gardner,1.0,off,,5297369,QB,0.0,no offensive EPA this season (depth player or name mismatch)
+Duke,Qeanu Johnson,1.0,off,,5201874,WR,0.0,no offensive EPA this season (depth player or name mismatch)
+Duke,Elliott Schaper,1.0,def,,5214935,LB,0.0011,1.4% of team defensive production
+Duke,Sean Stover,0.1,off,,5162722,OL,,"offensive line: no individual stats, give epa_delta to count it"
+Duke,Kai Jacobowitz,1.0,off,,5209010,OL,,"offensive line: no individual stats, give epa_delta to count it"
+Duke,Reagan McCranie,1.0,off,,5075473,OL,,"offensive line: no individual stats, give epa_delta to count it"
+Duke,Roman Fina,1.0,off,,5215617,OL,,"offensive line: no individual stats, give epa_delta to count it"
+Georgia Tech,Malachi Hosley,1.0,off,,5155366,RB,-0.0016,"RB usage 0.09, epa -0.162 over 16 plays"
+Georgia Tech,Daiquan White,1.0,def,,4921457,CB,0.0031,3.9% of team defensive production
+Georgia Tech,Jordan Boyd,0.4,def,,5127028,DE,0.0006,1.8% of team defensive production
+Georgia Tech,Jordan Walker,1.0,def,,5092443,DE,0.0006,0.8% of team defensive production
+Georgia Tech,"Trae Stevenson, Jr.",0.4,def,,5276054,CB,0.0002,0.5% of team defensive production
+Georgia Tech,Noah Carter,1.0,def,,5139096,DE,0.004,5.1% of team defensive production
+Georgia Tech,Fenix Felton,1.0,def,,5215212,S,0.0,no defensive stats this season (depth player)
+Georgia Tech,Will Kiker,1.0,def,,5159878,S,0.0,no defensive stats this season (depth player)
+Georgia Tech,Kyle Efford,0.1,def,,4838514,LB,0.0005,6.9% of team defensive production
+Georgia Tech,Jameson Riggs,0.4,off,,5079581,OL,,"offensive line: no individual stats, give epa_delta to count it"
+Georgia Tech,Markell Samuel,0.4,off,,4570736,OL,,"offensive line: no individual stats, give epa_delta to count it"
+Georgia Tech,Josh Petty,0.4,off,,5141633,OL,,"offensive line: no individual stats, give epa_delta to count it"
+Georgia Tech,Ethan Mackenny,1.0,off,,4921259,OL,,"offensive line: no individual stats, give epa_delta to count it"
+Georgia Tech,Kentrell Davis,1.0,off,,5209922,WR,0.0,no offensive EPA this season (depth player or name mismatch)
+Georgia Tech,Coi Jean-Noel,1.0,off,,5374984,WR,0.0,no offensive EPA this season (depth player or name mismatch)
+Georgia Tech,A.J. Hoffler,1.0,def,,4870781,DE,0.0004,0.5% of team defensive production
+Georgia Tech,Shymeik Jones,1.0,def,,5075806,DT,0.001,1.3% of team defensive production
+Georgia Tech,Vincent Carroll-Jackson,0.1,def,,5120453,DT,0.0004,4.7% of team defensive production
+Virginia Tech,Takye Heath,0.4,off,,4922987,WR,0.0,no offensive EPA this season (depth player or name mismatch)
+Virginia Tech,"Shamarius ""Snook"" Peterkin",0.4,off,,5141601,WR,0.0,no offensive EPA this season (depth player or name mismatch)
+Virginia Tech,George Ballance,1.0,def,,5150880,LB,0.0017,2.1% of team defensive production
+Virginia Tech,Bill Davis,0.4,off,,5156906,RB,0.0,no offensive EPA this season (depth player or name mismatch)
+Virginia Tech,Jojo Crim,0.4,def,,5258259,CB,0.0,no defensive stats this season (depth player)
+Virginia Tech,Lucas Austin,0.4,off,,5192898,OL,,"offensive line: no individual stats, give epa_delta to count it"
+Virginia Tech,Roseby Lubintus,0.4,off,,5279714,OL,,"offensive line: no individual stats, give epa_delta to count it"
+Virginia Tech,Justin Terry,1.0,off,,5158250,OL,,"offensive line: no individual stats, give epa_delta to count it"
+Virginia Tech,Brody Meadows,0.4,off,,4685451,OL,,"offensive line: no individual stats, give epa_delta to count it"
+Virginia Tech,L.J. Booker,0.4,off,,5230251,WR,0.0,no offensive EPA this season (depth player or name mismatch)
+Virginia Tech,Emmett Laws,1.0,def,,5127033,DL,0.0,no defensive stats this season (depth player)
+California,Carter Vargas,1.0,off,,5148905,RB,-0.002,"RB usage 0.09, epa -0.252 over 8 plays"
+California,Kingston Lopa,0.4,def,,5087950,DB,0.0034,10.5% of team defensive production
+California,Kamar Mothudi,0.4,def,,5110496,ILB,0.0014,4.3% of team defensive production
+California,Jaron-Keawe Sagapolutele,0.4,off,,5164313,QB,-0.0034,"QB usage 0.48, epa +0.089 over 175 plays"
+California,Chase Hendricks,0.4,off,,4921110,WR,-0.0013,"WR usage 0.12, epa +0.206 over 42 plays"
+California,Aiden Manutai,0.4,def,,5141574,DB,0.0014,4.3% of team defensive production
+California,Adam Mohammed,0.4,off,,5147861,RB,-0.0054,"RB usage 0.33, epa +0.233 over 91 plays"
+California,Ben Howard,0.4,off,,5164642,OL,,"offensive line: no individual stats, give epa_delta to count it"
+California,Nate Burrell,1.0,def,,4685281,DL,0.0022,2.7% of team defensive production
+California,Ashun Shepphard,0.4,def,,5218832,DL,0.0007,2.2% of team defensive production
+Syracuse,Antoine Deslauriers,0.4,def,,5173414,LB,0.0028,8.7% of team defensive production
+Syracuse,Darien Williams,1.0,off,,5206061,WR,-0.001,"WR usage 0.03, epa -0.215 over 7 plays"
+Syracuse,Nazir Ward,0.4,def,,5103802,DB,0.0008,2.4% of team defensive production
+Syracuse,Amari Odom,0.4,off,,5153782,QB,-0.0073,"QB usage 0.23, epa +0.380 over 55 plays"
+Syracuse,Ahmad Miller,0.4,off,,5154420,RB,-0.0011,"RB usage 0.10, epa +0.078 over 25 plays"
+Syracuse,Shavane Anderson Jr.,0.4,off,,5289321,RB,-0.0016,"RB usage 0.13, epa +0.173 over 30 plays"
+Syracuse,Jackson Iak,1.0,off,,5297034,OL,,"offensive line: no individual stats, give epa_delta to count it"
+Syracuse,D'Joni Scatliffe,1.0,off,,5216504,OL,,"offensive line: no individual stats, give epa_delta to count it"
+Syracuse,Terrell Wilfong,1.0,off,,5210060,WR,0.0,no offensive EPA this season (depth player or name mismatch)
+Virginia,Dillon Newton-Short,1.0,off,,5212231,WR,0.0,no offensive EPA this season (depth player or name mismatch)
+Virginia,Omillio Agard,0.75,def,,5079295,CB,0.0018,3.0% of team defensive production
+Virginia,Jaylen Jones,1.0,def,,5086498,S,0.0011,1.4% of team defensive production
+Virginia,Triston Ward,1.0,off,,5148626,WR,0.0,no offensive EPA this season (depth player or name mismatch)
+Virginia,Alex Dunn,1.0,def,,5283059,DB,0.0,no defensive stats this season (depth player)
+Virginia,Jack Stevens,1.0,off,,5310922,RB,0.0,no offensive EPA this season (depth player or name mismatch)
+Virginia,Isaiah Reese,1.0,def,,5181214,LB,0.0,no defensive stats this season (depth player)
+Virginia,Chase Morrison,0.75,def,,5146780,DT,0.0,no defensive stats this season (depth player)
+Virginia,Gavin Johnson,1.0,def,,5310477,DE,0.0,no defensive stats this season (depth player)
+Virginia,Tyler Simmons,1.0,def,,5146813,DT,0.0,no defensive stats this season (depth player)
+Virginia,Noah Hartsoe,1.0,off,,5081207,OL,,"offensive line: no individual stats, give epa_delta to count it"
+Virginia,Dylan Biehl,1.0,off,,5264956,OL,,"offensive line: no individual stats, give epa_delta to count it"
+Virginia,Jewett Hayes,1.0,def,,5156385,DE,0.0021,2.7% of team defensive production
+Virginia,Jason Hammond,1.0,def,,4870783,DT,0.0004,0.5% of team defensive production
+Virginia,Bull Richardson,1.0,def,,5290674,DT,0.0,no defensive stats this season (depth player)
+Virginia,Devon Baxter,1.0,def,,5139094,DE,0.0006,0.8% of team defensive production
 Iowa State,Drew Surges,1.0,def,,5150695,S,0.0027,3.4% of team defensive production
-Iowa State,Rylan Barnes,0.4,def,,5150699,LB,0.0001,0.2% of team defensive production
-Iowa State,Christian Greenlaw,0.4,off,,5155426,TE,-0.0005,"TE usage 0.02, epa -0.410 over 1 plays"
+Iowa State,Rylan Barnes,1.0,def,,5150699,LB,0.0002,0.2% of team defensive production
+Iowa State,Christian Greenlaw,0.1,off,,5155426,TE,-0.0001,"TE usage 0.02, epa -0.410 over 1 plays"
 Iowa State,Caden Crawford,1.0,def,,4718462,DE,0.0013,1.6% of team defensive production
 Iowa State,Ka'Mori Moore,1.0,def,,5154698,DT,0.0,no defensive stats this season (depth player)
-BYU,Raider Damuni,0.75,def,,5150619,S,0.0002,0.3% of team defensive production
+BYU,Raider Damuni,1.0,def,,5150619,S,0.0002,0.3% of team defensive production
 BYU,LJ Martin,1.0,off,,4918126,RB,-0.0103,"RB usage 0.21, epa +0.365 over 52 plays"
 BYU,Isaiah Glasker,1.0,def,,5080697,LB,0.0033,4.1% of team defensive production
 BYU,Sione Moa,1.0,off,,5219689,RB,-0.0026,"RB usage 0.09, epa +0.188 over 6 plays"
-BYU,Cannon DeVries,0.1,def,,5296270,CB,0.0005,6.4% of team defensive production
+BYU,Cannon DeVries,0.75,def,,5296270,CB,0.0038,6.4% of team defensive production
+UCF,Dylan Wade,0.1,off,,4922996,TE,-0.0003,"TE usage 0.06, epa -0.033 over 14 plays"
+UCF,Jonathan Bibbs,0.1,off,,5193217,WR,-0.0002,"WR usage 0.03, epa +0.711 over 8 plays"
+UCF,Josh Derry,0.1,off,,5153889,WR,-0.0004,"WR usage 0.08, epa +0.558 over 24 plays"
+UCF,Duane Thomas Jr.,0.4,off,,5151048,WR,0.0,no offensive EPA this season (depth player or name mismatch)
+UCF,Keyone Jenkins,0.1,off,,5085337,QB,-0.0004,"QB usage 0.33, epa +0.034 over 97 plays"
+UCF,Caleb Rollerson,1.0,off,,5221393,WR,-0.0013,"WR usage 0.03, epa +0.657 over 6 plays"
+UCF,Alonza Barnett III,1.0,off,,4911929,QB,-0.0165,"QB usage 0.57, epa +0.090 over 66 plays"
+UCF,Dante Carr,1.0,off,,5236675,QB,0.0,no offensive EPA this season (depth player or name mismatch)
+UCF,Lewis Carter,1.0,def,,4870654,LB,0.0041,5.2% of team defensive production
+UCF,Jahleel Culbreath,0.1,def,,5092328,LB,0.0004,4.9% of team defensive production
+UCF,Jayden Jennings,0.4,def,,4708164,LB,0.0009,2.7% of team defensive production
+UCF,Bruno Dall,1.0,def,,5122026,EDG,0.0,no defensive stats this season (depth player)
+UCF,Trenton Turner,1.0,def,,5265522,DT,0.0005,0.6% of team defensive production
+UCF,Jacob Maiava,1.0,off,,5212731,OL,,"offensive line: no individual stats, give epa_delta to count it"
+UCF,Owen Spell,1.0,off,,5279724,OL,,"offensive line: no individual stats, give epa_delta to count it"
+UCF,Tyler Gibson,1.0,off,,4869496,OL,,"offensive line: no individual stats, give epa_delta to count it"
+UCF,Dylan Burk,0.4,off,,5296835,TE,0.0,no offensive EPA this season (depth player or name mismatch)
+Oklahoma State,Wyatt Young,0.4,off,,5148787,WR,-0.0027,"WR usage 0.08, epa +1.041 over 27 plays"
+Oklahoma State,Johnny Dickson III,0.4,off,,4685732,OL,,"offensive line: no individual stats, give epa_delta to count it"
+Oklahoma State,Braydon Nelson,0.1,off,,5195740,OL,,"offensive line: no individual stats, give epa_delta to count it"
+Oklahoma State,Landon Dean,1.0,def,,4715344,DT,0.0013,1.6% of team defensive production
+Arizona,Giovanni Richardson,1.0,off,,5217700,WR,-0.003,"WR usage 0.08, epa +0.224 over 17 plays"
+Arizona,Max Harris,1.0,def,,5158129,LB,0.002,2.4% of team defensive production
+Arizona,Chris Hunter III,1.0,off,,5093837,WR,-0.0026,"WR usage 0.07, epa +0.213 over 27 plays"
+Arizona,Cole Rusk,1.0,off,,4709804,TE,-0.0024,"TE usage 0.03, epa +1.215 over 7 plays"
+Arizona,Dajon Hinton,1.0,def,,5166910,S,0.0,no defensive stats this season (depth player)
+Arizona,Ismail Mahdi,1.0,off,,5084798,RB,-0.0031,"RB usage 0.08, epa +0.378 over 12 plays"
+Arizona,Ezra Funa,1.0,def,,5306763,DL,0.0,no defensive stats this season (depth player)
+West Virginia,Cam Ball,0.75,off,,4890881,TE,-0.0006,"TE usage 0.01, epa -0.649 over 1 plays"
+West Virginia,Nick Taylor,0.75,def,,5148426,CB,0.0018,3.0% of team defensive production
+West Virginia,Emory Snyder,1.0,off,,5278550,N/S,0.0,no offensive EPA this season (depth player or name mismatch)
+West Virginia,Armoni Weaver-Bomar,1.0,off,,5141754,WR,-0.0016,"WR usage 0.03, epa +1.302 over 6 plays"
+West Virginia,Andre Devine,1.0,off,,5197058,RB,0.0,no offensive EPA this season (depth player or name mismatch)
+West Virginia,Ashton Woods,0.1,def,,5127046,LB,0.0005,6.3% of team defensive production
+West Virginia,Jason Chambers,0.1,def,,5095810,DB,0.0001,0.8% of team defensive production
+West Virginia,Harper Holloman,0.1,def,,5146973,EDG,0.0003,3.7% of team defensive production
+West Virginia,John Neider,0.1,off,,5150460,WR,-0.0001,"WR usage 0.03, epa +0.372 over 12 plays"
+West Virginia,Darius Wiley,1.0,def,,5384829,DL,0.0008,1.0% of team defensive production
+Houston,Jaden Yates,1.0,def,,5092546,LB,0.0076,9.5% of team defensive production
+Houston,JD Rhym,0.1,def,,4685524,DB,0.0001,0.7% of team defensive production
+Houston,Muizz Tounkara,1.0,off,,5207662,WR,0.0,no offensive EPA this season (depth player or name mismatch)
+Houston,Bryson Castile,1.0,def,,5268749,LB,0.0,no defensive stats this season (depth player)
+Houston,Ejiro Egodogbare,0.1,def,,5102038,DL,0.0001,1.4% of team defensive production
+Houston,RJ Lee,1.0,off,,5207654,OL,,"offensive line: no individual stats, give epa_delta to count it"
+Houston,Jacory Thurman,1.0,off,,5215578,TE,0.0,no offensive EPA this season (depth player or name mismatch)
+Kansas State,Blake Barnett,1.0,off,,5124584,QB,-0.0068,"QB usage 0.10, epa +0.638 over 7 plays"
+Kansas State,Dillon Duff,0.4,off,,5164321,QB,0.0,no offensive EPA this season (depth player or name mismatch)
+Kansas,Kory Amachree,1.0,off,,5214653,RB,0.0,no offensive EPA this season (depth player or name mismatch)
+Kansas,Yasin Willis,1.0,off,,5079749,RB,-0.0044,"RB usage 0.13, epa +0.191 over 29 plays"
+Kansas,Cole Ballard,1.0,off,,5151060,QB,-0.0054,"QB usage 0.06, epa +1.275 over 8 plays"
+Kansas,Justin Thurman,1.0,off,,5141740,RB,0.0,no offensive EPA this season (depth player or name mismatch)
+Kansas,Marco Mohajir,1.0,off,,5384629,OL,,"offensive line: no individual stats, give epa_delta to count it"
+Kansas,Eli Richmond,1.0,off,,5219492,OL,,"offensive line: no individual stats, give epa_delta to count it"
+Kansas,Griffin Baker,1.0,off,,5384631,WR,0.0,no offensive EPA this season (depth player or name mismatch)
+Kansas,Carter Moses,0.75,off,,5098591,TE,0.0,no offensive EPA this season (depth player or name mismatch)
+Kansas,Tre'von McAlpine,1.0,def,,4816082,DT,0.0,no defensive stats this season (depth player)
+Kansas,Jalen Atkins,1.0,def,,5384632,DT,0.0,no defensive stats this season (depth player)
+Utah,Kana'i Lopes,1.0,off,,5219997,TE,0.0,no offensive EPA this season (depth player or name mismatch)
+Utah,Isaiah Garcia,1.0,off,,5079464,OL,,"offensive line: no individual stats, give epa_delta to count it"

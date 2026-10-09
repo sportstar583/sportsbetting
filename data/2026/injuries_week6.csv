@@ -1,53 +1,446 @@
 team,player,status,side,epa_delta,player_id,position,jersey,report,stars,rating,national_rank,recruit_class
-Iowa,Tyler Brown,Out,def,,5193099,DB,2,Initial 2026-10-06 19:00:00,3,0.81,2705,2024
-Iowa,Hank Brown,Questionable,off,,5089314,QB,9,Initial 2026-10-06 19:00:00,3,0.8489,1473,2023
-Iowa,Kyler Gerardy,Out,def,,5218925,DB,19,Initial 2026-10-06 19:00:00,2,0.74,3565,2024
-Iowa,Ty Hudkins,Questionable,def,,5147228,DB,20,Initial 2026-10-06 19:00:00,3,0.8617,1175,2024
-Washington,Jordan Washington,Out,off,,5219119,RB,4,Initial 2026-10-06 19:00:00,,,,
-Washington,Christian Moss,Out,off,,4709669,WR,5,Initial 2026-10-06 19:00:00,3,0.8556,1031,2021
-Washington,Jayden Limar,Out,off,,4870868,RB,17,Initial 2026-10-06 19:00:00,4,0.905,296,2023
-Washington,Quaid Carr,Out,off,,5209302,RB,21,Initial 2026-10-06 19:00:00,3,0.8603,1322,2025
-Washington,Jeron Jones,Doubtful,def,,5276974,CB,24,Initial 2026-10-06 19:00:00,4,0.8933,438,2026
-Washington,Landen Hatchett,Questionable,off,,4921406,OL,66,Initial 2026-10-06 19:00:00,4,0.8911,441,2023
-Washington,CJ Christian,Out,def,,5082027,S,,Initial 2026-10-06 19:00:00,,,,
-Florida State,Darryll Desir,Questionable,def,,5167701,DL,1,Initial 2026-10-06 20:00:00,4,0.8959,390,2025
-Florida State,Samuel Singleton Jr.,Out,off,,4870955,RB,3,Initial 2026-10-06 20:00:00,4,0.895,389,2023
-Florida State,Devin Carter,Out,off,,5158982,WR,11,Initial 2026-10-06 20:00:00,4,0.9075,289,2026
-Florida State,Karson Hobbs,Out,def,,5085107,DB,16,Initial 2026-10-06 20:00:00,3,0.8811,631,2024
-Florida State,Jamari Howard,Out,def,,5079488,DB,18,Initial 2026-10-06 20:00:00,4,0.9495,110,2024
-Florida State,Blake Nichelson,Out,def,,4899480,LB,20,Initial 2026-10-06 20:00:00,4,0.9283,183,2023
-Florida State,Zae Thomas,Out,def,,5294071,DB,22,Initial 2026-10-06 20:00:00,4,0.9005,342,2025
-Florida State,Jordan Crutchfield,Out,def,,5203605,DB,27,Initial 2026-10-06 20:00:00,3,0.89,487,2026
-Florida State,Mikai Gbayor,Probable,def,,4683154,LB,28,Initial 2026-10-06 20:00:00,3,0.8737,613,2021
-Florida State,Izayia Williams,Out,def,,5186904,LB,30,Initial 2026-10-06 20:00:00,4,0.9442,137,2026
-Florida State,Karon Maycock,Probable,def,,5172098,LB,31,Initial 2026-10-06 20:00:00,3,0.8789,774,2026
-Florida State,Antonio Cromartie Jr.,Probable,def,,5222701,DB,33,Initial 2026-10-06 20:00:00,3,0.8344,2361,2025
-Florida State,Daylen Green,Out,def,,5271218,LB,38,Initial 2026-10-06 20:00:00,3,0.8711,1066,2026
-Florida State,Noah LaVallee,Out,def,,5291010,LB,45,Initial 2026-10-06 20:00:00,3,0.8578,1708,2026
-Louisville,Lincoln Kienholz,Probable,off,,5078278,QB,3,Initial 2026-10-06 20:00:00,4,0.9264,191,2023
-Louisville,TJ Banks,Questionable,def,,5079312,DB,4,Initial 2026-10-06 20:00:00,4,0.9111,259,2024
-Louisville,Keyjuan Brown,Questionable,off,,4923046,RB,5,Initial 2026-10-06 20:00:00,3,0.8786,634,2023
-Louisville,Koen Entringer,Probable,def,,4869698,DB,5,Initial 2026-10-06 20:00:00,3,0.877,623,2022
-Louisville,Antonio Watts,Out,def,,4838276,DB,9,Initial 2026-10-06 20:00:00,3,0.8359,1661,2022
-Louisville,AJ Green,Probable,def,,4899477,DL,17,Initial 2026-10-06 20:00:00,4,0.9245,195,2023
-Louisville,Travis Egan,Out,off,,5151017,TE,44,Initial 2026-10-06 20:00:00,,,,
-Louisville,Bryten Close,Out,off,,5280615,OT,63,Initial 2026-10-06 20:00:00,3,0.8678,1211,2026
-Louisville,Ellis McAdoo,Probable,off,,5226576,OL,65,Initial 2026-10-06 20:00:00,3,0.86,1220,2024
-Louisville,Anwar O'neal,Probable,off,,4921265,OL,70,Initial 2026-10-06 20:00:00,,,,
-Louisville,Cason Henry,Questionable,off,,4838533,OL,71,Initial 2026-10-06 20:00:00,3,0.8585,1053,2022
-Louisville,Sam Secrest,Out,off,,4869389,OL,72,Initial 2026-10-06 20:00:00,3,0.8281,1855,2022
-Louisville,Montavin Quisenberry,Out,off,,5164691,WR,82,Initial 2026-10-06 20:00:00,3,0.8753,769,2025
-Louisville,Hamilton Atkins,Out,off,,5226577,TE,90,Initial 2026-10-06 20:00:00,,,,
-Louisville,Daylen Russell,Questionable,def,,5146111,DL,90,Initial 2026-10-06 20:00:00,3,0.8586,1291,2024
-Louisville,Joshua Donald,Probable,def,,5084455,DL,95,Initial 2026-10-06 20:00:00,,,,
-Louisville,Sam Dawson,Out,def,,5263946,DL,98,Initial 2026-10-06 20:00:00,3,0.8644,1358,2026
-Iowa State,Drew Surges,Out,def,,5150695,S,6,Initial 2026-10-06 21:00:00,3,0.84,1710,2023
-Iowa State,Rylan Barnes,Questionable,def,,5150699,LB,41,Initial 2026-10-06 21:00:00,,,,
-Iowa State,Christian Greenlaw,Questionable,off,,5155426,TE,88,Initial 2026-10-06 21:00:00,,,,
-Iowa State,Caden Crawford,Out,def,,4718462,DE,92,Initial 2026-10-06 21:00:00,3,0.8837,502,2022
-Iowa State,Ka'Mori Moore,Out,def,,5154698,DT,95,Initial 2026-10-06 21:00:00,3,0.8731,848,2025
-BYU,Raider Damuni,Doubtful,def,,5150619,S,3,Initial 2026-10-06 21:00:00,,,,
-BYU,LJ Martin,Out,off,,4918126,RB,4,Initial 2026-10-06 21:00:00,3,0.8873,491,2023
-BYU,Isaiah Glasker,Out,def,,5080697,LB,16,Initial 2026-10-06 21:00:00,3,0.8333,1654,2021
-BYU,Sione Moa,Out,off,,5219689,RB,30,Initial 2026-10-06 21:00:00,,,,
-BYU,Cannon DeVries,Probable,def,,5296270,CB,32,Initial 2026-10-06 21:00:00,,,,
+Iowa,Tyler Brown,Out,def,,5193099,DB,2,Update 2 2026-10-08 19:00:00,3,0.81,2705,2024
+Iowa,Hank Brown,Questionable,off,,5089314,QB,9,Update 2 2026-10-08 19:00:00,3,0.8489,1473,2023
+Iowa,Carson Cooney,Out,def,,5196816,LB,15,Update 2 2026-10-08 19:00:00,4,0.9065,294,2025
+Iowa,Kyler Gerardy,Out,def,,5218925,DB,19,Update 2 2026-10-08 19:00:00,2,0.74,3565,2024
+Iowa,Mason Woods,Out,off,,5214549,TE,19,Update 2 2026-10-08 19:00:00,3,0.8714,897,2025
+Iowa,Ty Hudkins,Doubtful,def,,5147228,DB,20,Update 2 2026-10-08 19:00:00,3,0.8617,1175,2024
+Washington,Jordan Washington,Out,off,,5219119,RB,4,Update 2 2026-10-08 19:00:00,,,,
+Washington,Christian Moss,Out,off,,4709669,WR,5,Update 2 2026-10-08 19:00:00,3,0.8556,1031,2021
+Washington,Jayden Limar,Out,off,,4870868,RB,17,Update 2 2026-10-08 19:00:00,4,0.905,296,2023
+Washington,Quaid Carr,Out,off,,5209302,RB,21,Update 2 2026-10-08 19:00:00,3,0.8603,1322,2025
+Washington,Jeron Jones,Out,def,,5276974,CB,24,Update 2 2026-10-08 19:00:00,4,0.8933,438,2026
+Washington,Landen Hatchett,Probable,off,,4921406,OL,66,Update 2 2026-10-08 19:00:00,4,0.8911,441,2023
+Washington,CJ Christian,Out,def,,5082027,S,,Update 2 2026-10-08 19:00:00,,,,
+Indiana,Carson Williams,Out,def,,5157419,DB,0,Update 1 2026-10-08 19:00:00,3,0.8517,1541,2024
+Indiana,Lebron Bond,Questionable,off,,5209424,WR,6,Update 1 2026-10-08 19:00:00,3,0.8683,1014,2025
+Indiana,Khobie Martin,Out,off,,5142140,RB,28,Update 1 2026-10-08 19:00:00,3,0.8533,1487,2024
+Indiana,Andrew Barker,Out,off,,5216524,TE,85,Update 1 2026-10-08 19:00:00,3,0.8478,1901,2025
+Nebraska,Larry Miles,Out,off,,5272709,WR,17,Update 1 2026-10-08 19:00:00,3,0.8733,966,2026
+Nebraska,Kahmir Prescott,Out,def,,5110456,DB,19,Update 1 2026-10-08 19:00:00,3,0.8764,734,2024
+Nebraska,Carter Nelson,Questionable,off,,5110168,TE,29,Update 1 2026-10-08 19:00:00,4,0.9745,55,2024
+Nebraska,Riley Van Poppel,Questionable,def,,4954452,DL,44,Update 1 2026-10-08 19:00:00,4,0.8955,386,2023
+Nebraska,Gage Stenger,Questionable,def,,4869605,LB,47,Update 1 2026-10-08 19:00:00,3,0.8537,1167,2022
+Nebraska,Jase Reynolds,Out,def,,5281138,LB,52,Update 1 2026-10-08 19:00:00,3,0.8589,1654,2026
+Nebraska,Jacob Bower,Out,def,,5159495,LB,54,Update 1 2026-10-08 19:00:00,,,,
+Nebraska,Gabe Moore,Out,def,,5092567,DL,95,Update 1 2026-10-08 19:00:00,3,0.8867,458,2022
+UCLA,Tao Johnson,Probable,def,,4901131,DB,6,Update 1 2026-10-08 19:00:00,,,,
+UCLA,Mikey Matthews,Out,off,,4921306,WR,7,Update 1 2026-10-08 19:00:00,4,0.9095,272,2023
+UCLA,Jonah Smith,Out,off,,5306734,WR,24,Update 1 2026-10-08 19:00:00,4,0.893,390,2026
+UCLA,Ashton Sanders,Doubtful,def,,4918114,DL,44,Update 1 2026-10-08 19:00:00,3,0.8803,600,2023
+UCLA,Sam Yoon,Out,off,,4889169,OL,64,Update 1 2026-10-08 19:00:00,3,0.8785,593,2022
+Oregon,Jeremiah McClellan,Out,off,,5079519,WR,3,Update 1 2026-10-08 19:00:00,4,0.9687,65,2024
+Oregon,Dante Moore,Out,off,,4870921,QB,5,Update 1 2026-10-08 19:00:00,5,0.9977,5,2023
+Oregon,Aaron Scott Jr.,Questionable,def,,5079680,DB,14,Update 1 2026-10-08 19:00:00,5,0.9835,36,2024
+Oregon,Aaron Flowers,Doubtful,def,,5079428,DB,21,Update 1 2026-10-08 19:00:00,4,0.9717,60,2024
+Oregon,Simeon Price,Out,off,,4684421,RB,22,Update 1 2026-10-08 19:00:00,3,0.8763,559,2021
+Oregon,Brayden Platt,Out,def,,5079670,ILB,23,Update 1 2026-10-08 19:00:00,4,0.9239,190,2024
+Oregon,Trent Ferguson,Out,off,,5141801,OL,56,Update 1 2026-10-08 19:00:00,3,0.8686,962,2024
+Oregon,Jack Ressler,Out,off,,5126533,WR,88,Update 1 2026-10-08 19:00:00,3,0.8558,1391,2024
+Illinois,Jayshon Platt,Probable,off,,4834817,WR,1,Update 1 2026-10-08 19:00:00,3,0.8617,965,2022
+Illinois,Ca'Lil Valentine,Out,off,,5106299,RB,5,Update 1 2026-10-08 19:00:00,4,0.895,409,2024
+Illinois,Alex Perry,Out,off,,5084133,WR,9,Update 1 2026-10-08 19:00:00,3,0.84,1525,2022
+Illinois,Tywan Cox,Probable,def,,5214494,DB,32,Update 1 2026-10-08 19:00:00,3,0.8744,795,2025
+Illinois,Jack Paris,Out,def,,5265272,LB,38,Update 1 2026-10-08 19:00:00,3,0.85,1738,2025
+Illinois,Carter Smith,Out,def,,5191859,DL,48,Update 1 2026-10-08 19:00:00,,,,
+Illinois,Champ Smith,Probable,off,,5369896,OL,52,Update 1 2026-10-08 19:00:00,4,0.9166,231,2026
+Illinois,Kai Pritchard,Doubtful,off,,5210855,OL,53,Update 1 2026-10-08 19:00:00,4,0.896,416,2026
+Illinois,TJ McMillen,Out,off,,4921262,OL,55,Update 1 2026-10-08 19:00:00,3,0.8597,1128,2023
+Illinois,Dezmond Schuster,Probable,off,,5154332,OL,65,Update 1 2026-10-08 19:00:00,,,,
+Illinois,BJ Thurman,Out,off,,5369901,TE,87,Update 1 2026-10-08 19:00:00,,,,
+Michigan State,NiJhay Burt,Out,def,,5083730,CB,0,Update 1 2026-10-08 19:00:00,,,,2022
+Michigan State,Cam Edwards,Out,off,,5086034,RB,0,Update 1 2026-10-08 19:00:00,,,,
+Michigan State,Cam Fancher,Questionable,off,,4700135,QB,2,Update 1 2026-10-08 19:00:00,3,0.8281,1798,2021
+Michigan State,Tre Bell,Questionable,def,,5086080,CB,3,Update 1 2026-10-08 19:00:00,,,,
+Michigan State,Jordan Hall,Questionable,def,,4870737,LB,5,Update 1 2026-10-08 19:00:00,4,0.9328,167,2023
+Michigan State,Keshawn Williams,Out,def,,5178577,CB,20,Update 1 2026-10-08 19:00:00,3,0.8478,1703,2024
+Michigan State,Tyran Chappell,Out,def,,5225872,CB,22,Update 1 2026-10-08 19:00:00,,,,2024
+Michigan State,Darrin Jones Jr.,Doubtful,off,,5295653,RB,27,Update 1 2026-10-08 19:00:00,2,0.77,3430,2025
+Michigan State,Jay Coyne,Out,off,,5084950,FB,44,Update 1 2026-10-08 19:00:00,,,,
+Michigan State,Caleb Wheatland,Out,def,,4869121,LB,44,Update 1 2026-10-08 19:00:00,3,0.86,997,2022
+Michigan State,Tristan Comer,Out,off,,5290642,OL,79,Update 1 2026-10-08 19:00:00,3,0.87,1114,2026
+Michigan State,Joe Caudill,Out,off,,5264656,TE,87,Update 1 2026-10-08 19:00:00,4,0.8928,453,2026
+Maryland,DeJuan Williams,Probable,off,,5295550,RB,0,Update 1 2026-10-08 19:00:00,,,,
+Maryland,Trey Reddick,Probable,def,,5218946,LB,3,Update 1 2026-10-08 19:00:00,3,0.8719,866,2024
+Maryland,Jamare Glasker,Questionable,def,,4912140,DB,4,Update 1 2026-10-08 19:00:00,3,0.8348,1685,2022
+Maryland,Preston Howard,Probable,off,,4685393,TE,8,Update 1 2026-10-08 19:00:00,3,0.8859,464,2022
+Maryland,Zahir Mathis,Out,def,,5141583,LB,9,Update 1 2026-10-08 19:00:00,4,0.9441,123,2025
+Maryland,Jayden Shipps,Questionable,def,,5141676,DB,12,Update 1 2026-10-08 19:00:00,3,0.8633,1203,2025
+Maryland,Lloyd Irvin III,Out,def,,5149435,DB,15,Update 1 2026-10-08 19:00:00,3,0.8608,1199,2024
+Maryland,Dontay Joyner,Probable,def,,4870829,DB,16,Update 1 2026-10-08 19:00:00,3,0.8336,1878,2023
+Maryland,Josiah Teasley,Out,off,,5327246,WR,18,Update 1 2026-10-08 19:00:00,3,0.8767,833,2026
+Maryland,DJ Samuels,Out,off,,4950548,RB,20,Update 1 2026-10-08 19:00:00,3,0.8564,1232,2023
+Maryland,Sean Williams,Out,off,,4954512,WR,21,Update 1 2026-10-08 19:00:00,3,0.8583,1173,2023
+Maryland,Amari Jackson,Questionable,def,,4838539,DB,24,Update 1 2026-10-08 19:00:00,3,0.8719,735,2022
+Maryland,Ricardo Cooper Jr.,Questionable,def,,5150664,DB,25,Update 1 2026-10-08 19:00:00,,,,
+Maryland,Harry Dalton III,Out,off,,5141419,RB,25,Update 1 2026-10-08 19:00:00,4,0.8913,462,2025
+Maryland,Terrez Worthy,Out,off,,5219864,RB,26,Update 1 2026-10-08 19:00:00,,,,
+Maryland,Solomon Foye,Out,off,,5306795,RB,45,Update 1 2026-10-08 19:00:00,,,,
+Maryland,Trevor Szymanski,Out,off,,5146851,OL,50,Update 1 2026-10-08 19:00:00,3,0.8483,1489,2023
+Maryland,Bryce Jenkins,Questionable,def,,5141529,DL,57,Update 1 2026-10-08 19:00:00,4,0.907,290,2025
+Maryland,Day'Jon Moore,Out,off,,5159040,OL,75,Update 1 2026-10-08 19:00:00,3,0.8833,634,2026
+Maryland,Rahtrel Perry,Probable,off,,5094098,OL,76,Update 1 2026-10-08 19:00:00,,,,
+Maryland,Delmar White,Out,def,,5216963,DL,90,Update 1 2026-10-08 19:00:00,3,0.8458,1950,2025
+Maryland,Lavon Johnson,Doubtful,def,,4832851,DL,99,Update 1 2026-10-08 19:00:00,3,0.8525,1331,2023
+Ohio State,Brandon Inniss,Questionable,off,,4870835,WR,0,Update 1 2026-10-08 19:00:00,5,0.9855,36,2023
+Ohio State,Devin McCuin,Questionable,off,,5076952,WR,3,Update 1 2026-10-08 19:00:00,3,0.8667,922,2023
+Ohio State,Leroy Roker III,Out,def,,5176115,S,10,Update 1 2026-10-08 19:00:00,3,0.8728,841,2024
+Ohio State,Terry Moore,Questionable,def,,4869820,S,11,Update 1 2026-10-08 19:00:00,3,0.8556,1116,2022
+Ohio State,Christian Alliegro,Questionable,def,,5120968,LB,14,Update 1 2026-10-08 19:00:00,3,0.855,1271,2023
+Ohio State,Anthony “Turbo” Rogers,Questionable,off,,5141663,RB,21,Update 1 2026-10-08 19:00:00,4,0.9505,97,2025
+Ohio State,Jay Timmons,Questionable,def,,5276976,CB,25,Update 1 2026-10-08 19:00:00,5,0.9877,25,2026
+Ohio State,Amari Valerio-Hudson,Out,off,,5375124,WR,30,Update 1 2026-10-08 19:00:00,,,,
+Ohio State,Khary Wilder,Questionable,def,,5276572,DE,34,Update 1 2026-10-08 19:00:00,4,0.978,52,2026
+Ohio State,Braxton Rembert,Questionable,def,,5291777,LB,41,Update 1 2026-10-08 19:00:00,4,0.9244,195,2026
+Ohio State,Jaxon Powell,Out,off,,5375130,OL,60,Update 1 2026-10-08 19:00:00,,,,
+Ohio State,Phillip Daniels,Questionable,off,,4923217,OL,70,Update 1 2026-10-08 19:00:00,3,0.8731,771,2023
+Ohio State,Vasean Washington,Out,off,,5085517,OL,73,Update 1 2026-10-08 19:00:00,2,0.75,3236,2022
+USC,Jahkeem Stewart,Questionable,def,,5159077,DT,4,Update 1 2026-10-08 19:00:00,4,0.9829,34,2025
+USC,Trent Mosley,Questionable,off,,5160469,WR,4,Update 1 2026-10-08 19:00:00,4,0.914,251,2026
+USC,Terrell Anderson,Questionable,off,,5084658,WR,9,Update 1 2026-10-08 19:00:00,4,0.94,134,2024
+USC,Corey Simms,Out,off,,5148664,WR,10,Update 1 2026-10-08 19:00:00,4,0.9012,332,2025
+USC,Mark Bowman,Questionable,off,,5264686,TE,19,Update 1 2026-10-08 19:00:00,5,0.9863,30,2026
+USC,Kendarius Reddick,Out,def,,5141644,S,23,Update 1 2026-10-08 19:00:00,4,0.9027,318,2025
+USC,"Taylor ""Taybo"" Johnson",Out,def,,5282030,LB,50,Update 1 2026-10-08 19:00:00,3,0.8733,966,2026
+USC,Roman Marchetti,Out,def,,5085031,LB,57,Update 1 2026-10-08 19:00:00,,,,
+USC,Kilian O'Connor,Out,off,,5085032,OL,67,Update 1 2026-10-08 19:00:00,,,,
+USC,Hayden Treter,Questionable,off,,5146426,OL,68,Update 1 2026-10-08 19:00:00,3,0.8572,1352,2024
+USC,Jide Abasiri,Questionable,def,,5138455,DT,97,Update 1 2026-10-08 19:00:00,4,0.9004,351,2024
+Penn State,Koby Howard,Out,off,,5141525,WR,6,Update 1 2026-10-08 19:00:00,4,0.89,477,2025
+Penn State,LaVar Arrington II,Out,def,,5214556,DE,11,Update 1 2026-10-08 19:00:00,4,0.9028,317,2025
+Penn State,Joshua Johnson,Out,def,,5214530,CB,15,Update 1 2026-10-08 19:00:00,3,0.8733,844,2025
+Penn State,Max Granville,Out,def,,5141483,DE,18,Update 1 2026-10-08 19:00:00,4,0.906,306,2024
+Penn State,Alex Tatsch,Questionable,def,,5195702,LB,25,Update 1 2026-10-08 19:00:00,4,0.9018,328,2025
+Penn State,Cam Smith,Out,def,,5142598,LB,26,Update 1 2026-10-08 19:00:00,4,0.8983,368,2025
+Penn State,Christian Askew,Out,def,,5327757,CB,30,Update 1 2026-10-08 19:00:00,3,0.8667,1263,2026
+Penn State,Tyler Armstead,Out,def,,5230372,CB,35,Update 1 2026-10-08 19:00:00,,,,
+Penn State,Mason Robinson,Out,def,,4899362,DE,42,Update 1 2026-10-08 19:00:00,3,0.8761,702,2023
+Penn State,Dayshaun Burnett,Out,def,,5141393,DE,43,Update 1 2026-10-08 19:00:00,4,0.9,348,2025
+Penn State,Will Tompkins,Out,off,,5198051,OL,66,Update 1 2026-10-08 19:00:00,3,0.8837,572,2025
+Penn State,Cooper Alexander,Out,off,,5146740,TE,80,Update 1 2026-10-08 19:00:00,3,0.8744,784,2024
+Penn State,Armstrong Nnodim,Questionable,def,,5125968,DT,91,Update 1 2026-10-08 19:00:00,3,0.8614,1183,2024
+Minnesota,Michael Merdinger,Out,off,,5144313,QB,12,Update 1 2026-10-08 19:00:00,3,0.8661,1048,2024
+Minnesota,Donielle Hayes,Out,off,,5077206,WR,18,Update 1 2026-10-08 19:00:00,3,0.8786,634,2023
+Minnesota,Ryan Estrada,Out,off,,5244756,RB,20,Update 1 2026-10-08 19:00:00,4,0.8971,395,2026
+Minnesota,Elisha West,Out,def,,5225305,DB,26,Update 1 2026-10-08 19:00:00,,,,
+Minnesota,Enoch Atewogbola,Out,def,,5209927,DL,47,Update 1 2026-10-08 19:00:00,3,0.8774,720,2025
+Minnesota,Brett Carroll,Out,off,,5146828,OL,56,Update 1 2026-10-08 19:00:00,3,0.8814,630,2024
+Minnesota,Jaden Ball,Out,off,,5138040,OL,58,Update 1 2026-10-08 19:00:00,3,0.8673,1007,2024
+Minnesota,Ashton Beers,Out,off,,4909948,OL,78,Update 1 2026-10-08 19:00:00,3,0.8544,1147,2022
+Minnesota,Hayden Moore,Out,off,,5271219,WR,84,Update 1 2026-10-08 19:00:00,3,0.8644,1358,2026
+Purdue,Mister Clark,Out,def,,5158234,DB,6,Update 1 2026-10-08 19:00:00,3,0.8306,1915,2023
+Purdue,Kylan Fox,Out,off,,5079462,TE,16,Update 1 2026-10-08 19:00:00,4,0.9069,300,2024
+Purdue,Raderrion Daniels,Out,def,,5274360,DB,24,Update 1 2026-10-08 19:00:00,3,0.8733,966,2026
+Purdue,Joey Tanona,Out,off,,4685586,OL,79,Update 1 2026-10-08 19:00:00,,,,
+Texas A&M,Mario Craver,Questionable,off,,5079345,WR,1,Update 1 2026-10-08 19:10:00,4,0.9056,309,2024
+Texas A&M,Terry Bussey,Out,off,,5079326,WR,6,Update 1 2026-10-08 19:10:00,5,0.9945,11,2024
+Texas A&M,Blake Ivy,Out,off,,5079453,OL,52,Update 1 2026-10-08 19:10:00,4,0.937,144,2024
+Missouri,Robert Woodyard Jr.,Questionable,def,,4685604,LB,0,Update 1 2026-10-08 19:10:00,4,0.9425,141,2022
+Missouri,DaMarion Fowlkes,Questionable,off,,5156379,WR,3,Update 1 2026-10-08 19:10:00,3,0.8853,548,2025
+Missouri,Kensley Louidor-Faustin,Questionable,def,,5219025,S,7,Update 1 2026-10-08 19:10:00,4,0.8917,459,2024
+Missouri,Langden Kitchen,Questionable,def,,5260012,EDG,11,Update 1 2026-10-08 19:10:00,,,,
+Missouri,Jaden Jones,Probable,def,,5150836,EDG,13,Update 1 2026-10-08 19:10:00,,,,
+Missouri,Santana Banner,Questionable,def,,5121688,S,15,Update 1 2026-10-08 19:10:00,3,0.8056,2495,2023
+Missouri,Bobby Washington Jr.,Probable,def,,5001149,LB,16,Update 1 2026-10-08 19:10:00,4,0.8917,434,2023
+Missouri,JaDon Blair,Out,def,,5148620,S,18,Update 1 2026-10-08 19:10:00,4,0.9349,155,2025
+Missouri,Darris Smith,Questionable,def,,4708355,EDG,19,Update 1 2026-10-08 19:10:00,4,0.9352,163,2022
+Missouri,Jahlil Florence,Probable,def,,4880351,CB,21,Update 1 2026-10-08 19:10:00,4,0.9377,157,2022
+Missouri,Malae Fonoti,Out,off,,5225213,RB,21,Update 1 2026-10-08 19:10:00,3,0.8,2850,2024
+Missouri,Ahmad Hardy,Out,off,,5197065,RB,29,Update 1 2026-10-08 19:10:00,3,0.84,1919,2024
+Missouri,Josh Atkins,Out,off,,4612621,OL,54,Update 1 2026-10-08 19:10:00,3,0.8337,1628,2021
+Missouri,Cayden Green,Questionable,off,,4870727,OL,70,Update 1 2026-10-08 19:10:00,4,0.9552,99,2023
+Missouri,Brett Norfleet,Probable,off,,4870869,TE,87,Update 1 2026-10-08 19:10:00,4,0.9151,236,2023
+Missouri,Gavin Hoffman,Out,off,,5149008,TE,88,Update 1 2026-10-08 19:10:00,4,0.9093,277,2024
+South Carolina,Mazeo Bennett Jr.,Probable,off,,5079329,WR,3,Update 1 2026-10-08 19:10:00,4,0.9102,266,2024
+South Carolina,Quay'sheed Scott,Doubtful,def,,5149824,DB,12,Update 1 2026-10-08 19:10:00,3,0.8762,737,2024
+South Carolina,Jalewis Solomon,Out,def,,5079703,DB,16,Update 1 2026-10-08 19:10:00,4,0.9183,213,2024
+South Carolina,Jayden Sellers,Out,off,,5179622,WR,17,Update 1 2026-10-08 19:10:00,3,0.8717,889,2025
+South Carolina,Kobby Sakyi-Prah,Out,def,,5167710,EDG,41,Update 1 2026-10-08 19:10:00,3,0.8747,792,2025
+South Carolina,Carter Miller,Doubtful,off,,4911931,OL,50,Update 1 2026-10-08 19:10:00,,,,2022
+South Carolina,Julian Walker,Doubtful,def,,5271180,EDG,55,Update 1 2026-10-08 19:10:00,4,0.9833,38,2026
+South Carolina,Josiah Thompson,Out,off,,5079724,OL,74,Update 1 2026-10-08 19:10:00,5,0.9839,35,2024
+South Carolina,Gabriel Brownlow-Dindy,Doubtful,def,,4685273,DL,99,Update 1 2026-10-08 19:10:00,5,0.9913,17,2022
+Florida,Vernell Brown III,Questionable,off,,5295811,WR,1,Update 1 2026-10-08 19:10:00,5,0.9852,30,2025
+Florida,London Montgomery,Probable,off,,4941012,RB,24,Update 1 2026-10-08 19:10:00,4,0.8925,417,2023
+Florida,Dijon Johnson,Probable,def,,4899671,CB,27,Update 1 2026-10-08 19:10:00,4,0.9469,114,2023
+Texas,Kaliq Lockett,Out,off,,5141524,WR,7,Update 1 2026-10-08 19:10:00,5,0.9908,18,2025
+Texas,Justus Terry,Questionable,def,,5141732,DL,15,Update 1 2026-10-08 19:10:00,5,0.9939,12,2025
+Texas,Jordan Coleman,Out,off,,5195700,OL,78,Update 1 2026-10-08 19:10:00,3,0.8761,750,2025
+Texas,Zion Williams,Out,def,,5141765,DL,96,Update 1 2026-10-08 19:10:00,4,0.8991,361,2025
+Oklahoma,Jer'Michael Carter,Probable,off,,5155000,WR,5,Update 1 2026-10-08 19:10:00,,,,2023
+Oklahoma,Taylor Heim,Out,def,,5125365,LB,7,Update 1 2026-10-08 19:10:00,3,0.8633,1026,2023
+Oklahoma,Trell Harris,Out,off,,4912130,WR,11,Update 1 2026-10-08 19:10:00,2,0.7894,2679,2022
+Oklahoma,Cole Sullivan,Probable,def,,5144965,LB,18,Update 1 2026-10-08 19:10:00,4,0.9084,289,2024
+Oklahoma,Xavier Robinson,Out,off,,5122554,RB,21,Update 1 2026-10-08 19:10:00,3,0.8778,705,2024
+Oklahoma,Trynae Washington,Doubtful,off,,5181572,TE,22,Update 1 2026-10-08 19:10:00,4,0.9003,345,2025
+Oklahoma,Jacobe Johnson,Out,def,,4870815,DB,24,Update 1 2026-10-08 19:10:00,4,0.946,118,2023
+Oklahoma,Michael Boganowski,Probable,def,,5147138,DB,25,Update 1 2026-10-08 19:10:00,4,0.8908,467,2024
+Oklahoma,Owen Heinecke,Probable,def,,5081928,LB,38,Update 1 2026-10-08 19:10:00,,,,
+Oklahoma,Eddy Pierre-Louis,Questionable,off,,5079668,OL,55,Update 1 2026-10-08 19:10:00,4,0.9101,269,2024
+Oklahoma,Michael Fasusi,Doubtful,off,,5141430,OL,56,Update 1 2026-10-08 19:10:00,5,0.9977,5,2025
+Oklahoma,Fred Hinton,Out,off,,5156434,OL,72,Update 1 2026-10-08 19:10:00,,,,
+Oklahoma,Jack Van Dorselaer,Probable,off,,5141744,TE,88,Update 1 2026-10-08 19:10:00,4,0.8975,374,2025
+Ole Miss,Kewan Lacy,Questionable,off,,5086388,RB,5,Update 1 2026-10-08 19:10:00,4,0.9268,178,2024
+Ole Miss,Izaiah Hartrup,Out,off,,4695341,WR,12,Update 1 2026-10-08 19:10:00,,,,
+Ole Miss,Ant Davis Jr.,Out,def,,5200101,LB,26,Update 1 2026-10-08 19:10:00,3,0.8867,554,2026
+Ole Miss,Joshua Dye,Out,off,,5125900,RB,28,Update 1 2026-10-08 19:10:00,,,,2023
+Ole Miss,Craig Tutt,Out,def,,5210857,S,35,Update 1 2026-10-08 19:10:00,4,0.9068,300,2026
+Ole Miss,Gerald Lacy Jr.,Out,def,,5166148,S,39,Update 1 2026-10-08 19:10:00,,,,2023
+Ole Miss,Jalan Chapman,Out,off,,5160484,OL,70,Update 1 2026-10-08 19:10:00,3,0.8678,1211,2026
+Ole Miss,Emanuel Faulkner,Out,off,,5245137,OL,71,Update 1 2026-10-08 19:10:00,,,,
+Ole Miss,Wyatt Smalley,Out,off,,5150436,TE,87,Update 1 2026-10-08 19:10:00,,,,
+Vanderbilt,Jared Curtis,Probable,off,,5158948,QB,2,Update 1 2026-10-08 19:10:00,5,0.9985,4,2026
+Vanderbilt,Jaylin Lackey,Out,def,,5146809,CB,2,Update 1 2026-10-08 19:10:00,3,0.8756,757,2024
+Vanderbilt,Jamison Curtis,Out,def,,5146810,LB,20,Update 1 2026-10-08 19:10:00,3,0.8669,1023,2024
+Vanderbilt,Aaron Bryant,Out,def,,4801729,DL,55,Update 1 2026-10-08 19:10:00,4,0.8926,391,2022
+Vanderbilt,Mitchell Smith,Doubtful,off,,5161881,OL,72,Update 1 2026-10-08 19:10:00,4,0.8999,360,2026
+Vanderbilt,Kahden Smith,Out,off,,5276669,WR,81,Update 1 2026-10-08 19:10:00,3,0.8722,1030,2026
+Tennessee,Ethan Davis,Out,off,,4870683,TE,0,Update 1 2026-10-08 19:10:00,4,0.9401,144,2023
+Tennessee,Javin Gordon,Questionable,off,,5294293,RB,6,Update 1 2026-10-08 19:10:00,3,0.8633,1203,2025
+Tennessee,Joakim Dodson,Out,off,,5164355,WR,9,Update 1 2026-10-08 19:10:00,3,0.8817,614,2025
+Tennessee,Faizon Brandon,Questionable,off,,5158973,QB,11,Update 1 2026-10-08 19:10:00,5,0.9939,10,2026
+Tennessee,Jaedon Harmon,Out,def,,5141496,LB,12,Update 1 2026-10-08 19:10:00,4,0.931,168,2025
+Tennessee,Edrees Farooq,Out,def,,5101128,DB,15,Update 1 2026-10-08 19:10:00,3,0.8833,592,2024
+Tennessee,Dylan Lewis,Out,def,,5166889,DB,24,Update 1 2026-10-08 19:10:00,3,0.8778,706,2025
+Tennessee,Kedric Golston II,Out,def,,5159242,DL,37,Update 1 2026-10-08 19:10:00,4,0.8911,469,2026
+Tennessee,Wendell Moe Jr.,Out,off,,5086640,OL,75,Update 1 2026-10-08 19:10:00,3,0.8256,1912,2022
+Arkansas,Steven Soles Jr.,Questionable,def,,5079701,DL,35,Update 1 2026-10-08 19:10:00,3,0.8681,977,2024
+Arkansas,Maddox Lassiter,Out,off,,5150266,TE,47,Update 1 2026-10-08 19:10:00,,,,2023
+LSU,Trey'Dez Green,Out,off,,5079420,TE,7,Update 1 2026-10-08 19:10:00,4,0.9814,40,2024
+LSU,Whit Weeks,Out,def,,4871034,LB,7,Update 1 2026-10-08 19:10:00,4,0.9364,154,2023
+LSU,Dashawn Spears,Out,def,,5218723,S,10,Update 1 2026-10-08 19:10:00,4,0.9528,96,2024
+LSU,Phillip Wright III,Out,off,,5149484,WR,15,Update 1 2026-10-08 19:10:00,4,0.8954,400,2025
+LSU,Charles Ross II,Out,def,,5201881,LB,26,Update 1 2026-10-08 19:10:00,4,0.9405,133,2025
+Kentucky,Antwan Smith,Out,def,,5147047,ILB,4,Update 1 2026-10-08 19:10:00,3,0.8683,967,2024
+Kentucky,Alex Afari Jr.,Out,def,,4819224,ILB,9,Update 1 2026-10-08 19:10:00,4,0.906,272,2022
+Kentucky,Jaden Smith,Out,def,,5147089,DB,24,Update 1 2026-10-08 19:10:00,4,0.9087,285,2024
+Kentucky,Tavion Wallace,Out,def,,5141745,ILB,25,Update 1 2026-10-08 19:10:00,4,0.9285,180,2025
+Kentucky,Jordan Colbert,Questionable,off,,5446994,RB,29,Update 1 2026-10-08 19:10:00,,,,
+Kentucky,Grant Grayton,Out,def,,5156389,DB,30,Update 1 2026-10-08 19:10:00,3,0.8617,1277,2025
+Kentucky,Aba Selm,Out,off,,5125969,OL,55,Update 1 2026-10-08 19:10:00,3,0.8855,548,2024
+Kentucky,Kalen Edwards,Doubtful,def,,5141440,DL,93,Update 1 2026-10-08 19:10:00,4,0.8925,439,2025
+Georgia,Thomas Blackshear,Out,off,,5149473,WR,2,Update 1 2026-10-08 19:10:00,4,0.9137,249,2025
+Georgia,Chauncey Bowens,Out,off,,5079335,RB,5,Update 1 2026-10-08 19:10:00,4,0.9174,225,2024
+Georgia,Isiah Canion,Questionable,off,,5132253,WR,6,Update 1 2026-10-08 19:10:00,4,0.9234,194,2024
+Georgia,Amaris Williams,Out,def,,5139139,OLB,17,Update 1 2026-10-08 19:10:00,4,0.9706,62,2024
+Georgia,Tyriq Green,Out,def,,5161815,S,23,Update 1 2026-10-08 19:10:00,4,0.9467,129,2026
+Georgia,Marcus Harrison,Out,off,,5145652,OL,76,Update 1 2026-10-08 19:10:00,4,0.8989,371,2024
+Alabama,Justin Hill,Out,def,,5141519,LB,8,Update 1 2026-10-08 19:10:00,4,0.9691,60,2025
+Alabama,Desmond Umeozulu,Out,def,,4899417,LB,9,Update 1 2026-10-08 19:10:00,4,0.939,146,2023
+Alabama,Jorden Edmonds,Questionable,def,,5209375,DB,16,Update 1 2026-10-08 19:10:00,5,0.987,29,2026
+Alabama,Cayden Jones,Out,def,,5079479,LB,23,Update 1 2026-10-08 19:10:00,4,0.9099,272,2024
+Alabama,Nick Sherman,Out,def,,5369909,DB,29,Update 1 2026-10-08 19:10:00,,,,
+Alabama,Josh Ford,Questionable,off,,5124338,TE,40,Update 1 2026-10-08 19:10:00,3,0.8531,1501,2024
+Alabama,Jeremiah Beaman,Out,def,,5079317,DL,92,Update 1 2026-10-08 19:10:00,4,0.9592,81,2024
+Florida State,Samuel Singleton Jr.,Out,off,,4870955,RB,3,Game Day 2026-10-09 17:00:00,4,0.895,389,2023
+Florida State,Devin Carter,Out,off,,5158982,WR,11,Game Day 2026-10-09 17:00:00,4,0.9075,289,2026
+Florida State,Karson Hobbs,Out,def,,5085107,DB,16,Game Day 2026-10-09 17:00:00,3,0.8811,631,2024
+Florida State,Jamari Howard,Out,def,,5079488,DB,18,Game Day 2026-10-09 17:00:00,4,0.9495,110,2024
+Florida State,Blake Nichelson,Out,def,,4899480,LB,20,Game Day 2026-10-09 17:00:00,4,0.9283,183,2023
+Florida State,Zae Thomas,Out,def,,5294071,DB,22,Game Day 2026-10-09 17:00:00,4,0.9005,342,2025
+Florida State,Jordan Crutchfield,Out,def,,5203605,DB,27,Game Day 2026-10-09 17:00:00,3,0.89,487,2026
+Florida State,Izayia Williams,Out,def,,5186904,LB,30,Game Day 2026-10-09 17:00:00,4,0.9442,137,2026
+Florida State,Daylen Green,Out,def,,5271218,LB,38,Game Day 2026-10-09 17:00:00,3,0.8711,1066,2026
+Florida State,Noah LaVallee,Out,def,,5291010,LB,45,Game Day 2026-10-09 17:00:00,3,0.8578,1708,2026
+Louisville,Keyjuan Brown,Out,off,,4923046,RB,5,Game Day 2026-10-09 17:00:00,3,0.8786,634,2023
+Louisville,Antonio Watts,Out,def,,4838276,DB,9,Game Day 2026-10-09 17:00:00,3,0.8359,1661,2022
+Louisville,Travis Egan,Out,off,,5151017,TE,44,Game Day 2026-10-09 17:00:00,,,,
+Louisville,Bryten Close,Out,off,,5280615,OT,63,Game Day 2026-10-09 17:00:00,3,0.8678,1211,2026
+Louisville,Cason Henry,Game Time Decision,off,,4838533,OL,71,Game Day 2026-10-09 17:00:00,3,0.8585,1053,2022
+Louisville,Sam Secrest,Out,off,,4869389,OL,72,Game Day 2026-10-09 17:00:00,3,0.8281,1855,2022
+Louisville,Montavin Quisenberry,Out,off,,5164691,WR,82,Game Day 2026-10-09 17:00:00,3,0.8753,769,2025
+Louisville,Hamilton Atkins,Out,off,,5226577,TE,90,Game Day 2026-10-09 17:00:00,,,,
+Louisville,Sam Dawson,Out,def,,5263946,DL,98,Game Day 2026-10-09 17:00:00,3,0.8644,1358,2026
+North Carolina,Isaiah Johnson,Questionable,def,,5086646,DL,0,Update 1 2026-10-08 20:00:00,3,0.8381,1588,2022
+North Carolina,Ade Willie,Questionable,def,,4812367,DB,3,Update 1 2026-10-08 20:00:00,3,0.8685,799,2022
+North Carolina,Donovan Hoilette Jr.,Questionable,def,,4877894,DL,5,Update 1 2026-10-08 20:00:00,,,,
+North Carolina,Peyton Waters,Questionable,def,,5127877,DB,7,Update 1 2026-10-08 20:00:00,4,0.9162,231,2024
+North Carolina,Jaylen Harvey,Questionable,def,,5079439,DL,11,Update 1 2026-10-08 20:00:00,4,0.895,409,2024
+North Carolina,Jakob Weatherspoon,Out,def,,5209393,DB,17,Update 1 2026-10-08 20:00:00,4,0.9401,145,2026
+North Carolina,Xavier Jackson,Questionable,def,,5290762,DB,20,Update 1 2026-10-08 20:00:00,3,0.8789,774,2026
+North Carolina,Jonah Rodriguez,Questionable,off,,4950542,OL,54,Update 1 2026-10-08 20:00:00,3,0.8642,1008,2023
+North Carolina,Viliami Moala,Out,def,,5162998,DL,56,Update 1 2026-10-08 20:00:00,3,0.8852,605,2026
+North Carolina,Jordan Hall,Questionable,off,,5105850,OL,66,Update 1 2026-10-08 20:00:00,3,0.845,1585,2023
+North Carolina,Jordan Washington,Out,off,,5146756,TE,80,Update 1 2026-10-08 20:00:00,4,0.9036,330,2024
+North Carolina,Keeyun Chapman,Out,off,,5212608,WR,82,Update 1 2026-10-08 20:00:00,4,0.9247,192,2026
+North Carolina,Dream Rashad,Questionable,off,,5212620,TE,85,Update 1 2026-10-08 20:00:00,3,0.8633,1438,2026
+North Carolina,Vodney Cleveland,Out,def,,5161006,DL,88,Update 1 2026-10-08 20:00:00,4,0.9069,298,2026
+North Carolina,Jimmy-Phrisco Alo-Suliafu,Questionable,def,,5158932,DL,92,Update 1 2026-10-08 20:00:00,4,0.8944,427,2026
+Pittsburgh,Zach Crothers,Questionable,def,,5138653,DL,5,Update 1 2026-10-08 20:00:00,3,0.8597,1252,2024
+Pittsburgh,Mason Heintschel,Out,off,,5208095,QB,6,Update 1 2026-10-08 20:00:00,3,0.8772,721,2025
+Pittsburgh,Raion Strader,Probable,def,,5075797,DB,6,Update 1 2026-10-08 20:00:00,,,,2023
+Pittsburgh,Malik Knight,Questionable,off,,5089549,WR,7,Update 1 2026-10-08 20:00:00,,,,2022
+Pittsburgh,Alex Sanford Jr.,Questionable,def,,4917983,LB,10,Update 1 2026-10-08 20:00:00,3,0.8728,777,2023
+Pittsburgh,Josh Guerrier,Questionable,def,,5214561,DB,14,Update 1 2026-10-08 20:00:00,3,0.8844,557,2025
+Pittsburgh,Elijah Lagg,Out,off,,5296040,TE,17,Update 1 2026-10-08 20:00:00,,,,
+Pittsburgh,Max Hunt,Out,off,,5222252,TE,18,Update 1 2026-10-08 20:00:00,3,0.8633,1203,2025
+Pittsburgh,Allen Bryant,Out,def,,5146366,DB,26,Update 1 2026-10-08 20:00:00,3,0.8672,1008,2024
+Pittsburgh,Ben Kauffman,Out,def,,5296241,DL,36,Update 1 2026-10-08 20:00:00,,,,
+Pittsburgh,Isaac Patterson,Out,def,,5269870,DB,41,Update 1 2026-10-08 20:00:00,3,0.8711,1066,2026
+Pittsburgh,Rodney Dunbar,Out,off,,5379963,WR,81,Update 1 2026-10-08 20:00:00,4,0.8911,469,2026
+Pittsburgh,Trevor Sommers,Out,def,,5156160,DL,90,Update 1 2026-10-08 20:00:00,3,0.8589,1419,2025
+Wake Forest,Tyler Walton,Out,def,,4954454,DL,14,Update 1 2026-10-08 20:00:00,3,0.8664,929,2023
+Wake Forest,Devin Cook,Out,def,,5139525,DB,15,Update 1 2026-10-08 20:00:00,3,0.8542,1464,2024
+Wake Forest,Elijah Otieno,Out,off,,5291183,WR,20,Update 1 2026-10-08 20:00:00,3,0.8511,2022,2026
+Wake Forest,Dalton DeBoer,Out,off,,5291731,OL,69,Update 1 2026-10-08 20:00:00,,,,
+Wake Forest,Jack Hines,Questionable,off,,5132641,OL,78,Update 1 2026-10-08 20:00:00,3,0.8592,1266,2024
+Wake Forest,Matt Herron,Probable,def,,5085622,DL,97,Update 1 2026-10-08 20:00:00,2,0.78,2723,2022
+NC State,"Jayden ""Duke"" Scott",Out,off,,5126513,RB,1,Update 1 2026-10-08 20:00:00,3,0.8834,591,2024
+NC State,"Joshisa ""Jojo"" Trader",Questionable,off,,5079745,WR,2,Update 1 2026-10-08 20:00:00,4,0.9803,42,2024
+NC State,Tristan Teasdell,Out,def,,5211398,S,3,Update 1 2026-10-08 20:00:00,3,0.8583,1440,2025
+NC State,Vander Ploog,Out,off,,5201877,TE,4,Update 1 2026-10-08 20:00:00,4,0.9218,208,2025
+NC State,Isaiah Crowell,Out,off,,4703064,NCK,8,Update 1 2026-10-08 20:00:00,4,0.921,202,2021
+NC State,AJ Richardson,Out,def,,5155981,ILB,15,Update 1 2026-10-08 20:00:00,,,,
+NC State,Adrian Farrow,Questionable,def,,5203717,DL,47,Update 1 2026-10-08 20:00:00,3,0.8639,1173,2025
+NC State,Rylan Vann,Out,off,,4812345,OL,55,Update 1 2026-10-08 20:00:00,3,0.85,1261,2022
+NC State,Jimarion McCrimon,Questionable,off,,5125334,OL,62,Update 1 2026-10-08 20:00:00,,,,2023
+NC State,Yousef Mugharbil,Out,off,,4431473,OL,71,Update 1 2026-10-08 20:00:00,4,0.9057,282,2021
+NC State,Spike Sowells Jr.,Out,off,,5296075,OL,72,Update 1 2026-10-08 20:00:00,4,0.9257,193,2025
+NC State,Kamen Smith,Questionable,off,,5079837,OT,79,Update 1 2026-10-08 20:00:00,3,0.8694,857,2023
+NC State,Ian Flynt,Out,off,,5126527,TE,87,Update 1 2026-10-08 20:00:00,3,0.8775,714,2024
+NC State,Carmelo McKenzie,Out,off,,5159007,NG,93,Update 1 2026-10-08 20:00:00,3,0.86,1566,2026
+Duke,Jamien Little,Out,off,,5208403,WR,1,Update 1 2026-10-08 20:00:00,3,0.8767,739,2025
+Duke,Landan Callahan,Probable,def,,5124964,CB,3,Update 1 2026-10-08 20:00:00,3,0.8731,826,2024
+Duke,Blake Rohrer,Out,off,,5372137,WR,3,Update 1 2026-10-08 20:00:00,,,,
+Duke,Kimari Robinson,Probable,def,,5077406,CB,5,Update 1 2026-10-08 20:00:00,3,0.8647,990,2023
+Duke,Javen Nicholas,Probable,off,,5081131,WR,5,Update 1 2026-10-08 20:00:00,,,,
+Duke,Lawrence Gardner,Out,off,,5297369,QB,16,Update 1 2026-10-08 20:00:00,,,,
+Duke,Qeanu Johnson,Out,off,,5201874,WR,21,Update 1 2026-10-08 20:00:00,3,0.8639,1173,2025
+Duke,Elliott Schaper,Out,def,,5214935,LB,31,Update 1 2026-10-08 20:00:00,3,0.8681,1024,2025
+Duke,Sean Stover,Probable,off,,5162722,OL,60,Update 1 2026-10-08 20:00:00,4,0.9013,347,2026
+Duke,Kai Jacobowitz,Out,off,,5209010,OL,65,Update 1 2026-10-08 20:00:00,3,0.85,1738,2025
+Duke,Reagan McCranie,Out,off,,5075473,OL,74,Update 1 2026-10-08 20:00:00,3,0.8411,1680,2023
+Duke,Roman Fina,Out,off,,5215617,OL,79,Update 1 2026-10-08 20:00:00,3,0.8533,1629,2025
+Georgia Tech,Malachi Hosley,Out,off,,5155366,RB,0,Update 1 2026-10-08 20:00:00,,,,2023
+Georgia Tech,Daiquan White,Out,def,,4921457,CB,4,Update 1 2026-10-08 20:00:00,3,0.8342,1861,2023
+Georgia Tech,Jordan Boyd,Questionable,def,,5127028,DE,8,Update 1 2026-10-08 20:00:00,3,0.8739,801,2024
+Georgia Tech,Jordan Walker,Out,def,,5092443,DE,10,Update 1 2026-10-08 20:00:00,,,,
+Georgia Tech,"Trae Stevenson, Jr.",Questionable,def,,5276054,CB,23,Update 1 2026-10-08 20:00:00,4,0.9185,225,2026
+Georgia Tech,Noah Carter,Out,def,,5139096,DE,24,Update 1 2026-10-08 20:00:00,4,0.9495,109,2024
+Georgia Tech,Fenix Felton,Out,def,,5215212,S,31,Update 1 2026-10-08 20:00:00,3,0.8831,585,2025
+Georgia Tech,Will Kiker,Out,def,,5159878,S,39,Update 1 2026-10-08 20:00:00,,,,
+Georgia Tech,Kyle Efford,Probable,def,,4838514,LB,44,Update 1 2026-10-08 20:00:00,3,0.8567,1090,2022
+Georgia Tech,Jameson Riggs,Questionable,off,,5079581,OL,70,Update 1 2026-10-08 20:00:00,3,0.8778,705,2024
+Georgia Tech,Markell Samuel,Questionable,off,,4570736,OL,71,Update 1 2026-10-08 20:00:00,,,,
+Georgia Tech,Josh Petty,Questionable,off,,5141633,OL,77,Update 1 2026-10-08 20:00:00,4,0.9638,72,2025
+Georgia Tech,Ethan Mackenny,Out,off,,4921259,OL,78,Update 1 2026-10-08 20:00:00,3,0.8642,1008,2023
+Georgia Tech,Kentrell Davis,Out,off,,5209922,WR,82,Update 1 2026-10-08 20:00:00,3,0.8722,1030,2026
+Georgia Tech,Coi Jean-Noel,Out,off,,5374984,WR,87,Update 1 2026-10-08 20:00:00,3,0.8811,704,2026
+Georgia Tech,A.J. Hoffler,Out,def,,4870781,DE,88,Update 1 2026-10-08 20:00:00,4,0.9003,327,2023
+Georgia Tech,Shymeik Jones,Out,def,,5075806,DT,96,Update 1 2026-10-08 20:00:00,3,0.8617,1079,2023
+Georgia Tech,Vincent Carroll-Jackson,Probable,def,,5120453,DT,99,Update 1 2026-10-08 20:00:00,,,,
+Virginia Tech,Takye Heath,Questionable,off,,4922987,WR,2,Update 1 2026-10-08 23:00:00,3,0.8517,1347,2023
+Virginia Tech,"Shamarius ""Snook"" Peterkin",Questionable,off,,5141601,WR,15,Update 1 2026-10-08 23:00:00,4,0.9011,333,2025
+Virginia Tech,George Ballance,Out,def,,5150880,LB,25,Update 1 2026-10-08 23:00:00,,,,
+Virginia Tech,Bill Davis,Questionable,off,,5156906,RB,32,Update 1 2026-10-08 23:00:00,3,0.8611,1094,2023
+Virginia Tech,Jojo Crim,Questionable,def,,5258259,CB,35,Update 1 2026-10-08 23:00:00,3,0.847,1923,2025
+Virginia Tech,Lucas Austin,Questionable,off,,5192898,OL,57,Update 1 2026-10-08 23:00:00,3,0.8619,1172,2024
+Virginia Tech,Roseby Lubintus,Questionable,off,,5279714,OL,58,Update 1 2026-10-08 23:00:00,3,0.8733,966,2026
+Virginia Tech,Justin Terry,Out,off,,5158250,OL,72,Update 1 2026-10-08 23:00:00,3,0.8392,2011,2024
+Virginia Tech,Brody Meadows,Questionable,off,,4685451,OL,77,Update 1 2026-10-08 23:00:00,3,0.8815,545,2022
+Virginia Tech,L.J. Booker,Questionable,off,,5230251,WR,80,Update 1 2026-10-08 23:00:00,,,,
+Virginia Tech,Emmett Laws,Out,def,,5127033,DL,99,Update 1 2026-10-08 23:00:00,3,0.8875,518,2024
+California,Carter Vargas,Out,off,,5148905,RB,1,Update 1 2026-10-08 23:00:00,3,0.8158,2620,2024
+California,Kingston Lopa,Questionable,def,,5087950,DB,2,Update 1 2026-10-08 23:00:00,4,0.9201,208,2024
+California,Kamar Mothudi,Questionable,def,,5110496,ILB,3,Update 1 2026-10-08 23:00:00,4,0.9182,215,2024
+California,Jaron-Keawe Sagapolutele,Questionable,off,,5164313,QB,3,Update 1 2026-10-08 23:00:00,,,,
+California,Chase Hendricks,Questionable,off,,4921110,WR,7,Update 1 2026-10-08 23:00:00,3,0.86,1113,2023
+California,Aiden Manutai,Questionable,def,,5141574,DB,14,Update 1 2026-10-08 23:00:00,3,0.8708,917,2025
+California,Adam Mohammed,Questionable,off,,5147861,RB,24,Update 1 2026-10-08 23:00:00,,,,
+California,Ben Howard,Questionable,off,,5164642,OL,72,Update 1 2026-10-08 23:00:00,3,0.8608,1306,2025
+California,Nate Burrell,Out,def,,4685281,DL,98,Update 1 2026-10-08 23:00:00,3,0.8837,502,2022
+California,Ashun Shepphard,Questionable,def,,5218832,DL,99,Update 1 2026-10-08 23:00:00,,,,
+Syracuse,Antoine Deslauriers,Questionable,def,,5173414,LB,5,Update 1 2026-10-08 20:00:00,3,0.8647,1133,2025
+Syracuse,Darien Williams,Out,off,,5206061,WR,7,Update 1 2026-10-08 20:00:00,3,0.8803,636,2025
+Syracuse,Nazir Ward,Questionable,def,,5103802,DB,7,Update 1 2026-10-08 20:00:00,3,0.8378,1772,2023
+Syracuse,Amari Odom,Questionable,off,,5153782,QB,12,Update 1 2026-10-08 20:00:00,,,,2023
+Syracuse,Ahmad Miller,Questionable,off,,5154420,RB,22,Update 1 2026-10-08 20:00:00,,,,2023
+Syracuse,Shavane Anderson Jr.,Questionable,off,,5289321,RB,23,Update 1 2026-10-08 20:00:00,3,0.8644,1358,2026
+Syracuse,Jackson Iak,Out,off,,5297034,OL,62,Update 1 2026-10-08 20:00:00,,,,
+Syracuse,D'Joni Scatliffe,Out,off,,5216504,OL,67,Update 1 2026-10-08 20:00:00,3,0.8408,2085,2025
+Syracuse,Terrell Wilfong,Out,off,,5210060,WR,88,Update 1 2026-10-08 20:00:00,3,0.8739,821,2025
+Virginia,Dillon Newton-Short,Out,off,,5212231,WR,15,Update 1 2026-10-08 20:00:00,3,0.8669,1062,2025
+Virginia,Omillio Agard,Doubtful,def,,5079295,CB,20,Update 1 2026-10-08 20:00:00,4,0.8947,423,2024
+Virginia,Jaylen Jones,Out,def,,5086498,S,23,Update 1 2026-10-08 20:00:00,,,,
+Virginia,Triston Ward,Out,off,,5148626,WR,23,Update 1 2026-10-08 20:00:00,3,0.8583,1297,2024
+Virginia,Alex Dunn,Out,def,,5283059,DB,27,Update 1 2026-10-08 20:00:00,3,0.88,731,2026
+Virginia,Jack Stevens,Out,off,,5310922,RB,37,Update 1 2026-10-08 20:00:00,,,,
+Virginia,Isaiah Reese,Out,def,,5181214,LB,42,Update 1 2026-10-08 20:00:00,3,0.8683,1014,2025
+Virginia,Chase Morrison,Doubtful,def,,5146780,DT,46,Update 1 2026-10-08 20:00:00,3,0.8669,1023,2024
+Virginia,Gavin Johnson,Out,def,,5310477,DE,53,Update 1 2026-10-08 20:00:00,,,,
+Virginia,Tyler Simmons,Out,def,,5146813,DT,56,Update 1 2026-10-08 20:00:00,3,0.8692,943,2024
+Virginia,Noah Hartsoe,Out,off,,5081207,OL,58,Update 1 2026-10-08 20:00:00,,,,
+Virginia,Dylan Biehl,Out,off,,5264956,OL,75,Update 1 2026-10-08 20:00:00,3,0.8567,1754,2026
+Virginia,Jewett Hayes,Out,def,,5156385,DE,85,Update 1 2026-10-08 20:00:00,3,0.8642,1102,2024
+Virginia,Jason Hammond,Out,def,,4870783,DT,91,Update 1 2026-10-08 20:00:00,3,0.8544,1290,2023
+Virginia,Bull Richardson,Out,def,,5290674,DT,96,Update 1 2026-10-08 20:00:00,3,0.87,1114,2026
+Virginia,Devon Baxter,Out,def,,5139094,DE,99,Update 1 2026-10-08 20:00:00,4,0.902,338,2024
+Iowa State,Drew Surges,Out,def,,5150695,S,6,Update 2 2026-10-08 21:00:00,3,0.84,1710,2023
+Iowa State,Rylan Barnes,Out,def,,5150699,LB,41,Update 2 2026-10-08 21:00:00,,,,
+Iowa State,Christian Greenlaw,Probable,off,,5155426,TE,88,Update 2 2026-10-08 21:00:00,,,,
+Iowa State,Caden Crawford,Out,def,,4718462,DE,92,Update 2 2026-10-08 21:00:00,3,0.8837,502,2022
+Iowa State,Ka'Mori Moore,Out,def,,5154698,DT,95,Update 2 2026-10-08 21:00:00,3,0.8731,848,2025
+BYU,Raider Damuni,Out,def,,5150619,S,3,Update 2 2026-10-08 21:00:00,,,,
+BYU,LJ Martin,Out,off,,4918126,RB,4,Update 2 2026-10-08 21:00:00,3,0.8873,491,2023
+BYU,Isaiah Glasker,Out,def,,5080697,LB,16,Update 2 2026-10-08 21:00:00,3,0.8333,1654,2021
+BYU,Sione Moa,Out,off,,5219689,RB,30,Update 2 2026-10-08 21:00:00,,,,
+BYU,Cannon DeVries,Doubtful,def,,5296270,CB,32,Update 2 2026-10-08 21:00:00,,,,
+UCF,Dylan Wade,Probable,off,,4922996,TE,0,Update 1 2026-10-08 21:00:00,3,0.865,982,2023
+UCF,Jonathan Bibbs,Probable,off,,5193217,WR,3,Update 1 2026-10-08 21:00:00,3,0.8194,2574,2024
+UCF,Josh Derry,Probable,off,,5153889,WR,5,Update 1 2026-10-08 21:00:00,,,,2023
+UCF,Duane Thomas Jr.,Questionable,off,,5151048,WR,7,Update 1 2026-10-08 21:00:00,3,0.8256,2070,2023
+UCF,Keyone Jenkins,Probable,off,,5085337,QB,12,Update 1 2026-10-08 21:00:00,3,0.8508,1380,2023
+UCF,Caleb Rollerson,Out,off,,5221393,WR,13,Update 1 2026-10-08 21:00:00,,,,
+UCF,Alonza Barnett III,Out,off,,4911929,QB,14,Update 1 2026-10-08 21:00:00,3,0.8,2364,2022
+UCF,Dante Carr,Out,off,,5236675,QB,16,Update 1 2026-10-08 21:00:00,3,0.8856,586,2026
+UCF,Lewis Carter,Out,def,,4870654,LB,20,Update 1 2026-10-08 21:00:00,4,0.9362,156,2023
+UCF,Jahleel Culbreath,Probable,def,,5092328,LB,34,Update 1 2026-10-08 21:00:00,,,,2022
+UCF,Jayden Jennings,Questionable,def,,4708164,LB,38,Update 1 2026-10-08 21:00:00,3,0.8178,2057,2021
+UCF,Bruno Dall,Out,def,,5122026,EDG,41,Update 1 2026-10-08 21:00:00,3,0.8056,2495,2023
+UCF,Trenton Turner,Out,def,,5265522,DT,54,Update 1 2026-10-08 21:00:00,,,,2025
+UCF,Jacob Maiava,Out,off,,5212731,OL,55,Update 1 2026-10-08 21:00:00,3,0.85,1738,2025
+UCF,Owen Spell,Out,off,,5279724,OL,61,Update 1 2026-10-08 21:00:00,,,,
+UCF,Tyler Gibson,Out,off,,4869496,OL,75,Update 1 2026-10-08 21:00:00,3,0.8822,537,2022
+UCF,Dylan Burk,Questionable,off,,5296835,TE,83,Update 1 2026-10-08 21:00:00,,,,
+Oklahoma State,Wyatt Young,Questionable,off,,5148787,WR,10,Update 1 2026-10-08 21:00:00,3,0.8428,1836,2024
+Oklahoma State,Johnny Dickson III,Questionable,off,,4685732,OL,54,Update 1 2026-10-08 21:00:00,3,0.8815,545,2022
+Oklahoma State,Braydon Nelson,Probable,off,,5195740,OL,67,Update 1 2026-10-08 21:00:00,,,,
+Oklahoma State,Landon Dean,Out,def,,4715344,DT,88,Update 1 2026-10-08 21:00:00,3,0.8715,748,2022
+Arizona,Giovanni Richardson,Out,off,,5217700,WR,5,Update 1 2026-10-08 21:00:00,3,0.8794,665,2025
+Arizona,Max Harris,Out,def,,5158129,LB,5,Update 1 2026-10-08 21:00:00,,,,
+Arizona,Chris Hunter III,Out,off,,5093837,WR,11,Update 1 2026-10-08 21:00:00,,,,2022
+Arizona,Cole Rusk,Out,off,,4709804,TE,14,Update 1 2026-10-08 21:00:00,3,0.8148,2129,2021
+Arizona,Dajon Hinton,Out,def,,5166910,S,20,Update 1 2026-10-08 21:00:00,3,0.8689,987,2025
+Arizona,Ismail Mahdi,Out,off,,5084798,RB,21,Update 1 2026-10-08 21:00:00,,,,2022
+Arizona,Ezra Funa,Out,def,,5306763,DL,92,Update 1 2026-10-08 21:00:00,,,,
+West Virginia,Cam Ball,Doubtful,off,,4890881,TE,10,Update 1 2026-10-08 21:00:00,3,0.8237,1939,2022
+West Virginia,Nick Taylor,Doubtful,def,,5148426,CB,19,Update 1 2026-10-08 21:00:00,3,0.8361,2075,2024
+West Virginia,Emory Snyder,Out,off,,5278550,N/S,23,Update 1 2026-10-08 21:00:00,3,0.8722,1030,2026
+West Virginia,Armoni Weaver-Bomar,Out,off,,5141754,WR,25,Update 1 2026-10-08 21:00:00,3,0.8669,1062,2025
+West Virginia,Andre Devine,Out,off,,5197058,RB,26,Update 1 2026-10-08 21:00:00,3,0.845,1778,2024
+West Virginia,Ashton Woods,Probable,def,,5127046,LB,33,Update 1 2026-10-08 21:00:00,3,0.885,563,2024
+West Virginia,Jason Chambers,Probable,def,,5095810,DB,36,Update 1 2026-10-08 21:00:00,,,,2022
+West Virginia,Harper Holloman,Probable,def,,5146973,EDG,50,Update 1 2026-10-08 21:00:00,3,0.8483,1682,2024
+West Virginia,John Neider,Probable,off,,5150460,WR,80,Update 1 2026-10-08 21:00:00,,,,2023
+West Virginia,Darius Wiley,Out,def,,5384829,DL,91,Update 1 2026-10-08 21:00:00,,,,
+Houston,Jaden Yates,Out,def,,5092546,LB,1,Update 1 2026-10-08 21:00:00,3,0.8458,1573,2023
+Houston,JD Rhym,Probable,def,,4685524,DB,3,Update 1 2026-10-08 21:00:00,4,0.9286,183,2022
+Houston,Muizz Tounkara,Out,off,,5207662,WR,14,Update 1 2026-10-08 21:00:00,3,0.8764,744,2025
+Houston,Bryson Castile,Out,def,,5268749,LB,34,Update 1 2026-10-08 21:00:00,3,0.8756,884,2026
+Houston,Ejiro Egodogbare,Probable,def,,5102038,DL,50,Update 1 2026-10-08 21:00:00,,,,
+Houston,RJ Lee,Out,off,,5207654,OL,72,Update 1 2026-10-08 21:00:00,3,0.8458,1950,2025
+Houston,Jacory Thurman,Out,off,,5215578,TE,88,Update 1 2026-10-08 21:00:00,3,0.8575,1477,2025
+Kansas State,Blake Barnett,Out,off,,5124584,QB,3,Update 1 2026-10-08 21:00:00,3,0.8842,571,2024
+Kansas State,Dillon Duff,Questionable,off,,5164321,QB,10,Update 1 2026-10-08 21:00:00,3,0.8622,1254,2025
+Kansas,Kory Amachree,Out,off,,5214653,RB,2,Update 1 2026-10-08 21:00:00,3,0.8856,586,2026
+Kansas,Yasin Willis,Out,off,,5079749,RB,6,Update 1 2026-10-08 21:00:00,3,0.8872,525,2024
+Kansas,Cole Ballard,Out,off,,5151060,QB,15,Update 1 2026-10-08 21:00:00,,,,
+Kansas,Justin Thurman,Out,off,,5141740,RB,25,Update 1 2026-10-08 21:00:00,3,0.8694,975,2025
+Kansas,Marco Mohajir,Out,off,,5384629,OL,58,Update 1 2026-10-08 21:00:00,,,,
+Kansas,Eli Richmond,Out,off,,5219492,OL,67,Update 1 2026-10-08 21:00:00,,,,
+Kansas,Griffin Baker,Out,off,,5384631,WR,80,Update 1 2026-10-08 21:00:00,,,,
+Kansas,Carter Moses,Doubtful,off,,5098591,TE,85,Update 1 2026-10-08 21:00:00,,,,
+Kansas,Tre'von McAlpine,Out,def,,4816082,DT,95,Update 1 2026-10-08 21:00:00,3,0.8815,545,2022
+Kansas,Jalen Atkins,Out,def,,5384632,DT,98,Update 1 2026-10-08 21:00:00,,,,
+Utah,Kana'i Lopes,Out,off,,5219997,TE,33,Update 1 2026-10-08 21:00:00,3,0.8678,990,2024
+Utah,Isaiah Garcia,Out,off,,5079464,OL,72,Update 1 2026-10-08 21:00:00,4,0.9104,264,2024

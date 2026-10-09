@@ -216,6 +216,20 @@ class TotalsTests(unittest.TestCase):
         self.assertEqual(neutral["proj_margin"], board(model, [dict(g[0], neutralSite=True)], lines, spread_model=model)[0]["proj_margin"])
 
 
+    def test_sp_plus_total_gets_wind_correction(self):
+        games, rows = synthetic_season()
+        model = TotalsModel(rows, games, alpha=10)
+        g = [{"id": 999, "week": 7, "homeTeam": "A", "awayTeam": "B", "neutralSite": False}]
+        lines = [{"id": 999, "lines": [{"provider": "X", "overUnder": 50, "spread": -3}]}]
+        sp = {"teams": {"A": {"sp": 10.0, "off": 35.0, "def": 25.0}, "B": {"sp": 0.0, "off": 27.0, "def": 27.0}},
+              "off_avg": 27.0, "def_avg": 27.0}
+        calm = board(model, g, lines, sp=sp)[0]
+        windy = board(model, g, lines, sp=sp, weather={999: {"wind_mph": 25.0, "dome": False}})[0]
+        self.assertEqual(calm["sp_total"], 60.0)
+        self.assertLess(windy["weather_adj"], 0)
+        self.assertAlmostEqual(windy["sp_total"] - calm["sp_total"], windy["weather_adj"], places=1)
+        self.assertIsNone(board(model, g, lines)[0]["sp_total"])
+
     def test_transfer_net(self):
         from cfb_stats.priors import transfer_net
         rows = [{"position": "QB", "origin": "A", "destination": "B", "rating": "0.95", "stars": "4"},
