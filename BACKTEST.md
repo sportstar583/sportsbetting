@@ -337,6 +337,43 @@ Same leave-one-season-out test; FBS games only (FCS teams have no SP+), 1,745 ga
 Not used. Current-season SP+ could be shown next to the model's numbers for reference, but
 it would need to come from somewhere other than CFBD's free tier and couldn't be backtested.
 
+## Spread angles: skill-player absences, rest, coach tendencies
+
+`scripts/spread_angles_backtest.py` (about 55 API calls the first time). Each angle is tested as
+a betting rule on every FBS game with a closing spread, 2023-2025 (2,264 games; breakeven 52.4%),
+and as an adjustment to the spread model (fit on two seasons, tested on the third). Coach records
+come from his previous 3 seasons at any school; rankings are the AP poll entering the week.
+
+| Rule (against the closing spread) | Record | Win % |
+| --- | --- | --- |
+| Back the team that lost less carry + catch share to absences (gap 10% / 20% / 30%) | 300-324 / 120-130 / 53-61 | 48.1% / 48.0% / 46.5% |
+| Back the team with 3+ more days of rest | 215-215 | 50.0% |
+| Fade a team on a short week (5 days or less) vs a rested one | 20-21 | 48.8% |
+| Back a team off a bye vs one that isn't | 185-186 | 49.9% |
+| Back the coach with the better past ATS record (gap 5%) | 222-251 | 46.9% |
+| Back the more aggressive 4th-down coach (gap 5 points of go rate) | 506-537 | 48.5% |
+| Facing a top 25 team: back coaches who covered 55%+ of those games before | 98-84 | 53.8% |
+| Facing a top 10 team: back coaches who covered 55%+ / won half or more before | 25-17 / 28-17 | 59.5% / 62.2% |
+| Facing a top 5 team: any version | 2-1 to 13-17 | too few games |
+| Unranked team vs a ranked team, 2021-2025 (top 25 / top 10 / top 5) | 509-496 / 200-187 / 98-94 | 50.6% / 51.7% / 51.0% |
+
+- **Skill-player absences** (the NFL repo's rule, 53.5% there): no edge, even though the absences
+  here come from box scores, which know about surprise scratches nobody could bet. College has no
+  historical injury reports or snap counts; a "regular" is a non-QB with 8%+ of his team's carries +
+  catches over its last 4 games. The market prices these absences fully, if anything too much.
+- **Rest and byes:** nothing. (Rest also did nothing for totals; see above.)
+- **Coach tendencies:** a coach's past ATS record and 4th-down aggressiveness both lean slightly the
+  wrong way, inside noise.
+- **Record against ranked teams:** the top 10 slices look good (59-62%) but on 42-45 bets, picked
+  from about 25 rules tested here; the best of that many lands this high by chance alone (z about
+  1.6). The broad version, unranked teams vs ranked teams over five seasons, is 50.6%.
+- As adjustments to the spread model, none changed margin RMSE by more than 0.05 points or ATS at
+  edge >= 3 by more than half a point (50.1%-51.0% vs 50.6%), and no coefficient against the
+  market is over 1.4 standard errors.
+
+None is used. Coach records against top 10 teams are worth tracking on 2026 if you want to, as
+a check rather than a bet.
+
 ## Team consistency
 
 How much each offense's and defense's game-by-game EPA swings around what the opponent-adjusted

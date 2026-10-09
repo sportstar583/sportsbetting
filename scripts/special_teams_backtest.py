@@ -157,95 +157,100 @@ def ratings_before(week, kicks, punts, fourth, played, fg_exp, net_exp):
     return out
 
 
-seasons = {y: season_events(y) for y in (2022, 2023, 2024, 2025)}
-coach_map = coaches(c)
-# How much scoring margin drives go rate: team-seasons, go rate on margin per game.
-ts = [(a / n, m / g) for ev in seasons.values() for a, n, m, g in go_counts(99, ev[0], ev[1], ev[2], ev[4]).values()
-      if n >= 50 and g >= 6]
-slope = float(np.polyfit([x[1] for x in ts], [x[0] for x in ts], 1)[0])
-lg_go_all = float(np.mean([x[0] for x in ts]))
-history = coach_history(seasons, coach_map, slope, lg_go_all)
-gr = [r for (_, y), r in history.items() if y in (2023, 2024, 2025)]
-print(f"go rate vs margin: {slope * 100:+.2f} points of go rate per point of margin/game; "
-      f"coach history for {len(gr)} coach-seasons")
+def main():
+    seasons = {y: season_events(y) for y in (2022, 2023, 2024, 2025)}
+    coach_map = coaches(c)
+    # How much scoring margin drives go rate: team-seasons, go rate on margin per game.
+    ts = [(a / n, m / g) for ev in seasons.values() for a, n, m, g in go_counts(99, ev[0], ev[1], ev[2], ev[4]).values()
+          if n >= 50 and g >= 6]
+    slope = float(np.polyfit([x[1] for x in ts], [x[0] for x in ts], 1)[0])
+    lg_go_all = float(np.mean([x[0] for x in ts]))
+    history = coach_history(seasons, coach_map, slope, lg_go_all)
+    gr = [r for (_, y), r in history.items() if y in (2023, 2024, 2025)]
+    print(f"go rate vs margin: {slope * 100:+.2f} points of go rate per point of margin/game; "
+          f"coach history for {len(gr)} coach-seasons")
 
 
-def coach_go(t, y, week, counts, lg_go):
-    """This coach's go rate entering `week`: prior-season history blended with this season."""
-    a, n, m, g = counts.get(t, (0, 0, 0.0, 0))
-    hist = history.get((coach_map.get((t, y)), y))
-    raw_p, adj_p = (hist[0], hist[1]) if hist else (lg_go, lg_go)
-    raw = (a + raw_p * COACH_WEIGHT) / (n + COACH_WEIGHT)
-    adj = (a - slope * (m / max(g, 1)) * n + adj_p * COACH_WEIGHT) / (n + COACH_WEIGHT)
-    return raw - lg_go, adj - lg_go
+    def coach_go(t, y, week, counts, lg_go):
+        """This coach's go rate entering `week`: prior-season history blended with this season."""
+        a, n, m, g = counts.get(t, (0, 0, 0.0, 0))
+        hist = history.get((coach_map.get((t, y)), y))
+        raw_p, adj_p = (hist[0], hist[1]) if hist else (lg_go, lg_go)
+        raw = (a + raw_p * COACH_WEIGHT) / (n + COACH_WEIGHT)
+        adj = (a - slope * (m / max(g, 1)) * n + adj_p * COACH_WEIGHT) / (n + COACH_WEIGHT)
+        return raw - lg_go, adj - lg_go
 
 
-rows = []
-for y in (2023, 2024, 2025):
-    kicks, punts, fourth, played, margins = seasons[y]
-    fg_exp = bin_rate([(d, m) for _, _, d, m in kicks], 5)
-    net_exp = bin_rate([(s, n) for _, _, s, n in punts], 10)
-    print(f"{y}: {len(kicks)} FG attempts ({sum(m for *_, m in kicks) / len(kicks):.1%} made), "
-          f"{len(punts)} punts (avg net {sum(n for *_, n in punts) / len(punts):.1f}), "
-          f"{sum(a for *_, a in fourth)} 4th-down attempts in {len({(t, w) for t, w, _ in fourth})} team box scores")
-    cache = {}
-    for r in csv.DictReader(open(f"data/{y}/totals_backtest_games.csv")):
-        w = int(r["week"])
-        if w not in cache:
-            cache[w] = (ratings_before(w, kicks, punts, fourth, played, fg_exp, net_exp),
-                        go_counts(w, kicks, punts, fourth, margins))
-        (rt, counts), zero = cache[w], {"fg": 0.0, "punt": 0.0, "go": 0.0}
-        a, h = rt.get(r["away"], zero), rt.get(r["home"], zero)
-        ca, ch = coach_go(r["away"], y, w, counts, lg_go_all), coach_go(r["home"], y, w, counts, lg_go_all)
-        rows.append({
-            "season": y, "week": w, "p4": r["p4_game"] == "True",
-            "act": float(r["actual_total"]), "proj": float(r["proj_total"]), "mkt": float(r["market_total"]),
-            "fg": a["fg"] + h["fg"], "punt": (a["punt"] + h["punt"]) / 10, "go": (a["go"] + h["go"]) * 10,
-            "coach": (ca[0] + ch[0]) * 10, "coach_adj": (ca[1] + ch[1]) * 10,
-        })
+    rows = []
+    for y in (2023, 2024, 2025):
+        kicks, punts, fourth, played, margins = seasons[y]
+        fg_exp = bin_rate([(d, m) for _, _, d, m in kicks], 5)
+        net_exp = bin_rate([(s, n) for _, _, s, n in punts], 10)
+        print(f"{y}: {len(kicks)} FG attempts ({sum(m for *_, m in kicks) / len(kicks):.1%} made), "
+              f"{len(punts)} punts (avg net {sum(n for *_, n in punts) / len(punts):.1f}), "
+              f"{sum(a for *_, a in fourth)} 4th-down attempts in {len({(t, w) for t, w, _ in fourth})} team box scores")
+        cache = {}
+        for r in csv.DictReader(open(f"data/{y}/totals_backtest_games.csv")):
+            w = int(r["week"])
+            if w not in cache:
+                cache[w] = (ratings_before(w, kicks, punts, fourth, played, fg_exp, net_exp),
+                            go_counts(w, kicks, punts, fourth, margins))
+            (rt, counts), zero = cache[w], {"fg": 0.0, "punt": 0.0, "go": 0.0}
+            a, h = rt.get(r["away"], zero), rt.get(r["home"], zero)
+            ca, ch = coach_go(r["away"], y, w, counts, lg_go_all), coach_go(r["home"], y, w, counts, lg_go_all)
+            rows.append({
+                "season": y, "week": w, "p4": r["p4_game"] == "True",
+                "act": float(r["actual_total"]), "proj": float(r["proj_total"]), "mkt": float(r["market_total"]),
+                "fg": a["fg"] + h["fg"], "punt": (a["punt"] + h["punt"]) / 10, "go": (a["go"] + h["go"]) * 10,
+                "coach": (ca[0] + ch[0]) * 10, "coach_adj": (ca[1] + ch[1]) * 10,
+            })
 
-act = np.array([r["act"] for r in rows]); proj = np.array([r["proj"] for r in rows]); mkt = np.array([r["mkt"] for r in rows])
-season = np.array([r["season"] for r in rows])
-FEATS = ["fg", "punt", "go", "coach", "coach_adj"]
-F = np.array([[r[f] for f in FEATS] for r in rows], dtype=float)
-print(f"\n{len(rows)} games. Per game, sum of both teams: FG pts over average sd {F[:,0].std():.2f}, "
-      f"punt net yds over average (x10) sd {F[:,1].std():.2f}, 4th-down go rate over average (x10) sd {F[:,2].std():.2f}")
-print(f"coach go rate (x10) sd {F[:,3].std():.2f}, margin-adjusted sd {F[:,4].std():.2f}")
-print("(units: fg = points/game, punt = 10 yards/game, go/coach = 10 percentage points)")
-for cols in ([0, 1, 2], [3], [4]):  # coach terms one at a time (they overlap with go and each other)
-    for target, lab in ((act - proj, "actual - model"), (act - mkt, "actual - market")):
-        A = np.column_stack([np.ones(len(rows)), F[:, cols]]); b, *_ = np.linalg.lstsq(A, target, rcond=None)
-        se = np.sqrt(np.diag(np.linalg.inv(A.T @ A)) * (target - A @ b).var())
-        print(f"{lab:<16}" + "  ".join(f"{FEATS[c]} {b[i+1]:+.2f}({se[i+1]:.2f})" for i, c in enumerate(cols)))
-
-
-def evaluate(cols, label):
-    tot = defaultdict(lambda: [0, 0])
-    rm = []
-    for s in (2023, 2024, 2025):
-        tr, te = season != s, season == s
-        X = F[:, cols]
-        A = np.column_stack([np.ones(tr.sum()), X[tr]]); b, *_ = np.linalg.lstsq(A, (act - proj)[tr], rcond=None)
-        adj = proj + X @ b[1:]
-        rm.append((math.sqrt(((act - proj)[te] ** 2).mean()), math.sqrt(((act - adj)[te] ** 2).mean())))
-        for name, p in (("base", proj), ("adj", adj)):
-            e = p - mkt; d = act - mkt
-            k = te & (np.abs(e) >= 3) & (d != 0)
-            tot[f"edge3 {name}"][0] += int(((e > 0) == (d > 0))[k].sum()); tot[f"edge3 {name}"][1] += int(k.sum())
-            rs = [{"week": (rows[i]["season"], rows[i]["week"]), "edge": e[i], "p4_game": rows[i]["p4"], "enough_data": True,
-                   "actual_total": act[i], "market_total": mkt[i]} for i in np.where(te)[0]]
-            for r, side in weekly_card(rs, 3, p4_only=True):
-                dd = r["actual_total"] - r["market_total"]
-                if dd:
-                    tot[f"card {name}"][0] += (dd > 0) == (side == "OVER"); tot[f"card {name}"][1] += 1
-    print(f"{label:<22} RMSE " + " ".join(f"{a:.2f}->{b:.2f}" for a, b in rm) + " | " +
-          " | ".join(f"{k} {w}-{n-w} {w/n:.1%}" for k, (w, n) in tot.items()))
+    act = np.array([r["act"] for r in rows]); proj = np.array([r["proj"] for r in rows]); mkt = np.array([r["mkt"] for r in rows])
+    season = np.array([r["season"] for r in rows])
+    FEATS = ["fg", "punt", "go", "coach", "coach_adj"]
+    F = np.array([[r[f] for f in FEATS] for r in rows], dtype=float)
+    print(f"\n{len(rows)} games. Per game, sum of both teams: FG pts over average sd {F[:,0].std():.2f}, "
+          f"punt net yds over average (x10) sd {F[:,1].std():.2f}, 4th-down go rate over average (x10) sd {F[:,2].std():.2f}")
+    print(f"coach go rate (x10) sd {F[:,3].std():.2f}, margin-adjusted sd {F[:,4].std():.2f}")
+    print("(units: fg = points/game, punt = 10 yards/game, go/coach = 10 percentage points)")
+    for cols in ([0, 1, 2], [3], [4]):  # coach terms one at a time (they overlap with go and each other)
+        for target, lab in ((act - proj, "actual - model"), (act - mkt, "actual - market")):
+            A = np.column_stack([np.ones(len(rows)), F[:, cols]]); b, *_ = np.linalg.lstsq(A, target, rcond=None)
+            se = np.sqrt(np.diag(np.linalg.inv(A.T @ A)) * (target - A @ b).var())
+            print(f"{lab:<16}" + "  ".join(f"{FEATS[c]} {b[i+1]:+.2f}({se[i+1]:.2f})" for i, c in enumerate(cols)))
 
 
-print("\nleave-one-season-out:")
-evaluate([0], "FG kicking")
-evaluate([1], "net punting")
-evaluate([2], "4th-down go rate")
-evaluate([3], "coach go rate")
-evaluate([4], "coach go rate, adjusted")
-evaluate([0, 1, 2], "all three")
+    def evaluate(cols, label):
+        tot = defaultdict(lambda: [0, 0])
+        rm = []
+        for s in (2023, 2024, 2025):
+            tr, te = season != s, season == s
+            X = F[:, cols]
+            A = np.column_stack([np.ones(tr.sum()), X[tr]]); b, *_ = np.linalg.lstsq(A, (act - proj)[tr], rcond=None)
+            adj = proj + X @ b[1:]
+            rm.append((math.sqrt(((act - proj)[te] ** 2).mean()), math.sqrt(((act - adj)[te] ** 2).mean())))
+            for name, p in (("base", proj), ("adj", adj)):
+                e = p - mkt; d = act - mkt
+                k = te & (np.abs(e) >= 3) & (d != 0)
+                tot[f"edge3 {name}"][0] += int(((e > 0) == (d > 0))[k].sum()); tot[f"edge3 {name}"][1] += int(k.sum())
+                rs = [{"week": (rows[i]["season"], rows[i]["week"]), "edge": e[i], "p4_game": rows[i]["p4"], "enough_data": True,
+                       "actual_total": act[i], "market_total": mkt[i]} for i in np.where(te)[0]]
+                for r, side in weekly_card(rs, 3, p4_only=True):
+                    dd = r["actual_total"] - r["market_total"]
+                    if dd:
+                        tot[f"card {name}"][0] += (dd > 0) == (side == "OVER"); tot[f"card {name}"][1] += 1
+        print(f"{label:<22} RMSE " + " ".join(f"{a:.2f}->{b:.2f}" for a, b in rm) + " | " +
+              " | ".join(f"{k} {w}-{n-w} {w/n:.1%}" for k, (w, n) in tot.items()))
+
+
+    print("\nleave-one-season-out:")
+    evaluate([0], "FG kicking")
+    evaluate([1], "net punting")
+    evaluate([2], "4th-down go rate")
+    evaluate([3], "coach go rate")
+    evaluate([4], "coach go rate, adjusted")
+    evaluate([0, 1, 2], "all three")
+
+
+if __name__ == "__main__":
+    main()
