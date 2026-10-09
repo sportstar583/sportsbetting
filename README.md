@@ -88,6 +88,12 @@ Bovada, ESPN Bet), on about half of games. Every run logs its picks to
 score, closing line value (points the line moved your way after the pick) and the result at the
 best line, and the card shows the running record (`cfb_stats.tracking`).
 
+**Board web page.** `python -m cfb_stats.board_page --week N` writes
+`data/<year>/board_week<N>.html` from the week's board, injuries and card log (no API calls): every
+game with line, model, edge, SP+, injury and wind adjustments and spreads, sortable and filterable
+(card picks, edge 3+, not started), with projected score, pace, best lines and key injuries
+when a row is opened.
+
 **SP+ for reference.** If `data/<year>/sp_plus_week<N>.csv` exists (`team,sp,off,def`; other
 columns ignored; save the week's full SP+ table there, or pass `--sp-plus <file>` to the board),
 the board gets `sp_total` (with the model's wind correction added) and `sp_margin` columns

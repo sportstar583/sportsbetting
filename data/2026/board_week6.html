@@ -1,0 +1,226 @@
+<title>Totals Board · Week 6</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=IBM+Plex+Mono:wght@400;500&family=Source+Sans+3:wght@400;600&display=swap">
+<style>
+/* Layout: a sportsbook-style sheet. Masthead with the week's numbers, filter rail, one dense
+   sortable table (rows expand for detail), method notes at the foot. */
+:root {
+  --bg: #f3f5f1; --surface: #ffffff; --ink: #18221d; --muted: #5b6a61; --line: #d6ddd7;
+  --accent: #1e4d34; --over: #b9440f; --under: #0b6f86; --warn: #9a6a00;
+  --over-soft: #f8e6dc; --under-soft: #dcf0f4; --chip: #e9eee9;
+  --display: "Barlow Condensed", "Arial Narrow", sans-serif;
+  --body: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #0e1411; --surface: #151d19; --ink: #e4ebe6; --muted: #93a39a; --line: #27332d;
+  --accent: #86c49d; --over: #f39a5f; --under: #4cc3dc; --warn: #e0b54a;
+  --over-soft: #3a2418; --under-soft: #12303a; --chip: #1e2924; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #0e1411; --surface: #151d19; --ink: #e4ebe6; --muted: #93a39a; --line: #27332d;
+  --accent: #86c49d; --over: #f39a5f; --under: #4cc3dc; --warn: #e0b54a;
+  --over-soft: #3a2418; --under-soft: #12303a; --chip: #1e2924; color-scheme: dark }
+* { box-sizing: border-box }
+body { background: var(--bg); color: var(--ink); font: 15px/1.45 var(--body); margin: 0 }
+.wrap { max-width: 1240px; margin: 0 auto; padding-inline: 16px; padding-block: 20px 40px; display: grid; gap: 18px }
+header { display: grid; gap: 10px }
+.eyebrow { font: 600 12px/1 var(--body); letter-spacing: .12em; text-transform: uppercase; color: var(--accent) }
+h1 { font: 700 clamp(30px, 6vw, 46px)/1 var(--display); letter-spacing: .01em; margin: 0; text-wrap: balance }
+.meta { color: var(--muted); font-size: 14px; max-width: 70ch }
+.stats { display: flex; flex-wrap: wrap; gap: 8px 22px; font-family: var(--mono); font-size: 13px; color: var(--muted) }
+.stats b { color: var(--ink); font-weight: 500 }
+.controls { display: flex; flex-wrap: wrap; gap: 10px; align-items: center }
+.seg { display: flex; flex-wrap: wrap; gap: 6px }
+.seg button { font: 600 13px/1 var(--body); padding: 8px 12px; border-radius: 999px; border: 1px solid var(--line);
+  background: var(--surface); color: var(--ink); cursor: pointer }
+.seg button[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--bg) }
+.seg button:focus-visible, input:focus-visible, th button:focus-visible, tr.game:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px }
+#q { font: 14px var(--body); padding: 8px 12px; border-radius: 8px; border: 1px solid var(--line); background: var(--surface);
+  color: var(--ink); min-width: 0; flex: 1 1 180px; max-width: 280px }
+.tablebox { overflow-x: auto; background: var(--surface); border: 1px solid var(--line); border-radius: 10px }
+table { border-collapse: collapse; width: 100%; min-width: 960px; font-variant-numeric: tabular-nums }
+th, td { padding: 9px 10px; text-align: right; white-space: nowrap; border-bottom: 1px solid var(--line) }
+th { font: 600 11px/1.2 var(--body); letter-spacing: .08em; text-transform: uppercase; color: var(--muted);
+  position: sticky; top: 0; background: var(--surface); z-index: 1 }
+th button { all: unset; cursor: pointer }
+th button[data-dir]::after { content: attr(data-dir); margin-left: 4px; color: var(--accent) }
+th:first-child, td:first-child { text-align: left; position: sticky; left: 0; background: var(--surface); z-index: 2 }
+td { font-family: var(--mono); font-size: 13px }
+td.game { font-family: var(--body); font-size: 14px; white-space: normal; min-width: 210px }
+td.game .teams { font-weight: 600 }
+td.game .kick { color: var(--muted); font-size: 12px; display: flex; gap: 6px; flex-wrap: wrap; align-items: center }
+tr.game { cursor: pointer }
+tr.game:hover td { background: color-mix(in srgb, var(--chip) 60%, var(--surface)) }
+tr.game.started td { opacity: .55 }
+tr.game.card td:first-child { box-shadow: inset 3px 0 0 var(--side) }
+.pill { display: inline-block; font: 600 11px/1 var(--body); letter-spacing: .06em; text-transform: uppercase;
+  padding: 4px 7px; border-radius: 4px; background: var(--chip); color: var(--muted) }
+.pill.over { background: var(--over-soft); color: var(--over) }
+.pill.under { background: var(--under-soft); color: var(--under) }
+.pill.live { background: transparent; border: 1px solid var(--line) }
+.edge { display: inline-grid; grid-template-columns: 52px 46px; align-items: center; gap: 8px; justify-content: end }
+.bar { position: relative; height: 8px; background: var(--chip); border-radius: 2px }
+.bar::before { content: ""; position: absolute; left: 50%; top: -2px; bottom: -2px; width: 1px; background: var(--muted) }
+.bar i { position: absolute; top: 0; bottom: 0; border-radius: 2px }
+.o { color: var(--over) } .u { color: var(--under) } .dim { color: var(--muted) }
+.agree { font-family: var(--body); font-size: 11px; margin-left: 6px }
+tr.detail td { text-align: left; white-space: normal; background: color-mix(in srgb, var(--chip) 45%, var(--surface)); font-family: var(--body); font-size: 14px }
+tr.detail td:first-child { position: static }
+.dgrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px 24px; padding-block: 6px }
+.dgrid h3 { font: 600 11px/1 var(--body); letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin: 0 0 6px }
+.dgrid p, .dgrid ul { margin: 0; min-width: 0 }
+.dgrid ul { padding-left: 18px }
+.num { font-family: var(--mono); font-size: 13px }
+.empty { padding: 28px; text-align: center; color: var(--muted); font-family: var(--body) }
+footer { color: var(--muted); font-size: 13px; display: grid; gap: 6px; max-width: 80ch }
+footer p { margin: 0 }
+@media (prefers-reduced-motion: no-preference) { tr.game td { transition: background .12s } }
+</style>
+
+<div class="wrap">
+  <header>
+    <div class="eyebrow">College football totals · 2026</div>
+    <h1>Week 6 board</h1>
+    <p class="meta" id="meta"></p>
+    <div class="stats" id="stats"></div>
+  </header>
+
+  <div class="controls">
+    <div class="seg" role="group" aria-label="Show">
+      <button id="f-all" data-f="all" aria-pressed="true">All games</button>
+      <button id="f-card" data-f="card" aria-pressed="false">Card picks</button>
+      <button id="f-edge" data-f="edge" aria-pressed="false">Edge 3+</button>
+      <button id="f-upcoming" data-f="upcoming" aria-pressed="false">Not started</button>
+    </div>
+    <input id="q" type="search" placeholder="Find a team" aria-label="Find a team">
+  </div>
+
+  <div class="tablebox">
+    <table>
+      <thead><tr>
+        <th><button data-k="kick">Game</button></th>
+        <th><button data-k="line">Line</button></th>
+        <th><button data-k="model">Model</button></th>
+        <th><button data-k="absEdge" data-dir="▼">Edge</button></th>
+        <th><button data-k="sp">SP+</button></th>
+        <th><button data-k="injury">Injuries</button></th>
+        <th><button data-k="weather">Wind</button></th>
+        <th><button data-k="spread">Spread</button></th>
+        <th><button data-k="margin">Model margin</button></th>
+      </tr></thead>
+      <tbody id="rows"></tbody>
+    </table>
+  </div>
+
+  <footer>
+    <p id="record"></p>
+    <p><b>Edge</b> is the model total minus the median line across books. The model lists a lean at 3+ points; the card is the 3 biggest over and 3 biggest under edges among Power 4 games (backtest 2023-2025: 114-88, 56.4%). Rows marked with a colored stripe are card picks.</p>
+    <p><b>SP+</b> is what Bill Connelly's SP+ ratings imply, with the same wind correction as the model. Reference only: it isn't used for picks. ✓ means SP+ is on the same side of the line as the model.</p>
+    <p><b>Spread</b> is the home team's line (−10 = home favored by 10); <b>model margin</b> is the projected home winning margin. The model has shown no edge against the spread, so spreads are for reference. Games that have kicked off are dimmed, using your clock. Tap a game for projected score, pace, best lines and key injuries.</p>
+  </footer>
+</div>
+
+<script>
+const DATA = {"games":[{"id":"401858255","kick":"2026-10-10T19:30:00+00:00","kickLabel":"Sat 3:30 PM","away":"Duke","home":"Georgia Tech","neutral":false,"line":43.5,"open":48.75,"books":"Bovada, DraftKings","bestOver":43.5,"bestOverBook":"Bovada, DraftKings","bestUnder":43.5,"bestUnderBook":"Bovada, DraftKings","model":55.1,"awayPts":23.8,"homePts":31.2,"edge":11.6,"pick":"OVER","card":"OVER","enough":true,"sp":55.0,"spMargin":-7.8,"injury":1.1,"weather":-0.6,"matchup":-0.1,"wind":10.8,"gust":20.9,"rain":0.0,"temp":71.4,"dome":false,"playsAway":68.1,"playsHome":63.9,"spread":6.5,"spreadOpen":7.0,"margin":-12.8,"keyInjuries":{"Duke":["Lawrence Gardner (QB, unrated, out)"],"Georgia Tech":["Noah Carter (DE, 4-star, out)","A.J. Hoffler (DE, 4-star, out)"]}},{"id":"401858484","kick":"2026-10-10T19:30:00+00:00","kickLabel":"Sat 3:30 PM","away":"UCLA","home":"Oregon","neutral":false,"line":58.25,"open":60.0,"books":"Bovada, DraftKings","bestOver":58.0,"bestOverBook":"Bovada","bestUnder":58.5,"bestUnderBook":"DraftKings","model":49.3,"awayPts":18.6,"homePts":30.7,"edge":-9.0,"pick":"UNDER","card":"UNDER","enough":true,"sp":64.3,"spMargin":10.3,"injury":-5.4,"weather":0.0,"matchup":-1.7,"wind":4.9,"gust":10.0,"rain":0.0,"temp":56.4,"dome":false,"playsAway":65.5,"playsHome":75.0,"spread":-10.5,"spreadOpen":-12.0,"margin":14.2,"keyInjuries":{"UCLA":["Mikey Matthews (WR, 4-star, out)","Jonah Smith (WR, 4-star, out)"],"Oregon":["Jeremiah McClellan (WR, 4-star, out)","Dante Moore (QB, 5-star, out)","Aaron Flowers (DB, 4-star, doubtful)","Brayden Platt (ILB, 4-star, out)"]}},{"id":"401858258","kick":"2026-10-10T23:30:00+00:00","kickLabel":"Sat 7:30 PM","away":"Syracuse","home":"Virginia","neutral":false,"line":50.5,"open":50.0,"books":"Bovada, DraftKings","bestOver":50.5,"bestOverBook":"Bovada, DraftKings","bestUnder":50.5,"bestUnderBook":"Bovada, DraftKings","model":56.8,"awayPts":19.7,"homePts":37.1,"edge":6.3,"pick":"OVER","card":"OVER","enough":true,"sp":44.5,"spMargin":18.1,"injury":-0.2,"weather":0.0,"matchup":0.5,"wind":4.5,"gust":19.5,"rain":0.0,"temp":66.0,"dome":false,"playsAway":74.4,"playsHome":72.6,"spread":-10.0,"spreadOpen":-9.5,"margin":4.1,"keyInjuries":{"Virginia":["Omillio Agard (CB, 4-star, doubtful)","Devon Baxter (DE, 4-star, out)"]}},{"id":"401858480","kick":"2026-10-10T19:30:00+00:00","kickLabel":"Sat 3:30 PM","away":"Illinois","home":"Michigan State","neutral":false,"line":47.75,"open":48.75,"books":"Bovada, DraftKings","bestOver":47.5,"bestOverBook":"DraftKings","bestUnder":48.0,"bestUnderBook":"Bovada","model":53.4,"awayPts":19.4,"homePts":34.1,"edge":5.7,"pick":"OVER","card":"OVER","enough":true,"sp":57.4,"spMargin":-5.7,"injury":0.3,"weather":-0.6,"matchup":-1.5,"wind":10.8,"gust":21.0,"rain":0.0,"temp":75.8,"dome":false,"playsAway":58.9,"playsHome":66.1,"spread":2.5,"spreadOpen":3.0,"margin":-2.9,"keyInjuries":{"Illinois":["Ca'Lil Valentine (RB, 4-star, out)","Kai Pritchard (OL, 4-star, doubtful)"],"Michigan State":["Joe Caudill (TE, 4-star, out)"]}},{"id":"401856824","kick":"2026-10-10T16:00:00+00:00","kickLabel":"Sat 12:00 PM","away":"UCF","home":"Oklahoma State","neutral":false,"line":53.5,"open":53.25,"books":"Bovada, DraftKings","bestOver":53.5,"bestOverBook":"Bovada, DraftKings","bestUnder":53.5,"bestUnderBook":"Bovada, DraftKings","model":48.0,"awayPts":13.1,"homePts":35.0,"edge":-5.5,"pick":"UNDER","card":"UNDER","enough":true,"sp":46.3,"spMargin":4.0,"injury":-1.3,"weather":-1.0,"matchup":2.4,"wind":11.3,"gust":18.4,"rain":0.0,"temp":85.5,"dome":false,"playsAway":61.3,"playsHome":78.8,"spread":-10.25,"spreadOpen":-10.0,"margin":5.7,"keyInjuries":{"UCF":["Alonza Barnett III (QB, 3-star, out)","Dante Carr (QB, 3-star, out)","Lewis Carter (LB, 4-star, out)"]}},{"id":"401856715","kick":"2026-10-10T23:00:00+00:00","kickLabel":"Sat 7:00 PM","away":"LSU","home":"Kentucky","neutral":false,"line":50.5,"open":52.5,"books":"Bovada, DraftKings","bestOver":50.5,"bestOverBook":"Bovada, DraftKings","bestUnder":50.5,"bestUnderBook":"Bovada, DraftKings","model":45.1,"awayPts":18.3,"homePts":26.8,"edge":-5.4,"pick":"UNDER","card":"UNDER","enough":true,"sp":43.1,"spMargin":-10.8,"injury":0.5,"weather":-6.6,"matchup":-3.0,"wind":18.8,"gust":40.8,"rain":0.03,"temp":56.8,"dome":false,"playsAway":87.6,"playsHome":59.9,"spread":8.5,"spreadOpen":10.25,"margin":-8.2,"keyInjuries":{"LSU":["Trey'Dez Green (TE, 4-star, out)","Whit Weeks (LB, 4-star, out)","Dashawn Spears (S, 4-star, out)","Phillip Wright III (WR, 4-star, out)","Charles Ross II (LB, 4-star, out)"],"Kentucky":["Alex Afari Jr. (ILB, 4-star, out)","Jaden Smith (DB, 4-star, out)","Tavion Wallace (ILB, 4-star, out)","Kalen Edwards (DL, 4-star, doubtful)"]}},{"id":"401856827","kick":"2026-10-11T02:15:00+00:00","kickLabel":"Sat 10:15 PM","away":"Kansas","home":"Utah","neutral":false,"line":51.25,"open":51.75,"books":"Bovada, DraftKings","bestOver":51.0,"bestOverBook":"Bovada","bestUnder":51.5,"bestUnderBook":"DraftKings","model":46.3,"awayPts":13.1,"homePts":33.2,"edge":-4.9,"pick":"UNDER","card":null,"enough":true,"sp":49.9,"spMargin":23.0,"injury":-1.2,"weather":-2.4,"matchup":-2.7,"wind":13.2,"gust":28.4,"rain":0.04,"temp":65.9,"dome":false,"playsAway":74.3,"playsHome":62.9,"spread":-15.75,"spreadOpen":-15.5,"margin":12.0,"keyInjuries":{"Kansas":["Cole Ballard (QB, unrated, out)"],"Utah":["Isaiah Garcia (OL, 4-star, out)"]}},{"id":"401858487","kick":"2026-10-10T01:00:00+00:00","kickLabel":"Fri 9:00 PM","away":"Iowa","home":"Washington","neutral":false,"line":41.25,"open":42.0,"books":"Bovada, DraftKings","bestOver":41.0,"bestOverBook":"Bovada","bestUnder":41.5,"bestUnderBook":"DraftKings","model":45.4,"awayPts":15.1,"homePts":30.3,"edge":4.1,"pick":"OVER","card":null,"enough":true,"sp":38.4,"spMargin":-0.2,"injury":-0.6,"weather":0.0,"matchup":0.9,"wind":6.1,"gust":12.0,"rain":0.02,"temp":51.0,"dome":false,"playsAway":63.4,"playsHome":60.6,"spread":-3.0,"spreadOpen":-2.0,"margin":2.1,"keyInjuries":{"Iowa":["Carson Cooney (LB, 4-star, out)"],"Washington":["Jayden Limar (RB, 4-star, out)","Jeron Jones (CB, 4-star, out)"]}},{"id":"401858482","kick":"2026-10-10T16:30:00+00:00","kickLabel":"Sat 12:30 PM","away":"Ball State","home":"Northwestern","neutral":false,"line":53.0,"open":52.75,"books":"Bovada, DraftKings","bestOver":52.5,"bestOverBook":"Bovada","bestUnder":53.5,"bestUnderBook":"DraftKings","model":57.1,"awayPts":17.4,"homePts":39.7,"edge":4.1,"pick":"OVER","card":null,"enough":true,"sp":45.2,"spMargin":34.8,"injury":0.0,"weather":-1.7,"matchup":-0.6,"wind":12.3,"gust":20.6,"rain":0.0,"temp":77.2,"dome":false,"playsAway":69.7,"playsHome":66.9,"spread":-35.75,"spreadOpen":-36.25,"margin":43.7,"keyInjuries":{}},{"id":"401858483","kick":"2026-10-10T20:15:00+00:00","kickLabel":"Sat 4:15 PM","away":"Maryland","home":"Ohio State","neutral":false,"line":56.5,"open":56.25,"books":"Bovada, DraftKings","bestOver":56.5,"bestOverBook":"Bovada, DraftKings","bestUnder":56.5,"bestUnderBook":"Bovada, DraftKings","model":52.5,"awayPts":14.4,"homePts":38.1,"edge":-4.0,"pick":"UNDER","card":null,"enough":true,"sp":54.7,"spMargin":27.4,"injury":0.7,"weather":0.0,"matchup":-3.0,"wind":8.3,"gust":16.6,"rain":0.0,"temp":72.5,"dome":false,"playsAway":74.7,"playsHome":63.0,"spread":-33.0,"spreadOpen":-34.75,"margin":27.3,"keyInjuries":{"Maryland":["Zahir Mathis (LB, 4-star, out)","Harry Dalton III (RB, 4-star, out)"]}},{"id":"401858254","kick":"2026-10-09T23:00:00+00:00","kickLabel":"Fri 7:00 PM","away":"Florida State","home":"Louisville","neutral":false,"line":60.5,"open":58.5,"books":"Bovada, DraftKings","bestOver":60.5,"bestOverBook":"Bovada, DraftKings","bestUnder":60.5,"bestUnderBook":"Bovada, DraftKings","model":64.5,"awayPts":24.2,"homePts":40.3,"edge":4.0,"pick":"OVER","card":null,"enough":true,"sp":67.0,"spMargin":6.7,"injury":-1.1,"weather":0.0,"matchup":-0.1,"wind":6.2,"gust":13.7,"rain":0.0,"temp":71.6,"dome":false,"playsAway":71.1,"playsHome":69.4,"spread":-4.25,"spreadOpen":-4.75,"margin":11.5,"keyInjuries":{"Florida State":["Samuel Singleton Jr. (RB, 4-star, out)","Devin Carter (WR, 4-star, out)","Jamari Howard (DB, 4-star, out)","Blake Nichelson (LB, 4-star, out)","Zae Thomas (DB, 4-star, out)","Izayia Williams (LB, 4-star, out)"]}},{"id":"401856717","kick":"2026-10-10T19:30:00+00:00","kickLabel":"Sat 3:30 PM","away":"Texas","home":"Oklahoma","neutral":true,"line":39.25,"open":44.25,"books":"Bovada, DraftKings","bestOver":39.0,"bestOverBook":"Bovada","bestUnder":39.5,"bestUnderBook":"DraftKings","model":43.0,"awayPts":20.6,"homePts":22.3,"edge":3.7,"pick":"OVER","card":null,"enough":true,"sp":36.3,"spMargin":-9.6,"injury":-0.3,"weather":0.0,"matchup":2.4,"wind":9.1,"gust":12.2,"rain":0.0,"temp":87.3,"dome":false,"playsAway":60.7,"playsHome":64.1,"spread":7.5,"spreadOpen":7.0,"margin":-11.5,"keyInjuries":{"Texas":["Kaliq Lockett (WR, 5-star, out)","Zion Williams (DL, 4-star, out)"],"Oklahoma":["Trynae Washington (TE, 4-star, doubtful)","Jacobe Johnson (DB, 4-star, out)","Michael Fasusi (OL, 5-star, doubtful)"]}},{"id":"401858259","kick":"2026-10-10T19:30:00+00:00","kickLabel":"Sat 3:30 PM","away":"Virginia Tech","home":"California","neutral":false,"line":53.25,"open":53.25,"books":"Bovada, DraftKings","bestOver":53.0,"bestOverBook":"Bovada","bestUnder":53.5,"bestUnderBook":"DraftKings","model":49.8,"awayPts":21.1,"homePts":28.7,"edge":-3.5,"pick":"UNDER","card":null,"enough":true,"sp":47.8,"spMargin":-13.0,"injury":-0.1,"weather":-2.6,"matchup":-1.3,"wind":13.4,"gust":18.6,"rain":0.0,"temp":61.8,"dome":false,"playsAway":75.6,"playsHome":68.1,"spread":10.0,"spreadOpen":9.5,"margin":-24.9,"keyInjuries":{}},{"id":"401858257","kick":"2026-10-10T19:30:00+00:00","kickLabel":"Sat 3:30 PM","away":"Stanford","home":"Notre Dame","neutral":false,"line":54.5,"open":54.0,"books":"Bovada, DraftKings","bestOver":54.5,"bestOverBook":"Bovada, DraftKings","bestUnder":54.5,"bestUnderBook":"Bovada, DraftKings","model":57.2,"awayPts":14.2,"homePts":42.9,"edge":2.7,"pick":"OVER","card":null,"enough":true,"sp":53.1,"spMargin":39.0,"injury":0.0,"weather":0.0,"matchup":-2.4,"wind":10.0,"gust":21.0,"rain":0.0,"temp":76.5,"dome":false,"playsAway":59.4,"playsHome":65.7,"spread":-39.5,"spreadOpen":-38.25,"margin":46.8,"keyInjuries":{}},{"id":"401856714","kick":"2026-10-10T16:45:00+00:00","kickLabel":"Sat 12:45 PM","away":"South Carolina","home":"Florida","neutral":false,"line":58.5,"open":59.25,"books":"Bovada, DraftKings","bestOver":58.5,"bestOverBook":"Bovada, DraftKings","bestUnder":58.5,"bestUnderBook":"Bovada, DraftKings","model":61.2,"awayPts":22.1,"homePts":39.1,"edge":2.7,"pick":"OVER","card":null,"enough":true,"sp":61.4,"spMargin":13.5,"injury":0.2,"weather":-0.9,"matchup":0.1,"wind":11.2,"gust":20.6,"rain":0.0,"temp":84.0,"dome":false,"playsAway":83.4,"playsHome":62.2,"spread":-11.0,"spreadOpen":-14.25,"margin":14.2,"keyInjuries":{"South Carolina":["Jalewis Solomon (DB, 4-star, out)","Julian Walker (EDG, 4-star, doubtful)","Josiah Thompson (OL, 5-star, out)","Gabriel Brownlow-Dindy (DL, 5-star, doubtful)"]}},{"id":"401856826","kick":"2026-10-10T02:15:00+00:00","kickLabel":"Fri 10:15 PM","away":"Iowa State","home":"BYU","neutral":false,"line":46.75,"open":49.0,"books":"Bovada, DraftKings","bestOver":46.5,"bestOverBook":"DraftKings","bestUnder":47.0,"bestUnderBook":"Bovada","model":49.1,"awayPts":16.2,"homePts":32.9,"edge":2.4,"pick":"OVER","card":null,"enough":true,"sp":45.7,"spMargin":15.4,"injury":-0.1,"weather":0.0,"matchup":-0.5,"wind":7.8,"gust":11.6,"rain":0.0,"temp":71.6,"dome":false,"playsAway":58.2,"playsHome":56.8,"spread":-11.5,"spreadOpen":-12.75,"margin":22.4,"keyInjuries":{}},{"id":"401856825","kick":"2026-10-10T19:30:00+00:00","kickLabel":"Sat 3:30 PM","away":"Houston","home":"Kansas State","neutral":false,"line":55.25,"open":55.75,"books":"Bovada, DraftKings","bestOver":55.0,"bestOverBook":"Bovada","bestUnder":55.5,"bestUnderBook":"DraftKings","model":53.0,"awayPts":18.7,"homePts":34.4,"edge":-2.2,"pick":"UNDER","card":null,"enough":true,"sp":60.0,"spMargin":4.4,"injury":0.1,"weather":-4.0,"matchup":-0.7,"wind":15.3,"gust":27.3,"rain":0.0,"temp":86.3,"dome":false,"playsAway":60.8,"playsHome":66.0,"spread":-2.5,"spreadOpen":-2.5,"margin":-6.2,"keyInjuries":{"Kansas State":["Blake Barnett (QB, 3-star, out)"]}},{"id":"401858256","kick":"2026-10-10T16:00:00+00:00","kickLabel":"Sat 12:00 PM","away":"North Carolina","home":"Pittsburgh","neutral":false,"line":47.25,"open":47.25,"books":"Bovada, DraftKings","bestOver":47.0,"bestOverBook":"Bovada","bestUnder":47.5,"bestUnderBook":"DraftKings","model":49.2,"awayPts":16.6,"homePts":32.6,"edge":2.0,"pick":"OVER","card":null,"enough":true,"sp":41.8,"spMargin":14.2,"injury":-4.7,"weather":0.0,"matchup":1.9,"wind":9.9,"gust":16.5,"rain":0.0,"temp":72.6,"dome":false,"playsAway":59.3,"playsHome":70.5,"spread":-3.75,"spreadOpen":-3.75,"margin":4.0,"keyInjuries":{"North Carolina":["Jakob Weatherspoon (DB, 4-star, out)","Jordan Washington (TE, 4-star, out)","Keeyun Chapman (WR, 4-star, out)","Vodney Cleveland (DL, 4-star, out)"],"Pittsburgh":["Mason Heintschel (QB, 3-star, out)","Rodney Dunbar (WR, 4-star, out)"]}},{"id":"401856808","kick":"2026-10-11T02:30:00+00:00","kickLabel":"Sat 10:30 PM","away":"Hawai'i","home":"Arizona State","neutral":false,"line":50.5,"open":50.75,"books":"Bovada, DraftKings","bestOver":50.5,"bestOverBook":"Bovada, DraftKings","bestUnder":50.5,"bestUnderBook":"Bovada, DraftKings","model":52.5,"awayPts":17.3,"homePts":35.3,"edge":2.0,"pick":"OVER","card":null,"enough":true,"sp":48.4,"spMargin":17.7,"injury":0.0,"weather":0.0,"matchup":-0.5,"wind":4.8,"gust":12.6,"rain":0.0,"temp":71.9,"dome":false,"playsAway":72.9,"playsHome":69.2,"spread":-21.0,"spreadOpen":-21.25,"margin":16.1,"keyInjuries":{}},{"id":"401858486","kick":"2026-10-11T00:00:00+00:00","kickLabel":"Sat 8:00 PM","away":"Minnesota","home":"Purdue","neutral":false,"line":49.75,"open":51.0,"books":"Bovada, DraftKings","bestOver":49.5,"bestOverBook":"DraftKings","bestUnder":50.0,"bestUnderBook":"Bovada","model":51.6,"awayPts":18.0,"homePts":33.6,"edge":1.9,"pick":"OVER","card":null,"enough":true,"sp":59.6,"spMargin":-10.4,"injury":-0.1,"weather":0.0,"matchup":0.0,"wind":6.1,"gust":17.2,"rain":0.0,"temp":68.0,"dome":false,"playsAway":60.5,"playsHome":60.1,"spread":2.75,"spreadOpen":2.25,"margin":8.1,"keyInjuries":{"Minnesota":["Michael Merdinger (QB, 3-star, out)","Ryan Estrada (RB, 4-star, out)"],"Purdue":["Kylan Fox (TE, 4-star, out)"]}},{"id":"401856823","kick":"2026-10-10T16:00:00+00:00","kickLabel":"Sat 12:00 PM","away":"Arizona","home":"West Virginia","neutral":false,"line":60.5,"open":60.75,"books":"Bovada, DraftKings","bestOver":60.5,"bestOverBook":"Bovada, DraftKings","bestUnder":60.5,"bestUnderBook":"Bovada, DraftKings","model":61.9,"awayPts":23.8,"homePts":38.0,"edge":1.4,"pick":"OVER","card":null,"enough":true,"sp":60.3,"spMargin":-6.8,"injury":-0.9,"weather":-0.1,"matchup":0.6,"wind":10.1,"gust":22.2,"rain":0.0,"temp":72.4,"dome":false,"playsAway":68.9,"playsHome":74.0,"spread":3.5,"spreadOpen":3.0,"margin":-8.5,"keyInjuries":{}},{"id":"401858485","kick":"2026-10-10T23:30:00+00:00","kickLabel":"Sat 7:30 PM","away":"USC","home":"Penn State","neutral":false,"line":54.5,"open":56.25,"books":"Bovada, DraftKings","bestOver":54.5,"bestOverBook":"Bovada, DraftKings","bestUnder":54.5,"bestUnderBook":"Bovada, DraftKings","model":55.8,"awayPts":20.2,"homePts":35.6,"edge":1.3,"pick":"OVER","card":null,"enough":true,"sp":61.3,"spMargin":1.6,"injury":-1.1,"weather":0.0,"matchup":0.0,"wind":3.0,"gust":5.2,"rain":0.0,"temp":56.2,"dome":false,"playsAway":63.7,"playsHome":62.1,"spread":-1.75,"spreadOpen":-0.25,"margin":8.2,"keyInjuries":{"USC":["Corey Simms (WR, 4-star, out)","Kendarius Reddick (S, 4-star, out)"],"Penn State":["Koby Howard (WR, 4-star, out)","LaVar Arrington II (DE, 4-star, out)","Max Granville (DE, 4-star, out)","Cam Smith (LB, 4-star, out)","Dayshaun Burnett (DE, 4-star, out)"]}},{"id":"401856718","kick":"2026-10-10T19:30:00+00:00","kickLabel":"Sat 3:30 PM","away":"Ole Miss","home":"Vanderbilt","neutral":false,"line":54.5,"open":58.75,"books":"Bovada, DraftKings","bestOver":54.5,"bestOverBook":"Bovada, DraftKings","bestUnder":54.5,"bestUnderBook":"Bovada, DraftKings","model":53.7,"awayPts":19.6,"homePts":34.1,"edge":-0.8,"pick":"UNDER","card":null,"enough":true,"sp":60.3,"spMargin":-1.1,"injury":-0.7,"weather":-3.2,"matchup":0.2,"wind":14.3,"gust":33.9,"rain":0.1,"temp":61.8,"dome":false,"playsAway":72.5,"playsHome":63.9,"spread":9.25,"spreadOpen":10.0,"margin":-2.0,"keyInjuries":{"Ole Miss":["Craig Tutt (S, 4-star, out)"],"Vanderbilt":["Aaron Bryant (DL, 4-star, out)","Mitchell Smith (OL, 4-star, doubtful)"]}},{"id":"401856713","kick":"2026-10-10T20:15:00+00:00","kickLabel":"Sat 4:15 PM","away":"Tennessee","home":"Arkansas","neutral":false,"line":51.5,"open":50.75,"books":"Bovada, DraftKings","bestOver":51.5,"bestOverBook":"Bovada, DraftKings","bestUnder":51.5,"bestUnderBook":"Bovada, DraftKings","model":50.8,"awayPts":21.8,"homePts":29.0,"edge":-0.7,"pick":"UNDER","card":null,"enough":true,"sp":60.2,"spMargin":-15.5,"injury":-0.9,"weather":0.0,"matchup":1.9,"wind":5.2,"gust":6.2,"rain":0.0,"temp":86.7,"dome":false,"playsAway":62.8,"playsHome":66.8,"spread":13.5,"spreadOpen":13.5,"margin":-24.7,"keyInjuries":{"Tennessee":["Ethan Davis (TE, 4-star, out)","Jaedon Harmon (LB, 4-star, out)","Kedric Golston II (DL, 4-star, out)"]}},{"id":"401856712","kick":"2026-10-10T23:30:00+00:00","kickLabel":"Sat 7:30 PM","away":"Georgia","home":"Alabama","neutral":false,"line":51.5,"open":53.0,"books":"Bovada, DraftKings","bestOver":51.5,"bestOverBook":"Bovada, DraftKings","bestUnder":51.5,"bestUnderBook":"Bovada, DraftKings","model":52.0,"awayPts":16.9,"homePts":35.1,"edge":0.5,"pick":"OVER","card":null,"enough":true,"sp":56.9,"spMargin":-4.7,"injury":-0.5,"weather":0.0,"matchup":-0.7,"wind":4.1,"gust":7.2,"rain":0.09,"temp":63.1,"dome":false,"playsAway":61.2,"playsHome":60.5,"spread":-2.0,"spreadOpen":2.0,"margin":10.9,"keyInjuries":{"Georgia":["Thomas Blackshear (WR, 4-star, out)","Chauncey Bowens (RB, 4-star, out)","Amaris Williams (OLB, 4-star, out)","Tyriq Green (S, 4-star, out)","Marcus Harrison (OL, 4-star, out)"],"Alabama":["Justin Hill (LB, 4-star, out)","Desmond Umeozulu (LB, 4-star, out)","Cayden Jones (LB, 4-star, out)","Jeremiah Beaman (DL, 4-star, out)"]}},{"id":"401858481","kick":"2026-10-10T16:00:00+00:00","kickLabel":"Sat 12:00 PM","away":"Indiana","home":"Nebraska","neutral":false,"line":47.75,"open":51.0,"books":"Bovada, DraftKings","bestOver":47.5,"bestOverBook":"DraftKings","bestUnder":48.0,"bestUnderBook":"Bovada","model":48.1,"awayPts":15.9,"homePts":32.2,"edge":0.3,"pick":"OVER","card":null,"enough":true,"sp":49.8,"spMargin":-7.5,"injury":0.0,"weather":-5.0,"matchup":-1.6,"wind":16.7,"gust":33.4,"rain":0.0,"temp":82.0,"dome":false,"playsAway":59.3,"playsHome":62.1,"spread":7.75,"spreadOpen":9.0,"margin":-1.2,"keyInjuries":{}},{"id":"401858260","kick":"2026-10-10T16:00:00+00:00","kickLabel":"Sat 12:00 PM","away":"Wake Forest","home":"NC State","neutral":false,"line":58.5,"open":59.75,"books":"Bovada, DraftKings","bestOver":58.5,"bestOverBook":"Bovada, DraftKings","bestUnder":58.5,"bestUnderBook":"Bovada, DraftKings","model":58.2,"awayPts":23.3,"homePts":34.9,"edge":-0.3,"pick":"UNDER","card":null,"enough":true,"sp":59.0,"spMargin":2.2,"injury":-0.1,"weather":-2.4,"matchup":-1.9,"wind":13.2,"gust":28.9,"rain":0.03,"temp":72.1,"dome":false,"playsAway":63.8,"playsHome":71.7,"spread":3.0,"spreadOpen":3.75,"margin":-9.0,"keyInjuries":{"NC State":["Vander Ploog (TE, 4-star, out)","Isaiah Crowell (NCK, 4-star, out)","Yousef Mugharbil (OL, 4-star, out)","Spike Sowells Jr. (OL, 4-star, out)"]}},{"id":"401856716","kick":"2026-10-10T16:00:00+00:00","kickLabel":"Sat 12:00 PM","away":"Texas A&M","home":"Missouri","neutral":false,"line":49.5,"open":49.25,"books":"Bovada, DraftKings","bestOver":49.5,"bestOverBook":"Bovada, DraftKings","bestUnder":49.5,"bestUnderBook":"Bovada, DraftKings","model":49.3,"awayPts":15.5,"homePts":33.8,"edge":-0.2,"pick":"UNDER","card":null,"enough":true,"sp":49.7,"spMargin":7.3,"injury":0.2,"weather":0.0,"matchup":0.3,"wind":6.1,"gust":11.4,"rain":0.0,"temp":83.7,"dome":false,"playsAway":69.1,"playsHome":61.6,"spread":-3.5,"spreadOpen":-3.25,"margin":19.8,"keyInjuries":{"Texas A&M":["Terry Bussey (WR, 5-star, out)","Blake Ivy (OL, 4-star, out)"],"Missouri":["JaDon Blair (S, 4-star, out)","Gavin Hoffman (TE, 4-star, out)"]}}],"week":6,"year":2026,"generated":"Fri Oct 9, 6:52 PM ET","record":["Track record (6 picks): 2-4-0 at the best line (33.3%); average closing line value +0.25 pts, beat the close on 3 of 6. Positive CLV over a full season is the best early sign the edge is real."]};
+const $ = s => document.querySelector(s);
+const fmt = (v, d = 1) => v == null ? "–" : Number(v).toFixed(d);
+const sgn = (v, d = 1) => v == null ? "–" : (v > 0 ? "+" : v < 0 ? "−" : "") + Math.abs(v).toFixed(d);
+const line = v => v == null ? "–" : String(v);
+const pm = v => v == null ? "–" : (v > 0 ? "+" : v < 0 ? "−" : "") + Math.abs(v);
+const state = { f: "all", q: "", k: "absEdge", dir: -1, open: new Set() };
+const games = DATA.games.map(g => ({ ...g, absEdge: Math.abs(g.edge), started: Date.now() >= Date.parse(g.kick) }));
+
+$("#meta").textContent = `Lines, forecasts and injury reports as of ${DATA.generated}. Projected totals for every Power 4 game with a posted total.`;
+const leans = games.filter(g => g.enough && g.absEdge >= 3).length;
+const cardN = games.filter(g => g.card).length;
+$("#stats").innerHTML = `<span><b>${games.length}</b> games</span><span><b>${cardN}</b> card picks</span><span><b>${leans}</b> with edge 3+</span><span><b>${games.filter(g => !g.started).length}</b> not started</span>`;
+$("#record").textContent = (DATA.record || []).join(" ");
+
+function edgeCell(g) {
+  const max = 12, w = Math.min(Math.abs(g.edge), max) / max * 50;
+  const col = g.edge > 0 ? "var(--over)" : "var(--under)";
+  const pos = g.edge > 0 ? `left:50%;width:${w}%` : `right:50%;width:${w}%`;
+  return `<span class="edge"><span class="bar"><i style="${pos};background:${col}"></i></span><span class="${g.edge > 0 ? "o" : "u"}">${sgn(g.edge)}</span></span>`;
+}
+function spCell(g) {
+  if (g.sp == null) return `<span class="dim">–</span>`;
+  const agree = (g.sp - g.line > 0) === (g.edge > 0);
+  return `${fmt(g.sp)}<span class="agree ${agree ? "" : "dim"}" title="${agree ? "SP+ agrees with the model's side" : "SP+ is on the other side of the line"}">${agree ? "✓" : "✗"}</span>`;
+}
+function kickCell(g) {
+  const tags = [];
+  if (g.card) tags.push(`<span class="pill ${g.card === "OVER" ? "over" : "under"}">Card ${g.card.toLowerCase()}</span>`);
+  if (g.started) tags.push(`<span class="pill live">Started</span>`);
+  if (!g.enough) tags.push(`<span class="pill">Thin data</span>`);
+  return `<div class="teams">${g.away} ${g.neutral ? "vs" : "@"} ${g.home}</div><div class="kick">${g.kickLabel} ET ${tags.join("")}</div>`;
+}
+function lineCell(g) {
+  const moved = g.open != null && g.open !== g.line ? `<div class="dim" style="font-size:11px">opened ${line(g.open)}</div>` : "";
+  return `${line(g.line)}${moved}`;
+}
+function detail(g) {
+  const wx = g.dome ? "Dome" : g.wind == null ? "No forecast" :
+    `Wind ${fmt(g.wind, 0)} mph${g.gust ? ` (gusts ${fmt(g.gust, 0)})` : ""}${g.rain ? `, rain ${fmt(g.rain, 2)} in` : ""}${g.temp != null ? `, ${fmt(g.temp, 0)}°F` : ""}`;
+  const best = [];
+  if (g.bestOver != null) best.push(`Over: ${line(g.bestOver)}${g.bestOverBook ? ` (${g.bestOverBook})` : ""}`);
+  if (g.bestUnder != null) best.push(`Under: ${line(g.bestUnder)}${g.bestUnderBook ? ` (${g.bestUnderBook})` : ""}`);
+  const inj = Object.entries(g.keyInjuries || {}).map(([t, ps]) => `<li><b>${t}:</b> ${ps.join("; ")}</li>`).join("");
+  const adj = [`injuries ${sgn(g.injury)}`, `run/pass matchup ${sgn(g.matchup)}`, `wind ${sgn(g.weather)}`].join(", ");
+  return `<div class="dgrid">
+    <div><h3>Projected score</h3><p class="num">${g.away} ${fmt(g.awayPts)} · ${g.home} ${fmt(g.homePts)}</p><p class="dim" style="font-size:13px">Adjustments in the total: ${adj}</p></div>
+    <div><h3>Pace</h3><p class="num">${g.away} ${fmt(g.playsAway, 0)} plays · ${g.home} ${fmt(g.playsHome, 0)} plays</p></div>
+    <div><h3>Weather</h3><p>${wx}</p></div>
+    <div><h3>Best lines</h3><p class="num">${best.join(" · ") || "–"}</p><p class="dim" style="font-size:13px">Books: ${g.books || "–"}</p></div>
+    <div><h3>Spread</h3><p class="num">Line ${pm(g.spread)}${g.spreadOpen != null && g.spreadOpen !== g.spread ? ` (opened ${pm(g.spreadOpen)})` : ""} · model ${sgn(g.margin)} · SP+ ${g.spMargin == null ? "–" : sgn(g.spMargin)}</p></div>
+    <div><h3>Key injuries</h3>${inj ? `<ul>${inj}</ul>` : `<p class="dim">None listed (QBs and 4-5 star recruits out, doubtful or game-time)</p>`}</div>
+  </div>`;
+}
+function render() {
+  let list = games.filter(g =>
+    (state.f === "all") || (state.f === "card" && g.card) || (state.f === "edge" && g.enough && g.absEdge >= 3) ||
+    (state.f === "upcoming" && !g.started));
+  const q = state.q.trim().toLowerCase();
+  if (q) list = list.filter(g => (g.away + " " + g.home).toLowerCase().includes(q));
+  const key = state.k;
+  list.sort((a, b) => {
+    const va = key === "kick" ? Date.parse(a.kick) : a[key], vb = key === "kick" ? Date.parse(b.kick) : b[key];
+    if (va == null) return 1; if (vb == null) return -1;
+    return (va - vb) * state.dir || Date.parse(a.kick) - Date.parse(b.kick);
+  });
+  if (!list.length) { $("#rows").innerHTML = `<tr><td colspan="9" class="empty">No games match. Clear the search or pick another filter.</td></tr>`; return; }
+  $("#rows").innerHTML = list.map(g => {
+    const cls = ["game", g.card ? "card" : "", g.started ? "started" : ""].join(" ");
+    const side = g.card === "OVER" ? "var(--over)" : "var(--under)";
+    const row = `<tr class="${cls}" data-id="${g.id}" tabindex="0" aria-expanded="${state.open.has(g.id)}" style="--side:${side}">
+      <td class="game">${kickCell(g)}</td><td>${lineCell(g)}</td><td>${fmt(g.model)}</td><td>${edgeCell(g)}</td>
+      <td>${spCell(g)}</td><td>${g.injury ? sgn(g.injury) : '<span class="dim">–</span>'}</td>
+      <td>${g.dome ? '<span class="dim">dome</span>' : g.weather ? sgn(g.weather) : '<span class="dim">–</span>'}</td>
+      <td>${pm(g.spread)}</td><td>${sgn(g.margin)}</td></tr>`;
+    return row + (state.open.has(g.id) ? `<tr class="detail"><td colspan="9">${detail(g)}</td></tr>` : "");
+  }).join("");
+}
+document.querySelectorAll(".seg button").forEach(b => b.addEventListener("click", () => {
+  state.f = b.dataset.f;
+  document.querySelectorAll(".seg button").forEach(x => x.setAttribute("aria-pressed", String(x === b)));
+  try { localStorage.setItem("board-filter", state.f); } catch (e) {}
+  render();
+}));
+document.querySelectorAll("th button").forEach(b => b.addEventListener("click", () => {
+  const k = b.dataset.k;
+  state.dir = state.k === k ? -state.dir : (k === "kick" ? 1 : -1);
+  state.k = k;
+  document.querySelectorAll("th button").forEach(x => x.removeAttribute("data-dir"));
+  b.setAttribute("data-dir", state.dir > 0 ? "▲" : "▼");
+  render();
+}));
+$("#q").addEventListener("input", e => { state.q = e.target.value; render(); });
+function toggle(tr) { const id = tr.dataset.id; state.open.has(id) ? state.open.delete(id) : state.open.add(id); render(); }
+$("#rows").addEventListener("click", e => { const tr = e.target.closest("tr.game"); if (tr) toggle(tr); });
+$("#rows").addEventListener("keydown", e => {
+  const tr = e.target.closest("tr.game");
+  if (tr && (e.key === "Enter" || e.key === " ")) { e.preventDefault(); toggle(tr); document.querySelector(`tr.game[data-id="${tr.dataset.id}"]`)?.focus(); }
+});
+try { const f = localStorage.getItem("board-filter"); if (f) document.querySelector(`.seg button[data-f="${f}"]`)?.click(); } catch (e) {}
+render();
+</script>
