@@ -235,8 +235,11 @@ def main(argv=None):
     try:  # schedule spots across all games with a spread (1 API call for the AP poll)
         found = spots.find_spots(games, spots.ap_polls(client, args.year), week, all_rows)
         prev = spots.previous_games(games, all_rows)  # recency spots: last game vs its closing line
-        prev_lines = spots.closing_lines(client, args.year, {pg["week"] for pg in prev.values()}, week)
-        found = spots.dedupe(found + spots.find_recency(games, all_rows, prev, prev_lines))
+        # Every finished week's closing lines (season over/under records; also covers last games).
+        past = spots.closing_lines(client, args.year, {g["week"] for g in games
+                                                       if g.get("completed") and g["week"] < week}, week)
+        found = spots.dedupe(found + spots.find_recency(games, all_rows, prev, past)
+                             + spots.find_season_records(games, all_rows, past, week))
         spot_log = spots.log_path(out_dir)
         spots.update_log(spot_log, client, args.year, games)
         spot_lines = spots.card_section(found, all_rows, spots.log_spots(spot_log, found, week))

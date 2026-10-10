@@ -74,6 +74,19 @@ class SpotsTests(unittest.TestCase):
         r = spots.update_log(path, Client(), 2026, games)[0]
         self.assertEqual((r["result"], float(r["clv"])), ("W", 1.5))
 
+    def test_over_teams(self):
+        games = [g(20 + i, i, "A", f"O{i}", 40, 30) for i in range(1, 5)]  # A: 4 overs (70 vs 50)
+        games += [g(30 + i, i, f"P{i}", "C", 35, 30) for i in range(1, 5)]  # C: 4 overs
+        games += [g(40, 5, "A", "C")]
+        lines = {x["id"]: (None, 50.0) for x in games}
+        rows = [{"game_id": "40", "home": "A", "away": "C", "market_spread": "", "market_total": "60"}]
+        found = spots.find_season_records(games, rows, lines, 5)
+        self.assertEqual([(s["spot"], s["bet_team"], s["line"]) for s in found], [("over teams", "UNDER", 60.0)])
+        both = spots.dedupe(found + [dict(found[0], spot="over run", bet_team="OVER")])
+        self.assertEqual(len(both), 2)  # disagreeing totals spots are both kept
+        md = "\n".join(spots.card_section(both, rows, []))
+        self.assertIn("no lean", md)
+
 
 if __name__ == "__main__":
     unittest.main()

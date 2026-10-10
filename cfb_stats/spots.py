@@ -13,6 +13,10 @@ Recency spots (each team's previous game against its closing line):
   over run:        both teams' last games went over by 10+     -> over
   under run:       both teams' last games went under by 10+    -> under
 
+Season record spot (over/under records against closing totals, 4+ graded games each):
+
+  over teams:      both teams have gone over in 65%+ of games  -> under
+
 All beat the closing line in 2023-2025 on small samples found after trying several versions
 (scripts/spots_backtest.py, scripts/recency_backtest.py, BACKTEST.md). Every card run logs this
 week's spots to data/<year>/spots_log.csv; later runs grade them against the closing line and the
@@ -27,9 +31,10 @@ from collections import defaultdict
 
 # name -> 2023-2025 record against the closing line, as flagged here
 SPOTS = {"bounce-back": "122-103", "sandwich": "70-53", "ats-revert fade": "218-187",
-         "ats-revert back": "202-172", "over run": "95-77", "under run": "103-82"}
+         "ats-revert back": "202-172", "over run": "95-77", "under run": "103-82", "over teams": "54-40"}
 ATS_REVERT = 21  # points beyond the spread last game
 TOTAL_RUN = 10  # points beyond the total last game, both teams
+OVER_PCT, MIN_GRADED = 0.65, 4  # over teams: both teams' season over % and games graded
 LOG_FIELDS = ["logged_at", "week", "game_id", "spot", "bet_team", "opponent", "team_in_spot", "line",
               "close_line", "margin", "clv", "result"]
 
@@ -96,12 +101,41 @@ def find_spots(games, polls, week, rows):
 
 
 def dedupe(found):
-    """Drop games where spread spots point at both sides."""
+    """Drop games where spread spots point at both sides. Totals spots that disagree (an over run
+    and over teams in the same game) are both kept, so each spot's record matches its backtest;
+    the card marks the conflict."""
     sides = defaultdict(set)
     for s in found:
         if s["bet_team"] not in ("OVER", "UNDER"):
             sides[s["game_id"]].add(s["bet_team"])
     return [s for s in found if s["bet_team"] in ("OVER", "UNDER") or len(sides[s["game_id"]]) == 1]
+
+
+def find_season_records(games, rows, lines, week):
+    """'over teams' spots: both teams went over their closing total in OVER_PCT+ of graded games
+    this season (before this week). lines: {game id: (spread, total)} for those weeks."""
+    ou = defaultdict(list)
+    for g in games:
+        if (g.get("week") or 0) >= week or g.get("homePoints") is None or g.get("awayPoints") is None:
+            continue
+        tot = lines.get(g["id"], (None, None))[1]
+        d = None if tot is None else g["homePoints"] + g["awayPoints"] - tot
+        if d:
+            for t in (g["homeTeam"], g["awayTeam"]):
+                ou[t].append(d > 0)
+    found = []
+    for r in rows:
+        if r.get("market_total") in (None, ""):
+            continue
+        h, a = ou.get(r["home"], []), ou.get(r["away"], [])
+        if len(h) < MIN_GRADED or len(a) < MIN_GRADED:
+            continue
+        ph, pa = sum(h) / len(h), sum(a) / len(a)
+        if min(ph, pa) >= OVER_PCT:
+            found.append({"game_id": int(r["game_id"]), "spot": "over teams", "team_in_spot": f"{r['away']} @ {r['home']}",
+                          "bet_team": "UNDER", "opponent": "", "line": float(r["market_total"]),
+                          "why": f"{r['home']} over in {sum(h)}/{len(h)}, {r['away']} in {sum(a)}/{len(a)} games"})
+    return found
 
 
 def previous_games(games, rows):
@@ -264,17 +298,24 @@ def card_section(spots, board_rows, log_rows):
            ", ".join(f"{k} {v}" for k, v in SPOTS.items()) + "): bounce-back = back a team that just lost to"
            " a ranked team; sandwich = fade a team between two ranked opponents; ats-revert = fade a team"
            " that covered by 21+ last game, back one that missed by 21+; over/under run = both teams' last"
-           " games beat their totals by 10+ the same way. Logged to spots_log.csv to see if they hold up."
+           " games beat their totals by 10+ the same way; over teams = under when both teams have gone over in"
+           " 65%+ of games. Logged to spots_log.csv to see if they hold up."
            " Use them as a tiebreaker, not a bet: a spot that agrees with a pick is a little extra"
            " confidence; one that disagrees is a reason to consider passing.", ""]
     if spots:
         out += ["| Spot | Take | Game | Why |", "| --- | --- | --- | --- |"]
+        total_sides = defaultdict(set)
+        for s in spots:
+            if s["bet_team"] in ("OVER", "UNDER"):
+                total_sides[s["game_id"]].add(s["bet_team"])
         for s in spots:
             g = by_id.get(str(s["game_id"]), {})
             why = s.get("why") or (f"{s['team_in_spot']} lost to a ranked team last game" if s["spot"] == "bounce-back"
                                    else f"{s['team_in_spot']} between two ranked opponents")
             take = (f"{s['bet_team']} {s['line']:g}" if s["bet_team"] in ("OVER", "UNDER")
                     else f"{s['bet_team']} {s['line']:+g}")
+            if len(total_sides.get(s["game_id"], ())) > 1 and s["bet_team"] in ("OVER", "UNDER"):
+                why += " (spots disagree in this game: no lean)"
             out.append(f"| {s['spot']} | {take} | {g.get('away')} @ {g.get('home')} | {why} |")
     else:
         out.append("No spots this week.")
