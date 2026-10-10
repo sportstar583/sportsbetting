@@ -75,7 +75,7 @@ def fit(rows, key="flags", alpha=ALPHA):
             X[j, ci[r["crew"]]] = 1
         X[j, -2] = 1
         X[j, -1] = r["home"]
-    pen = np.full(k, alpha)
+    pen = np.full(k, float(alpha))
     pen[-2:] = 1e-3  # intercept and home field essentially unshrunk (tiny penalty keeps it solvable)
     b = np.linalg.solve(X.T @ X + np.diag(pen), X.T @ y)
     return {"mean": float(b[-2]), "home": float(b[-1]),

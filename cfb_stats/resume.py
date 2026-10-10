@@ -54,7 +54,7 @@ def power_ratings(games, cap=MARGIN_CAP, alpha=ALPHA):
         X[k, idx[g["awayTeam"]]] = -1
         X[k, -1] = 0 if g.get("neutralSite") else 1
         y[k] = max(min(g["homePoints"] - g["awayPoints"], cap), -cap)
-    pen = np.full(X.shape[1], alpha)
+    pen = np.full(X.shape[1], float(alpha))
     pen[-1] = 1e-6  # home field essentially unshrunk (a tiny penalty keeps all-neutral data solvable)
     beta = np.linalg.solve(X.T @ X + np.diag(pen), X.T @ y)
     resid = y - X @ beta
