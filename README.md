@@ -173,6 +173,13 @@ What goes into a projection:
   `epa_delta` overrides any estimate. `injury_impacts_week<N>.csv` lists each player's
   effect, and the board's `injury_adj` column shows how many points injuries moved each total.
 
+**Schedule spots (tracking only):** the weekly card also lists bounce-back games (back a team that
+just lost to an AP-ranked team, against an unranked opponent now) and sandwich games (fade a team
+between two ranked opponents) across all games with a spread, logs them to
+`data/<year>/spots_log.csv` and grades them on later runs (`cfb_stats.spots`, 1 API call for the
+AP poll). Both beat the closing spread in 2023-2025 on small samples; they're on the card to be
+tracked, not bet.
+
 **Read the backtest before betting** ([BACKTEST.md](BACKTEST.md)). Walk-forward over 2023-2025
 (each week projected only from earlier games):
 

@@ -621,6 +621,39 @@ afterwards as a holdout.
 Both of the last two fit "the market overreacts to last week's big game". Promising, not proven:
 track them in 2026 before betting them.
 
+## Recency bias
+
+Does the market (or the model) overreact to a team's last game? `scripts/recency_backtest.py`, the
+saved 2023-2025 backtest games where both teams' previous game also had a line (2,589 games).
+
+**On average, no.** This game's result against the spread doesn't depend on how far each team
+covered or missed last game (slope -0.010 per point, SE 0.014), or on its last three games (+0.035,
+SE 0.029). Same for totals (+0.005, SE 0.014).
+
+**At the extremes, yes, and in opposite directions for spreads and totals:**
+
+| Spot | 2023 | 2024 | 2025 | All three |
+| --- | --- | --- | --- | --- |
+| Covered by 21+ last game: fade | 68-55 | 71-63 | 79-69 | 218-187 (53.8%) |
+| Missed by 21+ last game: back | 56-45 | 69-64 | 77-63 | 202-172 (54.0%) |
+| Both teams' last games went over by 10+: over again | 32-26 | 33-26 | 30-25 | 95-77 (55.2%) |
+| Both teams' last games went under by 10+: under again | 28-21 | 36-35 | 39-26 | 103-82 (55.7%) |
+
+- **Spreads revert:** a team that blew past the spread by 21+ is overpriced next time, and one that
+  missed by 21+ is underpriced (420-359, 53.9%, every season above 50%). At 10 or 14 points it
+  disappears (50-52%), so it's only the true blowouts.
+- **Totals carry over:** when both teams just went well over (or under) their totals, the next game
+  tends to do the same (198-159, 55.5%). The market seems slow to adjust when a team's scoring
+  environment changes (new QB, tempo, injuries), rather than overreacting.
+- Both are small samples among about a dozen versions tried: 1-1.5 standard errors above
+  breakeven. Track before betting.
+
+**The model under-weights recent games.** A team's last-game miss against the model carries into
+the next game (+0.053 points per point, SE 0.014: about 5% of last week's surprise is real), but
+the market already prices it (-0.004 vs the line). Weighting recent games more in the ratings would
+make projections slightly more accurate without beating the market; testing it properly needs a
+full rerun of the ratings backtest (about 70 API calls per season).
+
 ## Not backtested
 
 - The conference availability report import itself (which players get listed, and how the

@@ -12,6 +12,8 @@ Steps:
   5. Grade earlier card picks against the closing line and final score (card_log.csv).
   6. Write the weekly card to data/<year>/card_week<N>.md and print it: the biggest over and
      under edges among Power 4 games, the strategy with the best backtest (see BACKTEST.md).
+  7. Flag schedule spots (bounce-back, sandwich; cfb_stats.spots) across all games with a spread,
+     log them to spots_log.csv and grade earlier ones. Tracking only, not bets.
 """
 
 import argparse
@@ -21,7 +23,7 @@ import datetime
 import io
 import os
 
-from . import availability, recruiting, totals, tracking
+from . import availability, recruiting, spots, totals, tracking
 from .collect import default_year, upcoming_week
 
 
@@ -108,7 +110,7 @@ def card_picks(rows, n):
     return [(r, "OVER") for r in overs] + [(r, "UNDER") for r in unders]
 
 
-def card_markdown(rows, week, year, n, injury_note, injuries=None, track_record=None):
+def card_markdown(rows, week, year, n, injury_note, injuries=None, track_record=None, spot_lines=None):
     num = _num
     picks = card_picks(rows, n)
     overs = [r for r, side in picks if side == "OVER"]
@@ -164,6 +166,8 @@ def card_markdown(rows, week, year, n, injury_note, injuries=None, track_record=
         out.append("| (no Power 4 games with a market total yet) | | | | | | |")
     if track_record:
         out += [""] + track_record
+    if spot_lines:
+        out += [""] + spot_lines
     return "\n".join(out) + "\n"
 
 
@@ -198,7 +202,8 @@ def main(argv=None):
     inj_note += stats_freshness(client, args.year, week, games)
     with open(os.path.join(out_dir, f"totals_week{week}.csv")) as f:
         reader = csv.DictReader(f)
-        fields, rows = reader.fieldnames, [r for r in reader if r["p4_game"] == "True"]
+        all_rows = list(reader)
+        fields, rows = reader.fieldnames, [r for r in all_rows if r["p4_game"] == "True"]
     with open(os.path.join(out_dir, f"totals_week{week}.csv"), "w", newline="") as f:
         w = csv.DictWriter(f, fieldnames=fields)
         w.writeheader()
@@ -213,8 +218,16 @@ def main(argv=None):
     except Exception as e:
         print(f"could not update the card log ({e})")
     tracking.log_card(log, card_picks(rows, args.card), week)
+    spot_lines = None
+    try:  # schedule spots across all games with a spread (1 API call for the AP poll)
+        found = spots.find_spots(games, spots.ap_polls(client, args.year), week, all_rows)
+        spot_log = spots.log_path(out_dir)
+        spots.update_log(spot_log, client, args.year, games)
+        spot_lines = spots.card_section(found, all_rows, spots.log_spots(spot_log, found, week))
+    except Exception as e:
+        print(f"could not check schedule spots ({e})")
     md = card_markdown(rows, week, args.year, args.card, inj_note, injuries,
-                       tracking.summary(tracking.read_log(log)))
+                       tracking.summary(tracking.read_log(log)), spot_lines)
     path = os.path.join(out_dir, f"card_week{week}.md")
     with open(path, "w") as f:
         f.write(md)

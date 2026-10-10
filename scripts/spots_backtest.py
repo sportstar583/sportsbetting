@@ -16,21 +16,7 @@ from collections import defaultdict
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from cfb_stats.api import CFBDClient  # noqa: E402
-
-
-def ap_polls(client, year):
-    """{week: set of ranked schools} (the poll entering that week)."""
-    out = {}
-    for wk in client.get("/rankings", year=year, seasonType="regular"):
-        for poll in wk["polls"]:
-            if poll["poll"] == "AP Top 25":
-                out[wk["week"]] = {r["school"] for r in poll["ranks"]}
-    return out
-
-
-def ranked_at(polls, week):
-    ws = [w for w in polls if w <= week]
-    return polls[max(ws)] if ws else set()
+from cfb_stats.spots import ap_polls, ranked_at  # noqa: E402
 
 
 def main():
