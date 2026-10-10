@@ -122,6 +122,11 @@ What goes into a projection:
 - **Team home field (spreads only):** on top of the league-wide home edge, each team's own home
   field (home minus road performance vs the model over 2023-2025, shrunk) is added to projected
   margins. It made margins more accurate in every season; stadium effects didn't help totals.
+- **Special teams (spreads only):** field goals (makes vs the league rate at that distance),
+  punts and kickoffs (where the other team's next drive starts vs the league norm, in expected
+  points), rated per team in points per game from this season's drives (`cfb_stats.special_teams`).
+  The difference is added to projected margins (`st_margin_adj` on the board). It made margins
+  more accurate in 2024 and 2025 and needs no extra API calls; it didn't help totals.
 - **Weather:** game-time forecasts from Open-Meteo (free; the CFBD weather endpoint is a paid
   tier) for each stadium. Wind over 10 mph lowers the total by 0.75 points per mph. Wind, rain
   and temperature are shown on the board and in the card notes. Over 2023-2025 the model ran

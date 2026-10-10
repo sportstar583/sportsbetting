@@ -47,7 +47,7 @@ from collections import defaultdict
 
 import numpy as np
 
-from . import adjust, injuries as inj, priors as priors_mod, weather as wx_mod
+from . import adjust, injuries as inj, priors as priors_mod, special_teams as st_mod, weather as wx_mod
 from .collect import P4_CONFERENCES, default_year, upcoming_week, write_csv
 
 DEFAULT_MIN_EDGE = 3.0
@@ -385,11 +385,13 @@ def load_team_hfa(path=TEAM_HFA_PATH):
         return {r["team"]: float(r["home_edge_pts"]) for r in csv.DictReader(f)}
 
 
-def board(model, games, lines, min_games=3, spread_model=None, weather=None, team_hfa=None):
+def board(model, games, lines, min_games=3, spread_model=None, weather=None, team_hfa=None, special_teams=None):
     """One row per game with a market total; spread columns too when there's a spread.
 
     Spread columns come from spread_model (a lightly shrunk model) when given. weather
-    ({game id: conditions}, see cfb_stats.weather) adds a wind correction to the total."""
+    ({game id: conditions}, see cfb_stats.weather) adds a wind correction to the total.
+    special_teams ({team: ratings}, see cfb_stats.special_teams) adds to projected margins only."""
+    special_teams = special_teams or {}
     weather = weather or {}
     by_id = {g["id"]: g for g in games}
     rows = []
@@ -413,7 +415,8 @@ def board(model, games, lines, min_games=3, spread_model=None, weather=None, tea
         shp, sap = spread_model.project(g) if spread_model else (hp, ap)
         if team_hfa and not g.get("neutralSite"):
             shp += team_hfa.get(home, 0.0)  # team-specific home field, spreads only
-        margin = shp - sap
+        st_adj = special_teams.get(home, {}).get("total", 0.0) - special_teams.get(away, {}).get("total", 0.0)
+        margin = shp - sap + st_adj
         done = g.get("homePoints") is not None and g.get("awayPoints") is not None
         spread_edge = None if spread is None else _ats(margin, spread)
         rows.append({
@@ -460,6 +463,7 @@ def board(model, games, lines, min_games=3, spread_model=None, weather=None, tea
             "market_spread": spread,
             "market_spread_open": spread_open,
             "proj_margin": round(margin, 1),
+            "st_margin_adj": round(st_adj, 1),
             "spread_edge": None if spread_edge is None else round(spread_edge, 1),
             "spread_pick": None if spread_edge is None else (
                 f"{home} {spread:+g}" if spread_edge > 0 else f"{away} {-spread:+g}"),
@@ -1023,7 +1027,9 @@ def main(argv=None):
             print(f"weather: forecasts for {len(weather)} of {len(upcoming)} games")
         except Exception as e:  # weather is optional; never block the board on it
             print(f"weather: forecast unavailable ({e}); no wind correction applied")
-    rows = board(model, upcoming, lines, args.min_games, spread_model, weather, load_team_hfa())
+    # Special teams (field goals, punts, kickoffs) from this season's drives: spreads only.
+    special = st_mod.ratings(drives) if drives else {}
+    rows = board(model, upcoming, lines, args.min_games, spread_model, weather, load_team_hfa(), special)
 
     path = os.path.join(out_dir, f"totals_week{week}.csv")
     write_csv(path, rows)

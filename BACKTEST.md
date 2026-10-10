@@ -453,6 +453,56 @@ the 1st, 3rd or 4th quarter (18 versions; slope of the result on the adjustment,
   Prevent defense is the most repeatable habit at big leads (year-to-year correlation 0.25-0.32).
   Worth rechecking with 2023 before using; not used.
 
+## Special teams (spreads)
+
+The EPA ratings cover scrimmage plays only, and the points fit has no field-position term, so
+kicking and punting were missing from the model entirely. `cfb_stats.special_teams` values each
+kicking play from drive data (no extra API calls once drives are cached):
+
+- **Field goals:** 3 x (made - league make rate at that distance; distance = yards to goal + 17).
+- **Punts:** expected points of the receiving team's next drive start vs the league's usual start
+  after a punt from that spot. Covers punting, coverage and returns; return TDs count 7.
+- **Kickoffs** (after scores): the receiving team's start vs the league average, in expected points.
+
+Each team's rating is points per game above the league, shrunk by 4 games. A standard deviation
+between teams is about 1.2 points per game. Walk-forward (ratings from earlier weeks only),
+2024-2025 (`scripts/special_teams_backtest.py`, `data/special_teams_backtest.csv`):
+
+| Is it a trait? | Field goals | Punts | Kickoffs | Total |
+| --- | --- | --- | --- | --- |
+| Year-to-year correlation | +0.20 | +0.21 | +0.35 | +0.37 |
+| First half of season vs second | +0.20 | +0.12 | +0.17 | +0.30 |
+
+| Slope of the result on the home-minus-away rating (1 = fully real) | vs model margin | vs market spread |
+| --- | --- | --- |
+| Field goals | +0.89 (0.63) | +0.13 (0.56) |
+| Punts | +1.12 (0.50) | +0.93 (0.44) |
+| Kickoffs | +1.89 (0.74) | +1.24 (0.66) |
+| **Total** | **+0.98 (0.31)** | **+0.61 (0.28)** |
+
+| Fit on one season, tested on the other | Scale | Margin RMSE | ATS edge >= 3 | P4 ATS edge >= 3 |
+| --- | --- | --- | --- | --- |
+| 2024 without / with | 0.97 | 17.17 / 17.13 | 362-371 / 360-366 | 105-116 / 105-118 |
+| 2025 without / with | 0.99 | 17.28 / 17.24 | 386-382 / 386-373 | 116-108 / 119-106 |
+
+- **Real for margins:** results follow the ratings at full size (fitted scale about 1 in both
+  seasons, 3 standard errors from zero) and margin RMSE improved in both seasons. Added to the
+  spread model's projected margins at full weight (`st_margin_adj`).
+- **The market prices it only partly** (slope +0.61 against the spread, about 2 SE), mostly in
+  punts and kickoffs. Betting the side with the better special teams by itself:
+
+  | Special teams edge | 2024 | 2025 | Both |
+  | --- | --- | --- | --- |
+  | 1+ pt, all games | 215-196 | 232-182 | 447-378 (54.2%) |
+  | 1+ pt, P4 games | 61-65 | 64-59 | 125-124 (50.2%) |
+  | 2+ pts, all games | 48-44 | 48-30 | 96-74 (56.5%) |
+
+  Above breakeven in both seasons, but all of it comes from non-P4 games, and it was found after
+  a few slices. Promising, not proven: check it on 2023 (about 17 API calls) and track it in 2026.
+- **ATS for the model's own picks barely moved** (about +0.5 to +1 point of win rate), still
+  around 50%. Field goal kicking adds nothing for totals (slope +0.03 on the total).
+- 2023 hasn't been tested (drives not downloaded).
+
 ## Not backtested
 
 - The conference availability report import itself (which players get listed, and how the

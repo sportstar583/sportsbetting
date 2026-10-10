@@ -61,6 +61,17 @@ class TotalsTests(unittest.TestCase):
         self.assertTrue(rows_out[999]["enough_data"])
         self.assertIsNone(rows_out[999]["actual_total"])
 
+    def test_board_special_teams_moves_margin_only(self):
+        games, rows = synthetic_season()
+        model = TotalsModel(rows, games, alpha=10)
+        up = [{"id": 999, "week": 7, "homeTeam": "A", "awayTeam": "B", "neutralSite": False}]
+        lines = [{"id": 999, "lines": [{"provider": "X", "overUnder": 50, "spread": -3}]}]
+        base = board(model, up, lines)[0]
+        st = board(model, up, lines, special_teams={"A": {"total": 1.5}, "B": {"total": -0.5}})[0]
+        self.assertEqual(st["st_margin_adj"], 2.0)
+        self.assertAlmostEqual(st["proj_margin"], base["proj_margin"] + 2.0, places=1)
+        self.assertEqual(st["proj_total"], base["proj_total"])
+
     def test_tempo(self):
         drives = [
             # game 1: A runs 10 plays in 300s, B runs 10 plays in 200s
