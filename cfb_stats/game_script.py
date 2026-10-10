@@ -35,7 +35,7 @@ leading big, from the market spread (lead_drives):
     margin += SCALE * (N_home * (gas_home - prevent_home - fight_away)
                        - N_away * (gas_away - prevent_away - fight_home))
 
-Backtest: scripts/game_script_backtest.py (results in BACKTEST.md).
+Backtest: scripts/game_script_backtest.py. No signal on 2024-2025 (BACKTEST.md); not used.
 """
 
 import math
@@ -44,12 +44,13 @@ from collections import defaultdict
 LEAD = 14  # points
 PRIOR_DRIVES = 12
 # Expected 2nd-half drives a team starts up LEAD+ given the spread in its favor:
-# LEAD_MAX * Phi((spread - LEAD_MID) / LEAD_SD). Fit on 2023-2025 drives
+# LEAD_MAX * Phi((spread - LEAD_MID) / LEAD_SD). Fit on 2024-2025 drives
 # (scripts/game_script_backtest.py).
-LEAD_MAX = 6.0
-LEAD_MID = 14.0
-LEAD_SD = 12.0
-# Share of the raw tendency that holds up out of sample (fit leave-one-season-out).
+LEAD_MAX = 5.15
+LEAD_MID = 16.0
+LEAD_SD = 16.0
+# Share of the raw tendency that holds up out of sample. The 2024-2025 backtest found about 0
+# for totals and under 0.2 for spreads (BACKTEST.md), so the board doesn't use this module.
 SCALE = 1.0
 TOTALS_SCALE = SCALE
 SPREAD_SCALE = SCALE
