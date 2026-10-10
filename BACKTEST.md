@@ -654,6 +654,30 @@ the market already prices it (-0.004 vs the line). Weighting recent games more i
 make projections slightly more accurate without beating the market; testing it properly needs a
 full rerun of the ratings backtest (about 70 API calls per season).
 
+## Season ATS and over/under records
+
+Does the market shade lines toward teams with good ATS or over/under records, and is it right to?
+`scripts/records_backtest.py`, 2023-2025, both teams with 4+ graded games (lines from week 4 on).
+
+**Spreads (1,466 games).** No inflation for "hot" ATS teams: if anything the market gives a team
+with a better ATS record slightly *less* credit than the model does (-0.18 points per 10 points of
+ATS %, SE 0.05). ATS record says nothing about this game's cover (+0.01, SE 0.13). In the extremes,
+backing the hot team (70%+ ATS vs 50% or worse) went 185-155 (54.4%), but only 50% in 2024 and
+weaker at stricter cutoffs (75%+: 89-80; 80%+: 86-81). Noise.
+
+**Totals (1,495 games).** The market doesn't move totals on over/under records either (+0.04
+points per 10 points of over %, SE 0.08), and on average records don't predict results (+0.11, SE
+0.27). In the extremes the under won both ways:
+
+| Both teams' season over % | 2023 | 2024 | 2025 | All |
+| --- | --- | --- | --- | --- |
+| 65%+ overs: under | 18-13 | 20-13 | 16-14 | 54-40 (57.4%) |
+| 70%+ overs: under | 14-7 | 14-10 | 9-7 | 37-24 (60.7%) |
+| 65%+ unders: under | 16-12 | 13-16 | 27-19 | 56-47 (54.4%) |
+
+The "over teams go under" result held in all three seasons, but on about 100 games, and it sits
+uneasily with the over-run spot (both teams' *last* games well over -> over again). Not tracked.
+
 ## Not backtested
 
 - The conference availability report import itself (which players get listed, and how the
