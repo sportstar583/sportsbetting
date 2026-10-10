@@ -503,6 +503,51 @@ between teams is about 1.2 points per game. Walk-forward (ratings from earlier w
   around 50%. Field goal kicking adds nothing for totals (slope +0.03 on the total).
 - 2023 hasn't been tested (drives not downloaded).
 
+## Penalties and officiating crews
+
+Per-game penalties (CFBD /games/teams, 32 API calls for 2024-2025) fit as
+`team's flags = league + commit[team] + draw[opponent] + crew[conference] + home`
+(`cfb_stats.penalties`, `scripts/penalties_backtest.py`). CFBD has no crew data: conference games
+use the conference's crew. One data error (an FCS team listed with 743 flags) is filtered out.
+
+**Whose crew works non-conference games?** Each team's flags in non-conference road/home games,
+vs its own conference-game rate, against the other conference's strictness (slope ~1 = that
+team was flagged like the other conference's crew):
+
+| | Home team | Visiting team |
+| --- | --- | --- |
+| 2024 | +0.57 (0.17) | +0.20 (0.17) |
+| 2025 | -0.07 (0.18) | +0.70 (0.18) |
+
+2024 looks like the visitors' crew, 2025 like the home crew, and neither assumption predicts
+flags better (RMSE 2.918 home vs 2.898 visiting). Likely it varies by game contract. The model
+uses the home crew; it changes little.
+
+**Crews do differ, and it repeats** (flags per team-game vs average; double for the game):
+
+| Conference crew | 2024 | 2025 |
+| --- | --- | --- |
+| Conference USA | +0.60 | +0.91 |
+| Mountain West | +0.51 | +0.39 |
+| Sun Belt | +0.31 | +0.14 |
+| ACC | +0.01 | +0.15 |
+| SEC | +0.16 | -0.20 |
+| Big 12 | -0.54 | -0.36 |
+| Big Ten | -0.18 | -1.38 |
+
+Year-to-year correlation: crews 0.59 (flags) / 0.68 (yards); team flags committed 0.39, drawn 0.25.
+Full table: `data/penalties_crews.csv`.
+
+**Does it help the picks?** Walk-forward (penalty ratings from earlier weeks only), 2,240 games:
+
+- Totals: each extra expected flag in a game goes with +0.50 points vs the model (SE 0.17) but
+  only +0.15 (0.16) vs the market, so books already price most of it. Fit on one season and
+  tested on the other: RMSE 17.03 -> 17.00 and 15.46 -> 15.43; every edge >= 3 333-284 -> 320-268
+  and 261-254 -> 267-247; P4 card 40-29 -> 39-30 and 39-30 -> 38-31.
+- Spreads: expected penalty yards don't move margins vs the model (-0.003 pts per yard, SE 0.028).
+
+Slightly more accurate totals, no better picks. Not used.
+
 ## Not backtested
 
 - The conference availability report import itself (which players get listed, and how the
