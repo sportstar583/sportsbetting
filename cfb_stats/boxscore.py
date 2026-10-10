@@ -55,7 +55,7 @@ def rate_fit(rows, alpha=30.0):
         X[j, -2] = 1
         X[j, -1] = r["home"]
     pen = np.full(2 * n + 2, alpha)
-    pen[-2:] = 1e-6
+    pen[-2:] = 1e-3  # intercept and home field essentially unshrunk (tiny penalty keeps it solvable)
     Xw = X * w[:, None]
     b = np.linalg.solve(X.T @ Xw + np.diag(pen), Xw.T @ y)
     return {"mean": float(b[-2]), "home": float(b[-1]),
