@@ -51,6 +51,29 @@ class SpotsTests(unittest.TestCase):
         self.assertIn("| bounce-back | A -3 | X @ A |", md)
         self.assertIn("bounce-back 1-0", md)
 
+    def test_recency(self):
+        games = [g(10, 1, "A", "B", 45, 10), g(11, 1, "C", "D", 30, 27), g(12, 2, "A", "C")]
+        lines = {10: (-7.0, 40.0), 11: (-3.0, 45.0)}  # A covered by 28 and the total went over by 15
+        rows = [{"game_id": "12", "home": "A", "away": "C", "market_spread": "-10", "market_total": "52"}]
+        found = spots.find_recency(games, rows, spots.previous_games(games, rows), lines)
+        self.assertEqual([(s["spot"], s["bet_team"], s["line"]) for s in found], [("ats-revert fade", "C", 10.0)])
+        games[1].update(homePoints=40, awayPoints=20)  # C covers by 17, total over by 15: both overs
+        found = spots.find_recency(games, rows, spots.previous_games(games, rows), lines)
+        self.assertIn(("over run", "OVER", 52.0), [(s["spot"], s["bet_team"], s["line"]) for s in found])
+
+    def test_grade_total(self):
+        path = os.path.join(tempfile.mkdtemp(), "spots_log.csv")
+        spots.log_spots(path, [{"game_id": 3, "spot": "under run", "team_in_spot": "X @ A", "bet_team": "UNDER",
+                                "opponent": "", "line": 50.0}], 2)
+
+        class Client:
+            def get(self, path, **kw):
+                return [{"id": 3, "lines": [{"overUnder": 48.5}]}]
+        games = [dict(x) for x in self.games]
+        games[2].update(homePoints=24, awayPoints=20, completed=True)  # 44 < 50
+        r = spots.update_log(path, Client(), 2026, games)[0]
+        self.assertEqual((r["result"], float(r["clv"])), ("W", 1.5))
+
 
 if __name__ == "__main__":
     unittest.main()

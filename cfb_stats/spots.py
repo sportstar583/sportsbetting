@@ -1,15 +1,22 @@
-"""Schedule spots against the spread, flagged on the weekly card for tracking (not bets).
+"""Schedule and recency spots, flagged on the weekly card for tracking (not bets).
 
-A "big game" is one against an AP top-25 team (the poll at the time). In both spots the current
-opponent is unranked:
+Schedule spots (a "big game" is one against an AP top-25 team, the poll at the time; the current
+opponent is unranked):
 
   bounce-back: the team lost to a ranked team last game        -> back the team
   sandwich:    ranked opponent last game and next game         -> fade the team
 
-Over 2023-2025 (as flagged here, one bet per game) bounce-back went 122-103 (54.2%) and sandwich
-70-53 (56.9%) against the closing spread, above breakeven in all three seasons, but small samples
-found after trying several spots (scripts/spots_backtest.py, BACKTEST.md). Every card run logs this week's spots to
-data/<year>/spots_log.csv; later runs grade them against the closing spread and the final score.
+Recency spots (each team's previous game against its closing line):
+
+  ats-revert fade: covered by 21+ last game (opponent didn't)  -> fade the team
+  ats-revert back: missed by 21+ last game (opponent didn't)   -> back the team
+  over run:        both teams' last games went over by 10+     -> over
+  under run:       both teams' last games went under by 10+    -> under
+
+All beat the closing line in 2023-2025 on small samples found after trying several versions
+(scripts/spots_backtest.py, scripts/recency_backtest.py, BACKTEST.md). Every card run logs this
+week's spots to data/<year>/spots_log.csv; later runs grade them against the closing line and the
+final score.
 """
 
 import csv
@@ -18,8 +25,11 @@ import os
 import statistics
 from collections import defaultdict
 
-SPOTS = {"bounce-back": "lost to a ranked team last game, unranked opponent now",
-         "sandwich": "ranked opponent last game and next game, unranked opponent now"}
+# name -> 2023-2025 record against the closing line, as flagged here
+SPOTS = {"bounce-back": "122-103", "sandwich": "70-53", "ats-revert fade": "218-187",
+         "ats-revert back": "202-172", "over run": "95-77", "under run": "103-82"}
+ATS_REVERT = 21  # points beyond the spread last game
+TOTAL_RUN = 10  # points beyond the total last game, both teams
 LOG_FIELDS = ["logged_at", "week", "game_id", "spot", "bet_team", "opponent", "team_in_spot", "line",
               "close_line", "margin", "clv", "result"]
 
@@ -82,11 +92,91 @@ def find_spots(games, polls, week, rows):
             if prev_big and next_big:
                 found.append({"game_id": gid, "spot": "sandwich", "team_in_spot": team,
                               "bet_team": opp, "opponent": team, "line": -team_line})
-    # Drop games where the spots point at both sides.
+    return dedupe(found)
+
+
+def dedupe(found):
+    """Drop games where spread spots point at both sides."""
     sides = defaultdict(set)
     for s in found:
-        sides[s["game_id"]].add(s["bet_team"])
-    return [s for s in found if len(sides[s["game_id"]]) == 1]
+        if s["bet_team"] not in ("OVER", "UNDER"):
+            sides[s["game_id"]].add(s["bet_team"])
+    return [s for s in found if s["bet_team"] in ("OVER", "UNDER") or len(sides[s["game_id"]]) == 1]
+
+
+def previous_games(games, rows):
+    """{(game id, team): previous game} for each team in the board rows."""
+    sched = _schedules(games)
+    out = {}
+    for r in rows:
+        gid = int(r["game_id"])
+        for team in (r["home"], r["away"]):
+            gs = sched.get(team, [])
+            i = next((k for k, s in enumerate(gs) if s["id"] == gid), None)
+            if i:
+                out[(gid, team)] = gs[i - 1]
+    return out
+
+
+def closing_lines(client, year, weeks, current_week):
+    """{game id: (median home spread, median total)} for these weeks. Weeks finished 2+ weeks ago
+    are kept in data/<year>/cache/ (their closing lines don't change)."""
+    from .totals import consensus_spread, consensus_total
+
+    out = {}
+    for w in sorted(weeks):
+        kw = dict(year=year, week=w, seasonType="regular")
+        resp = (client.get_stored(f"lines_regular_week{w}", "/lines", **kw) if w <= current_week - 2
+                else client.get("/lines", **kw))
+        for lr in resp or []:
+            out[lr["id"]] = (consensus_spread(lr)[0], consensus_total(lr)[0])
+    return out
+
+
+def find_recency(games, rows, prev, lines):
+    """Recency spots among board rows. prev: previous_games(); lines: closing_lines() for the
+    weeks of those previous games."""
+    by_id = {g["id"]: g for g in games}
+
+    def last(gid, team):
+        """(cover margin, total minus closing total) in the team's previous game, or None."""
+        pg = prev.get((gid, team))
+        g = by_id.get(pg["id"]) if pg else None
+        sp, tot = lines.get(pg["id"], (None, None)) if pg else (None, None)
+        if g is None or g.get("homePoints") is None or g.get("awayPoints") is None:
+            return None
+        sign = 1 if g["homeTeam"] == team else -1
+        margin = sign * (g["homePoints"] - g["awayPoints"])
+        return (None if sp is None else margin + sign * sp,
+                None if tot is None else g["homePoints"] + g["awayPoints"] - tot)
+
+    found = []
+    for r in rows:
+        gid = int(r["game_id"])
+        lh, la = last(gid, r["home"]), last(gid, r["away"])
+        if lh is None or la is None:
+            continue
+        if r.get("market_spread") not in (None, "") and lh[0] is not None and la[0] is not None:
+            spread = float(r["market_spread"])
+            for (team, opp, sign), mine, theirs in (((r["home"], r["away"], 1), lh[0], la[0]),
+                                                    ((r["away"], r["home"], -1), la[0], lh[0])):
+                if mine >= ATS_REVERT and theirs < ATS_REVERT:
+                    found.append({"game_id": gid, "spot": "ats-revert fade", "team_in_spot": team,
+                                  "bet_team": opp, "opponent": team, "line": -sign * spread,
+                                  "why": f"{team} covered by {mine:g} last game"})
+                if mine <= -ATS_REVERT and theirs > -ATS_REVERT:
+                    found.append({"game_id": gid, "spot": "ats-revert back", "team_in_spot": team,
+                                  "bet_team": team, "opponent": opp, "line": sign * spread,
+                                  "why": f"{team} missed the spread by {-mine:g} last game"})
+        if r.get("market_total") not in (None, "") and lh[1] is not None and la[1] is not None:
+            total = float(r["market_total"])
+            for name, side, ok in (("over run", "OVER", min(lh[1], la[1]) >= TOTAL_RUN),
+                                   ("under run", "UNDER", max(lh[1], la[1]) <= -TOTAL_RUN)):
+                if ok:
+                    found.append({"game_id": gid, "spot": name, "team_in_spot": f"{r['away']} @ {r['home']}",
+                                  "bet_team": side, "opponent": "", "line": total,
+                                  "why": f"last games {lh[1]:+g} ({r['home']}) and {la[1]:+g} ({r['away']}) vs their totals"})
+    return found
 
 
 def log_path(out_dir):
@@ -124,19 +214,32 @@ def log_spots(path, spots, week, now=None):
 
 
 def update_log(path, client, year, games):
-    """Grade logged spots whose game is final: closing spread, margin, CLV and result."""
+    """Grade logged spots whose game is final: closing line, margin, CLV and result."""
     rows = read_log(path)
     by_id = {str(g["id"]): g for g in games}
     pending = [r for r in rows if not r.get("result") and by_id.get(str(r["game_id"]), {}).get("completed")]
-    close = {}
+    close, close_total = {}, {}
     for week in sorted({int(r["week"]) for r in pending}):
         for lr in client.get("/lines", year=year, week=week, seasonType="regular") or []:
             sp = [ln["spread"] for ln in lr.get("lines") or [] if ln.get("spread") is not None]
+            ou = [ln["overUnder"] for ln in lr.get("lines") or [] if ln.get("overUnder") is not None]
             if sp:
                 close[str(lr["id"])] = statistics.median(sp)
+            if ou:
+                close_total[str(lr["id"])] = statistics.median(ou)
     for r in pending:
         g = by_id[str(r["game_id"])]
         if g.get("homePoints") is None or g.get("awayPoints") is None:
+            continue
+        if r["bet_team"] in ("OVER", "UNDER"):
+            over = r["bet_team"] == "OVER"
+            total, line = g["homePoints"] + g["awayPoints"], float(r["line"])
+            r["margin"] = total
+            r["result"] = "P" if total == line else ("W" if (total > line) == over else "L")
+            if str(r["game_id"]) in close_total:
+                c = close_total[str(r["game_id"])]
+                r["close_line"] = c
+                r["clv"] = round((c - line) if over else (line - c), 2)
             continue
         home = r["bet_team"] == g["homeTeam"]
         margin = (g["homePoints"] - g["awayPoints"]) * (1 if home else -1)
@@ -157,16 +260,20 @@ def card_section(spots, board_rows, log_rows):
     """Markdown lines for the weekly card."""
     by_id = {str(r["game_id"]): r for r in board_rows}
     out = ["## Spots to track (not bets)", "",
-           "Schedule spots that beat the closing spread in 2023-2025 on small samples: bounce-back"
-           " (back a team that just lost to a ranked team) 122-103, sandwich (fade a team between two"
-           " ranked opponents) 70-53. Logged to spots_log.csv to see if they hold up.", ""]
+           "Spots that beat the closing line in 2023-2025 on small samples (" +
+           ", ".join(f"{k} {v}" for k, v in SPOTS.items()) + "): bounce-back = back a team that just lost to"
+           " a ranked team; sandwich = fade a team between two ranked opponents; ats-revert = fade a team"
+           " that covered by 21+ last game, back one that missed by 21+; over/under run = both teams' last"
+           " games beat their totals by 10+ the same way. Logged to spots_log.csv to see if they hold up.", ""]
     if spots:
         out += ["| Spot | Take | Game | Why |", "| --- | --- | --- | --- |"]
         for s in spots:
             g = by_id.get(str(s["game_id"]), {})
-            why = (f"{s['team_in_spot']} lost to a ranked team last game" if s["spot"] == "bounce-back"
-                   else f"{s['team_in_spot']} between two ranked opponents")
-            out.append(f"| {s['spot']} | {s['bet_team']} {s['line']:+g} | {g.get('away')} @ {g.get('home')} | {why} |")
+            why = s.get("why") or (f"{s['team_in_spot']} lost to a ranked team last game" if s["spot"] == "bounce-back"
+                                   else f"{s['team_in_spot']} between two ranked opponents")
+            take = (f"{s['bet_team']} {s['line']:g}" if s["bet_team"] in ("OVER", "UNDER")
+                    else f"{s['bet_team']} {s['line']:+g}")
+            out.append(f"| {s['spot']} | {take} | {g.get('away')} @ {g.get('home')} | {why} |")
     else:
         out.append("No spots this week.")
     graded = [r for r in log_rows if r.get("result")]

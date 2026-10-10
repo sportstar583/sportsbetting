@@ -12,8 +12,8 @@ Steps:
   5. Grade earlier card picks against the closing line and final score (card_log.csv).
   6. Write the weekly card to data/<year>/card_week<N>.md and print it: the biggest over and
      under edges among Power 4 games, the strategy with the best backtest (see BACKTEST.md).
-  7. Flag schedule spots (bounce-back, sandwich; cfb_stats.spots) across all games with a spread,
-     log them to spots_log.csv and grade earlier ones. Tracking only, not bets.
+  7. Flag schedule and recency spots (cfb_stats.spots) across all games with a line, log them to
+     spots_log.csv and grade earlier ones. Tracking only, not bets.
 """
 
 import argparse
@@ -221,6 +221,9 @@ def main(argv=None):
     spot_lines = None
     try:  # schedule spots across all games with a spread (1 API call for the AP poll)
         found = spots.find_spots(games, spots.ap_polls(client, args.year), week, all_rows)
+        prev = spots.previous_games(games, all_rows)  # recency spots: last game vs its closing line
+        prev_lines = spots.closing_lines(client, args.year, {pg["week"] for pg in prev.values()}, week)
+        found = spots.dedupe(found + spots.find_recency(games, all_rows, prev, prev_lines))
         spot_log = spots.log_path(out_dir)
         spots.update_log(spot_log, client, args.year, games)
         spot_lines = spots.card_section(found, all_rows, spots.log_spots(spot_log, found, week))
