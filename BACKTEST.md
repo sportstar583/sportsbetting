@@ -597,6 +597,30 @@ the two ratings add up to (the interaction)?
 Not used. Box scores have no line yards; CFBD's advanced game stats do (line yards, stuff rate,
 havoc by front seven), about 16 calls per season, if this is worth another look.
 
+## Lookahead and letdown spots (spreads)
+
+`scripts/spots_backtest.py`: a "big game" is against an AP top-25 team (poll at the time; CFBD
+/rankings, 1 call per season). Current opponent unranked in every case. Record is betting against
+the team in the spot, at the closing spread. Spots were found on 2024-2025; 2023 was checked
+afterwards as a holdout.
+
+| Spot | 2023 (holdout) | 2024 | 2025 | All three |
+| --- | --- | --- | --- | --- |
+| Lookahead: next opponent ranked | 49-58 | 55-57 | 51-52 | 155-167 (48.1%) |
+| Letdown: beat a ranked team last game (fade) | 13-20 | 19-13 | 20-17 | 52-50 (51.0%) |
+| Lost to a ranked team last game (fade) | 41-47 | 36-44 | 38-43 | 115-134 (46.2%): backing them 53.8% |
+| Sandwich: ranked opponent before and after (fade) | 26-19 | 26-21 | 24-19 | 76-59 (56.3%) |
+
+- **Lookahead: no effect.** Teams with a ranked opponent next week covered as usual.
+- **Letdown after a big win:** looked good on 2024-2025 (56.5%), failed on 2023 (13-20). No effect.
+- **Bounce-back after losing to a ranked team** (back them): 53.8% on 249 bets, above breakeven in
+  all three seasons, but only about 1 standard error above it.
+- **Sandwich games** (fade): 56.3% on 135 bets, held on the 2023 holdout (26-19). The strongest of
+  these, still a small sample (about 1.5 SE above 50%).
+
+Both of the last two fit "the market overreacts to last week's big game". Promising, not proven:
+track them in 2026 before betting them.
+
 ## Not backtested
 
 - The conference availability report import itself (which players get listed, and how the
