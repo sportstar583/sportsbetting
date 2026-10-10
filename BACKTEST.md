@@ -548,6 +548,55 @@ Full table: `data/penalties_crews.csv`.
 
 Slightly more accurate totals, no better picks. Not used.
 
+## Turnover luck
+
+From box scores (CFBD /games/teams, already downloaded for the penalty test): each team's
+turnovers vs what it "deserved". Fumbles: 50% expected recovery. Interceptions: the league share of
+passes defended (INTs + breakups) that are picked off, about 20%. A team that lost 1 of 6 fumbles,
+or picked off 10 passes on 15 passes defended, was lucky. (CFBD omits zero stats; a missing
+defensive stat counts as 0 when the box score has defensive stats at all.)
+`scripts/turnovers_trenches_backtest.py`, 2024-2025, walk-forward:
+
+- **It's luck:** first-half vs second-half correlation +0.07 (offense) and 0.00 (defense).
+- **Margins:** teams whose ratings were flattered by turnover luck did a bit worse than the model
+  projected (+0.52 points per turnover per game of luck, SE 0.33), but exactly as the market
+  expected (0.00, SE 0.30). Books already strip out turnover luck.
+- **Totals:** nothing vs the model (-0.12, SE 0.31).
+- **Fading a team after a big turnover win** (the "market overreacts" angle): last game +2 or
+  better 269-235 (53.4%), +3 or better 108-116 (48.2%), +4 or better 33-32. Noise.
+
+Not used.
+
+## Line of scrimmage (pass protection, pass rush, run blocking, run stopping)
+
+Opponent-adjusted rates from box scores, each offense's line against each defense's front:
+sack rate (sacks / dropbacks), pressure rate ((sacks + QB hurries) / dropbacks) and run stuff
+rate (non-sack tackles for loss / rushes). Then two questions, walk-forward on 2024-2025: does the
+expected rate add anything beyond EPA, and does a weak line facing a strong front do worse than
+the two ratings add up to (the interaction)?
+
+| | Repeats (weeks 1-7 vs 8+), offense / defense |
+| --- | --- |
+| Sack rate | +0.42 / +0.13 |
+| Pressure rate | +0.49 / +0.29 |
+| Run stuff rate | +0.44 / +0.42 |
+
+| Slope (SE) | Totals vs model | Totals vs market | Margin vs model | Margin vs market |
+| --- | --- | --- | --- | --- |
+| Sack rate, per 10 points of rate | +0.55 (0.93) | +0.26 (0.90) | -2.60 (0.92) | -0.47 (0.82) |
+| Pressure rate | +0.57 (0.49) | +0.41 (0.48) | -1.05 (0.57) | +0.11 (0.50) |
+| Run stuff rate | +1.31 (0.60) | +0.11 (0.59) | -0.15 (0.62) | +0.89 (0.54) |
+| Weak line x strong front, all three | within 1.8 SE of 0 | within 1.8 SE | within 1 SE | within 1.1 SE |
+
+- Line play is a real, fairly stable trait, but EPA already captures nearly all of it.
+- The mismatch itself (bad line vs great front) adds nothing beyond the two ratings.
+- Two things the model gets slightly wrong (teams expected to take more sacks beat their projected
+  margin; games with more expected run stuffs score a bit more than projected) are already priced
+  by the market.
+
+Not used. Box scores have no line yards; CFBD's advanced game stats do (line yards, stuff rate,
+havoc by front seven), about 16 calls per season, if this is worth another look.
+
 ## Not backtested
 
 - The conference availability report import itself (which players get listed, and how the
