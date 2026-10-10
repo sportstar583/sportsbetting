@@ -429,6 +429,30 @@ it (fitted scale about 0 for totals, under 0.2 for spreads). Teams barely repeat
 habits from one season to the next, and a team only spends about one drive per game up 14+, so a
 half-season says little. Heavier shrinkage (40 drives) didn't change this. Not used.
 
+**Other lead sizes and quarters** (`--sweep`, `data/game_script_sweep.csv`). The 14-point,
+2nd-half cutoff was arbitrary, so leads of 3, 7, 10, 14, 17 and 21+ were tried, counting from
+the 1st, 3rd or 4th quarter (18 versions; slope of the result on the adjustment, SE in parentheses):
+
+| Lead, from quarter | Lead drives / team-game | Totals vs model | Totals vs market | Margin vs model | Margin vs market |
+| --- | --- | --- | --- | --- | --- |
+| 3+, any | 4.1 | +0.01 (0.04) | +0.04 (0.04) | +0.04 (0.04) | -0.01 (0.03) |
+| 7+, any | 3.1 | -0.05 (0.06) | +0.02 (0.06) | +0.01 (0.06) | +0.00 (0.05) |
+| 7+, 2nd half | 1.9 | -0.04 (0.10) | +0.07 (0.10) | +0.05 (0.11) | -0.00 (0.10) |
+| 10+, 2nd half | 1.5 | +0.01 (0.14) | +0.09 (0.14) | +0.10 (0.15) | +0.02 (0.13) |
+| 14+, 2nd half | 1.1 | -0.06 (0.19) | +0.01 (0.18) | +0.22 (0.20) | +0.07 (0.17) |
+| 17+, 2nd half | 0.9 | -0.10 (0.23) | -0.06 (0.22) | +0.44 (0.23) | +0.28 (0.20) |
+| 21+, 2nd half | 0.65 | -0.30 (0.30) | -0.31 (0.30) | +0.59 (0.30) | +0.26 (0.27) |
+| 7+, 4th quarter | 0.9 | -0.04 (0.25) | +0.27 (0.25) | +0.03 (0.27) | -0.07 (0.24) |
+| 17+, 4th quarter | 0.5 | +0.05 (0.52) | +0.25 (0.51) | +0.89 (0.50) | +0.56 (0.44) |
+
+- **Totals: nothing at any cutoff.** Small leads give lots of drives and tight estimates, and the
+  slope is still about 0.
+- **Spreads: a faint hint at big leads (17+).** Slopes are positive in every big-lead version,
+  but none is clearly above zero against the market (at most about 1.3 SE, after trying 18
+  versions), and the adjustment there is small (typically under half a point after scaling).
+  Prevent defense is the most repeatable habit at big leads (year-to-year correlation 0.25-0.32).
+  Worth rechecking with 2023 before using; not used.
+
 ## Not backtested
 
 - The conference availability report import itself (which players get listed, and how the

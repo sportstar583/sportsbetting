@@ -6,6 +6,7 @@ cached after that):
 
   python scripts/game_script_backtest.py --cache .cfbd_cache
   python scripts/game_script_backtest.py --years 2024 2025   # cheaper, weaker test
+  python scripts/game_script_backtest.py --years 2024 2025 --sweep   # other lead sizes / quarters
 """
 import argparse
 import csv
@@ -44,10 +45,11 @@ def lead_counts(drives):
 def fit_lead_curve(pairs):
     """Grid-search LEAD_MAX/MID/SD for (spread for team, lead drives) pairs."""
     x = np.array([p[0] for p in pairs]); y = np.array([p[1] for p in pairs])
+    xs, inv = np.unique(x, return_inverse=True)
     best = None
-    for mid in np.arange(4, 30, 1.0):
+    for mid in np.arange(-10, 30, 1.0):
         for sd in np.arange(4, 30, 1.0):
-            f = 0.5 * (1 + np.vectorize(math.erf)((x - mid) / (sd * math.sqrt(2))))
+            f = np.array([0.5 * (1 + math.erf((v - mid) / (sd * math.sqrt(2)))) for v in xs])[inv]
             mx = float(f @ y / (f @ f))
             err = float(((y - mx * f) ** 2).mean())
             if best is None or err < best[0]:
@@ -76,8 +78,11 @@ def main():
     p = argparse.ArgumentParser()
     p.add_argument("--cache", default=".cfbd_cache")
     p.add_argument("--years", type=int, nargs="+", default=list(YEARS))
+    p.add_argument("--sweep", action="store_true", help="try other lead sizes and quarters instead")
     args = p.parse_args()
     years = tuple(args.years)
+    if args.sweep:
+        return sweep(CFBDClient(cache_dir=args.cache), years)
     client = CFBDClient(cache_dir=args.cache)
 
     tot, spr, pairs, season_tend = [], [], [], {}
@@ -159,6 +164,68 @@ def main():
     write_csv("data/game_script_backtest.csv", summary)
     write_csv("data/game_script_backtest_games.csv",
               [{k: (round(v, 2) if isinstance(v, float) else v) for k, v in r.items() if k != "week"} for r in tot])
+
+
+def slope(x, y):
+    b = float(x @ y / (x @ x))
+    return b, math.sqrt(((y - b * x) ** 2).mean() / (x @ x))
+
+
+def sweep(client, years, leads=(3, 7, 10, 14, 17, 21), periods=(1, 3, 4)):
+    """For each lead size and earliest quarter: year-to-year correlation of each tendency and
+    the slope of results on the adjustment (1 = fully real). Saved to data/game_script_sweep.csv."""
+    drives = {y: load_drives(client, y) for y in years}
+    spreads = {y: {int(r["game_id"]): r for r in csv.DictReader(open(f"data/{y}/spreads_backtest_games.csv"))}
+               for y in years}
+    totals = {y: list(csv.DictReader(open(f"data/{y}/totals_backtest_games.csv"))) for y in years}
+    out = []
+    for period in periods:
+        for lead in leads:
+            gs.LEAD, gs.MIN_PERIOD = lead, period
+            pairs, season_tend = [], {}
+            for y in years:
+                all_d = [d for ds in drives[y].values() for d in ds]
+                season_tend[y] = gs.tendencies(all_d, prior=0)
+                counts = lead_counts(all_d)
+                for r in spreads[y].values():
+                    if r["market_spread"]:
+                        fav = -float(r["market_spread"])
+                        pairs.append((fav, counts.get((int(r["game_id"]), r["home"]), 0)))
+                        pairs.append((-fav, counts.get((int(r["game_id"]), r["away"]), 0)))
+            gs.LEAD_MAX, gs.LEAD_MID, gs.LEAD_SD = fit_lead_curve(pairs)
+            row = {"lead": lead, "from_quarter": period,
+                   "lead_drives_per_game": round(float(np.mean([p[1] for p in pairs])), 2)}
+            for name, nk in (("gas", "lead_drives"), ("prevent", "prevent_drives"), ("fight", "trail_drives")):
+                rs = []
+                for a, b in zip(years, years[1:]):
+                    ta, tb = season_tend[a], season_tend[b]
+                    common = [t for t in ta if t in tb and ta[t][nk] >= 15 and tb[t][nk] >= 15]
+                    if len(common) > 10:
+                        rs.append(np.corrcoef([ta[t][name] for t in common], [tb[t][name] for t in common])[0, 1])
+                row[f"yoy_{name}"] = round(float(np.mean(rs)), 2) if rs else None
+            T, M = [], []
+            for y in years:
+                cache = {}
+                for r in totals[y]:
+                    w = int(r["week"])
+                    if w not in cache:
+                        cache[w] = gs.tendencies(before(drives[y], w))
+                    s = spreads[y].get(int(r["game_id"]), {})
+                    fav = -float(s["market_spread"]) if s.get("market_spread") else 0.0
+                    ta, ma = gs.adjustments(cache[w], r["home"], r["away"], fav, 1.0, 1.0)
+                    T.append((ta, float(r["actual_total"]) - float(r["proj_total"]),
+                              float(r["actual_total"]) - float(r["market_total"])))
+                    if s.get("actual_margin") and s.get("market_spread"):
+                        M.append((ma, float(s["actual_margin"]) - float(s["proj_margin"]),
+                                  float(s["actual_margin"]) + float(s["market_spread"])))
+            for label, arr in (("total", np.array(T)), ("margin", np.array(M))):
+                for i, vs in ((1, "model"), (2, "market")):
+                    b, se = slope(arr[:, 0], arr[:, i])
+                    row[f"{label}_vs_{vs}"] = f"{b:+.2f} ({se:.2f})"
+            row["adj_sd_total"] = round(float(np.array(T)[:, 0].std()), 2)
+            out.append(row)
+            print("  ".join(f"{k} {v}" for k, v in row.items()), flush=True)
+    write_csv("data/game_script_sweep.csv", out)
 
 
 if __name__ == "__main__":

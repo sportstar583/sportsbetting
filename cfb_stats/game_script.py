@@ -42,6 +42,7 @@ import math
 from collections import defaultdict
 
 LEAD = 14  # points
+MIN_PERIOD = 3  # 3 = 2nd half, 4 = 4th quarter only
 PRIOR_DRIVES = 12
 # Expected 2nd-half drives a team starts up LEAD+ given the spread in its favor:
 # LEAD_MAX * Phi((spread - LEAD_MID) / LEAD_SD). Fit on 2024-2025 drives
@@ -78,7 +79,7 @@ def situation(d):
     diff = so - sd
     if abs(diff) < LEAD:
         return "close"
-    if (d.get("startPeriod") or 0) < 3:
+    if (d.get("startPeriod") or 0) < MIN_PERIOD:
         return None
     return "lead" if diff > 0 else "trail"
 
