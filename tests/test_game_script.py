@@ -36,8 +36,25 @@ class GameScriptTests(unittest.TestCase):
         self.assertLess(t["C"]["gas"], 0)
         self.assertGreater(t["C"]["prevent"], 0)
         self.assertLess(t["A"]["prevent"], 0)
+        self.assertGreater(t["D"]["fight"], 0)  # D keeps scoring when down big
+        self.assertLess(t["B"]["fight"], 0)
         shrunk = gs.tendencies(ds, prior=10)
         self.assertLess(abs(shrunk["A"]["gas"]), abs(t["A"]["gas"]))
+
+    def test_hurry_and_downs(self):
+        ds = []
+        for g in range(10):
+            for off in ("A", "B"):
+                ds.append(dict(drive(off, "X", 7, 7, 1, 0, g), elapsed={"minutes": 3, "seconds": 0}))  # 30 s/play
+            ds.append(dict(drive("A", "X", 0, 28, 4, 0, g), elapsed={"minutes": 1, "seconds": 30},
+                           driveResult="DOWNS"))  # 15 s/play, goes for it
+            ds.append(dict(drive("B", "X", 0, 28, 4, 0, g), elapsed={"minutes": 3, "seconds": 0},
+                           driveResult="PUNT"))
+        t = gs.tendencies(ds, prior=0)
+        self.assertLess(t["A"]["hurry"], 0)
+        self.assertGreater(t["B"]["hurry"], 0)
+        self.assertEqual(t["A"]["downs_rate"], 1.0)
+        self.assertEqual(t["B"]["downs_rate"], 0.0)
 
     def test_adjustments(self):
         self.assertAlmostEqual(gs.lead_drives(gs.LEAD_MID), gs.LEAD_MAX / 2)
@@ -46,7 +63,12 @@ class GameScriptTests(unittest.TestCase):
         total, margin = gs.adjustments(tend, "A", "B", 30, 1.0, 1.0)
         self.assertGreater(total, 0)
         self.assertAlmostEqual(margin, 0, places=1)  # gas and prevent cancel on the margin
-        # Underdog's tendencies barely matter.
+        # A heavy underdog that fights back adds to the total and its own margin.
+        fight = {"A": {}, "B": {"fight": 1.0}}
+        total, margin = gs.adjustments(fight, "A", "B", 30, 1.0, 1.0)
+        self.assertGreater(total, 3)
+        self.assertLess(margin, -3)
+        # Underdog's gas and prevent barely matter.
         self.assertAlmostEqual(gs.adjustments(tend, "B", "A", 30, 1.0, 1.0)[0], 0, places=1)
 
 

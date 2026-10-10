@@ -1,10 +1,11 @@
 """Leave-one-season-out test of team game-script tendencies (foot on the gas with a big lead,
-prevent defense) on the saved backtest games in data/<year>/. Results are in BACKTEST.md.
+prevent defense, fighting back when down big) on the saved backtest games in data/<year>/. Results are in BACKTEST.md.
 
-Needs every regular-season week's drives for 2023-2025 (about 50 API calls the first time;
+Needs every regular-season week's drives (about 17 API calls per season the first time;
 cached after that):
 
   python scripts/game_script_backtest.py --cache .cfbd_cache
+  python scripts/game_script_backtest.py --years 2024 2025   # cheaper, weaker test
 """
 import argparse
 import csv
@@ -74,11 +75,13 @@ def edge_record(act, proj, line, t=3):
 def main():
     p = argparse.ArgumentParser()
     p.add_argument("--cache", default=".cfbd_cache")
+    p.add_argument("--years", type=int, nargs="+", default=list(YEARS))
     args = p.parse_args()
+    years = tuple(args.years)
     client = CFBDClient(cache_dir=args.cache)
 
     tot, spr, pairs, season_tend = [], [], [], {}
-    for y in YEARS:
+    for y in years:
         drives = load_drives(client, y)
         all_d = [d for ds in drives.values() for d in ds]
         if not any(d.get("startOffenseScore") is not None for d in all_d):
@@ -111,8 +114,9 @@ def main():
           f"(mean lead drives {np.mean([p[1] for p in pairs]):.2f} per team-game)")
 
     # Is it a trait? Same team, consecutive seasons (unshrunk, teams with 15+ lead drives both years).
-    for name, nk in (("gas", "lead_drives"), ("prevent", "prevent_drives")):
-        for a, b in zip(YEARS, YEARS[1:]):
+    for name, nk in (("gas", "lead_drives"), ("prevent", "prevent_drives"), ("fight", "trail_drives"),
+                     ("hurry", "trail_drives"), ("downs_rate", "trail_drives")):
+        for a, b in zip(years, years[1:]):
             ta, tb = season_tend[a], season_tend[b]
             common = [t for t in ta if t in tb and ta[t][nk] >= 15 and tb[t][nk] >= 15]
             r = np.corrcoef([ta[t][name] for t in common], [tb[t][name] for t in common])[0, 1]
@@ -132,7 +136,7 @@ def main():
             se = math.sqrt(((target - b * raw) ** 2).mean() / (raw @ raw))
             print(f"  slope on {lab:<16} {b:+.2f} ({se:.2f})")
         adj = proj.copy()
-        for s in YEARS:
+        for s in years:
             tr, te = season != s, season == s
             k = max(float(raw[tr] @ (act - proj)[tr] / (raw[tr] @ raw[tr])), 0.0)
             adj[te] = proj[te] + k * raw[te]
