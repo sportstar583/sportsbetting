@@ -388,6 +388,47 @@ Home-stadium scoring effects for totals (does a stadium run high or low vs the m
 carry over between seasons: RMSE 16.45 -> 16.44, 17.00 -> 17.05, 15.43 -> 15.55, card
 107-83 -> 104-85 (non-neutral games only). Not used.
 
+## Team game script (foot on the gas, prevent defense, fighting back)
+
+Garbage time is left out of the ratings, but final scores include it, so this tested whether
+teams differ in how they play it (`cfb_stats.game_script`, `scripts/game_script_backtest.py`).
+From drive data, with each drive's starting score, for each team (league-relative, shrunk by 12 drives):
+
+- **gas:** points per drive its offense scores while up 14+ in the 2nd half, vs its close-game
+  rate. Kneeling or running out the clock counts as a 0-point drive.
+- **prevent:** points per drive its defense allows while its team is up 14+ in the 2nd half.
+- **fight:** points per drive its offense scores while down 14+ in the 2nd half.
+- Reported only: **hurry** (seconds per play when down big vs close games) and **downs rate**
+  (share of drives down big that end on downs; misses 4th-down tries that convert).
+
+Each game's adjustment weights these by how many 2nd-half drives each team should spend up
+14+, from the market spread (about 1.1 per team-game on average, 5 for a huge favorite).
+Walk-forward (tendencies from earlier weeks only), 2024-2025 only so far (34 API calls; 2023 not
+downloaded):
+
+| Year-to-year correlation (same team) | gas | prevent | fight | hurry | downs rate |
+| --- | --- | --- | --- | --- | --- |
+| 2024 -> 2025 | +0.05 | +0.19 | +0.19 | +0.14 | +0.08 |
+
+| Slope of the result on the adjustment (1 = fully real, SE in parentheses) | Totals vs model | Totals vs market | Margin vs model | Margin vs market |
+| --- | --- | --- | --- | --- |
+| gas | +0.21 (0.26) | +0.18 (0.25) | -0.04 (0.28) | +0.09 (0.24) |
+| prevent | +0.05 (0.26) | +0.10 (0.25) | +0.31 (0.27) | +0.03 (0.24) |
+| fight | -0.43 (0.27) | -0.30 (0.26) | +0.27 (0.28) | +0.07 (0.25) |
+| All together | -0.05 (0.15) | +0.00 (0.15) | +0.18 (0.16) | +0.06 (0.14) |
+
+| Fit on one season, tested on the other | RMSE | Every edge >= 3 | P4 card |
+| --- | --- | --- | --- |
+| Totals 2024, current / with game script | 17.03 / 17.03 | 333-284 / 333-284 | 40-29 / 40-29 |
+| Totals 2025, current / with game script | 15.46 / 15.46 | 261-254 / 260-250 | 39-30 / 37-32 |
+| Spreads 2024, current / with game script | 17.17 / 17.17 | 362-371 / 352-375 | |
+| Spreads 2025, current / with game script | 17.28 / 17.27 | 386-382 / 385-376 | |
+
+No signal. The adjustment moves half of totals by a point or more, but final scores don't follow
+it (fitted scale about 0 for totals, under 0.2 for spreads). Teams barely repeat their late-game
+habits from one season to the next, and a team only spends about one drive per game up 14+, so a
+half-season says little. Heavier shrinkage (40 drives) didn't change this. Not used.
+
 ## Not backtested
 
 - The conference availability report import itself (which players get listed, and how the

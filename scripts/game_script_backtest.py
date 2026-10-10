@@ -155,7 +155,7 @@ def main():
             summary.append(row)
             print("  " + "  ".join(f"{k} {v}" for k, v in row.items()))
         k_all = max(float(raw @ (act - proj) / (raw @ raw)), 0.0)
-        print(f"  scale fit on all three seasons: {k_all:.2f}")
+        print(f"  scale fit on all seasons: {k_all:.2f}")
     write_csv("data/game_script_backtest.csv", summary)
     write_csv("data/game_script_backtest_games.csv",
               [{k: (round(v, 2) if isinstance(v, float) else v) for k, v in r.items() if k != "week"} for r in tot])
