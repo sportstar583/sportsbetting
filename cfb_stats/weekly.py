@@ -22,6 +22,7 @@ import csv
 import datetime
 import io
 import os
+from collections import defaultdict
 
 from . import availability, recruiting, spots, totals, tracking
 from .collect import default_year, upcoming_week
@@ -110,15 +111,25 @@ def card_picks(rows, n):
     return [(r, "OVER") for r in overs] + [(r, "UNDER") for r in unders]
 
 
-def card_markdown(rows, week, year, n, injury_note, injuries=None, track_record=None, spot_lines=None):
+def card_markdown(rows, week, year, n, injury_note, injuries=None, track_record=None, spot_lines=None,
+                  spot_list=None):
     num = _num
     picks = card_picks(rows, n)
     overs = [r for r, side in picks if side == "OVER"]
     unders = [r for r, side in picks if side == "UNDER"]
     stamp = datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
 
+    total_spots = defaultdict(list)  # game id -> [(spot name, OVER/UNDER)]
+    for s in spot_list or []:
+        if s["bet_team"] in ("OVER", "UNDER"):
+            total_spots[str(s["game_id"])].append((s["spot"], s["bet_team"]))
+
     def line(r, side):
         extras = []
+        for name, spot_side in total_spots.get(str(r.get("game_id")), []):
+            # Tiebreaker only: spots are tracked, not bet (see the spots section).
+            extras.append(f"{name} spot agrees" if spot_side == side
+                          else f"{name} spot disagrees: consider passing")
         if num(r, "injury_adj"):
             extras.append(f"injuries {num(r, 'injury_adj'):+.1f}")
         if num(r, "matchup_adj"):
@@ -149,7 +160,9 @@ def card_markdown(rows, week, year, n, injury_note, injuries=None, track_record=
            "2023-2025: 114-88 (56.4%) against closing and opening totals; small sample, track it",
            "before trusting it. See BACKTEST.md.", "",
            "Bet is the median line across books; Best line is the best number available (lowest",
-           "total for an over, highest for an under) and the book offering it.", "",
+           "total for an over, highest for an under) and the book offering it. Notes flag an over/under",
+           "run spot in the same game: agreeing is a little extra confidence, disagreeing is a reason to",
+           "consider passing (spots are tracked, not bets; see below).", "",
            "| Bet | Best line | Game | Model total | Edge | Date | Notes |",
            "| --- | --- | --- | --- | --- | --- | --- |"]
     out += [line(r, "OVER") for r in overs] + [line(r, "UNDER") for r in unders]
@@ -218,7 +231,7 @@ def main(argv=None):
     except Exception as e:
         print(f"could not update the card log ({e})")
     tracking.log_card(log, card_picks(rows, args.card), week)
-    spot_lines = None
+    spot_lines, found = None, []
     try:  # schedule spots across all games with a spread (1 API call for the AP poll)
         found = spots.find_spots(games, spots.ap_polls(client, args.year), week, all_rows)
         prev = spots.previous_games(games, all_rows)  # recency spots: last game vs its closing line
@@ -230,7 +243,7 @@ def main(argv=None):
     except Exception as e:
         print(f"could not check schedule spots ({e})")
     md = card_markdown(rows, week, args.year, args.card, inj_note, injuries,
-                       tracking.summary(tracking.read_log(log)), spot_lines)
+                       tracking.summary(tracking.read_log(log)), spot_lines, found)
     path = os.path.join(out_dir, f"card_week{week}.md")
     with open(path, "w") as f:
         f.write(md)

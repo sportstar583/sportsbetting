@@ -23,6 +23,13 @@ class WeeklyTests(unittest.TestCase):
         self.assertNotIn("G @ H", md)  # 4th-biggest over
         self.assertNotIn("K @ L", md)  # card is Power 4 only
         self.assertNotIn("M @ N", md)  # not enough data
+        rows[0]["game_id"], rows[4]["game_id"] = "1", "5"
+        md = card_markdown(rows, 6, 2026, 3, "note", spot_list=[
+            {"game_id": 1, "spot": "over run", "bet_team": "OVER"},
+            {"game_id": 5, "spot": "over run", "bet_team": "OVER"},
+            {"game_id": 1, "spot": "sandwich", "bet_team": "A"}])  # spread spots don't touch totals picks
+        self.assertIn("over run spot agrees", md.splitlines()[[i for i, x in enumerate(md.splitlines()) if "A @ B" in x][0]])
+        self.assertIn("over run spot disagrees: consider passing", [x for x in md.splitlines() if "I @ J" in x][0])
 
     def test_key_injuries_and_recruiting(self):
         index = {"athlete:7": {"stars": "5", "rating": "0.99", "ranking": "4", "year": "2025"},

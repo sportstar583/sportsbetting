@@ -264,7 +264,9 @@ def card_section(spots, board_rows, log_rows):
            ", ".join(f"{k} {v}" for k, v in SPOTS.items()) + "): bounce-back = back a team that just lost to"
            " a ranked team; sandwich = fade a team between two ranked opponents; ats-revert = fade a team"
            " that covered by 21+ last game, back one that missed by 21+; over/under run = both teams' last"
-           " games beat their totals by 10+ the same way. Logged to spots_log.csv to see if they hold up.", ""]
+           " games beat their totals by 10+ the same way. Logged to spots_log.csv to see if they hold up."
+           " Use them as a tiebreaker, not a bet: a spot that agrees with a pick is a little extra"
+           " confidence; one that disagrees is a reason to consider passing.", ""]
     if spots:
         out += ["| Spot | Take | Game | Why |", "| --- | --- | --- | --- |"]
         for s in spots:
