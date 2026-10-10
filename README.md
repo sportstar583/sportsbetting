@@ -11,6 +11,10 @@ The free CollegeFootballData tier allows **1,000 calls a month** (check with
 `curl https://api.collegefootballdata.com/info`). A weekly card run uses about 20-40 calls.
 Backtests download whole seasons, so run them with `--cache <dir>` and sparingly.
 
+The board saves weeks that finished 2+ weeks ago to `data/<year>/cache/` (compressed) and reads
+them from there afterwards, so a card run only downloads the latest week or two (about 13-15
+calls instead of 11 + 2 per week played). Commit that folder with the card so the next run has it.
+
 ### Setup
 
 1. Get a free API key: https://collegefootballdata.com/key

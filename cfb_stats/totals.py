@@ -988,8 +988,12 @@ def main(argv=None):
     games = [dict(g, seasonType="regular") for g in client.games(args.year, "regular")]
     week = args.week or upcoming_week(games)
     weeks = sorted({g["week"] for g in games if g.get("completed") and g["week"] <= week})
-    game_rows = [r for w in weeks for r in client.game_advanced_stats(args.year, w, "regular", True)]
-    drives = [d for w in weeks for d in client.drives(args.year, w, "regular")] if chosen["tempo"] else None
+    # Weeks finished 2+ weeks ago no longer change: read them from data/<year>/cache/ after the
+    # first download, so a run only fetches the latest week or two.
+    frozen = lambda w: w <= week - 2  # noqa: E731
+    game_rows = [r for w in weeks for r in client.game_advanced_stats(args.year, w, "regular", True, store=frozen(w))]
+    drives = ([d for w in weeks for d in client.drives(args.year, w, "regular", store=frozen(w))]
+              if chosen["tempo"] else None)
 
     off_offsets, def_offsets = {}, {}
     if args.injuries:
