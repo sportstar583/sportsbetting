@@ -39,6 +39,7 @@ Output goes to `data/<year>/`:
 | `all_stats.csv` | all of the above in one wide table |
 | `adjusted_team_epa.csv` | raw vs **opponent-adjusted** EPA/play, success rate and explosiveness (overall, rush, pass) for offense and defense, FBS rank for each, net adjusted EPA, and strength of schedule |
 | `adjusted_player_epa.csv` | raw vs **opponent-adjusted** EPA/play (all, rush, pass) for every P4 player, plus how much the schedule moved it |
+| `resume.csv` | every FBS team's **strength of schedule** (average opponent rating, site-adjusted, plus opponents' win %, and for games still to play), **strength of record** (chance an average top-25 team would have this record or better against this schedule; ranked on it) and **strength of victory** (average rating and win % of teams beaten), from a points rating fit on every game (`cfb_stats.resume`; also `python -m cfb_stats.resume`, 3 API calls) |
 
 ### Opponent adjustment
 

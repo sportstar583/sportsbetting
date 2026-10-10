@@ -296,6 +296,8 @@ def main(argv=None):
     fbs_schools = {t["school"] for t in fbs}
     tables["adjusted_team_epa"] = adjust.team_table(models, obs, teams, fbs_schools)
     tables["adjusted_player_epa"] = adjust.player_table(player_games, models, teams)
+    from .resume import resume_table  # strength of schedule / record / victory, all FBS teams
+    tables["resume"] = resume_table(games, fbs_schools)
 
     out_dir = os.path.join(args.out, str(args.year))
     os.makedirs(out_dir, exist_ok=True)
