@@ -87,6 +87,18 @@ class SpotsTests(unittest.TestCase):
         md = "\n".join(spots.card_section(both, rows, []))
         self.assertIn("no lean", md)
 
+    def test_model_edges(self):
+        rows = [{"game_id": "7", "home": "A", "away": "B", "p4_game": "True", "enough_data": "True",
+                 "market_spread": "-3.5", "proj_margin": "10.0", "spread_edge": "6.5"},
+                {"game_id": "8", "home": "C", "away": "D", "p4_game": "True", "enough_data": "True",
+                 "market_spread": "-7", "proj_margin": "1.0", "spread_edge": "-6.0"},
+                {"game_id": "9", "home": "E", "away": "F", "p4_game": "True", "enough_data": "True",
+                 "market_spread": "-7", "proj_margin": "4.0", "spread_edge": "-3.0"},
+                {"game_id": "10", "home": "G", "away": "H", "p4_game": "False", "enough_data": "True",
+                 "market_spread": "-7", "proj_margin": "30", "spread_edge": "23"}]
+        found = spots.find_model_edges(rows)
+        self.assertEqual([(s["bet_team"], s["line"]) for s in found], [("A", -3.5), ("D", 7.0)])
+
 
 if __name__ == "__main__":
     unittest.main()

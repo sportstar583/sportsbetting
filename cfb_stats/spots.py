@@ -17,6 +17,11 @@ Season record spot (over/under records against closing totals, 4+ graded games e
 
   over teams:      both teams have gone over in 65%+ of games  -> under
 
+Model spot (the spread model's own picks, Power 4 games):
+
+  model 5+:        projected margin 5+ points off the spread   -> the model's side
+                   (2023-2025: 227-231, 49.6%; tracked to see whether 2026 is any different)
+
 All beat the closing line in 2023-2025 on small samples found after trying several versions
 (scripts/spots_backtest.py, scripts/recency_backtest.py, BACKTEST.md). Every card run logs this
 week's spots to data/<year>/spots_log.csv; later runs grade them against the closing line and the
@@ -31,7 +36,9 @@ from collections import defaultdict
 
 # name -> 2023-2025 record against the closing line, as flagged here
 SPOTS = {"bounce-back": "122-103", "sandwich": "70-53", "ats-revert fade": "218-187",
-         "ats-revert back": "202-172", "over run": "95-77", "under run": "103-82", "over teams": "54-40"}
+         "ats-revert back": "202-172", "over run": "95-77", "under run": "103-82", "over teams": "54-40",
+         "model 5+": "227-231"}
+MODEL_EDGE = 5.0  # spread model picks tracked: |projected margin - line| of at least this
 ATS_REVERT = 21  # points beyond the spread last game
 TOTAL_RUN = 10  # points beyond the total last game, both teams
 OVER_PCT, MIN_GRADED = 0.65, 4  # over teams: both teams' season over % and games graded
@@ -109,6 +116,25 @@ def dedupe(found):
         if s["bet_team"] not in ("OVER", "UNDER"):
             sides[s["game_id"]].add(s["bet_team"])
     return [s for s in found if s["bet_team"] in ("OVER", "UNDER") or len(sides[s["game_id"]]) == 1]
+
+
+def find_model_edges(rows, min_edge=MODEL_EDGE):
+    """The spread model's picks with an edge of min_edge+ points, Power 4 games with enough data.
+    Not run through dedupe: the model's record should cover all of its picks."""
+    found = []
+    for r in rows:
+        if r.get("p4_game") != "True" or r.get("enough_data") != "True" or r.get("spread_edge") in (None, ""):
+            continue
+        edge, spread = float(r["spread_edge"]), float(r["market_spread"])
+        if abs(edge) < min_edge:
+            continue
+        home = edge > 0
+        found.append({"game_id": int(r["game_id"]), "spot": "model 5+",
+                      "team_in_spot": r["home"] if home else r["away"],
+                      "bet_team": r["home"] if home else r["away"], "opponent": r["away"] if home else r["home"],
+                      "line": spread if home else -spread,
+                      "why": f"model has {r['home']} by {float(r['proj_margin']):+.1f} (edge {abs(edge):.1f})"})
+    return found
 
 
 def find_season_records(games, rows, lines, week):
@@ -299,7 +325,8 @@ def card_section(spots, board_rows, log_rows):
            " a ranked team; sandwich = fade a team between two ranked opponents; ats-revert = fade a team"
            " that covered by 21+ last game, back one that missed by 21+; over/under run = both teams' last"
            " games beat their totals by 10+ the same way; over teams = under when both teams have gone over in"
-           " 65%+ of games. Logged to spots_log.csv to see if they hold up."
+           " 65%+ of games; model 5+ = the spread model's own picks with 5+ points of edge (Power 4; 49.6% in"
+           " the backtest, so no edge expected). Logged to spots_log.csv to see if they hold up."
            " Use them as a tiebreaker, not a bet: a spot that agrees with a pick is a little extra"
            " confidence; one that disagrees is a reason to consider passing.", ""]
     if spots:

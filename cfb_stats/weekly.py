@@ -240,6 +240,7 @@ def main(argv=None):
                                                        if g.get("completed") and g["week"] < week}, week)
         found = spots.dedupe(found + spots.find_recency(games, all_rows, prev, past)
                              + spots.find_season_records(games, all_rows, past, week))
+        found += spots.find_model_edges(all_rows)
         spot_log = spots.log_path(out_dir)
         spots.update_log(spot_log, client, args.year, games)
         spot_lines = spots.card_section(found, all_rows, spots.log_spots(spot_log, found, week))
