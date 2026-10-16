@@ -1,6 +1,10 @@
 logged_at,run,week,game_id,away,home,angle,side,pick,home_line,detail,close_home_line,home_margin,clv,result
-2026-10-09 23:21,Friday,6,401856716,Texas A&M,Missouri,model,Missouri,Missouri -3.5,-3.5,"model margin +19.8, edge +16.3; SP+ agrees",,,,
-2026-10-09 23:21,Friday,6,401858259,Virginia Tech,California,model,Virginia Tech,Virginia Tech -10,10.0,"model margin -24.9, edge -14.9; SP+ agrees",,,,
-2026-10-09 23:21,Friday,6,401856713,Tennessee,Arkansas,model,Tennessee,Tennessee -13.5,13.5,"model margin -24.7, edge -11.2; SP+ agrees",,,,
-2026-10-09 23:21,Friday,6,401856717,Texas,Oklahoma,coach vs top 10,Oklahoma,Oklahoma +7.5,7.5,"Brent Venables vs top 10, last 3 seasons: 3-3 ATS, 3-3 SU; Texas is #1",,,,
-2026-10-09 23:21,Friday,6,401856718,Ole Miss,Vanderbilt,coach vs top 10,Vanderbilt,Vanderbilt +9.25,9.25,"Clark Lea vs top 10, last 3 seasons: 5-2 ATS, 2-5 SU; Ole Miss is #9",,,,
+2026-10-09 23:21,Friday,6,401856716,Texas A&M,Missouri,model,Missouri,Missouri -3.5,-3.5,"model margin +19.8, edge +16.3; SP+ agrees",-4.5,21,1.0,W
+2026-10-09 23:21,Friday,6,401858259,Virginia Tech,California,model,Virginia Tech,Virginia Tech -10,10.0,"model margin -24.9, edge -14.9; SP+ agrees",10.75,5,0.75,L
+2026-10-09 23:21,Friday,6,401856713,Tennessee,Arkansas,model,Tennessee,Tennessee -13.5,13.5,"model margin -24.7, edge -11.2; SP+ agrees",13.75,-7,0.25,L
+2026-10-09 23:21,Friday,6,401856717,Texas,Oklahoma,coach vs top 10,Oklahoma,Oklahoma +7.5,7.5,"Brent Venables vs top 10, last 3 seasons: 3-3 ATS, 3-3 SU; Texas is #1",7.75,3,-0.25,W
+2026-10-09 23:21,Friday,6,401856718,Ole Miss,Vanderbilt,coach vs top 10,Vanderbilt,Vanderbilt +9.25,9.25,"Clark Lea vs top 10, last 3 seasons: 5-2 ATS, 2-5 SU; Ole Miss is #9",9.25,-35,0.0,L
+2026-10-16 03:36,Friday,7,401858261,Charleston Southern,Clemson,model,Charleston Southern,Charleston Southern +43.5,-43.5,"model margin +19.8, edge -23.7",,,,
+2026-10-16 03:36,Friday,7,401858262,Elon,Stanford,model,Elon,Elon +35.5,-35.5,"model margin +14.2, edge -21.3",,,,
+2026-10-16 03:36,Friday,7,401856725,The Citadel,Texas A&M,model,The Citadel,The Citadel +45.5,-45.5,"model margin +29.5, edge -16.0",,,,
+2026-10-16 03:36,Friday,7,401856828,Arizona State,Texas Tech,coach vs top 10,Arizona State,Arizona State +15.75,-15.75,"Kenny Dillingham vs top 10, last 3 seasons: 3-1 ATS, 1-3 SU; Texas Tech is #10",,,,
