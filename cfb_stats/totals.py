@@ -429,6 +429,8 @@ def board(model, games, lines, min_games=3, spread_model=None, weather=None, tea
             "home": home,
             "neutral": bool(g.get("neutralSite")),
             "p4_game": g.get("homeConference") in P4_CONFERENCES or g.get("awayConference") in P4_CONFERENCES,
+            # both teams FBS; the weekly card skips games against FCS teams (see BACKTEST.md)
+            "fbs_game": g.get("homeClassification", "fbs") == "fbs" and g.get("awayClassification", "fbs") == "fbs",
             "market_total": total,
             "market_open": total_open,
             "books": books,

@@ -24,6 +24,13 @@ class WeeklyTests(unittest.TestCase):
         self.assertNotIn("K @ L", md)  # card is Power 4 only
         self.assertNotIn("M @ N", md)  # not enough data
 
+    def test_card_skips_fcs_games(self):
+        rows = [dict(row("FCS", "B", 14), fbs_game="False"), row("C", "D", 4), dict(row("E", "F", 3), fbs_game="True")]
+        md = card_markdown(rows, 7, 2026, 3, "note")
+        self.assertNotIn("FCS @ B", md)
+        self.assertIn("C @ D", md)
+        self.assertIn("E @ F", md)
+
     def test_key_injuries_and_recruiting(self):
         index = {"athlete:7": {"stars": "5", "rating": "0.99", "ranking": "4", "year": "2025"},
                  "recruit:900": {"stars": "4", "rating": "0.93", "ranking": "120", "year": "2024"}}

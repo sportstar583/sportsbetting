@@ -80,7 +80,8 @@ def _num(r, k):
 
 def model_picks(rows, n=MODEL_PICKS):
     out = []
-    ok = [r for r in rows if str(r.get("enough_data")) == "True" and _num(r, "spread_edge") is not None]
+    ok = [r for r in rows if str(r.get("enough_data")) == "True" and _num(r, "spread_edge") is not None
+          and str(r.get("fbs_game", "True")) != "False"]  # FCS games: model margins are unreliable
     for r in sorted(ok, key=lambda r: -abs(_num(r, "spread_edge")))[:n]:
         edge, spread = _num(r, "spread_edge"), _num(r, "market_spread")
         side = r["home"] if edge > 0 else r["away"]

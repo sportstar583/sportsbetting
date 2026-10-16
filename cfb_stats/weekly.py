@@ -100,9 +100,16 @@ def _num(r, k):
     return float(r[k]) if r.get(k) not in ("", None) else None
 
 
+def fbs_game(r):
+    """Both teams FBS (boards written before the fbs_game column count as FBS)."""
+    return str(r.get("fbs_game", "True")) != "False"
+
+
 def card_picks(rows, n):
-    """The card: n biggest over edges and n biggest under edges among Power 4 games."""
-    p4 = [r for r in rows if r["p4_game"] == "True" and r["enough_data"] == "True"]
+    """The card: n biggest over edges and n biggest under edges among Power 4 games, leaving out
+    games against FCS teams (the model knows little about them; 7-7 at edge 3+, 0-3 at 10+ in the
+    2023-2025 backtest)."""
+    p4 = [r for r in rows if r["p4_game"] == "True" and r["enough_data"] == "True" and fbs_game(r)]
     overs = sorted((r for r in p4 if _num(r, "edge") > 0), key=lambda r: -_num(r, "edge"))[:n]
     unders = sorted((r for r in p4 if _num(r, "edge") < 0), key=lambda r: _num(r, "edge"))[:n]
     return [(r, "OVER") for r in overs] + [(r, "UNDER") for r in unders]
@@ -146,7 +153,7 @@ def card_markdown(rows, week, year, n, injury_note, injuries=None, track_record=
 
     out = [f"# Week {week} card ({year})", "",
            f"Generated {stamp}. {injury_note}", "",
-           f"The {n} biggest over edges and {n} biggest under edges among Power 4 games. Backtest",
+           f"The {n} biggest over edges and {n} biggest under edges among Power 4 games (not vs FCS). Backtest",
            "2023-2025: 114-88 (56.4%) against closing and opening totals; small sample, track it",
            "before trusting it. See BACKTEST.md.", "",
            "Bet is the median line across books; Best line is the best number available (lowest",

@@ -337,6 +337,20 @@ Same leave-one-season-out test; FBS games only (FCS teams have no SP+), 1,745 ga
 Not used. Current-season SP+ could be shown next to the model's numbers for reference, but
 it would need to come from somewhere other than CFBD's free tier and couldn't be backtested.
 
+## Games against FCS teams (left off the card)
+
+Power 4 games against FCS opponents, 2023-2025 (24 games): 7-7 at edge >= 3 and 0-3 at edge >= 10,
+against 258-222 (53.8%) at edge >= 3 when both teams are FBS. The model knows little about FCS
+teams (few games against FBS opponents to rate them on), and these games produce its biggest
+spread disagreements. Since week 7 of 2026 the card and the spread tracking skip them; the board
+still lists them (`fbs_game` column). The 2023-2025 card record above includes the few FCS games
+that made it; it isn't recomputed.
+
+Card picks where the spread model also disagrees with the spread by 10+ points went 20-18
+(52.6%), vs 94-70 (57.3%) for the rest: a hint that a big disagreement on the side means the
+model has a team wrong, but on 38 picks it's not enough to change the card. The card reasoning
+mentions it.
+
 ## Spread angles: skill-player absences, rest, coach tendencies
 
 `scripts/spread_angles_backtest.py` (about 55 API calls the first time). Each angle is tested as
