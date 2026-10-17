@@ -216,6 +216,15 @@ class TotalsTests(unittest.TestCase):
         self.assertEqual(neutral["proj_margin"], board(model, [dict(g[0], neutralSite=True)], lines, spread_model=model)[0]["proj_margin"])
 
 
+    def test_team_scores_split_by_spread_margin(self):
+        games, rows = synthetic_season()
+        model = TotalsModel(rows, games, alpha=10)
+        g = [{"id": 999, "week": 7, "homeTeam": "A", "awayTeam": "B", "neutralSite": False}]
+        lines = [{"id": 999, "lines": [{"provider": "X", "overUnder": 50, "spread": -3}]}]
+        r = board(model, g, lines, spread_model=model, team_hfa={"A": 2.0})[0]
+        self.assertAlmostEqual(r["proj_home"] + r["proj_away"], r["proj_total"], delta=0.11)
+        self.assertAlmostEqual(r["proj_home"] - r["proj_away"], r["proj_margin"], delta=0.11)
+
     def test_sp_plus_total_gets_wind_correction(self):
         games, rows = synthetic_season()
         model = TotalsModel(rows, games, alpha=10)
