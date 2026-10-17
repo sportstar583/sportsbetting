@@ -88,6 +88,46 @@ def main():
     both_under = [int(v[0][1] > 0) for v in by_game.values() if len(v) == 2 and max(x[0] for x in v) <= -10]
     print(f"  both teams' last games over by 10+: went over {rec(both_over)}")
     print(f"  both teams' last games under by 10+: went over {rec(both_under)}")
+    season_to_date()
+
+
+def season_to_date():
+    """Season-long version: a team's average ATS / over margin and cover / over rate in its
+    previous games this season (3+), vs its next game."""
+    rows = []  # (season, avg_ats, cover_rate, avg_over, over_rate, n, next game, game id)
+    for y in YEARS:
+        for team, gs in team_games(y).items():
+            for i, g in enumerate(gs):
+                prev_ats = [p["ats"] for p in gs[:i] if p["ats"] is not None]
+                prev_over = [p["over"] for p in gs[:i] if p["over"] is not None]
+                if len(prev_ats) >= 3 and len(prev_over) >= 3:
+                    rows.append((y, sum(prev_ats) / len(prev_ats), sum(a > 0 for a in prev_ats) / len(prev_ats),
+                                 sum(prev_over) / len(prev_over), sum(o > 0 for o in prev_over) / len(prev_over),
+                                 len(prev_ats), g))
+    print(f"\nSEASON TO DATE ({len(rows)} team-games with 3+ earlier games)")
+    print("Spreads: cover rate next game, by average ATS margin so far")
+    for lo, hi in ((-99, -10), (-10, -5), (-5, 5), (5, 10), (10, 99)):
+        res = [int(g["ats"] > 0) for _, a, _, _, _, _, g in rows if g["ats"] not in (None, 0) and lo <= a < hi]
+        print(f"  average {lo:+4d} to {hi:+4d}: covered {rec(res)}")
+    for lab, test in (("covered 80%+ of games so far", lambda c: c >= .8), ("covered 20% or less so far", lambda c: c <= .2)):
+        res = [int(g["ats"] > 0) for _, _, c, _, _, _, g in rows if g["ats"] not in (None, 0) and test(c)]
+        print(f"  {lab}: covered {rec(res)}")
+    print("Totals: over rate next game, by the team's average over/under margin so far")
+    for lo, hi in ((-99, -10), (-10, -5), (-5, 5), (5, 10), (10, 99)):
+        res = [int(g["over"] > 0) for _, _, _, a, _, _, g in rows if g["over"] not in (None, 0) and lo <= a < hi]
+        print(f"  average {lo:+4d} to {hi:+4d}: went over {rec(res)}")
+    for lab, test in (("overs in 80%+ of games so far", lambda c: c >= .8), ("overs in 20% or less so far", lambda c: c <= .2)):
+        res = [int(g["over"] > 0) for _, _, _, _, c, _, g in rows if g["over"] not in (None, 0) and test(c)]
+        print(f"  {lab}: went over {rec(res)}")
+    # both teams in the game trending the same way
+    by_game = defaultdict(list)
+    for _, _, _, a, _, _, g in rows:
+        if g["over"] not in (None, 0):
+            by_game[g["id"]].append((a, g["over"]))
+    for lab, test in (("both teams' games averaging 7+ over", lambda v: min(x[0] for x in v) >= 7),
+                      ("both teams' games averaging 7+ under", lambda v: max(x[0] for x in v) <= -7)):
+        res = [int(v[0][1] > 0) for v in by_game.values() if len(v) == 2 and test(v)]
+        print(f"  {lab}: went over {rec(res)}")
 
 
 if __name__ == "__main__":

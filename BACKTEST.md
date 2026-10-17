@@ -369,6 +369,21 @@ No bounce-back or hot-team effect worth betting: every bucket is within 1.8 stan
 coin flip and none clears 52.4%. The closing line already adjusts for last week, as in the NFL
 repo.
 
+Season to date (a team's average ATS / over-under margin over its earlier games, 3+), each game
+counted once, 2021-2025:
+
+| Rule | Record | By season |
+| --- | --- | --- |
+| Back teams averaging 5+ points worse than the spread | 479-389 (55.2%) | 49.5 / 61.9 / 60.6 / 50.8 / 55.7% |
+| Fade teams averaging 5+ points better than the spread | 491-492 (49.9%) | 52.7 / 52.0 / 52.0 / 48.2 / 46.4% |
+| Under when a team's games average 5+ over | 569-490 (53.7%) | 63.2 / 55.2 / 50.6 / 48.0 / 56.7% |
+| Over when a team's games average 5+ under | 518-499 (50.9%) | 49.8 / 45.7 / 52.0 / 61.1 / 48.8% |
+
+The first is the strongest result outside the totals card (about 3 standard errors), but the
+cutoff was picked after seeing the buckets (-10 to -5 was 55.3%, -10 or worse only 50.9%), its
+mirror image does nothing, and two of five seasons were at a coin flip. Mild regression to the
+mean for teams the market has been too high on; worth paper-tracking, not betting yet.
+
 ## Spread angles: skill-player absences, rest, coach tendencies
 
 `scripts/spread_angles_backtest.py` (about 55 API calls the first time). Each angle is tested as
