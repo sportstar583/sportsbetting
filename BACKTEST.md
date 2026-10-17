@@ -351,6 +351,24 @@ Card picks where the spread model also disagrees with the spread by 10+ points w
 model has a team wrong, but on 38 picks it's not enough to change the card. The card reasoning
 mentions it.
 
+## Recency bias (last week's result vs the line)
+
+`scripts/recency_backtest.py`, 2021-2025, every FBS team's consecutive games with closing lines
+(7,398 pairs; no API calls once the season lines are cached).
+
+| Last game | Covered this game | Last game | Went over this game |
+| --- | --- | --- | --- |
+| Missed the spread by 14+ | 51.1% | Under the total by 14+ | 52.5% |
+| Missed by 7-14 | 49.2% | Under by 7-14 | 50.9% |
+| Within 7 | 50.6% | Within 7 | 50.1% |
+| Covered by 7-14 | 48.9% | Over by 7-14 | 50.1% |
+| Covered by 14+ | 49.9% | Over by 14+ | 49.4% |
+| Two straight non-covers | 51.5% | Both teams' last games under by 10+ / over by 10+ | 52.1% / 48.3% |
+
+No bounce-back or hot-team effect worth betting: every bucket is within 1.8 standard errors of a
+coin flip and none clears 52.4%. The closing line already adjusts for last week, as in the NFL
+repo.
+
 ## Spread angles: skill-player absences, rest, coach tendencies
 
 `scripts/spread_angles_backtest.py` (about 55 API calls the first time). Each angle is tested as
