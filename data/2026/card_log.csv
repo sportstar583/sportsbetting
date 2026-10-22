@@ -23,9 +23,15 @@ logged_at,run,week,game_id,away,home,side,median_line,best_line,best_book,proj_t
 2026-10-09 22:52,Friday,6,401858484,UCLA,Oregon,UNDER,58.25,58.5,DraftKings,49.3,-9.0,57.75,32,0.5,W,64.3
 2026-10-09 22:52,Friday,6,401856824,UCF,Oklahoma State,UNDER,53.5,53.5,"Bovada, DraftKings",48.0,-5.5,53.5,70,0.0,L,46.3
 2026-10-09 22:52,Friday,6,401856715,LSU,Kentucky,UNDER,50.5,50.5,"Bovada, DraftKings",45.1,-5.4,50.5,69,0.0,L,43.1
-2026-10-16 03:36,Friday,7,401858491,Northwestern,Michigan State,OVER,49.25,49,Bovada,57.4,8.2,,,,,
-2026-10-16 03:36,Friday,7,401858268,Virginia,SMU,OVER,51.75,51.5,DraftKings,58.6,6.9,,,,,
-2026-10-16 03:36,Friday,7,401858265,Louisville,Syracuse,OVER,55.75,55.5,DraftKings,61.7,5.9,,,,,
-2026-10-16 03:36,Friday,7,401858267,Pittsburgh,Boston College,UNDER,42.75,43,Bovada,35.5,-7.2,,,,,
-2026-10-16 03:40,Friday,7,401858489,Rutgers,Maryland,UNDER,56.5,56.5,"Bovada, DraftKings",50.2,-6.3,,,,,
-2026-10-16 03:40,Friday,7,401856720,Mississippi State,LSU,UNDER,57.25,57.5,DraftKings,51.8,-5.5,,,,,
+2026-10-16 03:36,Friday,7,401858491,Northwestern,Michigan State,OVER,49.25,49,Bovada,57.4,8.2,50.25,45,1.0,L,
+2026-10-16 03:36,Friday,7,401858268,Virginia,SMU,OVER,51.75,51.5,DraftKings,58.6,6.9,51.75,36,0.0,L,
+2026-10-16 03:36,Friday,7,401858265,Louisville,Syracuse,OVER,55.75,55.5,DraftKings,61.7,5.9,56.25,60,0.5,W,
+2026-10-16 03:36,Friday,7,401858267,Pittsburgh,Boston College,UNDER,42.75,43,Bovada,35.5,-7.2,42.75,48,0.0,L,
+2026-10-16 03:40,Friday,7,401858489,Rutgers,Maryland,UNDER,56.5,56.5,"Bovada, DraftKings",50.2,-6.3,55.5,67,1.0,L,
+2026-10-16 03:40,Friday,7,401856720,Mississippi State,LSU,UNDER,57.25,57.5,DraftKings,51.8,-5.5,56.0,31,1.25,W,
+2026-10-22 06:42,Thursday,8,401858271,Duke,Virginia,OVER,47.5,47.5,"Bovada, DraftKings",57.2,9.7,,,,,
+2026-10-22 06:42,Thursday,8,401858273,Boston College,Georgia Tech,OVER,50.25,50,Bovada,57.4,7.1,,,,,
+2026-10-22 06:42,Thursday,8,401858497,Iowa,Minnesota,OVER,40.5,40.5,"Bovada, DraftKings",46.4,5.9,,,,,
+2026-10-22 06:42,Thursday,8,401858274,Pittsburgh,Miami,UNDER,48.75,49,Bovada,37.3,-11.5,,,,,
+2026-10-22 06:42,Thursday,8,401858270,California,SMU,UNDER,55.5,55.5,"Bovada, DraftKings",48.5,-7.0,,,,,
+2026-10-22 06:42,Thursday,8,401858495,Oregon,Illinois,UNDER,50.25,50.5,DraftKings,44.2,-6.0,,,,,
