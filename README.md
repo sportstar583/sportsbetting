@@ -188,3 +188,22 @@ results, including opening-line and QB-absence checks, are in [BACKTEST.md](BACK
 ```bash
 python -m unittest
 ```
+
+## Arbitrage scanner
+
+`scripts/arb_scanner.py` pulls odds from [The Odds API](https://the-odds-api.com). It finds
+markets where the best prices across books add up to less than 100% implied probability.
+Then it splits a stake so every outcome pays out about the same.
+
+```bash
+export ODDS_API_KEY=your_key
+python scripts/arb_scanner.py                                  # NBA, NFL, NHL; h2h/spreads/totals
+python scripts/arb_scanner.py --sports americanfootball_ncaaf --markets h2h spreads --stake 500
+python scripts/arb_scanner.py --live-only --min-profit 0.5 --loop 120
+```
+
+Each scan costs **sports × markets × regions** credits (9 with the defaults). Check the
+"remaining" count before you use `--loop`. Prices older than `--max-age` seconds are ignored.
+Profits above `--max-profit` (default 10%) are dropped because they are almost always stale
+or wrong lines. The scanner ignores exchange commission and bet limits, so confirm every leg
+at the book before you place it.
