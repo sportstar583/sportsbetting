@@ -29,15 +29,21 @@ logged_at,run,week,game_id,away,home,side,median_line,best_line,best_book,proj_t
 2026-10-17 01:49,Saturday,7,401858261,Charleston Southern,Clemson,UNDER,57.5,57.5,DraftKings,42.8,-14.7,53.5,37,4.0,W
 2026-10-17 01:49,Saturday,7,401856725,The Citadel,Texas A&M,UNDER,57.5,57.5,DraftKings,46.8,-10.7,56.5,41,1.0,W
 2026-10-17 01:49,Saturday,7,401858267,Pittsburgh,Boston College,UNDER,42.75,43,Bovada,34.9,-7.9,42.75,48,0.0,L
-2026-10-18 13:56,Sunday,8,401858271,Duke,Virginia,OVER,48.5,48.5,DraftKings,55.5,7.0,,,,
-2026-10-18 13:56,Sunday,8,401858272,NC State,Stanford,OVER,55.5,55.5,DraftKings,61.0,5.5,,,,
-2026-10-18 13:56,Sunday,8,401856840,Texas Tech,Cincinnati,OVER,56.5,56.5,DraftKings,61.9,5.4,,,,
-2026-10-18 13:56,Sunday,8,401858274,Pittsburgh,Miami,UNDER,51.5,51.5,DraftKings,42.8,-8.7,,,,
-2026-10-18 13:56,Sunday,8,401856727,Texas A&M,Alabama,UNDER,51.5,51.5,DraftKings,46.7,-4.8,,,,
-2026-10-18 13:56,Sunday,8,401856835,BYU,UCF,UNDER,45.5,45.5,DraftKings,41.2,-4.3,,,,
-2026-10-24 01:48,Saturday,8,401858271,Duke,Virginia,OVER,47.25,47,Bovada,57.1,9.8,,,,
-2026-10-24 01:48,Saturday,8,401858273,Boston College,Georgia Tech,OVER,50.25,50,Bovada,57.1,6.9,,,,
-2026-10-24 01:48,Saturday,8,401858272,NC State,Stanford,OVER,54.5,54.5,"Bovada, DraftKings",61.3,6.8,,,,
-2026-10-24 01:48,Saturday,8,401858270,California,SMU,UNDER,55.25,55.5,DraftKings,48.3,-6.9,,,,
-2026-10-24 01:48,Saturday,8,401858495,Oregon,Illinois,UNDER,49.75,50,Bovada,43.5,-6.3,,,,
-2026-10-24 01:48,Saturday,8,401858274,Pittsburgh,Miami,UNDER,48.75,49,Bovada,43.2,-5.6,,,,
+2026-10-18 13:56,Sunday,8,401858271,Duke,Virginia,OVER,48.5,48.5,DraftKings,55.5,7.0,47.25,35,-1.25,L
+2026-10-18 13:56,Sunday,8,401858272,NC State,Stanford,OVER,55.5,55.5,DraftKings,61.0,5.5,54.5,59,-1.0,W
+2026-10-18 13:56,Sunday,8,401856840,Texas Tech,Cincinnati,OVER,56.5,56.5,DraftKings,61.9,5.4,57.5,61,1.0,W
+2026-10-18 13:56,Sunday,8,401858274,Pittsburgh,Miami,UNDER,51.5,51.5,DraftKings,42.8,-8.7,50.5,75,1.0,L
+2026-10-18 13:56,Sunday,8,401856727,Texas A&M,Alabama,UNDER,51.5,51.5,DraftKings,46.7,-4.8,49.5,51,2.0,W
+2026-10-18 13:56,Sunday,8,401856835,BYU,UCF,UNDER,45.5,45.5,DraftKings,41.2,-4.3,43.75,70,1.75,L
+2026-10-24 01:48,Saturday,8,401858271,Duke,Virginia,OVER,47.25,47,Bovada,57.1,9.8,47.25,35,0.0,L
+2026-10-24 01:48,Saturday,8,401858273,Boston College,Georgia Tech,OVER,50.25,50,Bovada,57.1,6.9,50.5,76,0.25,W
+2026-10-24 01:48,Saturday,8,401858272,NC State,Stanford,OVER,54.5,54.5,"Bovada, DraftKings",61.3,6.8,54.5,59,0.0,W
+2026-10-24 01:48,Saturday,8,401858270,California,SMU,UNDER,55.25,55.5,DraftKings,48.3,-6.9,55.25,79,0.0,L
+2026-10-24 01:48,Saturday,8,401858495,Oregon,Illinois,UNDER,49.75,50,Bovada,43.5,-6.3,49.25,31,0.5,W
+2026-10-24 01:48,Saturday,8,401858274,Pittsburgh,Miami,UNDER,48.75,49,Bovada,43.2,-5.6,50.5,75,-1.75,L
+2026-10-25 13:53,Sunday,9,401856735,Auburn,Ole Miss,OVER,55.5,55.5,DraftKings,68.2,12.7,,,,
+2026-10-25 13:53,Sunday,9,401858284,Virginia,Wake Forest,OVER,49.5,49.5,DraftKings,57.8,8.3,,,,
+2026-10-25 13:53,Sunday,9,401856848,Utah,Cincinnati,OVER,55.5,55.5,DraftKings,62.8,7.3,,,,
+2026-10-25 13:53,Sunday,9,401858508,Nevada,UCLA,UNDER,48.5,48.5,DraftKings,42.7,-5.8,,,,
+2026-10-25 13:53,Sunday,9,401856843,Arizona State,BYU,UNDER,51.5,51.5,DraftKings,48.8,-2.7,,,,
+2026-10-25 13:53,Sunday,9,401858504,Washington,Nebraska,UNDER,49.5,49.5,DraftKings,47.0,-2.5,,,,
